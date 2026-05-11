@@ -1,776 +1,894 @@
-'use strict';
+// ZoneTechOnline — Premium Tech Wearables
+// European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
-/* =============================================
-   ZONETECHONLINE — APP.JS
-   ============================================= */
+// ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
+const FILTER_MAP = {
+  'all':        'todos',
+  'watches':    'relojes',
+  'rings':      'anillos',
+  'headphones': 'auriculares',
+  'glasses':    'gafas',
+  'speakers':   'altavoces',
+  'masks':      'mascaras'
+};
 
-// ===== PRODUCT DATA =====
-const products = [
-  {
-    id: 1, category: 'watches', name: 'ZTO Pro X',
-    price: 299, originalPrice: 399, badge: 'hot', badgeLabel: 'Más Vendido',
-    rating: 4.9, reviews: 2847,
-    description: 'El smartwatch más avanzado de ZoneTechOnline. AMOLED de 1.96", sensor de temperatura subcutáneo, ECG de grado médico y GPS de doble banda. Resistente al agua hasta 100m.',
-    colors: ['#1a1a2e','#c8c8d8','#5b21b6','#0369a1'],
-    colorNames: ['Midnight Black','Steel Silver','Cosmic Purple','Ocean Blue'],
-    sensors: { spo2: 5, hr: 5, ecg: true, gps: 5, sleep: 5, stress: 5, temp: true, battery: 7 },
-    materials: { titanium: 299, aluminum: 249, ceramic: 349 },
-    type: 'watch'
-  },
-  {
-    id: 2, category: 'watches', name: 'ZTO Sport S2',
-    price: 199, originalPrice: 249, badge: 'new', badgeLabel: 'Nuevo',
-    rating: 4.8, reviews: 1203,
-    description: 'Diseñado para atletas. Carcasa de titanio aeroespacial, análisis de VO2 max en tiempo real, recuperación muscular y 45 modos deportivos.',
-    colors: ['#1a1a2e','#dc2626','#166534','#ca8a04'],
-    colorNames: ['Midnight Black','Rojo Sport','Verde Militar','Dorado'],
-    sensors: { spo2: 5, hr: 5, ecg: false, gps: 5, sleep: 4, stress: 5, temp: false, battery: 5 },
-    materials: { titanium: 199, aluminum: 169, ceramic: null },
-    type: 'watch'
-  },
-  {
-    id: 3, category: 'watches', name: 'ZTO Slim C1',
-    price: 179, originalPrice: 179, badge: 'best', badgeLabel: 'Elegante',
-    rating: 4.7, reviews: 986,
-    description: 'Ultra delgado (5.9mm). Diseño inspirado en la alta relojería suiza. Pantalla Always-On con caratulas premium.',
-    colors: ['#1a1a2e','#c8c8d8','#b45309','#831843'],
-    colorNames: ['Midnight','Plata','Champagne','Rosa Gold'],
-    sensors: { spo2: 4, hr: 5, ecg: false, gps: 3, sleep: 5, stress: 4, temp: false, battery: 3 },
-    materials: { titanium: null, aluminum: 179, ceramic: 229 },
-    type: 'watch'
-  },
-  {
-    id: 4, category: 'watches', name: 'ZTO Lite L1',
-    price: 129, originalPrice: 159, badge: 'sale', badgeLabel: '-19%',
-    rating: 4.6, reviews: 3421,
-    description: 'La puerta de entrada al ecosistema ZoneTechOnline. Todo lo que necesitas, nada de lo que no. Pantalla OLED de 1.7" y batería de 10 días.',
-    colors: ['#1a1a2e','#c8c8d8','#f59e0b','#6d28d9'],
-    colorNames: ['Negro','Blanco Perla','Amarillo','Violeta'],
-    sensors: { spo2: 3, hr: 4, ecg: false, gps: 2, sleep: 4, stress: 3, temp: false, battery: 10 },
-    materials: { titanium: null, aluminum: 129, ceramic: null },
-    type: 'watch'
-  },
-  {
-    id: 5, category: 'rings', name: 'ZTO Ring Health Pro',
-    price: 249, originalPrice: 299, badge: 'hot', badgeLabel: 'Más Vendido',
-    rating: 4.8, reviews: 1892,
-    description: 'El anillo inteligente más avanzado del mercado. Monitoreo de salud 24/7 invisible y elegante. 7 días de batería. Resistencia al agua IPX8.',
-    colors: ['#2a2a2a','#c8c8d8','#b45309','#1e3a5f'],
-    colorNames: ['Negro Titanio','Plata','Oro Rosa','Azul Acero'],
-    sensors: { spo2: 4, hr: 5, ecg: false, gps: 0, sleep: 5, stress: 4, temp: true, battery: 7 },
-    materials: { titanium: 249, aluminum: null, ceramic: null },
-    type: 'ring'
-  },
-  {
-    id: 6, category: 'rings', name: 'ZTO Ring Sleep',
-    price: 179, originalPrice: 199, badge: 'new', badgeLabel: 'Nuevo',
-    rating: 4.9, reviews: 654,
-    description: 'Especialista en sueño. Algoritmos de IA para analizar fases REM, detectar apnea y optimizar tu recuperación cada noche.',
-    colors: ['#1a1a2e','#c8c8d8','#166534'],
-    colorNames: ['Midnight','Plata','Verde Bosque'],
-    sensors: { spo2: 5, hr: 4, ecg: false, gps: 0, sleep: 5, stress: 5, temp: true, battery: 8 },
-    materials: { titanium: 179, aluminum: null, ceramic: null },
-    type: 'ring'
-  },
-  {
-    id: 7, category: 'rings', name: 'ZTO Ring Slim',
-    price: 149, originalPrice: 149, badge: 'best', badgeLabel: 'Minimalista',
-    rating: 4.7, reviews: 421,
-    description: 'El anillo más delgado del mercado (2.1mm). Perfecto para quienes buscan tecnología sin renunciar al estilo.',
-    colors: ['#1a1a2e','#c8c8d8','#b45309'],
-    colorNames: ['Onyx Black','Steel Silver','Rose Gold'],
-    sensors: { spo2: 3, hr: 4, ecg: false, gps: 0, sleep: 4, stress: 3, temp: false, battery: 5 },
-    materials: { titanium: 149, aluminum: null, ceramic: null },
-    type: 'ring'
-  },
-  {
-    id: 8, category: 'glasses', name: 'ZTO Vision Pro AR',
-    price: 399, originalPrice: 499, badge: 'new', badgeLabel: 'Nuevo',
-    rating: 4.8, reviews: 312,
-    description: 'Realidad aumentada de próxima generación. Proyección holográfica de 43°, asistente de voz IA, llamadas manos libres y cámara integrada de 12MP.',
-    colors: ['#1a1a2e','#b45309','#6d28d9'],
-    colorNames: ['Matte Black','Bronce','Índigo'],
-    sensors: { spo2: 0, hr: 3, ecg: false, gps: 3, sleep: 0, stress: 2, temp: false, battery: 1 },
-    materials: { titanium: 399, aluminum: null, ceramic: null },
-    type: 'glasses'
-  },
-  {
-    id: 9, category: 'glasses', name: 'ZTO UV Shield Smart',
-    price: 279, originalPrice: 329, badge: 'sale', badgeLabel: '-15%',
-    rating: 4.6, reviews: 218,
-    description: 'Gafas inteligentes con filtro UV adaptativo, monitoreo del índice UV en tiempo real y notificaciones de protección solar.',
-    colors: ['#1a1a2e','#c8c8d8','#92400e'],
-    colorNames: ['Negro Mate','Cristal','Carey'],
-    sensors: { spo2: 0, hr: 2, ecg: false, gps: 2, sleep: 0, stress: 1, temp: false, battery: 2 },
-    materials: { titanium: null, aluminum: 279, ceramic: null },
-    type: 'glasses'
-  }
+// ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
+const PRODUCTS = [
+  // RELOJES
+  { id:1,  name:'Garmin Venu 3',           brand:'Garmin',          category:'relojes',    price:399, oldPrice:449,  badge:'Más Vendido',
+    image: 'https://www.heartratemonitorsusa.com/cdn/shop/files/garmin-heart-rate-monitors-whitestone-passivated-45mm-garmin-venu-3-gps-smartwatch-33241766297773.jpg?v=1693405476&width=600',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'14 días', Pantalla:'AMOLED 1.4"', Resistencia:'5 ATM' },
+    description:'Smartwatch premium con AMOLED 1.4", Garmin Pay y más de 25 deportes indoor. Monitorización avanzada de sueño, estrés y HRV.' },
+  { id:2,  name:'Garmin Forerunner 265',   brand:'Garmin',          category:'relojes',    price:349, oldPrice:399,  badge:'Running Pro',
+    image: 'https://www.heartratemonitorsusa.com/cdn/shop/products/garmin-heart-rate-monitors-265-aqua-garmin-forerunner-265-265s-gps-watch-32791405461677.jpg?v=1762262748&width=600',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'15 días', Pantalla:'AMOLED 1.3"', Resistencia:'5 ATM' },
+    description:'Training Readiness, cargas de entrenamiento y planes adaptativos. El reloj favorito de los corredores serios.' },
+  { id:3,  name:'Garmin Instinct 2 Solar', brand:'Garmin',          category:'relojes',    price:399, oldPrice:null, badge:'Solar ∞',
+    image: 'https://shop.gohunt.com/cdn/shop/products/Instinct-2-Solar-1.jpg?v=1644449013&width=600',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'Ilimitada (Solar)', Pantalla:'MIP 0.9"', Resistencia:'10 ATM' },
+    description:'Carga solar ilimitada. Diseño MIL-STD-810 resistente a golpes, temperatura extrema y altitud.' },
+  { id:4,  name:'Withings ScanWatch Nova', brand:'Withings',        category:'relojes',    price:299, oldPrice:349,  badge:'ECG Médico',
+    image: 'https://www-assets.withings.com/pages/products/scanwatch-nova/media/hero/masterpiece_light.jpg',
+    specs:{ GPS:'No', ECG:'Sí ✓FDA', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'30 días', Pantalla:'OLED Híbrido', Resistencia:'5 ATM' },
+    description:'El único reloj híbrido con ECG certificado médicamente. Diseño suizo analógico con sensor óptico avanzado.' },
+  { id:5,  name:'Withings ScanWatch Light', brand:'Withings',       category:'relojes',    price:149, oldPrice:179,  badge:'Precio Acceso',
+    image: 'https://www-assets.withings.com/pages/products/scanwatch-light/media/hero/hero-visual-colored.jpg',
+    specs:{ GPS:'No', ECG:'No', HRV:'No', SpO2:'Sí', Sueño:'Sí', Batería:'30 días', Pantalla:'OLED Híbrido', Resistencia:'5 ATM' },
+    description:'30 días de batería y SpO2 continuos. El híbrido elegante de entrada con diseño analógico francés clásico.' },
+  { id:6,  name:'Polar Pacer Pro',         brand:'Polar',           category:'relojes',    price:279, oldPrice:309,  badge:'Atletas',
+    image: 'https://www.polar.com/img/static/pacer-pro-rd/gallery/pacer-pro-gold-1.webp',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Nightly Recharge', Batería:'35h GPS', Pantalla:'MIP 1.2"', Resistencia:'10 ATM' },
+    description:'GPS ultra-preciso con altímetro barométrico. Nightly Recharge, Polar Flow y análisis deportivo de élite.' },
+  { id:7,  name:'Polar Ignite 3',          brand:'Polar',           category:'relojes',    price:199, oldPrice:229,  badge:'Fitness',
+    image: 'https://www.polar.com/img/static/ignite3/serene-ksp.png',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'30h GPS', Pantalla:'AMOLED 1.28"', Resistencia:'5 ATM' },
+    description:'AMOLED brillante con Polar Fitness Test y FitSpark. Te guía en cada entrenamiento con Daily Energy.' },
+  { id:8,  name:'Suunto Race S',           brand:'Suunto',          category:'relojes',    price:399, oldPrice:null, badge:'Aventura',
+    image: 'https://us.suunto.com/cdn/shop/files/Suunto_Race_S_Stainless_Steel.png?v=1778325640&width=600',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'40h GPS', Pantalla:'AMOLED 1.43"', Resistencia:'10 ATM' },
+    description:'AMOLED 1.43" en acero inoxidable. Navegación offline con mapas topográficos y métricas de rendimiento avanzadas.' },
+  { id:9,  name:'Fitbit Versa 4',          brand:'Fitbit',          category:'relojes',    price:199, oldPrice:229,  badge:'Google',
+    image: 'https://www.heartratemonitorsusa.com/cdn/shop/products/heartratemonitorsusa-com-black-fitbit-versa-4-smartwatch-32134887866541.jpg?v=1661340456&width=600',
+    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Google Sleep', Batería:'6 días', Pantalla:'AMOLED 1.58"', Resistencia:'5 ATM' },
+    description:'Google Maps, Google Wallet y Alexa integrados. Daily Readiness Score y compatible con Android e iOS.' },
+
+  // ANILLOS
+  { id:10, name:'Oura Ring 4 Oro',         brand:'Oura',            category:'anillos',    price:349, oldPrice:null, badge:'Top Ventas',
+    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-gold.png',
+    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
+    description:'El anillo de salud más avanzado del mundo. Titanio dorado ligero, 8 días de batería y seguimiento 24/7.' },
+  { id:11, name:'Oura Ring 4 Plata',       brand:'Oura',            category:'anillos',    price:299, oldPrice:null, badge:'Nuevo Gen 4',
+    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-silver.png',
+    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
+    description:'Generation 4 en plateado. Readiness Score mejorado, detección de ciclo menstrual y SpO2 continuo.' },
+  { id:12, name:'Oura Ring 4 Negro',       brand:'Oura',            category:'anillos',    price:299, oldPrice:null, badge:null,
+    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-black.png',
+    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
+    description:'Edición stealth en titanio negro. Sin pantalla, máxima discreción. Monitorización 24/7 de salud completa.' },
+  { id:13, name:'Samsung Galaxy Ring',     brand:'Samsung',         category:'anillos',    price:349, oldPrice:399,  badge:'Galaxy AI',
+    image: 'https://images.samsung.com/uk/galaxy-ring/feature/galaxy-ring-kv-startframe-pc.jpg',
+    specs:{ Sensores:'Avanzados', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Galaxy Sleep', Batería:'7 días', Resistencia:'10 ATM', 'Sin Pantalla':'Sí' },
+    description:'Integración total con Galaxy AI y Energy Score personalizado. Compatible con todos los dispositivos Samsung Galaxy.' },
+  { id:14, name:'Circular Ring Slim',      brand:'Circular',        category:'anillos',    price:299, oldPrice:329,  badge:'Europeo',
+    image: 'https://cdn.prod.website-files.com/5c9cf810e0682292a9da04b8/67405d8273fdaa216e875aa7_Circular%20Official%202025%20-%20Black.png',
+    specs:{ Sensores:'Multi', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Sí', Batería:'5 días', Resistencia:'5 ATM', 'Sin Pantalla':'Sí' },
+    description:'Startup francesa. El anillo inteligente más delgado del mercado con app Circular Premium incluida.' },
+
+  // AURICULARES
+  { id:15, name:'Jabra Elite 10',          brand:'Jabra',           category:'auriculares', price:249, oldPrice:299, badge:'ANC Pro',
+    image: 'https://assets2.jabra.com/b/7/5/b/b75b82be7fd5871ad06b603ffc74a492d31fe2fd_1_Elite_10_Cream.png',
+    specs:{ ANC:'MultiSensor', Batería:'6h + 27h', Resistencia:'IP57', Driver:'10mm', Multipoint:'Sí', Codec:'SBC/AAC/LC3' },
+    description:'ANC MultiSensor con Dolby Audio y ComfortFit. Los earbuds de referencia de Jabra para uso profesional.' },
+  { id:16, name:'Jabra Elite 4 Active',    brand:'Jabra',           category:'auriculares', price:99,  oldPrice:129, badge:'Sport',
+    image: 'https://c1.neweggimages.com/productimage/nb640/AFWTD2201170ZQE7EC3.jpg',
+    specs:{ ANC:'Ajustable', Batería:'7h + 21h', Resistencia:'IP57', Driver:'6mm', Multipoint:'Sí', Codec:'SBC/AAC' },
+    description:'IP57 para entrenamientos intensos. ANC ajustable y modo HearThrough. Perfecto para gym y running.' },
+  { id:17, name:'Sennheiser Momentum 4',   brand:'Sennheiser',      category:'auriculares', price:279, oldPrice:349, badge:'60H Batería',
+    image: 'https://us.sennheiser-hearing.com/cdn/shop/files/MOMENTUM_4_Black.jpg?v=1759511980',
+    specs:{ ANC:'Adaptive', Batería:'60h', Resistencia:'IP54', Driver:'42mm', Multipoint:'Sí', Codec:'aptX Adaptive' },
+    description:'60 horas de batería líder de mercado. Adaptive ANC y ecualizador paramétrico. Audio Hi-Fi alemán.' },
+  { id:18, name:'Sennheiser MOMENTUM TW3', brand:'Sennheiser',      category:'auriculares', price:199, oldPrice:249, badge:'Hi-Fi TWS',
+    image: 'https://us.sennheiser-hearing.com/cdn/shop/files/Screenshot2024-02-12132746_47cb7128-5cbb-4f06-885c-5da9a21d3277.png?v=1767999878',
+    specs:{ ANC:'Adaptativo', Batería:'7h + 28h', Resistencia:'IPX4', Driver:'7mm', Multipoint:'Sí', Codec:'aptX' },
+    description:'True Wireless con ANC adaptativo y sonido de firma Sennheiser. Compatible con Google Assistant y Alexa.' },
+  { id:19, name:'B&O Beoplay EX',          brand:'Bang & Olufsen',  category:'auriculares', price:399, oldPrice:449, badge:'Lujo',
+    image: 'https://images.ctfassets.net/8cd2csgvqd3m/7AdyFHvn7QPcZ9aMbfEewY/033578369b617f673a919aa98ff4b4db/Beoplay-EX-Black-Anthracite-Hero.png?q=85&fm=png&w=600&h=600&fit=fill',
+    specs:{ ANC:'Adaptive B&O', Batería:'6h + 14h', Resistencia:'IP57', Driver:'9.2mm', Multipoint:'No', Codec:'aptX Adaptive' },
+    description:'Diseño danés premiado en aluminio anodizado. ANC Adaptive con algoritmo exclusivo B&O y sonido de firma única.' },
+  { id:20, name:'Bose QC Ultra Earbuds',   brand:'Bose',            category:'auriculares', price:299, oldPrice:349, badge:'Mejor ANC',
+    image: 'https://assets.bosecreative.com/transform/bb7b1552-1001-446f-bfd5-f7e2c4ee31ee/QCUEII_DeepPlum_Ecomm-Gallery-1-1634x1224?format=webp&quality=90&io=width:600,height:600,transform:fit',
+    specs:{ ANC:'WorldClass', Batería:'6h + 24h', Resistencia:'IPX4', Driver:'9.3mm', Multipoint:'Sí', Codec:'SBC/AAC/aptX' },
+    description:'El mejor ANC del mundo según pruebas independientes. Immersive Audio con detección de movimiento de cabeza.' },
+  { id:21, name:'Bose QuietComfort 45',    brand:'Bose',            category:'auriculares', price:279, oldPrice:329, badge:'Over-Ear',
+    image: 'https://assets.bosecreative.com/transform/788fa4e9-26f2-4c34-ba4b-be028d456603/QC45_WhiteSmoke_001_RGB?io=width:600,height:600,transform:fit',
+    specs:{ ANC:'QuietComfort', Batería:'24h', Resistencia:'IPX4', Driver:'40mm', Multipoint:'Sí', Codec:'SBC/AAC' },
+    description:'La diadema icónica con ANC más confortable del mercado. TriPort acoustic y comodidad para horas de uso.' },
+
+  // GAFAS
+  { id:22, name:'Ray-Ban Meta Wayfarer',   brand:'Ray-Ban Meta',    category:'gafas',      price:329, oldPrice:null, badge:'Meta AI',
+    image: 'https://lookaside.fbsbx.com/elementpath/media/?media_id=1556964719066752&version=1776971541&transcode_extension=webp',
+    specs:{ Cámara:'12MP', Audio:'Altavoces Abiertos', Batería:'4h / 36h caja', IA:'Meta AI', Resistencia:'IPX4', Bluetooth:'5.3' },
+    description:'Cámara 12MP, altavoces abiertos y Meta AI para responder preguntas sobre lo que ves. El Wayfarer reinventado.' },
+  { id:23, name:'Ray-Ban Meta Headliner',  brand:'Ray-Ban Meta',    category:'gafas',      price:379, oldPrice:null, badge:'Nuevo 2024',
+    image: 'https://assets.lensdirect.com/uploads/images/full/LDRayBanStock_20240901_713e363efe952f81552661f8dbc926a8.jpg',
+    specs:{ Cámara:'12MP', Audio:'Altavoces Abiertos', Batería:'4h / 36h caja', IA:'Meta AI', Resistencia:'IPX4', Bluetooth:'5.3' },
+    description:'Forma hexagonal exclusiva con Meta AI, cámara 12MP y altavoces de apertura acústica. Edición 2024.' },
+  { id:24, name:'Bose Frames Tempo',       brand:'Bose',            category:'gafas',      price:199, oldPrice:229,  badge:'Sport',
+    image: 'https://c1.neweggimages.com/productimage/nb640/26-627-114-S04.jpg',
+    specs:{ Cámara:'No', Audio:'Bose Open Ear', Batería:'8h', IA:'Alexa', Resistencia:'IPX4', Bluetooth:'5.1' },
+    description:'Diseñadas para deporte activo. Audio abierto Bose, lentes polarizadas intercambiables y resistencia IPX4.' },
+  { id:25, name:'Bose Frames Alto',        brand:'Bose',            category:'gafas',      price:229, oldPrice:249,  badge:'Clásico',
+    image: 'https://c1.neweggimages.com/productimage/nb640/26-627-097-S01.jpg',
+    specs:{ Cámara:'No', Audio:'Bose Open Ear', Batería:'5.5h', IA:'Alexa', Resistencia:'IPX4', Bluetooth:'5.1' },
+    description:'Marco cuadrado premium con altavoces abiertos Bose y sonido espacial privado. Diseño clásico en acetato.' },
+  { id:26, name:'Huawei Eyewear 2',        brand:'Huawei',          category:'gafas',      price:199, oldPrice:229,  badge:'Hi-Res Audio',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/audio/huawei-eyewear-2/new/img/kv/huawei-eyewear-2-kv.jpg',
+    specs:{ Cámara:'No', Audio:'Hi-Res Dual', Batería:'11h', IA:'Celia AI', Resistencia:'IP54', Bluetooth:'5.2' },
+    description:'Certificación Hi-Res Audio con doble altavoz y 11 horas de batería. Diseño óptico intercambiable en ópticos.' },
+
+  // ALTAVOCES
+  { id:27, name:'Sonos Roam 2',            brand:'Sonos',           category:'altavoces',  price:179, oldPrice:199,  badge:'Portátil',
+    image: 'https://imageresizer.linksunlimited.com/Product/UID/4662d985-15a5-4c9a-8b8b-9b079ee23b7c.png',
+    specs:{ Batería:'10h', Resistencia:'IP67', Potencia:'10W', WiFi:'Sí', Bluetooth:'5.0', Multiroom:'Sonos Ecosystem' },
+    description:'WiFi + Bluetooth, True Play automático y carga inalámbrica. El portátil del ecosistema Sonos. IP67.' },
+  { id:28, name:'Sonos Era 100',           brand:'Sonos',           category:'altavoces',  price:279, oldPrice:null, badge:'Estéreo',
+    image: 'https://www.turntablelab.com/cdn/shop/files/sonos-era-100-speaker-black.jpg?v=1762284236',
+    specs:{ Batería:'Con cable', Resistencia:'No', Potencia:'2×25W', WiFi:'Sí', Bluetooth:'5.0', Multiroom:'Sonos Ecosystem' },
+    description:'Sonido estéreo verdadero desde un altavoz compacto. Trueplay, Apple AirPlay 2 y WiFi dual band.' },
+  { id:29, name:'Marshall Emberton III',   brand:'Marshall',        category:'altavoces',  price:109, oldPrice:129,  badge:'32H Rock',
+    image: 'https://c1.neweggimages.com/productimage/nb640/A15TD2501291EAF8M22.jpg',
+    specs:{ Batería:'32h', Resistencia:'IP67', Potencia:'20W', WiFi:'No', Bluetooth:'5.3', Multiroom:'No' },
+    description:'32 horas de batería siendo el líder de mercado en su rango. IP67 y sonido 360° con firma Marshall.' },
+  { id:30, name:'Marshall Tufton',         brand:'Marshall',        category:'altavoces',  price:399, oldPrice:449,  badge:'80W',
+    image: 'https://c1.neweggimages.com/productimage/nb640/B7VES22052815LVKZD4.jpg',
+    specs:{ Batería:'20h', Resistencia:'IPX2', Potencia:'80W', WiFi:'No', Bluetooth:'5.0', Multiroom:'Stack Mode' },
+    description:'80W de potencia pura con graves profundos. Stack Mode para emparejar dos Tufton. El más potente de Marshall.' },
+  { id:31, name:'B&O Beolit 20',           brand:'Bang & Olufsen',  category:'altavoces',  price:449, oldPrice:499,  badge:'Premium 90W',
+    image: 'https://images.ctfassets.net/8cd2csgvqd3m/3rUMHE0GRKR0eACCntNBlr/2dc73adfb01a3bbf79e19f12578376d5/BL20_Grey_iphone_2.png',
+    specs:{ Batería:'37h', Resistencia:'IP67', Potencia:'90W', WiFi:'No', Bluetooth:'5.1', Multiroom:'No' },
+    description:'Diseño danés con mango de cuero y aluminio. 90W, 37h batería, IP67 y sonido 360° con firma B&O.' },
+  { id:32, name:'JBL Charge 5',            brand:'JBL',             category:'altavoces',  price:169, oldPrice:199,  badge:'Power Bank',
+    image: 'https://c1.neweggimages.com/productimage/nb640/A1J7D210419S5QJH.jpg',
+    specs:{ Batería:'20h', Resistencia:'IP67', Potencia:'40W', WiFi:'No', Bluetooth:'5.1', Multiroom:'PartyBoost' },
+    description:'Power bank integrado para cargar tu móvil. JBL PartyBoost, 40W de potencia y bajos profundos. IP67.' },
+  { id:33, name:'Bose SoundLink Flex',     brand:'Bose',            category:'altavoces',  price:149, oldPrice:179,  badge:'Flota en Agua',
+    image: 'https://c1.neweggimages.com/productimage/nb640/55-772-054-V07.jpg',
+    specs:{ Batería:'12h', Resistencia:'IP67', Potencia:'20W', WiFi:'No', Bluetooth:'5.3', Multiroom:'No' },
+    description:'Flota en el agua. PositionIQ para sonido óptimo en cualquier posición. El compañero perfecto al aire libre.' },
+
+  // MÁSCARAS LED
+  { id:34, name:'CurrentBody Skin LED',        brand:'CurrentBody',      category:'mascaras', price:299, oldPrice:349, badge:'FDA · 264 LEDs',
+    image: 'https://us.currentbody.com/cdn/shop/files/1_3c4dd6ee-ff67-4a7b-90a7-dceac5d1fb44_800x.png',
+    specs:{ Longitudes:'633nm + 830nm', LEDs:'264', Sesión:'10 min', Frecuencia:'Diario', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
+    description:'La favorita de los dermatólogos. 264 LEDs rojo e infrarrojo para estimular el colágeno. Certificada FDA.' },
+  { id:35, name:'Omnilux Contour Face',        brand:'Omnilux',          category:'mascaras', price:395, oldPrice:null, badge:'Uso Médico',
+    image: 'https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Contour_Face_Cover_Image.jpg?v=1756958460&width=600',
+    specs:{ Longitudes:'633nm + 830nm', LEDs:'132', Sesión:'10 min', Frecuencia:'3x/semana', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
+    description:'La máscara LED usada en clínicas médicas estéticas. Panel LED flexible que se adapta a todos los contornos.' },
+  { id:36, name:'Dr. Dennis Gross SpectraLite', brand:'Dr. Dennis Gross', category:'mascaras', price:395, oldPrice:null, badge:'Triple Onda',
+    image: 'https://www.drdennisgross.com/dw/image/v2/BBSK_PRD/on/demandware.static/-/Sites-itemmaster_ddg/default/dw4e54ef8d/2025/October/FaceWarePro/01_DRx_FWP_OnWhite.jpg',
+    specs:{ Longitudes:'630nm + 415nm + 850nm', LEDs:'162', Sesión:'3 min', Frecuencia:'Diario', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
+    description:'Triple longitud de onda: rojo antienvejecimiento + azul anti-acné + infrarrojo reparador. Solo 3 minutos.' },
+  { id:37, name:'Foreo UFO 3',                 brand:'Foreo',            category:'mascaras', price:329, oldPrice:369,  badge:'Smart 90s',
+    image: 'https://assets.foreo.com/files/static/2025-12/ecomm_UFO-3_Pink_1.webp',
+    specs:{ Longitudes:'617nm + 830nm + 415nm', LEDs:'Array LED', Sesión:'90 segundos', Frecuencia:'Diario', Cobertura:'Cara', Certificación:'Dermatólogos' },
+    description:'LED + crioterapia + termoterapia + masaje en 90 segundos. App Foreo para rutinas personalizadas. Sueco.' },
+  { id:38, name:'NuFace Trinity+',             brand:'NuFace',           category:'mascaras', price:289, oldPrice:329,  badge:'Microcorrientes',
+    image: 'https://www.mynuface.com/cdn/shop/files/01_Silo_Trinity_Complete.jpg?v=1777906292&width=600',
+    specs:{ Longitudes:'630nm + 830nm', LEDs:'ELE Attachment', Sesión:'5 min', Frecuencia:'Diario', Cobertura:'Cara + cuello', Certificación:'FDA Cleared' },
+    description:'Microcorrientes + LED rojo e infrarrojo. Define el contorno facial y reduce arrugas en 4 semanas. Clínico.' }
 ];
 
-// ===== SVG PRODUCT ILLUSTRATIONS =====
-function getProductSVG(product, size = 'md') {
-  const s = size === 'sm' ? 0.6 : size === 'lg' ? 1.2 : 1;
-  if (product.type === 'watch') return watchSVG(product, s);
-  if (product.type === 'ring') return ringSVG(product, s);
-  if (product.type === 'glasses') return glassesSVG(product, s);
-  return '';
-}
+// ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
-function watchSVG(p, s = 1) {
-  const col = p.colors[0];
-  return `<svg viewBox="0 0 200 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="ws_${p.id}" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="${col}"/>
-        <stop offset="100%" stop-color="${col}aa"/>
-      </linearGradient>
-      <linearGradient id="wc_${p.id}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#2a2a48"/>
-        <stop offset="100%" stop-color="#0e0e22"/>
-      </linearGradient>
-      <filter id="wg_${p.id}"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    </defs>
-    <ellipse cx="100" cy="260" rx="60" ry="10" fill="rgba(99,102,241,0.1)"/>
-    <rect x="65" y="4" width="70" height="62" rx="10" fill="url(#ws_${p.id})"/>
-    <rect x="68" y="8" width="64" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
-    <rect x="68" y="14" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="20" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="26" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="32" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="38" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="44" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="50" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="16" y="62" width="168" height="146" rx="38" fill="url(#wc_${p.id})" filter="drop-shadow(0 12px 30px rgba(99,102,241,0.25))"/>
-    <path d="M54,63 Q100,59 146,63" stroke="rgba(255,255,255,0.1)" stroke-width="1.2" fill="none"/>
-    <rect x="26" y="72" width="148" height="126" rx="29" fill="#08081a"/>
-    <rect x="34" y="79" width="132" height="112" rx="24" fill="url(#screenG_${p.id})"/>
-    <defs><linearGradient id="screenG_${p.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0c0c22"/><stop offset="100%" stop-color="#050512"/></linearGradient></defs>
-    <text x="100" y="116" text-anchor="middle" fill="white" font-family="Space Grotesk,sans-serif" font-size="28" font-weight="700" letter-spacing="-1">09:41</text>
-    <text x="100" y="131" text-anchor="middle" fill="#6060a0" font-family="Inter,sans-serif" font-size="9">Mar, 10 Mayo</text>
-    <rect x="42" y="138" width="116" height="24" rx="8" fill="rgba(255,53,96,0.1)"/>
-    <polyline points="47,150 55,150 59,142 65,158 71,142 77,158 81,150 118,150" stroke="#ff3560" stroke-width="1.5" fill="none" filter="url(#wg_${p.id})"/>
-    <text x="148" y="148" text-anchor="middle" fill="#ff3560" font-family="Inter,sans-serif" font-size="8" font-weight="700">72 bpm</text>
-    <rect x="42" y="168" width="52" height="18" rx="6" fill="rgba(56,189,248,0.12)"/>
-    <text x="68" y="180" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="9" font-weight="700">SpO₂ 98%</text>
-    <rect x="106" y="168" width="52" height="18" rx="6" fill="rgba(52,211,153,0.12)"/>
-    <text x="132" y="180" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="9" font-weight="700">8,450 🦶</text>
-    <rect x="182" y="110" width="6" height="22" rx="3" fill="#1e1e38"/>
-    <rect x="182" y="140" width="6" height="12" rx="3" fill="#1e1e38"/>
-    <rect x="12" y="120" width="6" height="15" rx="3" fill="#1e1e38"/>
-    <rect x="65" y="204" width="70" height="62" rx="10" fill="url(#ws_${p.id})"/>
-    <rect x="68" y="210" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="216" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="222" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="228" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="234" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="68" y="240" width="64" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-    <rect x="75" y="232" width="50" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
-    <rect x="94" y="228" width="12" height="16" rx="2" fill="rgba(255,255,255,0.18)"/>
+function watchSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="10" width="8" height="20" rx="3" fill="${color}" opacity=".6"/>
+    <rect x="72" y="10" width="8" height="20" rx="3" fill="${color}" opacity=".6"/>
+    <rect x="40" y="130" width="8" height="20" rx="3" fill="${color}" opacity=".6"/>
+    <rect x="72" y="130" width="8" height="20" rx="3" fill="${color}" opacity=".6"/>
+    <rect x="20" y="30" width="80" height="100" rx="20" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <rect x="26" y="36" width="68" height="88" rx="16" fill="#0d0d1a"/>
+    <circle cx="60" cy="80" r="28" fill="none" stroke="${color}" stroke-width="1" opacity=".3"/>
+    <line x1="60" y1="80" x2="60" y2="58" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
+    <line x1="60" y1="80" x2="74" y2="88" stroke="${color}" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <circle cx="60" cy="80" r="3" fill="${color}"/>
+    <path d="M 36 80 Q 42 65 50 72 Q 58 79 60 64 Q 62 49 72 56 Q 78 60 84 80" stroke="#10b981" stroke-width="1.5" fill="none" opacity=".8"/>
   </svg>`;
 }
 
-function ringSVG(p, s = 1) {
-  const col = p.colors[0];
-  return `<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="rg_${p.id}" cx="50%" cy="30%" r="65%">
-        <stop offset="0%" stop-color="${col}dd"/>
-        <stop offset="55%" stop-color="${col}88"/>
-        <stop offset="100%" stop-color="${col}22"/>
-      </radialGradient>
-      <filter id="rf_${p.id}"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    </defs>
-    <ellipse cx="100" cy="100" rx="66" ry="66" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="1.5"/>
-    <ellipse cx="100" cy="100" rx="56" ry="56" fill="none" stroke="url(#rg_${p.id})" stroke-width="28"/>
-    <ellipse cx="100" cy="100" rx="56" ry="56" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="5 5"/>
-    <ellipse cx="100" cy="100" rx="42" ry="42" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <circle cx="100" cy="46" r="5" fill="rgba(99,102,241,0.8)" filter="url(#rf_${p.id})"/>
-    <circle cx="108" cy="48" r="3" fill="rgba(99,102,241,0.5)"/>
-    <circle cx="92" cy="48" r="3" fill="rgba(99,102,241,0.5)"/>
-    <ellipse cx="100" cy="100" rx="28" ry="28" fill="rgba(8,8,20,0.7)"/>
-    <text x="100" y="97" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Space Grotesk,sans-serif" font-size="7.5" font-weight="700">ZONETECH</text>
-    <text x="100" y="110" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Inter,sans-serif" font-size="7">RING</text>
-    <ellipse cx="100" cy="192" rx="50" ry="8" fill="rgba(99,102,241,0.08)"/>
+function ringSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="60" cy="60" rx="40" ry="40" fill="none" stroke="${color}" stroke-width="12" opacity=".15"/>
+    <ellipse cx="60" cy="60" rx="40" ry="40" fill="none" stroke="${color}" stroke-width="8"/>
+    <ellipse cx="60" cy="60" rx="40" ry="40" fill="none" stroke="white" stroke-width="1" opacity=".2"/>
+    <ellipse cx="60" cy="60" rx="30" ry="30" fill="none" stroke="${color}" stroke-width="1" opacity=".3" stroke-dasharray="4 4"/>
+    <circle cx="60" cy="22" r="4" fill="${color}"/>
+    <circle cx="60" cy="22" r="7" fill="none" stroke="${color}" stroke-width="1" opacity=".5"/>
+    <path d="M 40 60 Q 42 52 50 55 Q 58 58 60 50 Q 62 42 70 45 Q 75 48 78 60" stroke="#10b981" stroke-width="1.5" fill="none" opacity=".8"/>
+    <text x="60" y="65" text-anchor="middle" fill="${color}" font-size="8" font-family="Inter" opacity=".8">SpO₂</text>
   </svg>`;
 }
 
-function glassesSVG(p, s = 1) {
-  const col = p.colors[0];
-  return `<svg viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="gg_${p.id}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#06b6d4"/>
-        <stop offset="100%" stop-color="#6366f1"/>
-      </linearGradient>
-      <linearGradient id="lensG_${p.id}" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="${col}40"/>
-        <stop offset="100%" stop-color="${col}15"/>
-      </linearGradient>
-    </defs>
-    <ellipse cx="120" cy="148" rx="80" ry="10" fill="rgba(99,102,241,0.08)"/>
-    <line x1="5" y1="78" x2="40" y2="78" stroke="url(#gg_${p.id})" stroke-width="4" stroke-linecap="round"/>
-    <rect x="40" y="54" width="68" height="48" rx="22" fill="url(#lensG_${p.id})" stroke="url(#gg_${p.id})" stroke-width="2.5"/>
-    <rect x="44" y="58" width="60" height="40" rx="19" fill="rgba(6,182,212,0.04)"/>
-    <ellipse cx="70" cy="70" rx="12" ry="8" fill="rgba(255,255,255,0.05)" transform="rotate(-20 70 70)"/>
-    <rect x="132" y="54" width="68" height="48" rx="22" fill="url(#lensG_${p.id})" stroke="url(#gg_${p.id})" stroke-width="2.5"/>
-    <rect x="136" y="58" width="60" height="40" rx="19" fill="rgba(6,182,212,0.04)"/>
-    <ellipse cx="162" cy="70" rx="12" ry="8" fill="rgba(255,255,255,0.05)" transform="rotate(-20 162 70)"/>
-    <path d="M108 78 Q120 70 132 78" stroke="url(#gg_${p.id})" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <line x1="200" y1="78" x2="235" y2="78" stroke="url(#gg_${p.id})" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="70" cy="78" r="4" fill="rgba(6,182,212,0.7)" filter="drop-shadow(0 0 4px rgba(6,182,212,0.8))"/>
-    <circle cx="170" cy="78" r="4" fill="rgba(6,182,212,0.7)" filter="drop-shadow(0 0 4px rgba(6,182,212,0.8))"/>
-    <text x="70" y="84" text-anchor="middle" fill="rgba(6,182,212,0.7)" font-family="Inter,sans-serif" font-size="8" font-weight="700">AR</text>
-    <text x="170" y="84" text-anchor="middle" fill="rgba(6,182,212,0.7)" font-family="Inter,sans-serif" font-size="8" font-weight="700">AR</text>
+function glassesSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="35" x2="22" y2="35" stroke="${color}" stroke-width="3" stroke-linecap="round"/>
+    <line x1="138" y1="35" x2="160" y2="35" stroke="${color}" stroke-width="3" stroke-linecap="round"/>
+    <rect x="22" y="18" width="48" height="34" rx="10" fill="#0d0d1a" stroke="${color}" stroke-width="2.5"/>
+    <rect x="90" y="18" width="48" height="34" rx="10" fill="#0d0d1a" stroke="${color}" stroke-width="2.5"/>
+    <line x1="70" y1="30" x2="90" y2="30" stroke="${color}" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="25" y="21" width="42" height="28" rx="8" fill="${color}" opacity=".08"/>
+    <rect x="93" y="21" width="42" height="28" rx="8" fill="${color}" opacity=".08"/>
+    <circle cx="38" cy="62" r="5" fill="${color}" opacity=".6"/>
+    <circle cx="38" cy="62" r="3" fill="${color}"/>
+    <text x="48" y="67" fill="${color}" font-size="7" font-family="Inter" opacity=".8">MIC AI</text>
+    <circle cx="122" cy="62" r="4" fill="#10b981" opacity=".8"/>
+    <circle cx="130" cy="62" r="4" fill="#10b981" opacity=".5"/>
+    <circle cx="138" cy="62" r="4" fill="#10b981" opacity=".3"/>
   </svg>`;
 }
 
-// ===== STATE =====
-let cart = JSON.parse(localStorage.getItem('nexus-cart') || '[]');
-let compareList = [];
-let currentFilter = 'all';
+function headphonesSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 20 65 Q 20 25 60 25 Q 100 25 100 65" stroke="${color}" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <rect x="8" y="60" width="24" height="36" rx="10" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <rect x="88" y="60" width="24" height="36" rx="10" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <rect x="11" y="63" width="18" height="30" rx="8" fill="${color}" opacity=".15"/>
+    <rect x="91" y="63" width="18" height="30" rx="8" fill="${color}" opacity=".15"/>
+    <circle cx="20" cy="78" r="5" fill="${color}" opacity=".6"/>
+    <circle cx="100" cy="78" r="5" fill="${color}" opacity=".6"/>
+    <circle cx="20" cy="78" r="2" fill="${color}"/>
+    <circle cx="100" cy="78" r="2" fill="${color}"/>
+    <path d="M 44 105 L 44 112 Q 60 117 76 112 L 76 105" stroke="${color}" stroke-width="1.5" fill="none" opacity=".4" stroke-linecap="round"/>
+    <circle cx="60" cy="115" r="4" fill="${color}" opacity=".5"/>
+  </svg>`;
+}
 
-// ===== HELPERS =====
+function speakerSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="30" width="90" height="60" rx="18" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <circle cx="45" cy="60" r="18" fill="#0d0d1a" stroke="${color}" stroke-width="1.5"/>
+    <circle cx="45" cy="60" r="12" fill="none" stroke="${color}" stroke-width="1" opacity=".5"/>
+    <circle cx="45" cy="60" r="5" fill="${color}" opacity=".7"/>
+    <circle cx="45" cy="60" r="2" fill="${color}"/>
+    <circle cx="82" cy="53" r="5" fill="${color}" opacity=".3"/>
+    <circle cx="82" cy="53" r="3" fill="${color}" opacity=".6"/>
+    <circle cx="82" cy="53" r="1.5" fill="${color}"/>
+    <rect x="72" y="63" width="20" height="3" rx="1.5" fill="${color}" opacity=".4"/>
+    <rect x="72" y="70" width="15" height="3" rx="1.5" fill="${color}" opacity=".3"/>
+    <circle cx="45" cy="60" r="22" fill="none" stroke="${color}" stroke-width="0.5" opacity=".2" stroke-dasharray="3 3"/>
+  </svg>`;
+}
+
+function maskSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 10 45 Q 10 20 60 20 Q 110 20 110 45 L 105 80 Q 100 100 60 100 Q 20 100 15 80 Z" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <ellipse cx="38" cy="52" rx="16" ry="18" fill="#0d0d1a" stroke="${color}" stroke-width="1.5" opacity=".8"/>
+    <ellipse cx="82" cy="52" rx="16" ry="18" fill="#0d0d1a" stroke="${color}" stroke-width="1.5" opacity=".8"/>
+    <circle cx="28" cy="48" r="2.5" fill="#dc2626" opacity=".55"/>
+    <circle cx="35" cy="48" r="2.5" fill="#dc2626" opacity=".7"/>
+    <circle cx="42" cy="48" r="2.5" fill="#dc2626" opacity=".85"/>
+    <circle cx="49" cy="48" r="2.5" fill="#dc2626" opacity="1"/>
+    <circle cx="72" cy="48" r="2.5" fill="#dc2626" opacity=".55"/>
+    <circle cx="79" cy="48" r="2.5" fill="#dc2626" opacity=".7"/>
+    <circle cx="86" cy="48" r="2.5" fill="#dc2626" opacity=".85"/>
+    <circle cx="93" cy="48" r="2.5" fill="#dc2626" opacity="1"/>
+    <circle cx="31" cy="57" r="2.5" fill="#f97316" opacity=".65"/>
+    <circle cx="39" cy="57" r="2.5" fill="#f97316" opacity=".8"/>
+    <circle cx="47" cy="57" r="2.5" fill="#f97316" opacity=".95"/>
+    <circle cx="75" cy="57" r="2.5" fill="#f97316" opacity=".65"/>
+    <circle cx="83" cy="57" r="2.5" fill="#f97316" opacity=".8"/>
+    <circle cx="91" cy="57" r="2.5" fill="#f97316" opacity=".95"/>
+    <path d="M 42 82 Q 60 88 78 82" stroke="${color}" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
+    <text x="60" y="114" text-anchor="middle" fill="${color}" font-size="7" font-family="Inter" opacity=".7">LED THERAPY</text>
+  </svg>`;
+}
+
+function getProductSVG(category, color) {
+  switch (category) {
+    case 'relojes':     return watchSVG(color);
+    case 'anillos':     return ringSVG(color);
+    case 'gafas':       return glassesSVG(color);
+    case 'auriculares': return headphonesSVG(color);
+    case 'altavoces':   return speakerSVG(color);
+    case 'mascaras':    return maskSVG(color);
+    default:            return watchSVG(color);
+  }
+}
+
+function productImgHTML(product, imgClass, svgWrapClass) {
+  var svg = '<div class="' + svgWrapClass + '">' + getProductSVG(product.category, '#6366f1') + '</div>';
+  if (!product.image) return svg;
+  return '<img class="' + imgClass + '" src="' + product.image + '" alt="' + product.name + '" loading="lazy" ' +
+    'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + svg;
+}
+
+// ─── CART STATE ──────────────────────────────────────────────────────────────
+
+var cart = JSON.parse(localStorage.getItem('zt_cart') || '[]');
+var comparatorItems = [];
+var rotateX = 0, rotateY = 0, dragging = false, lastX = 0, lastY = 0;
+
 function saveCart() {
-  localStorage.setItem('nexus-cart', JSON.stringify(cart));
-}
-function formatPrice(n) {
-  return '$' + n.toLocaleString('es-CO');
-}
-function getSensorRating(val) {
-  if (val === 0) return '<span style="color:var(--text-3)">—</span>';
-  if (val === true) return '<span style="color:var(--green)">✓</span>';
-  if (val === false) return '<span style="color:var(--text-3)">✗</span>';
-  const bars = Array.from({length:5}, (_,i) =>
-    `<div class="sensor-bar${i < val ? ' filled' : ''}"></div>`
-  ).join('');
-  return `<div class="sensor-bars">${bars}</div>`;
+  localStorage.setItem('zt_cart', JSON.stringify(cart));
 }
 
-// ===== NAVBAR =====
-function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
-  menuToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    navLinks.style.position = 'fixed';
-    navLinks.style.top = '70px';
-    navLinks.style.left = '0';
-    navLinks.style.right = '0';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.background = 'var(--bg-2)';
-    navLinks.style.padding = '16px';
-    navLinks.style.borderBottom = '1px solid var(--border)';
-  });
+function getCartCount() {
+  return cart.reduce(function(s, i) { return s + i.qty; }, 0);
 }
 
-// ===== HERO PARTICLES =====
-function initParticles() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [];
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * W;
-      this.y = Math.random() * H;
-      this.r = Math.random() * 1.5 + 0.3;
-      this.alpha = Math.random() * 0.5 + 0.1;
-      this.speed = Math.random() * 0.3 + 0.1;
-      this.angle = Math.random() * Math.PI * 2;
-      this.drift = (Math.random() - 0.5) * 0.01;
-    }
-    update() {
-      this.angle += this.drift;
-      this.x += Math.cos(this.angle) * this.speed;
-      this.y += Math.sin(this.angle) * this.speed - 0.15;
-      if (this.y < -10 || this.x < -10 || this.x > W + 10) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(99,102,241,${this.alpha})`;
-      ctx.fill();
-    }
-  }
-  for (let i = 0; i < 120; i++) particles.push(new Particle());
-  function animate() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animate);
-  }
-  animate();
+function getCartTotal() {
+  return cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
 }
 
-// ===== CART =====
-function initCart() {
-  const toggle = document.getElementById('cart-toggle');
-  const closeBtn = document.getElementById('close-cart');
-  const continueShopping = document.getElementById('continue-shopping');
-  const overlay = document.getElementById('overlay');
-  toggle.addEventListener('click', openCart);
-  closeBtn.addEventListener('click', closeCart);
-  continueShopping && continueShopping.addEventListener('click', closeCart);
-  overlay.addEventListener('click', () => {
-    closeCart();
-    closeModal('quick-view-modal');
-  });
-  updateCartUI();
+function updateCartBadge() {
+  var count = getCartCount();
+  var badge = document.getElementById('cart-count');
+  if (badge) {
+    badge.textContent = count;
+    badge.style.transform = count > 0 ? 'scale(1)' : 'scale(0)';
+  }
+}
+
+function addToCart(productId) {
+  var product = PRODUCTS.find(function(p) { return p.id === productId; });
+  if (!product) return;
+  var existing = cart.find(function(i) { return i.id === productId; });
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ id: productId, name: product.name, brand: product.brand, price: product.price, qty: 1, category: product.category });
+  }
+  saveCart();
+  updateCartBadge();
+  renderCartItems();
+  openCart();
+  showToast(product.name + ' añadido al carrito');
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(function(i) { return i.id !== productId; });
+  saveCart();
+  updateCartBadge();
+  renderCartItems();
+}
+
+function changeQty(productId, delta) {
+  var item = cart.find(function(i) { return i.id === productId; });
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) {
+    removeFromCart(productId);
+  } else {
+    saveCart();
+    updateCartBadge();
+    renderCartItems();
+  }
+}
+
+function renderCartItems() {
+  var container = document.getElementById('cart-items');
+  var totalEl = document.getElementById('cart-total');
+  var grandTotalEl = document.getElementById('cart-grand-total');
+  var footer = document.getElementById('cart-footer');
+  if (!container) return;
+
+  if (cart.length === 0) {
+    container.innerHTML = '<div class="cart-empty" id="cart-empty"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><p>Tu carrito está vacío</p><span>Agrega productos para comenzar</span></div>';
+    if (footer) footer.style.display = 'none';
+    return;
+  }
+
+  container.innerHTML = cart.map(function(item) {
+    var prod = PRODUCTS.find(function(p) { return p.id === item.id; });
+    var cartImg = prod && prod.image
+      ? '<img class="cart-real-img" src="' + prod.image + '" alt="' + item.name + '" onerror="this.style.display=\'none\'">'
+      : getProductSVG(item.category, '#6366f1');
+    return '<div class="cart-item">' +
+      '<div class="cart-item-svg">' + cartImg + '</div>' +
+      '<div class="cart-item-info">' +
+        '<span class="cart-item-brand">' + item.brand + '</span>' +
+        '<span class="cart-item-name">' + item.name + '</span>' +
+        '<div class="cart-item-controls">' +
+          '<button onclick="changeQty(' + item.id + ',-1)">−</button>' +
+          '<span>' + item.qty + '</span>' +
+          '<button onclick="changeQty(' + item.id + ',1)">+</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="cart-item-right">' +
+        '<span class="cart-item-price">€' + (item.price * item.qty).toLocaleString() + '</span>' +
+        '<button class="cart-item-remove" onclick="removeFromCart(' + item.id + ')">×</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+
+  var total = getCartTotal();
+  if (totalEl) totalEl.textContent = '€' + total.toLocaleString();
+  if (grandTotalEl) grandTotalEl.textContent = '€' + total.toLocaleString();
+  if (footer) footer.style.display = 'block';
 }
 
 function openCart() {
-  document.getElementById('side-cart').classList.add('open');
-  document.getElementById('overlay').classList.add('active');
+  var panel = document.getElementById('side-cart');
+  var overlay = document.getElementById('overlay');
+  if (panel) panel.classList.add('open');
+  if (overlay) overlay.classList.add('active');
 }
+
 function closeCart() {
-  document.getElementById('side-cart').classList.remove('open');
-  document.getElementById('overlay').classList.remove('active');
+  var panel = document.getElementById('side-cart');
+  var overlay = document.getElementById('overlay');
+  if (panel) panel.classList.remove('open');
+  if (overlay) overlay.classList.remove('active');
 }
 
-function addToCart(productId, variant = '') {
-  const product = products.find(p => p.id === productId);
-  if (!product) return;
-  const existing = cart.find(item => item.id === productId && item.variant === variant);
-  if (existing) {
-    existing.qty += 1;
-  } else {
-    cart.push({ id: productId, name: product.name, price: product.price, variant, qty: 1, type: product.type });
-  }
-  saveCart();
-  updateCartUI();
-  showToast(`${product.name} añadido al carrito`, 'success');
-  animateCartBadge();
-  openCart();
-}
+// ─── TOAST ───────────────────────────────────────────────────────────────────
 
-function removeFromCart(productId, variant) {
-  cart = cart.filter(item => !(item.id === productId && item.variant === variant));
-  saveCart();
-  updateCartUI();
-}
-
-function updateQty(productId, variant, delta) {
-  const item = cart.find(i => i.id === productId && i.variant === variant);
-  if (!item) return;
-  item.qty = Math.max(1, item.qty + delta);
-  saveCart();
-  updateCartUI();
-}
-
-function updateCartUI() {
-  const itemsContainer = document.getElementById('cart-items');
-  const footer = document.getElementById('cart-footer');
-  const empty = document.getElementById('cart-empty');
-  const countEl = document.getElementById('cart-count');
-  const totalEl = document.getElementById('cart-total');
-  const grandEl = document.getElementById('cart-grand-total');
-  const totalCount = cart.reduce((s, i) => s + i.qty, 0);
-  const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
-
-  countEl.textContent = totalCount;
-  countEl.classList.toggle('visible', totalCount > 0);
-
-  if (cart.length === 0) {
-    empty.style.display = 'flex';
-    footer.style.display = 'none';
-    const existingItems = itemsContainer.querySelectorAll('.cart-item');
-    existingItems.forEach(el => el.remove());
-    return;
-  }
-  empty.style.display = 'none';
-  footer.style.display = 'block';
-  totalEl.textContent = formatPrice(totalPrice);
-  grandEl.textContent = formatPrice(totalPrice);
-
-  const existingItems = itemsContainer.querySelectorAll('.cart-item');
-  existingItems.forEach(el => el.remove());
-
-  cart.forEach(item => {
-    const product = products.find(p => p.id === item.id);
-    const div = document.createElement('div');
-    div.className = 'cart-item';
-    div.innerHTML = `
-      <div class="cart-item-visual">${getProductSVG(product, 'sm')}</div>
-      <div class="cart-item-info">
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-variant">${item.variant || 'Estándar'}</div>
-        <div class="cart-item-controls">
-          <div class="qty-control">
-            <button class="qty-btn" onclick="updateQty(${item.id},'${item.variant}',-1)">−</button>
-            <span class="qty-val">${item.qty}</span>
-            <button class="qty-btn" onclick="updateQty(${item.id},'${item.variant}',1)">+</button>
-          </div>
-          <span class="cart-item-price">${formatPrice(item.price * item.qty)}</span>
-        </div>
-      </div>
-      <button class="cart-item-remove" onclick="removeFromCart(${item.id},'${item.variant}')" aria-label="Eliminar">✕</button>
-    `;
-    itemsContainer.appendChild(div);
-  });
-}
-
-function animateCartBadge() {
-  const badge = document.getElementById('cart-count');
-  badge.style.transform = 'scale(1.5)';
-  setTimeout(() => badge.style.transform = '', 300);
-}
-
-// ===== PRODUCTS RENDER =====
-function renderProducts(filter = 'all') {
-  const grid = document.getElementById('products-grid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
-  filtered.forEach((p, i) => {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.style.animationDelay = `${i * 60}ms`;
-    card.dataset.id = p.id;
-    card.innerHTML = `
-      <div class="product-card-visual">
-        ${getProductSVG(p)}
-        ${p.badge ? `<span class="product-badge badge-${p.badge}">${p.badgeLabel}</span>` : ''}
-        <div class="product-actions">
-          <button class="product-action-btn" onclick="event.stopPropagation();toggleWishlist(${p.id})" title="Guardar" aria-label="Guardar">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </button>
-          <button class="product-action-btn quick-view-btn" onclick="event.stopPropagation();openQuickView(${p.id})" aria-label="Vista rápida">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            Vista rápida
-          </button>
-        </div>
-        <div class="compare-toggle">
-          <label class="compare-check" onclick="event.stopPropagation()">
-            <input type="checkbox" onchange="toggleCompare(${p.id},this.checked)" ${compareList.includes(p.id)?'checked':''}>
-            Comparar
-          </label>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-category">${p.category === 'watches' ? 'Reloj Inteligente' : p.category === 'rings' ? 'Anillo Smart' : 'Gafas AR'}</div>
-        <div class="product-name">${p.name}</div>
-        <div class="product-rating">
-          <span class="stars">${'★'.repeat(Math.floor(p.rating))}${p.rating % 1 ? '½' : ''}</span>
-          <span class="rating-count">${p.rating} (${p.reviews.toLocaleString()})</span>
-        </div>
-        <div class="product-price-row">
-          <div class="product-price">
-            <span class="price-current">${formatPrice(p.price)}</span>
-            ${p.originalPrice > p.price ? `<span class="price-original">${formatPrice(p.originalPrice)}</span>` : ''}
-          </div>
-          <button class="btn-add-cart" onclick="addToCart(${p.id})">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            Añadir
-          </button>
-        </div>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-}
-
-function initProductFilters() {
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderProducts(btn.dataset.filter);
-    });
-  });
-}
-
-function toggleWishlist(id) {
-  showToast('Guardado en favoritos ♥', 'success');
-}
-
-// ===== QUICK VIEW =====
-function openQuickView(productId) {
-  const p = products.find(pr => pr.id === productId);
-  if (!p) return;
-  const content = document.getElementById('quick-view-content');
-  const sensorsHtml = [
-    { name: 'SpO₂', val: p.sensors.spo2 },
-    { name: 'Frec. Cardíaca', val: p.sensors.hr },
-    { name: 'ECG', val: p.sensors.ecg },
-    { name: 'GPS', val: p.sensors.gps },
-    { name: 'Sueño', val: p.sensors.sleep },
-    { name: 'Estrés', val: p.sensors.stress },
-    { name: 'Temperatura', val: p.sensors.temp },
-    { name: 'Batería (días)', val: p.sensors.battery }
-  ].filter(s => s.val !== 0 && s.val !== false).map(s => `
-    <div class="qv-sensor">
-      <div class="qv-sensor-name">${s.name}</div>
-      <div class="qv-sensor-val">${s.val === true ? '✓ Sí' : s.val === false ? '✗ No' : s.val === 5 ? 'Excelente' : s.val === 4 ? 'Muy bueno' : s.val === 3 ? 'Bueno' : s.val === 2 ? 'Básico' : s.val + ' días'}</div>
-    </div>
-  `).join('');
-
-  content.innerHTML = `
-    <div class="qv-visual">
-      <div class="qv-visual-bg"></div>
-      ${getProductSVG(p, 'lg')}
-    </div>
-    <div class="qv-info">
-      <div class="qv-category">${p.category === 'watches' ? 'Reloj Inteligente' : p.category === 'rings' ? 'Anillo Smart' : 'Gafas AR'}</div>
-      <h2 class="qv-name">${p.name}</h2>
-      <div class="qv-rating">
-        <span class="stars">${'★'.repeat(Math.floor(p.rating))}</span>
-        <span style="font-size:14px;color:var(--text-2)">${p.rating} · ${p.reviews.toLocaleString()} reseñas</span>
-      </div>
-      <p class="qv-description">${p.description}</p>
-      <div class="qv-sensors">${sensorsHtml}</div>
-      <div class="qv-price-row">
-        <div>
-          <div class="qv-price">${formatPrice(p.price)}</div>
-          ${p.originalPrice > p.price ? `<div class="qv-price-original">${formatPrice(p.originalPrice)}</div>` : ''}
-        </div>
-        <button class="btn-primary btn-lg" onclick="addToCart(${p.id});closeModal('quick-view-modal')">
-          Añadir al Carrito
-        </button>
-      </div>
-    </div>
-  `;
-  openModal('quick-view-modal');
-}
-
-// ===== MODAL =====
-function openModal(id) {
-  document.getElementById(id).classList.add('open');
-  document.getElementById('overlay').classList.add('active');
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-  const anyOpen = document.querySelector('.modal.open');
-  if (!anyOpen) document.getElementById('overlay').classList.remove('active');
-}
-function initModals() {
-  document.getElementById('close-quick-view').addEventListener('click', () => closeModal('quick-view-modal'));
-}
-
-// ===== CONFIGURATOR =====
-function initConfigurator() {
-  const materialPrices = { titanium: 299, aluminum: 249, ceramic: 349 };
-  let selectedMaterial = 'titanium';
-
-  document.querySelectorAll('#strap-colors .swatch').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('#strap-colors .swatch').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const hex1 = btn.dataset.hex;
-      const hex2 = btn.dataset.hex2;
-      document.getElementById('strap-stop-1').setAttribute('stop-color', hex1);
-      document.getElementById('strap-stop-2').setAttribute('stop-color', hex2);
-    });
-  });
-
-  document.querySelectorAll('#case-materials .material-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('#case-materials .material-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedMaterial = btn.dataset.material;
-      const price = materialPrices[selectedMaterial] || 299;
-      document.getElementById('config-price').textContent = formatPrice(price);
-    });
-  });
-
-  document.getElementById('add-config-to-cart').addEventListener('click', () => {
-    const price = materialPrices[selectedMaterial] || 299;
-    const activeSwatch = document.querySelector('#strap-colors .swatch.active');
-    const color = activeSwatch ? activeSwatch.title : 'Midnight Black';
-    const variant = `${color} · ${selectedMaterial.charAt(0).toUpperCase() + selectedMaterial.slice(1)}`;
-    const custom = { id: 99, name: 'ZTO Pro X (Configurado)', price, type: 'watch' };
-    const existing = cart.find(i => i.id === 99 && i.variant === variant);
-    if (existing) { existing.qty++; }
-    else { cart.push({ id: 99, name: custom.name, price, variant, qty: 1, type: 'watch' }); }
-    saveCart();
-    updateCartUI();
-    showToast(`ZTO Pro X configurado añadido al carrito`, 'success');
-    animateCartBadge();
-    openCart();
-  });
-
-  // Drag to rotate
-  const wrapper = document.getElementById('config-watch');
-  let dragging = false, startX = 0, rotY = 0;
-  wrapper.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; wrapper.style.cursor = 'grabbing'; });
-  window.addEventListener('mousemove', e => {
-    if (!dragging) return;
-    const delta = (e.clientX - startX) * 0.4;
-    rotY += delta;
-    startX = e.clientX;
-    wrapper.style.transform = `perspective(800px) rotateY(${rotY}deg)`;
-  });
-  window.addEventListener('mouseup', () => { dragging = false; wrapper.style.cursor = 'grab'; });
-  wrapper.addEventListener('touchstart', e => { dragging = true; startX = e.touches[0].clientX; });
-  wrapper.addEventListener('touchmove', e => {
-    if (!dragging) return;
-    const delta = (e.touches[0].clientX - startX) * 0.4;
-    rotY += delta;
-    startX = e.touches[0].clientX;
-    wrapper.style.transform = `perspective(800px) rotateY(${rotY}deg)`;
-  });
-  wrapper.addEventListener('touchend', () => { dragging = false; });
-}
-
-// ===== COMPARATOR =====
-function initComparator() {
-  renderQuickCompareBtns();
-}
-
-function renderQuickCompareBtns() {
-  const container = document.getElementById('quick-compare-btns');
+function showToast(message, type) {
+  type = type || 'success';
+  var container = document.getElementById('toast-container');
   if (!container) return;
-  container.innerHTML = products.map(p => `
-    <button class="qc-btn ${compareList.includes(p.id) ? 'in-compare' : ''}" onclick="toggleCompare(${p.id}, ${!compareList.includes(p.id)};this.classList.toggle('in-compare'))">
-      ${p.name}
-    </button>
-  `).join('');
-  container.querySelectorAll('.qc-btn').forEach((btn, i) => {
-    const p = products[i];
-    btn.onclick = () => {
-      const inList = compareList.includes(p.id);
-      toggleCompare(p.id, !inList);
-      btn.classList.toggle('in-compare', !inList);
-    };
+  var toast = document.createElement('div');
+  toast.className = 'toast toast-' + type;
+  toast.innerHTML = '<span>' + (type === 'success' ? '✓' : 'ℹ') + '</span> ' + message;
+  container.appendChild(toast);
+  setTimeout(function() { toast.classList.add('show'); }, 10);
+  setTimeout(function() {
+    toast.classList.remove('show');
+    setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
+  }, 3000);
+}
+
+// ─── PRODUCTS RENDER ──────────────────────────────────────────────────────────
+
+function renderProducts(filterKey) {
+  filterKey = filterKey || 'all';
+  var category = FILTER_MAP[filterKey] || 'todos';
+  var grid = document.getElementById('products-grid');
+  if (!grid) return;
+
+  var filtered = category === 'todos' ? PRODUCTS : PRODUCTS.filter(function(p) { return p.category === category; });
+
+  grid.innerHTML = filtered.map(function(product) {
+    var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
+    var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
+    var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
+    var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
+    var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
+    var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
+    var reviews = 40 + (product.id * 7) % 180;
+
+    return '<article class="product-card">' +
+      '<span class="product-brand">' + product.brand + '</span>' +
+      badgeHTML +
+      '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
+        productImgHTML(product, 'product-real-img', 'product-svg-back') +
+        '<div class="product-qv-overlay"><span>Vista rápida</span></div>' +
+      '</div>' +
+      '<div class="product-info">' +
+        '<h3 class="product-name">' + product.name + '</h3>' +
+        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span><span class="product-reviews">(' + reviews + ')</span></div>' +
+        '<p class="product-desc">' + shortDesc + '</p>' +
+        '<div class="product-price-row">' +
+          '<span class="product-price">€' + product.price.toLocaleString() + '</span>' +
+          oldPriceHTML + discountHTML +
+        '</div>' +
+        '<div class="product-actions">' +
+          '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          '<button class="btn-compare" onclick="addToComparator(' + product.id + ')" title="Comparar">⇄</button>' +
+          '<button class="btn-qv" onclick="openQuickView(' + product.id + ')" title="Vista rápida">⊙</button>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }).join('');
+
+  // Animate cards in
+  var cards = grid.querySelectorAll('.product-card');
+  cards.forEach(function(card, i) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    setTimeout(function() {
+      card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, i * 55);
   });
 }
 
-function toggleCompare(productId, add) {
-  if (add) {
-    if (compareList.length >= 3) { showToast('Máximo 3 productos para comparar', 'error'); return; }
-    if (!compareList.includes(productId)) compareList.push(productId);
-  } else {
-    compareList = compareList.filter(id => id !== productId);
+function setFilter(filterKey) {
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.filter === filterKey);
+  });
+  var grid = document.getElementById('products-grid');
+  if (grid) {
+    grid.style.opacity = '0';
+    grid.style.transform = 'translateY(10px)';
+    grid.style.transition = 'opacity .2s ease, transform .2s ease';
   }
-  renderCompareTable();
-  renderQuickCompareBtns();
-  // Sync checkboxes in product grid
-  document.querySelectorAll('[onchange^="toggleCompare"]').forEach(cb => {
-    const id = parseInt(cb.getAttribute('onchange').match(/\d+/)[0]);
-    cb.checked = compareList.includes(id);
-  });
+  setTimeout(function() {
+    renderProducts(filterKey);
+    if (grid) {
+      grid.style.opacity = '1';
+      grid.style.transform = 'translateY(0)';
+    }
+  }, 200);
 }
 
-function renderCompareTable() {
-  const wrapper = document.getElementById('compare-table-wrapper');
-  const table = document.getElementById('compare-table');
-  if (compareList.length < 2) {
-    wrapper.style.display = 'none';
+// Category cards → filter products
+function filterAndScroll(filterKey) {
+  setFilter(filterKey);
+  var section = document.getElementById('productos');
+  if (section) section.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ─── QUICK VIEW ───────────────────────────────────────────────────────────────
+
+function openQuickView(productId) {
+  var product = PRODUCTS.find(function(p) { return p.id === productId; });
+  if (!product) return;
+  var modal = document.getElementById('quick-view-modal');
+  var content = document.getElementById('quick-view-content');
+  if (!modal || !content) return;
+
+  var specsHTML = Object.keys(product.specs).map(function(key) {
+    var val = product.specs[key];
+    return '<div class="qv-spec-row"><span class="qv-spec-label">' + key + '</span><span class="qv-spec-value">' + val + '</span></div>';
+  }).join('');
+
+  var qvDiscount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
+  var qvStars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
+  var qvReviews = 40 + (product.id * 7) % 180;
+
+  content.innerHTML =
+    '<div class="qv-svg-wrap">' + productImgHTML(product, 'qv-real-img', 'qv-svg-back') + '</div>' +
+    '<div class="qv-details">' +
+      '<span class="qv-brand">' + product.brand + '</span>' +
+      '<h2 class="qv-title">' + product.name + '</h2>' +
+      '<div class="qv-rating-row"><span style="color:var(--gold);font-size:13px">' + qvStars + '</span><span style="font-size:12px;color:var(--text-3);margin-left:6px">(' + qvReviews + ' reseñas)</span></div>' +
+      '<p class="qv-desc">' + product.description + '</p>' +
+      '<div class="qv-specs">' + specsHTML + '</div>' +
+      '<div class="qv-price-row">' +
+        '<span class="qv-price">€' + product.price.toLocaleString() + '</span>' +
+        (product.oldPrice ? '<span class="qv-old-price">€' + product.oldPrice + '</span>' : '') +
+        (qvDiscount > 0 ? '<span style="background:rgba(52,211,153,.15);color:var(--green);font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px">-' + qvDiscount + '%</span>' : '') +
+      '</div>' +
+      '<div class="qv-trust-row">' +
+        '<span class="qv-trust-item">✓ Garantía oficial 2 años</span>' +
+        '<span class="qv-trust-item">✓ Envío gratis 24–48h</span>' +
+        '<span class="qv-trust-item">✓ Devolución 30 días</span>' +
+      '</div>' +
+      '<button class="btn-primary qv-add-btn" onclick="addToCart(' + product.id + ');closeQuickView()">Añadir al carrito — €' + product.price.toLocaleString() + '</button>' +
+    '</div>';
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeQuickView() {
+  var modal = document.getElementById('quick-view-modal');
+  if (modal) modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ─── COMPARATOR ──────────────────────────────────────────────────────────────
+
+function addToComparator(productId) {
+  var product = PRODUCTS.find(function(p) { return p.id === productId; });
+  if (!product) return;
+  if (comparatorItems.find(function(p) { return p.id === productId; })) {
+    showToast('Ya está en el comparador', 'info'); return;
+  }
+  if (comparatorItems.length >= 3) {
+    showToast('Máximo 3 productos en el comparador', 'info'); return;
+  }
+  comparatorItems.push(product);
+  renderComparator();
+  var section = document.getElementById('comparador');
+  if (section) section.scrollIntoView({ behavior: 'smooth' });
+  showToast(product.name + ' añadido al comparador');
+}
+
+function removeFromComparator(productId) {
+  comparatorItems = comparatorItems.filter(function(p) { return p.id !== productId; });
+  renderComparator();
+}
+
+function renderComparator() {
+  var tableDiv = document.getElementById('compare-table');
+  var wrapper = document.getElementById('compare-table-wrapper');
+  if (!tableDiv) return;
+
+  if (comparatorItems.length === 0) {
+    if (wrapper) wrapper.style.display = 'none';
     return;
   }
-  wrapper.style.display = 'block';
-  const compared = compareList.map(id => products.find(p => p.id === id));
-  const cols = compared.length;
-  const rows = [
-    { label: 'Precio', key: p => formatPrice(p.price) },
-    { label: 'Calificación', key: p => `${p.rating}★ (${p.reviews.toLocaleString()})` },
-    { label: 'Sensor SpO₂', key: p => getSensorRating(p.sensors.spo2) },
-    { label: 'Frec. Cardíaca', key: p => getSensorRating(p.sensors.hr) },
-    { label: 'ECG', key: p => getSensorRating(p.sensors.ecg) },
-    { label: 'GPS', key: p => getSensorRating(p.sensors.gps) },
-    { label: 'Seguimiento Sueño', key: p => getSensorRating(p.sensors.sleep) },
-    { label: 'Sensor Estrés', key: p => getSensorRating(p.sensors.stress) },
-    { label: 'Temperatura', key: p => getSensorRating(p.sensors.temp) },
-    { label: 'Batería (días)', key: p => p.sensors.battery ? `${p.sensors.battery} días` : '<span style="color:var(--text-3)">—</span>' },
-  ];
-  table.style.setProperty('--cols', cols);
-  table.innerHTML = `
-    <div class="compare-header" style="grid-template-columns:200px repeat(${cols},1fr)">
-      <div class="compare-header-cell">Especificación</div>
-      ${compared.map(p => `<div class="compare-header-cell">${p.name}<br><small style="color:var(--text-3);font-weight:400">${formatPrice(p.price)}</small></div>`).join('')}
-    </div>
-    ${rows.map(row => `
-      <div class="compare-row" style="grid-template-columns:200px repeat(${cols},1fr)">
-        <div class="compare-cell">${row.label}</div>
-        ${compared.map(p => `<div class="compare-cell">${row.key(p)}</div>`).join('')}
-      </div>
-    `).join('')}
-    <div class="compare-row" style="grid-template-columns:200px repeat(${cols},1fr)">
-      <div class="compare-cell"></div>
-      ${compared.map(p => `<div class="compare-cell"><button class="btn-primary btn-sm" onclick="addToCart(${p.id})">Añadir</button></div>`).join('')}
-    </div>
-  `;
+  if (wrapper) wrapper.style.display = 'block';
+
+  var allSpecs = [];
+  comparatorItems.forEach(function(p) {
+    Object.keys(p.specs).forEach(function(k) {
+      if (allSpecs.indexOf(k) === -1) allSpecs.push(k);
+    });
+  });
+
+  var headerCells = '<th style="text-align:left;color:var(--text-2)">Característica</th>' +
+    comparatorItems.map(function(p) {
+      return '<th>' +
+        '<div class="comp-product-head">' +
+          '<div class="comp-svg">' + productImgHTML(p, 'comp-real-img', 'comp-svg-back') + '</div>' +
+          '<span class="comp-brand">' + p.brand + '</span>' +
+          '<span class="comp-name">' + p.name + '</span>' +
+          '<span class="comp-price">€' + p.price.toLocaleString() + '</span>' +
+          '<button class="comp-remove" onclick="removeFromComparator(' + p.id + ')">Quitar</button>' +
+        '</div>' +
+      '</th>';
+    }).join('');
+
+  var specRows = allSpecs.map(function(spec) {
+    return '<tr><td class="comp-spec-label" style="text-align:left;color:var(--text-2)">' + spec + '</td>' +
+      comparatorItems.map(function(p) {
+        var val = p.specs[spec];
+        if (val === undefined) return '<td class="comp-na">—</td>';
+        return '<td>' + val + '</td>';
+      }).join('') +
+    '</tr>';
+  }).join('');
+
+  var buyRow = '<tr class="comp-add-row"><td style="text-align:left">Comprar</td>' +
+    comparatorItems.map(function(p) {
+      return '<td><button class="comp-buy-btn" onclick="addToCart(' + p.id + ')">Añadir €' + p.price.toLocaleString() + '</button></td>';
+    }).join('') +
+  '</tr>';
+
+  tableDiv.innerHTML = '<div class="comp-table-wrap"><table class="comp-table">' +
+    '<thead><tr>' + headerCells + '</tr></thead>' +
+    '<tbody>' + specRows + buyRow + '</tbody>' +
+  '</table></div>';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const clearBtn = document.getElementById('clear-compare');
-  if (clearBtn) clearBtn.addEventListener('click', () => { compareList = []; renderCompareTable(); renderQuickCompareBtns(); });
-});
+// ─── CONFIGURATOR 3D ─────────────────────────────────────────────────────────
 
-// ===== SCROLL REVEAL =====
+function initConfigurator() {
+  var viewer = document.getElementById('config-watch');
+  if (!viewer) return;
+
+  viewer.addEventListener('mousedown', function(e) {
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    viewer.style.cursor = 'grabbing';
+  });
+  window.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    var dx = e.clientX - lastX, dy = e.clientY - lastY;
+    rotateY += dx * 0.5; rotateX -= dy * 0.3;
+    rotateX = Math.max(-25, Math.min(25, rotateX));
+    lastX = e.clientX; lastY = e.clientY;
+    var svg = document.getElementById('config-watch-svg');
+    if (svg) svg.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+  });
+  window.addEventListener('mouseup', function() { dragging = false; viewer.style.cursor = 'grab'; });
+
+  viewer.addEventListener('touchstart', function(e) { lastX = e.touches[0].clientX; lastY = e.touches[0].clientY; });
+  viewer.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    var dx = e.touches[0].clientX - lastX, dy = e.touches[0].clientY - lastY;
+    rotateY += dx * 0.5; rotateX -= dy * 0.3;
+    rotateX = Math.max(-25, Math.min(25, rotateX));
+    lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+    var svg = document.getElementById('config-watch-svg');
+    if (svg) svg.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+  }, { passive: false });
+
+  // Color swatches
+  document.querySelectorAll('#strap-colors .swatch').forEach(function(swatch) {
+    swatch.addEventListener('click', function() {
+      document.querySelectorAll('#strap-colors .swatch').forEach(function(s) { s.classList.remove('active'); });
+      swatch.classList.add('active');
+      var stop1 = document.getElementById('strap-stop-1');
+      var stop2 = document.getElementById('strap-stop-2');
+      if (stop1) stop1.setAttribute('stop-color', swatch.dataset.hex || '#1a1a2e');
+      if (stop2) stop2.setAttribute('stop-color', swatch.dataset.hex2 || '#141422');
+    });
+  });
+
+  // Material buttons
+  document.querySelectorAll('#case-materials .material-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#case-materials .material-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var price = btn.dataset.price;
+      var priceEl = document.getElementById('config-price');
+      if (priceEl && price) priceEl.textContent = '€' + price;
+    });
+  });
+
+  // Add to cart button
+  var addBtn = document.getElementById('add-config-to-cart');
+  if (addBtn) {
+    addBtn.addEventListener('click', function() { addToCart(1); });
+  }
+}
+
+// ─── PARTICLES ───────────────────────────────────────────────────────────────
+
+function initParticles() {
+  var canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  for (var i = 0; i < 55; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+      r: Math.random() * 1.8 + 0.4,
+      opacity: Math.random() * 0.4 + 0.1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(99,102,241,' + p.opacity + ')';
+      ctx.fill();
+    });
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(99,102,241,' + (0.12 * (1 - dist / 100)) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// ─── SCROLL REVEAL ───────────────────────────────────────────────────────────
+
 function initScrollReveal() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('revealed');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.section-header, .category-card, .testimonial-card, .feature-item, .configurator-info, .configurator-visual').forEach(el => {
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.cat6-card, .feature-item, .testimonial-card, .section-header').forEach(function(el) {
     el.classList.add('reveal');
     observer.observe(el);
   });
 }
 
-// ===== TOAST =====
-function showToast(message, type = '') {
-  const container = document.getElementById('toast-container');
-  const icons = { success: '✓', error: '!', '': 'ℹ' };
-  const toast = document.createElement('div');
-  toast.className = `toast${type ? ' toast-' + type : ''}`;
-  toast.innerHTML = `<span class="toast-icon">${icons[type] || icons['']}</span>${message}`;
-  container.appendChild(toast);
-  setTimeout(() => toast.remove(), 3100);
+// ─── NAVBAR ──────────────────────────────────────────────────────────────────
+
+function initNavbar() {
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 70) {
+      if (navbar) navbar.classList.add('scrolled');
+    } else {
+      if (navbar) navbar.classList.remove('scrolled');
+    }
+  });
 }
 
-// ===== NEWSLETTER =====
+// ─── NEWSLETTER ──────────────────────────────────────────────────────────────
+
 function initNewsletter() {
-  const form = document.getElementById('newsletter-form');
+  var form = document.getElementById('newsletter-form');
   if (!form) return;
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
-    showToast('¡Bienvenido a ZoneTechOnline! Revisa tu email.', 'success');
-    form.reset();
+    var emailInput = form.querySelector('input[type="email"]');
+    if (emailInput && emailInput.value) {
+      showToast('¡Gracias! Recibirás un 10% de descuento en tu email');
+      form.reset();
+    }
   });
 }
 
-// ===== MICRO-INTERACTIONS =====
-function initMicroInteractions() {
-  document.querySelectorAll('.btn-primary, .btn-add-cart').forEach(btn => {
-    btn.addEventListener('mousedown', () => { btn.style.transform = 'scale(0.96)'; });
-    btn.addEventListener('mouseup', () => { btn.style.transform = ''; });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+// ─── SMOOTH SCROLL ───────────────────────────────────────────────────────────
+
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
 }
 
-// ===== HERO VIDEO BTN =====
-function initHeroVideo() {
-  const btn = document.getElementById('hero-video-btn');
-  if (btn) btn.addEventListener('click', () => showToast('Video demo próximamente disponible', ''));
+// ─── CLEAR COMPARATOR BUTTON ──────────────────────────────────────────────────
+
+function initClearComparator() {
+  var btn = document.getElementById('clear-compare');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    comparatorItems = [];
+    renderComparator();
+  });
 }
 
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+
+document.addEventListener('DOMContentLoaded', function() {
   initNavbar();
   initParticles();
-  initCart();
-  renderProducts();
-  initProductFilters();
+  renderProducts('all');
+  renderCartItems();
+  updateCartBadge();
+  renderComparator();
   initConfigurator();
-  initComparator();
   initScrollReveal();
   initNewsletter();
-  initMicroInteractions();
-  initHeroVideo();
-  initModals();
+  initSmoothScroll();
+  initClearComparator();
+
+  // Cart toggle
+  var cartToggle = document.getElementById('cart-toggle');
+  if (cartToggle) cartToggle.addEventListener('click', openCart);
+
+  var closeCartBtn = document.getElementById('close-cart');
+  if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+
+  var overlay = document.getElementById('overlay');
+  if (overlay) overlay.addEventListener('click', function() {
+    closeCart();
+    closeQuickView();
+  });
+
+  var continueShop = document.getElementById('continue-shopping');
+  if (continueShop) continueShop.addEventListener('click', closeCart);
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() { setFilter(btn.dataset.filter); });
+  });
+
+  // Modal close
+  var closeModalBtn = document.getElementById('close-quick-view');
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeQuickView);
+
+  var modal = document.getElementById('quick-view-modal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeQuickView();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeQuickView(); closeCart(); }
+  });
 });
