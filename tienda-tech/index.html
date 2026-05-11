@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ZoneTechOnline - Tecnología wearable de clase mundial. Relojes inteligentes, anillos smart y gafas AR premium.">
+  <meta name="description" content="ZoneTechOnline - Tecnología wearable premium europea. Relojes, anillos, auriculares, gafas, altavoces y máscaras LED de las mejores marcas.">
   <title>ZoneTechOnline — Tecnología que te lleva al futuro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,19 +12,19 @@
 </head>
 <body>
 
-<!-- ===== OVERLAY ===== -->
 <div class="overlay" id="overlay"></div>
 
-<!-- ===== NAVBAR ===== -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="#" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
     <div class="nav-links" id="nav-links">
       <a href="#productos" class="nav-link">Relojes</a>
       <a href="#productos" class="nav-link">Anillos</a>
-      <a href="#productos" class="nav-link">Gafas AR</a>
-      <a href="#comparador" class="nav-link">Comparar</a>
-      <a href="#configurador" class="nav-link">Configurar</a>
+      <a href="#productos" class="nav-link">Auriculares</a>
+      <a href="#productos" class="nav-link">Gafas</a>
+      <a href="#productos" class="nav-link">Altavoces</a>
+      <a href="#productos" class="nav-link">Máscaras LED</a>
     </div>
     <div class="nav-actions">
       <button class="nav-icon-btn" id="search-btn" aria-label="Buscar">
@@ -41,11 +41,11 @@
   </div>
 </nav>
 
-<!-- ===== SIDE CART ===== -->
+<!-- SIDE CART -->
 <aside class="side-cart" id="side-cart">
   <div class="side-cart-header">
     <h3>Tu Carrito</h3>
-    <button class="close-btn" id="close-cart" aria-label="Cerrar carrito">
+    <button class="close-btn" id="close-cart" aria-label="Cerrar">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
@@ -57,47 +57,34 @@
     </div>
   </div>
   <div class="side-cart-footer" id="cart-footer" style="display:none">
-    <div class="cart-subtotal">
-      <span>Subtotal</span>
-      <span id="cart-total">$0</span>
-    </div>
-    <div class="cart-shipping">
-      <span>Envío</span>
-      <span class="free-shipping">GRATIS</span>
-    </div>
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-total">€0</span></div>
+    <div class="cart-shipping"><span>Envío</span><span class="free-shipping">GRATIS</span></div>
     <div class="cart-divider"></div>
-    <div class="cart-total-row">
-      <span>Total</span>
-      <span id="cart-grand-total">$0</span>
-    </div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-grand-total">€0</span></div>
     <button class="btn-primary btn-block">Proceder al Pago</button>
     <button class="btn-ghost btn-block" id="continue-shopping">Seguir Comprando</button>
   </div>
 </aside>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero" id="hero">
   <canvas class="hero-canvas" id="hero-canvas"></canvas>
   <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Nuevo · Colección 2026
-    </div>
-    <h1 class="hero-title">El Futuro<br><span class="gradient-text">en tu Muñeca</span></h1>
-    <p class="hero-subtitle">Tecnología wearable diseñada para los que exigen lo mejor. Salud, rendimiento y estilo fusionados en un solo dispositivo.</p>
+    <div class="hero-badge"><span class="badge-dot"></span>Nuevo · Colección 2026</div>
+    <h1 class="hero-title">Tecnología<br><span class="gradient-text">Premium Europea</span></h1>
+    <p class="hero-subtitle">Las mejores marcas del mundo en un solo lugar. Garmin, Oura, Jabra, Sonos, Ray-Ban Meta y más. Envío gratis en 24h.</p>
     <div class="hero-ctas">
-      <button class="btn-primary btn-lg" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Explorar Colección</button>
-      <button class="btn-ghost btn-lg" id="hero-video-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-        Ver Video
-      </button>
+      <button class="btn-primary btn-lg" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver Catálogo</button>
+      <button class="btn-ghost btn-lg" onclick="document.getElementById('comparador').scrollIntoView({behavior:'smooth'})">Comparar Productos</button>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><span class="stat-val">50K+</span><span class="stat-lbl">Clientes</span></div>
+      <div class="hero-stat"><span class="stat-val">38</span><span class="stat-lbl">Productos</span></div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat"><span class="stat-val">4.9★</span><span class="stat-lbl">Calificación</span></div>
+      <div class="hero-stat"><span class="stat-val">6</span><span class="stat-lbl">Categorías</span></div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat"><span class="stat-val">30d</span><span class="stat-lbl">Garantía</span></div>
+      <div class="hero-stat"><span class="stat-val">15+</span><span class="stat-lbl">Marcas Top</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="stat-val">24h</span><span class="stat-lbl">Envío Gratis</span></div>
     </div>
   </div>
   <div class="hero-visual">
@@ -105,236 +92,163 @@
       <div class="hero-glow"></div>
       <svg class="hero-watch-svg" viewBox="0 0 260 360" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="strapG" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e1e38"/><stop offset="100%" stop-color="#141428"/></linearGradient>
-          <linearGradient id="caseG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e52"/><stop offset="60%" stop-color="#1a1a32"/><stop offset="100%" stop-color="#0e0e22"/></linearGradient>
-          <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0d24"/><stop offset="100%" stop-color="#060614"/></linearGradient>
-          <linearGradient id="heartG" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff3560" stop-opacity="0"/><stop offset="50%" stop-color="#ff3560"/><stop offset="100%" stop-color="#ff3560" stop-opacity="0"/></linearGradient>
-          <filter id="glowF"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          <filter id="shadowF"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#6366f1" flood-opacity="0.25"/></filter>
-          <clipPath id="screenClip"><rect x="48" y="104" width="164" height="152" rx="28"/></clipPath>
+          <linearGradient id="hw_strap" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e1e38"/><stop offset="100%" stop-color="#141428"/></linearGradient>
+          <linearGradient id="hw_case" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e52"/><stop offset="60%" stop-color="#1a1a32"/><stop offset="100%" stop-color="#0e0e22"/></linearGradient>
+          <linearGradient id="hw_screen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0d24"/><stop offset="100%" stop-color="#060614"/></linearGradient>
+          <filter id="hw_glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <filter id="hw_shadow"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#6366f1" flood-opacity="0.25"/></filter>
+          <clipPath id="hw_clip"><rect x="48" y="104" width="164" height="152" rx="28"/></clipPath>
         </defs>
-        <!-- Shadow -->
         <ellipse cx="130" cy="350" rx="75" ry="12" fill="rgba(99,102,241,0.15)"/>
-        <!-- Top strap -->
-        <rect x="85" y="5" width="90" height="84" rx="14" fill="url(#strapG)"/>
-        <rect x="91" y="10" width="78" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
-        <rect x="91" y="18" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="26" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="34" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="42" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="50" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="58" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="66" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="74" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <!-- Case -->
-        <rect x="22" y="84" width="216" height="192" rx="48" fill="url(#caseG)" filter="url(#shadowF)"/>
-        <!-- Case highlight top -->
+        <rect x="85" y="5" width="90" height="84" rx="14" fill="url(#hw_strap)"/>
+        <rect x="91" y="12" width="78" height="2" rx="1" fill="rgba(255,255,255,0.07)"/>
+        <rect x="91" y="20" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="28" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="36" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="44" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="52" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="60" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="70" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="22" y="84" width="216" height="192" rx="48" fill="url(#hw_case)" filter="url(#hw_shadow)"/>
         <path d="M70,85 Q130,80 190,85" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none"/>
-        <!-- Case highlight left -->
-        <path d="M23,130 Q20,160 23,210" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/>
-        <!-- Bezel -->
         <rect x="36" y="96" width="188" height="168" rx="38" fill="#0a0a1e"/>
-        <!-- Screen background -->
-        <rect x="48" y="104" width="164" height="152" rx="28" fill="url(#screenG)"/>
-        <!-- Screen content -->
-        <g clip-path="url(#screenClip)">
-          <!-- Time -->
-          <text x="130" y="148" text-anchor="middle" fill="white" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="700" letter-spacing="-1">09:41</text>
-          <text x="130" y="166" text-anchor="middle" fill="#7070a0" font-family="Inter, sans-serif" font-size="11">Mar, 10 Mayo 2026</text>
-          <!-- Heart rate -->
+        <rect x="48" y="104" width="164" height="152" rx="28" fill="url(#hw_screen)"/>
+        <g clip-path="url(#hw_clip)">
+          <text x="130" y="148" text-anchor="middle" fill="white" font-family="Space Grotesk,sans-serif" font-size="38" font-weight="700" letter-spacing="-1">09:41</text>
+          <text x="130" y="166" text-anchor="middle" fill="#7070a0" font-family="Inter,sans-serif" font-size="11">Mar, 10 Mayo 2026</text>
           <rect x="56" y="174" width="148" height="32" rx="10" fill="rgba(255,53,96,0.1)"/>
-          <polyline class="ecg-line" points="62,190 74,190 80,176 88,204 96,176 104,204 110,190 152,190" stroke="#ff3560" stroke-width="1.8" fill="none" filter="url(#glowF)"/>
-          <text x="188" y="185" text-anchor="middle" fill="#ff3560" font-family="Inter, sans-serif" font-size="10" font-weight="600">72</text>
-          <text x="188" y="197" text-anchor="middle" fill="#ff3560" font-family="Inter, sans-serif" font-size="8" opacity="0.7">bpm</text>
-          <!-- SpO2 -->
+          <polyline class="ecg-line" points="62,190 74,190 80,176 88,204 96,176 104,204 110,190 152,190" stroke="#ff3560" stroke-width="1.8" fill="none" filter="url(#hw_glow)"/>
+          <text x="188" y="192" text-anchor="middle" fill="#ff3560" font-family="Inter,sans-serif" font-size="9" font-weight="700">72 bpm</text>
           <rect x="56" y="212" width="68" height="26" rx="8" fill="rgba(56,189,248,0.12)"/>
-          <text x="90" y="224" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="9" font-weight="600">SpO₂</text>
-          <text x="90" y="234" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="11" font-weight="700">98%</text>
-          <!-- Steps -->
+          <text x="90" y="228" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="11" font-weight="700">98% SpO₂</text>
           <rect x="136" y="212" width="68" height="26" rx="8" fill="rgba(52,211,153,0.12)"/>
-          <text x="170" y="224" text-anchor="middle" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="600">Pasos</text>
-          <text x="170" y="234" text-anchor="middle" fill="#34d399" font-family="Inter, sans-serif" font-size="11" font-weight="700">8,450</text>
+          <text x="170" y="228" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="11" font-weight="700">8,450 pasos</text>
         </g>
-        <!-- Crown -->
         <rect x="236" y="132" width="8" height="28" rx="4" fill="#252542"/>
         <rect x="236" y="170" width="8" height="16" rx="4" fill="#252542"/>
-        <!-- Side btn -->
         <rect x="16" y="152" width="8" height="20" rx="4" fill="#252542"/>
-        <!-- Bottom strap -->
-        <rect x="85" y="271" width="90" height="84" rx="14" fill="url(#strapG)"/>
-        <rect x="91" y="278" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="286" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="294" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="302" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="310" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="318" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="326" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="334" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <rect x="91" y="342" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-        <!-- Buckle -->
+        <rect x="85" y="271" width="90" height="84" rx="14" fill="url(#hw_strap)"/>
+        <rect x="91" y="278" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="286" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="294" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="302" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+        <rect x="91" y="318" width="78" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
         <rect x="97" y="307" width="66" height="10" rx="5" fill="rgba(255,255,255,0.12)"/>
         <rect x="124" y="302" width="12" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
       </svg>
     </div>
   </div>
-  <div class="hero-scroll-indicator">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- ===== FEATURES STRIP ===== -->
+<!-- FEATURES STRIP -->
 <section class="features-strip">
   <div class="features-container">
-    <div class="feature-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      <span>Envío gratis en 24h</span>
-    </div>
-    <div class="feature-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span>2 años de garantía</span>
-    </div>
-    <div class="feature-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      <span>Soporte 24/7</span>
-    </div>
-    <div class="feature-item">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-      <span>Devolución en 30 días</span>
-    </div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Envío gratis 24–48h</span></div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Garantía oficial 2 años</span></div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg><span>Devolución 30 días</span></div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Soporte en español 24/7</span></div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Pago 100% seguro</span></div>
+    <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Stock disponible hoy</span></div>
   </div>
 </section>
 
-<!-- ===== CATEGORÍAS ===== -->
+<!-- CATEGORÍAS -->
 <section class="categories" id="categorias">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">Colección Completa</span>
-      <h2 class="section-title">Tecnología para <span class="gradient-text">Cada Momento</span></h2>
-      <p class="section-subtitle">Tres categorías diseñadas para integrarse a tu vida.</p>
+      <h2 class="section-title">Marcas Premium <span class="gradient-text">para Cada Momento</span></h2>
+      <p class="section-subtitle">Garmin · Oura · Jabra · Ray-Ban Meta · Sonos · CurrentBody y muchas más.</p>
     </div>
-    <div class="categories-grid">
-      <div class="category-card" data-category="watches">
-        <div class="category-visual">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="cg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#a855f7"/></linearGradient></defs>
-            <rect x="75" y="5" width="50" height="45" rx="8" fill="rgba(99,102,241,0.2)"/>
-            <rect x="30" y="45" width="140" height="110" rx="30" fill="rgba(99,102,241,0.15)" stroke="url(#cg1)" stroke-width="1.5"/>
-            <rect x="44" y="58" width="112" height="84" rx="22" fill="rgba(15,15,40,0.8)"/>
-            <text x="100" y="93" text-anchor="middle" fill="white" font-family="Space Grotesk" font-size="22" font-weight="700">09:41</text>
-            <line x1="55" y1="108" x2="75" y2="108" stroke="#ff3560" stroke-width="1.5"/><line x1="75" y1="108" x2="80" y2="98" stroke="#ff3560" stroke-width="1.5"/><line x1="80" y1="98" x2="86" y2="118" stroke="#ff3560" stroke-width="1.5"/><line x1="86" y1="118" x2="91" y2="98" stroke="#ff3560" stroke-width="1.5"/><line x1="91" y1="99" x2="97" y2="108" stroke="#ff3560" stroke-width="1.5"/><line x1="97" y1="108" x2="145" y2="108" stroke="#ff3560" stroke-width="1.5"/>
-            <rect x="75" y="150" width="50" height="45" rx="8" fill="rgba(99,102,241,0.2)"/>
-          </svg>
-        </div>
-        <div class="category-info">
-          <h3>Relojes Inteligentes</h3>
-          <p>Salud avanzada. GPS. AMOLED.</p>
-          <span class="category-count">4 modelos</span>
-          <button class="category-btn">Explorar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        </div>
+    <div class="categories-grid-6">
+      <div class="cat6-card" onclick="filterAndScroll('watches')">
+        <div class="cat6-icon">⌚</div>
+        <h4>Relojes</h4>
+        <span>9 modelos</span>
       </div>
-      <div class="category-card category-card--center" data-category="rings">
-        <div class="category-visual">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#ef4444"/></linearGradient><radialGradient id="ringRad" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#c8a870"/><stop offset="60%" stop-color="#8b6914"/><stop offset="100%" stop-color="#4a3408"/></radialGradient></defs>
-            <ellipse cx="100" cy="100" rx="65" ry="65" fill="none" stroke="url(#cg2)" stroke-width="1.5" opacity="0.3"/>
-            <ellipse cx="100" cy="100" rx="55" ry="55" fill="none" stroke="url(#ringRad)" stroke-width="22"/>
-            <ellipse cx="100" cy="100" rx="55" ry="55" fill="none" stroke="rgba(255,220,120,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
-            <circle cx="100" cy="52" r="4" fill="#fbbf24" opacity="0.9"/>
-            <circle cx="108" cy="53" r="2.5" fill="#fbbf24" opacity="0.6"/>
-            <circle cx="92" cy="53" r="2.5" fill="#fbbf24" opacity="0.6"/>
-            <ellipse cx="100" cy="100" rx="33" ry="33" fill="rgba(15,15,40,0.6)"/>
-            <text x="100" y="96" text-anchor="middle" fill="#fbbf24" font-family="Space Grotesk" font-size="7.5" font-weight="600">ZONETECH</text>
-            <text x="100" y="110" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Inter" font-size="7">RING</text>
-          </svg>
-        </div>
-        <div class="category-info">
-          <h3>Anillos Smart</h3>
-          <p>Monitoreo invisible. Hasta 7 días.</p>
-          <span class="category-count">3 modelos</span>
-          <button class="category-btn">Explorar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        </div>
+      <div class="cat6-card" onclick="filterAndScroll('rings')">
+        <div class="cat6-icon">💍</div>
+        <h4>Anillos</h4>
+        <span>5 modelos</span>
       </div>
-      <div class="category-card" data-category="glasses">
-        <div class="category-visual">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="cg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#6366f1"/></linearGradient></defs>
-            <line x1="5" y1="95" x2="38" y2="95" stroke="url(#cg3)" stroke-width="4" stroke-linecap="round"/>
-            <rect x="38" y="72" width="52" height="46" rx="20" fill="rgba(6,182,212,0.1)" stroke="url(#cg3)" stroke-width="2"/>
-            <rect x="42" y="76" width="44" height="38" rx="17" fill="rgba(6,182,212,0.08)"/>
-            <rect x="110" y="72" width="52" height="46" rx="20" fill="rgba(6,182,212,0.1)" stroke="url(#cg3)" stroke-width="2"/>
-            <rect x="114" y="76" width="44" height="38" rx="17" fill="rgba(6,182,212,0.08)"/>
-            <path d="M90 95 Q100 88 110 95" stroke="url(#cg3)" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <line x1="162" y1="95" x2="195" y2="95" stroke="url(#cg3)" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="64" cy="95" r="3" fill="#06b6d4" opacity="0.6"/>
-            <circle cx="136" cy="95" r="3" fill="#06b6d4" opacity="0.6"/>
-            <text x="64" y="100" text-anchor="middle" fill="rgba(6,182,212,0.5)" font-family="Inter" font-size="8">AR</text>
-            <text x="136" y="100" text-anchor="middle" fill="rgba(6,182,212,0.5)" font-family="Inter" font-size="8">AR</text>
-          </svg>
-        </div>
-        <div class="category-info">
-          <h3>Gafas AR Pro</h3>
-          <p>Realidad aumentada. Ligeras. Conectadas.</p>
-          <span class="category-count">2 modelos</span>
-          <button class="category-btn">Explorar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-        </div>
+      <div class="cat6-card" onclick="filterAndScroll('headphones')">
+        <div class="cat6-icon">🎧</div>
+        <h4>Auriculares</h4>
+        <span>7 modelos</span>
+      </div>
+      <div class="cat6-card" onclick="filterAndScroll('glasses')">
+        <div class="cat6-icon">👓</div>
+        <h4>Gafas</h4>
+        <span>5 modelos</span>
+      </div>
+      <div class="cat6-card" onclick="filterAndScroll('speakers')">
+        <div class="cat6-icon">🔊</div>
+        <h4>Altavoces</h4>
+        <span>7 modelos</span>
+      </div>
+      <div class="cat6-card" onclick="filterAndScroll('masks')">
+        <div class="cat6-icon">✨</div>
+        <h4>Máscaras LED</h4>
+        <span>5 modelos</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PRODUCTOS ===== -->
+<!-- PRODUCTOS -->
 <section class="products-section" id="productos">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">Catálogo 2026</span>
-      <h2 class="section-title">Nuestra <span class="gradient-text">Colección</span></h2>
-      <p class="section-subtitle">Cada producto diseñado con precisión. Cada sensor calibrado para la excelencia.</p>
+      <h2 class="section-title">Nuestra <span class="gradient-text">Selección Premium</span></h2>
+      <p class="section-subtitle">Solo marcas con garantía oficial. Precios para todos los presupuestos.</p>
     </div>
     <div class="product-filters">
-      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn active" data-filter="all">Todos (38)</button>
       <button class="filter-btn" data-filter="watches">Relojes</button>
       <button class="filter-btn" data-filter="rings">Anillos</button>
-      <button class="filter-btn" data-filter="glasses">Gafas AR</button>
+      <button class="filter-btn" data-filter="headphones">Auriculares</button>
+      <button class="filter-btn" data-filter="glasses">Gafas</button>
+      <button class="filter-btn" data-filter="speakers">Altavoces</button>
+      <button class="filter-btn" data-filter="masks">Máscaras LED</button>
     </div>
-    <div class="products-grid" id="products-grid">
-      <!-- Products rendered by JS -->
-    </div>
+    <div class="products-grid" id="products-grid"></div>
   </div>
 </section>
 
-<!-- ===== CONFIGURADOR ===== -->
+<!-- CONFIGURADOR -->
 <section class="configurator-section" id="configurador">
   <div class="section-container">
     <div class="configurator-layout">
       <div class="configurator-info">
-        <span class="section-tag">Configurador 3D</span>
-        <h2 class="section-title">Hazlo <span class="gradient-text">Tuyo</span></h2>
-        <p class="section-subtitle">Personaliza cada detalle. Cambia el color de la correa, el acabado de la carcasa y el cristal. Ve el resultado en tiempo real.</p>
+        <span class="section-tag">Configurador</span>
+        <h2 class="section-title">Personaliza tu <span class="gradient-text">Garmin Venu 3</span></h2>
+        <p class="section-subtitle">Elige el color de correa y acabado. Visualiza el resultado en tiempo real.</p>
         <div class="config-options">
           <div class="config-group">
             <label class="config-label">Color de Correa</label>
             <div class="color-swatches" id="strap-colors">
-              <button class="swatch active" data-color="midnight" data-hex="#1a1a2e" data-hex2="#141422" style="background:linear-gradient(135deg,#1a1a2e,#141422)" title="Midnight Black"></button>
-              <button class="swatch" data-color="silver" data-hex="#c8c8d8" data-hex2="#a0a0b8" style="background:linear-gradient(135deg,#c8c8d8,#a0a0b8)" title="Steel Silver"></button>
-              <button class="swatch" data-color="purple" data-hex="#5b21b6" data-hex2="#4c1d95" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)" title="Cosmic Purple"></button>
-              <button class="swatch" data-color="ocean" data-hex="#0369a1" data-hex2="#0c4a6e" style="background:linear-gradient(135deg,#0ea5e9,#0369a1)" title="Ocean Blue"></button>
-              <button class="swatch" data-color="rose" data-hex="#be123c" data-hex2="#9f1239" style="background:linear-gradient(135deg,#f43f5e,#be123c)" title="Rose Red"></button>
-              <button class="swatch" data-color="forest" data-hex="#166534" data-hex2="#14532d" style="background:linear-gradient(135deg,#22c55e,#166534)" title="Forest Green"></button>
+              <button class="swatch active" data-color="midnight" data-hex="#1a1a2e" data-hex2="#141422" style="background:linear-gradient(135deg,#1a1a2e,#141422)" title="Slate Black"></button>
+              <button class="swatch" data-color="silver" data-hex="#d1d5db" data-hex2="#9ca3af" style="background:linear-gradient(135deg,#d1d5db,#9ca3af)" title="Pebble Grey"></button>
+              <button class="swatch" data-color="navy" data-hex="#1e3a5f" data-hex2="#0c2340" style="background:linear-gradient(135deg,#3b82f6,#1e3a5f)" title="Navy Blue"></button>
+              <button class="swatch" data-color="olive" data-hex="#4b5320" data-hex2="#3a4118" style="background:linear-gradient(135deg,#84cc16,#4b5320)" title="Moss Green"></button>
+              <button class="swatch" data-color="sand" data-hex="#c4a882" data-hex2="#a08060" style="background:linear-gradient(135deg,#e9d5a8,#c4a882)" title="Sand"></button>
+              <button class="swatch" data-color="red" data-hex="#7f1d1d" data-hex2="#5a1212" style="background:linear-gradient(135deg,#ef4444,#7f1d1d)" title="Lava Red"></button>
             </div>
           </div>
           <div class="config-group">
-            <label class="config-label">Material de Carcasa</label>
+            <label class="config-label">Acabado de Carcasa</label>
             <div class="material-options" id="case-materials">
-              <button class="material-btn active" data-material="titanium">Titanio</button>
-              <button class="material-btn" data-material="aluminum">Aluminio</button>
-              <button class="material-btn" data-material="ceramic">Cerámica</button>
+              <button class="material-btn active" data-material="silver" data-price="399">Plata</button>
+              <button class="material-btn" data-material="black" data-price="399">Negro</button>
+              <button class="material-btn" data-material="gold" data-price="429">Oro Rosa</button>
             </div>
           </div>
         </div>
         <div class="config-price">
           <span class="config-price-label">Precio configurado</span>
-          <span class="config-price-value" id="config-price">$299</span>
+          <span class="config-price-value" id="config-price">€399</span>
         </div>
         <button class="btn-primary btn-lg" id="add-config-to-cart">Añadir al Carrito</button>
       </div>
@@ -346,53 +260,50 @@
         <div class="config-watch-wrapper" id="config-watch" style="cursor:grab">
           <svg class="config-watch-svg" id="config-watch-svg" viewBox="0 0 260 360" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="configStrapG" x1="0" y1="0" x2="1" y2="0">
+              <linearGradient id="cfg_strap" x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stop-color="#1a1a2e" id="strap-stop-1"/>
                 <stop offset="100%" stop-color="#141422" id="strap-stop-2"/>
               </linearGradient>
-              <linearGradient id="configCaseG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e52"/><stop offset="60%" stop-color="#1a1a32"/><stop offset="100%" stop-color="#0e0e22"/></linearGradient>
-              <linearGradient id="configScreenG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0d24"/><stop offset="100%" stop-color="#060614"/></linearGradient>
-              <filter id="configGlowF"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <filter id="configShadowF"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#6366f1" flood-opacity="0.3"/></filter>
-              <clipPath id="configScreenClip"><rect x="48" y="104" width="164" height="152" rx="28"/></clipPath>
+              <linearGradient id="cfg_case" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d1d5db"/><stop offset="60%" stop-color="#9ca3af"/><stop offset="100%" stop-color="#6b7280"/></linearGradient>
+              <linearGradient id="cfg_screen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0d24"/><stop offset="100%" stop-color="#060614"/></linearGradient>
+              <filter id="cfg_glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="cfg_shadow"><feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#6366f1" flood-opacity="0.3"/></filter>
+              <clipPath id="cfg_clip"><rect x="48" y="104" width="164" height="152" rx="28"/></clipPath>
             </defs>
             <ellipse cx="130" cy="350" rx="75" ry="12" fill="rgba(99,102,241,0.15)"/>
-            <rect x="85" y="5" width="90" height="84" rx="14" fill="url(#configStrapG)"/>
-            <rect x="91" y="10" width="78" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
-            <rect x="91" y="18" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="26" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="34" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="42" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="50" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="58" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="66" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="74" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="22" y="84" width="216" height="192" rx="48" fill="url(#configCaseG)" filter="url(#configShadowF)"/>
-            <path d="M70,85 Q130,80 190,85" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none"/>
+            <rect x="85" y="5" width="90" height="84" rx="14" fill="url(#cfg_strap)"/>
+            <rect x="91" y="12" width="78" height="2" rx="1" fill="rgba(255,255,255,0.08)"/>
+            <rect x="91" y="20" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="28" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="36" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="44" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="52" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="60" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="70" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="22" y="84" width="216" height="192" rx="48" fill="url(#cfg_case)" filter="url(#cfg_shadow)"/>
+            <path d="M70,85 Q130,80 190,85" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
             <rect x="36" y="96" width="188" height="168" rx="38" fill="#0a0a1e"/>
-            <rect x="48" y="104" width="164" height="152" rx="28" fill="url(#configScreenG)"/>
-            <g clip-path="url(#configScreenClip)">
-              <text x="130" y="148" text-anchor="middle" fill="white" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="700" letter-spacing="-1">09:41</text>
-              <text x="130" y="166" text-anchor="middle" fill="#7070a0" font-family="Inter, sans-serif" font-size="11">Mar, 10 Mayo 2026</text>
+            <rect x="48" y="104" width="164" height="152" rx="28" fill="url(#cfg_screen)"/>
+            <g clip-path="url(#cfg_clip)">
+              <text x="130" y="148" text-anchor="middle" fill="white" font-family="Space Grotesk,sans-serif" font-size="38" font-weight="700" letter-spacing="-1">09:41</text>
+              <text x="130" y="166" text-anchor="middle" fill="#7070a0" font-family="Inter,sans-serif" font-size="11">Mar, 10 Mayo 2026</text>
               <rect x="56" y="174" width="148" height="32" rx="10" fill="rgba(255,53,96,0.1)"/>
-              <polyline points="62,190 74,190 80,176 88,204 96,176 104,204 110,190 152,190" stroke="#ff3560" stroke-width="1.8" fill="none" filter="url(#configGlowF)"/>
-              <text x="188" y="185" text-anchor="middle" fill="#ff3560" font-family="Inter, sans-serif" font-size="10" font-weight="600">72</text>
-              <text x="188" y="197" text-anchor="middle" fill="#ff3560" font-family="Inter, sans-serif" font-size="8" opacity="0.7">bpm</text>
+              <polyline points="62,190 74,190 80,176 88,204 96,176 104,204 110,190 152,190" stroke="#ff3560" stroke-width="1.8" fill="none" filter="url(#cfg_glow)"/>
+              <text x="188" y="192" text-anchor="middle" fill="#ff3560" font-family="Inter,sans-serif" font-size="9" font-weight="700">72 bpm</text>
               <rect x="56" y="212" width="68" height="26" rx="8" fill="rgba(56,189,248,0.12)"/>
-              <text x="90" y="228" text-anchor="middle" fill="#38bdf8" font-family="Inter, sans-serif" font-size="11" font-weight="700">98% SpO₂</text>
+              <text x="90" y="228" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="11" font-weight="700">98% SpO₂</text>
               <rect x="136" y="212" width="68" height="26" rx="8" fill="rgba(52,211,153,0.12)"/>
-              <text x="170" y="228" text-anchor="middle" fill="#34d399" font-family="Inter, sans-serif" font-size="11" font-weight="700">8,450 🦶</text>
+              <text x="170" y="228" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-size="11" font-weight="700">8.450 pasos</text>
             </g>
-            <rect x="236" y="132" width="8" height="28" rx="4" fill="#252542"/>
-            <rect x="236" y="170" width="8" height="16" rx="4" fill="#252542"/>
-            <rect x="16" y="152" width="8" height="20" rx="4" fill="#252542"/>
-            <rect x="85" y="271" width="90" height="84" rx="14" fill="url(#configStrapG)"/>
+            <rect x="236" y="132" width="8" height="28" rx="4" fill="#6b7280"/>
+            <rect x="236" y="170" width="8" height="16" rx="4" fill="#6b7280"/>
+            <rect x="16" y="152" width="8" height="20" rx="4" fill="#6b7280"/>
+            <rect x="85" y="271" width="90" height="84" rx="14" fill="url(#cfg_strap)"/>
             <rect x="91" y="278" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
             <rect x="91" y="286" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
             <rect x="91" y="294" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
             <rect x="91" y="302" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="310" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
-            <rect x="91" y="318" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
+            <rect x="91" y="314" width="78" height="2" rx="1" fill="rgba(255,255,255,0.06)"/>
             <rect x="97" y="307" width="66" height="10" rx="5" fill="rgba(255,255,255,0.12)"/>
             <rect x="124" y="302" width="12" height="20" rx="3" fill="rgba(255,255,255,0.2)"/>
           </svg>
@@ -402,30 +313,26 @@
   </div>
 </section>
 
-<!-- ===== COMPARADOR ===== -->
+<!-- COMPARADOR -->
 <section class="comparator-section" id="comparador">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">Comparador Pro</span>
       <h2 class="section-title">Compara <span class="gradient-text">Sensor a Sensor</span></h2>
-      <p class="section-subtitle">No solo precios. Compara cada sensor, cada capacidad, cada ventaja.</p>
+      <p class="section-subtitle">Añade hasta 3 productos y compara cada especificación en detalle.</p>
     </div>
-    <div class="compare-selector" id="compare-selector">
-      <p class="compare-hint">Agrega hasta 3 productos desde el catálogo para comparar o elige aquí:</p>
-      <div class="quick-compare-btns" id="quick-compare-btns">
-        <!-- Rendered by JS -->
-      </div>
+    <div class="compare-selector">
+      <p class="compare-hint">Selecciona productos desde el catálogo o elige rápido aquí:</p>
+      <div class="quick-compare-btns" id="quick-compare-btns"></div>
     </div>
     <div class="compare-table-wrapper" id="compare-table-wrapper" style="display:none">
-      <div class="compare-table" id="compare-table">
-        <!-- Rendered by JS -->
-      </div>
+      <div class="compare-table" id="compare-table"></div>
       <button class="btn-ghost btn-sm" id="clear-compare">Limpiar comparación</button>
     </div>
   </div>
 </section>
 
-<!-- ===== TESTIMONIOS ===== -->
+<!-- TESTIMONIOS -->
 <section class="testimonials-section">
   <div class="section-container">
     <div class="section-header">
@@ -435,29 +342,29 @@
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"El ZTO Pro X superó todas mis expectativas. El sensor de SpO2 es increíblemente preciso y la batería dura 7 días. ¡Increíble!"</p>
-        <div class="testimonial-author"><div class="author-avatar">MR</div><div><strong>María Rodríguez</strong><span>Médica, Bogotá</span></div></div>
+        <p>"El Garmin Venu 3 que compré en ZoneTechOnline llegó en menos de 24 horas. El sensor de SpO2 es increíblemente preciso. Totalmente recomendado."</p>
+        <div class="testimonial-author"><div class="author-avatar">MR</div><div><strong>María Rodríguez</strong><span>Médica · Madrid</span></div></div>
       </div>
       <div class="testimonial-card testimonial-card--featured">
         <div class="stars">★★★★★</div>
-        <p>"El anillo ZTO Ring Health cambió mi relación con el sueño. Ahora sé exactamente cuánto sueño profundo tengo cada noche. Imprescindible."</p>
-        <div class="testimonial-author"><div class="author-avatar">CG</div><div><strong>Carlos García</strong><span>Atleta profesional, Medellín</span></div></div>
+        <p>"El Oura Ring 4 cambió mi relación con el sueño. Ahora sé exactamente cuánto sueño profundo tengo. El precio y el servicio de ZoneTechOnline, impecable."</p>
+        <div class="testimonial-author"><div class="author-avatar">CG</div><div><strong>Carlos García</strong><span>Atleta · Barcelona</span></div></div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p>"Las Gafas AR Vision Pro son el futuro. Ver notificaciones mientras conduzco de forma segura es una locura. El diseño es elegantísimo."</p>
-        <div class="testimonial-author"><div class="author-avatar">AL</div><div><strong>Andrea López</strong><span>Emprendedora, Cali</span></div></div>
+        <p>"Las Ray-Ban Meta son el futuro. El audio open-ear mientras hago running es una pasada. Atención al cliente de ZoneTechOnline de 10 estrellas."</p>
+        <div class="testimonial-author"><div class="author-avatar">AL</div><div><strong>Andrea López</strong><span>Diseñadora · Valencia</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== NEWSLETTER ===== -->
+<!-- NEWSLETTER -->
 <section class="newsletter-section">
   <div class="newsletter-container">
     <div class="newsletter-content">
-      <h2>Sé el primero en conocer<br><span class="gradient-text">lo que viene</span></h2>
-      <p>Únete a 50,000+ entusiastas de la tecnología. Lanzamientos exclusivos, descuentos y más.</p>
+      <h2>Sé el primero en conocer<br><span class="gradient-text">ofertas exclusivas</span></h2>
+      <p>Únete a miles de amantes de la tecnología. Nuevos lanzamientos, descuentos y guías de compra.</p>
       <form class="newsletter-form" id="newsletter-form">
         <input type="email" placeholder="tu@email.com" class="newsletter-input" required>
         <button type="submit" class="btn-primary">Suscribirme</button>
@@ -467,73 +374,66 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- TRUST BADGES -->
+<section class="trust-section">
+  <div class="section-container">
+    <div class="trust-grid">
+      <div class="trust-badge"><div class="trust-icon">🔒</div><div class="trust-text"><strong>Pago 100% Seguro</strong><span>SSL · 3D Secure · PCI DSS</span></div></div>
+      <div class="trust-badge"><div class="trust-icon">🇪🇺</div><div class="trust-text"><strong>Distribuidor Oficial UE</strong><span>Garantía legal 2 años</span></div></div>
+      <div class="trust-badge"><div class="trust-icon">⭐</div><div class="trust-text"><strong>4.9/5 en Trustpilot</strong><span>+1.200 reseñas verificadas</span></div></div>
+      <div class="trust-badge"><div class="trust-icon">📦</div><div class="trust-text"><strong>Envío Exprés 24–48h</strong><span>Gratis en todos los pedidos</span></div></div>
+      <div class="trust-badge"><div class="trust-icon">↩️</div><div class="trust-text"><strong>Devolución Fácil</strong><span>30 días sin preguntas</span></div></div>
+      <div class="trust-badge"><div class="trust-icon">💬</div><div class="trust-text"><strong>Soporte en Español</strong><span>Lun–Vie · 9:00–20:00</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
       <span class="nav-logo">ZONE<span>TECH</span>ONLINE</span>
-      <p>Tecnología wearable diseñada para los que exigen lo mejor. Fabricado con precisión. Creado para durar.</p>
+      <p>Tecnología wearable premium con garantía oficial de marca. Distribuidor autorizado en España y Europa.</p>
       <div class="social-links">
-        <a href="#" class="social-link" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="Twitter/X">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="YouTube">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-        </a>
+        <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="social-link" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
       </div>
     </div>
     <div class="footer-links">
-      <div class="footer-col">
-        <h4>Productos</h4>
-        <a href="#">Relojes Inteligentes</a>
-        <a href="#">Anillos Smart</a>
-        <a href="#">Gafas AR</a>
-        <a href="#">Accesorios</a>
-      </div>
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <a href="#">Sobre ZoneTechOnline</a>
-        <a href="#">Blog</a>
-        <a href="#">Prensa</a>
-        <a href="#">Carreras</a>
-      </div>
-      <div class="footer-col">
-        <h4>Soporte</h4>
-        <a href="#">Centro de ayuda</a>
-        <a href="#">Garantía</a>
-        <a href="#">Devoluciones</a>
-        <a href="#">Contacto</a>
-      </div>
+      <div class="footer-col"><h4>Categorías</h4><a href="#">Relojes Inteligentes</a><a href="#">Anillos Smart</a><a href="#">Auriculares</a><a href="#">Gafas Inteligentes</a><a href="#">Altavoces</a><a href="#">Máscaras LED</a></div>
+      <div class="footer-col"><h4>Marcas</h4><a href="#">Garmin</a><a href="#">Oura Ring</a><a href="#">Jabra · Sennheiser</a><a href="#">Ray-Ban Meta</a><a href="#">Sonos · Marshall</a><a href="#">CurrentBody</a></div>
+      <div class="footer-col"><h4>Ayuda</h4><a href="#">Centro de ayuda</a><a href="#">Seguimiento pedido</a><a href="#">Devoluciones</a><a href="#">Garantías</a><a href="#">Contacto</a></div>
+    </div>
+  </div>
+  <div class="footer-payments">
+    <span>Métodos de pago aceptados:</span>
+    <div class="payment-icons">
+      <span class="pay-badge">VISA</span>
+      <span class="pay-badge">Mastercard</span>
+      <span class="pay-badge">PayPal</span>
+      <span class="pay-badge">Stripe</span>
+      <span class="pay-badge">Klarna</span>
+      <span class="pay-badge">Bizum</span>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 ZoneTechOnline. Todos los derechos reservados.</p>
-    <div class="footer-legal">
-      <a href="#">Privacidad</a>
-      <a href="#">Términos</a>
-      <a href="#">Cookies</a>
-    </div>
+    <p>© 2026 ZoneTechOnline. Todos los derechos reservados. IVA incluido. Precios en EUR.</p>
+    <div class="footer-legal"><a href="#">Privacidad · RGPD</a><a href="#">Términos</a><a href="#">Cookies</a><a href="#">Aviso Legal</a></div>
   </div>
 </footer>
 
-<!-- ===== QUICK VIEW MODAL ===== -->
-<div class="modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Vista rápida del producto">
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="quick-view-modal" role="dialog" aria-modal="true">
   <div class="modal-panel modal-panel--lg">
     <button class="modal-close" id="close-quick-view" aria-label="Cerrar">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <div class="quick-view-content" id="quick-view-content">
-      <!-- Rendered by JS -->
-    </div>
+    <div class="quick-view-content" id="quick-view-content"></div>
   </div>
 </div>
 
-<!-- ===== TOAST CONTAINER ===== -->
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
-
 <script src="js/app.js"></script>
 </body>
 </html>
