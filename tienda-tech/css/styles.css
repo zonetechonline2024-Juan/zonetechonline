@@ -438,7 +438,7 @@ input{font-family:inherit;}
 .slide-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(4,4,20,.88) 0%,rgba(8,8,25,.6) 55%,rgba(0,0,0,.2) 100%);}
 .slide-overlay-audio{background:linear-gradient(120deg,rgba(10,5,2,.9) 0%,rgba(25,15,5,.65) 55%,rgba(0,0,0,.2) 100%);}
 .slide-overlay-future{background:linear-gradient(120deg,rgba(0,8,20,.9) 0%,rgba(0,20,35,.65) 55%,rgba(0,0,0,.2) 100%);}
-.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 8% 80px;max-width:720px;}
+.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:110px 8% 80px;max-width:760px;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:20px;}
 .tag-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2s infinite;}
 .tag-dot-gold{background:var(--gold);box-shadow:0 0 10px var(--gold);}
