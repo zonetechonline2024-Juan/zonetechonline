@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión — ZoneTechOnline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08080f;--bg-card:#141428;--border:rgba(255,255,255,.07);--accent:#6366f1;--accent-2:#a855f7;--accent-glow:rgba(99,102,241,.25);--green:#34d399;--red:#ff3560;--text:#f1f1f8;--text-2:#a0a0c0;--text-3:#606080;--font-head:'Space Grotesk',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden;}
+    body::before{content:'';position:fixed;top:-20%;left:-10%;width:70%;height:70%;background:radial-gradient(ellipse,rgba(99,102,241,.14) 0%,transparent 70%);pointer-events:none;}
+    body::after{content:'';position:fixed;bottom:-20%;right:-10%;width:60%;height:60%;background:radial-gradient(ellipse,rgba(168,85,247,.09) 0%,transparent 70%);pointer-events:none;}
+    .page{width:min(920px,100%);display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:24px;overflow:hidden;border:1px solid var(--border);position:relative;z-index:1;}
+    .page-promo{background:linear-gradient(135deg,#0d0d2e 0%,#161630 100%);padding:56px 44px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+    .page-promo::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(ellipse,rgba(99,102,241,.18),transparent 70%);pointer-events:none;}
+    .promo-logo{font-family:var(--font-head);font-size:20px;font-weight:700;margin-bottom:48px;letter-spacing:-.5px;}
+    .promo-logo span{color:var(--accent);}
+    .promo-discount{display:inline-flex;align-items:center;gap:10px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.3);border-radius:50px;padding:8px 18px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;width:fit-content;}
+    .promo-title{font-family:var(--font-head);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;line-height:1.15;margin-bottom:16px;}
+    .promo-title em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .promo-text{font-size:14px;color:var(--text-2);line-height:1.65;margin-bottom:32px;}
+    .promo-perks{display:flex;flex-direction:column;gap:12px;}
+    .promo-perk{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-2);}
+    .promo-perk::before{content:'✓';width:20px;height:20px;border-radius:50%;background:rgba(52,211,153,.15);border:1px solid rgba(52,211,153,.3);color:var(--green);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .page-form{background:var(--bg-card);padding:56px 44px;display:flex;flex-direction:column;justify-content:center;}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text-3);font-size:12px;text-decoration:none;margin-bottom:32px;transition:color .2s;}
+    .back-link:hover{color:var(--text-2);}
+    .form-title{font-family:var(--font-head);font-size:24px;font-weight:700;margin-bottom:6px;}
+    .form-subtitle{font-size:13px;color:var(--text-2);margin-bottom:32px;line-height:1.55;}
+    .form-group{margin-bottom:18px;}
+    .form-label{display:block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-2);margin-bottom:8px;}
+    .form-input{width:100%;padding:13px 16px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:14px;font-family:var(--font-body);outline:none;transition:border-color .25s,background .25s;}
+    .form-input:focus{border-color:var(--accent);background:rgba(99,102,241,.06);}
+    .form-input::placeholder{color:var(--text-3);}
+    .form-input.error{border-color:var(--red);}
+    .form-error{font-size:12px;color:var(--red);margin-top:6px;display:none;}
+    .form-error.show{display:block;}
+    .forgot{text-align:right;margin-top:-10px;margin-bottom:18px;}
+    .forgot a{font-size:12px;color:var(--accent);text-decoration:none;}
+    .forgot a:hover{text-decoration:underline;}
+    .btn-primary{width:100%;padding:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border:none;border-radius:50px;color:#fff;font-size:15px;font-weight:600;font-family:var(--font-body);cursor:pointer;transition:filter .25s,transform .2s,box-shadow .25s;margin-top:4px;}
+    .btn-primary:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 28px var(--accent-glow);}
+    .divider{display:flex;align-items:center;gap:12px;margin:22px 0;color:var(--text-3);font-size:12px;}
+    .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    .social-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .btn-social{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:13px;font-weight:500;font-family:var(--font-body);cursor:pointer;transition:background .25s,border-color .25s;}
+    .btn-social:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18);}
+    .form-footer{text-align:center;margin-top:24px;font-size:13px;color:var(--text-2);}
+    .form-footer a{color:var(--accent);font-weight:500;text-decoration:none;}
+    .form-footer a:hover{text-decoration:underline;}
+    .alert-success{display:none;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--green);margin-bottom:16px;text-align:center;}
+    .alert-success.show{display:block;}
+    @media(max-width:640px){
+      .page{grid-template-columns:1fr;}
+      .page-promo{display:none;}
+      .page-form{padding:36px 24px;}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-promo">
+    <div class="promo-logo">ZONE<span>TECH</span>ONLINE</div>
+    <div class="promo-discount">🎁 Oferta de bienvenida</div>
+    <h2 class="promo-title">Tu cuenta,<br>tus <em>privilegios</em></h2>
+    <p class="promo-text">Accede a descuentos exclusivos, historial de pedidos y preventas de los wearables más esperados.</p>
+    <div class="promo-perks">
+      <div class="promo-perk">10% de descuento en tu primera compra</div>
+      <div class="promo-perk">Acceso anticipado a nuevos productos</div>
+      <div class="promo-perk">Envío gratis en todos tus pedidos</div>
+      <div class="promo-perk">Soporte prioritario en español 24/7</div>
+    </div>
+  </div>
+  <div class="page-form">
+    <a class="back-link" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Volver a la tienda
+    </a>
+    <h1 class="form-title">Bienvenido de nuevo</h1>
+    <p class="form-subtitle">Accede a tu cuenta para ver tus pedidos y descuentos exclusivos.</p>
+    <div class="alert-success" id="alert-success">¡Sesión iniciada! Redirigiendo a la tienda...</div>
+    <form id="login-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" id="email" class="form-input" placeholder="tu@email.com" autocomplete="email">
+        <p class="form-error" id="email-error">Introduce un email válido.</p>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">Contraseña</label>
+        <input type="password" id="password" class="form-input" placeholder="Tu contraseña" autocomplete="current-password">
+        <p class="form-error" id="password-error">La contraseña no puede estar vacía.</p>
+      </div>
+      <div class="forgot"><a href="#">¿Olvidaste tu contraseña?</a></div>
+      <button type="submit" class="btn-primary">Entrar a mi cuenta</button>
+    </form>
+    <div class="divider"><span>o continúa con</span></div>
+    <div class="social-grid">
+      <button class="btn-social" onclick="socialLogin('Google')">
+        <svg width="17" height="17" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Google
+      </button>
+      <button class="btn-social" onclick="socialLogin('Facebook')">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </button>
+    </div>
+    <p class="form-footer">¿No tienes cuenta? <a href="register.html">Crear cuenta gratis &rarr;</a></p>
+  </div>
+</div>
+<script>
+  if (localStorage.getItem('zt_user')) { window.location.href = 'index.html'; }
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var emailEl = document.getElementById('email');
+    var passEl = document.getElementById('password');
+    var emailErr = document.getElementById('email-error');
+    var passErr = document.getElementById('password-error');
+    var ok = true;
+    [emailEl,passEl,emailErr,passErr].forEach(function(el){el.classList.remove('error','show');});
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) { emailEl.classList.add('error'); emailErr.classList.add('show'); ok = false; }
+    if (!passEl.value.trim()) { passEl.classList.add('error'); passErr.classList.add('show'); ok = false; }
+    if (!ok) return;
+    var name = emailEl.value.split('@')[0];
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    localStorage.setItem('zt_user', JSON.stringify({ name: name, email: emailEl.value.trim(), joined: new Date().toISOString() }));
+    document.getElementById('alert-success').classList.add('show');
+    setTimeout(function(){ window.location.href = 'index.html'; }, 1100);
+  });
+  function socialLogin(provider) {
+    localStorage.setItem('zt_user', JSON.stringify({ name: provider === 'Google' ? 'Usuario' : 'Usuario', email: provider.toLowerCase()+'@social.com', joined: new Date().toISOString() }));
+    window.location.href = 'index.html';
+  }
+</script>
+</body>
+</html>
