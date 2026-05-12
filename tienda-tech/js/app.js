@@ -841,6 +841,46 @@ function initClearComparator() {
   });
 }
 
+// ─── USER SESSION ────────────────────────────────────────────────────────────
+
+function initUserSession() {
+  var loginBtn = document.getElementById('login-btn');
+  if (!loginBtn) return;
+
+  var raw = localStorage.getItem('zt_user');
+  if (raw) {
+    try {
+      var user = JSON.parse(raw);
+      var firstName = (user.name || 'Usuario').split(' ')[0];
+      loginBtn.innerHTML =
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
+        '<span>' + firstName + '</span>' +
+        '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:.5"><polyline points="6 9 12 15 18 9"/></svg>';
+      loginBtn.style.background = 'rgba(99,102,241,0.2)';
+      loginBtn.style.borderColor = 'rgba(99,102,241,0.5)';
+      loginBtn.title = 'Sesión iniciada como ' + user.name + ' — clic para cerrar sesión';
+      loginBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (confirm('¿Cerrar sesión de ' + user.name + '?')) {
+          localStorage.removeItem('zt_user');
+          location.reload();
+        }
+      });
+    } catch(ex) { localStorage.removeItem('zt_user'); }
+  }
+
+  // Welcome toast after register
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('welcome') === '1') {
+    var userName = '';
+    try { userName = JSON.parse(localStorage.getItem('zt_user') || '{}').name || ''; } catch(ex) {}
+    setTimeout(function() {
+      showToast('¡Bienvenido/a' + (userName ? ', ' + userName.split(' ')[0] : '') + '! Código 10%: ZONE10 · Sin compra mínima');
+    }, 800);
+    window.history.replaceState({}, '', window.location.pathname);
+  }
+}
+
 // ─── HERO SLIDER ─────────────────────────────────────────────────────────────
 
 function initSlider() {
@@ -961,6 +1001,7 @@ function initAuthModal() {
 
 document.addEventListener('DOMContentLoaded', function() {
   initNavbar();
+  initUserSession();
   initSlider();
   initAuthModal();
   renderProducts('all');
