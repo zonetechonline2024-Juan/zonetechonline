@@ -43,8 +43,8 @@ input{font-family:inherit;}
 .overlay.active{opacity:1;pointer-events:all;}
 
 /* NAVBAR */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:var(--transition);}
-.navbar.scrolled{background:rgba(8,8,15,.92);backdrop-filter:blur(20px);padding:12px 0;border-bottom:1px solid var(--border);}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(8,8,15,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05);transition:var(--transition);}
+.navbar.scrolled{background:rgba(8,8,15,.97);padding:12px 0;border-bottom:1px solid var(--border);}
 .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;}
 .nav-logo{font-family:var(--font-head);font-size:16px;font-weight:700;letter-spacing:.5px;color:var(--text);white-space:nowrap;}
 .nav-logo span{color:var(--accent);}
