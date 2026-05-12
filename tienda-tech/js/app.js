@@ -841,11 +841,128 @@ function initClearComparator() {
   });
 }
 
+// ─── HERO SLIDER ─────────────────────────────────────────────────────────────
+
+function initSlider() {
+  var slides = document.querySelectorAll('.slide');
+  var dots = document.querySelectorAll('.slider-dot');
+  var progress = document.getElementById('slider-progress');
+  var prevBtn = document.getElementById('slider-prev');
+  var nextBtn = document.getElementById('slider-next');
+  if (!slides.length) return;
+
+  var current = 0;
+  var total = slides.length;
+  var duration = 7000;
+  var timer;
+  var progressTimer;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    startProgress();
+  }
+
+  function startProgress() {
+    clearInterval(timer);
+    clearInterval(progressTimer);
+    if (progress) { progress.style.transition = 'none'; progress.style.width = '0%'; }
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        if (progress) { progress.style.transition = 'width ' + duration + 'ms linear'; progress.style.width = '100%'; }
+      });
+    });
+    timer = setTimeout(function() { goTo(current + 1); }, duration);
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() { goTo(parseInt(dot.dataset.index)); });
+  });
+
+  // Pause on hover
+  var slider = document.getElementById('hero');
+  if (slider) {
+    slider.addEventListener('mouseenter', function() { clearTimeout(timer); clearInterval(progressTimer); });
+    slider.addEventListener('mouseleave', function() { startProgress(); });
+  }
+
+  // Touch swipe
+  var touchX = 0;
+  document.getElementById('hero').addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, {passive:true});
+  document.getElementById('hero').addEventListener('touchend', function(e) {
+    var diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
+  }, {passive:true});
+
+  startProgress();
+}
+
+// ─── AUTH MODAL ───────────────────────────────────────────────────────────────
+
+function initAuthModal() {
+  var backdrop = document.getElementById('auth-backdrop');
+  var loginBtn = document.getElementById('login-btn');
+  var closeBtn = document.getElementById('auth-close');
+  var tabs = document.querySelectorAll('.auth-tab');
+  var formLogin = document.getElementById('form-login');
+  var formRegister = document.getElementById('form-register');
+  if (!backdrop) return;
+
+  function openAuth() {
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAuth() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (loginBtn) loginBtn.addEventListener('click', openAuth);
+  if (closeBtn) closeBtn.addEventListener('click', closeAuth);
+  backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closeAuth(); });
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      var which = tab.dataset.tab;
+      if (formLogin && formRegister) {
+        formLogin.classList.toggle('hidden', which !== 'login');
+        formRegister.classList.toggle('hidden', which !== 'register');
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) closeAuth();
+  });
+
+  // Block submit (frontend only)
+  backdrop.querySelectorAll('.auth-submit').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var form = btn.closest('.auth-form');
+      var inputs = form ? form.querySelectorAll('.auth-input') : [];
+      var valid = true;
+      inputs.forEach(function(inp) { if (!inp.value.trim()) { inp.style.borderColor = 'var(--red)'; valid = false; } else { inp.style.borderColor = ''; } });
+      if (valid) {
+        showToast('¡Bienvenido! Tu cuenta ha sido creada. Código 10%: ZONE10');
+        closeAuth();
+      }
+    });
+  });
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
   initNavbar();
-  initParticles();
+  initSlider();
+  initAuthModal();
   renderProducts('all');
   renderCartItems();
   updateCartBadge();
