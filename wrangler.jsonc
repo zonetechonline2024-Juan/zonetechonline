@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zonetechonline",
+  "compatibility_date": "2026-05-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "tienda-tech"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
