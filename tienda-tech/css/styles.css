@@ -43,8 +43,8 @@ input{font-family:inherit;}
 .overlay.active{opacity:1;pointer-events:all;}
 
 /* NAVBAR */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(8,8,15,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05);transition:var(--transition);}
-.navbar.scrolled{background:rgba(8,8,15,.97);padding:12px 0;border-bottom:1px solid var(--border);}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:var(--nav-bg,rgba(50,25,110,.58));backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--nav-border,rgba(99,102,241,.22));transition:background .75s ease,border-color .75s ease,padding .28s cubic-bezier(.4,0,.2,1);}
+.navbar.scrolled{background:rgba(8,8,15,.97) !important;padding:12px 0;border-bottom:1px solid var(--border) !important;}
 .nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;}
 .nav-logo{font-family:var(--font-head);font-size:16px;font-weight:700;letter-spacing:.5px;color:var(--text);white-space:nowrap;}
 .nav-logo span{color:var(--accent);}
