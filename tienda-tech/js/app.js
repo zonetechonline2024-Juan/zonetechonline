@@ -855,6 +855,86 @@ function initClearComparator() {
   });
 }
 
+// ─── SEARCH ──────────────────────────────────────────────────────────────────
+
+var CATEGORY_LABELS = { watches:'Relojes', rings:'Anillos', headphones:'Auriculares', glasses:'Gafas', speakers:'Altavoces', masks:'Máscaras LED' };
+
+function initSearch() {
+  var overlay  = document.getElementById('search-overlay');
+  var searchBtn = document.getElementById('search-btn');
+  var closeBtn = document.getElementById('search-close');
+  var input    = document.getElementById('search-input');
+  var results  = document.getElementById('search-results');
+  if (!overlay || !input) return;
+
+  function openSearch() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function() { input.focus(); }, 80);
+    renderSearchResults('');
+  }
+
+  function closeSearch() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    input.value = '';
+  }
+
+  if (searchBtn) searchBtn.addEventListener('click', openSearch);
+  if (closeBtn)  closeBtn.addEventListener('click', closeSearch);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) closeSearch(); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+  });
+
+  input.addEventListener('input', function() { renderSearchResults(input.value.trim()); });
+
+  function renderSearchResults(query) {
+    var q = query.toLowerCase();
+    var filtered = PRODUCTS.filter(function(p) {
+      return !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.brand.toLowerCase().includes(q) ||
+        (CATEGORY_LABELS[p.category] || '').toLowerCase().includes(q) ||
+        (p.description || '').toLowerCase().includes(q);
+    }).slice(0, 8);
+
+    if (!filtered.length) {
+      results.innerHTML = '<div class="search-empty"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>No encontramos resultados para <strong>"' + query + '"</strong></p><p style="margin-top:6px;font-size:12px">Prueba con otro término o explora las categorías.</p></div>';
+      return;
+    }
+
+    results.innerHTML = filtered.map(function(p) {
+      var imgHtml = p.image
+        ? '<img class="sri-img" src="' + p.image + '" alt="' + p.name + '" onerror="this.src=\'\';">'
+        : '<div class="sri-img" style="display:flex;align-items:center;justify-content:center;font-size:22px;">' + (p.category==='watches'?'⌚':p.category==='rings'?'💍':p.category==='headphones'?'🎧':p.category==='glasses'?'👓':p.category==='speakers'?'🔊':'✨') + '</div>';
+      return '<div class="search-result-item" onclick="goToProduct(\'' + p.id + '\')">' +
+        imgHtml +
+        '<div class="sri-info"><div class="sri-name">' + p.name + '</div><div class="sri-meta">' + (CATEGORY_LABELS[p.category] || '') + ' · ' + p.brand + '</div></div>' +
+        '<div class="sri-price">€' + p.price + '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  window.searchByCategory = function(cat) {
+    closeSearch();
+    filterAndScroll(cat);
+  };
+
+  window.goToProduct = function(id) {
+    closeSearch();
+    var cat = '';
+    PRODUCTS.forEach(function(p) { if (p.id === id) cat = p.category; });
+    if (cat) setFilter(cat);
+    setTimeout(function() {
+      var el = document.getElementById('prod-' + id);
+      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.classList.add('highlight-pulse'); setTimeout(function() { el.classList.remove('highlight-pulse'); }, 1800); }
+      else document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+    }, 200);
+  };
+}
+
 // ─── USER SESSION ────────────────────────────────────────────────────────────
 
 function initUserSession() {
@@ -1033,6 +1113,7 @@ function initAuthModal() {
 
 document.addEventListener('DOMContentLoaded', function() {
   initNavbar();
+  initSearch();
   initUserSession();
   initSlider();
   initAuthModal();
