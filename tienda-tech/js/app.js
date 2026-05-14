@@ -792,11 +792,25 @@ function initScrollReveal() {
 
 function initNavbar() {
   var navbar = document.getElementById('navbar');
+  var navTints = [
+    { bg: 'rgba(50,25,110,.58)',  border: 'rgba(99,102,241,.25)' },
+    { bg: 'rgba(80,42,4,.60)',    border: 'rgba(251,191,36,.22)' },
+    { bg: 'rgba(4,56,66,.60)',    border: 'rgba(45,212,191,.22)' }
+  ];
   window.addEventListener('scroll', function() {
+    if (!navbar) return;
     if (window.scrollY > 70) {
-      if (navbar) navbar.classList.add('scrolled');
+      navbar.classList.add('scrolled');
+      navbar.style.background = '';
+      navbar.style.borderBottomColor = '';
     } else {
-      if (navbar) navbar.classList.remove('scrolled');
+      navbar.classList.remove('scrolled');
+      var activeSlide = document.querySelector('.slide.active');
+      var idx = activeSlide ? parseInt(activeSlide.dataset.index) || 0 : 0;
+      if (idx >= 0 && idx < navTints.length) {
+        navbar.style.background = navTints[idx].bg;
+        navbar.style.borderBottomColor = navTints[idx].border;
+      }
     }
   });
 }
@@ -897,12 +911,29 @@ function initSlider() {
   var timer;
   var progressTimer;
 
+  // Navbar tints per slide: purple, gold, teal
+  var navTints = [
+    { bg: 'rgba(50,25,110,.58)',  border: 'rgba(99,102,241,.25)' },
+    { bg: 'rgba(80,42,4,.60)',    border: 'rgba(251,191,36,.22)' },
+    { bg: 'rgba(4,56,66,.60)',    border: 'rgba(45,212,191,.22)' }
+  ];
+
+  function updateNavTint(idx) {
+    var navbar = document.getElementById('navbar');
+    if (!navbar || navbar.classList.contains('scrolled')) return;
+    navbar.style.setProperty('--nav-bg', navTints[idx].bg);
+    navbar.style.setProperty('--nav-border', navTints[idx].border);
+    navbar.style.background = navTints[idx].bg;
+    navbar.style.borderBottomColor = navTints[idx].border;
+  }
+
   function goTo(idx) {
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = (idx + total) % total;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
+    updateNavTint(current);
     startProgress();
   }
 
@@ -939,6 +970,7 @@ function initSlider() {
     if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
   }, {passive:true});
 
+  updateNavTint(0);
   startProgress();
 }
 
