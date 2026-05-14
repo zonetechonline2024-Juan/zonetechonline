@@ -158,6 +158,30 @@
   <div class="slider-scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-wrap">
+    <div class="search-bar-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="search-input" placeholder="Busca producto, marca o categoría..." autocomplete="off" spellcheck="false">
+      <button class="search-close" id="search-close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <p class="search-hint">Pulsa <kbd>Esc</kbd> para cerrar</p>
+    <div class="search-cats" id="search-cats">
+      <button class="search-cat-btn" onclick="searchByCategory('all')">Todos</button>
+      <button class="search-cat-btn" onclick="searchByCategory('watches')">⌚ Relojes</button>
+      <button class="search-cat-btn" onclick="searchByCategory('rings')">💍 Anillos</button>
+      <button class="search-cat-btn" onclick="searchByCategory('headphones')">🎧 Auriculares</button>
+      <button class="search-cat-btn" onclick="searchByCategory('glasses')">👓 Gafas</button>
+      <button class="search-cat-btn" onclick="searchByCategory('speakers')">🔊 Altavoces</button>
+      <button class="search-cat-btn" onclick="searchByCategory('masks')">✨ Máscaras LED</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
 <!-- AUTH MODAL -->
 <div class="auth-modal-backdrop" id="auth-backdrop">
   <div class="auth-modal" id="auth-modal">
