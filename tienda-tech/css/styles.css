@@ -439,7 +439,9 @@ input{font-family:inherit;}
 .slide-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(4,4,20,.88) 0%,rgba(8,8,25,.6) 55%,rgba(0,0,0,.2) 100%);}
 .slide-overlay-audio{background:linear-gradient(120deg,rgba(10,5,2,.9) 0%,rgba(25,15,5,.65) 55%,rgba(0,0,0,.2) 100%);}
 .slide-overlay-future{background:linear-gradient(120deg,rgba(0,8,20,.9) 0%,rgba(0,20,35,.65) 55%,rgba(0,0,0,.2) 100%);}
-.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-start;padding:108px 8% 40px;max-width:760px;overflow:hidden;}
+.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:108px 8% 76px;max-width:760px;overflow:hidden;}
+.slide-body{display:flex;flex-direction:column;}
+.slide-footer{display:flex;flex-direction:column;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;}
 .tag-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2s infinite;}
 .tag-dot-gold{background:var(--gold);box-shadow:0 0 10px var(--gold);}
@@ -450,7 +452,7 @@ input{font-family:inherit;}
 .em-gold{background:linear-gradient(135deg,#fbbf24,#f97316) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .em-teal{background:linear-gradient(135deg,#2dd4bf,#06b6d4) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .slide-desc{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:28px;max-width:520px;}
-.slide-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+.slide-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
 .slide-badge{padding:7px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50px;font-size:12px;font-weight:500;color:rgba(255,255,255,.85);backdrop-filter:blur(8px);}
 .slide-ctas{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-glass{padding:14px 28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:50px;color:#fff;font-size:15px;font-weight:500;transition:var(--transition);backdrop-filter:blur(8px);}
