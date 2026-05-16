@@ -227,8 +227,8 @@ input{font-family:inherit;}
 .cfg-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:24px;}
 .cfg-watch-showcase{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;width:100%;}
 .cfg-watch-aura{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.65) 0%,transparent 65%);filter:blur(38px);top:50%;left:50%;transform:translate(-50%,-50%);transition:background .55s ease;z-index:0;}
-.cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;}
-.cfg-watch-real{width:100%;height:auto;display:block;border-radius:22px;filter:drop-shadow(0 30px 65px rgba(99,102,241,.55)) drop-shadow(0 6px 18px rgba(0,0,0,.9));transition:filter .55s ease;}
+.cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;filter:drop-shadow(0 32px 70px rgba(99,102,241,.55)) drop-shadow(0 6px 20px rgba(0,0,0,.9));}
+.cfg-watch-real{width:100%;height:auto;display:block;border-radius:22px;transition:filter .45s ease;}
 @keyframes cfg-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
 .cfg-floating-chips{position:absolute;inset:0;pointer-events:none;z-index:2;}
 .cfg-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:rgba(8,8,20,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:7px 14px;font-size:12px;font-weight:600;color:white;white-space:nowrap;animation:chip-float 3.5s ease-in-out infinite;}
