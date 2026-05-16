@@ -710,15 +710,15 @@ function initConfigurator() {
     drawCfgCanvas();
   }
 
-  // ── Helpers ──
-  function updateAllGlow(glow) {
-    glowRGB = glow;
-    var bgGlow = document.getElementById('cfg-bg-glow');
-    var aura = document.getElementById('cfg-watch-aura');
-    if (bgGlow) bgGlow.style.background = 'radial-gradient(circle, rgba(' + glow + ',.35) 0%, transparent 70%)';
-    if (aura) aura.style.background = 'radial-gradient(circle, rgba(' + glow + ',.65) 0%, transparent 65%)';
-    var svg = document.getElementById('config-watch-svg');
-    if (svg) svg.style.filter = 'drop-shadow(0 28px 60px rgba(' + glow + ',.5)) drop-shadow(0 4px 12px rgba(0,0,0,.8))';
+  // ── Watch filter state ──
+  var strapFilter = '';
+  var caseFilter = '';
+
+  function applyWatchFilter() {
+    var img = document.getElementById('config-watch-svg');
+    if (!img) return;
+    var combined = [strapFilter, caseFilter].filter(Boolean).join(' ');
+    img.style.filter = combined || '';
   }
 
   function updateConfigBadge() {
@@ -736,11 +736,8 @@ function initConfigurator() {
       swatch.classList.add('active');
       var nameEl = document.getElementById('strap-name');
       if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
-      var s1 = document.getElementById('strap-stop-1');
-      var s2 = document.getElementById('strap-stop-2');
-      if (s1) s1.setAttribute('stop-color', swatch.dataset.hex || '#1a1a2e');
-      if (s2) s2.setAttribute('stop-color', swatch.dataset.hex2 || '#141422');
-      updateAllGlow(swatch.dataset.glow || '99,102,241');
+      strapFilter = swatch.dataset.strapFilter || '';
+      applyWatchFilter();
       updateConfigBadge();
     });
   });
@@ -755,12 +752,8 @@ function initConfigurator() {
       var saveEl = document.getElementById('config-save');
       if (priceEl) priceEl.textContent = '€' + price;
       if (saveEl) saveEl.textContent = 'Ahorras €' + (449 - price);
-      var c1 = document.getElementById('case-stop-1');
-      var c2 = document.getElementById('case-stop-2');
-      var c3 = document.getElementById('case-stop-3');
-      if (c1) c1.setAttribute('stop-color', btn.dataset.c1 || '#e2e4e6');
-      if (c2) c2.setAttribute('stop-color', btn.dataset.c2 || '#9ca3af');
-      if (c3) c3.setAttribute('stop-color', btn.dataset.c3 || '#6b7280');
+      caseFilter = btn.dataset.caseFilter || '';
+      applyWatchFilter();
       updateConfigBadge();
     });
   });
