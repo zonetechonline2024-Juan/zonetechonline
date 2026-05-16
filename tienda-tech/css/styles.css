@@ -228,7 +228,7 @@ input{font-family:inherit;}
 .cfg-watch-showcase{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;width:100%;}
 .cfg-watch-aura{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.65) 0%,transparent 65%);filter:blur(38px);top:50%;left:50%;transform:translate(-50%,-50%);transition:background .55s ease;z-index:0;}
 .cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;}
-.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;filter:url(#remove-white);clip-path:inset(0 0 15% 0);transition:opacity .22s ease;}
+.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;filter:url(#remove-white);clip-path:inset(0 0 8% 0);transition:opacity .22s ease;}
 .cfg-watch-real.cfg-img-fade{opacity:0;}
 @keyframes cfg-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
 .cfg-floating-chips{position:absolute;inset:0;pointer-events:none;z-index:2;}
