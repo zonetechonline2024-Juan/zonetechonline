@@ -652,47 +652,39 @@ function renderComparator() {
   '</table></div>';
 }
 
-// ─── CONFIGURATOR 3D ─────────────────────────────────────────────────────────
+// ─── CONFIGURATOR ────────────────────────────────────────────────────────────
 
 function initConfigurator() {
-  var viewer = document.getElementById('config-watch');
-  if (!viewer) return;
+  if (!document.getElementById('strap-colors')) return;
 
-  viewer.addEventListener('mousedown', function(e) {
-    dragging = true; lastX = e.clientX; lastY = e.clientY;
-    viewer.style.cursor = 'grabbing';
-  });
-  window.addEventListener('mousemove', function(e) {
-    if (!dragging) return;
-    var dx = e.clientX - lastX, dy = e.clientY - lastY;
-    rotateY += dx * 0.5; rotateX -= dy * 0.3;
-    rotateX = Math.max(-25, Math.min(25, rotateX));
-    lastX = e.clientX; lastY = e.clientY;
-    var svg = document.getElementById('config-watch-svg');
-    if (svg) svg.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
-  });
-  window.addEventListener('mouseup', function() { dragging = false; viewer.style.cursor = 'grab'; });
+  function updateGlow(glow) {
+    var bgGlow = document.getElementById('cfg-bg-glow');
+    var ringEl = document.getElementById('cfg-color-ring');
+    var watchGlowEl = document.getElementById('cfg-watch-glow');
+    if (bgGlow) bgGlow.style.background = 'radial-gradient(circle, rgba(' + glow + ',.35) 0%, transparent 70%)';
+    if (ringEl) ringEl.style.boxShadow = '0 0 0 3px rgba(' + glow + ',.6), 0 0 40px rgba(' + glow + ',.3)';
+    if (watchGlowEl) watchGlowEl.style.background = 'radial-gradient(circle, rgba(' + glow + ',.5) 0%, transparent 60%)';
+  }
 
-  viewer.addEventListener('touchstart', function(e) { lastX = e.touches[0].clientX; lastY = e.touches[0].clientY; });
-  viewer.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-    var dx = e.touches[0].clientX - lastX, dy = e.touches[0].clientY - lastY;
-    rotateY += dx * 0.5; rotateX -= dy * 0.3;
-    rotateX = Math.max(-25, Math.min(25, rotateX));
-    lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
-    var svg = document.getElementById('config-watch-svg');
-    if (svg) svg.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
-  }, { passive: false });
+  function updateConfigBadge() {
+    var badge = document.getElementById('cfg-color-badge');
+    if (!badge) return;
+    var activeStrap = document.querySelector('#strap-colors .swatch.active');
+    var activeMaterial = document.querySelector('#case-materials .material-btn.active');
+    var strapName = activeStrap ? (activeStrap.dataset.name || activeStrap.title) : 'Slate Black';
+    var materialName = activeMaterial ? activeMaterial.dataset.finish : 'Plata';
+    badge.textContent = strapName + ' · ' + materialName;
+  }
 
   // Color swatches
   document.querySelectorAll('#strap-colors .swatch').forEach(function(swatch) {
     swatch.addEventListener('click', function() {
       document.querySelectorAll('#strap-colors .swatch').forEach(function(s) { s.classList.remove('active'); });
       swatch.classList.add('active');
-      var stop1 = document.getElementById('strap-stop-1');
-      var stop2 = document.getElementById('strap-stop-2');
-      if (stop1) stop1.setAttribute('stop-color', swatch.dataset.hex || '#1a1a2e');
-      if (stop2) stop2.setAttribute('stop-color', swatch.dataset.hex2 || '#141422');
+      var nameEl = document.getElementById('strap-name');
+      if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
+      updateGlow(swatch.dataset.glow || '99,102,241');
+      updateConfigBadge();
     });
   });
 
@@ -701,16 +693,28 @@ function initConfigurator() {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#case-materials .material-btn').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      var price = btn.dataset.price;
+      var price = parseInt(btn.dataset.price);
       var priceEl = document.getElementById('config-price');
-      if (priceEl && price) priceEl.textContent = '€' + price;
+      var saveEl = document.getElementById('config-save');
+      if (priceEl) priceEl.textContent = '€' + price;
+      if (saveEl) saveEl.textContent = 'Ahorras €' + (449 - price);
+      updateConfigBadge();
     });
   });
 
-  // Add to cart button
+  // Add to cart
   var addBtn = document.getElementById('add-config-to-cart');
   if (addBtn) {
-    addBtn.addEventListener('click', function() { addToCart(1); });
+    addBtn.addEventListener('click', function() {
+      var originalHTML = addBtn.innerHTML;
+      addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido al Carrito!';
+      addBtn.disabled = true;
+      setTimeout(function() {
+        addBtn.innerHTML = originalHTML;
+        addBtn.disabled = false;
+      }, 2200);
+      addToCart(1);
+    });
   }
 }
 
