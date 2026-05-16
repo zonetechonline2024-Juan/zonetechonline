@@ -710,15 +710,16 @@ function initConfigurator() {
     drawCfgCanvas();
   }
 
-  // ── Watch filter state ──
-  var strapFilter = '';
-  var caseFilter = '';
-
-  function applyWatchFilter() {
+  // ── Image swap helper ──
+  function swapWatchImg(url) {
     var img = document.getElementById('config-watch-svg');
-    if (!img) return;
-    var combined = [strapFilter, caseFilter].filter(Boolean).join(' ');
-    img.style.filter = combined || '';
+    if (!img || !url) return;
+    img.classList.add('cfg-img-fade');
+    setTimeout(function() {
+      img.src = url;
+      img.onload = function() { img.classList.remove('cfg-img-fade'); };
+      img.onerror = function() { img.classList.remove('cfg-img-fade'); };
+    }, 220);
   }
 
   function updateConfigBadge() {
@@ -736,8 +737,7 @@ function initConfigurator() {
       swatch.classList.add('active');
       var nameEl = document.getElementById('strap-name');
       if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
-      strapFilter = swatch.dataset.strapFilter || '';
-      applyWatchFilter();
+      swapWatchImg(swatch.dataset.img);
       updateConfigBadge();
     });
   });
@@ -752,8 +752,7 @@ function initConfigurator() {
       var saveEl = document.getElementById('config-save');
       if (priceEl) priceEl.textContent = '€' + price;
       if (saveEl) saveEl.textContent = 'Ahorras €' + (449 - price);
-      caseFilter = btn.dataset.caseFilter || '';
-      applyWatchFilter();
+      swapWatchImg(btn.dataset.img);
       updateConfigBadge();
     });
   });
