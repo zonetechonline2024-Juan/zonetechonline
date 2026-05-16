@@ -584,8 +584,7 @@
   <defs>
     <filter id="remove-white" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
       <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -50 -50 -50 0 140" result="masked"/>
-      <feMorphology operator="erode" radius="1" in="masked" result="eroded"/>
-      <feComposite in="SourceGraphic" in2="eroded" operator="in"/>
+      <feComposite in="SourceGraphic" in2="masked" operator="in"/>
     </filter>
   </defs>
 </svg>
