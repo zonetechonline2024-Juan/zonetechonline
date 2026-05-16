@@ -657,38 +657,95 @@ function renderComparator() {
 function initConfigurator() {
   if (!document.getElementById('strap-colors')) return;
 
-  function updateGlow(glow) {
+  // ── Canvas particle background ──
+  var canvas = document.getElementById('cfg-canvas');
+  var glowRGB = '99,102,241';
+  if (canvas) {
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    function resizeCfgCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resizeCfgCanvas();
+    window.addEventListener('resize', resizeCfgCanvas);
+    for (var i = 0; i < 48; i++) {
+      particles.push({
+        x: Math.random(), y: Math.random(),
+        vx: (Math.random() - 0.5) * 0.0025,
+        vy: (Math.random() - 0.5) * 0.0025,
+        r: Math.random() * 1.8 + 0.4,
+        op: Math.random() * 0.45 + 0.1
+      });
+    }
+    function drawCfgCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var w = canvas.width, h = canvas.height;
+      particles.forEach(function(p) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = 1; if (p.x > 1) p.x = 0;
+        if (p.y < 0) p.y = 1; if (p.y > 1) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x * w, p.y * h, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + glowRGB + ',' + p.op + ')';
+        ctx.fill();
+      });
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var dx = (particles[i].x - particles[j].x) * w;
+          var dy = (particles[i].y - particles[j].y) * h;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 90) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x * w, particles[i].y * h);
+            ctx.lineTo(particles[j].x * w, particles[j].y * h);
+            ctx.strokeStyle = 'rgba(' + glowRGB + ',' + (0.12 * (1 - dist / 90)) + ')';
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawCfgCanvas);
+    }
+    drawCfgCanvas();
+  }
+
+  // ── Helpers ──
+  function updateAllGlow(glow) {
+    glowRGB = glow;
     var bgGlow = document.getElementById('cfg-bg-glow');
-    var ringEl = document.getElementById('cfg-color-ring');
-    var watchGlowEl = document.getElementById('cfg-watch-glow');
+    var aura = document.getElementById('cfg-watch-aura');
     if (bgGlow) bgGlow.style.background = 'radial-gradient(circle, rgba(' + glow + ',.35) 0%, transparent 70%)';
-    if (ringEl) ringEl.style.boxShadow = '0 0 0 3px rgba(' + glow + ',.6), 0 0 40px rgba(' + glow + ',.3)';
-    if (watchGlowEl) watchGlowEl.style.background = 'radial-gradient(circle, rgba(' + glow + ',.5) 0%, transparent 60%)';
+    if (aura) aura.style.background = 'radial-gradient(circle, rgba(' + glow + ',.65) 0%, transparent 65%)';
+    var svg = document.getElementById('config-watch-svg');
+    if (svg) svg.style.filter = 'drop-shadow(0 28px 60px rgba(' + glow + ',.5)) drop-shadow(0 4px 12px rgba(0,0,0,.8))';
   }
 
   function updateConfigBadge() {
     var badge = document.getElementById('cfg-color-badge');
     if (!badge) return;
-    var activeStrap = document.querySelector('#strap-colors .swatch.active');
-    var activeMaterial = document.querySelector('#case-materials .material-btn.active');
-    var strapName = activeStrap ? (activeStrap.dataset.name || activeStrap.title) : 'Slate Black';
-    var materialName = activeMaterial ? activeMaterial.dataset.finish : 'Plata';
-    badge.textContent = strapName + ' · ' + materialName;
+    var as = document.querySelector('#strap-colors .swatch.active');
+    var am = document.querySelector('#case-materials .material-btn.active');
+    badge.textContent = (as ? (as.dataset.name || as.title) : 'Slate Black') + ' · ' + (am ? am.dataset.finish : 'Plata');
   }
 
-  // Color swatches
+  // ── Color swatches ──
   document.querySelectorAll('#strap-colors .swatch').forEach(function(swatch) {
     swatch.addEventListener('click', function() {
       document.querySelectorAll('#strap-colors .swatch').forEach(function(s) { s.classList.remove('active'); });
       swatch.classList.add('active');
       var nameEl = document.getElementById('strap-name');
       if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
-      updateGlow(swatch.dataset.glow || '99,102,241');
+      var s1 = document.getElementById('strap-stop-1');
+      var s2 = document.getElementById('strap-stop-2');
+      if (s1) s1.setAttribute('stop-color', swatch.dataset.hex || '#1a1a2e');
+      if (s2) s2.setAttribute('stop-color', swatch.dataset.hex2 || '#141422');
+      updateAllGlow(swatch.dataset.glow || '99,102,241');
       updateConfigBadge();
     });
   });
 
-  // Material buttons
+  // ── Material buttons ──
   document.querySelectorAll('#case-materials .material-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#case-materials .material-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -698,21 +755,24 @@ function initConfigurator() {
       var saveEl = document.getElementById('config-save');
       if (priceEl) priceEl.textContent = '€' + price;
       if (saveEl) saveEl.textContent = 'Ahorras €' + (449 - price);
+      var c1 = document.getElementById('case-stop-1');
+      var c2 = document.getElementById('case-stop-2');
+      var c3 = document.getElementById('case-stop-3');
+      if (c1) c1.setAttribute('stop-color', btn.dataset.c1 || '#e2e4e6');
+      if (c2) c2.setAttribute('stop-color', btn.dataset.c2 || '#9ca3af');
+      if (c3) c3.setAttribute('stop-color', btn.dataset.c3 || '#6b7280');
       updateConfigBadge();
     });
   });
 
-  // Add to cart
+  // ── Add to cart ──
   var addBtn = document.getElementById('add-config-to-cart');
   if (addBtn) {
     addBtn.addEventListener('click', function() {
-      var originalHTML = addBtn.innerHTML;
+      var orig = addBtn.innerHTML;
       addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido al Carrito!';
       addBtn.disabled = true;
-      setTimeout(function() {
-        addBtn.innerHTML = originalHTML;
-        addBtn.disabled = false;
-      }, 2200);
+      setTimeout(function() { addBtn.innerHTML = orig; addBtn.disabled = false; }, 2200);
       addToCart(1);
     });
   }
