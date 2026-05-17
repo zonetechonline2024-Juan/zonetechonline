@@ -508,6 +508,55 @@ function renderProducts(filterKey, customFilter) {
   });
 }
 
+// ─── CATALOG PAGE RENDERER ───────────────────────────────────────────────────
+function renderCatalogGrid(containerId, filterKey, brandKey) {
+  var grid = document.getElementById(containerId || 'catalog-grid');
+  if (!grid) return 0;
+  var category = FILTER_MAP[filterKey] || (filterKey === 'all' ? 'todos' : null);
+  var filtered = (!category || category === 'todos') ? PRODUCTS.slice() : PRODUCTS.filter(function(p) { return p.category === category; });
+  if (brandKey) {
+    var bDecoded = decodeURIComponent(brandKey);
+    filtered = filtered.filter(function(p) { return p.brand === bDecoded; });
+  }
+  if (!filtered.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--text-3)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 16px;display:block;opacity:.4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>No se encontraron productos</p></div>';
+    return 0;
+  }
+  grid.innerHTML = filtered.map(function(product) {
+    var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
+    var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
+    var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
+    var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
+    var shortDesc = product.description.length > 88 ? product.description.substring(0, 88) + '...' : product.description;
+    var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
+    var reviews = 40 + (product.id * 7) % 180;
+    return '<article class="product-card">' +
+      '<span class="product-brand">' + product.brand + '</span>' +
+      badgeHTML +
+      '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
+        productImgHTML(product, 'product-real-img', 'product-svg-back') +
+        '<div class="product-qv-overlay"><span>Vista rápida</span></div>' +
+      '</div>' +
+      '<div class="product-info">' +
+        '<h3 class="product-name">' + product.name + '</h3>' +
+        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span><span class="product-reviews">(' + reviews + ')</span></div>' +
+        '<p class="product-desc">' + shortDesc + '</p>' +
+        '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
+        '<div class="product-actions">' +
+          '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          '<button class="btn-compare" onclick="addToComparator(' + product.id + ')" title="Comparar">⇄</button>' +
+          '<button class="btn-qv" onclick="openQuickView(' + product.id + ')" title="Vista rápida">⊙</button>' +
+        '</div>' +
+      '</div></article>';
+  }).join('');
+  var cards = grid.querySelectorAll('.product-card');
+  cards.forEach(function(card, i) {
+    card.style.opacity = '0'; card.style.transform = 'translateY(18px)';
+    setTimeout(function() { card.style.transition = 'opacity .38s ease,transform .38s ease'; card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, i * 50);
+  });
+  return filtered.length;
+}
+
 function setFilter(filterKey) {
   document.querySelectorAll('.filter-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.dataset.filter === filterKey);
