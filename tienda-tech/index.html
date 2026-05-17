@@ -937,6 +937,95 @@ function cookieConsent(choice){
 </script>
 
 <script src="js/app.js"></script>
+
+<!-- ─── WHATSAPP WIDGET ─────────────────────────────────────────── -->
+<div class="wa-widget" id="waWidget">
+
+  <!-- Popup chat -->
+  <div class="wa-popup" id="waPopup">
+    <div class="wa-popup-header">
+      <div class="wa-avatar-wrap">
+        <div class="wa-avatar-img">ZT</div>
+        <span class="wa-online-dot"></span>
+      </div>
+      <div class="wa-popup-meta">
+        <span class="wa-popup-name">ZoneTechOnline</span>
+        <span class="wa-popup-sub">● En línea · responde en minutos</span>
+      </div>
+      <button class="wa-popup-x" onclick="waClose()" aria-label="Cerrar">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="wa-popup-body">
+      <div class="wa-msg-wrap">
+        <div class="wa-msg-avatar">ZT</div>
+        <div class="wa-bubble">
+          <p>👋 ¡Hola! Bienvenido a <strong>ZoneTechOnline</strong>.</p>
+          <p>¿Tienes dudas sobre nuestros wearables? Escríbenos y te ayudamos a elegir el mejor para ti.</p>
+          <span class="wa-bubble-time">Ahora · Soporte en español</span>
+        </div>
+      </div>
+      <div class="wa-typing">
+        <div class="wa-typing-dots"><span></span><span></span><span></span></div>
+        <span class="wa-typing-label">escribiendo...</span>
+      </div>
+    </div>
+
+    <a href="https://wa.me/34613640673?text=Hola%2C%20estoy%20interesado%20en%20vuestros%20wearables%20premium%20%F0%9F%91%8B"
+       target="_blank" rel="noopener noreferrer"
+       class="wa-cta" onclick="waClose()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+      Iniciar conversación en WhatsApp
+    </a>
+  </div>
+
+  <!-- Botón flotante -->
+  <button class="wa-fab" id="waFab" onclick="waToggle()" aria-label="Contactar por WhatsApp">
+    <span class="wa-badge" id="waBadge">1</span>
+    <!-- Icono WhatsApp -->
+    <svg class="wa-fab-icon wa-icon-chat" width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <!-- Icono cerrar -->
+    <svg class="wa-fab-icon wa-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+(function(){
+  var popup = document.getElementById('waPopup');
+  var fab   = document.getElementById('waFab');
+  var badge = document.getElementById('waBadge');
+  var open  = false;
+
+  window.waToggle = function(){
+    open = !open;
+    popup.classList.toggle('wa-open', open);
+    fab.classList.toggle('wa-open', open);
+    badge.classList.toggle('wa-hidden', open);
+  };
+  window.waClose = function(){
+    open = false;
+    popup.classList.remove('wa-open');
+    fab.classList.remove('wa-open');
+    badge.classList.remove('wa-hidden');
+  };
+
+  // Auto-abre tras 4 s (una vez por sesión)
+  setTimeout(function(){
+    if(!sessionStorage.getItem('wa_popped')){
+      sessionStorage.setItem('wa_popped','1');
+      window.waToggle();
+    }
+  }, 4000);
+})();
+</script>
+
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="remove-white" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
