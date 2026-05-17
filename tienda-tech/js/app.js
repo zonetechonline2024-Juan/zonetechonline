@@ -549,8 +549,27 @@ function filterByBrand(brandKey) {
     renderProducts('all', customFilter);
     if (grid) { grid.style.opacity = '1'; grid.style.transform = 'translateY(0)'; }
   }, 200);
+}
+
+// Footer navigation — same-page: instant scroll + filter; external page: let href handle it
+function footerNav(e, type, value) {
+  var path = window.location.pathname;
+  var onHome = path === '/' || path.endsWith('/index.html') || path.endsWith('/tienda-tech/') || path === '';
+  if (!onHome) return; // allow normal href navigation from legal pages
+  e.preventDefault();
   var section = document.getElementById('productos');
-  if (section) section.scrollIntoView({ behavior: 'smooth' });
+  if (type === 'filter') {
+    renderProducts(value);
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.filter === value);
+    });
+  } else {
+    filterByBrand(value);
+  }
+  if (section) {
+    var offset = section.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: offset, behavior: 'instant' });
+  }
 }
 
 // ─── QUICK VIEW ───────────────────────────────────────────────────────────────
@@ -1205,18 +1224,15 @@ document.addEventListener('DOMContentLoaded', function() {
   var brandParam  = urlParams.get('brand');
   if (filterParam && FILTER_MAP[filterParam]) {
     renderProducts(filterParam);
-    setTimeout(function() {
-      var section = document.getElementById('productos');
-      if (section) section.scrollIntoView({ behavior: 'smooth' });
-      document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.filter === filterParam);
-      });
-    }, 300);
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.filter === filterParam);
+    });
+    var secF = document.getElementById('productos');
+    if (secF) window.scrollTo({ top: secF.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
   } else if (brandParam) {
-    renderProducts('all');
-    setTimeout(function() {
-      filterByBrand(brandParam);
-    }, 100);
+    filterByBrand(brandParam);
+    var secB = document.getElementById('productos');
+    if (secB) window.scrollTo({ top: secB.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
   } else {
     renderProducts('all');
   }
