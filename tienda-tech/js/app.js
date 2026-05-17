@@ -447,13 +447,20 @@ function showToast(message, type) {
 
 // ─── PRODUCTS RENDER ──────────────────────────────────────────────────────────
 
-function renderProducts(filterKey) {
+// Brand groups for combined footer links
+var BRAND_GROUPS = {
+  'jabra-sennheiser': ['Jabra', 'Sennheiser'],
+  'sonos-marshall':   ['Sonos', 'Marshall']
+};
+
+function renderProducts(filterKey, customFilter) {
   filterKey = filterKey || 'all';
   var category = FILTER_MAP[filterKey] || 'todos';
   var grid = document.getElementById('products-grid');
   if (!grid) return;
 
   var filtered = category === 'todos' ? PRODUCTS : PRODUCTS.filter(function(p) { return p.category === category; });
+  if (customFilter) filtered = filtered.filter(customFilter);
 
   grid.innerHTML = filtered.map(function(product) {
     var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
@@ -523,6 +530,25 @@ function setFilter(filterKey) {
 // Category cards → filter products
 function filterAndScroll(filterKey) {
   setFilter(filterKey);
+  var section = document.getElementById('productos');
+  if (section) section.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Brand filter (used by footer links and URL params)
+function filterByBrand(brandKey) {
+  var brandList = BRAND_GROUPS[brandKey] ? BRAND_GROUPS[brandKey] : [brandKey];
+  var customFilter = function(p) { return brandList.indexOf(p.brand) !== -1; };
+  document.querySelectorAll('.filter-btn').forEach(function(btn) { btn.classList.remove('active'); });
+  var grid = document.getElementById('products-grid');
+  if (grid) {
+    grid.style.opacity = '0';
+    grid.style.transform = 'translateY(10px)';
+    grid.style.transition = 'opacity .2s ease, transform .2s ease';
+  }
+  setTimeout(function() {
+    renderProducts('all', customFilter);
+    if (grid) { grid.style.opacity = '1'; grid.style.transform = 'translateY(0)'; }
+  }, 200);
   var section = document.getElementById('productos');
   if (section) section.scrollIntoView({ behavior: 'smooth' });
 }
@@ -1173,7 +1199,27 @@ document.addEventListener('DOMContentLoaded', function() {
   initUserSession();
   initSlider();
   initAuthModal();
-  renderProducts('all');
+  // URL parameter routing: ?filter=watches or ?brand=Garmin
+  var urlParams = new URLSearchParams(window.location.search);
+  var filterParam = urlParams.get('filter');
+  var brandParam  = urlParams.get('brand');
+  if (filterParam && FILTER_MAP[filterParam]) {
+    renderProducts(filterParam);
+    setTimeout(function() {
+      var section = document.getElementById('productos');
+      if (section) section.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.filter === filterParam);
+      });
+    }, 300);
+  } else if (brandParam) {
+    renderProducts('all');
+    setTimeout(function() {
+      filterByBrand(brandParam);
+    }, 100);
+  } else {
+    renderProducts('all');
+  }
   renderCartItems();
   updateCartBadge();
   renderComparator();
