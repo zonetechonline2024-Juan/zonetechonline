@@ -1283,7 +1283,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var secB = document.getElementById('productos');
     if (secB) window.scrollTo({ top: secB.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
   } else {
-    renderProducts('all');
+    var featuredIds = [7, 13, 19, 22, 29, 34];
+    renderProducts('all', function(p) { return featuredIds.indexOf(p.id) !== -1; });
   }
   renderCartItems();
   updateCartBadge();
@@ -1310,8 +1311,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var continueShop = document.getElementById('continue-shopping');
   if (continueShop) continueShop.addEventListener('click', closeCart);
 
-  // Filter buttons
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  // Filter buttons (solo aplica a los que tengan data-filter, no a <a> de navegación)
+  document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn) {
     btn.addEventListener('click', function() { setFilter(btn.dataset.filter); });
   });
 
