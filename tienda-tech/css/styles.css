@@ -264,7 +264,7 @@ input{font-family:inherit;}
 
 /* TESTIMONIALS */
 /* REVIEWS SECTION */
-.reviews-section{padding:90px 0;background:var(--bg-2);}
+.reviews-section{padding:90px 0;background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .rv-aggregate{display:flex;align-items:center;gap:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 32px;margin-bottom:40px;flex-wrap:wrap;gap:24px;}
 .rv-big-score{font-family:var(--font-head);font-size:56px;font-weight:700;line-height:1;color:var(--text);}
 .rv-score-block{display:flex;flex-direction:column;gap:5px;}
