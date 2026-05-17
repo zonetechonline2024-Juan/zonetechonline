@@ -1283,7 +1283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var secB = document.getElementById('productos');
     if (secB) window.scrollTo({ top: secB.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
   } else {
-    var featuredIds = [7, 13, 19, 22, 29, 34];
+    var featuredIds = [1, 7, 13, 15, 19, 22, 29, 34];
     renderProducts('all', function(p) { return featuredIds.indexOf(p.id) !== -1; });
   }
   renderCartItems();
