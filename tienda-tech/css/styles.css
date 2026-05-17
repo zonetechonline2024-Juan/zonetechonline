@@ -144,9 +144,6 @@ input{font-family:inherit;}
 .cat-rings{--cat-bg:rgba(251,191,36,.07);--cat-glow:rgba(251,191,36,.45);--cat-border:rgba(251,191,36,.45);}
 .cat-headphones{--cat-bg:rgba(56,189,248,.07);--cat-glow:rgba(56,189,248,.45);--cat-border:rgba(56,189,248,.45);}
 .cat-glasses{--cat-bg:rgba(45,212,191,.07);--cat-glow:rgba(45,212,191,.45);--cat-border:rgba(45,212,191,.45);}
-.cat-watches .cat-visual,.cat-glasses .cat-visual{background:#fff;}
-.cat-watches .cat-visual img,.cat-glasses .cat-visual img{mix-blend-mode:multiply;filter:drop-shadow(0 2px 10px rgba(0,0,0,.14));}
-.cat-watches:hover .cat-visual img,.cat-glasses:hover .cat-visual img{filter:drop-shadow(0 4px 18px rgba(0,0,0,.22));}
 .cat-speakers{--cat-bg:rgba(244,114,182,.07);--cat-glow:rgba(244,114,182,.45);--cat-border:rgba(244,114,182,.45);}
 .cat-masks{--cat-bg:rgba(251,146,60,.07);--cat-glow:rgba(251,146,60,.45);--cat-border:rgba(251,146,60,.45);}
 
