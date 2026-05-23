@@ -24,12 +24,16 @@ module.exports = async (req, res) => {
       quantity: item.qty,
     }));
 
+    const proto = req.headers['x-forwarded-proto'] || 'https';
+    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.vercel.app';
+    const base  = `${proto}://${host}`;
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `${req.headers.origin}/checkout-success.html?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/checkout-cancel.html`,
+      success_url: `${base}/checkout-success.html?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${base}/checkout-cancel.html`,
     });
 
     res.status(200).json({ url: session.url });
