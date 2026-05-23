@@ -1445,6 +1445,34 @@ document.addEventListener('DOMContentLoaded', function() {
   var continueShop = document.getElementById('continue-shopping');
   if (continueShop) continueShop.addEventListener('click', closeCart);
 
+  var checkoutBtn = document.getElementById('checkout-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', async function() {
+      if (!cart || cart.length === 0) return;
+      checkoutBtn.disabled = true;
+      checkoutBtn.textContent = 'Procesando...';
+      try {
+        var res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: cart })
+        });
+        var data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert('Error al iniciar el pago. Inténtalo de nuevo.');
+          checkoutBtn.disabled = false;
+          checkoutBtn.textContent = 'Proceder al Pago';
+        }
+      } catch (err) {
+        alert('Error de conexión. Inténtalo de nuevo.');
+        checkoutBtn.disabled = false;
+        checkoutBtn.textContent = 'Proceder al Pago';
+      }
+    });
+  }
+
   // Filter buttons (solo aplica a los que tengan data-filter, no a <a> de navegación)
   document.querySelectorAll('.filter-btn[data-filter]').forEach(function(btn) {
     btn.addEventListener('click', function() { setFilter(btn.dataset.filter); });
