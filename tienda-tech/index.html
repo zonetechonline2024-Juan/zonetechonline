@@ -367,64 +367,38 @@
   </div>
 </section>
 
-<!-- CATEGORÍAS -->
-<section class="categories" id="categorias">
-  <div class="section-container">
-    <div class="section-header">
-      <span class="section-tag">Colección Completa</span>
-      <h2 class="section-title">Marcas Premium <span class="gradient-text">para Cada Momento</span></h2>
-      <p class="section-subtitle">Garmin · Oura · Jabra · Ray-Ban Meta · Sonos · CurrentBody y muchas más.</p>
+<!-- ASISTENTE IA -->
+<section class="ai-section" id="asistente-ia">
+  <div class="ai-bg-glow ai-glow-1"></div>
+  <div class="ai-bg-glow ai-glow-2"></div>
+  <div class="ai-bg-grid"></div>
+  <div class="section-container ai-container">
+    <div class="ai-tag-row">
+      <span class="ai-powered-tag">
+        <span class="ai-pulse-dot"></span>
+        AI Powered
+      </span>
     </div>
-    <div class="categories-grid-6">
-
-      <!-- RELOJES -->
-      <div class="cat6-card cat-watches" onclick="window.location.href='catalogo.html?filter=watches'">
-        <div class="cat-visual">
-          <img src="https://www.polar.com/img/static/pacer-pro-rd/gallery/pacer-pro-gold-1.webp" alt="Relojes Inteligentes" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Relojes Inteligentes</h4><span>9 modelos · desde €199</span></div>
-      </div>
-
-      <!-- ANILLOS -->
-      <div class="cat6-card cat-rings" onclick="window.location.href='catalogo.html?filter=rings'">
-        <div class="cat-visual">
-          <img src="https://images.samsung.com/is/image/samsung/assets/hk_en/galaxy-ring/feature/galaxy-ring-kv-endframe-pc.jpg?wid=1920&hei=1080&fmt=png" alt="Anillos Smart" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Anillos Smart</h4><span>5 modelos · desde €299</span></div>
-      </div>
-
-      <!-- AURICULARES -->
-      <div class="cat6-card cat-headphones" onclick="window.location.href='catalogo.html?filter=headphones'">
-        <div class="cat-visual">
-          <img src="https://assets2.jabra.com/b/7/5/b/b75b82be7fd5871ad06b603ffc74a492d31fe2fd_1_Elite_10_Cream.png" alt="Auriculares Premium" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Auriculares Premium</h4><span>7 modelos · desde €89</span></div>
-      </div>
-
-      <!-- GAFAS -->
-      <div class="cat6-card cat-glasses" onclick="window.location.href='catalogo.html?filter=glasses'">
-        <div class="cat-visual">
-          <img src="https://lookaside.fbsbx.com/elementpath/media/?media_id=1556964719066752&version=1776971541&transcode_extension=webp" alt="Gafas Inteligentes" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Gafas Inteligentes</h4><span>5 modelos · desde €299</span></div>
-      </div>
-
-      <!-- ALTAVOCES -->
-      <div class="cat6-card cat-speakers" onclick="window.location.href='catalogo.html?filter=speakers'">
-        <div class="cat-visual">
-          <img src="https://images.ctfassets.net/8cd2csgvqd3m/3rUMHE0GRKR0eACCntNBlr/2dc73adfb01a3bbf79e19f12578376d5/BL20_Grey_iphone_2.png?q=90&fm=png&w=700" alt="Altavoces Smart" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Altavoces Smart</h4><span>7 modelos · desde €149</span></div>
-      </div>
-
-      <!-- MÁSCARAS LED -->
-      <div class="cat6-card cat-masks" onclick="window.location.href='catalogo.html?filter=masks'">
-        <div class="cat-visual">
-          <img src="https://us.currentbody.com/cdn/shop/files/1_3c4dd6ee-ff67-4a7b-90a7-dceac5d1fb44_800x.png" alt="Máscaras LED" loading="lazy">
-        </div>
-        <div class="cat-info"><h4>Máscaras LED</h4><span>5 modelos · desde €199</span></div>
-      </div>
-
+    <h2 class="ai-headline">Asistente <span class="gradient-text">IA</span></h2>
+    <p class="ai-subline">Cuéntanos qué necesitas y te recomendaremos<br>la mejor tecnología.</p>
+    <button class="ai-cta-btn" id="ai-open-btn" aria-label="Abrir asistente de inteligencia artificial">
+      <span class="ai-btn-shine"></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Preguntar a la IA
+    </button>
+    <div class="ai-caps-row">
+      <span class="ai-cap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Analiza tu perfil
+      </span>
+      <span class="ai-cap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Recomienda del catálogo real
+      </span>
+      <span class="ai-cap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Respuesta al instante
+      </span>
     </div>
   </div>
 </section>
@@ -1133,6 +1107,44 @@ function cookieConsent(choice){
     </filter>
   </defs>
 </svg>
+<!-- MODAL ASISTENTE IA -->
+<div class="ai-backdrop" id="ai-backdrop" aria-hidden="true">
+  <div class="ai-modal" id="ai-modal" role="dialog" aria-modal="true" aria-labelledby="ai-modal-title">
+    <div class="ai-modal-header">
+      <div class="ai-modal-ident">
+        <div class="ai-modal-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="8.5" cy="10" r="1.5" fill="currentColor"/><circle cx="15.5" cy="10" r="1.5" fill="currentColor"/><path d="M9 13s1 1.5 3 1.5 3-1.5 3-1.5"/></svg>
+          <span class="ai-avatar-dot"></span>
+        </div>
+        <div class="ai-modal-ident-text">
+          <span class="ai-modal-title" id="ai-modal-title">Asistente de Tecnología Inteligente</span>
+          <span class="ai-modal-status">
+            <span class="ai-status-dot"></span>
+            En línea · Responde al instante
+          </span>
+        </div>
+      </div>
+      <button class="ai-close-btn" id="ai-close-btn" aria-label="Cerrar asistente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="ai-messages" id="ai-messages"></div>
+    <div class="ai-suggestions-wrap" id="ai-suggestions-wrap">
+      <p class="ai-sug-label">Preguntas frecuentes:</p>
+      <div class="ai-suggestions">
+        <button class="ai-sug-btn" data-q="¿Qué reloj me recomiendas para hacer deporte?">🏃 ¿Qué reloj para deporte?</button>
+        <button class="ai-sug-btn" data-q="¿Tenéis tecnología para mejorar el sueño?">💤 Tecnología para el sueño</button>
+        <button class="ai-sug-btn" data-q="¿Cuál es la opción con más duración de batería?">🔋 ¿Más batería?</button>
+      </div>
+    </div>
+    <form class="ai-input-row" id="ai-form" autocomplete="off">
+      <input type="text" id="ai-input" class="ai-input" placeholder="Escribe tu pregunta sobre wearables..." maxlength="300" aria-label="Pregunta al asistente IA">
+      <button type="submit" class="ai-send-btn" id="ai-send-btn" aria-label="Enviar pregunta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
 
