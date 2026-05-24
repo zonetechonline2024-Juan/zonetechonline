@@ -1755,6 +1755,176 @@ function initReviews() {
   }
 }
 
+// ─── AI ASSISTANT ─────────────────────────────────────────────────────────────
+
+function initAIAssistant() {
+  var openBtn    = document.getElementById('ai-open-btn');
+  var backdrop   = document.getElementById('ai-backdrop');
+  var closeBtn   = document.getElementById('ai-close-btn');
+  var messagesEl = document.getElementById('ai-messages');
+  var sugWrap    = document.getElementById('ai-suggestions-wrap');
+  var form       = document.getElementById('ai-form');
+  var input      = document.getElementById('ai-input');
+  var sendBtn    = document.getElementById('ai-send-btn');
+  if (!openBtn || !backdrop || !messagesEl) return;
+
+  var opened        = false;
+  var sugsDismissed = false;
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function scrollBottom() {
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function appendMsg(html, who) {
+    var div = document.createElement('div');
+    div.className = 'ai-msg ' + who;
+    div.innerHTML = '<div class="ai-msg-bubble">' + html + '</div>';
+    messagesEl.appendChild(div);
+    scrollBottom();
+    return div;
+  }
+
+  function showTyping() {
+    var div = document.createElement('div');
+    div.className = 'ai-msg bot';
+    div.id = 'ai-typing-indicator';
+    div.innerHTML = '<div class="ai-msg-bubble ai-typing"><span></span><span></span><span></span></div>';
+    messagesEl.appendChild(div);
+    scrollBottom();
+  }
+
+  function removeTyping() {
+    var t = document.getElementById('ai-typing-indicator');
+    if (t && t.parentNode) t.parentNode.removeChild(t);
+  }
+
+  function getResponse(q) {
+    var ql = q.toLowerCase();
+
+    if (/reloj|running|correr|deporte|atletism|marath|triatl|garmin|polar|forerunner|instinct|pacer|suunto/.test(ql)) {
+      return 'Para deporte y running tenemos opciones excelentes. El <strong>Garmin Forerunner 265</strong> (€349) es ideal para corredores serios: Training Readiness, planes adaptativos y AMOLED. Si quieres batería casi infinita, el <strong>Garmin Instinct 2 Solar</strong> (€399) se carga con el sol. Para atletismo de élite, el <strong>Polar Pacer Pro</strong> (€279) incluye altímetro barométrico y 35h GPS. <a class="ai-msg-link" href="catalogo.html?brand=Garmin">Ver Garmin →</a>';
+    }
+
+    if (/anillo|ring|oura|sue[ñn]o|dormir|sleep|circular|galaxy ring|samsung ring/.test(ql)) {
+      return 'Para salud sin pantalla y seguimiento del sueño, el <strong>Oura Ring 4</strong> (desde €299) es el líder mundial: titanio ultraligero, 18 sensores y 8 días de batería con el análisis de sueño más preciso del mercado. También el <strong>Samsung Galaxy Ring</strong> (€349) con Galaxy AI y el <strong>Circular Ring Slim</strong> (€299) de startup francesa. <a class="ai-msg-link" href="catalogo.html?brand=Oura">Ver Oura →</a>';
+    }
+
+    if (/bater[ií]a|autonom[ií]a|solar|carga|dura|aguant/.test(ql)) {
+      return 'Para máxima autonomía: el <strong>Garmin Instinct 2 Solar</strong> (€399) tiene carga solar potencialmente ilimitada, el <strong>Withings ScanWatch Light</strong> (€149) aguanta <strong>30 días</strong>, y en auriculares el <strong>Sennheiser Momentum 4</strong> (€279) lidera el mercado con <strong>60 horas</strong> de música. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+    }
+
+    if (/salud|ecg|coraz[oó]n|presi[oó]n|arritmia|withings|scanwatch|m[eé]dico|cl[ií]nico/.test(ql)) {
+      return 'Para salud avanzada con certificación médica, el <strong>Withings ScanWatch Nova</strong> (€299) incluye ECG certificado FDA, SpO2 y 30 días de batería — el único reloj híbrido con ECG de nivel clínico. El <strong>Huawei Watch D2</strong> (€349) mide la presión arterial directamente en muñeca. <a class="ai-msg-link" href="catalogo.html?brand=Withings">Ver Withings →</a>';
+    }
+
+    if (/auricular|jabra|sennheiser|bose|sonido|m[uú]sica|anc|cancelac|earbuds|tws|aud[ií]/.test(ql)) {
+      return 'Para audio premium: los <strong>Jabra Elite 10</strong> (€249) son referencia profesional con ANC MultiSensor y Dolby Audio. El <strong>Sennheiser Momentum 4</strong> (€279) ofrece 60h de batería y sonido Hi-Fi alemán. Para el mejor ANC del mundo, los <strong>Bose QC Ultra Earbuds</strong> (€299) son insuperables. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver auriculares →</a>';
+    }
+
+    if (/gafas|gafa|ray.?ban|meta ai|smart glasses|bose frames|inteligentes/.test(ql)) {
+      return 'En gafas inteligentes, las <strong>Ray-Ban Meta Wayfarer</strong> (€329) son las más icónicas: cámara 12MP, Meta AI integrado y altavoces abiertos con el diseño Wayfarer clásico. Para deporte, las <strong>Bose Frames Tempo</strong> (€199) tienen audio abierto y lentes polarizadas intercambiables. <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver gafas →</a>';
+    }
+
+    if (/altavoz|marshall|sonos|jbl|b&o|beolit|portat[ií]l/.test(ql)) {
+      return 'Para altavoces portátiles: el <strong>Marshall Emberton III</strong> (€109) lidera con 32h de batería y sonido 360° rockero. Para más potencia, el <strong>Marshall Tufton</strong> (€399) entrega 80W. Para ecosistema multiroom, el <strong>Sonos Roam 2</strong> (€179) combina WiFi + Bluetooth con IP67. <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver altavoces →</a>';
+    }
+
+    if (/m[aá]scara|led|piel|col[aá]geno|antienvejecimiento|currentbody|omnilux|dennis gross|foreo|nuface|belleza/.test(ql)) {
+      return 'Para tratamiento LED facial, la <strong>CurrentBody Skin LED Mask</strong> (€299) es la favorita de los dermatólogos: 264 LEDs rojo+infrarrojo certificados FDA en 10 minutos diarios. La <strong>Dr. Dennis Gross SpectraLite</strong> (€395) añade triple longitud de onda (anti-acné + antienvejecimiento) en solo 3 minutos. <a class="ai-msg-link" href="catalogo.html?filter=masks">Ver máscaras LED →</a>';
+    }
+
+    if (/barato|econ[oó]mico|precio|asequible|oferta|descuento|bajo precio|menos de/.test(ql)) {
+      return 'Tenemos opciones para todos los presupuestos: <strong>Redmi Watch 3 Active</strong> (€46) para empezar, <strong>Jabra Elite 4 Active</strong> (€99) para auriculares deportivos, <strong>Marshall Emberton III</strong> (€109) para altavoz de calidad, y <strong>Xiaomi Smart Band 9 Pro</strong> (€57) con GPS y 21 días de batería. <a class="ai-msg-link" href="catalogo.html">Ver todos →</a>';
+    }
+
+    if (/apple|iphone|ios|watchos/.test(ql)) {
+      return 'Disponemos de toda la gama Apple Watch. El <strong>Apple Watch SE 3</strong> (€269) es la opción más accesible. El <strong>Apple Watch Series 11</strong> (€449) incluye ECG, SpO2 y OLED siempre activa. Para aventuras extremas, el <strong>Apple Watch Ultra 3</strong> (€899) aguanta 100m y 72h de batería. <a class="ai-msg-link" href="catalogo.html?brand=Apple">Ver Apple Watch →</a>';
+    }
+
+    if (/samsung|galaxy watch/.test(ql)) {
+      return 'En Samsung tenemos desde el <strong>Galaxy Watch FE</strong> (€199) hasta el <strong>Galaxy Watch Ultra 47mm</strong> (€649) con titanio y certificación MIL-810G. El <strong>Galaxy Watch 7</strong> (€299) con GPS dual L1+L5 es nuestra opción más popular. <a class="ai-msg-link" href="catalogo.html?brand=Samsung">Ver Samsung →</a>';
+    }
+
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame un poco más: ¿practicas deporte? ¿Buscas mejorar el sueño? ¿Necesitas larga batería? ¿Tienes iPhone o Android? Con esos datos te encuentro la opción perfecta entre más de 60 productos de nuestro catálogo. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos más de 60 wearables premium: relojes, anillos de salud, auriculares, gafas inteligentes, altavoces y máscaras LED. Puedes preguntarme sobre deporte, sueño, salud, batería, precio o cualquier marca. ¿Qué te interesa más? <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+  }
+
+  function sendMessage(text) {
+    var clean = text.trim();
+    if (!clean) return;
+
+    if (!sugsDismissed) {
+      sugsDismissed = true;
+      if (sugWrap) {
+        sugWrap.style.transition = 'opacity .28s';
+        sugWrap.style.opacity = '0';
+        setTimeout(function() { sugWrap.style.display = 'none'; }, 290);
+      }
+    }
+
+    appendMsg(escHtml(clean), 'user');
+    showTyping();
+
+    var captured = clean;
+    setTimeout(function() {
+      removeTyping();
+      appendMsg(getResponse(captured), 'bot');
+    }, 1050);
+  }
+
+  function openAI() {
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (!opened) {
+      opened = true;
+      setTimeout(function() {
+        appendMsg('¡Hola! Soy el asistente de tecnología de <strong>ZoneTechOnline</strong>. Cuéntame qué buscas y te recomendaré la mejor opción de nuestro catálogo. 🎯', 'bot');
+      }, 200);
+    }
+    setTimeout(function() { if (input) input.focus(); }, 360);
+  }
+
+  function closeAI() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openAI);
+  if (closeBtn) closeBtn.addEventListener('click', closeAI);
+  backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closeAI(); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && backdrop.classList.contains('open')) closeAI();
+  });
+
+  if (sugWrap) {
+    sugWrap.querySelectorAll('.ai-sug-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var q = btn.dataset.q || btn.textContent.trim();
+        sendMessage(q);
+        if (input) input.value = '';
+      });
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var q = input ? input.value.trim() : '';
+      if (!q) return;
+      if (input) input.value = '';
+      sendMessage(q);
+      if (sendBtn) { sendBtn.disabled = true; setTimeout(function() { sendBtn.disabled = false; }, 1200); }
+    });
+  }
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -1792,6 +1962,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initClearComparator();
   initReviews();
+  initAIAssistant();
 
   // Cart toggle
   var cartToggle = document.getElementById('cart-toggle');
