@@ -740,7 +740,10 @@
       <form class="cr-form" id="cr-form" novalidate>
         <div class="cr-row">
           <input type="text" id="cr-name" class="cr-input" placeholder="Tu nombre (ej: Carlos M.)" maxlength="60">
-          <input type="text" id="cr-product" class="cr-input" placeholder="Producto comprado (opcional)" maxlength="80">
+          <select id="cr-product" class="cr-input cr-select">
+            <option value="">¿Qué producto compraste? (opcional)</option>
+          </select>
+          <input type="hidden" id="cr-product-brand" value="">
         </div>
         <div class="cr-stars-row">
           <span class="cr-stars-lbl">Tu valoración:</span>
@@ -786,7 +789,19 @@
         <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <p>Sé el primero en dejar una reseña.</p>
         <span class="cr-empty-sub">Las opiniones de compradores reales aparecerán aquí.</span>
+        <a href="catalogo.html" class="btn-ghost btn-sm cr-empty-btn">Explorar productos</a>
       </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="cr-section-cta">
+      <p class="cr-cta-text">¿Listo para tu próximo wearable?</p>
+      <a href="catalogo.html" class="btn-primary btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Ver todos los productos
+      </a>
+      <a href="catalogo.html?filter=watches" class="btn-ghost btn-sm">Solo relojes</a>
+      <a href="catalogo.html?filter=rings" class="btn-ghost btn-sm">Solo anillos</a>
     </div>
   </div>
 </section>
