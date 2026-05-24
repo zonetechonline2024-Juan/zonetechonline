@@ -1565,6 +1565,155 @@ function initAuthModal() {
   });
 }
 
+// ─── REVIEWS ──────────────────────────────────────────────────────────────────
+
+function initReviews() {
+  var grid = document.getElementById('cr-grid');
+  if (!grid) return;
+
+  var emptyEl   = document.getElementById('cr-empty');
+  var totalEl   = document.getElementById('cr-total');
+  var avgEl     = document.getElementById('cr-avg');
+  var headerEl  = document.getElementById('cr-list-header');
+  var ratingIn  = document.getElementById('cr-rating');
+  var hintEl    = document.getElementById('cr-stars-hint');
+  var charEl    = document.getElementById('cr-chars');
+  var textarea  = document.getElementById('cr-text');
+  var successEl = document.getElementById('cr-success');
+  var errorEl   = document.getElementById('cr-error');
+  var submitBtn = document.getElementById('cr-submit');
+  var selectedR = 0;
+  var hints = ['','Muy mala','Mala','Regular','Buena','¡Excelente!'];
+
+  function starsStr(n) {
+    var s = '';
+    for (var i = 1; i <= 5; i++) s += i <= n ? '★' : '☆';
+    return s;
+  }
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function makeCard(r, delay) {
+    var c = document.createElement('div');
+    c.className = 'cr-card';
+    c.style.animationDelay = delay + 's';
+    c.innerHTML =
+      '<div class="cr-card-top">' +
+        '<span class="cr-card-stars">' + starsStr(r.rating) + '</span>' +
+        '<span class="cr-card-date">' + esc(r.date || '') + '</span>' +
+      '</div>' +
+      '<p class="cr-card-text">&ldquo;' + esc(r.text) + '&rdquo;</p>' +
+      '<div class="cr-card-footer">' +
+        '<span class="cr-card-name">' + esc(r.name) + '</span>' +
+        (r.product ? '<span class="cr-card-product">' + esc(r.product) + '</span>' : '') +
+      '</div>';
+    return c;
+  }
+  function renderList(reviews) {
+    grid.querySelectorAll('.cr-card').forEach(function(c) { c.remove(); });
+    if (!reviews || reviews.length === 0) {
+      if (emptyEl) emptyEl.style.display = 'flex';
+      if (headerEl) headerEl.style.display = 'none';
+      return;
+    }
+    if (emptyEl) emptyEl.style.display = 'none';
+    if (headerEl) headerEl.style.display = 'flex';
+    if (totalEl) totalEl.textContent = reviews.length + (reviews.length === 1 ? ' reseña' : ' reseñas');
+    if (avgEl) {
+      var sum = reviews.reduce(function(a, r) { return a + r.rating; }, 0);
+      var av = (sum / reviews.length).toFixed(1);
+      avgEl.innerHTML = '<span class="cr-avg-num">' + av + '</span><span class="cr-avg-stars">' + starsStr(Math.round(sum / reviews.length)) + '</span>';
+    }
+    reviews.forEach(function(r, i) { grid.appendChild(makeCard(r, i * 0.05)); });
+  }
+
+  fetch('/data/reviews.json?t=' + Date.now())
+    .then(function(r) { return r.ok ? r.json() : []; })
+    .then(function(data) { renderList(Array.isArray(data) ? data : []); })
+    .catch(function() {});
+
+  // Star picker
+  var picker = document.getElementById('cr-star-picker');
+  if (picker) {
+    var stars = picker.querySelectorAll('.cr-star');
+    stars.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function() {
+        var v = parseInt(btn.dataset.v);
+        stars.forEach(function(s) { s.classList.toggle('active', parseInt(s.dataset.v) <= v); });
+      });
+      btn.addEventListener('mouseleave', function() {
+        stars.forEach(function(s) { s.classList.toggle('active', parseInt(s.dataset.v) <= selectedR); });
+      });
+      btn.addEventListener('click', function() {
+        selectedR = parseInt(btn.dataset.v);
+        if (ratingIn) ratingIn.value = selectedR;
+        if (hintEl) hintEl.textContent = hints[selectedR];
+        stars.forEach(function(s) { s.classList.toggle('active', parseInt(s.dataset.v) <= selectedR); });
+      });
+    });
+  }
+
+  // Char counter
+  if (textarea && charEl) {
+    textarea.addEventListener('input', function() { charEl.textContent = textarea.value.length; });
+  }
+
+  // Form submit
+  var form = document.getElementById('cr-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name    = (document.getElementById('cr-name') || {}).value || '';
+    var product = (document.getElementById('cr-product') || {}).value || '';
+    var rating  = ratingIn ? ratingIn.value : '';
+    var text    = textarea ? textarea.value : '';
+
+    if (successEl) { successEl.classList.remove('visible'); successEl.style.display = 'none'; }
+    if (errorEl)   { errorEl.classList.remove('visible');   errorEl.style.display = 'none'; }
+
+    if (!name.trim())                        { showRevErr('Por favor escribe tu nombre.');                   return; }
+    if (!rating)                             { showRevErr('Selecciona una puntuación con las estrellas.');   return; }
+    if (!text.trim() || text.trim().length < 15) { showRevErr('La reseña debe tener al menos 15 caracteres.'); return; }
+
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '.6'; }
+
+    fetch('/api/review', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, product: product, rating: parseInt(rating), text: text })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        form.reset();
+        selectedR = 0;
+        if (ratingIn) ratingIn.value = '';
+        if (charEl) charEl.textContent = '0';
+        if (hintEl) hintEl.textContent = 'Toca para valorar';
+        if (picker) picker.querySelectorAll('.cr-star').forEach(function(s) { s.classList.remove('active'); });
+        if (successEl) { successEl.style.display = 'flex'; successEl.classList.add('visible'); }
+        // Mostrar la nueva reseña inmediatamente en el grid
+        if (emptyEl) emptyEl.style.display = 'none';
+        if (headerEl) headerEl.style.display = 'flex';
+        grid.insertBefore(makeCard(data.review, 0), grid.firstChild);
+        var prev = parseInt((totalEl ? totalEl.textContent : '0').split(' ')[0]) || 0;
+        var nc = prev + 1;
+        if (totalEl) totalEl.textContent = nc + (nc === 1 ? ' reseña' : ' reseñas');
+      } else {
+        showRevErr(data.error || 'Error al publicar. Inténtalo de nuevo.');
+      }
+    })
+    .catch(function() { showRevErr('Error de conexión. Comprueba tu internet.'); })
+    .finally(function() {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ''; }
+    });
+  });
+
+  function showRevErr(msg) {
+    if (errorEl) { errorEl.textContent = msg; errorEl.style.display = 'flex'; errorEl.classList.add('visible'); }
+  }
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -1601,6 +1750,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initNewsletter();
   initSmoothScroll();
   initClearComparator();
+  initReviews();
 
   // Cart toggle
   var cartToggle = document.getElementById('cart-toggle');
