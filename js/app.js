@@ -589,7 +589,7 @@ function addToCart(productId) {
   if (existing) {
     existing.qty++;
   } else {
-    cart.push({ id: productId, name: product.name, brand: product.brand, price: product.price, qty: 1, category: product.category });
+    cart.push({ id: productId, name: product.name, brand: product.brand, price: product.price, qty: 1, category: product.category, image: product.image || '' });
   }
   saveCart();
   updateCartBadge();
@@ -1579,29 +1579,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var checkoutBtn = document.getElementById('checkout-btn');
   if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', async function() {
+    checkoutBtn.addEventListener('click', function() {
       if (!cart || cart.length === 0) return;
-      checkoutBtn.disabled = true;
-      checkoutBtn.textContent = 'Procesando...';
-      try {
-        var res = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ items: cart })
-        });
-        var data = await res.json();
-        if (data.url) {
-          window.location.href = data.url;
-        } else {
-          alert('Error al iniciar el pago. Inténtalo de nuevo.');
-          checkoutBtn.disabled = false;
-          checkoutBtn.textContent = 'Proceder al Pago';
-        }
-      } catch (err) {
-        alert('Error de conexión. Inténtalo de nuevo.');
-        checkoutBtn.disabled = false;
-        checkoutBtn.textContent = 'Proceder al Pago';
-      }
+      closeCart();
+      window.location.href = 'checkout.html';
     });
   }
 
