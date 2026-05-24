@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Método no permitido' });
 
   try {
-    const { name, product, rating, text } = req.body || {};
+    const { name, product, productBrand, rating, text } = req.body || {};
 
     if (!name || !text || !rating) {
       return res.status(400).json({ error: 'Nombre, puntuación y reseña son obligatorios.' });
@@ -27,6 +27,7 @@ module.exports = async (req, res) => {
       id: Date.now().toString(),
       name: String(name).trim().slice(0, 60),
       product: String(product || '').trim().slice(0, 80) || null,
+      productBrand: String(productBrand || '').trim().slice(0, 60) || null,
       rating: ratingNum,
       text: String(text).trim().slice(0, 600),
       date: new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
