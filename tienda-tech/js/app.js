@@ -1571,19 +1571,48 @@ function initReviews() {
   var grid = document.getElementById('cr-grid');
   if (!grid) return;
 
-  var emptyEl   = document.getElementById('cr-empty');
-  var totalEl   = document.getElementById('cr-total');
-  var avgEl     = document.getElementById('cr-avg');
-  var headerEl  = document.getElementById('cr-list-header');
-  var ratingIn  = document.getElementById('cr-rating');
-  var hintEl    = document.getElementById('cr-stars-hint');
-  var charEl    = document.getElementById('cr-chars');
-  var textarea  = document.getElementById('cr-text');
-  var successEl = document.getElementById('cr-success');
-  var errorEl   = document.getElementById('cr-error');
-  var submitBtn = document.getElementById('cr-submit');
-  var selectedR = 0;
+  var emptyEl      = document.getElementById('cr-empty');
+  var totalEl      = document.getElementById('cr-total');
+  var avgEl        = document.getElementById('cr-avg');
+  var headerEl     = document.getElementById('cr-list-header');
+  var ratingIn     = document.getElementById('cr-rating');
+  var hintEl       = document.getElementById('cr-stars-hint');
+  var charEl       = document.getElementById('cr-chars');
+  var textarea     = document.getElementById('cr-text');
+  var successEl    = document.getElementById('cr-success');
+  var errorEl      = document.getElementById('cr-error');
+  var submitBtn    = document.getElementById('cr-submit');
+  var productSel   = document.getElementById('cr-product');
+  var productBrand = document.getElementById('cr-product-brand');
+  var selectedR    = 0;
   var hints = ['','Muy mala','Mala','Regular','Buena','¡Excelente!'];
+
+  // ── Poblar el select con todos los productos del catálogo agrupados por categoría ──
+  if (productSel && typeof PRODUCTS !== 'undefined') {
+    var catLabels = { relojes:'Relojes', anillos:'Anillos', auriculares:'Auriculares', gafas:'Gafas', altavoces:'Altavoces', mascaras:'Máscaras LED' };
+    var grouped = {};
+    PRODUCTS.forEach(function(p) {
+      if (!grouped[p.category]) grouped[p.category] = [];
+      grouped[p.category].push(p);
+    });
+    Object.keys(catLabels).forEach(function(cat) {
+      if (!grouped[cat] || grouped[cat].length === 0) return;
+      var og = document.createElement('optgroup');
+      og.label = catLabels[cat] || cat;
+      grouped[cat].forEach(function(p) {
+        var opt = document.createElement('option');
+        opt.value = p.name;
+        opt.dataset.brand = p.brand;
+        opt.textContent = p.name + ' — ' + p.brand;
+        og.appendChild(opt);
+      });
+      productSel.appendChild(og);
+    });
+    productSel.addEventListener('change', function() {
+      var sel = productSel.options[productSel.selectedIndex];
+      if (productBrand) productBrand.value = sel.dataset.brand || '';
+    });
+  }
 
   function starsStr(n) {
     var s = '';
@@ -1593,10 +1622,20 @@ function initReviews() {
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+
+  // ── Tarjeta de reseña — el producto es enlace si tiene marca guardada ──
   function makeCard(r, delay) {
     var c = document.createElement('div');
     c.className = 'cr-card';
     c.style.animationDelay = delay + 's';
+    var productHtml = '';
+    if (r.product) {
+      if (r.productBrand) {
+        productHtml = '<a href="catalogo.html?brand=' + encodeURIComponent(r.productBrand) + '" class="cr-card-product-link">' + esc(r.product) + ' →</a>';
+      } else {
+        productHtml = '<span class="cr-card-product">' + esc(r.product) + '</span>';
+      }
+    }
     c.innerHTML =
       '<div class="cr-card-top">' +
         '<span class="cr-card-stars">' + starsStr(r.rating) + '</span>' +
@@ -1605,10 +1644,11 @@ function initReviews() {
       '<p class="cr-card-text">&ldquo;' + esc(r.text) + '&rdquo;</p>' +
       '<div class="cr-card-footer">' +
         '<span class="cr-card-name">' + esc(r.name) + '</span>' +
-        (r.product ? '<span class="cr-card-product">' + esc(r.product) + '</span>' : '') +
+        productHtml +
       '</div>';
     return c;
   }
+
   function renderList(reviews) {
     grid.querySelectorAll('.cr-card').forEach(function(c) { c.remove(); });
     if (!reviews || reviews.length === 0) {
@@ -1632,7 +1672,7 @@ function initReviews() {
     .then(function(data) { renderList(Array.isArray(data) ? data : []); })
     .catch(function() {});
 
-  // Star picker
+  // ── Star picker ──
   var picker = document.getElementById('cr-star-picker');
   if (picker) {
     var stars = picker.querySelectorAll('.cr-star');
@@ -1653,34 +1693,35 @@ function initReviews() {
     });
   }
 
-  // Char counter
+  // ── Contador de caracteres ──
   if (textarea && charEl) {
     textarea.addEventListener('input', function() { charEl.textContent = textarea.value.length; });
   }
 
-  // Form submit
+  // ── Envío del formulario ──
   var form = document.getElementById('cr-form');
   if (!form) return;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     var name    = (document.getElementById('cr-name') || {}).value || '';
-    var product = (document.getElementById('cr-product') || {}).value || '';
+    var product = productSel ? productSel.value : '';
+    var brand   = productBrand ? productBrand.value : '';
     var rating  = ratingIn ? ratingIn.value : '';
     var text    = textarea ? textarea.value : '';
 
     if (successEl) { successEl.classList.remove('visible'); successEl.style.display = 'none'; }
     if (errorEl)   { errorEl.classList.remove('visible');   errorEl.style.display = 'none'; }
 
-    if (!name.trim())                        { showRevErr('Por favor escribe tu nombre.');                   return; }
-    if (!rating)                             { showRevErr('Selecciona una puntuación con las estrellas.');   return; }
-    if (!text.trim() || text.trim().length < 15) { showRevErr('La reseña debe tener al menos 15 caracteres.'); return; }
+    if (!name.trim())                            { showRevErr('Por favor escribe tu nombre.');                   return; }
+    if (!rating)                                 { showRevErr('Selecciona una puntuación con las estrellas.');   return; }
+    if (!text.trim() || text.trim().length < 15) { showRevErr('La reseña debe tener al menos 15 caracteres.');  return; }
 
     if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '.6'; }
 
     fetch('/api/review', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, product: product, rating: parseInt(rating), text: text })
+      body: JSON.stringify({ name: name, product: product, productBrand: brand, rating: parseInt(rating), text: text })
     })
     .then(function(r) { return r.json(); })
     .then(function(data) {
@@ -1690,9 +1731,9 @@ function initReviews() {
         if (ratingIn) ratingIn.value = '';
         if (charEl) charEl.textContent = '0';
         if (hintEl) hintEl.textContent = 'Toca para valorar';
+        if (productBrand) productBrand.value = '';
         if (picker) picker.querySelectorAll('.cr-star').forEach(function(s) { s.classList.remove('active'); });
         if (successEl) { successEl.style.display = 'flex'; successEl.classList.add('visible'); }
-        // Mostrar la nueva reseña inmediatamente en el grid
         if (emptyEl) emptyEl.style.display = 'none';
         if (headerEl) headerEl.style.display = 'flex';
         grid.insertBefore(makeCard(data.review, 0), grid.firstChild);
