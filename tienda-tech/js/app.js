@@ -547,6 +547,146 @@ PRODUCTS.push(
 
 );
 
+// ─── COROS PRODUCTS (fuente: coros.com/es — datos de referencia mayo 2026) ───
+PRODUCTS.push(
+
+  // ── 21 · COROS Pace 3 ──────────────────────────────────────────────────────
+  {
+    id: 21,
+    name: 'COROS Pace 3',
+    brand: 'Coros',
+    category: 'relojes',
+    price: 229.99,
+    oldPrice: 259.99,
+    badge: 'GPS Sport',
+    image: 'https://content.coros.com/product/PACE3/WPACE3-NVY.png',
+    images: [
+      'https://content.coros.com/product/PACE3/WPACE3-NVY.png',
+      'https://content.coros.com/product/PACE3/WPACE3-WHT.png'
+    ],
+    description: 'Smartwatch GPS deportivo ultraligero (30g). Pantalla MIP 1,3" de bajo consumo. GPS dual frecuencia L1+L5. Batería hasta 17 días (modo normal) o 38h GPS continuo. Bisel de titanio. 5 ATM.',
+    specs: {
+      'Pantalla': 'MIP 1,3"',
+      'GPS': 'Dual frecuencia L1+L5',
+      'Peso': '30g',
+      'Batería': 'Hasta 17 días / 38h GPS',
+      'Material': 'Titanio + PC',
+      'Resistencia': '5 ATM',
+      'SKU': 'WPACE3-NVY',
+      'Fuente': 'coros.com/es'
+    }
+  },
+
+  // ── 22 · COROS Apex 2 ──────────────────────────────────────────────────────
+  {
+    id: 22,
+    name: 'COROS Apex 2',
+    brand: 'Coros',
+    category: 'relojes',
+    price: 299.99,
+    oldPrice: 349.99,
+    badge: 'Multideporte',
+    image: 'https://content.coros.com/product/APEX2/WAPX2-BLK.png',
+    images: [
+      'https://content.coros.com/product/APEX2/WAPX2-BLK.png',
+      'https://content.coros.com/product/APEX2/WAPX2-WHT.png'
+    ],
+    description: 'Smartwatch multideporte con bisel de titanio. Pantalla MIP 1,2". GPS multibanda dual frecuencia. Hasta 30 días de batería (modo normal) o 45h GPS continuo. 39g. Resistencia 5 ATM.',
+    specs: {
+      'Pantalla': 'MIP 1,2"',
+      'GPS': 'Dual frecuencia multibanda',
+      'Peso': '39g',
+      'Batería': 'Hasta 30 días / 45h GPS',
+      'Bisel': 'Titanio',
+      'Resistencia': '5 ATM',
+      'SKU': 'WAPX2-BLK',
+      'Fuente': 'coros.com/es'
+    }
+  },
+
+  // ── 23 · COROS Apex 2 Pro ──────────────────────────────────────────────────
+  {
+    id: 23,
+    name: 'COROS Apex 2 Pro',
+    brand: 'Coros',
+    category: 'relojes',
+    price: 399.99,
+    oldPrice: 449.99,
+    badge: 'Cristal Zafiro',
+    image: 'https://content.coros.com/product/APEX2PRO/WAPX2P-BLK.png',
+    images: [
+      'https://content.coros.com/product/APEX2PRO/WAPX2P-BLK.png',
+      'https://content.coros.com/product/APEX2PRO/WAPX2P-WHT.png'
+    ],
+    description: 'Smartwatch premium con cristal de zafiro y titanio. Pantalla MIP 1,3". GPS dual frecuencia con 3D navigation y mapas topográficos descargables. Batería 40 días (normal) o 75h GPS. 52g.',
+    specs: {
+      'Pantalla': 'MIP 1,3"',
+      'Cristal': 'Zafiro',
+      'GPS': 'Dual frecuencia + 3D Nav',
+      'Mapas': 'Topográficos descargables',
+      'Peso': '52g',
+      'Batería': 'Hasta 40 días / 75h GPS',
+      'SKU': 'WAPX2P-BLK',
+      'Fuente': 'coros.com/es'
+    }
+  },
+
+  // ── 24 · COROS Vertix 2S ───────────────────────────────────────────────────
+  {
+    id: 24,
+    name: 'COROS Vertix 2S',
+    brand: 'Coros',
+    category: 'relojes',
+    price: 549.99,
+    oldPrice: 599.99,
+    badge: 'Titanio + DLC',
+    image: 'https://content.coros.com/product/VERTIX2S/WVTX2S-LUW.png',
+    images: [
+      'https://content.coros.com/product/VERTIX2S/WVTX2S-LUW.png',
+      'https://content.coros.com/product/VERTIX2S/WVTX2S-IRG.png'
+    ],
+    description: 'Smartwatch de aventura extrema con carcasa de titanio y revestimiento DLC. Pantalla MIP 1,4". GPS dual frecuencia. Hasta 60 días de batería o 140h GPS continuo. Mapas topográficos offline. 79g.',
+    specs: {
+      'Pantalla': 'MIP 1,4"',
+      'Material': 'Titanio + DLC',
+      'GPS': 'Dual frecuencia',
+      'Mapas': 'Topográficos + rutas offline',
+      'Peso': '79g',
+      'Batería': 'Hasta 60 días / 140h GPS',
+      'SKU': 'WVTX2S-LUW',
+      'Fuente': 'coros.com/es'
+    }
+  },
+
+  // ── 25 · COROS Vertix 3 ────────────────────────────────────────────────────
+  {
+    id: 25,
+    name: 'COROS Vertix 3',
+    brand: 'Coros',
+    category: 'relojes',
+    price: 699.99,
+    oldPrice: 749.99,
+    badge: 'Flagship 2025',
+    image: 'https://content.coros.com/product/VERTIX3/WVTX3-NVY.png',
+    images: [
+      'https://content.coros.com/product/VERTIX3/WVTX3-NVY.png',
+      'https://content.coros.com/product/VERTIX3/WVTX3-BLK.png'
+    ],
+    description: 'El smartwatch GPS más avanzado de COROS. Pantalla AMOLED 1,5" con modo siempre encendida. Titanio aeroespacial. GPS triple banda L1/L2/L5. Batería 60+ días. Mapas topográficos Premium + navegación turn-by-turn. 89g.',
+    specs: {
+      'Pantalla': 'AMOLED 1,5" AOD',
+      'Material': 'Titanio aeroespacial',
+      'GPS': 'Triple banda L1/L2/L5',
+      'Mapas': 'Topográficos Premium + turn-by-turn',
+      'Peso': '89g',
+      'Batería': 'Hasta 60+ días',
+      'SKU': 'WVTX3-NVY',
+      'Fuente': 'coros.com/es'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -2074,11 +2214,15 @@ function initAIAssistant() {
       return 'Nuestros relojes premium: <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con titanio y 60h de batería, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio y presión arterial, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y cristal de zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
-    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 20 relojes inteligentes de Samsung, Huawei, Amazfit y Xiaomi, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    if (/coros|pace|apex|vertix/.test(ql)) {
+      return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 20 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5) y Xiaomi (5). Precios desde €39,95 hasta €549,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 25 relojes inteligentes de Samsung, Huawei, Amazfit, Xiaomi y Coros, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos 25 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5) y Coros (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2110,7 +2254,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>20 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong> y <strong>Xiaomi</strong>, desde €39,95 hasta €549,99. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>25 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong> y <strong>Coros</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
