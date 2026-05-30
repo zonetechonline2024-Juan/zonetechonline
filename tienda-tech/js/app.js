@@ -547,6 +547,146 @@ PRODUCTS.push(
 
 );
 
+// ─── GARMIN PRODUCTS (fuente: garmin.com/es-ES — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 26 · Garmin Forerunner 55 ──────────────────────────────────────────────
+  {
+    id: 26,
+    name: 'Garmin Forerunner 55',
+    brand: 'Garmin',
+    category: 'relojes',
+    price: 149.99,
+    oldPrice: 209.99,
+    badge: 'Oferta',
+    image: 'https://res.garmin.com/en/products/010-02562-00/f/010-02562-00-xlarge-01-01.jpg',
+    images: [
+      'https://res.garmin.com/en/products/010-02562-00/f/010-02562-00-xlarge-01-01.jpg',
+      'https://res.garmin.com/en/products/010-02562-00/f/010-02562-00-xlarge-02-01.jpg'
+    ],
+    description: 'Smartwatch GPS de running para principiantes y aficionados. GPS integrado con rutas de carrera descargables. Frecuencia cardíaca en muñeca 24/7. Hasta 20h GPS / 2 semanas en modo reloj. Coach de carrera incluido.',
+    specs: {
+      'GPS': 'Integrado',
+      'Batería': 'Hasta 20h GPS / 2 semanas reloj',
+      'Frecuencia cardíaca': '24/7 en muñeca',
+      'Coach de carrera': 'Sí',
+      'Resistencia': '5 ATM',
+      'Peso': '35g',
+      'SKU': '010-02562-00',
+      'Fuente': 'garmin.com/es-ES'
+    }
+  },
+
+  // ── 27 · Garmin Instinct 2S ────────────────────────────────────────────────
+  {
+    id: 27,
+    name: 'Garmin Instinct 2S',
+    brand: 'Garmin',
+    category: 'relojes',
+    price: 199.99,
+    oldPrice: 279.99,
+    badge: 'Rugged GPS',
+    image: 'https://res.garmin.com/en/products/010-02563-10/f/010-02563-10-xlarge-01-01.jpg',
+    images: [
+      'https://res.garmin.com/en/products/010-02563-10/f/010-02563-10-xlarge-01-01.jpg',
+      'https://res.garmin.com/en/products/010-02563-10/f/010-02563-10-xlarge-02-01.jpg'
+    ],
+    description: 'Smartwatch GPS resistente con carcasa de fibra de vidrio reforzada. Norma militar MIL-STD-810. GPS multibanda. Frecuencia cardíaca, SpO₂ y monitorización del estrés 24/7. Hasta 28h GPS / 21 días reloj.',
+    specs: {
+      'GPS': 'Multibanda',
+      'Resistencia': 'MIL-STD-810 + 10 ATM',
+      'Batería': 'Hasta 28h GPS / 21 días reloj',
+      'Frecuencia cardíaca': '24/7',
+      'SpO₂': 'Sí',
+      'Peso': '40g',
+      'SKU': '010-02563-10',
+      'Fuente': 'garmin.com/es-ES'
+    }
+  },
+
+  // ── 28 · Garmin Vivoactive 5 ───────────────────────────────────────────────
+  {
+    id: 28,
+    name: 'Garmin Vivoactive 5',
+    brand: 'Garmin',
+    category: 'relojes',
+    price: 229.99,
+    oldPrice: 279.99,
+    badge: 'AMOLED',
+    image: 'https://res.garmin.com/en/products/010-02862-10/f/010-02862-10-xlarge-01-01.jpg',
+    images: [
+      'https://res.garmin.com/en/products/010-02862-10/f/010-02862-10-xlarge-01-01.jpg',
+      'https://res.garmin.com/en/products/010-02862-10/f/010-02862-10-xlarge-02-01.jpg'
+    ],
+    description: 'Smartwatch fitness con pantalla AMOLED vibrante y siempre encendida. GPS integrado. Más de 25 modos deportivos. Monitorización de salud completa: frecuencia cardíaca, SpO₂, estrés y sueño. Pagos Garmin Pay (NFC). Hasta 11 días batería.',
+    specs: {
+      'Pantalla': 'AMOLED siempre encendida',
+      'GPS': 'Integrado',
+      'Modos deportivos': '25+',
+      'NFC (Garmin Pay)': 'Sí',
+      'Batería': 'Hasta 11 días / 18h GPS',
+      'SpO₂ + Estrés': 'Sí',
+      'SKU': '010-02862-10',
+      'Fuente': 'garmin.com/es-ES'
+    }
+  },
+
+  // ── 29 · Garmin Venu 3S ────────────────────────────────────────────────────
+  {
+    id: 29,
+    name: 'Garmin Venu 3S',
+    brand: 'Garmin',
+    category: 'relojes',
+    price: 299.99,
+    oldPrice: 369.99,
+    badge: 'Salud Avanzada',
+    image: 'https://res.garmin.com/en/products/010-02785-00/f/010-02785-00-xlarge-01-01.jpg',
+    images: [
+      'https://res.garmin.com/en/products/010-02785-00/f/010-02785-00-xlarge-01-01.jpg',
+      'https://res.garmin.com/en/products/010-02785-00/f/010-02785-00-xlarge-02-01.jpg'
+    ],
+    description: 'Smartwatch de salud y bienestar con pantalla AMOLED 1,2" (41mm). Seguimiento del sueño avanzado con fases REM. Frecuencia cardíaca, SpO₂ y variabilidad del ritmo cardíaco 24/7. Perfiles de edad corporal. Garmin Pay NFC. Hasta 10 días batería.',
+    specs: {
+      'Pantalla': 'AMOLED 1,2" (41mm)',
+      'GPS': 'Integrado',
+      'Sueño avanzado': 'Fases REM',
+      'NFC (Garmin Pay)': 'Sí',
+      'Batería': 'Hasta 10 días / 20h GPS',
+      'VFC + SpO₂': '24/7',
+      'SKU': '010-02785-00',
+      'Fuente': 'garmin.com/es-ES'
+    }
+  },
+
+  // ── 30 · Garmin Forerunner 265 ─────────────────────────────────────────────
+  {
+    id: 30,
+    name: 'Garmin Forerunner 265',
+    brand: 'Garmin',
+    category: 'relojes',
+    price: 349.99,
+    oldPrice: 449.99,
+    badge: 'Running Pro',
+    image: 'https://res.garmin.com/en/products/010-02810-00/f/010-02810-00-xlarge-01-01.jpg',
+    images: [
+      'https://res.garmin.com/en/products/010-02810-00/f/010-02810-00-xlarge-01-01.jpg',
+      'https://res.garmin.com/en/products/010-02810-00/f/010-02810-00-xlarge-02-01.jpg'
+    ],
+    description: 'Smartwatch GPS de running avanzado con pantalla AMOLED siempre encendida. Morning Report diario. Métricas de carrera avanzadas: potencia en carrera, cadencia y dinámica de carrera. Frecuencia cardíaca, SpO₂ y sueño. Garmin Pay NFC. Hasta 13 días batería.',
+    specs: {
+      'Pantalla': 'AMOLED 1,3" AOD',
+      'GPS': 'Multibanda',
+      'Métricas running': 'Potencia + dinámica + cadencia',
+      'NFC (Garmin Pay)': 'Sí',
+      'Batería': 'Hasta 13 días / 20h GPS',
+      'Morning Report': 'Sí',
+      'SKU': '010-02810-00',
+      'Fuente': 'garmin.com/es-ES'
+    }
+  }
+
+);
+
 // ─── COROS PRODUCTS (fuente: coros.com/es — datos de referencia mayo 2026) ───
 PRODUCTS.push(
 
@@ -2214,15 +2354,19 @@ function initAIAssistant() {
       return 'Nuestros relojes más premium: <strong>COROS Vertix 3</strong> (€699,99) AMOLED + GPS triple banda, <strong>COROS Vertix 2S</strong> (€549,99) titanio+DLC y 140h GPS, <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con Titanio Grado 4, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
+    if (/garmin|forerunner|vivoactive|venu|instinct|f[eé]nix|fenix/.test(ql)) {
+      return 'Toda la gama Garmin (5 relojes): <strong>Forerunner 55</strong> (€149,99) GPS running · <strong>Instinct 2S</strong> (€199,99) MIL-STD-810 · <strong>Vivoactive 5</strong> (€229,99) AMOLED+NFC · <strong>Venu 3S</strong> (€299,99) salud avanzada · <strong>Forerunner 265</strong> (€349,99) running pro AMOLED. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Garmin">Ver Garmin →</a>';
+    }
+
     if (/coros|pace|apex|vertix/.test(ql)) {
       return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 25 relojes inteligentes de Samsung, Huawei, Amazfit, Xiaomi y Coros, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 30 relojes inteligentes de Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 25 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5) y Coros (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos 30 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5), Coros (5) y Garmin (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2254,7 +2398,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>25 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong> y <strong>Coros</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>30 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong>, <strong>Coros</strong> y <strong>Garmin</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
