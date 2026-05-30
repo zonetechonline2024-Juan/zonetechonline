@@ -1191,7 +1191,7 @@ function initConfigurator() {
       var priceEl = document.getElementById('config-price');
       var saveEl = document.getElementById('config-save');
       if (priceEl) priceEl.textContent = '€' + price;
-      if (saveEl) saveEl.textContent = 'Ahorras €' + (449 - price);
+      if (saveEl) saveEl.textContent = 'Ahorras €' + (159 - price);
       swapWatchImg(btn.dataset.img);
       updateConfigBadge();
     });
@@ -1205,7 +1205,7 @@ function initConfigurator() {
       addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido al Carrito!';
       addBtn.disabled = true;
       setTimeout(function() { addBtn.innerHTML = orig; addBtn.disabled = false; }, 2200);
-      addToCart(1);
+      addToCart(15);
     });
   }
 }
