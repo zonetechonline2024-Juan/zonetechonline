@@ -272,6 +272,136 @@ PRODUCTS.push(
 
 );
 
+// ─── HUAWEI PRODUCTS (fuente: consumer.huawei.com/es — scraping 30/05/2026) ──
+PRODUCTS.push(
+
+  // ── 11 · HUAWEI Band 9 ─────────────────────────────────────────────────────
+  {
+    id: 11,
+    name: 'HUAWEI Band 9',
+    brand: 'Huawei',
+    category: 'relojes',
+    price: 49.99,
+    oldPrice: 69.99,
+    badge: 'Oferta',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-band9.jpeg',
+    images: [
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-band9.jpeg',
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/band9/img/kv/video/band9-kv-mob.jpg'
+    ],
+    description: 'Diseño delgado y ligero ideal para todo el día. Monitorización del sueño basada en ciencia, 100 modos de entrenamiento, SpO₂ y frecuencia cardíaca continua. Hasta 14 días de batería.',
+    specs: {
+      'Pantalla': 'AMOLED 1,47"',
+      'Modos deportivos': '100+',
+      'Batería': 'Hasta 14 días',
+      'SpO₂': 'Sí',
+      'Resistencia': '5 ATM',
+      'Fuente': 'consumer.huawei.com'
+    }
+  },
+
+  // ── 12 · HUAWEI Band 10 ────────────────────────────────────────────────────
+  {
+    id: 12,
+    name: 'HUAWEI Band 10',
+    brand: 'Huawei',
+    category: 'relojes',
+    price: 59.99,
+    oldPrice: 79.99,
+    badge: 'Nuevo',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-band10.jpeg',
+    images: [
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-band10.jpeg',
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/band10/videos/huawei-band-10-kv-poster.jpg'
+    ],
+    description: 'Sensación de ligereza con gestión científica del sueño y 100 modos deportivos. Pantalla AMOLED más brillante, SpO₂ continuo y frecuencia cardíaca 24/7. Hasta 14 días de batería.',
+    specs: {
+      'Pantalla': 'AMOLED 1,62"',
+      'Modos deportivos': '100+',
+      'Batería': 'Hasta 14 días',
+      'SpO₂': 'Sí',
+      'Resistencia': '5 ATM',
+      'Fuente': 'consumer.huawei.com'
+    }
+  },
+
+  // ── 13 · HUAWEI Band 11 ────────────────────────────────────────────────────
+  {
+    id: 13,
+    name: 'HUAWEI Band 11',
+    brand: 'Huawei',
+    category: 'relojes',
+    price: 79.99,
+    oldPrice: 99.99,
+    badge: 'Nuevo 2026',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/0226-2026-huawei-innovative-product-launch/product-shelf-and-pop-up/view-all/all-band11.jpg',
+    images: [
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/0226-2026-huawei-innovative-product-launch/product-shelf-and-pop-up/view-all/all-band11.jpg',
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/band11/images/hero/huawei-band-11-kv-xs.jpg'
+    ],
+    description: 'Diseño delgado y cómodo. Pantalla AMOLED de 1,62" con 1.500 nits de brillo. Seguimiento científico del sueño y gestión del bienestar emocional. NFC incluido.',
+    specs: {
+      'Pantalla': 'AMOLED 1,62" 1500 nits',
+      'NFC': 'Sí',
+      'Modos deportivos': '100+',
+      'Batería': 'Hasta 14 días',
+      'Resistencia': '5 ATM',
+      'Fuente': 'consumer.huawei.com'
+    }
+  },
+
+  // ── 14 · HUAWEI WATCH FIT 3 ───────────────────────────────────────────────
+  {
+    id: 14,
+    name: 'HUAWEI WATCH FIT 3',
+    brand: 'Huawei',
+    category: 'relojes',
+    price: 99.99,
+    oldPrice: 129.99,
+    badge: 'Más vendido',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-watch-fit3.jpeg',
+    images: [
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-watch-fit3.jpeg',
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/admin-image/wearables/watch-fit3/grey.png'
+    ],
+    description: 'Smartwatch premium ultra delgado con pantalla AMOLED cuadrada de 1,82". GPS integrado, 97 modos deportivos, frecuencia cardíaca y SpO₂ 24/7. Hasta 10 días de batería.',
+    specs: {
+      'Pantalla': 'AMOLED 1,82" cuadrada',
+      'GPS': 'Integrado',
+      'Modos deportivos': '97',
+      'Batería': 'Hasta 10 días',
+      'Espesor': '6,99 mm',
+      'Fuente': 'consumer.huawei.com'
+    }
+  },
+
+  // ── 15 · HUAWEI WATCH FIT 4 ───────────────────────────────────────────────
+  {
+    id: 15,
+    name: 'HUAWEI WATCH FIT 4',
+    brand: 'Huawei',
+    category: 'relojes',
+    price: 129.99,
+    oldPrice: 159.99,
+    badge: 'Premium',
+    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/0515-2025-huawei-innovative-product-launch/product-shelf-and-pop-up/view-all/all-watch-fit4.jpg',
+    images: [
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/0515-2025-huawei-innovative-product-launch/product-shelf-and-pop-up/view-all/all-watch-fit4.jpg',
+      'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-fit4/images/kv/huawei-watch-fit4-kv-xs-thumb.jpg'
+    ],
+    description: 'Diseño esbelto ultradelgado de 9,5 mm y 27 g con pantalla cuadrada AMOLED. GPS de doble banda, monitorización de salud avanzada, 100+ modos deportivos y Huawei Health App.',
+    specs: {
+      'Pantalla': 'AMOLED cuadrada',
+      'GPS': 'Doble banda',
+      'Espesor': '9,5 mm',
+      'Peso': '27 g',
+      'Modos deportivos': '100+',
+      'Fuente': 'consumer.huawei.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -1776,7 +1906,11 @@ function initAIAssistant() {
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
-      return 'Toda la gama Amazfit disponible: <strong>Helio Core</strong> (€69,90) · <strong>Bip 6</strong> (€79,90) · <strong>Active 2</strong> (€99,90) · <strong>Bip Max</strong> (€99,90) · <strong>Active 3 Premium</strong> (€169,90). Todos con GPS integrado y monitorización de salud 24/7. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver todos →</a>';
+      return 'Toda la gama Amazfit disponible: <strong>Helio Core</strong> (€69,90) · <strong>Bip 6</strong> (€79,90) · <strong>Active 2</strong> (€99,90) · <strong>Bip Max</strong> (€99,90) · <strong>Active 3 Premium</strong> (€169,90). Todos con GPS integrado y monitorización de salud 24/7. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
+    }
+
+    if (/huawei|band 9|band 10|band 11|watch fit/.test(ql)) {
+      return 'Toda la gama Huawei disponible: <strong>Band 9</strong> (€49,99) · <strong>Band 10</strong> (€59,99) · <strong>Band 11</strong> (€79,99) · <strong>WATCH FIT 3</strong> (€99,99) · <strong>WATCH FIT 4</strong> (€129,99). Pulseras y smartwatches con hasta 14 días de batería y 100+ modos deportivos. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Huawei">Ver Huawei →</a>';
     }
 
     if (/xiaomi|redmi|mi band/.test(ql)) {
@@ -1784,18 +1918,18 @@ function initAIAssistant() {
     }
 
     if (/barato|econ[oó]mico|precio|asequible|oferta|descuento|bajo precio|menos de/.test(ql)) {
-      return 'Las opciones más económicas: <strong>Xiaomi Mi In Ear Basic</strong> (€7,95), <strong>Xiaomi Redmi Buds 6 Active</strong> (€24,95), <strong>Xiaomi Redmi Watch 5 Active</strong> (€49,95) y el <strong>Amazfit Helio Core</strong> (€69,90). ¡Tecnología de calidad sin gastar de más! <a class="ai-msg-link" href="catalogo.html">Ver todos →</a>';
+      return 'Las opciones más económicas: <strong>Xiaomi Mi In Ear Basic</strong> (€7,95), <strong>Redmi Buds 6 Active</strong> (€24,95), <strong>Redmi Watch 5 Active</strong> (€49,95), <strong>Huawei Band 9</strong> (€49,99) y <strong>Huawei Band 10</strong> (€59,99). ¡Tecnología de calidad sin gastar de más! <a class="ai-msg-link" href="catalogo.html">Ver todos →</a>';
     }
 
     if (/premium|caro|mejor|top|m[aá]s completo|el mejor/.test(ql)) {
-      return 'Nuestro producto estrella premium es el <strong>Amazfit Active 3 Premium</strong> (€169,90): carcasa de acero inoxidable, cristal de zafiro, ECG, GPS multibanda y Zepp Pay NFC. Para quien busca lo mejor sin compromiso. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver premium →</a>';
+      return 'Nuestro producto estrella premium es el <strong>Amazfit Active 3 Premium</strong> (€169,90): acero inoxidable, cristal de zafiro, ECG y GPS multibanda. En Huawei, el <strong>WATCH FIT 4</strong> (€129,99) con GPS de doble banda y diseño ultradelgado de 9,5 mm. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 10 productos de Xiaomi y Amazfit, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 15 productos de Huawei, Amazfit y Xiaomi, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 10 wearables seleccionados: 7 relojes inteligentes (Amazfit y Xiaomi) y 3 auriculares Xiaomi. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor para ti. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos 15 wearables seleccionados: 12 relojes inteligentes (Huawei, Amazfit y Xiaomi) y 3 auriculares Xiaomi. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor para ti. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -1827,7 +1961,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>10 wearables</strong> de <strong>Amazfit</strong> y <strong>Xiaomi</strong>: relojes inteligentes desde €49,95 y auriculares desde €7,95. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>15 wearables</strong> de <strong>Huawei</strong>, <strong>Amazfit</strong> y <strong>Xiaomi</strong>: relojes desde €49,95 y auriculares desde €7,95. ¿Qué estás buscando?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
