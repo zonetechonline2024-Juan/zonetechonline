@@ -10,8 +10,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 <style>
-/* ── TESTIMONIAL CARDS ───────────────────────────────── */
-.testi-block{padding:72px 0 80px;}
+/* ═══════════════════════════════════════════════════════
+   COLOR BLOCKING — ZoneTechOnline Premium Layout
+   ═══════════════════════════════════════════════════════ */
+
+/* 2 · Features Strip → Grafito #1C1C1E */
+.features-strip{background:#1C1C1E!important;}
+
+/* 3 · Catálogo → Platino #F5F5F7 + texto oscuro */
+.products-section{background:#F5F5F7!important;}
+.products-section .section-title{color:#1d1d1f!important;}
+.products-section .section-subtitle{color:#515154!important;}
+.products-section .section-tag{color:#4f46e5;background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.2);}
+.products-section .gradient-text{background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.products-section .filter-btn{color:#3a3a3c!important;border-color:rgba(0,0,0,.14)!important;background:rgba(0,0,0,.05)!important;}
+.products-section .filter-btn:hover,.products-section .filter-btn.active{background:#6366f1!important;color:#fff!important;border-color:#6366f1!important;}
+.products-section .product-card{background:#fff!important;border-color:rgba(0,0,0,.07)!important;box-shadow:0 2px 18px rgba(0,0,0,.07)!important;}
+.products-section .product-name{color:#1d1d1f!important;}
+.products-section .product-desc{color:#6e6e73!important;}
+.products-section .product-brand{color:#6366f1!important;}
+.products-section .product-price{color:#1d1d1f!important;}
+.products-section .product-old-price{color:#86868b!important;}
+.products-section .product-discount{background:rgba(99,102,241,.12)!important;color:#4f46e5!important;}
+.products-section .btn-compare,.products-section .btn-qv{background:rgba(0,0,0,.06)!important;color:#3a3a3c!important;border-color:rgba(0,0,0,.1)!important;}
+
+/* 4 · IA → Negro profundo #0B0B0C */
+.ai-section{background:#0B0B0C!important;}
+
+/* 5 · Configurador → Grafito #1C1C1E */
+.configurator-section{background:#1C1C1E!important;}
+
+/* 6 · Manifiesto → Platino #F5F5F7 + texto oscuro */
+.manifesto-section{background:#F5F5F7!important;}
+.manifesto-section .section-title{color:#1d1d1f!important;}
+.manifesto-section .section-subtitle{color:#515154!important;}
+.manifesto-section .section-tag{color:#4f46e5;background:rgba(99,102,241,.12);}
+.manifesto-section .gradient-text{background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.manifesto-section .mf-headline{color:#1d1d1f!important;}
+.manifesto-section .mf-body{color:#3a3a3c!important;}
+.manifesto-section .mf-cat-tag{color:#515154!important;border-color:rgba(0,0,0,.12)!important;background:rgba(0,0,0,.05)!important;}
+.manifesto-section .mf-device-chip{background:rgba(0,0,0,.07)!important;color:#1d1d1f!important;border-color:rgba(0,0,0,.12)!important;}
+.manifesto-section .mf-device-chip:hover{background:#6366f1!important;color:#fff!important;border-color:#6366f1!important;}
+.manifesto-section .mf-cta-btn{color:#4f46e5!important;border-color:rgba(99,102,241,.3)!important;}
+.manifesto-section .mf-cta-btn:hover{background:#6366f1!important;color:#fff!important;}
+
+/* 7 · Testimonios + Opiniones → Negro profundo #0B0B0C */
+.cr-section{background:#0B0B0C!important;}
+.testi-block{background:#0B0B0C;padding:0 0 80px;}
+
+/* 8 · Newsletter → Grafito #1C1C1E */
+.newsletter-section{background:#1C1C1E!important;}
+
+/* ═══════════════════════════════════════════════════════
+   BOTONES PREMIUM — micro-interacción hover glow
+   ═══════════════════════════════════════════════════════ */
+.btn-primary{transition:transform .18s ease,box-shadow .22s ease,filter .18s ease!important;}
+.btn-primary:hover{transform:translateY(-2px) scale(1.025)!important;box-shadow:0 8px 32px rgba(99,102,241,.5)!important;filter:brightness(1.1)!important;}
+.btn-ghost{transition:transform .18s ease,border-color .18s ease,color .18s ease!important;}
+.btn-ghost:hover{transform:translateY(-1px)!important;border-color:rgba(99,102,241,.6)!important;color:#a5b4fc!important;}
+.mf-cta-btn{transition:background .2s,color .2s,transform .18s,box-shadow .2s!important;}
+.mf-cta-btn:hover{transform:translateX(4px)!important;}
+
+/* ═══════════════════════════════════════════════════════
+   BANNER EXCLUSIVO — CATÁLOGO
+   ═══════════════════════════════════════════════════════ */
+.exclusive-launch-banner{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(90deg,rgba(99,102,241,.1),rgba(168,85,247,.1));
+  border:1px solid rgba(99,102,241,.25);
+  border-radius:100px;padding:7px 18px;
+  font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#4f46e5;
+  margin-bottom:16px;
+  animation:pulse-glow 3s ease-in-out infinite;
+}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(99,102,241,.25);}50%{box-shadow:0 0 0 5px rgba(99,102,241,.06);}}
+.exclusive-launch-banner .elb-dot{width:7px;height:7px;border-radius:50%;background:#6366f1;animation:blink-dot 1.4s ease-in-out infinite;}
+@keyframes blink-dot{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+/* ═══════════════════════════════════════════════════════
+   BADGE ENVÍO EXPRESS — MANIFIESTO
+   ═══════════════════════════════════════════════════════ */
+.mf-shipping-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);
+  color:#059669;font-size:13px;font-weight:700;
+  padding:8px 18px;border-radius:100px;margin:20px 0 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ALIVIO DE FRICCIÓN
+   ═══════════════════════════════════════════════════════ */
+.cta-friction-row{display:flex;align-items:center;gap:16px;margin-top:12px;flex-wrap:wrap;}
+.cta-friction-note{display:flex;align-items:center;gap:5px;font-size:12px;color:#86868b;}
+.cta-friction-note svg{flex-shrink:0;opacity:.7;}
+
+/* ═══════════════════════════════════════════════════════
+   TESTIMONIAL CARDS — TEMA OSCURO
+   ═══════════════════════════════════════════════════════ */
 .testi-block .testi-inner{max-width:1200px;margin:0 auto;padding:0 24px;}
 .testi-block .testi-heading{text-align:center;margin-bottom:44px;}
 .testi-block .testi-heading h3{font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--text);letter-spacing:-.02em;line-height:1.2;}
@@ -20,8 +115,8 @@
 @media(max-width:900px){.testi-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.testi-grid{grid-template-columns:1fr;}}
 .testi-card{background:var(--bg-card);border-radius:20px;padding:28px 24px;border:1px solid var(--border);display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s;}
-.testi-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);}
-.testi-stars{color:#f59e0b;font-size:17px;letter-spacing:2px;}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 14px 48px rgba(99,102,241,.18);}
+.testi-stars{color:#f59e0b;font-size:18px;letter-spacing:3px;}
 .testi-text{font-size:14.5px;line-height:1.75;color:var(--text-2);flex:1;}
 .testi-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border);}
 .testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;}
@@ -377,7 +472,7 @@
 </div>
 
 <!-- FEATURES STRIP -->
-<section class="features-strip">
+<section class="features-strip" style="background:#1C1C1E;">
   <div class="features-container">
     <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Envío gratis en 72h</span></div>
     <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Garantía oficial 2 años</span></div>
@@ -389,12 +484,18 @@
 </section>
 
 <!-- PRODUCTOS -->
-<section class="products-section" id="productos">
+<section class="products-section" id="productos" style="background:#F5F5F7;">
   <div class="section-container">
     <div class="section-header">
+      <div style="display:flex;justify-content:center;margin-bottom:12px;">
+        <span class="exclusive-launch-banner">
+          <span class="elb-dot"></span>
+          Lanzamientos Exclusivos 2026 — Unidades Limitadas para los Primeros Compradores
+        </span>
+      </div>
       <span class="section-tag">Catálogo 2026</span>
       <h2 class="section-title">Nuestra <span class="gradient-text">Selección Premium</span></h2>
-      <p class="section-subtitle">Solo marcas con garantía oficial. Precios para todos los presupuestos.</p>
+      <p class="section-subtitle">Solo marcas con garantía oficial europea. Tecnología que transforma tu estilo de vida.</p>
     </div>
     <div class="product-filters">
       <a href="catalogo.html?filter=watches" class="filter-btn">Relojes</a>
@@ -405,14 +506,24 @@
       <a href="catalogo.html?filter=masks" class="filter-btn">Máscaras LED</a>
     </div>
     <div class="products-grid" id="products-grid"></div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="catalogo.html" class="btn-primary">Ver los 68 productos →</a>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="catalogo.html" class="btn-primary">Optimiza tu Estilo de Vida →</a>
+      <div class="cta-friction-row" style="justify-content:center;">
+        <span class="cta-friction-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          3 años de garantía oficial
+        </span>
+        <span class="cta-friction-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Devolución garantizada 30 días
+        </span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ASISTENTE IA -->
-<section class="ai-section" id="asistente-ia">
+<section class="ai-section" id="asistente-ia" style="background:#0B0B0C;">
   <div class="ai-bg-glow ai-glow-1"></div>
   <div class="ai-bg-glow ai-glow-2"></div>
   <div class="ai-bg-grid"></div>
@@ -448,7 +559,7 @@
 </section>
 
 <!-- CONFIGURADOR -->
-<section class="configurator-section" id="configurador">
+<section class="configurator-section" id="configurador" style="background:#1C1C1E;">
   <div class="cfg-bg">
     <div class="cfg-bg-glow" id="cfg-bg-glow"></div>
     <div class="cfg-bg-grid"></div>
@@ -534,11 +645,11 @@
 
         <button class="btn-primary btn-lg cfg-add-btn" id="add-config-to-cart">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          Añadir al Carrito
+          Consigue el tuyo
         </button>
         <p class="cfg-guarantee">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Garantía oficial 2 años · Devolución gratuita 30 días
+          Garantía oficial 3 años · Devolución gratuita 30 días
         </p>
       </div>
 
@@ -579,12 +690,15 @@
 
 
 <!-- MANIFIESTO DE SALUD -->
-<section class="manifesto-section" id="beneficios">
+<section class="manifesto-section" id="beneficios" style="background:#F5F5F7;">
   <div class="section-container">
     <div class="section-header">
-      <span class="section-tag">¿Por qué elegir wearables premium?</span>
-      <h2 class="section-title">Tecnología que cuida <span class="gradient-text">lo que más importa</span></h2>
-      <p class="section-subtitle">Cada dispositivo en nuestra tienda está seleccionado por una razón: transformar datos en decisiones que mejoran tu calidad de vida real.</p>
+      <span class="section-tag">Tecnología que cuida lo que más importa</span>
+      <h2 class="section-title">Tu salud no puede <span class="gradient-text">esperar</span></h2>
+      <p class="section-subtitle">Monitoreo biométrico en tiempo real para un estilo de vida sin límites. Duerme mejor. Rinde más. Vive conectado.</p>
+      <div style="display:flex;justify-content:center;margin-top:18px;">
+        <span class="mf-shipping-badge">🚚 Envío Prioritario Express Asegurado (24–72h)</span>
+      </div>
     </div>
 
     <!-- ROW 1: Sueño — imagen izquierda -->
@@ -703,12 +817,12 @@
 </section>
 
 <!-- OPINIONES DE CLIENTES -->
-<section class="cr-section" id="opiniones">
+<section class="cr-section" id="opiniones" style="background:#0B0B0C;">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">Opiniones verificadas</span>
       <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
-      <p class="section-subtitle">Reseñas reales de personas que han comprado en ZoneTechOnline. Sin filtros, sin moderación previa.</p>
+      <p class="section-subtitle">Reseñas reales de personas que han transformado su vida con nuestra tecnología. Sin filtros, sin moderación previa.</p>
     </div>
   </div>
 </section>
@@ -770,7 +884,7 @@
   </div>
 </div>
 
-<section class="cr-section" id="opiniones-form">
+<section class="cr-section" id="opiniones-form" style="background:#0B0B0C;">
   <div class="section-container">
 
     <!-- FORMULARIO -->
@@ -846,7 +960,7 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="newsletter-section">
+<section class="newsletter-section" style="background:#1C1C1E;">
   <div class="newsletter-container">
     <div class="newsletter-content">
       <h2>Sé el primero en conocer<br><span class="gradient-text">ofertas exclusivas</span></h2>
