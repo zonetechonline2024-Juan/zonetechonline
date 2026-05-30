@@ -1,4 +1,4 @@
-﻿// ZoneTechOnline — Premium Tech Wearables
+// ZoneTechOnline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -1770,8 +1770,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var secB = document.getElementById('productos');
     if (secB) window.scrollTo({ top: secB.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
   } else {
-    var featuredIds = [1, 7, 13, 15, 19, 22, 29, 34];
-    renderProducts('all', function(p) { return featuredIds.indexOf(p.id) !== -1; });
+    renderProducts('all');
   }
   renderCartItems();
   updateCartBadge();
