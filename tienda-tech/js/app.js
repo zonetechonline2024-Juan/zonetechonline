@@ -2187,7 +2187,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
-      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit y Xiaomi. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit, Xiaomi y Coros. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
@@ -2211,7 +2211,7 @@ function initAIAssistant() {
     }
 
     if (/premium|caro|mejor|top|m[aá]s completo|el mejor/.test(ql)) {
-      return 'Nuestros relojes premium: <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con titanio y 60h de batería, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio y presión arterial, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y cristal de zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
+      return 'Nuestros relojes más premium: <strong>COROS Vertix 3</strong> (€699,99) AMOLED + GPS triple banda, <strong>COROS Vertix 2S</strong> (€549,99) titanio+DLC y 140h GPS, <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con Titanio Grado 4, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
     if (/coros|pace|apex|vertix/.test(ql)) {
