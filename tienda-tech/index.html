@@ -9,6 +9,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+<style>
+/* ── COLOR BLOCKING ─────────────────────────────────── */
+.features-strip{background:#1C1C1E!important;}
+.products-section{background:#F5F5F7!important;}
+.products-section .section-title{color:#1d1d1f!important;}
+.products-section .section-subtitle{color:#6e6e73!important;}
+.products-section .section-tag{color:#6366f1;background:rgba(99,102,241,.1);}
+.products-section .gradient-text{background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.products-section .filter-btn{color:#3a3a3c;border-color:rgba(0,0,0,.14);background:rgba(0,0,0,.04);}
+.products-section .filter-btn:hover,.products-section .filter-btn.active{background:#6366f1;color:#fff;border-color:#6366f1;}
+.products-section .product-card{background:#fff;border-color:rgba(0,0,0,.08);box-shadow:0 4px 24px rgba(0,0,0,.08);}
+.products-section .product-name{color:#1d1d1f!important;}
+.products-section .product-desc{color:#6e6e73!important;}
+.products-section .product-brand{color:#6366f1!important;}
+.products-section .product-price{color:#1d1d1f!important;}
+.products-section .product-old-price{color:#86868b!important;}
+.products-section .btn-primary{background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;}
+.products-section .btn-compare,.products-section .btn-qv{background:rgba(0,0,0,.06);color:#3a3a3c;border-color:rgba(0,0,0,.1);}
+.ai-section{background:#0B0B0C!important;}
+.configurator-section{background:#1C1C1E!important;}
+.manifesto-section{background:#F5F5F7!important;}
+.manifesto-section .section-title{color:#1d1d1f!important;}
+.manifesto-section .section-subtitle{color:#6e6e73!important;}
+.manifesto-section .section-tag{color:#6366f1;background:rgba(99,102,241,.1);}
+.manifesto-section .gradient-text{background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.manifesto-section .mf-headline{color:#1d1d1f!important;}
+.manifesto-section .mf-body{color:#3a3a3c!important;}
+.manifesto-section .mf-cat-tag{color:#6e6e73;border-color:rgba(0,0,0,.1);background:rgba(0,0,0,.04);}
+.manifesto-section .mf-device-chip{background:rgba(0,0,0,.07)!important;color:#1d1d1f!important;border-color:rgba(0,0,0,.1)!important;}
+.manifesto-section .mf-device-chip:hover{background:#6366f1!important;color:#fff!important;}
+.cr-section{background:#1C1C1E!important;}
+.newsletter-section{background:#0B0B0C!important;}
+/* ── TESTIMONIAL CARDS ───────────────────────────────── */
+.testi-block{background:#F5F5F7;padding:72px 0 80px;}
+.testi-block .testi-inner{max-width:1200px;margin:0 auto;padding:0 24px;}
+.testi-block .testi-heading{text-align:center;margin-bottom:44px;}
+.testi-block .testi-heading h3{font-size:clamp(22px,3vw,34px);font-weight:700;color:#1d1d1f;letter-spacing:-.02em;line-height:1.2;}
+.testi-block .testi-heading p{color:#6e6e73;font-size:15px;margin-top:10px;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.testi-grid{grid-template-columns:1fr;}}
+.testi-card{background:#fff;border-radius:20px;padding:28px 24px;box-shadow:0 2px 24px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s;}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.13);}
+.testi-stars{color:#f59e0b;font-size:17px;letter-spacing:2px;}
+.testi-text{font-size:14.5px;line-height:1.75;color:#3a3a3c;flex:1;}
+.testi-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(0,0,0,.06);}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;}
+.testi-meta{display:flex;flex-direction:column;gap:2px;}
+.testi-name{font-weight:600;font-size:14px;color:#1d1d1f;}
+.testi-location{font-size:12px;color:#86868b;}
+.testi-verified{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#34d399;font-weight:600;margin-top:2px;}
+</style>
 </head>
 <body>
 
@@ -356,7 +408,7 @@
 </div>
 
 <!-- FEATURES STRIP -->
-<section class="features-strip">
+<section class="features-strip" style="background:#1C1C1E;">
   <div class="features-container">
     <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Envío gratis en 72h</span></div>
     <div class="feature-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Garantía oficial 2 años</span></div>
@@ -367,8 +419,31 @@
   </div>
 </section>
 
+<!-- PRODUCTOS -->
+<section class="products-section" id="productos" style="background:#F5F5F7;">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">Catálogo 2026</span>
+      <h2 class="section-title">Nuestra <span class="gradient-text">Selección Premium</span></h2>
+      <p class="section-subtitle">Solo marcas con garantía oficial. Precios para todos los presupuestos.</p>
+    </div>
+    <div class="product-filters">
+      <a href="catalogo.html?filter=watches" class="filter-btn">Relojes</a>
+      <a href="catalogo.html?filter=rings" class="filter-btn">Anillos</a>
+      <a href="catalogo.html?filter=headphones" class="filter-btn">Auriculares</a>
+      <a href="catalogo.html?filter=glasses" class="filter-btn">Gafas</a>
+      <a href="catalogo.html?filter=speakers" class="filter-btn">Altavoces</a>
+      <a href="catalogo.html?filter=masks" class="filter-btn">Máscaras LED</a>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="catalogo.html" class="btn-primary">Ver los 68 productos →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ASISTENTE IA -->
-<section class="ai-section" id="asistente-ia">
+<section class="ai-section" id="asistente-ia" style="background:#0B0B0C;">
   <div class="ai-bg-glow ai-glow-1"></div>
   <div class="ai-bg-glow ai-glow-2"></div>
   <div class="ai-bg-grid"></div>
@@ -403,31 +478,8 @@
   </div>
 </section>
 
-<!-- PRODUCTOS -->
-<section class="products-section" id="productos">
-  <div class="section-container">
-    <div class="section-header">
-      <span class="section-tag">Catálogo 2026</span>
-      <h2 class="section-title">Nuestra <span class="gradient-text">Selección Premium</span></h2>
-      <p class="section-subtitle">Solo marcas con garantía oficial. Precios para todos los presupuestos.</p>
-    </div>
-    <div class="product-filters">
-      <a href="catalogo.html?filter=watches" class="filter-btn">Relojes</a>
-      <a href="catalogo.html?filter=rings" class="filter-btn">Anillos</a>
-      <a href="catalogo.html?filter=headphones" class="filter-btn">Auriculares</a>
-      <a href="catalogo.html?filter=glasses" class="filter-btn">Gafas</a>
-      <a href="catalogo.html?filter=speakers" class="filter-btn">Altavoces</a>
-      <a href="catalogo.html?filter=masks" class="filter-btn">Máscaras LED</a>
-    </div>
-    <div class="products-grid" id="products-grid"></div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="catalogo.html" class="btn-primary">Ver los 38 productos →</a>
-    </div>
-  </div>
-</section>
-
 <!-- CONFIGURADOR -->
-<section class="configurator-section" id="configurador">
+<section class="configurator-section" id="configurador" style="background:#1C1C1E;">
   <div class="cfg-bg">
     <div class="cfg-bg-glow" id="cfg-bg-glow"></div>
     <div class="cfg-bg-grid"></div>
@@ -556,27 +608,9 @@
   </div>
 </section>
 
-<!-- COMPARADOR -->
-<section class="comparator-section" id="comparador">
-  <div class="section-container">
-    <div class="section-header">
-      <span class="section-tag">Comparador Pro</span>
-      <h2 class="section-title">Compara <span class="gradient-text">Sensor a Sensor</span></h2>
-      <p class="section-subtitle">Añade hasta 3 productos y compara cada especificación en detalle.</p>
-    </div>
-    <div class="compare-selector">
-      <p class="compare-hint">Selecciona productos desde el catálogo o elige rápido aquí:</p>
-      <div class="quick-compare-btns" id="quick-compare-btns"></div>
-    </div>
-    <div class="compare-table-wrapper" id="compare-table-wrapper" style="display:none">
-      <div class="compare-table" id="compare-table"></div>
-      <button class="btn-ghost btn-sm" id="clear-compare">Limpiar comparación</button>
-    </div>
-  </div>
-</section>
 
 <!-- MANIFIESTO DE SALUD -->
-<section class="manifesto-section" id="beneficios">
+<section class="manifesto-section" id="beneficios" style="background:#F5F5F7;">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">¿Por qué elegir wearables premium?</span>
@@ -700,13 +734,75 @@
 </section>
 
 <!-- OPINIONES DE CLIENTES -->
-<section class="cr-section" id="opiniones">
+<section class="cr-section" id="opiniones" style="background:#1C1C1E;">
   <div class="section-container">
     <div class="section-header">
       <span class="section-tag">Opiniones verificadas</span>
       <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
       <p class="section-subtitle">Reseñas reales de personas que han comprado en ZoneTechOnline. Sin filtros, sin moderación previa.</p>
     </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS DE CONFIANZA -->
+<div class="testi-block" id="testimonios">
+  <div class="testi-inner">
+    <div class="testi-heading">
+      <h3>Testimonios de <span style="background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Confianza</span></h3>
+      <p>Experiencias reales de clientes que ya confían en nuestra tecnología</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Como corredor de maratones, la precisión del GPS y la lectura de saturación de oxígeno de mi nuevo reloj digital cambiaron mi rutina de entrenamiento. El envío a Madrid llegó en menos de 48 horas en perfecto estado."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">C</div>
+          <div class="testi-meta">
+            <span class="testi-name">Carlos M.</span>
+            <span class="testi-location">Madrid</span>
+            <span class="testi-verified">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Compra verificada
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Buscaba un dispositivo que controlara mis niveles de estrés y la calidad del sueño por motivos de salud. El Asistente IA de la tienda me recomendó el gadget ideal. Totalmente confiable y transparente."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">E</div>
+          <div class="testi-meta">
+            <span class="testi-name">Elena R.</span>
+            <span class="testi-location">Barcelona</span>
+            <span class="testi-verified">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Compra verificada
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Increíble experiencia de compra. La estética de la tienda ya te anticipa la calidad de los productos. Compré el anillo inteligente y las métricas de cuidado diario que ofrece son exactas. Un 10 en atención."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div class="testi-meta">
+            <span class="testi-name">David T.</span>
+            <span class="testi-location">Valencia</span>
+            <span class="testi-verified">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Compra verificada
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cr-section" id="opiniones-form" style="background:#1C1C1E;">
+  <div class="section-container">
 
     <!-- FORMULARIO -->
     <div class="cr-form-card">
@@ -781,7 +877,7 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="newsletter-section">
+<section class="newsletter-section" style="background:#0B0B0C;">
   <div class="newsletter-container">
     <div class="newsletter-content">
       <h2>Sé el primero en conocer<br><span class="gradient-text">ofertas exclusivas</span></h2>
