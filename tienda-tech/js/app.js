@@ -16,75 +16,80 @@ const FILTER_MAP = {
 // Fuente: Depau.es — scraping 30/05/2026 — 5 productos Xiaomi ordenados por precio ascendente
 const PRODUCTS = [
 
-  // ── 1 · Precio más bajo ──────────────────────────────────────────────────
+  // ── 1 · Xiaomi Smart Band 9 ──────────────────────────────────────────────
   {
     id: 1,
-    name: 'Xiaomi Mi In Ear Basic',
+    name: 'Xiaomi Smart Band 9',
     brand: 'Xiaomi',
-    category: 'auriculares',
-    price: 7.95,
-    oldPrice: 12.99,
+    category: 'relojes',
+    price: 39.95,
+    oldPrice: 49.95,
     badge: 'Oferta',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%2014273_1.jpg',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20smart%20band%209_1.jpg',
     images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%2014273_1.jpg'
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20smart%20band%209_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20redmi%20w%205%20act%20bk_1.jpg'
     ],
-    description: 'Auriculares intrauditivos con cable y micrófono integrado. Conector Jack 3.5mm universal. Drivers dinámicos de 10mm para graves profundos. Color negro.',
+    description: 'Pulsera inteligente ultra delgada con pantalla AMOLED 1,62". Monitorización cardíaca 24/7, SpO₂ continuo, 150+ modos deportivos y hasta 14 días de batería. Resistente al agua 5 ATM.',
     specs: {
-      'Tipo': 'Intrauditivos con cable',
-      'Conector': 'Jack 3.5mm',
-      'Micrófono': 'Sí, integrado',
-      'Color': 'Negro',
-      'P/N Depau': 'ZBW4354TY',
-      'SKU': 'XIA-AUR 14273'
+      'Pantalla': 'AMOLED 1,62"',
+      'Modos deportivos': '150+',
+      'Batería': 'Hasta 14 días',
+      'SpO₂': 'Sí',
+      'Resistencia': '5 ATM',
+      'SKU': 'BHR8413GL'
     }
   },
 
-  // ── 2 ───────────────────────────────────────────────────────────────────
+  // ── 2 · Xiaomi Watch S3 ──────────────────────────────────────────────────
   {
     id: 2,
-    name: 'Xiaomi Redmi Buds 6 Active Negro',
+    name: 'Xiaomi Watch S3',
     brand: 'Xiaomi',
-    category: 'auriculares',
-    price: 24.95,
-    oldPrice: 34.99,
-    badge: 'Nuevo 2026',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20bk_1.jpg',
+    category: 'relojes',
+    price: 99.95,
+    oldPrice: 129.95,
+    badge: 'Nuevo 2024',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg',
     images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20bk_1.jpg'
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20sv_1.jpg'
     ],
-    description: 'Auriculares Bluetooth True Wireless con estuche de carga. Autonomía 6h (auricular) + 24h (estuche). Reducción de ruido ambiental. Color negro.',
+    description: 'Smartwatch premium con pantalla AMOLED 1,43" HD y cristal de zafiro. GPS integrado, 150+ modos deportivos, NFC y llamadas Bluetooth. Hasta 12 días de batería.',
     specs: {
-      'Tipo': 'True Wireless Bluetooth',
-      'Autonomía': '6h + 24h (estuche)',
-      'Reducción ruido': 'ENC activo',
-      'Color': 'Negro',
-      'P/N Depau': 'BHR8396GL',
-      'SKU': 'XIA-AUR REDMI BUDS 6 ACT BK'
+      'Pantalla': 'AMOLED 1,43" HD',
+      'Cristal': 'Zafiro',
+      'NFC': 'Sí',
+      'GPS': 'Integrado',
+      'Llamadas BT': 'Sí',
+      'Batería': 'Hasta 12 días',
+      'SKU': 'XIA-RELOJ WATCH S3 BK'
     }
   },
 
-  // ── 3 ───────────────────────────────────────────────────────────────────
+  // ── 3 · Xiaomi Watch S4 Sport ────────────────────────────────────────────
   {
     id: 3,
-    name: 'Xiaomi Redmi Buds 6 Active Blanco',
+    name: 'Xiaomi Watch S4 Sport',
     brand: 'Xiaomi',
-    category: 'auriculares',
-    price: 24.95,
-    oldPrice: 34.99,
-    badge: 'Nuevo 2026',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20wh_1.jpg',
+    category: 'relojes',
+    price: 149.95,
+    oldPrice: 179.95,
+    badge: 'Sport Edition',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s4%20sport%20bk_1.jpg',
     images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20wh_1.jpg'
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s4%20sport%20bk_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg'
     ],
-    description: 'Auriculares Bluetooth True Wireless con estuche de carga. Autonomía 6h (auricular) + 24h (estuche). Reducción de ruido ambiental. Color blanco.',
+    description: 'Smartwatch deportivo premium con GPS dual banda y pantalla AMOLED 1,43". Más de 140 modos deportivos, ECG, SpO₂, NFC y hasta 10 días de batería.',
     specs: {
-      'Tipo': 'True Wireless Bluetooth',
-      'Autonomía': '6h + 24h (estuche)',
-      'Reducción ruido': 'ENC activo',
-      'Color': 'Blanco',
-      'P/N Depau': 'BHR8391GL',
-      'SKU': 'XIA-AUR REDMI BUDS 6 ACT WH'
+      'Pantalla': 'AMOLED 1,43"',
+      'GPS': 'Dual banda',
+      'ECG': 'Sí',
+      'NFC': 'Sí',
+      'Modos deportivos': '140+',
+      'Batería': 'Hasta 10 días',
+      'SKU': 'XIA-RELOJ WATCH S4 SPORT BK'
     }
   },
 
@@ -405,54 +410,56 @@ PRODUCTS.push(
 // ─── SAMSUNG PRODUCTS (fuente: depau.es — scraping 30/05/2026) ───────────────
 PRODUCTS.push(
 
-  // ── 16 · Galaxy Buds 3 FE (Gris) ───────────────────────────────────────────
+  // ── 16 · Samsung Galaxy Watch 7 44mm Verde ──────────────────────────────────
   {
     id: 16,
-    name: 'Samsung Galaxy Buds 3 FE Gris',
+    name: 'Samsung Galaxy Watch 7 44mm Verde',
     brand: 'Samsung',
-    category: 'auriculares',
-    price: 89.99,
-    oldPrice: 119.99,
-    badge: 'Más económico',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20gy_1.jpg',
+    category: 'relojes',
+    price: 279.99,
+    oldPrice: 329.99,
+    badge: 'Nuevo 2024',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20gree%20v2_1.jpg',
     images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20gy_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20bk_1.jpg'
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20gree%20v2_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l300%2040%20bt%20gree_1.jpg'
     ],
-    description: 'Auriculares True Wireless con cancelación activa de ruido ANC. Driver dinámico de 10,5mm. Hasta 30h de batería total (6h + 24h estuche). Carga rápida: 5min → 1h extra. IP67.',
+    description: 'Smartwatch 44mm en color verde con Super AMOLED 1,5" circular. Procesador 3nm. GPS multibanda, ECG, SpO₂, temperatura y composición corporal avanzada. Galaxy AI integrado. Hasta 40h batería.',
     specs: {
-      'Tipo': 'True Wireless ANC',
-      'Driver': '10,5 mm dinámico',
-      'Batería': '6h + 24h estuche = 30h',
-      'Carga rápida': '5 min = 1h extra',
-      'Resistencia': 'IP67',
-      'P/N Depau': 'SAM-AUR BUDS 3 FE GY',
+      'Pantalla': 'Super AMOLED 1,5" circular',
+      'Procesador': '3nm',
+      'GPS': 'Multibanda',
+      'ECG': 'Sí',
+      'Galaxy AI': 'Sí',
+      'Batería': 'Hasta 40h (87h modo ahorro)',
+      'P/N Depau': 'SAM-RELOJ L310 44 BT GREE V2',
       'Fuente': 'depau.es'
     }
   },
 
-  // ── 17 · Galaxy Buds 3 FE (Negro) ──────────────────────────────────────────
+  // ── 17 · Samsung Galaxy Watch Ultra 47mm ────────────────────────────────────
   {
     id: 17,
-    name: 'Samsung Galaxy Buds 3 FE Negro',
+    name: 'Samsung Galaxy Watch Ultra 47mm Blanco',
     brand: 'Samsung',
-    category: 'auriculares',
-    price: 89.99,
-    oldPrice: 119.99,
-    badge: 'Oferta',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20bk_1.jpg',
+    category: 'relojes',
+    price: 549.99,
+    oldPrice: 649.99,
+    badge: 'Ultra Premium',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l705%2047%20bt%20wh_1.jpg',
     images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20bk_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-aur%20buds%203%20fe%20gy_1.jpg'
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l705%2047%20bt%20wh_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l500%2046%20bt%20wh_1.jpg'
     ],
-    description: 'Auriculares True Wireless con cancelación activa de ruido ANC. Driver dinámico de 10,5mm. Hasta 30h de batería total (6h + 24h estuche). Carga rápida: 5min → 1h extra. IP67.',
+    description: 'El smartwatch más avanzado de Samsung. Carcasa de Titanio Grado 4. Super AMOLED 1,5" ultra resistente. GPS multibanda, ECG, SpO₂, composición corporal y presión arterial. Galaxy AI completo. Hasta 60h batería.',
     specs: {
-      'Tipo': 'True Wireless ANC',
-      'Driver': '10,5 mm dinámico',
-      'Batería': '6h + 24h estuche = 30h',
-      'Carga rápida': '5 min = 1h extra',
-      'Resistencia': 'IP67',
-      'P/N Depau': 'SAM-AUR BUDS 3 FE BK',
+      'Pantalla': 'Super AMOLED 1,5"',
+      'Carcasa': 'Titanio Grado 4',
+      'GPS': 'Multibanda',
+      'ECG + Presión arterial': 'Sí',
+      'Galaxy AI': 'Sí',
+      'Batería': 'Hasta 60h (100h modo ahorro)',
+      'P/N Depau': 'SAM-RELOJ L705 47 BT WH',
       'Fuente': 'depau.es'
     }
   },
@@ -2039,16 +2046,16 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
-    if (/auricular|tws|earbuds|inal[aá]mbrico|bluetooth|sonido|m[uú]sica/.test(ql)) {
-      return 'En auriculares tenemos: <strong>Xiaomi Mi In Ear Basic</strong> (€7,95) con cable, <strong>Redmi Buds 6 Active</strong> (€24,95) True Wireless con ENC, y los <strong>Samsung Galaxy Buds 3 FE</strong> (€89,99) con ANC + 30h batería e IP67. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver auriculares →</a>';
+    if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
+      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit y Xiaomi. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
       return 'Toda la gama Amazfit disponible: <strong>Helio Core</strong> (€69,90) · <strong>Bip 6</strong> (€79,90) · <strong>Active 2</strong> (€99,90) · <strong>Bip Max</strong> (€99,90) · <strong>Active 3 Premium</strong> (€169,90). Todos con GPS integrado y monitorización de salud 24/7. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
-    if (/samsung|galaxy watch|galaxy buds|galaxy ring/.test(ql)) {
-      return 'Toda la gama Samsung disponible: <strong>Galaxy Buds 3 FE</strong> Gris/Negro (€89,99) · <strong>Galaxy Watch 7 40mm</strong> (€249,99) · <strong>Galaxy Watch 7 44mm</strong> (€279,99) · <strong>Galaxy Watch 8 Classic</strong> (€449,99). Todos con Galaxy AI, ECG y GPS multibanda. <a class="ai-msg-link" href="catalogo.html?brand=Samsung">Ver Samsung →</a>';
+    if (/samsung|galaxy watch|galaxy ring/.test(ql)) {
+      return 'Toda la gama Samsung (5 relojes): <strong>Galaxy Watch 7 40mm</strong> (€249,99) · <strong>Galaxy Watch 7 44mm</strong> Plata/Verde (€279,99) · <strong>Galaxy Watch 8 Classic</strong> (€449,99) · <strong>Galaxy Watch Ultra</strong> (€549,99). Todos con Galaxy AI, ECG y GPS multibanda. <a class="ai-msg-link" href="catalogo.html?brand=Samsung">Ver Samsung →</a>';
     }
 
     if (/huawei|band 9|band 10|band 11|watch fit/.test(ql)) {
@@ -2056,22 +2063,22 @@ function initAIAssistant() {
     }
 
     if (/xiaomi|redmi|mi band/.test(ql)) {
-      return 'En Xiaomi tenemos: auriculares <strong>Redmi Buds 6 Active</strong> en negro y blanco (€24,95 c/u) con True Wireless y 30h de batería, los <strong>Mi In Ear Basic</strong> (€7,95) con cable, y los smartwatches <strong>Redmi Watch 5 Active</strong> (€49,95) con AMOLED 2,05", GPS y 20 días de batería. <a class="ai-msg-link" href="catalogo.html?brand=Xiaomi">Ver Xiaomi →</a>';
+      return 'Toda la gama Xiaomi (5 relojes): <strong>Smart Band 9</strong> (€39,95) · <strong>Redmi Watch 5 Active</strong> Negro/Plata (€49,95) con AMOLED 2,05" y 20 días · <strong>Watch S3</strong> (€99,95) con cristal de zafiro y NFC · <strong>Watch S4 Sport</strong> (€149,95) con GPS dual y ECG. <a class="ai-msg-link" href="catalogo.html?brand=Xiaomi">Ver Xiaomi →</a>';
     }
 
     if (/barato|econ[oó]mico|precio|asequible|oferta|descuento|bajo precio|menos de/.test(ql)) {
-      return 'Las opciones más económicas: <strong>Xiaomi Mi In Ear Basic</strong> (€7,95), <strong>Redmi Buds 6 Active</strong> (€24,95), <strong>Redmi Watch 5 Active</strong> (€49,95), <strong>Huawei Band 9</strong> (€49,99) y <strong>Samsung Galaxy Buds 3 FE</strong> (€89,99). ¡Tecnología de calidad sin gastar de más! <a class="ai-msg-link" href="catalogo.html">Ver todos →</a>';
+      return 'Los relojes más económicos: <strong>Xiaomi Smart Band 9</strong> (€39,95), <strong>Redmi Watch 5 Active</strong> (€49,95), <strong>HUAWEI Band 9</strong> (€49,99) y <strong>Amazfit Helio Core</strong> (€69,90). Tecnología de calidad desde €39,95. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
     if (/premium|caro|mejor|top|m[aá]s completo|el mejor/.test(ql)) {
-      return 'Nuestros productos premium: <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio y presión arterial, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y cristal de zafiro, y el <strong>HUAWEI WATCH FIT 4</strong> (€129,99) con GPS de doble banda. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
+      return 'Nuestros relojes premium: <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con titanio y 60h de batería, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio y presión arterial, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y cristal de zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 20 productos de Samsung, Huawei, Amazfit y Xiaomi, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 20 relojes inteligentes de Samsung, Huawei, Amazfit y Xiaomi, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 20 wearables seleccionados: 15 relojes (Samsung, Huawei, Amazfit y Xiaomi) y 5 auriculares (Samsung y Xiaomi). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor para ti. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos 20 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5) y Xiaomi (5). Precios desde €39,95 hasta €549,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2103,7 +2110,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>20 wearables</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong> y <strong>Xiaomi</strong>: relojes desde €49,95 y auriculares desde €7,95. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>20 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong> y <strong>Xiaomi</strong>, desde €39,95 hasta €549,99. ¿Qué estás buscando?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
