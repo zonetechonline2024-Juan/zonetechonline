@@ -2310,8 +2310,12 @@ function initAIAssistant() {
   function getResponse(q) {
     var ql = q.toLowerCase();
 
-    if (/reloj|running|correr|deporte|atletism|marath|triatl|fitnes|entrenamiento/.test(ql)) {
-      return 'Para deporte y entrenamiento, el <strong>Amazfit Bip 6</strong> (€79,90) es nuestra estrella: AMOLED 1,97", más de 140 modos deportivos, GPS integrado con mapas gratuitos y 10 días de batería. Para monitorización profesional el <strong>Amazfit Helio Core</strong> (€69,90) con BioTracker™ da lecturas de élite en tiempo real. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
+    if (/running|correr|atletism|marath|triatl|carrera|5k|10k/.test(ql)) {
+      return 'Para running y atletismo, el <strong>Garmin Forerunner 265</strong> (€349,99) es nuestra referencia: AMOLED AOD, GPS multibanda, potencia de carrera y Morning Report. El <strong>Garmin Forerunner 55</strong> (€149,99) es ideal para empezar con GPS y coach de carrera. Y el <strong>COROS Apex 2 Pro</strong> (€399,99) con 75h GPS para ultra-distancia. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Garmin">Ver Garmin →</a>';
+    }
+
+    if (/deporte|fitnes|entrenamiento|sport|ejercicio/.test(ql)) {
+      return 'Para deporte y entrenamiento, el <strong>Amazfit Bip 6</strong> (€79,90) destaca con AMOLED 1,97", 140+ modos deportivos y GPS con mapas. El <strong>Garmin Vivoactive 5</strong> (€229,99) añade AMOLED siempre encendida, NFC y 25+ modos. Y el <strong>Garmin Instinct 2S</strong> (€199,99) con carcasa MIL-STD-810 para deporte extremo. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes deportivos →</a>';
     }
 
     if (/sue[ñn]o|dormir|sleep|descanso|recuperaci[oó]n/.test(ql)) {
@@ -2327,7 +2331,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
-      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit, Xiaomi y Coros. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin — 30 modelos desde €39,95. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
