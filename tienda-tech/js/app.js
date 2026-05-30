@@ -13,344 +13,7 @@ const FILTER_MAP = {
 };
 
 // ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
-const PRODUCTS = [
-  // RELOJES
-  { id:1,  name:'Garmin Venu 3',           brand:'Garmin',          category:'relojes',    price:399, oldPrice:449,  badge:'Más Vendido',
-    image: 'https://www.heartratemonitorsusa.com/cdn/shop/files/garmin-heart-rate-monitors-whitestone-passivated-45mm-garmin-venu-3-gps-smartwatch-33241766297773.jpg?v=1693405476&width=600',
-    images: ['https://www.heartratemonitorsusa.com/cdn/shop/files/garmin-heart-rate-monitors-whitestone-passivated-45mm-garmin-venu-3-gps-smartwatch-33241766297773.jpg?v=1693405476&width=600','https://fdn2.gsmarena.com/vv/bigpic/garmin-venu-3-.jpg','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'14 días', Pantalla:'AMOLED 1.4"', Resistencia:'5 ATM' },
-    description:'Smartwatch premium con AMOLED 1.4", Garmin Pay y más de 25 deportes indoor. Monitorización avanzada de sueño, estrés y HRV.' },
-  { id:2,  name:'Garmin Forerunner 265',   brand:'Garmin',          category:'relojes',    price:349, oldPrice:399,  badge:'Running Pro',
-    image: 'https://www.heartratemonitorsusa.com/cdn/shop/products/garmin-heart-rate-monitors-265-aqua-garmin-forerunner-265-265s-gps-watch-32791405461677.jpg?v=1762262748&width=600',
-    images: ['https://www.heartratemonitorsusa.com/cdn/shop/products/garmin-heart-rate-monitors-265-aqua-garmin-forerunner-265-265s-gps-watch-32791405461677.jpg?v=1762262748&width=600','https://fdn2.gsmarena.com/vv/bigpic/garmin-forerunner-265-.jpg','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'15 días', Pantalla:'AMOLED 1.3"', Resistencia:'5 ATM' },
-    description:'Training Readiness, cargas de entrenamiento y planes adaptativos. El reloj favorito de los corredores serios.' },
-  { id:3,  name:'Garmin Instinct 2 Solar', brand:'Garmin',          category:'relojes',    price:399, oldPrice:null, badge:'Solar ∞',
-    image: 'https://shop.gohunt.com/cdn/shop/products/Instinct-2-Solar-1.jpg?v=1644449013&width=600',
-    images: ['https://shop.gohunt.com/cdn/shop/products/Instinct-2-Solar-1.jpg?v=1644449013&width=600','https://fdn2.gsmarena.com/vv/bigpic/garmin-instinct-2-solar-.jpg','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'Ilimitada (Solar)', Pantalla:'MIP 0.9"', Resistencia:'10 ATM' },
-    description:'Carga solar ilimitada. Diseño MIL-STD-810 resistente a golpes, temperatura extrema y altitud.' },
-  { id:4,  name:'Withings ScanWatch Nova', brand:'Withings',        category:'relojes',    price:299, oldPrice:349,  badge:'ECG Médico',
-    image: 'https://www-assets.withings.com/pages/products/scanwatch-nova/media/hero/masterpiece_light.jpg',
-    images: ['https://www-assets.withings.com/pages/products/scanwatch-nova/media/hero/masterpiece_light.jpg','https://www-assets.withings.com/pages/products/scanwatch-nova/media/hero/masterpiece_dark.jpg','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'No', ECG:'Sí ✓FDA', HRV:'Sí', SpO2:'Sí', Sueño:'Avanzado', Batería:'30 días', Pantalla:'OLED Híbrido', Resistencia:'5 ATM' },
-    description:'El único reloj híbrido con ECG certificado médicamente. Diseño suizo analógico con sensor óptico avanzado.' },
-  { id:5,  name:'Withings ScanWatch Light', brand:'Withings',       category:'relojes',    price:149, oldPrice:179,  badge:'Precio Acceso',
-    image: 'https://www-assets.withings.com/pages/products/scanwatch-light/media/hero/hero-visual-colored.jpg',
-    images: ['https://www-assets.withings.com/pages/products/scanwatch-light/media/hero/hero-visual-colored.jpg','https://www-assets.withings.com/pages/products/scanwatch-light/media/hero/hero-visual-white.jpg','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'No', ECG:'No', HRV:'No', SpO2:'Sí', Sueño:'Sí', Batería:'30 días', Pantalla:'OLED Híbrido', Resistencia:'5 ATM' },
-    description:'30 días de batería y SpO2 continuos. El híbrido elegante de entrada con diseño analógico francés clásico.' },
-  { id:6,  name:'Polar Pacer Pro',         brand:'Polar',           category:'relojes',    price:279, oldPrice:309,  badge:'Atletas',
-    image: 'https://www.polar.com/img/static/pacer-pro-rd/gallery/pacer-pro-gold-1.webp',
-    images: ['https://www.polar.com/img/static/pacer-pro-rd/gallery/pacer-pro-gold-1.webp','https://www.polar.com/img/static/pacer-pro-rd/gallery/pacer-pro-gold-2.webp','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Nightly Recharge', Batería:'35h GPS', Pantalla:'MIP 1.2"', Resistencia:'10 ATM' },
-    description:'GPS ultra-preciso con altímetro barométrico. Nightly Recharge, Polar Flow y análisis deportivo de élite.' },
-  { id:7,  name:'Polar Ignite 3',          brand:'Polar',           category:'relojes',    price:199, oldPrice:229,  badge:'Fitness',
-    image: 'https://www.polar.com/img/static/ignite3/serene-ksp.png',
-    images: ['https://www.polar.com/img/static/ignite3/serene-ksp.png','https://www.polar.com/img/static/ignite3/product-images/ignite3-brown-sugar-sand.png','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'30h GPS', Pantalla:'AMOLED 1.28"', Resistencia:'5 ATM' },
-    description:'AMOLED brillante con Polar Fitness Test y FitSpark. Te guía en cada entrenamiento con Daily Energy.' },
-  { id:8,  name:'Suunto Race S',           brand:'Suunto',          category:'relojes',    price:399, oldPrice:null, badge:'Aventura',
-    image: 'https://us.suunto.com/cdn/shop/files/Suunto_Race_S_Stainless_Steel.png?v=1778325640&width=600',
-    images: ['https://us.suunto.com/cdn/shop/files/Suunto_Race_S_Stainless_Steel.png?v=1778325640&width=600','https://us.suunto.com/cdn/shop/files/Suunto_Race_S_All_Black.png?v=1778325640&width=600','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Sí', Batería:'40h GPS', Pantalla:'AMOLED 1.43"', Resistencia:'10 ATM' },
-    description:'AMOLED 1.43" en acero inoxidable. Navegación offline con mapas topográficos y métricas de rendimiento avanzadas.' },
-  { id:9,  name:'Fitbit Versa 4',          brand:'Fitbit',          category:'relojes',    price:199, oldPrice:229,  badge:'Google',
-    image: 'https://www.heartratemonitorsusa.com/cdn/shop/products/heartratemonitorsusa-com-black-fitbit-versa-4-smartwatch-32134887866541.jpg?v=1661340456&width=600',
-    images: ['https://www.heartratemonitorsusa.com/cdn/shop/products/heartratemonitorsusa-com-black-fitbit-versa-4-smartwatch-32134887866541.jpg?v=1661340456&width=600','https://fdn2.gsmarena.com/vv/bigpic/fitbit-versa-4.jpg','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Sueño:'Google Sleep', Batería:'6 días', Pantalla:'AMOLED 1.58"', Resistencia:'5 ATM' },
-    description:'Google Maps, Google Wallet y Alexa integrados. Daily Readiness Score y compatible con Android e iOS.' },
-
-  // ANILLOS
-  { id:10, name:'Oura Ring 4 Oro',         brand:'Oura',            category:'anillos',    price:349, oldPrice:null, badge:'Top Ventas',
-    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-gold.png',
-    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
-    description:'El anillo de salud más avanzado del mundo. Titanio dorado ligero, 8 días de batería y seguimiento 24/7.' },
-  { id:11, name:'Oura Ring 4 Plata',       brand:'Oura',            category:'anillos',    price:299, oldPrice:null, badge:'Nuevo Gen 4',
-    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-silver.png',
-    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
-    description:'Generation 4 en plateado. Readiness Score mejorado, detección de ciclo menstrual y SpO2 continuo.' },
-  { id:12, name:'Oura Ring 4 Negro',       brand:'Oura',            category:'anillos',    price:299, oldPrice:null, badge:null,
-    image: 'https://ourahealth.imgix.net/blue-sky/pop/gen4/finishes-carousel-slide-black.png',
-    specs:{ Sensores:'18 sensores', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Avanzado', Batería:'8 días', Resistencia:'100m', 'Sin Pantalla':'Sí' },
-    description:'Edición stealth en titanio negro. Sin pantalla, máxima discreción. Monitorización 24/7 de salud completa.' },
-  { id:13, name:'Samsung Galaxy Ring',     brand:'Samsung',         category:'anillos',    price:349, oldPrice:399,  badge:'Galaxy AI',
-    image: 'https://images.samsung.com/uk/galaxy-ring/feature/galaxy-ring-kv-startframe-pc.jpg',
-    specs:{ Sensores:'Avanzados', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Galaxy Sleep', Batería:'7 días', Resistencia:'10 ATM', 'Sin Pantalla':'Sí' },
-    description:'Integración total con Galaxy AI y Energy Score personalizado. Compatible con todos los dispositivos Samsung Galaxy.' },
-  { id:14, name:'Circular Ring Slim',      brand:'Circular',        category:'anillos',    price:299, oldPrice:329,  badge:'Europeo',
-    image: 'https://cdn.prod.website-files.com/5c9cf810e0682292a9da04b8/67405d8273fdaa216e875aa7_Circular%20Official%202025%20-%20Black.png',
-    specs:{ Sensores:'Multi', HRV:'Sí', SpO2:'Sí', Temperatura:'Sí', Sueño:'Sí', Batería:'5 días', Resistencia:'5 ATM', 'Sin Pantalla':'Sí' },
-    description:'Startup francesa. El anillo inteligente más delgado del mercado con app Circular Premium incluida.' },
-
-  // AURICULARES
-  { id:15, name:'Jabra Elite 10',          brand:'Jabra',           category:'auriculares', price:249, oldPrice:299, badge:'ANC Pro',
-    image: 'https://assets2.jabra.com/b/7/5/b/b75b82be7fd5871ad06b603ffc74a492d31fe2fd_1_Elite_10_Cream.png',
-    specs:{ ANC:'MultiSensor', Batería:'6h + 27h', Resistencia:'IP57', Driver:'10mm', Multipoint:'Sí', Codec:'SBC/AAC/LC3' },
-    description:'ANC MultiSensor con Dolby Audio y ComfortFit. Los earbuds de referencia de Jabra para uso profesional.' },
-  { id:16, name:'Jabra Elite 4 Active',    brand:'Jabra',           category:'auriculares', price:99,  oldPrice:129, badge:'Sport',
-    image: 'https://c1.neweggimages.com/productimage/nb640/AFWTD2201170ZQE7EC3.jpg',
-    specs:{ ANC:'Ajustable', Batería:'7h + 21h', Resistencia:'IP57', Driver:'6mm', Multipoint:'Sí', Codec:'SBC/AAC' },
-    description:'IP57 para entrenamientos intensos. ANC ajustable y modo HearThrough. Perfecto para gym y running.' },
-  { id:17, name:'Sennheiser Momentum 4',   brand:'Sennheiser',      category:'auriculares', price:279, oldPrice:349, badge:'60H Batería',
-    image: 'https://us.sennheiser-hearing.com/cdn/shop/files/MOMENTUM_4_Black.jpg?v=1759511980',
-    specs:{ ANC:'Adaptive', Batería:'60h', Resistencia:'IP54', Driver:'42mm', Multipoint:'Sí', Codec:'aptX Adaptive' },
-    description:'60 horas de batería líder de mercado. Adaptive ANC y ecualizador paramétrico. Audio Hi-Fi alemán.' },
-  { id:18, name:'Sennheiser MOMENTUM TW3', brand:'Sennheiser',      category:'auriculares', price:199, oldPrice:249, badge:'Hi-Fi TWS',
-    image: 'https://us.sennheiser-hearing.com/cdn/shop/files/Screenshot2024-02-12132746_47cb7128-5cbb-4f06-885c-5da9a21d3277.png?v=1767999878',
-    specs:{ ANC:'Adaptativo', Batería:'7h + 28h', Resistencia:'IPX4', Driver:'7mm', Multipoint:'Sí', Codec:'aptX' },
-    description:'True Wireless con ANC adaptativo y sonido de firma Sennheiser. Compatible con Google Assistant y Alexa.' },
-  { id:19, name:'B&O Beoplay EX',          brand:'Bang & Olufsen',  category:'auriculares', price:399, oldPrice:449, badge:'Lujo',
-    image: 'https://images.ctfassets.net/8cd2csgvqd3m/7AdyFHvn7QPcZ9aMbfEewY/033578369b617f673a919aa98ff4b4db/Beoplay-EX-Black-Anthracite-Hero.png?q=85&fm=png&w=600&h=600&fit=fill',
-    specs:{ ANC:'Adaptive B&O', Batería:'6h + 14h', Resistencia:'IP57', Driver:'9.2mm', Multipoint:'No', Codec:'aptX Adaptive' },
-    description:'Diseño danés premiado en aluminio anodizado. ANC Adaptive con algoritmo exclusivo B&O y sonido de firma única.' },
-  { id:20, name:'Bose QC Ultra Earbuds',   brand:'Bose',            category:'auriculares', price:299, oldPrice:349, badge:'Mejor ANC',
-    image: 'https://assets.bosecreative.com/transform/bb7b1552-1001-446f-bfd5-f7e2c4ee31ee/QCUEII_DeepPlum_Ecomm-Gallery-1-1634x1224?format=webp&quality=90&io=width:600,height:600,transform:fit',
-    specs:{ ANC:'WorldClass', Batería:'6h + 24h', Resistencia:'IPX4', Driver:'9.3mm', Multipoint:'Sí', Codec:'SBC/AAC/aptX' },
-    description:'El mejor ANC del mundo según pruebas independientes. Immersive Audio con detección de movimiento de cabeza.' },
-  { id:21, name:'Bose QuietComfort 45',    brand:'Bose',            category:'auriculares', price:279, oldPrice:329, badge:'Over-Ear',
-    image: 'https://assets.bosecreative.com/transform/788fa4e9-26f2-4c34-ba4b-be028d456603/QC45_WhiteSmoke_001_RGB?io=width:600,height:600,transform:fit',
-    specs:{ ANC:'QuietComfort', Batería:'24h', Resistencia:'IPX4', Driver:'40mm', Multipoint:'Sí', Codec:'SBC/AAC' },
-    description:'La diadema icónica con ANC más confortable del mercado. TriPort acoustic y comodidad para horas de uso.' },
-
-  // GAFAS
-  { id:22, name:'Ray-Ban Meta Wayfarer',   brand:'Ray-Ban Meta',    category:'gafas',      price:329, oldPrice:null, badge:'Meta AI',
-    image: 'https://lookaside.fbsbx.com/elementpath/media/?media_id=1556964719066752&version=1776971541&transcode_extension=webp',
-    specs:{ Cámara:'12MP', Audio:'Altavoces Abiertos', Batería:'4h / 36h caja', IA:'Meta AI', Resistencia:'IPX4', Bluetooth:'5.3' },
-    description:'Cámara 12MP, altavoces abiertos y Meta AI para responder preguntas sobre lo que ves. El Wayfarer reinventado.' },
-  { id:23, name:'Ray-Ban Meta Headliner',  brand:'Ray-Ban Meta',    category:'gafas',      price:379, oldPrice:null, badge:'Nuevo 2024',
-    image: 'https://assets.lensdirect.com/uploads/images/full/LDRayBanStock_20240901_713e363efe952f81552661f8dbc926a8.jpg',
-    specs:{ Cámara:'12MP', Audio:'Altavoces Abiertos', Batería:'4h / 36h caja', IA:'Meta AI', Resistencia:'IPX4', Bluetooth:'5.3' },
-    description:'Forma hexagonal exclusiva con Meta AI, cámara 12MP y altavoces de apertura acústica. Edición 2024.' },
-  { id:24, name:'Bose Frames Tempo',       brand:'Bose',            category:'gafas',      price:199, oldPrice:229,  badge:'Sport',
-    image: 'https://c1.neweggimages.com/productimage/nb640/26-627-114-S04.jpg',
-    specs:{ Cámara:'No', Audio:'Bose Open Ear', Batería:'8h', IA:'Alexa', Resistencia:'IPX4', Bluetooth:'5.1' },
-    description:'Diseñadas para deporte activo. Audio abierto Bose, lentes polarizadas intercambiables y resistencia IPX4.' },
-  { id:25, name:'Bose Frames Alto',        brand:'Bose',            category:'gafas',      price:229, oldPrice:249,  badge:'Clásico',
-    image: 'https://c1.neweggimages.com/productimage/nb640/26-627-097-S01.jpg',
-    specs:{ Cámara:'No', Audio:'Bose Open Ear', Batería:'5.5h', IA:'Alexa', Resistencia:'IPX4', Bluetooth:'5.1' },
-    description:'Marco cuadrado premium con altavoces abiertos Bose y sonido espacial privado. Diseño clásico en acetato.' },
-  { id:26, name:'Huawei Eyewear 2',        brand:'Huawei',          category:'gafas',      price:199, oldPrice:229,  badge:'Hi-Res Audio',
-    image: 'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/audio/huawei-eyewear-2/new/img/kv/huawei-eyewear-2-kv.jpg',
-    specs:{ Cámara:'No', Audio:'Hi-Res Dual', Batería:'11h', IA:'Celia AI', Resistencia:'IP54', Bluetooth:'5.2' },
-    description:'Certificación Hi-Res Audio con doble altavoz y 11 horas de batería. Diseño óptico intercambiable en ópticos.' },
-
-  // ALTAVOCES
-  { id:27, name:'Sonos Roam 2',            brand:'Sonos',           category:'altavoces',  price:179, oldPrice:199,  badge:'Portátil',
-    image: 'https://imageresizer.linksunlimited.com/Product/UID/4662d985-15a5-4c9a-8b8b-9b079ee23b7c.png',
-    specs:{ Batería:'10h', Resistencia:'IP67', Potencia:'10W', WiFi:'Sí', Bluetooth:'5.0', Multiroom:'Sonos Ecosystem' },
-    description:'WiFi + Bluetooth, True Play automático y carga inalámbrica. El portátil del ecosistema Sonos. IP67.' },
-  { id:28, name:'Sonos Era 100',           brand:'Sonos',           category:'altavoces',  price:279, oldPrice:null, badge:'Estéreo',
-    image: 'https://www.turntablelab.com/cdn/shop/files/sonos-era-100-speaker-black.jpg?v=1762284236',
-    specs:{ Batería:'Con cable', Resistencia:'No', Potencia:'2×25W', WiFi:'Sí', Bluetooth:'5.0', Multiroom:'Sonos Ecosystem' },
-    description:'Sonido estéreo verdadero desde un altavoz compacto. Trueplay, Apple AirPlay 2 y WiFi dual band.' },
-  { id:29, name:'Marshall Emberton III',   brand:'Marshall',        category:'altavoces',  price:109, oldPrice:129,  badge:'32H Rock',
-    image: 'https://c1.neweggimages.com/productimage/nb640/A15TD2501291EAF8M22.jpg',
-    specs:{ Batería:'32h', Resistencia:'IP67', Potencia:'20W', WiFi:'No', Bluetooth:'5.3', Multiroom:'No' },
-    description:'32 horas de batería siendo el líder de mercado en su rango. IP67 y sonido 360° con firma Marshall.' },
-  { id:30, name:'Marshall Tufton',         brand:'Marshall',        category:'altavoces',  price:399, oldPrice:449,  badge:'80W',
-    image: 'https://c1.neweggimages.com/productimage/nb640/B7VES22052815LVKZD4.jpg',
-    specs:{ Batería:'20h', Resistencia:'IPX2', Potencia:'80W', WiFi:'No', Bluetooth:'5.0', Multiroom:'Stack Mode' },
-    description:'80W de potencia pura con graves profundos. Stack Mode para emparejar dos Tufton. El más potente de Marshall.' },
-  { id:31, name:'B&O Beolit 20',           brand:'Bang & Olufsen',  category:'altavoces',  price:449, oldPrice:499,  badge:'Premium 90W',
-    image: 'https://images.ctfassets.net/8cd2csgvqd3m/3rUMHE0GRKR0eACCntNBlr/2dc73adfb01a3bbf79e19f12578376d5/BL20_Grey_iphone_2.png',
-    specs:{ Batería:'37h', Resistencia:'IP67', Potencia:'90W', WiFi:'No', Bluetooth:'5.1', Multiroom:'No' },
-    description:'Diseño danés con mango de cuero y aluminio. 90W, 37h batería, IP67 y sonido 360° con firma B&O.' },
-  { id:32, name:'JBL Charge 5',            brand:'JBL',             category:'altavoces',  price:169, oldPrice:199,  badge:'Power Bank',
-    image: 'https://c1.neweggimages.com/productimage/nb640/A1J7D210419S5QJH.jpg',
-    specs:{ Batería:'20h', Resistencia:'IP67', Potencia:'40W', WiFi:'No', Bluetooth:'5.1', Multiroom:'PartyBoost' },
-    description:'Power bank integrado para cargar tu móvil. JBL PartyBoost, 40W de potencia y bajos profundos. IP67.' },
-  { id:33, name:'Bose SoundLink Flex',     brand:'Bose',            category:'altavoces',  price:149, oldPrice:179,  badge:'Flota en Agua',
-    image: 'https://c1.neweggimages.com/productimage/nb640/55-772-054-V07.jpg',
-    specs:{ Batería:'12h', Resistencia:'IP67', Potencia:'20W', WiFi:'No', Bluetooth:'5.3', Multiroom:'No' },
-    description:'Flota en el agua. PositionIQ para sonido óptimo en cualquier posición. El compañero perfecto al aire libre.' },
-
-  // MÁSCARAS LED
-  { id:34, name:'CurrentBody Skin LED',        brand:'CurrentBody',      category:'mascaras', price:299, oldPrice:349, badge:'FDA · 264 LEDs',
-    image: 'https://us.currentbody.com/cdn/shop/files/1_3c4dd6ee-ff67-4a7b-90a7-dceac5d1fb44_800x.png',
-    specs:{ Longitudes:'633nm + 830nm', LEDs:'264', Sesión:'10 min', Frecuencia:'Diario', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
-    description:'La favorita de los dermatólogos. 264 LEDs rojo e infrarrojo para estimular el colágeno. Certificada FDA.' },
-  { id:35, name:'Omnilux Contour Face',        brand:'Omnilux',          category:'mascaras', price:395, oldPrice:null, badge:'Uso Médico',
-    image: 'https://cdn.shopify.com/s/files/1/0482/6736/2466/files/Contour_Face_Cover_Image.jpg?v=1756958460&width=600',
-    specs:{ Longitudes:'633nm + 830nm', LEDs:'132', Sesión:'10 min', Frecuencia:'3x/semana', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
-    description:'La máscara LED usada en clínicas médicas estéticas. Panel LED flexible que se adapta a todos los contornos.' },
-  { id:36, name:'Dr. Dennis Gross SpectraLite', brand:'Dr. Dennis Gross', category:'mascaras', price:395, oldPrice:null, badge:'Triple Onda',
-    image: 'https://www.drdennisgross.com/dw/image/v2/BBSK_PRD/on/demandware.static/-/Sites-itemmaster_ddg/default/dw4e54ef8d/2025/October/FaceWarePro/01_DRx_FWP_OnWhite.jpg',
-    specs:{ Longitudes:'630nm + 415nm + 850nm', LEDs:'162', Sesión:'3 min', Frecuencia:'Diario', Cobertura:'Cara completa', Certificación:'FDA Cleared' },
-    description:'Triple longitud de onda: rojo antienvejecimiento + azul anti-acné + infrarrojo reparador. Solo 3 minutos.' },
-  { id:37, name:'Foreo UFO 3',                 brand:'Foreo',            category:'mascaras', price:329, oldPrice:369,  badge:'Smart 90s',
-    image: 'https://assets.foreo.com/files/static/2025-12/ecomm_UFO-3_Pink_1.webp',
-    specs:{ Longitudes:'617nm + 830nm + 415nm', LEDs:'Array LED', Sesión:'90 segundos', Frecuencia:'Diario', Cobertura:'Cara', Certificación:'Dermatólogos' },
-    description:'LED + crioterapia + termoterapia + masaje en 90 segundos. App Foreo para rutinas personalizadas. Sueco.' },
-  { id:38, name:'NuFace Trinity+',             brand:'NuFace',           category:'mascaras', price:289, oldPrice:329,  badge:'Microcorrientes',
-    image: 'https://www.mynuface.com/cdn/shop/files/01_Silo_Trinity_Complete.jpg?v=1777906292&width=600',
-    specs:{ Longitudes:'630nm + 830nm', LEDs:'ELE Attachment', Sesión:'5 min', Frecuencia:'Diario', Cobertura:'Cara + cuello', Certificación:'FDA Cleared' },
-    description:'Microcorrientes + LED rojo e infrarrojo. Define el contorno facial y reduce arrugas en 4 semanas. Clínico.' },
-
-  // APPLE WATCH
-  { id:39, name:'Apple Watch Series 11 42mm GPS',        brand:'Apple',   category:'relojes', price:449, oldPrice:null, badge:'Nuevo',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-s11-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=dWNxM2FBcWh6K3lqd1ZDZ0J0SmQzekFLdnpTWVk5T2JjWkxmaUh4TE96K0Fhc0dPaExJNGphZ3FWVWlwSk9MUjd1Z1M3bThWSUVZMVcrMUZmTjBCLzQ3emJ1eTV0WHMvNWc0cG1uZVhXdEU',
-    images: ['https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-s11-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=dWNxM2FBcWh6K3lqd1ZDZ0J0SmQzekFLdnpTWVk5T2JjWkxmaUh4TE96K0Fhc0dPaExJNGphZ3FWVWlwSk9MUjd1Z1M3bThWSUVZMVcrMUZmTjBCLzQ3emJ1eTV0WHMvNWc0cG1uZVhXdEU','https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-case-40-aluminum-jetblack-nc-s10-202409?wid=800&hei=800&fmt=jpeg&qlt=90','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'24h (38h ahorro)', Pantalla:'OLED 42mm LTPO3 2000nits', Resistencia:'50m IP6X' },
-    description:'Apple Watch más avanzado de la gama estándar. OLED siempre activa, chip S10, notificaciones de hipertensión y rastreo avanzado del sueño.' },
-  { id:40, name:'Apple Watch Ultra 3 49mm GPS+Cellular',  brand:'Apple',   category:'relojes', price:899, oldPrice:null, badge:'Premium',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-ultra3-202509_GEO_ES?wid=520&hei=520&fmt=jpeg&qlt=90&.v=L2VSQkd4TDVJZ2FsTFA2bmpPOGRLTEh2d2I2QWRZY0NRMFJRd2UzeExSdm5SQmsxVmliMnd1T3laeXdHNmljc2xyZTFMN3VtaTIzQW5MWDFYQUFpang4S0tkQVQyYmQ2NCt3czRObDFkd2YyYU5RRWFnZzRtNmJaTEJucmliNFU',
-    images: ['https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-ultra3-202509_GEO_ES?wid=520&hei=520&fmt=jpeg&qlt=90&.v=L2VSQkd4TDVJZ2FsTFA2bmpPOGRLTEh2d2I2QWRZY0NRMFJRd2UzeExSdm5SQmsxVmliMnd1T3laeXdHNmljc2xyZTFMN3VtaTIzQW5MWDFYQUFpang4S0tkQVQyYmQ2NCt3czRObDFkd2YyYU5RRWFnZzRtNmJaTEJucmliNFU','https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-case-49-titanium-natural-nc-ultra2-202409?wid=800&hei=800&fmt=jpeg&qlt=90','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble L1+L5', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'42h (72h ahorro)', Pantalla:'OLED 49mm LTPO3 3000nits', Resistencia:'100m IP6X' },
-    description:'El Apple Watch más extremo: titanio 49mm, resistente a 100m, GPS dual L1+L5 y hasta 72h en modo bajo consumo. Para aventuras sin límites.' },
-  { id:41, name:'Apple Watch SE 3 40mm GPS',              brand:'Apple',   category:'relojes', price:269, oldPrice:null, badge:'Más Vendido',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-se-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=eEpjZGlsbzI4YmtuR2pKQXNDTzZ5eThnZFRkdzMwY2NsY2I5Y3NQL214QzM2dk9rVWpEampSQXBqK3dUclB1WEdjSkVFV1FxeHRkZDFvRXAwaDZkVGRCVnRkbnoxcUU4aG9vT2t1SVBnd28',
-    images: ['https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-se-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=eEpjZGlsbzI4YmtuR2pKQXNDTzZ5eThnZFRkdzMwY2NsY2I5Y3NQL214QzM2dk9rVWpEampSQXBqK3dUclB1WEdjSkVFV1FxeHRkZDFvRXAwaDZkVGRCVnRkbnoxcUU4aG9vT2t1SVBnd28','https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-case-40-aluminum-starlight-nc-se-202309?wid=800&hei=800&fmt=jpeg&qlt=90','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'No', Batería:'18h (32h ahorro)', Pantalla:'OLED Retina 40mm 1000nits', Resistencia:'50m' },
-    description:'La opción más asequible de Apple Watch. Chip S10, detección de caídas y accidentes, y hasta 18h de batería para el día a día.' },
-  { id:42, name:'Apple Watch Series 11 46mm GPS',         brand:'Apple',   category:'relojes', price:479, oldPrice:null, badge:'Nuevo',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-s11-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=dWNxM2FBcWh6K3lqd1ZDZ0J0SmQzekFLdnpTWVk5T2JjWkxmaUh4TE96K0Fhc0dPaExJNGphZ3FWVWlwSk9MUjd1Z1M3bThWSUVZMVcrMUZmTjBCLzQ3emJ1eTV0WHMvNWc0cG1uZVhXdEU',
-    images: ['https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-s11-202509?wid=520&hei=520&fmt=jpeg&qlt=90&.v=dWNxM2FBcWh6K3lqd1ZDZ0J0SmQzekFLdnpTWVk5T2JjWkxmaUh4TE96K0Fhc0dPaExJNGphZ3FWVWlwSk9MUjd1Z1M3bThWSUVZMVcrMUZmTjBCLzQ3emJ1eTV0WHMvNWc0cG1uZVhXdEU','https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-case-44-aluminum-jetblack-nc-s10-202409?wid=800&hei=800&fmt=jpeg&qlt=90','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'24h (38h ahorro)', Pantalla:'OLED 46mm LTPO3 2000nits', Resistencia:'50m IP6X' },
-    description:'Apple Watch Series 11 en tamaño grande 46mm con mayor pantalla OLED, sensor de temperatura, ECG y seguimiento avanzado del sueño.' },
-  { id:43, name:'Apple Watch Hermès Series 11 42mm',      brand:'Apple',   category:'relojes', price:1399, oldPrice:null, badge:'Premium',
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-hermes-ultra-202409_FMT_WHH?wid=508&hei=472&fmt=p-jpg&qlt=95&.v=1724168057094',
-    images: ['https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-hermes-ultra-202409_FMT_WHH?wid=508&hei=472&fmt=p-jpg&qlt=95&.v=1724168057094','https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-case-46-titanium-natural-nc-hermes-202409?wid=800&hei=800&fmt=jpeg&qlt=90','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'24h (38h ahorro)', Pantalla:'OLED 42mm LTPO3 2000nits', Resistencia:'50m IP6X' },
-    description:'Edición de lujo Apple Watch × Hermès: caja de titanio grabada, correas de cuero francés artesanal y esferas exclusivas de la maison parisina.' },
-
-  // SAMSUNG GALAXY WATCH
-  { id:44, name:'Samsung Galaxy Watch 7 44mm',            brand:'Samsung', category:'relojes', price:299, oldPrice:null, badge:'Nuevo',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch7.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch7.jpg','https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-watch7-1.jpg','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble L1+L5', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'40h GPS', Pantalla:'AMOLED 1.5" 480×480', Resistencia:'5 ATM IP68' },
-    description:'Galaxy Watch 7 con procesador Exynos W1000 de 3nm, GPS dual L1+L5 y el sensor BioActive más avanzado de Samsung. Galaxy AI incluido.' },
-  { id:45, name:'Samsung Galaxy Watch Ultra 47mm',         brand:'Samsung', category:'relojes', price:649, oldPrice:null, badge:'Premium',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-ultra.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-ultra.jpg','https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-watch-ultra-1.jpg','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble L1+L5', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'60h GPS', Pantalla:'AMOLED 1.5" titanio', Resistencia:'10 ATM IP68 MIL-810' },
-    description:'El Galaxy Watch más resistente jamás fabricado: cuerpo de titanio, 10 ATM, certificación MIL-810G y hasta 60h con GPS activo.' },
-  { id:46, name:'Samsung Galaxy Watch FE 40mm',            brand:'Samsung', category:'relojes', price:199, oldPrice:229, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-fe.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch-fe.jpg','https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-watch-fe-1.jpg','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'40h GPS', Pantalla:'AMOLED 1.2" 396×396', Resistencia:'5 ATM IP68' },
-    description:'Galaxy Watch Fan Edition: todas las funciones Galaxy AI esenciales a precio accesible. ECG, SpO2 y Samsung Pay incluidos.' },
-  { id:47, name:'Samsung Galaxy Watch 6 Classic 47mm',     brand:'Samsung', category:'relojes', price:249, oldPrice:299, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6-classic.jpg','https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-watch6-classic-1.jpg','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'44h GPS', Pantalla:'AMOLED 1.5" bisel giratorio', Resistencia:'5 ATM IP68' },
-    description:'El único smartwatch con bisel giratorio físico. Diseño relojero clásico con las funciones de salud más completas de Samsung.' },
-  { id:48, name:'Samsung Galaxy Watch 6 40mm',             brand:'Samsung', category:'relojes', price:179, oldPrice:199, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-watch6.jpg','https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-watch6-1.jpg','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'40h GPS', Pantalla:'AMOLED 1.3" 432×432', Resistencia:'5 ATM IP68' },
-    description:'Galaxy Watch 6 compacto con pantalla 18% mayor que su predecesor. Monitorización avanzada del sueño con análisis de ciclos completo.' },
-
-  // GOOGLE PIXEL WATCH / FITBIT
-  { id:49, name:'Google Pixel Watch 3 41mm',               brand:'Google',  category:'relojes', price:349, oldPrice:399, badge:'Nuevo',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch3-.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch3-.jpg','https://fdn2.gsmarena.com/vv/pics/google/google-pixel-watch3-1.jpg','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'24h (72h ahorro)', Pantalla:'LTPO AMOLED 1.2" 2000nits', Resistencia:'5 ATM IP68' },
-    description:'Smartwatch Google con métricas Fitbit de carrera avanzadas, detección de caídas, Google Assistant y monitorización continua cardíaca.' },
-  { id:50, name:'Google Pixel Watch 3 45mm',               brand:'Google',  category:'relojes', price:399, oldPrice:449, badge:'Nuevo',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch3-.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch3-.jpg','https://fdn2.gsmarena.com/vv/pics/google/google-pixel-watch3-45-1.jpg','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'36h (72h ahorro)', Pantalla:'LTPO AMOLED 1.4" 2000nits', Resistencia:'5 ATM IP68' },
-    description:'Versión grande del Pixel Watch 3 con mayor pantalla y batería 420mAh. Seguimiento avanzado de running con análisis de pisada.' },
-  { id:51, name:'Google Pixel Watch 2',                    brand:'Google',  category:'relojes', price:199, oldPrice:399, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch2-.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/google-pixel-watch2-.jpg','https://fdn2.gsmarena.com/vv/pics/google/google-pixel-watch2-1.jpg','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'24h AOD', Pantalla:'AMOLED 1.2" 320ppi', Resistencia:'5 ATM IP68' },
-    description:'Smartwatch Google con sensores Fitbit integrados para monitorización de salud y estrés. Diseño circular en aluminio reciclado.' },
-  { id:52, name:'Fitbit Sense 2',                          brand:'Fitbit',  category:'relojes', price:169, oldPrice:299, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/fitbit-sense-2.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/fitbit-sense-2.jpg','https://fdn2.gsmarena.com/vv/pics/fitbit/fitbit-sense-2-1.jpg','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'6 días', Pantalla:'AMOLED 1.58"', Resistencia:'5 ATM' },
-    description:'Fitbit premium con ECG, sensor electrodermal para gestión del estrés y GPS integrado. Hasta 6 días de batería con salud completa.' },
-  { id:53, name:'Fitbit Charge 6',                         brand:'Fitbit',  category:'relojes', price:139, oldPrice:159, badge:'Google',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/fitbit-charge-6.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/fitbit-charge-6.jpg','https://fdn2.gsmarena.com/vv/pics/fitbit/fitbit-charge-6-1.jpg','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'7 días', Pantalla:'AMOLED 1.04"', Resistencia:'5 ATM' },
-    description:'Pulsera Fitbit más avanzada con GPS integrado, ECG, Google Maps y Google Wallet. 7 días de batería y zona de entrenamiento activa.' },
-
-  // HUAWEI WATCH
-  { id:54, name:'Huawei Watch GT 4 46mm',                  brand:'Huawei',  category:'relojes', price:169, oldPrice:249, badge:'Oferta',
-    image: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/new/images/watch-gt-4-kv.jpg',
-    images: ['https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/new/images/watch-gt-4-kv.jpg','https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt4/new/images/watch-gt-4-46mm-brown-strap-1.jpg','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble banda', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'14 días', Pantalla:'AMOLED 1.43" 466×466', Resistencia:'5 ATM' },
-    description:'Diseño octogonal premium con GPS de doble banda y más de 100 modos deportivos. 14 días de batería y análisis avanzado de salud.' },
-  { id:55, name:'Huawei Watch GT 5 46mm',                  brand:'Huawei',  category:'relojes', price:249, oldPrice:null, badge:'Nuevo',
-    image: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt5/new/images/watch-gt5-kv.jpg',
-    images: ['https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt5/new/images/watch-gt5-kv.jpg','https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-gt5/new/images/watch-gt5-46mm-brown.jpg','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble 5 sistemas', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'14 días', Pantalla:'AMOLED 1.43" 466×466', Resistencia:'5 ATM IP69K' },
-    description:'Última generación GT con GPS 5 sistemas doble banda, IP69K y carcasa de acero inoxidable premium. Algoritmo TrueSeen 5.5+.' },
-  { id:56, name:'Huawei Watch Fit 3',                      brand:'Huawei',  category:'relojes', price:109, oldPrice:159, badge:'Oferta',
-    image: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-fit3/new/images/watch-fit-3-kv.jpg',
-    images: ['https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-fit3/new/images/watch-fit-3-kv.jpg','https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-fit3/new/images/watch-fit-3-black-strap-1.jpg','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'10 días', Pantalla:'AMOLED 1.82" 480×408', Resistencia:'5 ATM' },
-    description:'Smartwatch ultradelgado con pantalla AMOLED de 1,82", GPS integrado y más de 100 modos deportivos. 10 días de autonomía.' },
-  { id:57, name:'Huawei Watch Ultimate',                   brand:'Huawei',  category:'relojes', price:749, oldPrice:null, badge:'Premium',
-    image: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-ultimate/new/images/kv/huawei-watch-ultimate-kv_thumb.jpg',
-    images: ['https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-ultimate/new/images/kv/huawei-watch-ultimate-kv_thumb.jpg','https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-ultimate/new/images/kv/huawei-watch-ultimate-design-kv.jpg','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble banda', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'14 días', Pantalla:'LTPO AMOLED 1.5" zafiro', Resistencia:'100m buceo' },
-    description:'El smartwatch más premium de Huawei en metal líquido y cristal de zafiro. Resistente a 100m para buceo recreativo.' },
-  { id:58, name:'Huawei Watch D2',                         brand:'Huawei',  category:'relojes', price:349, oldPrice:399, badge:'Nuevo',
-    image: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-d2/all/huawei-watch-d-2-kv.jpg',
-    images: ['https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-d2/all/huawei-watch-d-2-kv.jpg','https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/watch-d2/all/huawei-watch-d-2-features.jpg','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'6 días', Pantalla:'AMOLED 1.82" 1500nits', Resistencia:'IPX8' },
-    description:'Smartwatch médico Huawei con medición de presión arterial y detección de arritmias. Seguimiento cardiovascular clínico en la muñeca.' },
-
-  // XIAOMI / REDMI
-  { id:59, name:'Xiaomi Watch S4',                         brand:'Xiaomi',  category:'relojes', price:114, oldPrice:139, badge:'Premium',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s4.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/xiaomi-watch-s4.jpg','https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-watch-s4-1.jpg','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble L1+L5', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'15 días', Pantalla:'AMOLED 1.43" 466×466', Resistencia:'5 ATM' },
-    description:'Smartwatch premium Xiaomi con GPS doble frecuencia L1+L5, NFC para pagos y hasta 15 días de autonomía con HyperOS 2.' },
-  { id:60, name:'Redmi Watch 5',                           brand:'Xiaomi',  category:'relojes', price:66, oldPrice:79, badge:'Más vendido',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch-5.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch-5.jpg','https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-watch-5-1.jpg','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'24 días', Pantalla:'AMOLED 2.07" 432×514', Resistencia:'5 ATM' },
-    description:'Gran pantalla AMOLED de 2,07", GPS integrado, NFC para pagos y hasta 24 días de batería. Más de 150 modos deportivos.' },
-  { id:61, name:'Redmi Watch 4',                           brand:'Xiaomi',  category:'relojes', price:79, oldPrice:null, badge:'',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch4.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch4.jpg','https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-watch4-1.jpg','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'20 días', Pantalla:'AMOLED 1.97" 450×390', Resistencia:'5 ATM' },
-    description:'Smartwatch Redmi con AMOLED de 1,97", GPS multisistema y hasta 20 días de autonomía. Ideal para deportistas con ajustado presupuesto.' },
-  { id:62, name:'Xiaomi Smart Band 9 Pro',                 brand:'Xiaomi',  category:'relojes', price:57, oldPrice:70, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-smart-band9-pro.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/xiaomi-smart-band9-pro.jpg','https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-smart-band9-pro-1.jpg','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'21 días', Pantalla:'AMOLED 1.74" 336×480', Resistencia:'5 ATM' },
-    description:'Pulsera avanzada con GPS integrado, pantalla AMOLED de 1,74" y 150 modos deportivos. Hasta 21 días de batería.' },
-  { id:63, name:'Redmi Watch 3 Active',                    brand:'Xiaomi',  category:'relojes', price:46, oldPrice:null, badge:'Nuevo',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch-3-active.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-watch-3-active.jpg','https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-watch-3-active-1.jpg','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'No', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'12 días', Pantalla:'LCD 1.83" 240×280', Resistencia:'5 ATM' },
-    description:'Smartwatch de entrada con llamadas Bluetooth, más de 100 modos deportivos y hasta 12 días de autonomía. Resistente 5ATM.' },
-
-  // ONEPLUS
-  { id:64, name:'OnePlus Watch 2',                         brand:'OnePlus', category:'relojes', price:178, oldPrice:203, badge:'Más vendido',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-2.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-2.jpg','https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-watch-2-1.jpg','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'100h', Pantalla:'AMOLED 1.43" zafiro', Resistencia:'IP68 5ATM MIL-810H' },
-    description:'Wear OS con arquitectura dual Snapdragon W5 + BES2700. Cristal de zafiro, hasta 100 horas de autonomía y certificación militar.' },
-  { id:65, name:'OnePlus Watch 2R',                        brand:'OnePlus', category:'relojes', price:136, oldPrice:249, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-2r.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-2r.jpg','https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-watch-2r-1.jpg','https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'100h', Pantalla:'AMOLED 1.43" 466×466', Resistencia:'IP68 5ATM' },
-    description:'Versión asequible del Watch 2 con Wear OS, AMOLED de 1,43" y hasta 100 horas de batería. GPS de doble frecuencia y NFC.' },
-  { id:66, name:'OnePlus Watch Lite',                      brand:'OnePlus', category:'relojes', price:139, oldPrice:159, badge:'Nuevo',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-3-lite.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/oneplus-watch-3-lite.jpg','https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-watch-3-lite-1.jpg','https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Sí', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'10 días', Pantalla:'AMOLED 1.46" 464×464', Resistencia:'IP68 5ATM' },
-    description:'El smartwatch más delgado de OnePlus (8,9mm), carcasa acero inoxidable 316L y más de 100 modos deportivos. 10 días de autonomía.' },
-
-  // OPPO
-  { id:67, name:'Oppo Watch X',                            brand:'Oppo',    category:'relojes', price:179, oldPrice:299, badge:'Oferta',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-x.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-x.jpg','https://fdn2.gsmarena.com/vv/pics/oppo/oppo-watch-x-1.jpg','https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble', ECG:'No', HRV:'Sí', SpO2:'Sí', Batería:'12 días', Pantalla:'AMOLED 1.43" zafiro', Resistencia:'IP68 5ATM' },
-    description:'Wear OS con Snapdragon W5 Gen 1, cristal de zafiro y caja de acero inoxidable. GPS doble frecuencia y hasta 12 días de batería.' },
-  { id:68, name:'Oppo Watch X2',                           brand:'Oppo',    category:'relojes', price:295, oldPrice:349, badge:'Premium',
-    image: 'https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-x2.jpg',
-    images: ['https://fdn2.gsmarena.com/vv/bigpic/oppo-watch-x2.jpg','https://fdn2.gsmarena.com/vv/pics/oppo/oppo-watch-x2-1.jpg','https://images.unsplash.com/photo-1617625802912-cde586faf331?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=85&auto=format&fit=crop','https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=85&auto=format&fit=crop'],
-    specs:{ GPS:'Doble L1+L5', ECG:'Sí', HRV:'Sí', SpO2:'Sí', Batería:'16 días', Pantalla:'LTPO AMOLED 1.5" 2200nits', Resistencia:'IP68 5ATM' },
-    description:'Buque insignia Oppo con LTPO AMOLED de 1,5" a 2200 nits, caja de titanio, ECG, GPS dual L1+L5 y hasta 16 días de autonomía.' }
-];
+const PRODUCTS = [];
 
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
@@ -557,7 +220,10 @@ function _syncQvGallery() {
 
 // ─── CART STATE ──────────────────────────────────────────────────────────────
 
-var cart = JSON.parse(localStorage.getItem('zt_cart') || '[]');
+var cart = JSON.parse(localStorage.getItem('zt_cart') || '[]').filter(function(item) {
+  return PRODUCTS.some(function(p) { return p.id === item.id; });
+});
+localStorage.setItem('zt_cart', JSON.stringify(cart));
 var comparatorItems = [];
 var rotateX = 0, rotateY = 0, dragging = false, lastX = 0, lastY = 0;
 
@@ -708,6 +374,22 @@ function renderProducts(filterKey, customFilter) {
   var filtered = category === 'todos' ? PRODUCTS : PRODUCTS.filter(function(p) { return p.category === category; });
   if (customFilter) filtered = filtered.filter(customFilter);
 
+  if (!filtered.length) {
+    grid.innerHTML =
+      '<div style="grid-column:1/-1;text-align:center;padding:96px 20px 80px;">' +
+        '<div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.14),rgba(168,85,247,.14));display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">' +
+          '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.4"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>' +
+        '</div>' +
+        '<h3 style="font-size:clamp(18px,3vw,24px);font-weight:700;color:var(--text-1);margin-bottom:12px;letter-spacing:-.02em;">Renovando nuestro catálogo</h3>' +
+        '<p style="font-size:15px;color:var(--text-3);max-width:460px;margin:0 auto 36px;line-height:1.75;">Próximamente nueva tecnología innovadora<br>de nuestros mejores proveedores europeos.</p>' +
+        '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">' +
+          '<a href="index.html" style="display:inline-flex;align-items:center;gap:8px;padding:13px 26px;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;font-family:inherit;">Volver al inicio</a>' +
+          '<button onclick="var b=document.getElementById(\'ai-open-btn\');if(b)b.click();" style="display:inline-flex;align-items:center;gap:8px;padding:13px 26px;background:transparent;border:1px solid rgba(99,102,241,.4);color:#6366f1;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;">Consultar al Asistente IA</button>' +
+        '</div>' +
+      '</div>';
+    return;
+  }
+
   grid.innerHTML = filtered.map(function(product) {
     var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
@@ -765,7 +447,18 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     filtered = filtered.filter(function(p) { return p.brand === bDecoded; });
   }
   if (!filtered.length) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--text-3)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 16px;display:block;opacity:.4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>No se encontraron productos</p></div>';
+    grid.innerHTML =
+      '<div style="grid-column:1/-1;text-align:center;padding:96px 20px 80px;">' +
+        '<div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,rgba(99,102,241,.14),rgba(168,85,247,.14));display:flex;align-items:center;justify-content:center;margin:0 auto 28px;">' +
+          '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(99,102,241,.8)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>' +
+        '</div>' +
+        '<h3 style="font-size:1.35rem;font-weight:700;color:var(--text-1);margin:0 0 12px;">Renovando nuestro catálogo</h3>' +
+        '<p style="color:var(--text-3);font-size:.97rem;line-height:1.6;max-width:380px;margin:0 auto 32px;">Próximamente nueva tecnología innovadora<br>de nuestros mejores proveedores europeos.</p>' +
+        '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">' +
+          '<a href="index.html" style="padding:11px 26px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;text-decoration:none;">Volver al inicio</a>' +
+          '<button onclick="var b=document.getElementById(\'ai-open-btn\');if(b)b.click();" style="padding:11px 26px;border-radius:10px;border:1.5px solid var(--border);background:transparent;color:var(--text-1);font-weight:600;font-size:.92rem;cursor:pointer;">Consultar al Asistente IA</button>' +
+        '</div>' +
+      '</div>';
     return 0;
   }
   grid.innerHTML = filtered.map(function(product) {
