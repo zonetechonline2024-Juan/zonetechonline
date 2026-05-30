@@ -13,7 +13,134 @@ const FILTER_MAP = {
 };
 
 // ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
-const PRODUCTS = [];
+// Fuente: Depau.es — scraping 30/05/2026 — 5 productos Xiaomi ordenados por precio ascendente
+const PRODUCTS = [
+
+  // ── 1 · Precio más bajo ──────────────────────────────────────────────────
+  {
+    id: 1,
+    name: 'Xiaomi Mi In Ear Basic',
+    brand: 'Xiaomi',
+    category: 'auriculares',
+    price: 7.95,
+    oldPrice: 12.99,
+    badge: 'Oferta',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%2014273_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%2014273_1.jpg'
+    ],
+    description: 'Auriculares intrauditivos con cable y micrófono integrado. Conector Jack 3.5mm universal. Drivers dinámicos de 10mm para graves profundos. Color negro.',
+    specs: {
+      'Tipo': 'Intrauditivos con cable',
+      'Conector': 'Jack 3.5mm',
+      'Micrófono': 'Sí, integrado',
+      'Color': 'Negro',
+      'P/N Depau': 'ZBW4354TY',
+      'SKU': 'XIA-AUR 14273'
+    }
+  },
+
+  // ── 2 ───────────────────────────────────────────────────────────────────
+  {
+    id: 2,
+    name: 'Xiaomi Redmi Buds 6 Active Negro',
+    brand: 'Xiaomi',
+    category: 'auriculares',
+    price: 24.95,
+    oldPrice: 34.99,
+    badge: 'Nuevo 2026',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20bk_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20bk_1.jpg'
+    ],
+    description: 'Auriculares Bluetooth True Wireless con estuche de carga. Autonomía 6h (auricular) + 24h (estuche). Reducción de ruido ambiental. Color negro.',
+    specs: {
+      'Tipo': 'True Wireless Bluetooth',
+      'Autonomía': '6h + 24h (estuche)',
+      'Reducción ruido': 'ENC activo',
+      'Color': 'Negro',
+      'P/N Depau': 'BHR8396GL',
+      'SKU': 'XIA-AUR REDMI BUDS 6 ACT BK'
+    }
+  },
+
+  // ── 3 ───────────────────────────────────────────────────────────────────
+  {
+    id: 3,
+    name: 'Xiaomi Redmi Buds 6 Active Blanco',
+    brand: 'Xiaomi',
+    category: 'auriculares',
+    price: 24.95,
+    oldPrice: 34.99,
+    badge: 'Nuevo 2026',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20wh_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-aur%20redmi%20buds%206%20act%20wh_1.jpg'
+    ],
+    description: 'Auriculares Bluetooth True Wireless con estuche de carga. Autonomía 6h (auricular) + 24h (estuche). Reducción de ruido ambiental. Color blanco.',
+    specs: {
+      'Tipo': 'True Wireless Bluetooth',
+      'Autonomía': '6h + 24h (estuche)',
+      'Reducción ruido': 'ENC activo',
+      'Color': 'Blanco',
+      'P/N Depau': 'BHR8391GL',
+      'SKU': 'XIA-AUR REDMI BUDS 6 ACT WH'
+    }
+  },
+
+  // ── 4 ───────────────────────────────────────────────────────────────────
+  {
+    id: 4,
+    name: 'Xiaomi Redmi Watch 5 Active Negro',
+    brand: 'Xiaomi',
+    category: 'relojes',
+    price: 49.95,
+    oldPrice: 69.99,
+    badge: 'Más vendido',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20redmi%20w%205%20act%20bk_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20redmi%20w%205%20act%20bk_1.jpg'
+    ],
+    description: 'Smartwatch con pantalla de 2.05" AMOLED. Monitor de frecuencia cardíaca y SpO₂ continuo. 160+ modos deportivos. GPS integrado. Notificaciones. Batería 20 días. Color negro.',
+    specs: {
+      'Pantalla': '2.05" AMOLED',
+      'GPS': 'Integrado',
+      'Frecuencia cardíaca': '24/7',
+      'SpO₂': 'Sí',
+      'Batería': 'Hasta 20 días',
+      'Resistencia': '5 ATM',
+      'P/N Depau': 'BHR8784GL',
+      'SKU': 'XIA-RELOJ REDMI W 5 ACT BK'
+    }
+  },
+
+  // ── 5 · Precio más alto ──────────────────────────────────────────────────
+  {
+    id: 5,
+    name: 'Xiaomi Redmi Watch 5 Active Plata',
+    brand: 'Xiaomi',
+    category: 'relojes',
+    price: 49.95,
+    oldPrice: 69.99,
+    badge: 'Nuevo 2026',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20redmi%20w%205%20act%20sv_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20redmi%20w%205%20act%20sv_1.jpg'
+    ],
+    description: 'Smartwatch con pantalla de 2.05" AMOLED. Monitor de frecuencia cardíaca y SpO₂ continuo. 160+ modos deportivos. GPS integrado. Notificaciones. Batería 20 días. Color plata.',
+    specs: {
+      'Pantalla': '2.05" AMOLED',
+      'GPS': 'Integrado',
+      'Frecuencia cardíaca': '24/7',
+      'SpO₂': 'Sí',
+      'Batería': 'Hasta 20 días',
+      'Resistencia': '5 ATM',
+      'P/N Depau': 'BHR8790GL',
+      'SKU': 'XIA-RELOJ REDMI W 5 ACT SV'
+    }
+  }
+
+];
 
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
