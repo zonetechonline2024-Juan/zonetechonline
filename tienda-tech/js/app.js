@@ -142,6 +142,136 @@ const PRODUCTS = [
 
 ];
 
+// ─── AMAZFIT PRODUCTS (fuente: es.amazfit.com — scraping 30/05/2026) ─────────
+PRODUCTS.push(
+
+  // ── 6 · Helio Core ─────────────────────────────────────────────────────────
+  {
+    id: 6,
+    name: 'Amazfit Helio Core',
+    brand: 'Amazfit',
+    category: 'relojes',
+    price: 69.90,
+    oldPrice: 89.90,
+    badge: 'Nuevo',
+    image: 'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/RiceGrain-Front-Purple.png?v=1765509715',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/RiceGrain-Front-Purple.png?v=1765509715',
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/RiceGrain-Front-Red.png?v=1765509714'
+    ],
+    description: 'Módulo sensor BioTracker™ profesional. Monitorización cardíaca, SpO₂ y EDA en tiempo real 24/7. Compatible con correa Helio Strap. Sin suscripción requerida.',
+    specs: {
+      'Tecnología': 'BioTracker™',
+      'Sensores': 'Cardíaco, SpO₂, EDA',
+      'Monitorización': '24/7',
+      'SKU': 'HCPU-C1204004022',
+      'Fuente': 'es.amazfit.com'
+    }
+  },
+
+  // ── 7 · Bip 6 ──────────────────────────────────────────────────────────────
+  {
+    id: 7,
+    name: 'Amazfit Bip 6',
+    brand: 'Amazfit',
+    category: 'relojes',
+    price: 79.90,
+    oldPrice: 99.90,
+    badge: 'Más vendido',
+    image: 'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Pamir_Black.png?v=1739789594',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Pamir_Black.png?v=1739789594',
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Pamir_Red.png?v=1739789594'
+    ],
+    description: 'Pantalla AMOLED 1,97". Más de 140 modos deportivos. GPS integrado con mapas gratuitos. Frecuencia cardíaca y SpO₂ 24/7. Entrenamiento de fuerza inteligente. Batería 10 días.',
+    specs: {
+      'Pantalla': 'AMOLED 1,97"',
+      'GPS': 'Integrado + mapas gratis',
+      'Modos deportivos': '140+',
+      'Batería': '10 días',
+      'SKU': 'BIP6BK-C1201035002',
+      'Fuente': 'es.amazfit.com'
+    }
+  },
+
+  // ── 8 · Active 2 ────────────────────────────────────────────────────────────
+  {
+    id: 8,
+    name: 'Amazfit Active 2',
+    brand: 'Amazfit',
+    category: 'relojes',
+    price: 99.90,
+    oldPrice: 129.90,
+    badge: 'Oferta',
+    image: 'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Active_2-Black-1_98854113-545f-43f3-b4f3-a4b98588cb52.png?v=1740568454',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Active_2-Black-1_98854113-545f-43f3-b4f3-a4b98588cb52.png?v=1740568454',
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/Active_2-Leather-1.png?v=1740568454'
+    ],
+    description: 'Diseño premium de acero inoxidable. Pantalla AMOLED vibrante. Frecuencia cardíaca 24/7 con BioTracker™. Análisis avanzado del sueño. Disponible con NFC (Zepp Pay).',
+    specs: {
+      'Carcasa': 'Acero inoxidable',
+      'Pantalla': 'AMOLED',
+      'NFC': 'Zepp Pay (versión Premium)',
+      'BioTracker': '™ generación 5',
+      'SKU': 'ACTIVE2RBK-C0208005007',
+      'Fuente': 'es.amazfit.com'
+    }
+  },
+
+  // ── 9 · Bip Max ─────────────────────────────────────────────────────────────
+  {
+    id: 9,
+    name: 'Amazfit Bip Max',
+    brand: 'Amazfit',
+    category: 'relojes',
+    price: 99.90,
+    oldPrice: 119.90,
+    badge: 'Nuevo 2026',
+    image: 'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/c04ee96481311d51542727498983b0f3e7.png?v=1779187647',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/c04ee96481311d51542727498983b0f3e7.png?v=1779187647',
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/d164e518d55d1775a943f549a5e89a01.png?v=1779187648'
+    ],
+    description: 'Pantalla AMOLED 2,07" ultra-legible. Hasta 20 días de batería. 4 GB para mapas descargables. Métricas de salud avanzadas BioCharge™. Entrenamiento híbrido inteligente.',
+    specs: {
+      'Pantalla': 'AMOLED 2,07"',
+      'Almacenamiento': '4 GB (mapas)',
+      'Batería': 'Hasta 20 días',
+      'Tecnología': 'BioCharge™',
+      'SKU': 'BIPMAXSL-C1211035001',
+      'Fuente': 'es.amazfit.com'
+    }
+  },
+
+  // ── 10 · Active 3 Premium ───────────────────────────────────────────────────
+  {
+    id: 10,
+    name: 'Amazfit Active 3 Premium',
+    brand: 'Amazfit',
+    category: 'relojes',
+    price: 169.90,
+    oldPrice: 199.90,
+    badge: 'Premium',
+    image: 'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/PP-Black-1.png?v=1773387119',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/PP-Black-1.png?v=1773387119',
+      'https://cdn.shopify.com/s/files/1/0489/7642/9207/files/PP-Blue_8387726d-aa59-42fe-8bee-1145b2b7e28b.png?v=1773387119'
+    ],
+    description: 'Smartwatch premium de acero inoxidable con cristal de zafiro. Pantalla AMOLED 1,75". BioTracker™ 5 con ECG. GPS multibanda. Zepp Pay NFC. Hasta 10 días de batería.',
+    specs: {
+      'Carcasa': 'Acero inoxidable',
+      'Cristal': 'Zafiro',
+      'GPS': 'Multibanda',
+      'ECG': 'Sí',
+      'NFC': 'Zepp Pay',
+      'SKU': 'A3PBK-C1208005006',
+      'Fuente': 'es.amazfit.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
