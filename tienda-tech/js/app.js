@@ -1113,6 +1113,234 @@ PRODUCTS.push(
 
 );
 
+// ─── SAMSUNG RING PRODUCTS (fuente: samsung.com/es — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 41 · Samsung Galaxy Ring Titanio Negro ─────────────────────────────────
+  {
+    id: 41,
+    name: 'Samsung Galaxy Ring Titanio Negro',
+    brand: 'Samsung',
+    category: 'anillos',
+    price: 449.00,
+    badge: 'Sin Suscripción',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q509nzkamea/gallery/sa-en-galaxy-ring-q500-sm-q509nzkamea-543808321?$1164_776_PNG$',
+    images: [
+      'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q509nzkamea/gallery/sa-en-galaxy-ring-q500-sm-q509nzkamea-543808321?$1164_776_PNG$'
+    ],
+    description: 'Anillo inteligente Samsung Galaxy Ring en titanio negro. FC continua 24/7, temperatura cutánea, acelerómetro y detección de irregularidades cardíacas. Integración profunda con Samsung Health y Galaxy AI para puntuación de bienestar diaria. Sin cuota mensual. 6–7 días de batería. IP68, resistente a 100m. Tallas 5–13.',
+    specs: {
+      'Generación':   'Galaxy Ring (2024)',
+      'Material':     'Titanio grado 4 acabado negro',
+      'Sensores':     'FC continua, temperatura cutánea, acelerómetro',
+      'Batería':      '6–7 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Compatibilidad': 'Android 11+ / Samsung Health',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'samsung.com/es'
+    }
+  },
+
+  // ── 42 · Samsung Galaxy Ring Titanio Plata ─────────────────────────────────
+  {
+    id: 42,
+    name: 'Samsung Galaxy Ring Titanio Plata',
+    brand: 'Samsung',
+    category: 'anillos',
+    price: 449.00,
+    badge: 'Sin Suscripción',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzsamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzsamea-543808229?$1164_776_PNG$',
+    images: [
+      'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzsamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzsamea-543808229?$1164_776_PNG$'
+    ],
+    description: 'Anillo inteligente Samsung Galaxy Ring en titanio plata. Diseño elegante con salud completa: FC 24/7, temperatura cutánea, SpO₂ pasivo, detección de ciclo menstrual y puntuación energética con Galaxy AI. Sin suscripción mensual. 6–7 días. IP68 100m. Tallas 5–13.',
+    specs: {
+      'Generación':   'Galaxy Ring (2024)',
+      'Material':     'Titanio grado 4 acabado plata',
+      'Sensores':     'FC continua, temperatura cutánea, acelerómetro',
+      'Batería':      '6–7 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Compatibilidad': 'Android 11+ / Samsung Health',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'samsung.com/es'
+    }
+  },
+
+  // ── 43 · Samsung Galaxy Ring Titanio Oro ───────────────────────────────────
+  {
+    id: 43,
+    name: 'Samsung Galaxy Ring Titanio Oro',
+    brand: 'Samsung',
+    category: 'anillos',
+    price: 449.00,
+    badge: 'Edición Dorada',
+    image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzdamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzdamea-543808157?$1164_776_PNG$',
+    images: [
+      'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzdamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzdamea-543808157?$1164_776_PNG$'
+    ],
+    description: 'Anillo inteligente Samsung Galaxy Ring en titanio con acabado dorado. Tecnología y joyería en uno: FC 24/7, temperatura cutánea, detección de irregularidades del ritmo cardíaco, Galaxy AI y puntuación de bienestar diaria. Sin suscripción. 6–7 días batería. IP68 100m. Tallas 5–13.',
+    specs: {
+      'Generación':   'Galaxy Ring (2024)',
+      'Material':     'Titanio grado 4 acabado dorado',
+      'Sensores':     'FC continua, temperatura cutánea, acelerómetro',
+      'Batería':      '6–7 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Compatibilidad': 'Android 11+ / Samsung Health',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'samsung.com/es'
+    }
+  }
+
+);
+
+// ─── RINGCONN PRODUCTS (fuente: ringconn.com — datos de referencia mayo 2026) ──
+PRODUCTS.push(
+
+  // ── 44 · RingConn Gen 2 Air Silver Galaxy ──────────────────────────────────
+  {
+    id: 44,
+    name: 'RingConn Gen 2 Air Silver Galaxy',
+    brand: 'RingConn',
+    category: 'anillos',
+    price: 219.00,
+    oldPrice: 249.00,
+    badge: 'Más Ligero',
+    image: 'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_1.png?v=1763612203',
+    images: [
+      'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_1.png?v=1763612203',
+      'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_3.png?v=1762162664'
+    ],
+    description: 'El anillo inteligente más ligero de RingConn (≈2g). FC continua 24/7, SpO₂, temperatura corporal y análisis de sueño por fases. App iOS/Android sin suscripción mensual. Diseño ultra-fino en plata galaxy para uso 24 horas. Batería 8–10 días. IP68. Tallas 7–14.',
+    specs: {
+      'Generación':   'Gen 2 Air (2024)',
+      'Material':     'Titanio fino acabado silver galaxy',
+      'Sensores':     'FC continua, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Batería':      '8–10 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '7–14',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'ringconn.com'
+    }
+  },
+
+  // ── 45 · RingConn Gen 2 Air Dune Gold ──────────────────────────────────────
+  {
+    id: 45,
+    name: 'RingConn Gen 2 Air Dune Gold',
+    brand: 'RingConn',
+    category: 'anillos',
+    price: 219.00,
+    oldPrice: 249.00,
+    badge: 'Entrada Gama',
+    image: 'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_3.png?v=1762162664',
+    images: [
+      'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_3.png?v=1762162664',
+      'https://ringconn.com/cdn/shop/files/ringconn_gen_2_air_1.png?v=1763612203'
+    ],
+    description: 'RingConn Gen 2 Air en acabado dune gold: acceso a la salud inteligente sin barreras. Ultra-ligero (≈2g), FC 24/7, SpO₂, temperatura y seguimiento del sueño. Sin cuota de suscripción. Ideal para quien empieza con anillos inteligentes. Batería 8–10 días. IP68. Tallas 7–14.',
+    specs: {
+      'Generación':   'Gen 2 Air (2024)',
+      'Material':     'Titanio fino acabado dune gold',
+      'Sensores':     'FC continua, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Batería':      '8–10 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '7–14',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'ringconn.com'
+    }
+  },
+
+  // ── 46 · RingConn Gen 2 Future Silver ──────────────────────────────────────
+  {
+    id: 46,
+    name: 'RingConn Gen 2 Future Silver',
+    brand: 'RingConn',
+    category: 'anillos',
+    price: 299.00,
+    oldPrice: 329.00,
+    badge: 'Sin Suscripción',
+    image: 'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Silver_a529d976-de15-49c4-9c1c-8afc1be2aa51.png?v=1756459360&width=1472',
+    images: [
+      'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Silver_a529d976-de15-49c4-9c1c-8afc1be2aa51.png?v=1756459360&width=1472',
+      'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Royal_Gold.png?v=1757058366&width=1472'
+    ],
+    description: 'RingConn Gen 2 Future Silver: análisis de salud completo y permanente. FC continua, VFC, SpO₂, temperatura corporal y análisis profundo del sueño con fases REM. Sin suscripción mensual. Sensores mejorados respecto al Gen 1. Batería 8–10 días. IP68. Tallas 6–21.',
+    specs: {
+      'Generación':   'Gen 2 (2024)',
+      'Material':     'Titanio grado 5 acabado future silver',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '8–10 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '6–21',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'ringconn.com'
+    }
+  },
+
+  // ── 47 · RingConn Gen 2 Royal Gold ─────────────────────────────────────────
+  {
+    id: 47,
+    name: 'RingConn Gen 2 Royal Gold',
+    brand: 'RingConn',
+    category: 'anillos',
+    price: 299.00,
+    oldPrice: 329.00,
+    badge: 'Joyería Tech',
+    image: 'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Royal_Gold.png?v=1757058366&width=1472',
+    images: [
+      'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Royal_Gold.png?v=1757058366&width=1472',
+      'https://ringconn.com/cdn/shop/files/RingConn_Smart_Ring_Gen_2-Silver_a529d976-de15-49c4-9c1c-8afc1be2aa51.png?v=1756459360&width=1472'
+    ],
+    description: 'RingConn Gen 2 Royal Gold: donde la joyería se une a la tecnología de salud. FC 24/7, VFC, SpO₂, temperatura corporal y análisis del sueño con fases REM. Sin suscripción mensual. Acabado premium en oro real. Batería 8–10 días. IP68. Tallas 6–21.',
+    specs: {
+      'Generación':   'Gen 2 (2024)',
+      'Material':     'Titanio con acabado Royal Gold',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '8–10 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '6–21',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'ringconn.com'
+    }
+  },
+
+  // ── 48 · RingConn Gen 3 Future Silver ──────────────────────────────────────
+  {
+    id: 48,
+    name: 'RingConn Gen 3 Future Silver',
+    brand: 'RingConn',
+    category: 'anillos',
+    price: 349.00,
+    oldPrice: 399.00,
+    badge: 'Última Generación',
+    image: 'https://ringconn.com/cdn/shop/files/4a_adbf22ab-187c-42db-af96-d84983e7bb60.webp',
+    images: [
+      'https://ringconn.com/cdn/shop/files/4a_adbf22ab-187c-42db-af96-d84983e7bb60.webp',
+      'https://ringconn.com/cdn/shop/files/1a_9e4056a6-6b65-41d1-804e-03aaa2818425.webp'
+    ],
+    description: 'RingConn Gen 3 Future Silver: la generación más avanzada con gestión vascular activa. FC 24/7, VFC, SpO₂, temperatura corporal, análisis del sueño y estrés. Diseño ultrafino de última generación. Sin suscripción mensual. Batería 10–12 días. IP68. Tallas 5–13.',
+    specs: {
+      'Generación':   'Gen 3 (2025)',
+      'Material':     'Titanio de alta resistencia',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, estrés, vascular',
+      'Sueño':        'Fases REM avanzadas + temperatura',
+      'Batería':      '10–12 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'ringconn.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -2617,15 +2845,23 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
-      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin — 35 modelos desde €39,95. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+      return 'En este momento nuestro catálogo incluye <strong>35 relojes inteligentes</strong> y <strong>13 anillos inteligentes</strong> (Oura, Samsung Galaxy Ring y RingConn). Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj o anillo? <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
       return 'Toda la gama Amazfit disponible: <strong>Helio Core</strong> (€69,90) · <strong>Bip 6</strong> (€79,90) · <strong>Active 2</strong> (€99,90) · <strong>Bip Max</strong> (€99,90) · <strong>Active 3 Premium</strong> (€169,90). Todos con GPS integrado y monitorización de salud 24/7. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
-    if (/samsung|galaxy watch|galaxy ring/.test(ql)) {
-      return 'Toda la gama Samsung (5 relojes): <strong>Galaxy Watch 7 40mm</strong> (€249,99) · <strong>Galaxy Watch 7 44mm</strong> Plata/Verde (€279,99) · <strong>Galaxy Watch 8 Classic</strong> (€449,99) · <strong>Galaxy Watch Ultra</strong> (€549,99). Todos con Galaxy AI, ECG y GPS multibanda. <a class="ai-msg-link" href="catalogo.html?brand=Samsung">Ver Samsung →</a>';
+    if (/samsung|galaxy watch/.test(ql)) {
+      return 'Samsung en ZoneTechOnline: <strong>5 relojes Galaxy Watch</strong> (Galaxy Watch 7 40mm €249,99 · Watch 7 44mm €279,99 · Watch 8 Classic €449,99 · Watch Ultra €549,99) y <strong>3 anillos Galaxy Ring</strong> (Negro/Plata/Oro a €449, sin suscripción). <a class="ai-msg-link" href="catalogo.html?brand=Samsung">Ver Samsung →</a>';
+    }
+
+    if (/galaxy ring|samsung ring/.test(ql)) {
+      return 'El <strong>Samsung Galaxy Ring</strong> está disponible en 3 acabados de titanio: <strong>Titanio Negro</strong> · <strong>Titanio Plata</strong> · <strong>Titanio Oro</strong> — todos a €449. FC 24/7, temperatura cutánea, Galaxy AI y <strong>sin cuota de suscripción</strong>. Batería 6–7 días. IP68. Integración perfecta con Samsung Health. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Samsung">Ver Galaxy Ring →</a>';
+    }
+
+    if (/ringconn|ring conn/.test(ql)) {
+      return 'Toda la gama <strong>RingConn</strong> (5 modelos sin suscripción): <strong>Gen 2 Air Silver</strong> (€219) · <strong>Gen 2 Air Dune Gold</strong> (€219) · <strong>Gen 2 Future Silver</strong> (€299) · <strong>Gen 2 Royal Gold</strong> (€299) · <strong>Gen 3 Future Silver</strong> (€349). FC, VFC, SpO₂, temperatura y sueño. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=RingConn">Ver RingConn →</a>';
     }
 
     if (/huawei|band 9|band 10|band 11|watch fit/.test(ql)) {
@@ -2656,15 +2892,19 @@ function initAIAssistant() {
       return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
-    if (/oura|anillo|anillos|ring inteligente|smart ring/.test(ql)) {
-      return 'Toda la gama <strong>Oura Ring</strong> (5 anillos Gen 4): <strong>Silver</strong> (€379) · <strong>Matte Black</strong> (€379) · <strong>Gold</strong> (€429) · <strong>Rose Gold</strong> (€429) · <strong>Ceramic Midnight</strong> (€429, PVP €549). Titanio sin costuras, FC 24/7, VFC, SpO₂, temperatura corporal, sueño REM. Batería 5-8 días. IP68 100m. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Oura">Ver Oura Ring →</a>';
+    if (/oura|oura ring/.test(ql)) {
+      return 'Toda la gama <strong>Oura Ring</strong> (5 anillos Gen 4): <strong>Silver</strong> (€379) · <strong>Matte Black</strong> (€379) · <strong>Gold</strong> (€429) · <strong>Rose Gold</strong> (€429) · <strong>Ceramic Midnight</strong> (€429, PVP €549). Titanio, FC 24/7, VFC, SpO₂, temperatura, sueño REM. 5-8 días. IP68. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Oura">Ver Oura Ring →</a>';
+    }
+
+    if (/anillo|anillos|ring inteligente|smart ring/.test(ql)) {
+      return 'Tenemos <strong>13 anillos inteligentes</strong> de 3 marcas: <strong>Oura Ring Gen 4</strong> (5 colores, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores titanio, €449, sin suscripción) · <strong>RingConn</strong> (5 modelos Gen 2+Gen 3, desde €219, sin suscripción). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos 35 relojes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 5 anillos <strong>Oura Ring</strong> — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y <strong>13 anillos</strong> (Oura, Samsung Galaxy Ring, RingConn) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>40 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 5 anillos inteligentes <strong>Oura Ring</strong> (desde €379). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>48 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 13 anillos inteligentes (Oura Ring, Samsung Galaxy Ring y RingConn — desde €219). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2696,7 +2936,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>5 anillos Oura Ring</strong> — 40 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>13 anillos inteligentes</strong> (Oura Ring, Samsung Galaxy Ring y RingConn) — 48 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
