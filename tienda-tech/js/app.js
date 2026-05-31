@@ -2231,6 +2231,183 @@ PRODUCTS.push(
 
 );
 
+// ─── SHOKZ HEADPHONE PRODUCTS (fuente: es.shokz.com — datos de referencia mayo 2026) ─────
+PRODUCTS.push(
+
+  { id:82, name:'Shokz OpenMove Negro', brand:'Shokz', category:'auriculares', price:69.00, oldPrice:89.95,
+    badge:'Conducción Ósea',
+    image:'https://es.shokz.com/cdn/shop/products/GREY1_8c00589e-c7d3-48a8-b8ef-45f3c57d16bd.webp?v=1682558863',
+    images:['https://es.shokz.com/cdn/shop/products/GREY1_8c00589e-c7d3-48a8-b8ef-45f3c57d16bd.webp?v=1682558863'],
+    description:'Shokz OpenMove Negro: el acceso más económico a la conducción ósea de Shokz. Ultrafino (29g), 6h de batería, IP55 contra polvo y salpicaduras. Deja los oídos completamente libres para escuchar el entorno mientras entrenas.',
+    specs:{
+      'Tecnología':  'Conducción ósea (bone conduction)',
+      'Batería':     '6h · Carga rápida magnética (1,5h)',
+      'Resistencia': 'IP55 — polvo + salpicaduras',
+      'Bluetooth':   '5.1 · Alcance 10m',
+      'Micrófono':   'Doble beamforming · ENC ruido',
+      'Peso':        '29g ultraligero',
+      'Uso':         'Running · Ciclismo · Gym · Deportes al aire libre',
+      'Fuente':      'es.shokz.com'
+    }
+  },
+
+  { id:83, name:'Shokz OpenFit Air Negro', brand:'Shokz', category:'auriculares', price:109.00,
+    badge:'Open-Ear TWS · 28h',
+    image:'https://es.shokz.com/cdn/shop/files/OpenFitAir-Black.webp?v=1716703749',
+    images:['https://es.shokz.com/cdn/shop/files/OpenFitAir-Black.webp?v=1716703749'],
+    description:'Shokz OpenFit Air Negro: auriculares True Wireless de conducción abierta (Directional Airwave Technology). Sin tapones — diseño open-ear que no aísla el entorno. 7h auriculares + 21h estuche = 28h total. IPX4. Bluetooth 5.3.',
+    specs:{
+      'Tecnología':  'Open-Ear (Directional Airwave Technology)',
+      'Tipo':        'True Wireless (TWS)',
+      'Batería':     '28h total (7h + 21h estuche) · USB-C',
+      'Resistencia': 'IPX4 — salpicaduras y lluvia ligera',
+      'Bluetooth':   '5.3 · Multipoint',
+      'Peso':        '8,3g por auricular',
+      'Diseño':      'Sin tapón · Oído libre · Sin fatiga',
+      'Fuente':      'es.shokz.com'
+    }
+  },
+
+  { id:84, name:'Shokz OpenFit Negro', brand:'Shokz', category:'auriculares', price:139.00,
+    badge:'Open-Ear · IP54 · EQ',
+    image:'https://es.shokz.com/cdn/shop/products/BK-1.webp?v=1688471004',
+    images:['https://es.shokz.com/cdn/shop/products/BK-1.webp?v=1688471004'],
+    description:'Shokz OpenFit Negro: open-ear TWS de gama media con IP54, EQ personalizable en la app Shokz. 7h + 21h estuche = 28h total. Bluetooth 5.2. Sin tapón, oído siempre libre al entorno. Gancho auricular seguro para deporte.',
+    specs:{
+      'Tecnología':  'Open-Ear (Air Conduction con gancho)',
+      'Tipo':        'True Wireless (TWS)',
+      'Batería':     '28h total (7h + 21h estuche) · USB-C',
+      'Resistencia': 'IP54 — polvo + salpicaduras',
+      'Bluetooth':   '5.2 · Multipoint',
+      'EQ':          'Personalizable vía app Shokz',
+      'Diseño':      'Gancho auricular · Sin tapón · Oído libre',
+      'Fuente':      'es.shokz.com'
+    }
+  },
+
+  { id:85, name:'Shokz OpenRun Negro', brand:'Shokz', category:'auriculares', price:139.00,
+    badge:'Deporte · IP55 · 8h',
+    image:'https://es.shokz.com/cdn/shop/files/OpenRun-_Type-_C-Black_4b3b446b-e393-46a0-9247-bcbaa0c71fb1.webp?v=1756290929',
+    images:['https://es.shokz.com/cdn/shop/files/OpenRun-_Type-_C-Black_4b3b446b-e393-46a0-9247-bcbaa0c71fb1.webp?v=1756290929'],
+    description:'Shokz OpenRun Negro: el clásico de conducción ósea para atletas. 8h batería, carga rápida USB-C (10 min = 1,5h de música), IP55. Sin tapón — percibe el entorno completamente en ruta. Diseño de banda trasera ultraligero (26g).',
+    specs:{
+      'Tecnología':  'Conducción ósea (bone conduction) · 9ª generación',
+      'Batería':     '8h · Carga rápida USB-C (10min = 1,5h)',
+      'Resistencia': 'IP55 — polvo + salpicaduras intensas',
+      'Bluetooth':   '5.1 · Alcance 10m',
+      'Micrófono':   'Doble beamforming · ENC',
+      'Peso':        '26g ultraligero',
+      'Uso':         'Running · Triatlón · Trail · Maratón',
+      'Fuente':      'es.shokz.com'
+    }
+  },
+
+  { id:86, name:'Shokz OpenFit2 Negro', brand:'Shokz', category:'auriculares', price:189.00,
+    badge:'Open-Ear · 46h · Qi',
+    image:'https://es.shokz.com/cdn/shop/files/openfit2_-Black.png?v=1752113497',
+    images:['https://es.shokz.com/cdn/shop/files/openfit2_-Black.png?v=1752113497'],
+    description:'Shokz OpenFit2 Negro: el open-ear TWS más avanzado de Shokz. 8h + 38h estuche = 46h total, carga inalámbrica Qi, IP54, Bluetooth 5.3. EQ personalizable. El mejor auricular abierto para uso todo el día sin fatiga auditiva.',
+    specs:{
+      'Tecnología':  'Open-Ear (Air Conduction con gancho)',
+      'Tipo':        'True Wireless (TWS)',
+      'Batería':     '46h total (8h + 38h estuche) · Carga Qi inalámbrica',
+      'Resistencia': 'IP54 — polvo + salpicaduras',
+      'Bluetooth':   '5.3 · Multipoint · Latencia baja',
+      'EQ':          'Personalizable vía app Shokz',
+      'Extras':      'Carga inalámbrica · Estuche compacto',
+      'Fuente':      'es.shokz.com'
+    }
+  }
+
+);
+
+// ─── MOONDROP IEM & TWS PRODUCTS (fuente: moondroplab.com — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  { id:87, name:'Moondrop CHU', brand:'Moondrop', category:'auriculares', price:19.99,
+    badge:'IEM · 1DD Hi-Fi',
+    image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e12cb742f38ea021d94_641d56d5c09aba2bbfecaf13_CHU.jpeg',
+    images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e12cb742f38ea021d94_641d56d5c09aba2bbfecaf13_CHU.jpeg'],
+    description:'Moondrop CHU: el IEM Hi-Fi de referencia por menos de 20€. Driver dinámico 10mm de carbono, cable detachable 0.78mm 2-pin, sensibilidad 120dB. Sonido neutro con curva Harman Target. Conector 3.5mm.',
+    specs:{
+      'Driver':      '1 DD — 10mm carbono (nanotubos)',
+      'Conexión':    '3.5mm · Cable detachable 0.78mm 2-pin',
+      'Sensibilidad':'120dB/Vrms',
+      'Impedancia':  '28Ω',
+      'Respuesta':   '20Hz – 20kHz',
+      'Tuning':      'Neutro · Harman-like Target',
+      'Tipo':        'IEM con cable · Sin BT',
+      'Fuente':      'moondroplab.com'
+    }
+  },
+
+  { id:88, name:'Moondrop QUARK2', brand:'Moondrop', category:'auriculares', price:19.99,
+    badge:'IEM · 1BA Driver',
+    image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842878fd457546dd0a50c_66c045b029fc359a031a235c_QUARK2.jpeg',
+    images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842878fd457546dd0a50c_66c045b029fc359a031a235c_QUARK2.jpeg'],
+    description:'Moondrop QUARK2: IEM con driver Balanced Armature (BA) a precio de entrada. Detalle en agudos, respuesta ultrarrápida. Cable detachable. El IEM BA más accesible de Moondrop para empezar en el Hi-Fi serio.',
+    specs:{
+      'Driver':      '1 BA — Balanced Armature (driver de armadura equilibrada)',
+      'Conexión':    '3.5mm · Cable detachable 0.78mm 2-pin',
+      'Respuesta':   '20Hz – 20kHz',
+      'Tuning':      'Énfasis en detalle y agudos analíticos',
+      'Tipo':        'IEM con cable · Sin BT',
+      'Ideal':       'Hi-Fi de inicio · Monitor de estudio básico',
+      'Fuente':      'moondroplab.com'
+    }
+  },
+
+  { id:89, name:'Moondrop CHU II', brand:'Moondrop', category:'auriculares', price:22.99,
+    badge:'IEM · 2ª Gen · Hi-Fi',
+    image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842812d75d04ae7da86dd_64a67decb6354a3471c0d4cd_CHU2.jpeg',
+    images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842812d75d04ae7da86dd_64a67decb6354a3471c0d4cd_CHU2.jpeg'],
+    description:'Moondrop CHU II: segunda generación del IEM más popular de Moondrop. Driver dinámico mejorado, mayor detalle en la gama media-alta, cable actualizado. El punto de entrada ideal al Hi-Fi con respuesta de frecuencia optimizada.',
+    specs:{
+      'Driver':      '1 DD — driver dinámico 2ª gen. mejorado',
+      'Conexión':    '3.5mm · Cable detachable 0.78mm 2-pin',
+      'Tuning':      'Neutro/Harman — gama media mejorada vs CHU',
+      'Respuesta':   '20Hz – 20kHz',
+      'Tipo':        'IEM con cable · Sin BT',
+      'Mejoras':     'Cable actualizado · Mayor resolución medios',
+      'Fuente':      'moondroplab.com'
+    }
+  },
+
+  { id:90, name:'Moondrop JIU', brand:'Moondrop', category:'auriculares', price:24.99,
+    badge:'IEM · Hi-Fi · 3.5mm',
+    image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e1387dd9368cf3de1db_643fc38234c94004ea61a96f_JIU.jpeg',
+    images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e1387dd9368cf3de1db_643fc38234c94004ea61a96f_JIU.jpeg'],
+    description:'Moondrop JIU: IEM de driver dinámico con ajuste cómodo para sesiones largas y monitoreo en directo. Diseño ergonómico de concha, cable detachable, respuesta equilibrada para listening y producción musical.',
+    specs:{
+      'Driver':      '1 DD — driver dinámico',
+      'Conexión':    '3.5mm · Cable detachable',
+      'Tuning':      'Equilibrado — escucha y monitoreo',
+      'Respuesta':   '20Hz – 20kHz',
+      'Diseño':      'Concha ergonómica · Ajuste largo tiempo',
+      'Tipo':        'IEM con cable · Sin BT',
+      'Fuente':      'moondroplab.com'
+    }
+  },
+
+  { id:91, name:'Moondrop BLOCK TWS', brand:'Moondrop', category:'auriculares', price:24.99,
+    badge:'TWS · ANC · BT 5.3',
+    image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842803b10a7723dab194e_66c0415d4a094cea4ba98188_BLOCK.jpeg',
+    images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842803b10a7723dab194e_66c0415d4a094cea4ba98188_BLOCK.jpeg'],
+    description:'Moondrop BLOCK: TWS con ANC al precio más bajo de Moondrop. Cancelación activa de ruido, Bluetooth 5.3, IPX4, hasta 8h batería + estuche. El True Wireless Hi-Fi más asequible para el día a día urbano.',
+    specs:{
+      'Driver':      'Driver dinámico personalizado Moondrop',
+      'Tipo':        'True Wireless (TWS)',
+      'ANC':         'Cancelación activa de ruido (ANC)',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     'Hasta 8h auriculares + estuche',
+      'Resistencia': 'IPX4',
+      'Tuning':      'Moondrop Hi-Fi Tuning en formato TWS',
+      'Fuente':      'moondroplab.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -3734,6 +3911,14 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
+    if (/shokz|openrun|openfit|openmove|openswim|opendots|conducci[oó]n [oó]sea|bone conduction|open.ear shokz/.test(ql)) {
+      return 'Gama <strong>Shokz</strong> (5 auriculares, desde €69): <strong>OpenMove</strong> (€69, conducción ósea, IP55, 6h) · <strong>OpenFit Air</strong> (€109, open-ear TWS, 28h, IPX4) · <strong>OpenFit</strong> (€139, open-ear TWS, 28h, IP54) · <strong>OpenRun</strong> (€139, conducción ósea deportivo, 8h, IP55) · <strong>OpenFit2</strong> (€189, open-ear TWS, 46h, carga Qi). Oídos siempre libres. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Shokz">Ver Shokz →</a>';
+    }
+
+    if (/moondrop|iem\b|in.ear monitor|monitor.*o[íi]do|audiof[ií]l|hi.fi.*aur|chu\b|quark|aria.*iem|starfield|kato|blessing/.test(ql)) {
+      return 'Gama <strong>Moondrop</strong> (5 productos Hi-Fi, desde €19,99): <strong>CHU</strong> (€19,99, IEM 1DD 10mm, 120dB) · <strong>QUARK2</strong> (€19,99, IEM 1BA) · <strong>CHU II</strong> (€22,99, IEM 2ª gen) · <strong>JIU</strong> (€24,99, IEM dinámico) · <strong>BLOCK TWS</strong> (€24,99, TWS+ANC, BT 5.3). Ingeniería Hi-Fi China de referencia mundial. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Moondrop">Ver Moondrop →</a>';
+    }
+
     if (/nothing|ear.*a\b|ear \(a\)|ear \(3\)|ear3|nada phone/.test(ql)) {
       return 'Gama <strong>Nothing</strong> (5 auriculares, desde €69): <strong>Ear (a) Yellow</strong> (€69, ANC -42dB, 22,5h) · <strong>Ear (a) White</strong> (€69) · <strong>Ear (a) Black</strong> (€69) · <strong>Ear Black</strong> (€89, LDAC, 40h, ANC -45dB) · <strong>Ear (3) Black</strong> (€149, Hi-Res Audio Wireless, driver planar). Todos con ChatGPT integrado e IP55. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Nothing">Ver Nothing →</a>';
     }
@@ -3751,7 +3936,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica|cascos/.test(ql)) {
-      return 'Tenemos <strong>20 auriculares premium</strong> de 4 marcas: <strong>Nothing</strong> (5 desde €69: Ear a, Ear, Ear 3 — ChatGPT integrado), <strong>Sony</strong> (5 desde €39,99: WH-CH520 a ULT WEAR), <strong>Sennheiser</strong> (5 desde €99,90: ACCENTUM a MOMENTUM 4 — hasta 60h) y <strong>Google Pixel Buds</strong> (5 desde €119: Buds 2a y Pro 2 con Gemini). ANC, LDAC, Hi-Res Audio y True Wireless. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
+      return 'Tenemos <strong>30 auriculares premium</strong> de 6 marcas: <strong>Moondrop</strong> (5 desde €19,99: IEM Hi-Fi y TWS), <strong>Nothing</strong> (5 desde €69: Ear a, Ear, Ear 3), <strong>Shokz</strong> (5 desde €69: conducción ósea y open-ear), <strong>Sony</strong> (5 desde €39,99), <strong>Sennheiser</strong> (5 desde €99,90) y <strong>Google Pixel Buds</strong> (5 desde €119). ANC, LDAC, Hi-Res, open-ear y Hi-Fi con cable. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
@@ -3823,10 +4008,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>20 auriculares</strong> (Nothing, Sony, Sennheiser y Google) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Audio Hi-Fi o deportivo? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>30 auriculares</strong> (Moondrop, Nothing, Shokz, Sony, Sennheiser, Google) — desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>81 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas, desde €169,90) y 20 auriculares premium (Nothing, Sony, Sennheiser y Google, desde €39,99). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>91 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas) y 30 auriculares (Moondrop IEM Hi-Fi desde €19,99, Shokz open-ear desde €69, Nothing, Sony, Sennheiser y Google). Pregúntame sobre batería, deporte, Hi-Fi o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -3858,7 +4043,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>20 auriculares premium</strong> (Nothing, Sony, Sennheiser y Google) — 81 productos en total, desde €39,95. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>30 auriculares premium</strong> (Moondrop Hi-Fi, Shokz open-ear, Nothing, Sony, Sennheiser y Google) — 91 productos en total, desde €19,99. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
