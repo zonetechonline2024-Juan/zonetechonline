@@ -1611,6 +1611,141 @@ PRODUCTS.push(
 
 );
 
+// ─── AMAZFIT RING PRODUCTS (fuente: eu.amazfit.com — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 58 · Amazfit Helio Ring Titanio ────────────────────────────────────────
+  {
+    id: 58,
+    name: 'Amazfit Helio Ring Titanio',
+    brand: 'Amazfit',
+    category: 'anillos',
+    price: 169.90,
+    badge: 'Sin Suscripción',
+    image: 'https://eu.amazfit.com/cdn/shop/files/Helioring_1024x1024.jpg?v=1716446501',
+    images: [
+      'https://eu.amazfit.com/cdn/shop/files/Helioring_1024x1024.jpg?v=1716446501',
+      'https://eu.amazfit.com/cdn/shop/files/Helioring-1_480x480.jpg?v=1716446501',
+      'https://eu.amazfit.com/cdn/shop/files/Helioring-2_480x480.jpg?v=1716446501'
+    ],
+    description: 'Amazfit Helio Ring Titanio: anillo inteligente ultraligero (3,65–3,82g) con aleación de titanio. FC 24/7, SpO₂, temperatura corporal, sensor EDA para estrés, VFC y Readiness Score. Sueño con fases detalladas. Compatible con relojes Amazfit para fusión avanzada de datos. Resistencia 10 ATM. Hasta 4 días de batería. Sin suscripción. Elige tu talla: 8, 10 o 12.',
+    specs: {
+      'Generación':   'Helio Ring (2024)',
+      'Material':     'Aleación de titanio + resina interior',
+      'Peso':         '3,65–3,82g según talla',
+      'Sensores':     'PPG dual-color, temperatura, EDA (electrodermal), acelerómetro 3 ejes + giroscopio',
+      'FC/SpO₂':      'Frecuencia cardíaca 24/7 + saturación de oxígeno',
+      'Estrés':       'Sensor EDA + HRV para estrés y bienestar',
+      'Readiness':    'Puntuación diaria de preparación (Zepp App)',
+      'Sueño':        'Análisis profundo con fases REM/ligero/profundo',
+      'Batería':      'Hasta 4 días · Carga inalámbrica ~1h 40min',
+      'Resistencia':  '10 ATM (100 metros)',
+      'Tallas':       '8 / 10 / 12 (solicitar kit de talla gratis)',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'eu.amazfit.com'
+    }
+  }
+
+);
+
+// ─── MOVANO EVIE RING PRODUCTS (fuente: eviering.com — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 59 · Movano Evie Ring Silver ───────────────────────────────────────────
+  {
+    id: 59,
+    name: 'Movano Evie Ring Silver',
+    brand: 'Movano',
+    category: 'anillos',
+    price: 249.00,
+    badge: 'Salud Femenina',
+    image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_Silver_ThreeQuarterView_Lighting-E.4.png',
+    images: [
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Silver_ThreeQuarterView_Lighting-E.4.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Silver_LED.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Silver.2.png'
+    ],
+    description: 'Movano Evie Ring Silver: el anillo inteligente pionero en salud femenina. Monitorización del ciclo menstrual y ovulación, FC 24/7, SpO₂, temperatura cutánea, sueño y estrés. Fabricado en Liquidmetal® (aleación de circonio-titanio). Batería 4+ días con estuche de carga portátil. Sin suscripción. Tallas 5–12.',
+    specs: {
+      'Generación':   'Evie Ring 2024',
+      'Material':     'Liquidmetal® (aleación de circonio) con recubrimiento PVD titanio plata',
+      'Peso':         '3,2–3,7g según talla',
+      'Sensores':     'LED rojo/verde, IR PPG, temperatura cutánea, fotodiodos, acelerómetro 3D',
+      'Salud fem.':   'Ciclo menstrual, ovulación y temperatura basal',
+      'FC/SpO₂':      'Frecuencia cardíaca 24/7 + saturación de oxígeno',
+      'Sueño':        'Análisis del sueño con fases y recuperación',
+      'Batería':      '4+ días · Estuche carga portátil con 10+ cargas completas',
+      'Resistencia':  'Hasta 1 metro profundidad',
+      'Tallas':       '5–12 (kit de talla incluido)',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'eviering.com'
+    }
+  },
+
+  // ── 60 · Movano Evie Ring Gold ─────────────────────────────────────────────
+  {
+    id: 60,
+    name: 'Movano Evie Ring Gold',
+    brand: 'Movano',
+    category: 'anillos',
+    price: 249.00,
+    badge: 'Edición Dorada',
+    image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_Gold_ThreeQuarterView_Lighting-E.1.png',
+    images: [
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Gold_ThreeQuarterView_Lighting-E.1.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Gold_.2.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_Gold_LED.png'
+    ],
+    description: 'Movano Evie Ring Gold: el anillo inteligente de salud femenina en acabado dorado premium. Monitorización especializada del ciclo menstrual y ovulación, FC, SpO₂, temperatura cutánea, sueño y estrés. Liquidmetal® con recubrimiento PVD dorado. Batería 4+ días. Sin suscripción mensual. Tallas 5–12.',
+    specs: {
+      'Generación':   'Evie Ring 2024',
+      'Material':     'Liquidmetal® (aleación de circonio) con recubrimiento PVD titanio dorado',
+      'Peso':         '3,2–3,7g según talla',
+      'Sensores':     'LED rojo/verde, IR PPG, temperatura cutánea, fotodiodos, acelerómetro 3D',
+      'Salud fem.':   'Ciclo menstrual, ovulación y temperatura basal',
+      'FC/SpO₂':      'Frecuencia cardíaca 24/7 + saturación de oxígeno',
+      'Sueño':        'Análisis del sueño con fases y recuperación',
+      'Batería':      '4+ días · Estuche carga portátil con 10+ cargas completas',
+      'Resistencia':  'Hasta 1 metro profundidad',
+      'Tallas':       '5–12 (kit de talla incluido)',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'eviering.com'
+    }
+  },
+
+  // ── 61 · Movano Evie Ring Rose Gold ────────────────────────────────────────
+  {
+    id: 61,
+    name: 'Movano Evie Ring Rose Gold',
+    brand: 'Movano',
+    category: 'anillos',
+    price: 249.00,
+    badge: 'Oro Rosa',
+    image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_RoseGold_ThreeQuarterView_Lighting-E.2.png',
+    images: [
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_RoseGold_ThreeQuarterView_Lighting-E.2.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_RoseGold_LED.png',
+      'https://eviering.com/cdn/shop/files/EvieRing_2024_RoseGold.2.png'
+    ],
+    description: 'Movano Evie Ring Rose Gold: joyería tech de salud femenina en oro rosa. El anillo inteligente diseñado por y para mujeres: ciclo menstrual, ovulación y temperatura basal junto con FC 24/7, SpO₂, análisis del sueño y estrés. Material Liquidmetal® exclusivo con PVD oro rosa. Batería 4+ días. Sin suscripción. Tallas 5–12.',
+    specs: {
+      'Generación':   'Evie Ring 2024',
+      'Material':     'Liquidmetal® (aleación de circonio) con recubrimiento PVD oro rosa',
+      'Peso':         '3,2–3,7g según talla',
+      'Sensores':     'LED rojo/verde, IR PPG, temperatura cutánea, fotodiodos, acelerómetro 3D',
+      'Salud fem.':   'Ciclo menstrual, ovulación y temperatura basal',
+      'FC/SpO₂':      'Frecuencia cardíaca 24/7 + saturación de oxígeno',
+      'Sueño':        'Análisis del sueño con fases y recuperación',
+      'Batería':      '4+ días · Estuche carga portátil con 10+ cargas completas',
+      'Resistencia':  'Hasta 1 metro profundidad',
+      'Tallas':       '5–12 (kit de talla incluido)',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'eviering.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -3162,6 +3297,14 @@ function initAIAssistant() {
       return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
+    if (/amazfit.*ring|helio ring|anillo.*amazfit/.test(ql)) {
+      return 'El <strong>Amazfit Helio Ring Titanio</strong> (€169,90 — el anillo más asequible del catálogo) es ideal si ya usas un reloj Amazfit: fusión avanzada de datos entre dispositivos. FC 24/7, SpO₂, temperatura, sensor EDA, estrés, VFC y Readiness Score. Sueño con fases REM. 10 ATM. 4 días batería. Sin suscripción. Tallas 8, 10 y 12. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Amazfit">Ver Amazfit Helio Ring →</a>';
+    }
+
+    if (/movano|evie ring|salud femenina|anillo.*mujer|mujer.*anillo|ciclo|ovulaci/.test(ql)) {
+      return 'El <strong>Movano Evie Ring</strong> (€249 — Silver, Gold, Rose Gold) es el único anillo inteligente diseñado específicamente para salud femenina: ciclo menstrual, ovulación y temperatura basal junto con FC 24/7, SpO₂, sueño y estrés. Material Liquidmetal® exclusivo. 4+ días batería. Sin suscripción. Tallas 5–12. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Movano">Ver Movano Evie Ring →</a>';
+    }
+
     if (/ultrahuman|ring air/.test(ql)) {
       return 'Toda la gama <strong>Ultrahuman Ring AIR</strong> (5 colores, €379 c/u — sin suscripción): <strong>Matte Grey</strong> · <strong>Aster Black</strong> · <strong>Space Silver</strong> · <strong>Bionic Gold</strong> · <strong>Raw Titanium</strong>. Titanio ultra-ligero 2,4g, FC 24/7, VFC, temperatura circadiana, sueño REM y Recovery Score. 4–6 días. IP68. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Ultrahuman">Ver Ultrahuman →</a>';
     }
@@ -3175,14 +3318,14 @@ function initAIAssistant() {
     }
 
     if (/anillo|anillos|ring inteligente|smart ring/.test(ql)) {
-      return 'Tenemos <strong>22 anillos inteligentes</strong> de 5 marcas: <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, con ECG). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
+      return 'Tenemos <strong>26 anillos inteligentes</strong> de 7 marcas: <strong>Amazfit Helio Ring</strong> (€169,90, sin suscripción) · <strong>Movano Evie Ring</strong> (3 colores, €249, salud femenina) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, ECG) · <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas) y <strong>22 anillos</strong> (Oura, Samsung, RingConn, Ultrahuman, Circular) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas) y <strong>26 anillos</strong> (Amazfit, Movano, RingConn, Ultrahuman, Circular, Oura, Samsung) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>57 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 22 anillos inteligentes (Oura Ring, Samsung Galaxy Ring, RingConn, Ultrahuman Ring AIR y Circular Ring 2 — desde €219). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>61 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 26 anillos inteligentes (Amazfit Helio, Movano Evie, RingConn, Ultrahuman, Circular Ring 2, Oura Ring y Samsung Galaxy Ring — desde €169,90). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -3214,7 +3357,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>22 anillos inteligentes</strong> (Oura, Samsung Ring, RingConn, Ultrahuman y Circular) — 57 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>26 anillos inteligentes</strong> (Amazfit, Movano, RingConn, Ultrahuman, Circular, Oura y Samsung Ring) — 61 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
