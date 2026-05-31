@@ -2408,6 +2408,139 @@ PRODUCTS.push(
 
 );
 
+// ─── RAY-BAN META SMART GLASSES (fuente: MediaMarkt España) ─
+PRODUCTS.push(
+  { id:92, name:'Ray-Ban Meta Wayfarer Negro Brillante', brand:'Ray-Ban Meta', category:'gafas', price:247.00,
+    badge:'Meta AI · 12MP · OAP',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425222?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    specs:{
+      'Cámara':      '12MP · vídeo 1080p 60fps',
+      'Audio':       'Altavoces OAP abiertos · micrófono ×5',
+      'IA':          'Meta AI integrado · comandos de voz',
+      'Batería':     '4h reproducción · 36h con estuche',
+      'Conectividad':'Bluetooth 5.3 · app Meta View',
+      'Lentes':      'UV400 · transparentes',
+      'Fuente':      'MediaMarkt España'
+    }
+  },
+  { id:93, name:'Ray-Ban Meta Wayfarer Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
+    badge:'Meta AI · Polarizadas · OAP',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425093?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    specs:{
+      'Cámara':      '12MP · vídeo 1080p 60fps',
+      'Audio':       'Altavoces OAP abiertos · micrófono ×5',
+      'IA':          'Meta AI integrado · comandos de voz',
+      'Batería':     '4h reproducción · 36h con estuche',
+      'Lentes':      'Polarizadas UV400',
+      'Fuente':      'MediaMarkt España'
+    }
+  },
+  { id:94, name:'Ray-Ban Meta Wayfarer Grande Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
+    badge:'Meta AI · Large · Polarizadas',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_162038706?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    specs:{
+      'Cámara':      '12MP · vídeo 1080p 60fps',
+      'Audio':       'Altavoces OAP abiertos · micrófono ×5',
+      'IA':          'Meta AI integrado · comandos de voz',
+      'Talla':       'Wayfarer XL (montura grande)',
+      'Batería':     '4h reproducción · 36h con estuche',
+      'Lentes':      'Polarizadas UV400',
+      'Fuente':      'MediaMarkt España'
+    }
+  },
+  { id:95, name:'Ray-Ban Meta Wayfarer Transitions Verde Grafito', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
+    badge:'Meta AI · Transitions · Adaptativas',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425210?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    specs:{
+      'Cámara':      '12MP · vídeo 1080p 60fps',
+      'Audio':       'Altavoces OAP abiertos · micrófono ×5',
+      'IA':          'Meta AI integrado · comandos de voz',
+      'Batería':     '4h reproducción · 36h con estuche',
+      'Lentes':      'Transitions Verde Grafito · se adaptan a la luz',
+      'Fuente':      'MediaMarkt España'
+    }
+  },
+  { id:96, name:'Ray-Ban Meta Skyler Transitions Azul Cerúleo', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
+    badge:'Meta AI · Skyler · Transitions',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425478?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    specs:{
+      'Cámara':      '12MP · vídeo 1080p 60fps',
+      'Audio':       'Altavoces OAP abiertos · micrófono ×5',
+      'IA':          'Meta AI integrado · comandos de voz',
+      'Montura':     'Skyler (forma mariposa)',
+      'Batería':     '4h reproducción · 36h con estuche',
+      'Lentes':      'Transitions Azul Cerúleo',
+      'Fuente':      'MediaMarkt España'
+    }
+  }
+);
+
+// ─── XREAL AR GLASSES (fuente: eu.shop.xreal.com) ─
+PRODUCTS.push(
+  { id:97, name:'XREAL Air 2', brand:'XREAL', category:'gafas', price:199.00,
+    badge:'AR · OLED · 120Hz · 46° FOV',
+    image:'https://us.shop.xreal.com/cdn/shop/files/preview_images/2.jpg?v=1722059580',
+    specs:{
+      'Pantalla':    'Micro-OLED 1080p · 120Hz · 500 nits',
+      'FOV':         '46° (equiv. 201" a 6m)',
+      'Peso':        '72g',
+      'Refresco':    '60 / 90 / 120Hz',
+      'Conexión':    'USB-C · iOS, Android, PC, Mac',
+      'Fuente':      'eu.shop.xreal.com'
+    }
+  },
+  { id:98, name:'XREAL One', brand:'XREAL', category:'gafas', price:399.00, oldPrice:549.00,
+    badge:'All-in-One AR · Snapdragon AR1',
+    image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_One_AR_Glasses.jpg?v=1755511322',
+    specs:{
+      'Chip':        'Snapdragon AR1 Gen 1 (standalone)',
+      'Pantalla':    'Micro-OLED 1080p · 120Hz',
+      'FOV':         '52°',
+      'Autonomía':   '3h (batería integrada)',
+      'Peso':        '83g',
+      'Conexión':    'Wi-Fi · USB-C · standalone',
+      'Fuente':      'eu.shop.xreal.com'
+    }
+  },
+  { id:99, name:'XREAL 1S', brand:'XREAL', category:'gafas', price:499.00,
+    badge:'AR · FHD · 52° FOV · 500 nits',
+    image:'https://us.shop.xreal.com/cdn/shop/files/00-_-01-1.jpg?v=1767513758',
+    specs:{
+      'Pantalla':    'Micro-OLED FHD · 120Hz · 500 nits',
+      'FOV':         '52°',
+      'Peso':        '80g',
+      'Refresco':    '60 / 90 / 120Hz',
+      'Conexión':    'USB-C · iOS, Android, PC, Mac',
+      'Fuente':      'eu.shop.xreal.com'
+    }
+  },
+  { id:100, name:'XREAL One Pro', brand:'XREAL', category:'gafas', price:649.00, oldPrice:689.00,
+    badge:'AR Pro · 52° FOV · Standalone',
+    image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_One_Pro.jpg?v=1756965858',
+    specs:{
+      'Chip':        'Snapdragon AR1 Gen 1 (standalone)',
+      'Pantalla':    'Micro-OLED 1080p · 120Hz · alta luminosidad',
+      'FOV':         '52°',
+      'Autonomía':   '3h (batería integrada)',
+      'Peso':        '83g',
+      'Conexión':    'Wi-Fi · USB-C · standalone',
+      'Fuente':      'eu.shop.xreal.com'
+    }
+  },
+  { id:101, name:'ROG XREAL R1', brand:'XREAL', category:'gafas', price:849.00,
+    badge:'Gaming AR · ROG × XREAL',
+    image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_ROG___2400x2400_01_db14182b-1e05-4107-8e97-56dc97d0f14f.jpg?v=1778653953',
+    specs:{
+      'Collab':      'ASUS ROG × XREAL',
+      'Chip':        'Snapdragon AR1 Gen 1 · gaming-first',
+      'Pantalla':    'Micro-OLED 1080p · alta tasa de refresco',
+      'Diseño':      'ROG Republic of Gamers Edition',
+      'Disponib.':   'Preventa — envíos julio 2026',
+      'Fuente':      'eu.shop.xreal.com / geeknetic.es'
+    }
+  }
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -3911,6 +4044,18 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
+    if (/ray.ban|ray ban meta|wayfarer.*smart|skyler.*meta|meta.*gafas|gafas.*meta|smart glasses.*ray/.test(ql)) {
+      return 'Gama <strong>Ray-Ban Meta</strong> (5 gafas, desde €247): <strong>Wayfarer Negro Brillante</strong> (€247, transparentes) · <strong>Wayfarer Negro Mate Polarizadas</strong> (€269) · <strong>Wayfarer Grande Negro Mate Polarizadas</strong> (€269, talla XL) · <strong>Wayfarer Transitions Verde Grafito</strong> (€307, lentes adaptativas) · <strong>Skyler Transitions Azul Cerúleo</strong> (€307, montura mariposa). Todas con cámara 12MP, altavoces OAP, Meta AI y 36h con estuche. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Ray-Ban Meta">Ver Ray-Ban Meta →</a>';
+    }
+
+    if (/xreal|xreal one|xreal air|ar.*glasses|rog.*xreal|xreal.*rog|realidad aumentada.*gafas|gafas.*ar\b|ar.*gafas/.test(ql)) {
+      return 'Gama <strong>XREAL</strong> (5 gafas AR, desde €199): <strong>Air 2</strong> (€199, OLED 120Hz, 46° FOV, 72g, USB-C) · <strong>One</strong> (€399 antes €549, standalone Snapdragon AR1, 52° FOV) · <strong>1S</strong> (€499, FHD, 52° FOV, 500 nits) · <strong>One Pro</strong> (€649 antes €689, standalone pro) · <strong>ROG XREAL R1</strong> (€849, gaming AR ASUS ROG × XREAL, preventa julio 2026). <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=XREAL">Ver XREAL →</a>';
+    }
+
+    if (/gafas inteligentes|smart glass|gafas.*inteligentes|gafas.*ar\b|gafas.*ra\b|gafas realidad|ray.ban|xreal|ar glass/.test(ql)) {
+      return 'Tenemos <strong>10 gafas inteligentes</strong> de 2 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + cámara 12MP + altavoces OAP) y <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
+    }
+
     if (/shokz|openrun|openfit|openmove|openswim|opendots|conducci[oó]n [oó]sea|bone conduction|open.ear shokz/.test(ql)) {
       return 'Gama <strong>Shokz</strong> (5 auriculares, desde €69): <strong>OpenMove</strong> (€69, conducción ósea, IP55, 6h) · <strong>OpenFit Air</strong> (€109, open-ear TWS, 28h, IPX4) · <strong>OpenFit</strong> (€139, open-ear TWS, 28h, IP54) · <strong>OpenRun</strong> (€139, conducción ósea deportivo, 8h, IP55) · <strong>OpenFit2</strong> (€189, open-ear TWS, 46h, carga Qi). Oídos siempre libres. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Shokz">Ver Shokz →</a>';
     }
@@ -4008,10 +4153,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Audio Hi-Fi o deportivo? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>30 auriculares</strong> (Moondrop, Nothing, Shokz, Sony, Sennheiser, Google) — desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>10 gafas</strong> (Ray-Ban Meta y XREAL) — 101 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>91 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas) y 30 auriculares (Moondrop IEM Hi-Fi desde €19,99, Shokz open-ear desde €69, Nothing, Sony, Sennheiser y Google). Pregúntame sobre batería, deporte, Hi-Fi o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>101 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 10 gafas inteligentes (Ray-Ban Meta desde €247 y XREAL AR desde €199). Pregúntame sobre deporte, Hi-Fi, AR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4043,7 +4188,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>30 auriculares premium</strong> (Moondrop Hi-Fi, Shokz open-ear, Nothing, Sony, Sennheiser y Google) — 91 productos en total, desde €19,99. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas), <strong>30 auriculares premium</strong> (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser y Google) y <strong>10 gafas inteligentes</strong> (Ray-Ban Meta y XREAL AR) — 101 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas AR o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
