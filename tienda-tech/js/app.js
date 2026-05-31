@@ -1746,6 +1746,301 @@ PRODUCTS.push(
 
 );
 
+// ─── SONY HEADPHONE PRODUCTS (fuente: Depau CDN + sony.es — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 62 · Sony WH-CH520 Negro ───────────────────────────────────────────────
+  {
+    id: 62,
+    name: 'Sony WH-CH520 Negro',
+    brand: 'Sony',
+    category: 'auriculares',
+    price: 39.99,
+    badge: 'Bluetooth 5.2',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch520%20bk_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch520%20bk_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch520%20bk_2.jpg'
+    ],
+    description: 'Sony WH-CH520 Negro: auriculares inalámbricos de diadema ligeros y cómodos con 50 horas de autonomía y carga rápida USB-C (3 min = 90 min de música). Bluetooth 5.2 con función Multipoint (2 dispositivos simultáneos). Micrófono integrado manos libres. Asistente de voz compatible (Google, Alexa, Siri). Sin ANC. Plegables y portátiles.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico (on-ear)',
+      'Bluetooth':     '5.2 · Multipoint (2 dispositivos)',
+      'Batería':       '50 horas · Carga rápida: 90 min con 3 min de carga',
+      'Carga':         'USB-C',
+      'ANC':           'Sin cancelación activa de ruido',
+      'Micrófono':     'Integrado · Manos libres',
+      'Peso':          '147g (ultraligero)',
+      'Plegable':      'Sí',
+      'Asistente':     'Google Assistant, Amazon Alexa, Siri',
+      'Resistencia':   'Sin certificación IP',
+      'Fuente':        'Depau + sony.es'
+    }
+  },
+
+  // ── 63 · Sony WF-C510 Blanco ───────────────────────────────────────────────
+  {
+    id: 63,
+    name: 'Sony WF-C510 Blanco',
+    brand: 'Sony',
+    category: 'auriculares',
+    price: 49.99,
+    badge: 'True Wireless',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c510%20wh_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c510%20wh_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c510%20wh_2.jpg'
+    ],
+    description: 'Sony WF-C510 Blanco: auriculares True Wireless completamente inalámbricos (sin cable) con hasta 20 horas de autonomía total (5h auriculares + 15h estuche). Bluetooth 5.3. Resistencia a salpicaduras IPX4. Ecualizador personalizable desde la app Sony Headphones Connect. Micrófono de alta calidad para llamadas. Peso ultraligero por auricular.',
+    specs: {
+      'Tipo':          'In-ear True Wireless',
+      'Bluetooth':     '5.3',
+      'Batería':       '5h (auriculares) + 15h (estuche) = 20h total',
+      'Carga':         'USB-C',
+      'ANC':           'Sin cancelación activa de ruido',
+      'Resistencia':   'IPX4 (resistente a salpicaduras)',
+      'Códec':         'SBC, AAC',
+      'App':           'Sony Headphones Connect (EQ + ajustes)',
+      'Asistente':     'Compatible con asistente de voz del teléfono',
+      'Fuente':        'Depau + sony.es'
+    }
+  },
+
+  // ── 64 · Sony WH-CH720N Negro ──────────────────────────────────────────────
+  {
+    id: 64,
+    name: 'Sony WH-CH720N Negro',
+    brand: 'Sony',
+    category: 'auriculares',
+    price: 89.99,
+    badge: 'ANC Ligero',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch720n%20bk_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch720n%20bk_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch720n%20bk_2.jpg'
+    ],
+    description: 'Sony WH-CH720N Negro: auriculares inalámbricos de diadema con cancelación activa de ruido (ANC) y el diseño más ligero de Sony (192g). Hasta 35h con ANC activo / 50h sin ANC. Bluetooth 5.2 Multipoint. DSEE (Digital Sound Enhancement Engine). Modo Ambiente para escuchar el entorno. Carga rápida USB-C. Optimización automática del ANC según el entorno.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico (over-ear)',
+      'Bluetooth':     '5.2 · Multipoint',
+      'Batería':       '35h con ANC · 50h sin ANC · Carga rápida USB-C',
+      'ANC':           'Cancelación activa de ruido digital/analógica dual',
+      'Modo Ambiente': 'Sí (hear-through)',
+      'Peso':          '192g (el más ligero de Sony con ANC)',
+      'DSEE':          'Digital Sound Enhancement Engine',
+      'Plegable':      'Sí',
+      'Asistente':     'Google Assistant, Amazon Alexa',
+      'Resistencia':   'Sin certificación IP',
+      'Fuente':        'Depau + sony.es'
+    }
+  },
+
+  // ── 65 · Sony WF-C710N Blanco ──────────────────────────────────────────────
+  {
+    id: 65,
+    name: 'Sony WF-C710N Blanco',
+    brand: 'Sony',
+    category: 'auriculares',
+    price: 99.99,
+    badge: 'ANC True Wireless',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c710n%20wh_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c710n%20wh_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c710n%20wh_2.jpg'
+    ],
+    description: 'Sony WF-C710N Blanco: auriculares True Wireless con cancelación activa de ruido (ANC) Dual Noise Sensor. Hasta 30 horas de autonomía total (7,5h + 22,5h estuche) con ANC. Bluetooth 5.3. IPX4 resistencia a salpicaduras. Ecualización personalizable desde la app Sony Headphones Connect. Micrófono con reducción de ruido de fondo para llamadas claras. Modelo 2025.',
+    specs: {
+      'Tipo':          'In-ear True Wireless con ANC',
+      'Bluetooth':     '5.3',
+      'Batería':       '7,5h (auriculares) + 22,5h (estuche) = 30h total con ANC',
+      'ANC':           'Dual Noise Sensor Technology (ANC activo)',
+      'Modo Ambiente': 'Sí (Ambient Sound Mode)',
+      'Resistencia':   'IPX4 (resistente a salpicaduras)',
+      'Carga':         'USB-C',
+      'App':           'Sony Headphones Connect',
+      'Asistente':     'Compatible con asistente de voz del teléfono',
+      'Fuente':        'Depau + sony.es'
+    }
+  },
+
+  // ── 66 · Sony ULT WEAR Negro ───────────────────────────────────────────────
+  {
+    id: 66,
+    name: 'Sony ULT WEAR Negro',
+    brand: 'Sony',
+    category: 'auriculares',
+    price: 129.99,
+    badge: 'ULT POWER SOUND',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20ult%20wear%20bk_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20ult%20wear%20bk_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20ult%20wear%20bk_2.jpg'
+    ],
+    description: 'Sony ULT WEAR Negro: auriculares inalámbricos de diadema con ULT POWER SOUND (botón dedicado para máximo impacto de graves), cancelación activa de ruido (ANC) y hasta 30h de batería con ANC / 50h sin ANC. Bluetooth 5.2 Multipoint. Modo Ambiente. DSEE audio enhancement. USB-C. Diseño robusto con almohadillas premium. La nueva línea ULT de Sony para bass lovers.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico (over-ear) · ULT Bass',
+      'Bluetooth':     '5.2 · Multipoint (2 dispositivos)',
+      'Batería':       '30h con ANC · 50h sin ANC · Carga USB-C',
+      'ANC':           'Cancelación activa de ruido',
+      'Modo Ambiente': 'Sí',
+      'ULT SOUND':     'Botón dedicado para máximo impacto de graves',
+      'DSEE':          'Digital Sound Enhancement Engine',
+      'Asistente':     'Google Assistant, Amazon Alexa',
+      'Plegable':      'Sí',
+      'Resistencia':   'Sin certificación IP',
+      'Fuente':        'Depau + sony.es'
+    }
+  }
+
+);
+
+// ─── SENNHEISER HEADPHONE PRODUCTS (fuente: eu.sennheiser-hearing.com — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 67 · Sennheiser ACCENTUM True Wireless Negro ───────────────────────────
+  {
+    id: 67,
+    name: 'Sennheiser ACCENTUM True Wireless Negro',
+    brand: 'Sennheiser',
+    category: 'auriculares',
+    price: 99.90,
+    oldPrice: 199.90,
+    badge: 'ANC Híbrido',
+    image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/ACCENTUM_True_Wireless_Black_CGI_Product_Earbuds_1_1.png',
+    images: [
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/ACCENTUM_True_Wireless_Black_CGI_Product_Earbuds_1_1.png',
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/56876325699965desktop_image.jpg'
+    ],
+    description: 'Sennheiser ACCENTUM True Wireless Negro: auriculares in-ear True Wireless con cancelación híbrida activa de ruido (ANC), sonido TrueResponse™ de 7mm y hasta 28 horas de autonomía total (8h auriculares + estuche de carga). Bluetooth 5.3. Resistencia IP54 (polvo y salpicaduras). Modo Transparencia. Graves potentes con dinámica premium Sennheiser. Sin suscripción.',
+    specs: {
+      'Tipo':          'In-ear True Wireless con ANC híbrido',
+      'Bluetooth':     '5.3',
+      'Batería':       '8h (auriculares) + 20h (estuche) = 28h total',
+      'ANC':           'Cancelación activa de ruido híbrida',
+      'Modo Ambiente': 'Sí (Transparency Mode)',
+      'Driver':        '7mm TrueResponse™ dynamic',
+      'Resistencia':   'IP54 (polvo + salpicaduras)',
+      'Carga':         'USB-C',
+      'Códec':         'SBC, AAC',
+      'Fuente':        'eu.sennheiser-hearing.com'
+    }
+  },
+
+  // ── 68 · Sennheiser ACCENTUM Wireless Negro ────────────────────────────────
+  {
+    id: 68,
+    name: 'Sennheiser ACCENTUM Wireless Negro',
+    brand: 'Sennheiser',
+    category: 'auriculares',
+    price: 120.00,
+    oldPrice: 179.90,
+    badge: '50h Batería',
+    image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/56876327895421desktop_image.jpg',
+    images: [
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/56876327895421desktop_image.jpg',
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/56876327895421mobile_image.jpg'
+    ],
+    description: 'Sennheiser ACCENTUM Wireless Negro: auriculares de diadema inalámbricos con cancelación activa de ruido híbrida y la mejor autonomía de batería de la gama (50 horas con ANC). Bluetooth 5.2 Clase 1 (larga distancia). Drivers de 37mm. Carga rápida (10 min = 5h de música). Plegables. Modo Transparencia. Interfaz táctil. Multipoint. Respaldo de Sennheiser Audiophile.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico (over-ear) con ANC híbrido',
+      'Bluetooth':     '5.2 Clase 1 · Multipoint',
+      'Batería':       '50h con ANC · Carga rápida 10 min = 5h',
+      'ANC':           'Cancelación activa de ruido híbrida',
+      'Modo Ambiente': 'Sí',
+      'Driver':        '37mm dinámico',
+      'Carga':         'USB-C',
+      'Plegable':      'Sí',
+      'Control':       'Interfaz táctil',
+      'Asistente':     'Compatible con asistente de voz',
+      'Fuente':        'eu.sennheiser-hearing.com'
+    }
+  },
+
+  // ── 69 · Sennheiser HD 450BT Negro ─────────────────────────────────────────
+  {
+    id: 69,
+    name: 'Sennheiser HD 450BT Negro',
+    brand: 'Sennheiser',
+    category: 'auriculares',
+    price: 139.90,
+    badge: 'aptX · 30h',
+    image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/3_a8ffb0e1-c722-4e7e-bbfa-1b1b71a6b37a.jpg',
+    images: [
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/3_a8ffb0e1-c722-4e7e-bbfa-1b1b71a6b37a.jpg',
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/3.jpg'
+    ],
+    description: 'Sennheiser HD 450BT Negro: auriculares de diadema inalámbricos over-ear con cancelación activa de ruido ANC y soporte de audio de alta resolución con códec aptX. 30 horas de autonomía con ANC activo. Bluetooth 5.0. USB-C. Doblables para transporte. Micrófono beamforming dual para llamadas cristalinas. Peso 238g. La gama HD de Sennheiser para audiófilos.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico over-ear con ANC',
+      'Bluetooth':     '5.0',
+      'Batería':       '30h con ANC · Carga USB-C 2h',
+      'ANC':           'Cancelación activa de ruido',
+      'Códec':         'aptX, aptX Low Latency, AAC, SBC (alta resolución)',
+      'Micrófono':     'Beamforming dual',
+      'Peso':          '238g',
+      'Plegable':      'Sí',
+      'Respuesta':     '18 Hz – 22.000 Hz',
+      'Fuente':        'eu.sennheiser-hearing.com'
+    }
+  },
+
+  // ── 70 · Sennheiser MOMENTUM True Wireless 4 Negro Cobre ───────────────────
+  {
+    id: 70,
+    name: 'Sennheiser MOMENTUM True Wireless 4',
+    brand: 'Sennheiser',
+    category: 'auriculares',
+    price: 219.00,
+    oldPrice: 299.90,
+    badge: 'aptX Adaptive',
+    image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/mtw4_productimages_blackcopper.jpg',
+    images: [
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/mtw4_productimages_blackcopper.jpg'
+    ],
+    description: 'Sennheiser MOMENTUM True Wireless 4 (Negro Cobre): el flagship True Wireless de Sennheiser. ANC adaptativo + Sound Personalization con Sennheiser Smart Control. 7,5h auriculares + 22,5h estuche = 30h total. Bluetooth 5.4 con aptX Adaptive y LDAC (audio alta resolución). IP54. Modo Transparencia adaptativo. Cancelación de ruido de fondo en llamadas con IA.',
+    specs: {
+      'Tipo':          'In-ear True Wireless flagship con ANC adaptativo',
+      'Bluetooth':     '5.4 · aptX Adaptive · LDAC · SBC · AAC',
+      'Batería':       '7,5h (auriculares) + 22,5h (estuche) = 30h total',
+      'ANC':           'ANC adaptativo + Adaptive Hearing (Hear Through)',
+      'Resistencia':   'IP54',
+      'Carga':         'USB-C + Qi inalámbrico',
+      'Personaliz.':   'Sound Personalization con Sennheiser Smart Control',
+      'IA llamadas':   'ANC de voz adaptativo para llamadas con IA',
+      'Fuente':        'eu.sennheiser-hearing.com'
+    }
+  },
+
+  // ── 71 · Sennheiser MOMENTUM 4 Wireless Negro ──────────────────────────────
+  {
+    id: 71,
+    name: 'Sennheiser MOMENTUM 4 Wireless Negro',
+    brand: 'Sennheiser',
+    category: 'auriculares',
+    price: 249.90,
+    oldPrice: 369.90,
+    badge: 'ANC · 60h',
+    image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/momentum_4_isofront_v1.jpg',
+    images: [
+      'https://eu.sennheiser-hearing.com/cdn/shop/files/momentum_4_isofront_v1.jpg'
+    ],
+    description: 'Sennheiser MOMENTUM 4 Wireless Negro: el referente over-ear de Sennheiser con 60 horas de autonomía (la mayor del mercado) y cancelación activa de ruido adaptativa. Bluetooth 5.2 con aptX, aptX Low Latency, aptX HD y AAC. Sound Personalization personalizable. Diseño plegable premium con materiales sostenibles. Micrófono con beamforming triple. La mejor relación calidad/autonomía de su categoría.',
+    specs: {
+      'Tipo':          'Diadema inalámbrico over-ear premium con ANC adaptativo',
+      'Bluetooth':     '5.2 · aptX · aptX LL · aptX HD · AAC · SBC',
+      'Batería':       '60h · 20h por carga · Carga rápida USB-C',
+      'ANC':           'Cancelación activa de ruido adaptativa',
+      'Modo Ambiente': 'Sí (Adaptive Hearing / Hear Through)',
+      'Micrófono':     'Triple beamforming para llamadas premium',
+      'Plegable':      'Sí (diseño compacto con funda incluida)',
+      'Sound Pers.':   'Sound Personalization app Sennheiser Smart Control',
+      'Carga':         'USB-C',
+      'Fuente':        'eu.sennheiser-hearing.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -3249,8 +3544,16 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
-    if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
-      return 'En este momento nuestro catálogo incluye <strong>35 relojes inteligentes</strong> y <strong>13 anillos inteligentes</strong> (Oura, Samsung Galaxy Ring y RingConn). Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj o anillo? <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/sennheiser|momentum|accentum|hd.*bt|hd 450|hd 350/.test(ql)) {
+      return 'Gama <strong>Sennheiser</strong> (5 auriculares, desde €99,90): <strong>ACCENTUM True Wireless</strong> (€99,90, ANC híbrido, 28h, IP54) · <strong>ACCENTUM Wireless</strong> (€120, ANC 50h) · <strong>HD 450BT</strong> (€139,90, aptX, 30h ANC) · <strong>MOMENTUM TWS 4</strong> (€219, aptX Adaptive + LDAC, 30h) · <strong>MOMENTUM 4 Wireless</strong> (€249,90, 60h, ANC adaptativo). Ingeniería de audio alemana. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sennheiser">Ver Sennheiser →</a>';
+    }
+
+    if (/sony.*auricular|auricular.*sony|wh.*ch|wf.*c[57]|ult wear|wh-1000|wf-1000/.test(ql)) {
+      return 'Gama <strong>Sony</strong> (5 auriculares, desde €39,99): <strong>WH-CH520</strong> (€39,99, 50h, Bluetooth 5.2) · <strong>WF-C510</strong> (€49,99, True Wireless, 20h total) · <strong>WH-CH720N</strong> (€89,99, ANC, 35h, 192g ultraligero) · <strong>WF-C710N</strong> (€99,99, ANC True Wireless, 30h) · <strong>ULT WEAR</strong> (€129,99, ANC + ULT POWER SOUND graves extremos). <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sony">Ver Sony →</a>';
+    }
+
+    if (/auricular|tws|earbuds|sonido|m[uú]sica|cascos/.test(ql)) {
+      return 'Tenemos <strong>10 auriculares premium</strong> de 2 marcas: <strong>Sony</strong> (5 modelos desde €39,99: WH-CH520, WF-C510, WH-CH720N, WF-C710N, ULT WEAR) y <strong>Sennheiser</strong> (5 modelos desde €99,90: ACCENTUM, HD 450BT, MOMENTUM TWS 4, MOMENTUM 4). ANC, True Wireless, aptX Adaptive y hasta 60h de batería. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
@@ -3322,10 +3625,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas) y <strong>26 anillos</strong> (Amazfit, Movano, RingConn, Ultrahuman, Circular, Oura, Samsung) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>10 auriculares</strong> (Sony y Sennheiser) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>61 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 26 anillos inteligentes (Amazfit Helio, Movano Evie, RingConn, Ultrahuman, Circular Ring 2, Oura Ring y Samsung Galaxy Ring — desde €169,90). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>71 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas, desde €169,90) y 10 auriculares premium (Sony y Sennheiser, desde €39,99). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -3357,7 +3660,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>26 anillos inteligentes</strong> (Amazfit, Movano, RingConn, Ultrahuman, Circular, Oura y Samsung Ring) — 61 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>10 auriculares premium</strong> (Sony y Sennheiser) — 71 productos en total, desde €39,95. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
