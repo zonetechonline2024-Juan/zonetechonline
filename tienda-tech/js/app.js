@@ -2551,6 +2551,171 @@ PRODUCTS.push(
   }
 );
 
+// ─── VITURE XR GLASSES (fuente: PCComponentes España + viture.com) ─
+PRODUCTS.push(
+  { id:102, name:'VITURE Luma XR Glasses', brand:'VITURE', category:'gafas', price:461.00,
+    badge:'XR · 120Hz · 1000 nits · 146"',
+    image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6C_01.jpg',
+    description:'VITURE Luma XR Glasses: la nueva generación de gafas XR con pantalla virtual de 146 pulgadas a 4 metros de distancia. OLED 120Hz, 1000 nits, ajuste de dioptrías hasta -6.0D integrado y lentes electrocromáticas. Conéctate por USB-C a móvil, PC o consola. 77g. La mejor relación calidad-precio de la gama Luma.',
+    specs:{
+      'Pantalla virtual': '146" a 4 metros · 50° FOV',
+      'Resolución':       '3840×1200 (1200p por ojo)',
+      'Brillo':           '1000 nits',
+      'Refresco':         '120 Hz',
+      'Dioptrías':        'Ajuste integrado hasta -6.0D',
+      'Electrocromático': 'Sí — lentes adaptativas',
+      'Peso':             '77g',
+      'Conexión':         'USB-C · iOS, Android, PC, Mac, PS5',
+      'Fuente':           'PCComponentes.com'
+    }
+  },
+  { id:103, name:'VITURE Luma Pro XR Glasses', brand:'VITURE', category:'gafas', price:509.00,
+    badge:'XR · 120Hz · 52° FOV · RGB',
+    image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6_01.jpg',
+    description:'VITURE Luma Pro XR Glasses: el FOV más grande de la gama Luma (52°) y el primer diseño con iluminación RGB dinámica en el lateral. 152 pulgadas virtuales, 1000 nits, 120Hz y ajuste de dioptrías hasta -4.0D. Lentes electrocromáticas de 9 niveles. Audio HARMAN mejorado.',
+    specs:{
+      'Pantalla virtual': '152" a 4 metros · 52° FOV',
+      'Resolución':       '3840×1200 (1200p por ojo)',
+      'Brillo':           '1000 nits',
+      'Refresco':         '120 Hz',
+      'Dioptrías':        'Ajuste integrado hasta -4.0D',
+      'Electrocromático': 'Sí — 9 niveles',
+      'Especial':         'RGB dinámico frontal — primero en su categoría',
+      'Conexión':         'USB-C · iOS, Android, PC, Mac, PS5',
+      'Fuente':           'PCComponentes.com'
+    }
+  },
+  { id:104, name:'VITURE Pro XR Glasses', brand:'VITURE', category:'gafas', price:549.00,
+    badge:'XR · 120Hz · 1000 nits · HARMAN',
+    image:'https://www.powerplanetonline.com/cdnassets/Viture-Pro-XR-001_l_sf.webp',
+    description:'VITURE Pro XR Glasses: el modelo que estableció el estándar XR de VITURE. Pantalla virtual de 135 pulgadas, 1000 nits, 120Hz y audio HARMAN Kardon integrado. Ajuste de dioptrías para miopes. Lentes electrocromáticas. Compatible con USB-C y adaptadores Lightning para iPhone.',
+    specs:{
+      'Pantalla virtual': '135" equivalente',
+      'Brillo':           '1000 nits',
+      'Refresco':         '120 Hz',
+      'Audio':            'HARMAN Kardon integrado',
+      'Dioptrías':        'Ajuste nativo para miopes',
+      'Electrocromático': 'Sí',
+      'Conexión':         'USB-C · adaptador Lightning disponible',
+      'Fuente':           'PowerPlanetOnline.com ES'
+    }
+  },
+  { id:105, name:'VITURE Beast XR Glasses', brand:'VITURE', category:'gafas', price:628.00,
+    badge:'XR · 58° FOV · 1250 nits · Cámara RGB',
+    image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/R6_01.jpg',
+    description:'VITURE Beast XR Glasses: el FOV más grande del mercado XR de consumo (58°) y 1250 nits de brillo máximo. 174 pulgadas virtuales a 4 metros. Cámara RGB frontal, VisionPair 3DoF integrado, 9 niveles electrocromáticos y cuerpo metal aluminio/magnesio. La experiencia XR más inmersiva de VITURE.',
+    specs:{
+      'Pantalla virtual': '174" a 4 metros · 58° FOV',
+      'Resolución':       '3840×1200 + 1920×1200 por ojo',
+      'Brillo':           '1250 nits',
+      'Refresco':         '120 Hz',
+      'Cámara':           'RGB frontal + VisionPair 3DoF',
+      'Electrocromático': '9 niveles',
+      'Peso':             '88g',
+      'Cuerpo':           'Aluminio + magnesio',
+      'Fuente':           'PCComponentes.com'
+    }
+  },
+  { id:106, name:'VITURE Luma Ultra XR/AR Glasses', brand:'VITURE', category:'gafas', price:650.00,
+    badge:'XR/AR · 6DoF · 1500 nits · Sony OLED',
+    image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6S_01_72d2ede5-9631-49b3-951f-f001b37900b5.jpg',
+    description:'VITURE Luma Ultra XR/AR Glasses: el pináculo de la gama Luma. Panel Sony Micro OLED, 1500 nits (el mayor brillo de toda la gama), 6DoF completo con gestos de manos AR, cámaras de profundidad dual y conversión 2D a 3D en tiempo real. 83g. Para quien quiere lo mejor de las gafas XR/AR de consumo.',
+    specs:{
+      'Pantalla virtual': '152" a 4 metros · 52° FOV',
+      'Panel':            'Sony Micro OLED 1200p',
+      'Brillo':           '1500 nits — máximo de la gama',
+      'Refresco':         '120 Hz',
+      'Seguimiento':      '6DoF · gestos de manos AR',
+      'Cámaras':          'RGB + profundidad dual · conversión 2D→3D',
+      'Dioptrías':        'Ajuste hasta -4.0D',
+      'Peso':             '83g',
+      'Fuente':           'PCComponentes.com'
+    }
+  }
+);
+
+// ─── EVEN REALITIES G1 SMART GLASSES (fuente: evenrealities.com/es-ES) ─
+PRODUCTS.push(
+  { id:107, name:'Even G1 A Grey1', brand:'Even Realities', category:'gafas', price:599.00,
+    badge:'MicroLED · IA · 44g · Traducción',
+    image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/ER_Packshoot_G1A_Grey1_Front.png',
+    description:'Even G1 A Grey1: las gafas inteligentes más ligeras del mercado (44g). Pantalla MicroLED verde monocromática 640×200, 1000 nits. Even AI + ChatGPT integrado, traducción en tiempo real a 13 idiomas, teleprompter, navegación y transcripción de voz. Diseñadas para el uso diario sin que parezcan gadgets. Montura gris mineral elegante.',
+    specs:{
+      'Pantalla':         'MicroLED verde monocromática · 640×200 · 1000 nits',
+      'FOV':              '25°',
+      'Peso':             '44g — ligeras como gafas normales',
+      'IA':               'Even AI + ChatGPT · comandos de voz',
+      'Traducción':       'Tiempo real · 13 idiomas',
+      'Funciones':        'Teleprompter · navegación · transcripción · calendario',
+      'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
+      'Conectividad':     'Bluetooth 5.2 · iOS y Android',
+      'Fuente':           'evenrealities.com/es-ES'
+    }
+  },
+  { id:108, name:'Even G1 A Brown1', brand:'Even Realities', category:'gafas', price:599.00,
+    badge:'MicroLED · IA · 44g · Traducción',
+    image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-brown-front-folded.png',
+    description:'Even G1 A Brown1: la variante marrón cálido de las gafas inteligentes más ligeras del mundo (44g). Misma tecnología Even AI con ChatGPT, traducción en tiempo real a 13 idiomas y pantalla MicroLED verde que solo tú puedes ver. Montura marrón de aleación magnesio-titanio para un look refinado y natural.',
+    specs:{
+      'Pantalla':         'MicroLED verde monocromática · 640×200 · 1000 nits',
+      'FOV':              '25°',
+      'Peso':             '44g — ligeras como gafas normales',
+      'IA':               'Even AI + ChatGPT · comandos de voz',
+      'Traducción':       'Tiempo real · 13 idiomas',
+      'Funciones':        'Teleprompter · navegación · transcripción · calendario',
+      'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
+      'Conectividad':     'Bluetooth 5.2 · iOS y Android',
+      'Fuente':           'evenrealities.com/es-ES'
+    }
+  },
+  { id:109, name:'Even G1 A Green1', brand:'Even Realities', category:'gafas', price:599.00,
+    badge:'MicroLED · IA · 44g · ChatGPT',
+    image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-green-front-folded.png',
+    description:'Even G1 A Green1: la montura verde salvia — la más reconocible del catálogo Even Realities. Pantalla MicroLED verde monocromática invisible para los demás, 44g, Even AI + ChatGPT integrado y traducción simultánea a 13 idiomas. Para quien quiere IA discreta en su día a día sin renunciar al estilo.',
+    specs:{
+      'Pantalla':         'MicroLED verde monocromática · 640×200 · 1000 nits',
+      'FOV':              '25°',
+      'Peso':             '44g — ligeras como gafas normales',
+      'IA':               'Even AI + ChatGPT · comandos de voz',
+      'Traducción':       'Tiempo real · 13 idiomas',
+      'Funciones':        'Teleprompter · navegación · transcripción · calendario',
+      'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
+      'Conectividad':     'Bluetooth 5.2 · iOS y Android',
+      'Fuente':           'evenrealities.com/es-ES'
+    }
+  },
+  { id:110, name:'Even G1 A Grey1 + Lentes Monofocales', brand:'Even Realities', category:'gafas', price:768.00,
+    badge:'MicroLED · IA · Graduadas · 44g',
+    image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/ER_Packshoot_G1A_Grey1_Front.png',
+    description:'Even G1 A Grey1 con lentes monofocales de prescripción integradas: la solución completa para usuarios con miopía, hipermetropía o astigmatismo. Misma tecnología Even AI, ChatGPT y traducción en tiempo real, pero con tu graduación incorporada. No necesitas llevar gafas debajo. Precio incluye fabricación y montaje de lentes graduadas.',
+    specs:{
+      'Pantalla':         'MicroLED verde monocromática · 640×200 · 1000 nits',
+      'Lentes':           'Monofocales con prescripción — incluidas en el precio',
+      'Graduación':       'Miopía · hipermetropía · astigmatismo',
+      'Peso':             '44g (con lentes montadas)',
+      'IA':               'Even AI + ChatGPT · comandos de voz',
+      'Traducción':       'Tiempo real · 13 idiomas',
+      'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
+      'Fuente':           'evenrealities.com/es-ES'
+    }
+  },
+  { id:111, name:'Even G1 A Brown1 + Lentes Monofocales', brand:'Even Realities', category:'gafas', price:768.00,
+    badge:'MicroLED · IA · Graduadas · Marrón',
+    image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-brown-front-folded.png',
+    description:'Even G1 A Brown1 con lentes monofocales de prescripción integradas: gafas inteligentes con tu graduación en montura marrón cálido. Even AI + ChatGPT, traducción en tiempo real a 13 idiomas, teleprompter y navegación — todo en 44g con tu prescripción exacta. La opción más elegante para usuarios con gafas graduadas.',
+    specs:{
+      'Pantalla':         'MicroLED verde monocromática · 640×200 · 1000 nits',
+      'Lentes':           'Monofocales con prescripción — incluidas en el precio',
+      'Graduación':       'Miopía · hipermetropía · astigmatismo',
+      'Peso':             '44g (con lentes montadas)',
+      'IA':               'Even AI + ChatGPT · comandos de voz',
+      'Traducción':       'Tiempo real · 13 idiomas',
+      'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
+      'Fuente':           'evenrealities.com/es-ES'
+    }
+  }
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -4054,6 +4219,14 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
+    if (/viture|viture luma|viture pro|viture beast|viture ultra|xr glasses.*viture|luma.*xr/.test(ql)) {
+      return 'Gama <strong>VITURE</strong> (5 gafas XR, desde €461): <strong>Luma</strong> (€461, 146", 50° FOV, 1000 nits, -6D, 77g) · <strong>Luma Pro</strong> (€509, 152", 52° FOV, RGB dinámico) · <strong>Pro XR</strong> (€549, 135", HARMAN Kardon) · <strong>Beast</strong> (€628, 174", 58° FOV, 1250 nits, cámara RGB) · <strong>Luma Ultra</strong> (€650, Sony OLED, 1500 nits, 6DoF AR). Conecta tu móvil, PC o PS5 por USB-C. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=VITURE">Ver VITURE →</a>';
+    }
+
+    if (/even realities|even g1|g1 a\b|g1.*even|microl[eé]d.*gafas|gafas.*microl[eé]d|gafas.*ia.*diaria|gafas.*chatgpt/.test(ql)) {
+      return 'Gama <strong>Even Realities G1 A</strong> (5 variantes, desde €599): <strong>Grey1</strong> (€599) · <strong>Brown1</strong> (€599) · <strong>Green1</strong> (€599) · <strong>Grey1 + Lentes Monofocales</strong> (€768) · <strong>Brown1 + Lentes Monofocales</strong> (€768). MicroLED verde monocromática, <strong>44g</strong>, Even AI + ChatGPT, traducción en tiempo real 13 idiomas, teleprompter. Las gafas inteligentes más discretas del mercado. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Even Realities">Ver Even Realities →</a>';
+    }
+
     if (/ray.ban|ray ban meta|wayfarer.*smart|skyler.*meta|meta.*gafas|gafas.*meta|smart glasses.*ray/.test(ql)) {
       return 'Gama <strong>Ray-Ban Meta</strong> (5 gafas, desde €247): <strong>Wayfarer Negro Brillante</strong> (€247, transparentes) · <strong>Wayfarer Negro Mate Polarizadas</strong> (€269) · <strong>Wayfarer Grande Negro Mate Polarizadas</strong> (€269, talla XL) · <strong>Wayfarer Transitions Verde Grafito</strong> (€307, lentes adaptativas) · <strong>Skyler Transitions Azul Cerúleo</strong> (€307, montura mariposa). Todas con cámara 12MP, altavoces OAP, Meta AI y 36h con estuche. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Ray-Ban Meta">Ver Ray-Ban Meta →</a>';
     }
@@ -4062,8 +4235,8 @@ function initAIAssistant() {
       return 'Gama <strong>XREAL</strong> (5 gafas AR, desde €199): <strong>Air 2</strong> (€199, OLED 120Hz, 46° FOV, 72g, USB-C) · <strong>One</strong> (€399 antes €549, standalone Snapdragon AR1, 52° FOV) · <strong>1S</strong> (€499, FHD, 52° FOV, 500 nits) · <strong>One Pro</strong> (€649 antes €689, standalone pro) · <strong>ROG XREAL R1</strong> (€849, gaming AR ASUS ROG × XREAL, preventa julio 2026). <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=XREAL">Ver XREAL →</a>';
     }
 
-    if (/gafas inteligentes|smart glass|gafas.*inteligentes|gafas.*ar\b|gafas.*ra\b|gafas realidad|ray.ban|xreal|ar glass/.test(ql)) {
-      return 'Tenemos <strong>10 gafas inteligentes</strong> de 2 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + cámara 12MP + altavoces OAP) y <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
+    if (/gafas inteligentes|smart glass|gafas.*inteligentes|gafas.*ar\b|gafas.*xr\b|gafas realidad|ray.ban|xreal|viture|even realities|ar glass/.test(ql)) {
+      return 'Tenemos <strong>20 gafas inteligentes</strong> de 4 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + 12MP) · <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV) · <strong>VITURE</strong> (5 desde €461, XR hasta 58° FOV y 1500 nits) · <strong>Even Realities G1</strong> (5 desde €599, MicroLED 44g + ChatGPT). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
     }
 
     if (/shokz|openrun|openfit|openmove|openswim|opendots|conducci[oó]n [oó]sea|bone conduction|open.ear shokz/.test(ql)) {
@@ -4163,10 +4336,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>10 gafas</strong> (Ray-Ban Meta y XREAL) — 101 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>20 gafas</strong> (Ray-Ban Meta, XREAL, VITURE y Even Realities) — 111 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>101 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 10 gafas inteligentes (Ray-Ban Meta desde €247 y XREAL AR desde €199). Pregúntame sobre deporte, Hi-Fi, AR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>111 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 20 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR y Even Realities G1 con IA). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4198,7 +4371,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas), <strong>30 auriculares premium</strong> (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser y Google) y <strong>10 gafas inteligentes</strong> (Ray-Ban Meta y XREAL AR) — 101 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas AR o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>20 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR y Even Realities G1 con IA) — 111 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
