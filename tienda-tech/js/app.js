@@ -2472,7 +2472,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica/.test(ql)) {
-      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin — 30 modelos desde €39,95. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+      return 'En este momento nuestro catálogo se centra en <strong>relojes inteligentes</strong>: Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin — 35 modelos desde €39,95. Próximamente incorporaremos auriculares premium. ¿Te ayudo a elegir un reloj? <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
