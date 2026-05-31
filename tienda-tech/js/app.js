@@ -2413,6 +2413,7 @@ PRODUCTS.push(
   { id:92, name:'Ray-Ban Meta Wayfarer Negro Brillante', brand:'Ray-Ban Meta', category:'gafas', price:247.00,
     badge:'Meta AI · 12MP · OAP',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425222?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    description:'Ray-Ban Meta Wayfarer Negro Brillante: la icónica montura Wayfarer convertida en gafa inteligente. Cámara 12MP, vídeo 1080p, altavoces OAP para escuchar música sin tapones y Meta AI integrado por voz. 4h uso continuo, 36h con estuche. Lentes transparentes UV400.',
     specs:{
       'Cámara':      '12MP · vídeo 1080p 60fps',
       'Audio':       'Altavoces OAP abiertos · micrófono ×5',
@@ -2426,6 +2427,7 @@ PRODUCTS.push(
   { id:93, name:'Ray-Ban Meta Wayfarer Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
     badge:'Meta AI · Polarizadas · OAP',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425093?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    description:'Ray-Ban Meta Wayfarer Negro Mate con lentes polarizadas: ideal para exteriores y conducción. Cámara 12MP, altavoces OAP, Meta AI por voz. Acabado mate premium. 4h reproducción, 36h con estuche de carga. Lentes polarizadas UV400 de alta definición.',
     specs:{
       'Cámara':      '12MP · vídeo 1080p 60fps',
       'Audio':       'Altavoces OAP abiertos · micrófono ×5',
@@ -2438,6 +2440,7 @@ PRODUCTS.push(
   { id:94, name:'Ray-Ban Meta Wayfarer Grande Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
     badge:'Meta AI · Large · Polarizadas',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_162038706?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    description:'Ray-Ban Meta Wayfarer Grande (XL): misma tecnología smart que la versión estándar pero en talla mayor para mayor cobertura. Lentes polarizadas, cámara 12MP, altavoces OAP y Meta AI. La opción ideal si la montura normal te queda pequeña.',
     specs:{
       'Cámara':      '12MP · vídeo 1080p 60fps',
       'Audio':       'Altavoces OAP abiertos · micrófono ×5',
@@ -2451,6 +2454,7 @@ PRODUCTS.push(
   { id:95, name:'Ray-Ban Meta Wayfarer Transitions Verde Grafito', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
     badge:'Meta AI · Transitions · Adaptativas',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425210?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    description:'Ray-Ban Meta Wayfarer con lentes Transitions Verde Grafito: se oscurecen automáticamente bajo la luz solar y vuelven transparentes en interiores. La opción más versátil — válida como gafa de sol y de uso diario. Meta AI, 12MP, OAP. Todo en uno.',
     specs:{
       'Cámara':      '12MP · vídeo 1080p 60fps',
       'Audio':       'Altavoces OAP abiertos · micrófono ×5',
@@ -2463,6 +2467,7 @@ PRODUCTS.push(
   { id:96, name:'Ray-Ban Meta Skyler Transitions Azul Cerúleo', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
     badge:'Meta AI · Skyler · Transitions',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425478?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    description:'Ray-Ban Meta Skyler con lentes Transitions Azul Cerúleo: montura mariposa femenina con la tecnología inteligente de Meta. Lentes adaptativas que pasan de transparentes a color azul cerúleo bajo el sol. Cámara 12MP, altavoces OAP y Meta AI. Estilo y tecnología.',
     specs:{
       'Cámara':      '12MP · vídeo 1080p 60fps',
       'Audio':       'Altavoces OAP abiertos · micrófono ×5',
@@ -2480,6 +2485,7 @@ PRODUCTS.push(
   { id:97, name:'XREAL Air 2', brand:'XREAL', category:'gafas', price:199.00,
     badge:'AR · OLED · 120Hz · 46° FOV',
     image:'https://us.shop.xreal.com/cdn/shop/files/preview_images/2.jpg?v=1722059580',
+    description:'XREAL Air 2: gafas de realidad aumentada con pantalla Micro-OLED 1080p y 120Hz — equivale a ver una pantalla de 201" a 6 metros. Conecta por USB-C a iPhone, Android, PC o Mac. Ultra-ligeras (72g), sin cómputo propio. La entrada más accesible al mundo AR de calidad.',
     specs:{
       'Pantalla':    'Micro-OLED 1080p · 120Hz · 500 nits',
       'FOV':         '46° (equiv. 201" a 6m)',
@@ -2492,6 +2498,7 @@ PRODUCTS.push(
   { id:98, name:'XREAL One', brand:'XREAL', category:'gafas', price:399.00, oldPrice:549.00,
     badge:'All-in-One AR · Snapdragon AR1',
     image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_One_AR_Glasses.jpg?v=1755511322',
+    description:'XREAL One: las primeras gafas AR totalmente autónomas de XREAL. Chip Snapdragon AR1 Gen 1 integrado — no necesita teléfono para funcionar. OLED 1080p, 52° FOV, 3h de batería, Wi-Fi y USB-C. Antes €549, ahora €399. Ideal para productividad móvil y entretenimiento en cualquier lugar.',
     specs:{
       'Chip':        'Snapdragon AR1 Gen 1 (standalone)',
       'Pantalla':    'Micro-OLED 1080p · 120Hz',
@@ -2505,6 +2512,7 @@ PRODUCTS.push(
   { id:99, name:'XREAL 1S', brand:'XREAL', category:'gafas', price:499.00,
     badge:'AR · FHD · 52° FOV · 500 nits',
     image:'https://us.shop.xreal.com/cdn/shop/files/00-_-01-1.jpg?v=1767513758',
+    description:'XREAL 1S: la evolución directa del Air 2 con mayor campo de visión (52° FOV frente a 46°) y mayor luminosidad (500 nits). Micro-OLED FHD 120Hz, 80g y conexión USB-C. Sin cómputo propio — requiere dispositivo fuente. El equilibrio perfecto entre calidad óptica y precio.',
     specs:{
       'Pantalla':    'Micro-OLED FHD · 120Hz · 500 nits',
       'FOV':         '52°',
@@ -2517,6 +2525,7 @@ PRODUCTS.push(
   { id:100, name:'XREAL One Pro', brand:'XREAL', category:'gafas', price:649.00, oldPrice:689.00,
     badge:'AR Pro · 52° FOV · Standalone',
     image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_One_Pro.jpg?v=1756965858',
+    description:'XREAL One Pro: la versión de referencia de las gafas AR standalone de XREAL. Snapdragon AR1 Gen 1, OLED 1080p de alta luminosidad, 52° FOV y 3h de autonomía. Diseñada para profesionales y usuarios que exigen lo mejor sin necesitar un dispositivo externo. Antes €689, ahora €649.',
     specs:{
       'Chip':        'Snapdragon AR1 Gen 1 (standalone)',
       'Pantalla':    'Micro-OLED 1080p · 120Hz · alta luminosidad',
@@ -2530,6 +2539,7 @@ PRODUCTS.push(
   { id:101, name:'ROG XREAL R1', brand:'XREAL', category:'gafas', price:849.00,
     badge:'Gaming AR · ROG × XREAL',
     image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_ROG___2400x2400_01_db14182b-1e05-4107-8e97-56dc97d0f14f.jpg?v=1778653953',
+    description:'ROG XREAL R1: la colaboración definitiva entre ASUS Republic of Gamers y XREAL. Gafas AR gaming-first con chip Snapdragon AR1 Gen 1, OLED de alta tasa de refresco y diseño ROG exclusivo. Para gamers y entusiastas que quieren la experiencia AR más potente del mercado. Preventa — envíos julio 2026.',
     specs:{
       'Collab':      'ASUS ROG × XREAL',
       'Chip':        'Snapdragon AR1 Gen 1 · gaming-first',
@@ -3130,7 +3140,7 @@ function openQuickView(productId) {
       '<span class="qv-brand">' + product.brand + '</span>' +
       '<h2 class="qv-title">' + product.name + '</h2>' +
       '<div class="qv-rating-row"><span style="color:var(--gold);font-size:13px">' + qvStars + '</span><span style="font-size:12px;color:var(--text-3);margin-left:6px">(' + qvReviews + ' reseñas)</span></div>' +
-      '<p class="qv-desc">' + product.description + '</p>' +
+      '<p class="qv-desc">' + (product.description || product.badge || '') + '</p>' +
       '<div class="qv-specs">' + specsHTML + '</div>' +
       '<div class="qv-price-row">' +
         '<span class="qv-price">€' + product.price.toLocaleString() + '</span>' +
