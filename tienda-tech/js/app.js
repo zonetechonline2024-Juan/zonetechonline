@@ -968,6 +968,151 @@ PRODUCTS.push(
 
 );
 
+// ─── OURA PRODUCTS (fuente: ouraring.com/es — scraping 31/05/2026) ────────────
+PRODUCTS.push(
+
+  // ── 36 · Oura Ring 4 Silver ────────────────────────────────────────────────
+  {
+    id: 36,
+    name: 'Oura Ring 4 Silver',
+    brand: 'Oura',
+    category: 'anillos',
+    price: 379.00,
+    oldPrice: 399.00,
+    badge: 'Más Vendido',
+    image: 'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-silver-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=cdb9c169128343f367e1fd3ffaa2774d',
+    images: [
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-silver-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=cdb9c169128343f367e1fd3ffaa2774d',
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-silver-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=17a83c15ef354926ed18e173bc2ca469'
+    ],
+    description: 'Anillo inteligente Gen 4 en titanio Silver. Sin pantalla ni botones: monitorización 24/7 sin interrupciones. Mide frecuencia cardíaca continua, variabilidad del ritmo cardíaco (VFC), temperatura corporal, SpO₂ y fases del sueño con REM. App Oura con puntuación de preparación diaria. 5-8 días de batería. Resistente al agua 100m (IP68).',
+    specs: {
+      'Generación':   'Gen 4 (2024)',
+      'Material':     'Titanio grado 5 sin costuras',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '5–8 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       'US 4–15',
+      'Suscripción':  'Oura Membership 5,99 €/mes (1er mes gratis)',
+      'Fuente':       'ouraring.com/es'
+    }
+  },
+
+  // ── 37 · Oura Ring 4 Matte Black ──────────────────────────────────────────
+  {
+    id: 37,
+    name: 'Oura Ring 4 Matte Black',
+    brand: 'Oura',
+    category: 'anillos',
+    price: 379.00,
+    oldPrice: 399.00,
+    badge: 'Gen 4 2024',
+    image: 'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-black-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=78994683c391863a343782c00ae8a89f',
+    images: [
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-black-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=78994683c391863a343782c00ae8a89f',
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-black-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=384&s=f764f25561959902eaf00f2fc0edf22e'
+    ],
+    description: 'Anillo inteligente Gen 4 en titanio Matte Black. Diseño discreto y elegante para el día a día. Monitorización 24/7 de frecuencia cardíaca, VFC, temperatura corporal, SpO₂ y calidad del sueño con fases REM. Puntuación diaria de preparación y resiliencia. Batería 5-8 días. Resistente 100m.',
+    specs: {
+      'Generación':   'Gen 4 (2024)',
+      'Material':     'Titanio grado 5 acabado negro mate',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '5–8 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       'US 4–15',
+      'Suscripción':  'Oura Membership 5,99 €/mes (1er mes gratis)',
+      'Fuente':       'ouraring.com/es'
+    }
+  },
+
+  // ── 38 · Oura Ring 4 Gold ─────────────────────────────────────────────────
+  {
+    id: 38,
+    name: 'Oura Ring 4 Gold',
+    brand: 'Oura',
+    category: 'anillos',
+    price: 429.00,
+    oldPrice: 449.00,
+    badge: 'PVD Dorado',
+    image: 'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-gold-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=2bd90c45332b7acc832820223ef4823c',
+    images: [
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-gold-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=2bd90c45332b7acc832820223ef4823c',
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-gold-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=384&s=1fd1df315142e08bfce4419eb6f0c9d0'
+    ],
+    description: 'Anillo inteligente Gen 4 en titanio con acabado PVD dorado premium. Salud avanzada en un diseño de joyería: frecuencia cardíaca continua, VFC, temperatura corporal, SpO₂ y seguimiento del sueño. Puntuación de preparación diaria. Batería 5-8 días. IP68. Elegancia y tecnología en un solo anillo.',
+    specs: {
+      'Generación':   'Gen 4 (2024)',
+      'Material':     'Titanio con acabado PVD dorado',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '5–8 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       'US 4–15',
+      'Suscripción':  'Oura Membership 5,99 €/mes (1er mes gratis)',
+      'Fuente':       'ouraring.com/es'
+    }
+  },
+
+  // ── 39 · Oura Ring 4 Rose Gold ────────────────────────────────────────────
+  {
+    id: 39,
+    name: 'Oura Ring 4 Rose Gold',
+    brand: 'Oura',
+    category: 'anillos',
+    price: 429.00,
+    oldPrice: 449.00,
+    badge: 'Oro Rosa',
+    image: 'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-rose-gold-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=bf5c7934bb57c1517fdc75794feaec42',
+    images: [
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-rose-gold-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=bf5c7934bb57c1517fdc75794feaec42',
+      'https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-rose-gold-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=750&s=6a48ca7115ea0c3137b091e7c1f8f441'
+    ],
+    description: 'Anillo inteligente Gen 4 en titanio con acabado PVD oro rosa. Para quienes no separan salud y elegancia. Monitorización completa de sueño con fases REM, frecuencia cardíaca 24/7, variabilidad del ritmo cardíaco, temperatura cutánea y SpO₂. Batería 5-8 días. IP68.',
+    specs: {
+      'Generación':   'Gen 4 (2024)',
+      'Material':     'Titanio con acabado PVD oro rosa',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '5–8 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       'US 4–15',
+      'Suscripción':  'Oura Membership 5,99 €/mes (1er mes gratis)',
+      'Fuente':       'ouraring.com/es'
+    }
+  },
+
+  // ── 40 · Oura Ring 4 Ceramic Midnight ─────────────────────────────────────
+  {
+    id: 40,
+    name: 'Oura Ring 4 Ceramic Midnight',
+    brand: 'Oura',
+    category: 'anillos',
+    price: 429.00,
+    oldPrice: 549.00,
+    badge: 'Edición Cerámica',
+    image: 'https://ourahealth.imgix.net/jade-pop/midnight-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=bf42d084c6b4879bf7249163a42de566',
+    images: [
+      'https://ourahealth.imgix.net/jade-pop/midnight-angle-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=bf42d084c6b4879bf7249163a42de566',
+      'https://ourahealth.imgix.net/jade-pop/or4-ceramic-finish-picker-lifestyle-midnight.jpg?ixlib=js-3.8.0&auto=format&fit=crop&fm=png&ar=257%3A190&crop=focalpoint&fp-x=0.52&fp-y=0.35&fp-z=1.3&q=70&w=640&s=e6faee2ce10f1d9da7e9f11945a4ef6c'
+    ],
+    description: 'Edición especial Oura Ring 4 Ceramic Midnight en zirconia de alto rendimiento con interior de titanio. El acabado más exclusivo de la gama, con un color azul medianoche único. Mismos sensores Gen 4: FC continua, VFC, SpO₂, temperatura y fases del sueño. PVP original 549€. Batería 5-8 días. IP68.',
+    specs: {
+      'Generación':   'Gen 4 Ceramic (2025)',
+      'Material':     'Exterior cerámica de zirconia · Interior titanio',
+      'Sensores':     'FC continua, VFC, SpO₂, temperatura, acelerómetro',
+      'Sueño':        'Fases REM + temperatura nocturna',
+      'Batería':      '5–8 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       'US 4–15',
+      'Suscripción':  'Oura Membership 5,99 €/mes (1er mes gratis)',
+      'Fuente':       'ouraring.com/es'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -2511,11 +2656,15 @@ function initAIAssistant() {
       return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
-    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 35 relojes inteligentes de Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    if (/oura|anillo|anillos|ring inteligente|smart ring/.test(ql)) {
+      return 'Toda la gama <strong>Oura Ring</strong> (5 anillos Gen 4): <strong>Silver</strong> (€379) · <strong>Matte Black</strong> (€379) · <strong>Gold</strong> (€429) · <strong>Rose Gold</strong> (€429) · <strong>Ceramic Midnight</strong> (€429, PVP €549). Titanio sin costuras, FC 24/7, VFC, SpO₂, temperatura corporal, sueño REM. Batería 5-8 días. IP68 100m. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Oura">Ver Oura Ring →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 35 relojes inteligentes: Apple (5), Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5), Coros (5) y Garmin (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos 35 relojes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 5 anillos <strong>Oura Ring</strong> — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos <strong>40 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 5 anillos inteligentes <strong>Oura Ring</strong> (desde €379). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2547,7 +2696,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> de <strong>Apple</strong>, <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong>, <strong>Coros</strong> y <strong>Garmin</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>5 anillos Oura Ring</strong> — 40 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
