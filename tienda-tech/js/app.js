@@ -547,6 +547,147 @@ PRODUCTS.push(
 
 );
 
+// ─── APPLE PRODUCTS (fuente: depau.es — scraping 31/05/2026) ────────────────────
+PRODUCTS.push(
+
+  // ── 31 · Apple Watch SE3 GPS 40mm Blanco Estrella ──────────────────────────
+  {
+    id: 31,
+    name: 'Apple Watch SE3 GPS 40mm Blanco Estrella',
+    brand: 'Apple',
+    category: 'relojes',
+    price: 249.00,
+    oldPrice: 279.00,
+    badge: 'Más económico',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meh54qlbardera_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meh54qlbardera_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mehc4qlbardera_1.jpg'
+    ],
+    description: 'Apple Watch SE3 de aluminio Blanco Estrella, 40mm. Chip S9 SiP. Pantalla Retina OLED Always-On. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes de tráfico. GPS integrado. WatchOS 11. Resistente al agua 50m. Hasta 18h batería.',
+    specs: {
+      'Chip':           'S9 SiP 64-bit dual-core',
+      'Pantalla':       'Retina OLED 40mm',
+      'GPS':            'L1 + GLONASS + BeiDou + Galileo',
+      'Salud':          'Frec. cardíaca, SpO₂, detector caídas',
+      'Batería':        'Hasta 18h',
+      'Resistencia':    '50m (WR50)',
+      'P/N Depau':      'APL-WATCH MEH54QL/A',
+      'Fuente':         'depau.es'
+    }
+  },
+
+  // ── 32 · Apple Watch SE3 GPS 44mm Blanco Estrella ──────────────────────────
+  {
+    id: 32,
+    name: 'Apple Watch SE3 GPS 44mm Blanco Estrella',
+    brand: 'Apple',
+    category: 'relojes',
+    price: 279.00,
+    oldPrice: 309.00,
+    badge: 'GPS',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mehj4qlbardera_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mehj4qlbardera_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meh54qlbardera_1.jpg'
+    ],
+    description: 'Apple Watch SE3 de aluminio Blanco Estrella, 44mm. Chip S9 SiP. Pantalla Retina OLED mayor. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes de tráfico. GPS integrado. WatchOS 11. Resistente al agua 50m. Hasta 18h batería.',
+    specs: {
+      'Chip':           'S9 SiP 64-bit dual-core',
+      'Pantalla':       'Retina OLED 44mm',
+      'GPS':            'L1 + GLONASS + BeiDou + Galileo',
+      'Salud':          'Frec. cardíaca, SpO₂, detector caídas',
+      'Batería':        'Hasta 18h',
+      'Resistencia':    '50m (WR50)',
+      'P/N Depau':      'APL-WATCH MEHJ4QL/A',
+      'Fuente':         'depau.es'
+    }
+  },
+
+  // ── 33 · Apple Watch SE3 GPS+Cellular 40mm Medianoche ──────────────────────
+  {
+    id: 33,
+    name: 'Apple Watch SE3 GPS+Cellular 40mm Medianoche',
+    brand: 'Apple',
+    category: 'relojes',
+    price: 299.00,
+    oldPrice: 349.00,
+    badge: 'GPS+Cellular',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mep94qlbardera_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mep94qlbardera_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mepc4qlbardera_1.jpg'
+    ],
+    description: 'Apple Watch SE3 Medianoche con conectividad Cellular independiente. Chip S9 SiP. Llama y recibe mensajes sin iPhone cerca. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes. GPS integrado. Resistente 50m. Hasta 18h batería.',
+    specs: {
+      'Chip':           'S9 SiP 64-bit dual-core',
+      'Pantalla':       'Retina OLED 40mm',
+      'Conectividad':   'GPS + Cellular (LTE/UMTS)',
+      'Salud':          'Frec. cardíaca, SpO₂, detector caídas',
+      'Batería':        'Hasta 18h',
+      'Resistencia':    '50m (WR50)',
+      'P/N Depau':      'APL-WATCH MEP94QL/A',
+      'Fuente':         'depau.es'
+    }
+  },
+
+  // ── 34 · Apple Watch SE3 GPS+Cellular 44mm Medianoche ──────────────────────
+  {
+    id: 34,
+    name: 'Apple Watch SE3 GPS+Cellular 44mm Medianoche',
+    brand: 'Apple',
+    category: 'relojes',
+    price: 329.00,
+    oldPrice: 379.00,
+    badge: 'GPS+Cellular',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mepj4qlbardera_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mepj4qlbardera_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20mep94qlbardera_1.jpg'
+    ],
+    description: 'Apple Watch SE3 Medianoche 44mm con conectividad Cellular. Chip S9 SiP. Pantalla Retina OLED mayor. Llamadas y mensajes independientes del iPhone. Frecuencia cardíaca, SpO₂, detector de caídas y accidentes. Hasta 18h batería.',
+    specs: {
+      'Chip':           'S9 SiP 64-bit dual-core',
+      'Pantalla':       'Retina OLED 44mm',
+      'Conectividad':   'GPS + Cellular (LTE/UMTS)',
+      'Salud':          'Frec. cardíaca, SpO₂, detector caídas',
+      'Batería':        'Hasta 18h',
+      'Resistencia':    '50m (WR50)',
+      'P/N Depau':      'APL-WATCH MEPJ4QL/A',
+      'Fuente':         'depau.es'
+    }
+  },
+
+  // ── 35 · Apple Watch Series 11 GPS 42mm Gris Espacial ──────────────────────
+  {
+    id: 35,
+    name: 'Apple Watch Series 11 GPS 42mm Gris Espacial',
+    brand: 'Apple',
+    category: 'relojes',
+    price: 399.00,
+    oldPrice: 449.00,
+    badge: 'ECG + SpO₂',
+    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meqx4qlbardera_1.jpg',
+    images: [
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meqx4qlbardera_1.jpg',
+      'https://cdn2.depau.es/articulos/448/448/fixed/art_apl-watch%20meqw4qlbardera_1.jpg'
+    ],
+    description: 'Apple Watch Series 11 de aluminio Gris Espacial, 42mm. Chip S11 SiP. Pantalla Always-On Retina OLED. ECG, SpO₂, temperatura cutánea, frecuencia cardíaca 24/7 y detector de choques. GPS dual frecuencia L1+L5. WatchOS 11. Resistente 50m.',
+    specs: {
+      'Chip':           'S11 SiP',
+      'Pantalla':       'Always-On Retina OLED 42mm',
+      'GPS':            'Dual frecuencia L1+L5',
+      'ECG':            'Sí',
+      'Salud':          'SpO₂, temperatura cutánea, Frec. cardíaca 24/7',
+      'Batería':        'Hasta 18h',
+      'Resistencia':    '50m (WR50)',
+      'P/N Depau':      'APL-WATCH MEQX4QL/A',
+      'Fuente':         'depau.es'
+    }
+  }
+
+);
+
 // ─── GARMIN PRODUCTS (fuente: garmin.com/es-ES — datos de referencia mayo 2026) ─
 PRODUCTS.push(
 
@@ -2358,6 +2499,10 @@ function initAIAssistant() {
       return 'Nuestros relojes más premium: <strong>COROS Vertix 3</strong> (€699,99) AMOLED + GPS triple banda, <strong>COROS Vertix 2S</strong> (€549,99) titanio+DLC y 140h GPS, <strong>Samsung Galaxy Watch Ultra</strong> (€549,99) con Titanio Grado 4, <strong>Samsung Galaxy Watch 8 Classic</strong> (€449,99) con bisel rotatorio, <strong>Amazfit Active 3 Premium</strong> (€169,90) con ECG y zafiro. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver premium →</a>';
     }
 
+    if (/apple|iphone|apple watch|series 11|watch se/.test(ql)) {
+      return 'Toda la gama Apple Watch (5 modelos): <strong>SE3 GPS 40mm</strong> (€249) · <strong>SE3 GPS 44mm</strong> (€279) · <strong>SE3 Cellular 40mm</strong> (€299) · <strong>SE3 Cellular 44mm</strong> (€329) · <strong>Series 11 GPS 42mm</strong> (€399) con ECG, SpO₂ y temperatura. Todos con imágenes reales de Depau. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Apple">Ver Apple Watch →</a>';
+    }
+
     if (/garmin|forerunner|vivoactive|venu|instinct|f[eé]nix|fenix/.test(ql)) {
       return 'Toda la gama Garmin (5 relojes): <strong>Forerunner 55</strong> (€149,99) GPS running · <strong>Instinct 2S</strong> (€199,99) MIL-STD-810 · <strong>Vivoactive 5</strong> (€229,99) AMOLED+NFC · <strong>Venu 3S</strong> (€299,99) salud avanzada · <strong>Forerunner 265</strong> (€349,99) running pro AMOLED. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Garmin">Ver Garmin →</a>';
     }
@@ -2367,10 +2512,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 30 relojes inteligentes de Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿practicas deporte? ¿Buscas larga batería o salud avanzada? ¿Tienes presupuesto limitado? Tenemos 35 relojes inteligentes de Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros y Garmin, todos con envío express 24–72h. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos 30 relojes inteligentes: Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5), Coros (5) y Garmin (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos 35 relojes inteligentes: Apple (5), Samsung (5), Huawei (5), Amazfit (5), Xiaomi (5), Coros (5) y Garmin (5). Precios desde €39,95 hasta €699,99. Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir el mejor. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2402,7 +2547,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>30 relojes inteligentes</strong> de <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong>, <strong>Coros</strong> y <strong>Garmin</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> de <strong>Apple</strong>, <strong>Samsung</strong>, <strong>Huawei</strong>, <strong>Amazfit</strong>, <strong>Xiaomi</strong>, <strong>Coros</strong> y <strong>Garmin</strong>, desde €39,95 hasta €699,99. ¿Qué estás buscando?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
