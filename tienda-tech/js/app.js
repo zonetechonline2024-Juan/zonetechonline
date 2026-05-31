@@ -2041,6 +2041,196 @@ PRODUCTS.push(
 
 );
 
+// ─── NOTHING HEADPHONE PRODUCTS (fuente: es.nothing.tech — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  { id:72, name:'Nothing Ear (a) Yellow', brand:'Nothing', category:'auriculares', price:69.00,
+    badge:'ANC Adaptativo',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png',
+    images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png'],
+    description:'Nothing Ear (a) en amarillo: ANC adaptativo hasta -42dB, 22,5h total, IP55, latencia gaming 35ms y acceso directo a ChatGPT. Compatible Android e iOS.',
+    specs:{
+      'Driver':      '9,2mm personalizado',
+      'ANC':         'ANC Adaptativo hasta -42dB · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '22,5h total (9h + 2 cargas) · Carga rápida 10min = 1h',
+      'Latencia':    '35ms modo gaming',
+      'Resistencia': 'IP55',
+      'IA':          'ChatGPT integrado · Acceso por voz',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:73, name:'Nothing Ear (a) White', brand:'Nothing', category:'auriculares', price:69.00,
+    badge:'ANC Adaptativo',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0026_Ear-a-white.png',
+    images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0026_Ear-a-white.png'],
+    description:'Nothing Ear (a) en blanco: ANC adaptativo hasta -42dB, 22,5h total, IP55, latencia gaming 35ms y acceso directo a ChatGPT. Compatible Android e iOS.',
+    specs:{
+      'Driver':      '9,2mm personalizado',
+      'ANC':         'ANC Adaptativo hasta -42dB · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '22,5h total (9h + 2 cargas) · Carga rápida 10min = 1h',
+      'Latencia':    '35ms modo gaming',
+      'Resistencia': 'IP55',
+      'IA':          'ChatGPT integrado · Acceso por voz',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:74, name:'Nothing Ear (a) Black', brand:'Nothing', category:'auriculares', price:69.00,
+    badge:'ANC Adaptativo',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0027_Ear-a-black.png',
+    images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0027_Ear-a-black.png'],
+    description:'Nothing Ear (a) en negro: ANC adaptativo hasta -42dB, 22,5h total, IP55, latencia gaming 35ms y acceso directo a ChatGPT. Compatible Android e iOS.',
+    specs:{
+      'Driver':      '9,2mm personalizado',
+      'ANC':         'ANC Adaptativo hasta -42dB · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '22,5h total (9h + 2 cargas) · Carga rápida 10min = 1h',
+      'Latencia':    '35ms modo gaming',
+      'Resistencia': 'IP55',
+      'IA':          'ChatGPT integrado · Acceso por voz',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:75, name:'Nothing Ear Black', brand:'Nothing', category:'auriculares', price:89.00,
+    badge:'LDAC · ANC -45dB',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0024_Ear-black.png',
+    images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0024_Ear-black.png'],
+    description:'Nothing Ear en negro: ANC adaptativo hasta -45dB, LDAC, 40h total, IP55, ChatGPT integrado. Más potencia que el Ear (a) con el mismo diseño icónico.',
+    specs:{
+      'Driver':      '11mm personalizado',
+      'ANC':         'ANC Adaptativo hasta -45dB · Modo Transparencia',
+      'Bluetooth':   '5.3 · LDAC · AAC · SBC',
+      'Batería':     '40h total (8h + 4 cargas) · Carga rápida',
+      'Latencia':    '35ms modo gaming',
+      'Resistencia': 'IP55',
+      'IA':          'ChatGPT integrado · Acceso por voz',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:76, name:'Nothing Ear (3) Black', brand:'Nothing', category:'auriculares', price:149.00,
+    badge:'Hi-Res Audio · LDAC',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/Ear3-black.png',
+    images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/Ear3-black.png'],
+    description:'Nothing Ear (3) en negro: drivers planares + dinámicos 11mm, Hi-Res Audio Wireless, LDAC, ANC adaptativo, 40h total, IP55, ChatGPT. La cima de Nothing.',
+    specs:{
+      'Driver':      '11mm dinámico + driver planar',
+      'ANC':         'ANC Adaptativo hasta -45dB · Modo Transparencia',
+      'Bluetooth':   '5.3 · LDAC · Hi-Res Audio Wireless',
+      'Batería':     '40h total (8h + 4 cargas) · Carga rápida',
+      'Latencia':    '35ms modo gaming',
+      'Resistencia': 'IP55',
+      'IA':          'ChatGPT integrado · Acceso por voz',
+      'Audio':       'Hi-Res Audio Wireless certificado',
+      'Fuente':      'es.nothing.tech'
+    }
+  }
+
+);
+
+// ─── GOOGLE PIXEL BUDS PRODUCTS (fuente: MediaMarkt ES CDN + store.google.com — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  { id:77, name:'Google Pixel Buds 2a Hazel', brand:'Google', category:'auriculares', price:119.00,
+    badge:'Google Assistant · ANC',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_160131089?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_160131089?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
+    description:'Google Pixel Buds 2a en Hazel (verde musgo): ANC, Google Assistant + Gemini, 30h total, IPX4. La entrada perfecta al ecosistema Google Pixel.',
+    specs:{
+      'Driver':      '6mm',
+      'ANC':         'Cancelación activa de ruido · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC · Multipoint',
+      'Asistente':   'Google Assistant + Gemini',
+      'Batería':     '30h total (6h + 4 cargas) · USB-C',
+      'Resistencia': 'IPX4',
+      'Funciones':   'Find My Device · EQ personalizable · Clear Calling',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'store.google.com · mediamarkt.es'
+    }
+  },
+
+  { id:78, name:'Google Pixel Buds 2a Iris', brand:'Google', category:'auriculares', price:119.00,
+    badge:'Google Assistant · ANC',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_161455260?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_161455260?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
+    description:'Google Pixel Buds 2a en Iris (lila): ANC, Google Assistant + Gemini, 30h total, IPX4. La entrada perfecta al ecosistema Google Pixel.',
+    specs:{
+      'Driver':      '6mm',
+      'ANC':         'Cancelación activa de ruido · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC · Multipoint',
+      'Asistente':   'Google Assistant + Gemini',
+      'Batería':     '30h total (6h + 4 cargas) · USB-C',
+      'Resistencia': 'IPX4',
+      'Funciones':   'Find My Device · EQ personalizable · Clear Calling',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'store.google.com · mediamarkt.es'
+    }
+  },
+
+  { id:79, name:'Google Pixel Buds Pro 2 Hazel', brand:'Google', category:'auriculares', price:229.00,
+    badge:'ANC Adaptativo · LDAC',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194248?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194248?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
+    description:'Google Pixel Buds Pro 2 Hazel: ANC adaptativo Silent Seal 2.0, LDAC, 48h total, IPX4, Gemini integrado. Lo mejor del audio Google.',
+    specs:{
+      'Driver':      '11mm',
+      'ANC':         'ANC Adaptativo Silent Seal 2.0 · Modo Transparencia',
+      'Bluetooth':   '5.3 · LDAC · AAC · Multipoint',
+      'Asistente':   'Google Assistant + Gemini integrado',
+      'Batería':     '48h total (8h + 4 cargas) · Carga inalámbrica',
+      'Resistencia': 'IPX4',
+      'Funciones':   'Find My Device · EQ personalizable · Conversational AI',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'store.google.com · mediamarkt.es'
+    }
+  },
+
+  { id:80, name:'Google Pixel Buds Pro 2 Porcelain', brand:'Google', category:'auriculares', price:229.00,
+    badge:'ANC Adaptativo · LDAC',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194139?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194139?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
+    description:'Google Pixel Buds Pro 2 Porcelain (blanco): ANC adaptativo Silent Seal 2.0, LDAC, 48h total, IPX4, Gemini integrado.',
+    specs:{
+      'Driver':      '11mm',
+      'ANC':         'ANC Adaptativo Silent Seal 2.0 · Modo Transparencia',
+      'Bluetooth':   '5.3 · LDAC · AAC · Multipoint',
+      'Asistente':   'Google Assistant + Gemini integrado',
+      'Batería':     '48h total (8h + 4 cargas) · Carga inalámbrica',
+      'Resistencia': 'IPX4',
+      'Funciones':   'Find My Device · EQ personalizable · Conversational AI',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'store.google.com · mediamarkt.es'
+    }
+  },
+
+  { id:81, name:'Google Pixel Buds Pro 2 Wintergreen', brand:'Google', category:'auriculares', price:229.00,
+    badge:'ANC Adaptativo · LDAC',
+    image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194112?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
+    images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194112?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
+    description:'Google Pixel Buds Pro 2 Wintergreen (verde menta): ANC adaptativo Silent Seal 2.0, LDAC, 48h total, IPX4, Gemini integrado.',
+    specs:{
+      'Driver':      '11mm',
+      'ANC':         'ANC Adaptativo Silent Seal 2.0 · Modo Transparencia',
+      'Bluetooth':   '5.3 · LDAC · AAC · Multipoint',
+      'Asistente':   'Google Assistant + Gemini integrado',
+      'Batería':     '48h total (8h + 4 cargas) · Carga inalámbrica',
+      'Resistencia': 'IPX4',
+      'Funciones':   'Find My Device · EQ personalizable · Conversational AI',
+      'Compatib.':   'Android + iOS',
+      'Fuente':      'store.google.com · mediamarkt.es'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -3544,6 +3734,14 @@ function initAIAssistant() {
       return 'Para monitorización de salud avanzada, el <strong>Amazfit Active 3 Premium</strong> (€169,90) incluye ECG, SpO₂, frecuencia cardíaca 24/7 y GPS multibanda con cristal de zafiro. El <strong>Amazfit Active 2</strong> (€99,90) ofrece BioTracker™ 5 con SpO₂ continuo a mejor precio. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Amazfit">Ver Amazfit →</a>';
     }
 
+    if (/nothing|ear.*a\b|ear \(a\)|ear \(3\)|ear3|nada phone/.test(ql)) {
+      return 'Gama <strong>Nothing</strong> (5 auriculares, desde €69): <strong>Ear (a) Yellow</strong> (€69, ANC -42dB, 22,5h) · <strong>Ear (a) White</strong> (€69) · <strong>Ear (a) Black</strong> (€69) · <strong>Ear Black</strong> (€89, LDAC, 40h, ANC -45dB) · <strong>Ear (3) Black</strong> (€149, Hi-Res Audio Wireless, driver planar). Todos con ChatGPT integrado e IP55. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Nothing">Ver Nothing →</a>';
+    }
+
+    if (/google|pixel buds|pixelbuds/.test(ql)) {
+      return 'Gama <strong>Google Pixel Buds</strong> (5 auriculares, desde €119): <strong>Pixel Buds 2a Hazel</strong> (€119) · <strong>Pixel Buds 2a Iris</strong> (€119) — ANC, Gemini, 30h, IPX4 · <strong>Pixel Buds Pro 2 Hazel</strong> (€229) · <strong>Pixel Buds Pro 2 Porcelain</strong> (€229) · <strong>Pixel Buds Pro 2 Wintergreen</strong> (€229) — ANC Adaptativo Silent Seal 2.0, LDAC, 48h. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Google">Ver Google →</a>';
+    }
+
     if (/sennheiser|momentum|accentum|hd.*bt|hd 450|hd 350/.test(ql)) {
       return 'Gama <strong>Sennheiser</strong> (5 auriculares, desde €99,90): <strong>ACCENTUM True Wireless</strong> (€99,90, ANC híbrido, 28h, IP54) · <strong>ACCENTUM Wireless</strong> (€120, ANC 50h) · <strong>HD 450BT</strong> (€139,90, aptX, 30h ANC) · <strong>MOMENTUM TWS 4</strong> (€219, aptX Adaptive + LDAC, 30h) · <strong>MOMENTUM 4 Wireless</strong> (€249,90, 60h, ANC adaptativo). Ingeniería de audio alemana. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sennheiser">Ver Sennheiser →</a>';
     }
@@ -3553,7 +3751,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica|cascos/.test(ql)) {
-      return 'Tenemos <strong>10 auriculares premium</strong> de 2 marcas: <strong>Sony</strong> (5 modelos desde €39,99: WH-CH520, WF-C510, WH-CH720N, WF-C710N, ULT WEAR) y <strong>Sennheiser</strong> (5 modelos desde €99,90: ACCENTUM, HD 450BT, MOMENTUM TWS 4, MOMENTUM 4). ANC, True Wireless, aptX Adaptive y hasta 60h de batería. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
+      return 'Tenemos <strong>20 auriculares premium</strong> de 4 marcas: <strong>Nothing</strong> (5 desde €69: Ear a, Ear, Ear 3 — ChatGPT integrado), <strong>Sony</strong> (5 desde €39,99: WH-CH520 a ULT WEAR), <strong>Sennheiser</strong> (5 desde €99,90: ACCENTUM a MOMENTUM 4 — hasta 60h) y <strong>Google Pixel Buds</strong> (5 desde €119: Buds 2a y Pro 2 con Gemini). ANC, LDAC, Hi-Res Audio y True Wireless. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
@@ -3625,10 +3823,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>10 auriculares</strong> (Sony y Sennheiser) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo o auriculares? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas) y <strong>20 auriculares</strong> (Nothing, Sony, Sennheiser y Google) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>71 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas, desde €169,90) y 10 auriculares premium (Sony y Sennheiser, desde €39,99). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>81 wearables y audio premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos inteligentes (7 marcas, desde €169,90) y 20 auriculares premium (Nothing, Sony, Sennheiser y Google, desde €39,99). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -3660,7 +3858,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>10 auriculares premium</strong> (Sony y Sennheiser) — 71 productos en total, desde €39,95. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong> (7 marcas) y <strong>20 auriculares premium</strong> (Nothing, Sony, Sennheiser y Google) — 81 productos en total, desde €39,95. ¿Buscas reloj, anillo, auriculares o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
