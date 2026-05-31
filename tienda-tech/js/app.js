@@ -1341,6 +1341,276 @@ PRODUCTS.push(
 
 );
 
+// ─── ULTRAHUMAN PRODUCTS (fuente: ultrahuman.com — datos de referencia mayo 2026) ──
+PRODUCTS.push(
+
+  // ── 49 · Ultrahuman Ring AIR Matte Grey ────────────────────────────────────
+  {
+    id: 49,
+    name: 'Ultrahuman Ring AIR Matte Grey',
+    brand: 'Ultrahuman',
+    category: 'anillos',
+    price: 379.00,
+    badge: 'Sin Suscripción',
+    image: 'https://myultra.life/cdn/shop/files/Matte_Black_4.png?v=1728039848&width=800',
+    images: [
+      'https://myultra.life/cdn/shop/files/Matte_Black_4.png?v=1728039848&width=800',
+      'https://myultra.life/cdn/shop/files/Space_Silver_4_1.png?v=1728039932&width=800'
+    ],
+    description: 'Ultrahuman Ring AIR Matte Grey: el anillo inteligente más ligero del mundo (2,4g), fabricado en titanio con recubrimiento de carburo de tungsteno. Monitorización 24/7 sin pantalla ni distracciones: FC continua, VFC, temperatura cutánea, fases del sueño (REM, profundo, ligero) e índice de recuperación diario. App gratuita sin suscripción. Batería 4–6 días. IP68 / 100m.',
+    specs: {
+      'Generación':   'Ring AIR (2023)',
+      'Material':     'Titanio con recubrimiento carburo de tungsteno',
+      'Sensores':     'FC continua, VFC, temperatura cutánea, acelerómetro',
+      'Sueño':        'Fases REM + deep sleep + temperatura nocturna',
+      'Índice':       'Recovery Score diario + Movement Index',
+      'Batería':      '4–6 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida (app gratuita)',
+      'Fuente':       'ultrahuman.com'
+    }
+  },
+
+  // ── 50 · Ultrahuman Ring AIR Aster Black ───────────────────────────────────
+  {
+    id: 50,
+    name: 'Ultrahuman Ring AIR Aster Black',
+    brand: 'Ultrahuman',
+    category: 'anillos',
+    price: 379.00,
+    badge: 'Sin Suscripción',
+    image: 'https://myultra.life/cdn/shop/files/Aster_Black_2.png?v=1728039776&width=800',
+    images: [
+      'https://myultra.life/cdn/shop/files/Aster_Black_2.png?v=1728039776&width=800',
+      'https://myultra.life/cdn/shop/files/Matte_Black_4.png?v=1728039848&width=800'
+    ],
+    description: 'Ultrahuman Ring AIR Aster Black: biohacking sin pantalla en titanio negro aster. Análisis circadiano continuo: temperatura cutánea para detectar desfases de ritmo circadiano, VFC para medir estrés y recuperación, y fases del sueño con IA. Índice de preparación diaria. Sin cuota mensual. 4–6 días batería. IP68.',
+    specs: {
+      'Generación':   'Ring AIR (2023)',
+      'Material':     'Titanio con recubrimiento carburo de tungsteno',
+      'Sensores':     'FC continua, VFC, temperatura cutánea, acelerómetro',
+      'Sueño':        'Fases REM + deep sleep + temperatura nocturna',
+      'Índice':       'Recovery Score diario + Movement Index',
+      'Batería':      '4–6 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida (app gratuita)',
+      'Fuente':       'ultrahuman.com'
+    }
+  },
+
+  // ── 51 · Ultrahuman Ring AIR Space Silver ──────────────────────────────────
+  {
+    id: 51,
+    name: 'Ultrahuman Ring AIR Space Silver',
+    brand: 'Ultrahuman',
+    category: 'anillos',
+    price: 379.00,
+    badge: 'Biohacking',
+    image: 'https://myultra.life/cdn/shop/files/Space_Silver_4_1.png?v=1728039932&width=800',
+    images: [
+      'https://myultra.life/cdn/shop/files/Space_Silver_4_1.png?v=1728039932&width=800',
+      'https://myultra.life/cdn/shop/files/Bionic-Gold_2_1.png?v=1728039804&width=800'
+    ],
+    description: 'Ultrahuman Ring AIR Space Silver: monitorización circadiana avanzada en acabado plata espacial. Temperatura cutánea nocturna para detectar ciclo menstrual, inflamación o desfase horario. FC 24/7, VFC, fases del sueño con IA y puntuación de recuperación. Ultra-ligero 2,4g. Sin suscripción. IP68.',
+    specs: {
+      'Generación':   'Ring AIR (2023)',
+      'Material':     'Titanio con recubrimiento carburo de tungsteno',
+      'Sensores':     'FC continua, VFC, temperatura cutánea, acelerómetro',
+      'Sueño':        'Fases REM + deep sleep + temperatura nocturna',
+      'Índice':       'Recovery Score diario + Movement Index',
+      'Batería':      '4–6 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida (app gratuita)',
+      'Fuente':       'ultrahuman.com'
+    }
+  },
+
+  // ── 52 · Ultrahuman Ring AIR Bionic Gold ───────────────────────────────────
+  {
+    id: 52,
+    name: 'Ultrahuman Ring AIR Bionic Gold',
+    brand: 'Ultrahuman',
+    category: 'anillos',
+    price: 379.00,
+    badge: 'Bionic Gold',
+    image: 'https://myultra.life/cdn/shop/files/Bionic-Gold_2_1.png?v=1728039804&width=800',
+    images: [
+      'https://myultra.life/cdn/shop/files/Bionic-Gold_2_1.png?v=1728039804&width=800',
+      'https://myultra.life/cdn/shop/files/Titanium-Ring-Pic.png?v=1728039908&width=800'
+    ],
+    description: 'Ultrahuman Ring AIR Bionic Gold: el anillo de biohacking en su acabado más llamativo. Titanio dorado con sensores de salud completos: FC 24/7, VFC, temperatura cutánea, análisis de sueño REM y puntuación de recuperación con inteligencia artificial. Pesa solo 2,4g. Sin suscripción. IP68 / 100m.',
+    specs: {
+      'Generación':   'Ring AIR (2023)',
+      'Material':     'Titanio con recubrimiento carburo de tungsteno dorado',
+      'Sensores':     'FC continua, VFC, temperatura cutánea, acelerómetro',
+      'Sueño':        'Fases REM + deep sleep + temperatura nocturna',
+      'Índice':       'Recovery Score diario + Movement Index',
+      'Batería':      '4–6 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida (app gratuita)',
+      'Fuente':       'ultrahuman.com'
+    }
+  },
+
+  // ── 53 · Ultrahuman Ring AIR Raw Titanium ──────────────────────────────────
+  {
+    id: 53,
+    name: 'Ultrahuman Ring AIR Raw Titanium',
+    brand: 'Ultrahuman',
+    category: 'anillos',
+    price: 379.00,
+    badge: 'Titanio Puro',
+    image: 'https://myultra.life/cdn/shop/files/Titanium-Ring-Pic.png?v=1728039908&width=800',
+    images: [
+      'https://myultra.life/cdn/shop/files/Titanium-Ring-Pic.png?v=1728039908&width=800',
+      'https://myultra.life/cdn/shop/files/Aster_Black_2.png?v=1728039776&width=800'
+    ],
+    description: 'Ultrahuman Ring AIR Raw Titanium: acabado titanio en bruto para los que prefieren el minimalismo extremo. Monitorización biológica completa: FC continua, variabilidad del ritmo cardíaco, temperatura cutánea para análisis circadiano, fases del sueño y puntuación diaria de recuperación. 2,4g. Sin suscripción. IP68.',
+    specs: {
+      'Generación':   'Ring AIR (2023)',
+      'Material':     'Titanio grado 5 acabado raw (sin recubrimiento)',
+      'Sensores':     'FC continua, VFC, temperatura cutánea, acelerómetro',
+      'Sueño':        'Fases REM + deep sleep + temperatura nocturna',
+      'Índice':       'Recovery Score diario + Movement Index',
+      'Batería':      '4–6 días',
+      'Resistencia':  'IP68 / 100m',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida (app gratuita)',
+      'Fuente':       'ultrahuman.com'
+    }
+  }
+
+);
+
+// ─── CIRCULAR PRODUCTS (fuente: circular.xyz — datos de referencia mayo 2026) ─
+PRODUCTS.push(
+
+  // ── 54 · Circular Ring 2 Obsidian Black ────────────────────────────────────
+  {
+    id: 54,
+    name: 'Circular Ring 2 Obsidian Black',
+    brand: 'Circular',
+    category: 'anillos',
+    price: 349.00,
+    badge: 'ECG Integrado',
+    image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086418_52c4e288-fce6-4d2b-b9af-8df46155d6e6.png',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086418_52c4e288-fce6-4d2b-b9af-8df46155d6e6.png',
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/Black_Woman_1.jpg'
+    ],
+    description: 'Circular Ring 2 Obsidian Black: el primer anillo inteligente con ECG clínico real y detección de fibrilación auricular (AFib). Más de 140 biomarcadores. FC continua, SpO₂, temperatura, VFC, estrés y ciclo menstrual. Alertas silenciosas por vibración. Sin suscripción mensual. Titanio ligero. Batería 6–8 días. IP68.',
+    specs: {
+      'Generación':   'Ring 2 (2025)',
+      'Material':     'Titanio ligero acabado obsidian black',
+      'Sensores':     'ECG, FC continua, SpO₂, temperatura, VFC, acelerómetro',
+      'ECG':          'ECG clínico + detección AFib',
+      'Alertas':      'Vibración silenciosa integrada',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Biomarcadores':'140+ insights de salud',
+      'Batería':      '6–8 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'circular.xyz'
+    }
+  },
+
+  // ── 55 · Circular Ring 2 Silver ────────────────────────────────────────────
+  {
+    id: 55,
+    name: 'Circular Ring 2 Silver',
+    brand: 'Circular',
+    category: 'anillos',
+    price: 449.00,
+    badge: 'ECG + AFib',
+    image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086400_065c5676-3244-4f92-824d-d17526acf79e.png',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086400_065c5676-3244-4f92-824d-d17526acf79e.png',
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086418_52c4e288-fce6-4d2b-b9af-8df46155d6e6.png'
+    ],
+    description: 'Circular Ring 2 Silver: el acabado plata premium del anillo inteligente con ECG real. Detección de arritmias (AFib) clínicamente validada, +140 biomarcadores de salud. FC 24/7, SpO₂, temperatura, VFC y análisis profundo del sueño. Alertas por vibración. Sin suscripción mensual. Empresa francesa. Batería 6–8 días. IP68.',
+    specs: {
+      'Generación':   'Ring 2 (2025)',
+      'Material':     'Titanio con acabado PVD plata',
+      'Sensores':     'ECG, FC continua, SpO₂, temperatura, VFC, acelerómetro',
+      'ECG':          'ECG clínico + detección AFib',
+      'Alertas':      'Vibración silenciosa integrada',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Biomarcadores':'140+ insights de salud',
+      'Batería':      '6–8 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'circular.xyz'
+    }
+  },
+
+  // ── 56 · Circular Ring 2 Gold ──────────────────────────────────────────────
+  {
+    id: 56,
+    name: 'Circular Ring 2 Gold',
+    brand: 'Circular',
+    category: 'anillos',
+    price: 549.00,
+    badge: 'PVD Dorado',
+    image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086406_95bdcbd8-5466-400d-8ca8-2078f0bacb02.png',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086406_95bdcbd8-5466-400d-8ca8-2078f0bacb02.png',
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/Gold_Woman_1.jpg'
+    ],
+    description: 'Circular Ring 2 Gold: joyería de titanio dorado con ECG clínico. El anillo más exclusivo de Circular: acabado PVD dorado, +140 biomarcadores, ECG con detección de arritmias, alertas por vibración y toda la salud avanzada sin pagar suscripción mensual. Empresa francesa fundada en Paris. Batería 6–8 días. IP68.',
+    specs: {
+      'Generación':   'Ring 2 (2025)',
+      'Material':     'Titanio con acabado PVD dorado premium',
+      'Sensores':     'ECG, FC continua, SpO₂, temperatura, VFC, acelerómetro',
+      'ECG':          'ECG clínico + detección AFib',
+      'Alertas':      'Vibración silenciosa integrada',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Biomarcadores':'140+ insights de salud',
+      'Batería':      '6–8 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'circular.xyz'
+    }
+  },
+
+  // ── 57 · Circular Ring 2 Rose Gold ─────────────────────────────────────────
+  {
+    id: 57,
+    name: 'Circular Ring 2 Rose Gold',
+    brand: 'Circular',
+    category: 'anillos',
+    price: 549.00,
+    badge: 'Oro Rosa',
+    image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086412_1dbc8ae9-727c-4c93-8a2a-273467d9f352.png',
+    images: [
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086412_1dbc8ae9-727c-4c93-8a2a-273467d9f352.png',
+      'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/Gold_Woman_1.jpg'
+    ],
+    description: 'Circular Ring 2 Rose Gold: el anillo inteligente con ECG en acabado oro rosa. Para quienes combinan salud avanzada con joyería premium. ECG clínico, detección de AFib, FC 24/7, SpO₂, temperatura, VFC y +140 biomarcadores. Alertas de salud por vibración silenciosa. Sin suscripción. Batería 6–8 días. IP68.',
+    specs: {
+      'Generación':   'Ring 2 (2025)',
+      'Material':     'Titanio con acabado PVD oro rosa',
+      'Sensores':     'ECG, FC continua, SpO₂, temperatura, VFC, acelerómetro',
+      'ECG':          'ECG clínico + detección AFib',
+      'Alertas':      'Vibración silenciosa integrada',
+      'Sueño':        'Fases del sueño + temperatura nocturna',
+      'Biomarcadores':'140+ insights de salud',
+      'Batería':      '6–8 días',
+      'Resistencia':  'IP68',
+      'Tallas':       '5–13',
+      'Suscripción':  'Sin suscripción requerida',
+      'Fuente':       'circular.xyz'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -2892,19 +3162,27 @@ function initAIAssistant() {
       return 'Toda la gama COROS (5 relojes): <strong>Pace 3</strong> (€229,99) · <strong>Apex 2</strong> (€299,99) · <strong>Apex 2 Pro</strong> (€399,99) con cristal de zafiro · <strong>Vertix 2S</strong> (€549,99) titanio+DLC, 140h GPS · <strong>Vertix 3</strong> (€699,99) AMOLED, triple banda GPS. Especializados en atletismo y aventura extrema. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Coros">Ver COROS →</a>';
     }
 
+    if (/ultrahuman|ring air/.test(ql)) {
+      return 'Toda la gama <strong>Ultrahuman Ring AIR</strong> (5 colores, €379 c/u — sin suscripción): <strong>Matte Grey</strong> · <strong>Aster Black</strong> · <strong>Space Silver</strong> · <strong>Bionic Gold</strong> · <strong>Raw Titanium</strong>. Titanio ultra-ligero 2,4g, FC 24/7, VFC, temperatura circadiana, sueño REM y Recovery Score. 4–6 días. IP68. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Ultrahuman">Ver Ultrahuman →</a>';
+    }
+
+    if (/circular|ring 2|ecg.*anillo|anillo.*ecg/.test(ql)) {
+      return 'Toda la gama <strong>Circular Ring 2</strong> (4 colores — el único anillo con ECG clínico real): <strong>Obsidian Black</strong> (€349) · <strong>Silver</strong> (€449) · <strong>Gold</strong> (€549) · <strong>Rose Gold</strong> (€549). ECG + detección de AFib, +140 biomarcadores, alertas por vibración. Sin suscripción. Empresa francesa. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Circular">Ver Circular →</a>';
+    }
+
     if (/oura|oura ring/.test(ql)) {
       return 'Toda la gama <strong>Oura Ring</strong> (5 anillos Gen 4): <strong>Silver</strong> (€379) · <strong>Matte Black</strong> (€379) · <strong>Gold</strong> (€429) · <strong>Rose Gold</strong> (€429) · <strong>Ceramic Midnight</strong> (€429, PVP €549). Titanio, FC 24/7, VFC, SpO₂, temperatura, sueño REM. 5-8 días. IP68. <a class="ai-msg-link" href="catalogo.html?filter=rings&brand=Oura">Ver Oura Ring →</a>';
     }
 
     if (/anillo|anillos|ring inteligente|smart ring/.test(ql)) {
-      return 'Tenemos <strong>13 anillos inteligentes</strong> de 3 marcas: <strong>Oura Ring Gen 4</strong> (5 colores, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores titanio, €449, sin suscripción) · <strong>RingConn</strong> (5 modelos Gen 2+Gen 3, desde €219, sin suscripción). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
+      return 'Tenemos <strong>22 anillos inteligentes</strong> de 5 marcas: <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, con ECG). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y <strong>13 anillos</strong> (Oura, Samsung Galaxy Ring, RingConn) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj o anillo inteligente? ¿Practicas deporte? ¿Salud avanzada o precio ajustado? Tenemos <strong>35 relojes</strong> (7 marcas) y <strong>22 anillos</strong> (Oura, Samsung, RingConn, Ultrahuman, Circular) — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>48 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 13 anillos inteligentes (Oura Ring, Samsung Galaxy Ring y RingConn — desde €219). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>57 wearables</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin) y 22 anillos inteligentes (Oura Ring, Samsung Galaxy Ring, RingConn, Ultrahuman Ring AIR y Circular Ring 2 — desde €219). Pregúntame sobre batería, deporte, salud, precio o cualquier modelo y te ayudo a elegir. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -2936,7 +3214,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>13 anillos inteligentes</strong> (Oura Ring, Samsung Galaxy Ring y RingConn) — 48 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes inteligentes</strong> y <strong>22 anillos inteligentes</strong> (Oura, Samsung Ring, RingConn, Ultrahuman y Circular) — 57 wearables en total, desde €39,95. ¿Buscas reloj, anillo inteligente o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
