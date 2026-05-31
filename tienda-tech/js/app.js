@@ -2713,6 +2713,150 @@ PRODUCTS.push(
       'Batería':          '160 mAh · ~1,5 días · carga inalámbrica',
       'Fuente':           'evenrealities.com/es-ES'
     }
+  },
+
+  // ── RayNeo (IDs 112–116) ─────────────────────────────────────────────────
+  { id:112, name:'RayNeo Air 2', brand:'RayNeo', category:'gafas', price:199.00,
+    badge:'Micro-OLED · 46° FOV · 500 nits · 72g',
+    image:'https://eu.rayneo.com/cdn/shop/files/A2_b5ae514b-9ca5-45e9-9546-a8c04d32fbf3.png',
+    description:'RayNeo Air 2: gafas XR con pantalla Micro-OLED Sony 1080p por ojo, 46° FOV y 500 nits. Conexión USB-C/DP a móvil o PC — convierte cualquier dispositivo en un cine privado de 201". Peso 72g, ajuste dióptrico -6D a +2D sin lentes adicionales. La entrada más accesible a las XR glasses premium.',
+    specs:{
+      'Pantalla':    'Micro-OLED Sony · 1080p por ojo',
+      'FOV':         '46°',
+      'Brillo':      '500 nits',
+      'Peso':        '72g',
+      'Conexión':    'USB-C / DisplayPort Alt Mode',
+      'Dióptrico':   '-6D a +2D integrado',
+      'Fuente':      'eu.rayneo.com'
+    }
+  },
+  { id:113, name:'RayNeo Air 2s', brand:'RayNeo', category:'gafas', price:199.99,
+    badge:'Micro-OLED · Electrochromic · 72g',
+    image:'https://eu.rayneo.com/cdn/shop/files/A2S.png?v=1761641327',
+    description:'RayNeo Air 2s: evolución del Air 2 con cristal electrocrómico que pasa de transparente a opaco en milisegundos — sin cambiar de lentes. Micro-OLED Sony 1080p, 46° FOV, USB-C/DP. Ideal para uso mixto interior/exterior. Solo 72g con ajuste dióptrico integrado.',
+    specs:{
+      'Pantalla':    'Micro-OLED Sony · 1080p por ojo',
+      'FOV':         '46°',
+      'Brillo':      '500 nits',
+      'Peso':        '72g',
+      'Atenuación':  'Electrochromic dimming',
+      'Conexión':    'USB-C / DisplayPort Alt Mode',
+      'Fuente':      'eu.rayneo.com'
+    }
+  },
+  { id:114, name:'RayNeo Air 3s', brand:'RayNeo', category:'gafas', price:299.00,
+    badge:'Micro-OLED · 54° FOV · 600 nits · 76g',
+    image:'https://eu.rayneo.com/cdn/shop/files/A3.png?v=1761641338',
+    description:'RayNeo Air 3s: pantalla Micro-OLED 1080p por ojo con 54° FOV ampliado y 600 nits. Óptica Birdbath mejorada para mayor nitidez en bordes. Electrocrómico de serie. USB-C con soporte para 144Hz. Perfecto para gaming, productividad y contenido HDR en movimiento.',
+    specs:{
+      'Pantalla':    'Micro-OLED · 1080p por ojo',
+      'FOV':         '54°',
+      'Brillo':      '600 nits',
+      'Peso':        '76g',
+      'Refresco':    '144Hz',
+      'Atenuación':  'Electrochromic',
+      'Fuente':      'eu.rayneo.com'
+    }
+  },
+  { id:115, name:'RayNeo Air 4 Pro', brand:'RayNeo', category:'gafas', price:324.99,
+    badge:'Micro-OLED · Eye Tracking · 58° FOV',
+    image:'https://eu.rayneo.com/cdn/shop/files/Air4_pro.png?v=1772183095',
+    description:'RayNeo Air 4 Pro: el primer XR glasses con eye tracking integrado en su gama. 58° FOV con Micro-OLED Sony, foveated rendering y ajuste automático según dirección de mirada. Diseño sin cables laterales, bisagra magnética. El techo de los XR glasses de conexión a dispositivo.',
+    specs:{
+      'Pantalla':    'Micro-OLED Sony · 1080p por ojo',
+      'FOV':         '58°',
+      'Eye Tracking':'Integrado',
+      'Refresco':    '120Hz',
+      'Peso':        '80g',
+      'Conexión':    'USB-C / DP Alt Mode',
+      'Fuente':      'eu.rayneo.com'
+    }
+  },
+  { id:116, name:'RayNeo X3 Pro', brand:'RayNeo', category:'gafas', price:1259.00,
+    badge:'AR · Snapdragon AR2 · Standalone · 6DoF',
+    image:'https://eu.rayneo.com/cdn/shop/files/51474.png?v=1765775093',
+    description:'RayNeo X3 Pro: AR glasses standalone con procesador Snapdragon AR2 Gen 1, 6DoF y hologramas superpuestos en el mundo real. Pantalla waveguide birdbath, cámara RGB para passthrough y manos libres completo. El dispositivo AR más avanzado de RayNeo — pensado para productividad espacial y desarrollo AR profesional.',
+    specs:{
+      'Procesador':  'Snapdragon AR2 Gen 1',
+      'Tipo':        'AR Standalone · 6DoF',
+      'Pantalla':    'Waveguide Birdbath',
+      'Cámara':      'RGB para passthrough',
+      'RAM/ROM':     '8GB / 128GB',
+      'OS':          'RayNeo OS (Android)',
+      'Fuente':      'eu.rayneo.com'
+    }
+  },
+
+  // ── Rokid (IDs 117–121) ──────────────────────────────────────────────────
+  { id:117, name:'Rokid Max', brand:'Rokid', category:'gafas', price:329.00,
+    badge:'Micro-OLED · 215" Virtual · 50° FOV · 75g',
+    image:'https://de.rokid.com/cdn/shop/files/Max_01.jpg?v=1730433368',
+    description:'Rokid Max: XR glasses con pantalla Micro-OLED 1080p, 50° FOV y brillo de 600 nits. Simula una pantalla virtual de 215" a 6 metros. Conexión USB-C/DP a móvil Android, iPhone 15+ o PC. Sistema de sonido estéreo integrado. 75g con ajuste dióptrico -6D a +2D — ideal para películas, gaming y productividad en movimiento.',
+    specs:{
+      'Pantalla':    'Micro-OLED · 1080p por ojo',
+      'FOV':         '50°',
+      'Brillo':      '600 nits',
+      'Pantalla virtual': '215" a 6m',
+      'Peso':        '75g',
+      'Conexión':    'USB-C / DP Alt Mode',
+      'Fuente':      'de.rokid.com'
+    }
+  },
+  { id:118, name:'Rokid AI Glasses Neo', brand:'Rokid', category:'gafas', price:349.00,
+    badge:'IA · Cámara 12MP · Sin pantalla · 46g',
+    image:'https://de.rokid.com/cdn/shop/files/01_cbfb835e-f5d3-428c-8922-ed78b782cfa0.jpg?v=1777369748',
+    description:'Rokid AI Glasses Neo: gafas de IA con cámara 12MP y altavoces abiertos — sin pantalla, diseño idéntico a unas gafas normales. Asistente IA Yoda integrado (acceso a GPT-4o y modelos multimodales), traducción en tiempo real y resumen de escenas en voz. La alternativa más avanzada en IA conversacional a las Ray-Ban Meta, con cámara de mayor resolución.',
+    specs:{
+      'Tipo':        'IA · Sin display · Audio abierto',
+      'Cámara':      '12MP',
+      'IA':          'Yoda AI · GPT-4o · Multimodal',
+      'Peso':        '46g',
+      'Batería':     '~8h',
+      'Precio original': '€449 (oferta €349)',
+      'Fuente':      'de.rokid.com'
+    }
+  },
+  { id:119, name:'Rokid Max 2', brand:'Rokid', category:'gafas', price:359.00,
+    badge:'Micro-OLED · 57° FOV · 800 nits · 73g',
+    image:'https://global.rokid.com/cdn/shop/files/max_2.jpg?v=1767063587',
+    description:'Rokid Max 2: sucesor del Max con FOV ampliado a 57°, brillo 800 nits y refresco 120Hz. Micro-OLED 1080p, conexión USB-C/DP a móvil o PC, electrocrómico integrado y diseño rediseñado más ligero (73g). Compatible con Rokid Station 2 para uso standalone. El punto de equilibrio ideal entre precio y prestaciones XR.',
+    specs:{
+      'Pantalla':    'Micro-OLED · 1080p por ojo',
+      'FOV':         '57°',
+      'Brillo':      '800 nits',
+      'Refresco':    '120Hz',
+      'Peso':        '73g',
+      'Atenuación':  'Electrochromic',
+      'Fuente':      'global.rokid.com'
+    }
+  },
+  { id:120, name:'Rokid AR Joy 2', brand:'Rokid', category:'gafas', price:528.00,
+    badge:'AR Standalone · Snapdragon XR2 · Max 2 + Station 2',
+    image:'https://de.rokid.com/cdn/shop/files/0003.jpg?v=1730433208',
+    description:'Rokid AR Joy 2: el kit AR standalone completo — incluye Rokid Max 2 (XR glasses 57° FOV, 800 nits) más Rokid Station 2 (Android 12, Snapdragon XR2 Gen 1, batería 4000mAh). Sin necesitar móvil ni PC. Apps Android, Google Play, streaming nativo, gaming y productividad en un sistema que cabe en el bolsillo. La mejor solución AR autónoma por precio.',
+    specs:{
+      'Incluye':     'Rokid Max 2 + Rokid Station 2',
+      'Procesador':  'Snapdragon XR2 Gen 1',
+      'OS':          'Android 12',
+      'Batería':     '4000 mAh (Station 2)',
+      'FOV':         '57° (Max 2)',
+      'Brillo':      '800 nits',
+      'Fuente':      'de.rokid.com'
+    }
+  },
+  { id:121, name:'Rokid AR Spatial', brand:'Rokid', category:'gafas', price:568.00,
+    badge:'AR · Hand Tracking · Spatial Computing · 6DoF',
+    image:'https://de.rokid.com/cdn/shop/files/001_fab88f6f-4ade-46e8-a645-04f3a8acac4e.jpg?v=1750325927',
+    description:'Rokid AR Spatial: el dispositivo AR más avanzado de Rokid, con seguimiento de manos (hand tracking), computación espacial 6DoF y hologramas anclados en el espacio físico. Micro-OLED, cámara RGB para passthrough y OS espacial propio. Diseñado para crear y consumir contenido AR de forma completamente manos libres. La opción más cercana al concepto de AR glasses del futuro.',
+    specs:{
+      'Tipo':        'AR Standalone · Spatial Computing',
+      'Tracking':    'Hand Tracking · 6DoF',
+      'Pantalla':    'Micro-OLED Waveguide',
+      'Cámara':      'RGB passthrough',
+      'OS':          'Rokid OS (Spatial)',
+      'IA':          'Multimodal integrada',
+      'Fuente':      'de.rokid.com'
+    }
   }
 );
 
@@ -4235,8 +4379,16 @@ function initAIAssistant() {
       return 'Gama <strong>XREAL</strong> (5 gafas AR, desde €199): <strong>Air 2</strong> (€199, OLED 120Hz, 46° FOV, 72g, USB-C) · <strong>One</strong> (€399 antes €549, standalone Snapdragon AR1, 52° FOV) · <strong>1S</strong> (€499, FHD, 52° FOV, 500 nits) · <strong>One Pro</strong> (€649 antes €689, standalone pro) · <strong>ROG XREAL R1</strong> (€849, gaming AR ASUS ROG × XREAL, preventa julio 2026). <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=XREAL">Ver XREAL →</a>';
     }
 
+    if (/rayneo|ray neo|air 2s?\b|air 3s\b|air 4 pro|rayneo x3|x3 pro.*ray/.test(ql)) {
+      return 'Tenemos <strong>5 modelos RayNeo</strong>: <strong>Air 2</strong> (€199, Micro-OLED 46° FOV) · <strong>Air 2s</strong> (€199,99, electrocrómico) · <strong>Air 3s</strong> (€299, 54° FOV 144Hz) · <strong>Air 4 Pro</strong> (€324,99, eye tracking 58° FOV) · <strong>X3 Pro</strong> (€1.259, AR standalone Snapdragon AR2). Todos con USB-C/DP excepto el X3 Pro que es autónomo. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=RayNeo">Ver RayNeo →</a>';
+    }
+
+    if (/rokid|rokid max|rokid neo|rokid spatial|ar joy|ar spatial|rokid.*station/.test(ql)) {
+      return 'Tenemos <strong>5 modelos Rokid</strong>: <strong>Rokid Max</strong> (€329, Micro-OLED 215" virtual) · <strong>AI Glasses Neo</strong> (€349, IA sin pantalla 12MP — como Ray-Ban Meta pero con GPT-4o) · <strong>Max 2</strong> (€359, 57° FOV 800 nits) · <strong>AR Joy 2</strong> (€528, Max 2 + Station 2 standalone) · <strong>AR Spatial</strong> (€568, hand tracking 6DoF). <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Rokid">Ver Rokid →</a>';
+    }
+
     if (/gafas inteligentes|smart glass|gafas.*inteligentes|gafas.*ar\b|gafas.*xr\b|gafas realidad|ray.ban|xreal|viture|even realities|ar glass/.test(ql)) {
-      return 'Tenemos <strong>20 gafas inteligentes</strong> de 4 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + 12MP) · <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV) · <strong>VITURE</strong> (5 desde €461, XR hasta 58° FOV y 1500 nits) · <strong>Even Realities G1</strong> (5 desde €599, MicroLED 44g + ChatGPT). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
+      return 'Tenemos <strong>30 gafas inteligentes</strong> de 6 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + 12MP) · <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV) · <strong>VITURE</strong> (5 desde €461, XR hasta 58° FOV) · <strong>Even Realities G1</strong> (5 desde €599, MicroLED + ChatGPT) · <strong>RayNeo</strong> (5 desde €199, XR standalone) · <strong>Rokid</strong> (5 desde €329, IA + AR standalone). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
     }
 
     if (/shokz|openrun|openfit|openmove|openswim|opendots|conducci[oó]n [oó]sea|bone conduction|open.ear shokz/.test(ql)) {
@@ -4336,10 +4488,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>20 gafas</strong> (Ray-Ban Meta, XREAL, VITURE y Even Realities) — 111 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>30 gafas</strong> (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo y Rokid) — 121 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>111 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 20 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR y Even Realities G1 con IA). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>121 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 30 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR, Even Realities G1, RayNeo y Rokid AR). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4371,7 +4523,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>20 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR y Even Realities G1 con IA) — 111 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>30 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo y Rokid AR) — 121 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
