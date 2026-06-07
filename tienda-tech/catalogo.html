@@ -375,6 +375,12 @@
     if (ov) ov.addEventListener('click', function() { closeCart(); closeQuickView(); });
     var contBtn = document.getElementById('continue-shopping');
     if (contBtn) contBtn.addEventListener('click', closeCart);
+    var checkoutBtn = document.getElementById('checkout-btn');
+    if (checkoutBtn) checkoutBtn.addEventListener('click', function() {
+      if (!cart || cart.length === 0) return;
+      closeCart();
+      window.location.href = 'checkout.html';
+    });
 
     renderCartItems();
     updateCartBadge();
