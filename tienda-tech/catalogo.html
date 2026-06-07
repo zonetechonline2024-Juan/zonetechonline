@@ -7,7 +7,9 @@
   <meta name="description" content="Explora el catálogo completo de wearables premium en ZoneTechOnline.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="prefetch" href="index.html">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="catalog-page">
@@ -37,7 +39,7 @@
             </div>
           </div>
           <div class="mega-right">
-            <div class="mega-img-box"><img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-watch-fit3.jpeg" alt="HUAWEI WATCH FIT 3"></div>
+            <div class="mega-img-box"><img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/plp-x/wearables-v5/product-shelf-and-pop-up/view-all/all-watch-fit3.jpeg" alt="HUAWEI WATCH FIT 3" loading="lazy"></div>
             <a href="catalogo.html?filter=watches" class="mega-see">Ver catálogo →</a>
           </div>
         </div></div>
@@ -61,7 +63,7 @@
             </div>
           </div>
           <div class="mega-right">
-            <div class="mega-img-box"><img src="https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-silver-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=cdb9c169128343f367e1fd3ffaa2774d" alt="Oura Ring 4"></div>
+            <div class="mega-img-box"><img src="https://ourahealth.imgix.net/hardware-pdp/hero-carousel/or4-silver-front-view.png?ixlib=js-3.8.0&auto=format&fit=max&fm=png&q=70&w=640&s=cdb9c169128343f367e1fd3ffaa2774d" alt="Oura Ring 4" loading="lazy"></div>
             <a href="catalogo.html?filter=rings" class="mega-see">Ver anillos →</a>
           </div>
         </div></div>
@@ -84,7 +86,7 @@
             </div>
           </div>
           <div class="mega-right">
-            <div class="mega-img-box"><img src="https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png" alt="Nothing Ear (a)"></div>
+            <div class="mega-img-box"><img src="https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png" alt="Nothing Ear (a)" loading="lazy"></div>
             <a href="catalogo.html?filter=headphones" class="mega-see">Ver auriculares →</a>
           </div>
         </div></div>
@@ -108,7 +110,7 @@
             </div>
           </div>
           <div class="mega-right">
-            <div class="mega-img-box"><img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425222?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource" alt="Ray-Ban Meta Wayfarer"></div>
+            <div class="mega-img-box"><img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425222?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource" alt="Ray-Ban Meta Wayfarer" loading="lazy"></div>
             <a href="catalogo.html?filter=glasses" class="mega-see">Ver gafas →</a>
           </div>
         </div></div>
@@ -286,7 +288,7 @@
   </button>
 </div>
 
-<script src="js/app.js"></script>
+<script src="js/app.js" defer></script>
 <script>
 (function() {
 
