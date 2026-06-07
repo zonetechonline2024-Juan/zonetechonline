@@ -473,7 +473,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 
 /* FOOTER */
 .footer{padding:64px 0 0;}
-.footer-container{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:36px;margin-bottom:48px;}
+.footer-container{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:36px;margin-bottom:48px;}
 .footer-links{display:contents;}
 /* Footer brand column */
 .footer-brand{display:flex;flex-direction:column;}
@@ -504,6 +504,17 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .footer-legal{display:flex;gap:18px;flex-wrap:wrap;}
 .footer-legal a{color:var(--text-3);transition:var(--transition);}
 .footer-legal a:hover{color:var(--accent);}
+/* ── Footer Products Star strip ── */
+.footer-products{border-top:1px solid var(--border);padding:28px 24px;}
+.footer-products-inner{max-width:1200px;margin:0 auto;}
+.footer-products-eyebrow{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:22px;}
+.footer-products-grid{display:grid;grid-template-columns:repeat(6,1fr);column-gap:0;}
+.footer-product-item{padding:0 18px;border-left:1px solid var(--border);display:flex;flex-direction:column;gap:5px;}
+.footer-product-item:first-child{padding-left:0;border-left:none;}
+.footer-product-cat{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);}
+.footer-product-link{font-size:12.5px;color:var(--text-3);transition:color .2s ease;font-weight:500;line-height:1.4;}
+.footer-product-link:hover{color:#fff;}
+.footer-product-tag{font-size:10px;color:var(--text-3);opacity:.58;font-style:italic;}
 
 /* MODAL */
 .modal{position:fixed;inset:0;z-index:150;display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none;opacity:0;transition:opacity var(--transition);}
@@ -789,6 +800,8 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .configurator-visual{order:-1;}
   .footer-container{grid-template-columns:1fr 1fr;gap:28px;}
   .footer-brand{grid-column:1/-1;}
+  .footer-products-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
+  .footer-product-item{border-left:none;padding:0;}
 }
 @media(max-width:768px){
   .nav-links{display:none;}
@@ -803,6 +816,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .newsletter-form{flex-direction:column;}
   .footer-container{grid-template-columns:1fr;}
   .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  .footer-products-grid{grid-template-columns:repeat(2,1fr);gap:16px 20px;}
   .feature-item{border-right:none;border-bottom:1px solid var(--border);padding:10px 20px;width:100%;justify-content:center;}
   .feature-item:last-child{border-bottom:none;}
   .features-container{flex-direction:column;align-items:center;}
