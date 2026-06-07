@@ -1,6 +1,5 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
 module.exports = async (req, res) => {
+  // CORS headers (vercel.json las añade también, pero las repetimos por seguridad)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -9,21 +8,40 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { items, email, discountAmount } = req.body;
+    const apiKey = process.env.STRIPE_SECRET_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: 'Configuración de pago incompleta. Contacta con soporte.' });
+    }
 
-    if (!items || items.length === 0) {
+    // Stripe lazy init — dentro del try para capturar cualquier error de inicialización
+    const stripe = require('stripe')(apiKey);
+
+    // Vercel auto-parsea el body cuando Content-Type: application/json
+    // Si por algún motivo llegara como string, lo parseamos aquí
+    let body = req.body;
+    if (typeof body === 'string') {
+      try { body = JSON.parse(body); } catch (_) { body = {}; }
+    }
+    if (!body || typeof body !== 'object') body = {};
+
+    const { items, email, discountAmount } = body;
+
+    if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
     }
 
     const lineItems = items
-      .filter(item => item.price > 0)
+      .filter(item => {
+        const p = parseFloat(item.price);
+        return !isNaN(p) && p > 0 && item.name;
+      })
       .map(item => ({
         price_data: {
           currency: 'eur',
-          product_data: { name: item.name },
-          unit_amount: Math.round(item.price * 100),
+          product_data: { name: String(item.name).trim().slice(0, 250) },
+          unit_amount: Math.round(parseFloat(item.price) * 100),
         },
-        quantity: item.qty,
+        quantity: Math.max(1, parseInt(item.qty, 10) || 1),
       }));
 
     if (lineItems.length === 0) {
@@ -31,7 +49,7 @@ module.exports = async (req, res) => {
     }
 
     const proto = req.headers['x-forwarded-proto'] || 'https';
-    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.vercel.app';
+    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.com';
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
@@ -41,26 +59,30 @@ module.exports = async (req, res) => {
       locale: 'es',
       success_url: `${base}/checkout-success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${base}/checkout-cancel.html`,
+      billing_address_collection: 'auto',
     };
 
-    if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (email && typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       sessionParams.customer_email = email;
     }
 
-    if (discountAmount && discountAmount > 0) {
+    if (discountAmount && parseFloat(discountAmount) > 0) {
       const coupon = await stripe.coupons.create({
-        amount_off: Math.round(discountAmount * 100),
-        currency: 'eur',
-        duration: 'once',
-        name: 'Descuento aplicado',
+        amount_off: Math.round(parseFloat(discountAmount) * 100),
+        currency:   'eur',
+        duration:   'once',
+        name:       'Descuento aplicado',
       });
       sessionParams.discounts = [{ coupon: coupon.id }];
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
-    res.status(200).json({ url: session.url });
+    return res.status(200).json({ url: session.url });
+
   } catch (error) {
-    console.error('Stripe error:', error);
-    res.status(500).json({ error: error.message });
+    console.error('[ZTOnline] Checkout error:', error.message || error);
+    return res.status(500).json({
+      error: error.message || 'Error procesando el pago. Inténtalo de nuevo.'
+    });
   }
 };
