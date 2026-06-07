@@ -428,45 +428,49 @@
     try {
       var payload = { items: items, email: email };
       if (discount > 0) payload.discountAmount = discount;
+      var payloadStr = JSON.stringify(payload);
 
-      // En localhost apuntar a producción directamente; en producción usar URL relativa
-      var apiBase = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-        ? 'https://zonetechonline.com'
-        : '';
+      // Intentar en orden: URL relativa → URL absoluta no-www → URL Vercel
+      var apiEndpoints = [
+        '/api/checkout',
+        'https://zonetechonline.com/api/checkout',
+        'https://zonetechonline.vercel.app/api/checkout'
+      ];
 
-      // Función de llamada a la API con 1 reintento automático
-      async function callAPI() {
-        var r = await fetch(apiBase + '/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        var text = await r.text();
-        var d = {};
-        try { d = text ? JSON.parse(text) : {}; } catch(_) {}
-        return { status: r.status, ok: r.ok, data: d, raw: text };
+      async function tryEndpoint(url) {
+        try {
+          var r = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payloadStr
+          });
+          var text = await r.text();
+          var d = {};
+          try { if (text) d = JSON.parse(text); } catch(_) {}
+          return { ok: r.ok, status: r.status, data: d };
+        } catch(e) {
+          return { ok: false, status: 0, data: {}, err: e.message };
+        }
       }
 
-      var result = await callAPI();
-
-      // Si falla (no 200 y no hay url), esperar 1s y reintentar una vez
-      if (!result.ok && !result.data.url) {
-        document.getElementById('pay-btn-text').textContent = 'Reintentando...';
-        await new Promise(function(r){ setTimeout(r, 1200); });
-        result = await callAPI();
-      }
-
-      if (!result.ok && !result.data.url) {
-        var msg = result.data.error
-          || (result.raw ? 'Error del servidor (HTTP ' + result.status + ')' : 'Sin respuesta del servidor');
-        throw new Error(msg + '. Recarga la página e inténtalo de nuevo.');
+      var result = { ok: false, status: 0, data: {} };
+      for (var ei = 0; ei < apiEndpoints.length; ei++) {
+        if (ei > 0) {
+          document.getElementById('pay-btn-text').textContent = 'Reintentando...';
+          await new Promise(function(res){ setTimeout(res, 900); });
+        }
+        result = await tryEndpoint(apiEndpoints[ei]);
+        if (result.ok && result.data.url) break;
+        if (result.data.error) break; // Error claro del servidor, no reintentar
       }
 
       if (result.data.url) {
         document.getElementById('pay-btn-text').textContent = 'Redirigiendo a pago seguro...';
         window.location.href = result.data.url;
       } else {
-        throw new Error('No se recibió URL de pago. Recarga la página e inténtalo de nuevo.');
+        var errMsg = result.data.error
+          || (result.status > 0 ? 'Error del servidor (HTTP ' + result.status + ')' : 'No se pudo conectar con el servidor de pago');
+        throw new Error(errMsg);
       }
     } catch(err) {
       btn.disabled = false;
