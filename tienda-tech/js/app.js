@@ -2857,6 +2857,93 @@ PRODUCTS.push(
       'IA':          'Multimodal integrada',
       'Fuente':      'de.rokid.com'
     }
+  },
+
+  // ── Gentle Monster (IDs 122–126) ─────────────────────────────────────────
+  { id:122, name:'HUAWEI X Gentle Monster Eyewear II SMART LANG-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    badge:'Bluetooth 5.2 · IP54 · 5h · Gafas de sol · 44,2g',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/34/349799/1519-huawei-gentle-monster-x-eyewear-ii-lang-especificaciones.jpg',
+    description:'HUAWEI X Gentle Monster Eyewear II SMART LANG-01: gafas de sol inteligentes con montura rectangular y altavoces semi-abiertos. Conexión Bluetooth 5.2, controles táctiles en las patillas (deslizar/tocar), 2 micrófonos con reducción de ruido para llamadas HD. Protección IP54 ante salpicaduras. La opción más deportiva y angular de la colección Eyewear II.',
+    specs:{
+      'Tipo':           'Gafas de sol inteligentes · Montura rectangular',
+      'Audio':          '2 altavoces dinámicos 128mm² · Semi-abiertos · Estéreo',
+      'Micrófonos':     '2 micrófonos silicio · Reducción de ruido llamadas',
+      'Batería':        '85 mAh · 5h música / 3,5h llamadas · Carga inalámbrica',
+      'Conectividad':   'Bluetooth 5.2',
+      'Protección':     'IP54 (salpicaduras y lluvia ligera)',
+      'Controles':      'Táctil patillas — deslizar/tocar',
+      'Peso':           '44,2g',
+      'Marco':          'Titanio + plástico · Bisagras flexibles',
+      'Fuente':         'pccomponentes.com / consumer.huawei.com/es'
+    }
+  },
+  { id:123, name:'HUAWEI X Gentle Monster Eyewear II SMART MYMA-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    badge:'Bluetooth 5.2 · IP54 · 5h · Redondas · 48,1g',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/34/349810/1944-huawei-gentle-monster-x-eyewear-ii-black.jpg',
+    description:'HUAWEI X Gentle Monster Eyewear II SMART MYMA-01: gafas de sol inteligentes con montura redonda oversize, la más llamativa de la colección. Altavoces semi-abiertos Bluetooth 5.2, controles táctiles en patillas y 2 micrófonos con reducción de ruido. El diseño más icónico y fashionista de la colaboración Huawei × Gentle Monster.',
+    specs:{
+      'Tipo':           'Gafas de sol inteligentes · Montura redonda oversize',
+      'Audio':          '2 altavoces dinámicos 128mm² · Semi-abiertos · Estéreo',
+      'Micrófonos':     '2 micrófonos silicio · Reducción de ruido llamadas',
+      'Batería':        '85 mAh · 5h música / 3,5h llamadas · Carga inalámbrica',
+      'Conectividad':   'Bluetooth 5.2',
+      'Protección':     'IP54 (salpicaduras y lluvia ligera)',
+      'Controles':      'Táctil patillas — deslizar/tocar',
+      'Peso':           '48,1g',
+      'Marco':          'Titanio + plástico · Bisagras flexibles',
+      'Fuente':         'pccomponentes.com / consumer.huawei.com/es'
+    }
+  },
+  { id:124, name:'HUAWEI X Gentle Monster Eyewear II SMART VERONA-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    badge:'Bluetooth 5.2 · IP54 · 5h · Vintage · 44g',
+    image:'https://www.gadgetmatch.com/wp-content/uploads/2020/12/gadgetmatch-20201209-huawei-gentle-monster-eyewear-II-01.jpg',
+    description:'HUAWEI X Gentle Monster Eyewear II SMART VERONA-01: gafas de sol inteligentes con estética vintage italiana, la variante más sofisticada de la colección. Tecnología de audio semi-abierto Bluetooth 5.2 invisible al exterior. Controles táctiles en patillas, 2 micrófonos con reducción de ruido y protección IP54 contra salpicaduras.',
+    specs:{
+      'Tipo':           'Gafas de sol inteligentes · Estilo vintage',
+      'Audio':          '2 altavoces dinámicos 128mm² · Semi-abiertos · Estéreo',
+      'Micrófonos':     '2 micrófonos silicio · Reducción de ruido llamadas',
+      'Batería':        '85 mAh · 5h música / 3,5h llamadas · Carga inalámbrica',
+      'Conectividad':   'Bluetooth 5.2',
+      'Protección':     'IP54 (salpicaduras y lluvia ligera)',
+      'Controles':      'Táctil patillas — deslizar/tocar',
+      'Peso':           '~44g',
+      'Marco':          'Titanio + plástico · Bisagras flexibles',
+      'Fuente':         'consumer.huawei.com (variante regional)'
+    }
+  },
+  { id:125, name:'HUAWEI X Gentle Monster Eyewear II SMART HAVANA-01', brand:'Gentle Monster', category:'gafas', price:349.00,
+    badge:'Bluetooth 5.2 · IP54 · Ópticas · Graduables · 44,6g',
+    image:'https://www.gadgetmatch.com/wp-content/uploads/2020/12/Gadgetmatch-Huawei-Gentle-Monster-Eyewear-II-Flatlay-560x600.png',
+    description:'HUAWEI X Gentle Monster Eyewear II SMART HAVANA-01: gafas ópticas inteligentes con lentes claras y montura redonda — aptas para lentes de prescripción. La solución ideal para personas que llevan gafas graduadas y quieren integrar audio inteligente sin sacrificar estilo. Bluetooth 5.2, controles táctiles y 2 micrófonos con reducción de ruido.',
+    specs:{
+      'Tipo':           'Gafas ópticas inteligentes · Montura redonda · Graduables',
+      'Lentes':         'Claras · Aptas para prescripción óptica',
+      'Audio':          '2 altavoces dinámicos 128mm² · Semi-abiertos · Estéreo',
+      'Micrófonos':     '2 micrófonos silicio · Reducción de ruido llamadas',
+      'Batería':        '85 mAh · 5h música / 3,5h llamadas · Carga inalámbrica',
+      'Conectividad':   'Bluetooth 5.2',
+      'Protección':     'IP54 (salpicaduras y lluvia ligera)',
+      'Peso':           '44,6g',
+      'Marco':          'Titanio + plástico · Bisagras flexibles',
+      'Fuente':         'consumer.huawei.com/es'
+    }
+  },
+  { id:126, name:'HUAWEI X Gentle Monster Eyewear II SMART KUBO-01', brand:'Gentle Monster', category:'gafas', price:349.00,
+    badge:'Bluetooth 5.2 · IP54 · Ópticas · Cuadradas · 45,45g',
+    image:'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/gentle-monster-eyewear2/imgs/Huawei-X-gentle-monster-eyewear-2.jpg',
+    description:'HUAWEI X Gentle Monster Eyewear II SMART KUBO-01: gafas ópticas inteligentes con montura cuadrada y lentes claras, la opción más profesional y minimalista de la colección. Diseñadas para usuarios que llevan gafas graduadas y necesitan audio inteligente en reuniones, viajes y trabajo. Bluetooth 5.2 con 2 micrófonos de reducción de ruido y 5h de autonomía.',
+    specs:{
+      'Tipo':           'Gafas ópticas inteligentes · Montura cuadrada · Graduables',
+      'Lentes':         'Claras · Aptas para prescripción óptica',
+      'Audio':          '2 altavoces dinámicos 128mm² · Semi-abiertos · Estéreo',
+      'Micrófonos':     '2 micrófonos silicio · Reducción de ruido llamadas',
+      'Batería':        '85 mAh · 5h música / 3,5h llamadas · Carga inalámbrica',
+      'Conectividad':   'Bluetooth 5.2',
+      'Protección':     'IP54 (salpicaduras y lluvia ligera)',
+      'Peso':           '45,45g',
+      'Marco':          'Titanio + plástico · Bisagras flexibles',
+      'Fuente':         'consumer.huawei.com/es'
+    }
   }
 );
 
@@ -4387,8 +4474,12 @@ function initAIAssistant() {
       return 'Tenemos <strong>5 modelos Rokid</strong>: <strong>Rokid Max</strong> (€329, Micro-OLED 215" virtual) · <strong>AI Glasses Neo</strong> (€349, IA sin pantalla 12MP — como Ray-Ban Meta pero con GPT-4o) · <strong>Max 2</strong> (€359, 57° FOV 800 nits) · <strong>AR Joy 2</strong> (€528, Max 2 + Station 2 standalone) · <strong>AR Spatial</strong> (€568, hand tracking 6DoF). <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Rokid">Ver Rokid →</a>';
     }
 
+    if (/gentle monster|huawei.*eyewear|eyewear.*gentle|lang.01|myma.01|havana.01|kubo.01|verona.01|gafas.*bluetooth.*fashion|fashion.*gafas|audio.*fashion glasses/.test(ql)) {
+      return 'Tenemos <strong>5 modelos HUAWEI × Gentle Monster Eyewear II</strong>: <strong>SMART LANG-01</strong> (€329, sol rectangular 44g) · <strong>SMART MYMA-01</strong> (€329, sol redonda oversize 48g) · <strong>SMART VERONA-01</strong> (€329, sol vintage 44g) · <strong>SMART HAVANA-01</strong> (€349, ópticas redondas graduables) · <strong>SMART KUBO-01</strong> (€349, ópticas cuadradas graduables). Todos: BT 5.2, IP54, 5h batería, 2 micrófonos con reducción de ruido. <a class="ai-msg-link" href="catalogo.html?filter=glasses&brand=Gentle Monster">Ver Gentle Monster →</a>';
+    }
+
     if (/gafas inteligentes|smart glass|gafas.*inteligentes|gafas.*ar\b|gafas.*xr\b|gafas realidad|ray.ban|xreal|viture|even realities|ar glass/.test(ql)) {
-      return 'Tenemos <strong>30 gafas inteligentes</strong> de 6 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247, Meta AI + 12MP) · <strong>XREAL</strong> (5 desde €199, AR Micro-OLED hasta 52° FOV) · <strong>VITURE</strong> (5 desde €461, XR hasta 58° FOV) · <strong>Even Realities G1</strong> (5 desde €599, MicroLED + ChatGPT) · <strong>RayNeo</strong> (5 desde €199, XR standalone) · <strong>Rokid</strong> (5 desde €329, IA + AR standalone). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
+      return 'Tenemos <strong>35 gafas inteligentes</strong> de 7 marcas: <strong>Ray-Ban Meta</strong> (5 desde €247) · <strong>XREAL</strong> (5 desde €199, AR) · <strong>VITURE</strong> (5 desde €461, XR) · <strong>Even Realities G1</strong> (5 desde €599, MicroLED+IA) · <strong>RayNeo</strong> (5 desde €199) · <strong>Rokid</strong> (5 desde €329, AR) · <strong>Gentle Monster</strong> (5 desde €329, Huawei BT 5.2 fashion). <a class="ai-msg-link" href="catalogo.html?filter=glasses">Ver todas las gafas →</a>';
     }
 
     if (/shokz|openrun|openfit|openmove|openswim|opendots|conducci[oó]n [oó]sea|bone conduction|open.ear shokz/.test(ql)) {
@@ -4488,10 +4579,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>30 gafas</strong> (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo y Rokid) — 121 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>35 gafas</strong> (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid y Gentle Monster) — 126 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>121 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 30 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR, Even Realities G1, RayNeo y Rokid AR). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>126 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4523,7 +4614,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>30 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo y Rokid AR) — 121 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) — 126 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
