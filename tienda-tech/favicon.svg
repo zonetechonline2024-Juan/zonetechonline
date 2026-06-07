@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <!-- Background: dark rounded square, works in both light and dark browser UI -->
+  <rect width="32" height="32" rx="7" fill="#0a0a18"/>
+  <!-- Z monogram: top bar + diagonal + bottom bar as single filled polygon -->
+  <path d="M7,7 H25 V12 L11,20 H25 V25 H7 V20 L21,12 H7 Z" fill="url(#g)"/>
+</svg>
