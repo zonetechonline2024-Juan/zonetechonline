@@ -3737,6 +3737,21 @@ function initConfigurator() {
     badge.textContent = (as ? (as.dataset.name || as.title) : 'Graphite') + ' · ' + (am ? am.dataset.finish : 'Ridge Sport');
   }
 
+  // ── Color → CSS filter map (base image is Silver; filters simulate each variant) ──
+  var colorFilters = {
+    'graphite':  'grayscale(100%) brightness(0.28) contrast(1.25)',
+    'silver':    'none',
+    'pinkgold':  'sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
+    'cream':     'sepia(35%) saturate(140%) brightness(1.12)',
+    'sapphire':  'hue-rotate(198deg) saturate(190%) brightness(0.82)',
+    'green':     'hue-rotate(82deg) saturate(230%) brightness(0.84)'
+  };
+
+  function applyColorFilter(color) {
+    var watchImg = document.getElementById('config-watch-svg');
+    if (watchImg) watchImg.style.filter = colorFilters[color] || 'none';
+  }
+
   // ── Color swatches ──
   document.querySelectorAll('#strap-colors .swatch').forEach(function(swatch) {
     swatch.addEventListener('click', function() {
@@ -3744,12 +3759,12 @@ function initConfigurator() {
       swatch.classList.add('active');
       var nameEl = document.getElementById('strap-name');
       if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
-      swapWatchImg(swatch.dataset.img);
+      applyColorFilter(swatch.dataset.color);
       updateConfigBadge();
     });
   });
 
-  // ── Material buttons ──
+  // ── Material buttons (price/style only — do NOT swap watch image) ──
   document.querySelectorAll('#case-materials .material-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#case-materials .material-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -3759,10 +3774,13 @@ function initConfigurator() {
       var saveEl = document.getElementById('config-save');
       if (priceEl) priceEl.textContent = '€' + price;
       if (saveEl) saveEl.textContent = 'Ahorras €' + (299 - price);
-      swapWatchImg(btn.dataset.img);
       updateConfigBadge();
     });
   });
+
+  // ── Apply default filter for pre-selected color (Graphite on load) ──
+  var activeSwatch = document.querySelector('#strap-colors .swatch.active');
+  if (activeSwatch) applyColorFilter(activeSwatch.dataset.color);
 
   // ── Add to cart ──
   var addBtn = document.getElementById('add-config-to-cart');
