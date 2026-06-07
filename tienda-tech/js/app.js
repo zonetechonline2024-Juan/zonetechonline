@@ -3364,7 +3364,7 @@ function renderProducts(filterKey, customFilter) {
       card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
       card.style.opacity = '1';
       card.style.transform = 'translateY(0)';
-    }, i * 55);
+    }, Math.min(i, 12) * 55);
   });
 }
 
@@ -3423,7 +3423,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
   var cards = grid.querySelectorAll('.product-card');
   cards.forEach(function(card, i) {
     card.style.opacity = '0'; card.style.transform = 'translateY(18px)';
-    setTimeout(function() { card.style.transition = 'opacity .38s ease,transform .38s ease'; card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, i * 50);
+    setTimeout(function() { card.style.transition = 'opacity .38s ease,transform .38s ease'; card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, Math.min(i, 12) * 50);
   });
   return filtered.length;
 }
