@@ -3197,10 +3197,23 @@ function addToCart(productId) {
 }
 
 function removeFromCart(productId) {
-  cart = cart.filter(function(i) { return i.id !== productId; });
-  saveCart();
-  updateCartBadge();
-  renderCartItems();
+  var itemEl = document.querySelector('#cart-items .cart-item[data-id="' + productId + '"]');
+  if (itemEl) {
+    itemEl.style.transition = 'opacity 0.2s ease, transform 0.22s ease';
+    itemEl.style.opacity = '0';
+    itemEl.style.transform = 'translateX(28px)';
+    setTimeout(function() {
+      cart = cart.filter(function(i) { return i.id !== productId; });
+      saveCart();
+      updateCartBadge();
+      renderCartItems();
+    }, 230);
+  } else {
+    cart = cart.filter(function(i) { return i.id !== productId; });
+    saveCart();
+    updateCartBadge();
+    renderCartItems();
+  }
 }
 
 function changeQty(productId, delta) {
@@ -3213,6 +3226,15 @@ function changeQty(productId, delta) {
     saveCart();
     updateCartBadge();
     renderCartItems();
+    requestAnimationFrame(function() {
+      var qtyEl = document.querySelector('#cart-items .cart-item[data-id="' + productId + '"] .cart-qty-num');
+      if (qtyEl) {
+        qtyEl.style.transition = 'transform 0.12s cubic-bezier(0.34,1.56,0.64,1), color 0.12s ease';
+        qtyEl.style.transform = 'scale(1.4)';
+        qtyEl.style.color = '#6366f1';
+        setTimeout(function() { qtyEl.style.transform = ''; qtyEl.style.color = ''; }, 150);
+      }
+    });
   }
 }
 
@@ -3234,14 +3256,14 @@ function renderCartItems() {
     var cartImg = prod && prod.image
       ? '<img class="cart-real-img" src="' + prod.image + '" alt="' + item.name + '" onerror="this.style.display=\'none\'">'
       : getProductSVG(item.category, '#6366f1');
-    return '<div class="cart-item">' +
+    return '<div class="cart-item" data-id="' + item.id + '">' +
       '<div class="cart-item-svg">' + cartImg + '</div>' +
       '<div class="cart-item-info">' +
         '<span class="cart-item-brand">' + item.brand + '</span>' +
         '<span class="cart-item-name">' + item.name + '</span>' +
         '<div class="cart-item-controls">' +
           '<button onclick="changeQty(' + item.id + ',-1)">−</button>' +
-          '<span>' + item.qty + '</span>' +
+          '<span class="cart-qty-num">' + item.qty + '</span>' +
           '<button onclick="changeQty(' + item.id + ',1)">+</button>' +
         '</div>' +
       '</div>' +
