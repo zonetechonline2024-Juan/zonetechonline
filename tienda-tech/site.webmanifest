@@ -1,0 +1,12 @@
+{
+  "name": "ZoneTechOnline",
+  "short_name": "ZoneTech",
+  "description": "Tecnología wearable premium europea",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "theme_color": "#0a0a18",
+  "background_color": "#0a0a18",
+  "display": "browser",
+  "start_url": "/"
+}
