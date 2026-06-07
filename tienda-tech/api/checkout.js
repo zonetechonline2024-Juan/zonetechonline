@@ -1,4 +1,5 @@
 module.exports = async (req, res) => {
+  // CORS headers (vercel.json las añade también, pero las repetimos por seguridad)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -7,61 +8,48 @@ module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    // ── Guard: clave de Stripe obligatoria ──────────────────────────────────
     const apiKey = process.env.STRIPE_SECRET_KEY;
     if (!apiKey) {
-      return res.status(500).json({
-        error: 'STRIPE_SECRET_KEY no configurada. Añádela en Vercel › Settings › Environment Variables.'
-      });
+      return res.status(500).json({ error: 'Configuración de pago incompleta. Contacta con soporte.' });
     }
 
-    // ── Inicialización lazy (dentro del try → errores siempre capturados) ───
+    // Stripe lazy init — dentro del try para capturar cualquier error de inicialización
     const stripe = require('stripe')(apiKey);
 
-    // ── Parseo de body robusto ──────────────────────────────────────────────
-    // Vercel parsea automáticamente JSON cuando Content-Type: application/json
-    // Este bloque cubre casos edge (cuerpo crudo / string sin parsear)
+    // Vercel auto-parsea el body cuando Content-Type: application/json
+    // Si por algún motivo llegara como string, lo parseamos aquí
     let body = req.body;
-
-    if (!body) {
-      await new Promise((resolve) => {
-        let raw = '';
-        req.on('data', chunk => { raw += chunk; });
-        req.on('end', () => {
-          try { body = JSON.parse(raw); } catch (_) { body = {}; }
-          resolve();
-        });
-        req.on('error', () => { body = {}; resolve(); });
-      });
-    } else if (typeof body === 'string') {
+    if (typeof body === 'string') {
       try { body = JSON.parse(body); } catch (_) { body = {}; }
     }
+    if (!body || typeof body !== 'object') body = {};
 
-    const { items, email, discountAmount } = body || {};
+    const { items, email, discountAmount } = body;
 
-    // ── Validación básica del carrito ───────────────────────────────────────
-    if (!items || items.length === 0) {
+    if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
     }
 
     const lineItems = items
-      .filter(item => item.price > 0)
+      .filter(item => {
+        const p = parseFloat(item.price);
+        return !isNaN(p) && p > 0 && item.name;
+      })
       .map(item => ({
         price_data: {
           currency: 'eur',
-          product_data: { name: String(item.name).slice(0, 250) },
-          unit_amount: Math.round(item.price * 100),
+          product_data: { name: String(item.name).trim().slice(0, 250) },
+          unit_amount: Math.round(parseFloat(item.price) * 100),
         },
-        quantity: item.qty,
+        quantity: Math.max(1, parseInt(item.qty, 10) || 1),
       }));
 
     if (lineItems.length === 0) {
       return res.status(400).json({ error: 'No hay artículos válidos en el carrito' });
     }
 
-    // ── URLs de éxito / cancelación ─────────────────────────────────────────
     const proto = req.headers['x-forwarded-proto'] || 'https';
-    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.vercel.app';
+    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.com';
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
@@ -74,14 +62,13 @@ module.exports = async (req, res) => {
       billing_address_collection: 'auto',
     };
 
-    if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (email && typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       sessionParams.customer_email = email;
     }
 
-    // ── Cupón de descuento (si aplica) ──────────────────────────────────────
-    if (discountAmount && discountAmount > 0) {
+    if (discountAmount && parseFloat(discountAmount) > 0) {
       const coupon = await stripe.coupons.create({
-        amount_off: Math.round(discountAmount * 100),
+        amount_off: Math.round(parseFloat(discountAmount) * 100),
         currency:   'eur',
         duration:   'once',
         name:       'Descuento aplicado',
@@ -89,7 +76,6 @@ module.exports = async (req, res) => {
       sessionParams.discounts = [{ coupon: coupon.id }];
     }
 
-    // ── Crear sesión Stripe Checkout ────────────────────────────────────────
     const session = await stripe.checkout.sessions.create(sessionParams);
     return res.status(200).json({ url: session.url });
 
