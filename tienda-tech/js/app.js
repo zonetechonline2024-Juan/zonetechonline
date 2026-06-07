@@ -3742,12 +3742,12 @@ function initConfigurator() {
 
   // ── Color → filter / aura / canvas-glow maps ──
   var colorFilters = {
-    'graphite': 'grayscale(100%) brightness(0.28) contrast(1.25)',
-    'silver':   'none',
-    'pinkgold': 'sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
-    'cream':    'sepia(35%) saturate(140%) brightness(1.12)',
-    'sapphire': 'hue-rotate(198deg) saturate(190%) brightness(0.82)',
-    'green':    'hue-rotate(82deg) saturate(230%) brightness(0.84)'
+    'graphite': 'url(#remove-white) grayscale(100%) brightness(0.28) contrast(1.25)',
+    'silver':   'url(#remove-white)',
+    'pinkgold': 'url(#remove-white) sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
+    'cream':    'url(#remove-white) sepia(35%) saturate(140%) brightness(1.12)',
+    'sapphire': 'url(#remove-white) hue-rotate(198deg) saturate(190%) brightness(0.82)',
+    'green':    'url(#remove-white) hue-rotate(82deg) saturate(230%) brightness(0.84)'
   };
   var colorAuras = {
     'graphite': 'rgba(70,72,80,0.55)',
