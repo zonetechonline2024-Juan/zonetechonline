@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
     }
 
     const proto = req.headers['x-forwarded-proto'] || 'https';
-    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'zonetechonline.com';
+    const host  = req.headers['x-forwarded-host'] || req.headers.host || 'www.zonetechonline.com';
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
