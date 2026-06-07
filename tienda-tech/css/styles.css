@@ -298,7 +298,7 @@ input{font-family:inherit;}
 .cfg-watch-aura{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.65) 0%,transparent 65%);filter:blur(38px);top:50%;left:50%;transform:translate(-50%,-50%);transition:background .55s ease;z-index:0;}
 .cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;}
 .cfg-watch-float::after{content:'';position:absolute;bottom:0;left:0;right:0;height:18%;background:linear-gradient(to bottom,transparent,var(--bg) 80%);pointer-events:none;z-index:2;}
-.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;transition:opacity .22s ease;}
+.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;filter:url(#remove-white);transition:opacity .22s ease;}
 .cfg-watch-real.cfg-img-fade{opacity:0;}
 @keyframes price-up{0%{opacity:0;transform:translateY(7px);}100%{opacity:1;transform:translateY(0);}}
 .config-price-value.price-animate{animation:price-up .26s ease forwards;}
