@@ -1,192 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-.legal-page{max-width:860px;margin:0 auto;padding:120px 24px 80px;}
-.legal-page h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:700;margin-bottom:8px;}
-.legal-page .legal-date{font-size:13px;color:#606080;margin-bottom:48px;}
-.legal-page h2{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#6366f1;margin:36px 0 12px;padding-left:12px;border-left:3px solid #6366f1;}
-.legal-page h3{font-size:15px;font-weight:600;margin:20px 0 8px;color:#f1f1f8;}
-.legal-page p,.legal-page li{font-size:14.5px;line-height:1.8;color:#a0a0c0;margin-bottom:10px;}
-.legal-page ul{padding-left:20px;margin-bottom:14px;}
-.legal-page a{color:#6366f1;}
-.legal-page table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;}
-.legal-page th{background:#141428;color:#f1f1f8;padding:10px 14px;text-align:left;border:1px solid rgba(255,255,255,.07);}
-.legal-page td{padding:9px 14px;border:1px solid rgba(255,255,255,.07);color:#a0a0c0;}
-.legal-highlight{background:#141428;border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:20px 24px;margin:24px 0;}
-.legal-highlight p{margin:0;color:#f1f1f8;}
-.cookie-type-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.4px;}
-.badge-tecnica{background:rgba(34,197,94,.15);color:#22c55e;}
-.badge-analitica{background:rgba(99,102,241,.15);color:#818cf8;}
-.badge-marketing{background:rgba(251,146,60,.15);color:#fb923c;}
-</style>
-<title>Política de Cookies | ZoneTechOnline</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Política de Cookies — ZoneTechOnline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .lp{max-width:820px;margin:0 auto;padding:70px 24px 80px}
+    .lp-back{display:inline-flex;align-items:center;gap:7px;color:var(--text-3);font-size:13px;text-decoration:none;margin-bottom:36px;transition:color .2s}
+    .lp-back:hover{color:var(--accent)}
+    .lp h1{font-size:clamp(22px,4vw,34px);font-weight:700;margin:0 0 6px}
+    .lp-date{font-size:13px;color:var(--text-3);margin:0 0 36px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .lp h2{font-size:16px;font-weight:600;margin:30px 0 10px;color:var(--text-1)}
+    .lp p{font-size:14.5px;color:var(--text-2);line-height:1.78;margin:0 0 12px}
+    .lp ul{margin:0 0 14px;padding-left:22px}
+    .lp li{font-size:14.5px;color:var(--text-2);line-height:1.78;margin-bottom:5px}
+    .lp a{color:var(--accent);text-decoration:none}
+    .lp a:hover{text-decoration:underline}
+    .lp-table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:13.5px}
+    .lp-table th{text-align:left;padding:10px 14px;background:rgba(99,102,241,.1);color:var(--text-1);font-weight:600;border-bottom:1px solid var(--border)}
+    .lp-table td{padding:10px 14px;color:var(--text-2);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
+    .lp-table tr:last-child td{border-bottom:none}
+    .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px}
+    .badge-ok{background:rgba(52,211,153,.12);color:#34d399}
+    .badge-opt{background:rgba(99,102,241,.12);color:#818cf8}
+    .lp-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;text-decoration:none;transition:var(--transition)}
+    .lp-btn:hover{background:#4f46e5;color:#fff;text-decoration:none}
+    .lp-btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text-2)}
+    .lp-btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+    .lp-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:50px;padding-top:28px;border-top:1px solid var(--border)}
+    .lp-nav a{font-size:12.5px;color:var(--text-3);text-decoration:none;padding:6px 14px;border:1px solid var(--border);border-radius:20px;transition:var(--transition)}
+    .lp-nav a:hover{color:var(--accent);border-color:var(--accent)}
+  </style>
 </head>
 <body>
-<nav class="navbar scrolled" style="position:relative;padding:18px 0;">
-  <div class="nav-container"><a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a></div>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <a href="index.html" style="font-size:13px;color:var(--text-3);text-decoration:none;display:flex;align-items:center;gap:6px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+      Volver a la tienda
+    </a>
+  </div>
 </nav>
 
-<main class="legal-page">
+<main class="lp">
+  <a href="index.html" class="lp-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+    Volver a la tienda
+  </a>
+
   <h1>Política de Cookies</h1>
-  <p class="legal-date">Última actualización: mayo de 2026</p>
+  <p class="lp-date">Última actualización: mayo de 2026 · Conforme a la Directiva ePrivacy (2002/58/CE) y RGPD (UE) 2016/679</p>
 
-  <div class="legal-highlight">
-    <p>Esta Política de Cookies explica qué son las cookies, qué tipos utilizamos en <strong>zonetechonline.com</strong>, para qué las usamos y cómo puedes gestionarlas o rechazarlas. Cumplimos con la Ley 34/2002, de Servicios de la Sociedad de la Información (LSSI), el Reglamento (UE) 2016/679 (RGPD) y las directrices de la Agencia Española de Protección de Datos (AEPD).</p>
-  </div>
+  <h2>¿Qué son las cookies?</h2>
+  <p>Las cookies son pequeños ficheros de texto que un sitio web almacena en tu dispositivo (ordenador, tablet o smartphone) cuando lo visitas. Permiten que el sitio recuerde tus acciones y preferencias durante un tiempo.</p>
 
-  <h2>1. ¿Qué son las Cookies?</h2>
-  <p>Las cookies son pequeños archivos de texto que los sitios web depositan en tu dispositivo (ordenador, smartphone, tablet) cuando los visitas. Sirven para que el sitio web pueda recordar información sobre tu visita, como tu idioma preferido, los artículos que has añadido al carrito o si ya has aceptado el aviso de cookies.</p>
-  <p>Las cookies son esenciales para el funcionamiento de muchos sitios web modernos y pueden ser instaladas por el propio sitio web que visitas (cookies propias) o por terceros que prestan servicios al sitio web (cookies de terceros).</p>
-  <p>Técnicamente, las cookies pueden ser:</p>
-  <ul>
-    <li><strong>Cookies de sesión:</strong> Se eliminan automáticamente cuando cierras el navegador. No persisten en tu dispositivo.</li>
-    <li><strong>Cookies persistentes:</strong> Permanecen en tu dispositivo durante un período determinado o hasta que las elimines manualmente.</li>
-  </ul>
+  <h2>¿Qué cookies utilizamos?</h2>
 
-  <h2>2. Tipos de Cookies que Utilizamos</h2>
-
-  <h3>2.1 Cookies Técnicas o Estrictamente Necesarias</h3>
-  <p>Son imprescindibles para el funcionamiento correcto del sitio web. Sin ellas, no podrías navegar por la tienda ni completar una compra. Incluyen funciones como mantener tu sesión activa, recordar los artículos de tu carrito o gestionar tus preferencias de privacidad. <strong>No requieren tu consentimiento</strong>, ya que son estrictamente necesarias para la prestación del servicio solicitado.</p>
-
-  <h3>2.2 Cookies Analíticas</h3>
-  <p>Nos permiten medir y analizar el tráfico y el comportamiento de los usuarios en el sitio web: qué páginas visitan más, cuánto tiempo permanecen, desde qué dispositivos acceden, etc. Esta información, tratada de forma agregada y anonimizada, nos ayuda a mejorar la experiencia de usuario y el rendimiento del sitio. <strong>Requieren tu consentimiento previo.</strong></p>
-
-  <h3>2.3 Cookies de Marketing o Publicidad</h3>
-  <p>Se utilizan para mostrarte publicidad relevante en función de tus intereses y comportamiento de navegación, tanto en nuestro sitio como en sitios de terceros. También permiten medir la eficacia de nuestras campañas publicitarias. <strong>Requieren tu consentimiento previo.</strong> Actualmente no utilizamos cookies de marketing propias; si en el futuro las incorporásemos, actualizaremos esta política y solicitaremos tu consentimiento.</p>
-
-  <h2>3. Tabla de Cookies Utilizadas</h2>
-  <p>A continuación encontrarás un listado detallado de todas las cookies actualmente instaladas en zonetechonline.com:</p>
-
-  <table>
+  <table class="lp-table">
     <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Tipo</th>
-        <th>Finalidad</th>
-        <th>Duración</th>
-        <th>Proveedor</th>
-      </tr>
+      <tr><th>Cookie / Almacenamiento</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td><code>_ga</code></td>
-        <td><span class="cookie-type-badge badge-analitica">Analítica</span></td>
-        <td>Cookie principal de Google Analytics. Registra un identificador único para distinguir usuarios y generar estadísticas de uso del sitio web. Los datos se tratan de forma anonimizada.</td>
-        <td>2 años</td>
-        <td>Google LLC (Google Analytics)</td>
+        <td><code>zt_cart</code> (localStorage)</td>
+        <td><span class="badge badge-ok">Necesaria</span></td>
+        <td>Guarda el contenido de tu carrito de compra entre sesiones</td>
+        <td>Persistente</td>
       </tr>
       <tr>
-        <td><code>_gid</code></td>
-        <td><span class="cookie-type-badge badge-analitica">Analítica</span></td>
-        <td>Cookie de Google Analytics. Registra un identificador único para cada sesión del día con el fin de generar datos estadísticos sobre cómo el visitante usa el sitio web.</td>
-        <td>24 horas</td>
-        <td>Google LLC (Google Analytics)</td>
+        <td><code>cookie_consent</code> (localStorage)</td>
+        <td><span class="badge badge-ok">Necesaria</span></td>
+        <td>Recuerda tu preferencia sobre cookies para no mostrar el aviso de nuevo</td>
+        <td>Persistente</td>
       </tr>
       <tr>
-        <td><code>_gat</code></td>
-        <td><span class="cookie-type-badge badge-analitica">Analítica</span></td>
-        <td>Cookie de Google Analytics utilizada para limitar la tasa de solicitudes, es decir, para reducir el número de peticiones que se hacen a los servidores de Google Analytics.</td>
-        <td>1 minuto</td>
-        <td>Google LLC (Google Analytics)</td>
-      </tr>
-      <tr>
-        <td><code>_session</code></td>
-        <td><span class="cookie-type-badge badge-tecnica">Técnica</span></td>
-        <td>Gestiona la sesión del usuario autenticado. Permite mantener el estado de la sesión (usuario conectado, carrito activo) mientras navegas por la tienda.</td>
+        <td>Cookies de Stripe</td>
+        <td><span class="badge badge-ok">Necesaria</span></td>
+        <td>Gestión segura de la sesión de pago. Solo activas durante el proceso de compra</td>
         <td>Sesión</td>
-        <td>ZoneTechOnline S.L.</td>
       </tr>
       <tr>
-        <td><code>cart_items</code></td>
-        <td><span class="cookie-type-badge badge-tecnica">Técnica</span></td>
-        <td>Almacena los artículos añadidos al carrito de compra para que no se pierdan si cierras el navegador o navegas entre páginas.</td>
-        <td>30 días</td>
-        <td>ZoneTechOnline S.L.</td>
-      </tr>
-      <tr>
-        <td><code>consent</code></td>
-        <td><span class="cookie-type-badge badge-tecnica">Técnica</span></td>
-        <td>Guarda tus preferencias sobre el uso de cookies (qué tipos has aceptado o rechazado) para no mostrarte el banner de consentimiento en cada visita.</td>
-        <td>1 año</td>
-        <td>ZoneTechOnline S.L.</td>
-      </tr>
-      <tr>
-        <td><code>__stripe_mid</code></td>
-        <td><span class="cookie-type-badge badge-tecnica">Técnica</span></td>
-        <td>Cookie de seguridad utilizada por Stripe para la prevención del fraude durante el proceso de pago. Es estrictamente necesaria para completar transacciones de forma segura.</td>
-        <td>1 año</td>
-        <td>Stripe Payments Europe, Ltd.</td>
-      </tr>
-      <tr>
-        <td><code>__stripe_sid</code></td>
-        <td><span class="cookie-type-badge badge-tecnica">Técnica</span></td>
-        <td>Cookie de seguridad de sesión utilizada por Stripe para la prevención del fraude. Se activa únicamente durante el proceso de pago.</td>
-        <td>30 minutos</td>
-        <td>Stripe Payments Europe, Ltd.</td>
+        <td>Google Analytics (<code>_ga</code>, <code>_gid</code>)</td>
+        <td><span class="badge badge-opt">Analítica</span></td>
+        <td>Estadísticas de uso anonimizadas (páginas vistas, tiempo en el sitio). Solo con tu consentimiento</td>
+        <td>2 años / 24 h</td>
       </tr>
     </tbody>
   </table>
 
-  <p>Esta tabla se actualiza periódicamente. Si incorporamos nuevas cookies, actualizaremos esta política y, cuando sea necesario, solicitaremos tu consentimiento.</p>
+  <p>Las cookies <strong>necesarias</strong> no requieren tu consentimiento previo ya que son imprescindibles para el funcionamiento del sitio. Las cookies de <strong>analítica</strong> solo se activan si aceptas todas las cookies.</p>
 
-  <h2>4. Consentimiento y Cómo Retirarlo</h2>
-  <p>La primera vez que visitas zonetechonline.com, te mostramos un banner de consentimiento de cookies donde puedes:</p>
-  <ul>
-    <li><strong>Aceptar todas las cookies:</strong> Consientes el uso de cookies técnicas, analíticas y de marketing.</li>
-    <li><strong>Rechazar cookies no esenciales:</strong> Solo se instalarán las cookies técnicas estrictamente necesarias.</li>
-    <li><strong>Personalizar tus preferencias:</strong> Puedes activar o desactivar cada categoría de cookies de forma individual.</li>
-  </ul>
-  <p>Puedes <strong>retirar o modificar tu consentimiento en cualquier momento</strong> sin coste alguno siguiendo cualquiera de estos métodos:</p>
-  <ul>
-    <li>Haciendo clic en el enlace "Gestionar cookies" disponible en el pie de página de cualquier página de nuestra tienda.</li>
-    <li>Eliminando las cookies almacenadas en tu navegador (ver sección 5).</li>
-    <li>Escribiéndonos a <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a>.</li>
-  </ul>
-  <div class="legal-highlight">
-    <p>La retirada del consentimiento no afecta a la licitud del tratamiento basado en el consentimiento previo a su retirada. Ten en cuenta que rechazar las cookies analíticas no te identificará ante nosotros, pero sí puede afectar a algunas funcionalidades del sitio web.</p>
+  <h2>Gestionar tus preferencias</h2>
+  <p>Puedes cambiar tu elección en cualquier momento:</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 24px">
+    <button class="lp-btn" onclick="cookieConsent('accept');window.scrollTo(0,0)">Aceptar todas las cookies</button>
+    <button class="lp-btn lp-btn-ghost" onclick="cookieConsent('reject');window.scrollTo(0,0)">Solo cookies necesarias</button>
   </div>
-
-  <h2>5. Cómo Gestionar las Cookies desde tu Navegador</h2>
-  <p>Además del panel de preferencias de nuestra web, puedes gestionar, bloquear o eliminar las cookies directamente desde la configuración de tu navegador. A continuación te indicamos cómo hacerlo en los navegadores más habituales:</p>
-
-  <h3>Google Chrome</h3>
-  <p>Menú (tres puntos) → Configuración → Privacidad y seguridad → Cookies y otros datos de sitios. Aquí puedes bloquear todas las cookies de terceros, eliminar cookies al cerrar el navegador o gestionar excepciones por sitio. Más información en <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">support.google.com/chrome/answer/95647</a>.</p>
-
-  <h3>Mozilla Firefox</h3>
-  <p>Menú (tres líneas) → Opciones → Privacidad y seguridad → Cookies y datos del sitio. Puedes configurar el nivel de protección (estándar, estricto o personalizado). Más información en <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">support.mozilla.org</a>.</p>
-
-  <h3>Safari (macOS e iOS)</h3>
-  <p>Preferencias → Privacidad → Gestionar datos del sitio web. En iOS: Ajustes → Safari → Privacidad y seguridad. Puedes bloquear todas las cookies o solo las de terceros. Más información en <a href="https://support.apple.com/es-es/HT201265" target="_blank" rel="noopener noreferrer">support.apple.com</a>.</p>
-
-  <h3>Microsoft Edge</h3>
-  <p>Menú (tres puntos) → Configuración → Cookies y permisos del sitio → Cookies y datos guardados. Más información en <a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">support.microsoft.com</a>.</p>
-
-  <h3>Opera</h3>
-  <p>Menú → Configuración → Avanzada → Privacidad y seguridad → Configuración de contenido → Cookies.</p>
-
-  <p>Ten en cuenta que bloquear o eliminar determinadas cookies puede afectar al funcionamiento correcto del sitio web, incluyendo la posibilidad de completar una compra o mantener la sesión iniciada.</p>
-
-  <h2>6. Herramientas de Opt-Out de Terceros</h2>
-  <p>Para las cookies analíticas de Google, también puedes instalar el <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">complemento de inhabilitación para navegadores de Google Analytics</a>, que impide que Google Analytics recoja tus datos de navegación en cualquier sitio web que lo use.</p>
-  <p>Para más información sobre publicidad comportamental y cómo opt-out, puedes visitar <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener noreferrer">www.youronlinechoices.eu</a>, iniciativa de la industria publicitaria europea.</p>
-
-  <h2>7. Más Información</h2>
-  <p>Si tienes dudas sobre nuestra política de cookies, puedes contactarnos en:</p>
+  <p>También puedes eliminar o bloquear cookies directamente desde la configuración de tu navegador:</p>
   <ul>
-    <li><strong>Email:</strong> <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a></li>
-    <li><strong>Web:</strong> <a href="https://zonetechonline.com">zonetechonline.com</a></li>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+    <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
   </ul>
-  <p>Para más información sobre la normativa de cookies en España, puedes consultar la <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos (www.aepd.es)</a>.</p>
-  <p>Esta política de cookies está sujeta a modificaciones. Cualquier cambio relevante será notificado mediante un aviso en el sitio web y, cuando sea necesario, solicitaremos de nuevo tu consentimiento.</p>
+  <p>Ten en cuenta que bloquear todas las cookies puede afectar al funcionamiento de la tienda (el carrito de compra podría no guardarse).</p>
 
+  <h2>Transferencias internacionales</h2>
+  <p>Google Analytics puede transferir datos a servidores en EE. UU. Google LLC actúa como encargado del tratamiento bajo el Marco de Privacidad de Datos UE-EE. UU. y mediante Cláusulas Contractuales Tipo. Más información: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a>.</p>
+
+  <h2>Actualizaciones de esta política</h2>
+  <p>Podemos actualizar esta Política de Cookies para reflejar cambios normativos o en los servicios que utilizamos. Te recomendamos revisarla periódicamente. La fecha de la última actualización aparece al inicio del documento.</p>
+
+  <nav class="lp-nav" aria-label="Otras páginas legales">
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="politica-privacidad.html">Privacidad · RGPD</a>
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+    <a href="politica-envios.html">Política de Envíos</a>
+    <a href="politica-devoluciones.html">Devoluciones</a>
+  </nav>
 </main>
 
-<footer style="text-align:center;padding:32px 24px;border-top:1px solid rgba(255,255,255,.07);margin-top:60px;">
-  <p style="font-size:12px;color:#606080;">© 2026 ZoneTechOnline S.L. · <a href="politica-privacidad.html" style="color:#6366f1;">Privacidad</a> · <a href="politica-cookies.html" style="color:#6366f1;">Cookies</a> · <a href="aviso-legal.html" style="color:#6366f1;">Aviso Legal</a> · <a href="terminos-condiciones.html" style="color:#6366f1;">Términos</a> · <a href="index.html" style="color:#6366f1;">Volver a la tienda</a></p>
-</footer>
-</body></html>
+<script>
+function cookieConsent(choice){
+  localStorage.setItem('cookie_consent', choice);
+  localStorage.setItem('cookie_consent_date', new Date().toISOString());
+  var banner = document.getElementById('cookie-banner');
+  if(banner) banner.style.display='none';
+}
+</script>
+</body>
+</html>
