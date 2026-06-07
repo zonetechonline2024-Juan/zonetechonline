@@ -2947,6 +2947,209 @@ PRODUCTS.push(
   }
 );
 
+// ─── ALTAVOCES INTELIGENTES: JBL + SONOS (IDs 127–136) ───────────────────────
+// Fuente: Depau.es (JBL · CDN verificado) + sonos.com/es-es (Sonos · CDN verificado)
+// Scraping: junio 2026 · script scrape-depau-sonos-jbl.js
+// Ordenados por precio ascendente dentro de cada marca (JBL €49,99–€169,99 · Sonos €179–€499)
+PRODUCTS.push(
+
+  // ── JBL GO 5 Negro ────────────────────────────────────────────────────────
+  { id:127, name:'JBL GO 5 Negro', brand:'JBL', category:'altavoces',
+    price:49.99,
+    badge:'4,8W · IP67 · 5h · BT 5.3',
+    image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20go5%20bk_1.jpg',
+    description:'El altavoz portátil más compacto de JBL con audio potente para su tamaño (4,8W RMS). Bluetooth 5.3 para conexión instantánea, resistencia total al agua y polvo IP67 (sumergible) y hasta 5 horas de reproducción. Carga rápida via USB-C. Diseño de bolsillo — cabe en cualquier bolso.',
+    specs:{
+      'Potencia RMS':   '4,8W',
+      'Conectividad':   'Bluetooth 5.3',
+      'Resistencia':    'IP67 — sumergible hasta 1m/30min · a prueba de polvo',
+      'Batería':        '5 horas de reproducción · carga USB-C',
+      'Peso':           '184g',
+      'Dimensiones':    '86,9 × 86,9 × 38,8 mm',
+      'SKU Depau':      'JBL-ALT GO5 BK',
+      'Fuente':         'depau.es — CDN verificado'
+    }
+  },
+
+  // ── JBL Clip 5 Negro ─────────────────────────────────────────────────────
+  { id:128, name:'JBL Clip 5 Negro', brand:'JBL', category:'altavoces',
+    price:64.99,
+    badge:'7W · IP67 · 12h · Clip mosquetón',
+    image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20clip5%20bk_1.jpg',
+    description:'Altavoz portátil JBL con clip mosquetón integrado para engancharlo a la mochila, cinturón o tienda de campaña. 7W RMS con graves profundos, Bluetooth 5.3, IP67 sumergible y hasta 12 horas de batería. Carga USB-C. El compañero de aventuras ideal.',
+    specs:{
+      'Potencia RMS':   '7W',
+      'Conectividad':   'Bluetooth 5.3',
+      'Resistencia':    'IP67 — sumergible hasta 1m/30min · a prueba de polvo',
+      'Batería':        '12 horas de reproducción · carga USB-C',
+      'Clip':           'Mosquetón integrado de aleación',
+      'Peso':           '241g',
+      'Dimensiones':    '79,3 × 79,3 × 96,7 mm',
+      'SKU Depau':      'JBL-ALT CLIP5 BK',
+      'Fuente':         'depau.es — CDN verificado'
+    }
+  },
+
+  // ── JBL Flip 6 Negro ─────────────────────────────────────────────────────
+  { id:129, name:'JBL Flip 6 Negro', brand:'JBL', category:'altavoces',
+    price:99.99,
+    badge:'30W · IP67 · 12h · PartyBoost',
+    image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20flip6%20bk_1.jpg',
+    description:'El altavoz portátil más popular de JBL: 30W RMS con configuración 2×15W para un sonido potente y equilibrado. IP67, 12 horas de batería, carga USB-C y tecnología PartyBoost para conectar múltiples altavoces JBL en red. Sonido envolvente con radiadores pasivos.',
+    specs:{
+      'Potencia RMS':   '30W (2×15W)',
+      'Conectividad':   'Bluetooth 5.1',
+      'Resistencia':    'IP67 — sumergible hasta 1m/30min',
+      'Batería':        '12 horas de reproducción · carga USB-C',
+      'PartyBoost':     'Sí — conecta múltiples altavoces JBL',
+      'Radiadores pasivos': '2 × radiadores para graves mejorados',
+      'Peso':           '530g',
+      'Dimensiones':    '178 × 68 × 72 mm',
+      'SKU Depau':      'JBL-ALT FLIP6 BK',
+      'Fuente':         'depau.es — CDN verificado'
+    }
+  },
+
+  // ── JBL Flip 7 Blanco ────────────────────────────────────────────────────
+  { id:130, name:'JBL Flip 7 Blanco', brand:'JBL', category:'altavoces',
+    price:129.99,
+    badge:'35W · IP67 · 12h · Auracast',
+    image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20flip7%20wh_1.jpg',
+    description:'JBL Flip 7: la evolución del Flip 6 con 35W RMS (+17% potencia) y tecnología Auracast™ para compartir audio con múltiples dispositivos Bluetooth simultáneamente. Bluetooth 5.3, IP67 sumergible, 12 horas de batería y diseño más compacto. Novedad 2025.',
+    specs:{
+      'Potencia RMS':   '35W',
+      'Conectividad':   'Bluetooth 5.3',
+      'Auracast':       'Sí — audio sharing multi-dispositivo',
+      'Resistencia':    'IP67 — sumergible hasta 1m/30min',
+      'Batería':        '12 horas de reproducción · carga USB-C',
+      'PartyBoost':     'Sí — compatible con otros altavoces JBL',
+      'Peso':           '550g',
+      'Dimensiones':    '174 × 68 × 72 mm',
+      'SKU Depau':      'JBL-ALT FLIP7 WH',
+      'Fuente':         'depau.es — CDN verificado'
+    }
+  },
+
+  // ── JBL Charge 6 Negro ───────────────────────────────────────────────────
+  { id:131, name:'JBL Charge 6 Negro', brand:'JBL', category:'altavoces',
+    price:169.99,
+    badge:'45W · IP67 · 24h · PowerBank USB-A',
+    image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20charge%206%20bk_1.jpg',
+    description:'El altavoz portátil premium de JBL: 45W RMS con sonido potente y graves profundos, 24 horas de batería y función PowerBank USB-A para cargar tu móvil. IP67 sumergible, Bluetooth 5.3, Auracast™ y compatible con PartyBoost. El mejor altavoz portátil de la gama estándar JBL.',
+    specs:{
+      'Potencia RMS':   '45W',
+      'Conectividad':   'Bluetooth 5.3',
+      'Auracast':       'Sí — audio sharing multi-dispositivo',
+      'Resistencia':    'IP67 — sumergible hasta 1m/30min',
+      'Batería':        '24 horas de reproducción · carga USB-C',
+      'PowerBank':      'Sí — puerto USB-A para cargar dispositivos',
+      'PartyBoost':     'Sí — conecta múltiples altavoces JBL',
+      'Peso':           '970g',
+      'Dimensiones':    '220 × 95 × 93 mm',
+      'SKU Depau':      'JBL-ALT CHARGE 6 BK',
+      'Fuente':         'depau.es — CDN verificado'
+    }
+  },
+
+  // ── Sonos Era 100 Shadow Black ────────────────────────────────────────────
+  { id:132, name:'Sonos Era 100 Shadow Black', brand:'Sonos', category:'altavoces',
+    price:179.00,
+    badge:'Wi-Fi · Dolby Atmos · AirPlay 2 · Alexa',
+    image:'https://media.sonos.com/images/znqtjj88/production/ba7417c9ec5d2dcf54f46a4b3481eb1d5d55d1b5-2000x2000.png',
+    description:'Sonos Era 100 en Shadow Black: altavoz inteligente compacto con sonido de alta fidelidad, Wi-Fi + Bluetooth, Trueplay Tuning automático que analiza el espacio y ajusta el audio, Dolby Atmos y Amazon Alexa integrada. Compatible con más de 100 servicios de streaming. Configurable en par estéreo.',
+    specs:{
+      'Drivers':          '2 tweeters + 1 woofer — 3 canales amplificados',
+      'Conectividad':     'Wi-Fi 2.4/5 GHz + Bluetooth 5.0',
+      'Asistentes':       'Amazon Alexa integrada · Google Assistant vía app',
+      'Dolby Atmos':      'Sí — procesamiento espacial',
+      'AirPlay':          'AirPlay 2',
+      'Trueplay':         'Sí — ajuste automático por análisis de sala',
+      'Stereo pair':      'Sí — con otro Era 100',
+      'Dimensiones':      '119 × 119 × 161 mm',
+      'Fuente':           'sonos.com/es-es'
+    }
+  },
+
+  // ── Sonos Roam 2 Shadow Black ─────────────────────────────────────────────
+  { id:133, name:'Sonos Roam 2 Shadow Black', brand:'Sonos', category:'altavoces',
+    price:199.00,
+    badge:'Portátil · IP67 · 10h · Alexa + Google',
+    image:'https://media.sonos.com/images/znqtjj88/production/110a711ffb1d9ec82743734ef7477a7d400c8d11-2400x2400.png',
+    description:'Sonos Roam 2: el altavoz portátil inteligente que cambia entre Wi-Fi (en casa) y Bluetooth (en movimiento) automáticamente. IP67 totalmente sumergible, 10 horas de batería, carga Qi inalámbrica y USB-C. Amazon Alexa y Google Assistant integrados. AutoPlay detecta la red y lanza el audio al llegar a casa. Solo 432g.',
+    specs:{
+      'Drivers':          '1 tweeter + 1 woofer — 2 amplificadores clase D',
+      'Conectividad':     'Wi-Fi 2.4/5 GHz + Bluetooth 5.0',
+      'Asistentes':       'Amazon Alexa + Google Assistant (ambos integrados)',
+      'Batería':          '10 horas · carga USB-C + Qi inalámbrica',
+      'Resistencia':      'IP67 — sumergible hasta 1m durante 30 min',
+      'AirPlay':          'AirPlay 2',
+      'AutoPlay':         'Sí — conecta automáticamente al detectar red Wi-Fi',
+      'Peso':             '432g',
+      'Dimensiones':      '62 × 62 × 151 mm',
+      'Fuente':           'sonos.com/es-es'
+    }
+  },
+
+  // ── Sonos Era 100 White ───────────────────────────────────────────────────
+  { id:134, name:'Sonos Era 100 White', brand:'Sonos', category:'altavoces',
+    price:229.00,
+    badge:'Wi-Fi · Dolby Atmos · AirPlay 2 · Alexa',
+    image:'https://media.sonos.com/images/znqtjj88/production/c730c924a2d9fe4d3a3b9b9cb7432b7afd0ab392-2000x2000.png',
+    description:'Sonos Era 100 en blanco: altavoz inteligente compacto con sonido de alta fidelidad, Wi-Fi + Bluetooth, Trueplay Tuning automático, Dolby Atmos y Amazon Alexa integrada. Más de 100 servicios de streaming. Configurable en par estéreo con otro Era 100. Diseño minimalista para cualquier espacio.',
+    specs:{
+      'Drivers':          '2 tweeters + 1 woofer — 3 canales amplificados',
+      'Conectividad':     'Wi-Fi 2.4/5 GHz + Bluetooth 5.0',
+      'Asistentes':       'Amazon Alexa integrada · Google Assistant vía app',
+      'Dolby Atmos':      'Sí — procesamiento espacial',
+      'AirPlay':          'AirPlay 2',
+      'Trueplay':         'Sí — ajuste automático por análisis de sala',
+      'Stereo pair':      'Sí — con otro Era 100',
+      'Dimensiones':      '119 × 119 × 161 mm',
+      'Fuente':           'sonos.com/es-es'
+    }
+  },
+
+  // ── Sonos Era 300 White ───────────────────────────────────────────────────
+  { id:135, name:'Sonos Era 300 White', brand:'Sonos', category:'altavoces',
+    price:399.00,
+    badge:'Spatial Audio · 6 drivers · Dolby Atmos 360°',
+    image:'https://media.sonos.com/images/znqtjj88/production/1dfecdf1513cd96cd28e789adac4957b97adf50b-1800x1800.png',
+    description:'El altavoz de audio espacial de Sonos: 6 drivers orientados en 5 direcciones para sonido 360° envolvente. Dolby Atmos nativo, Sony 360 Reality Audio, Trueplay Tuning avanzado con análisis de sala. Amazon Alexa integrada, AirPlay 2. El mejor altavoz de sobremesa de Sonos para escucha crítica.',
+    specs:{
+      'Drivers':          '6 drivers amplificados — orientados en 5 direcciones',
+      'Audio':            'Dolby Atmos · Sony 360 Reality Audio · Spatial Audio 360°',
+      'Conectividad':     'Wi-Fi 2.4/5 GHz + Bluetooth 5.0',
+      'Asistentes':       'Amazon Alexa integrada · Google Assistant vía app',
+      'AirPlay':          'AirPlay 2',
+      'Trueplay':         'Avanzado — análisis de sala en tiempo real',
+      'Stereo pair':      'Sí — con otro Era 300 o Era 100',
+      'Dimensiones':      '160 × 160 × 185 mm',
+      'Fuente':           'sonos.com/es-es'
+    }
+  },
+
+  // ── Sonos Move 2 Olive ────────────────────────────────────────────────────
+  { id:136, name:'Sonos Move 2 Olive', brand:'Sonos', category:'altavoces',
+    price:499.00,
+    badge:'Portátil + Casa · IP56 · 24h · Alexa + Google',
+    image:'https://media.sonos.com/images/znqtjj88/production/87e816c0a480d8a27c1d379e02e84d84f6db5041-1280x1280.png',
+    description:'Sonos Move 2 en Olive: el altavoz premium para hogar y exterior. Wi-Fi en casa, Bluetooth en movimiento. IP56 resistente al agua y lluvia, 24 horas de batería, carga por base magnética + USB-C. Amazon Alexa y Google Assistant integrados, AirPlay 2 y Trueplay Tuning. 3 canales amplificados con sonido Sonos de máxima calidad en cualquier lugar.',
+    specs:{
+      'Drivers':          '3 canales amplificados — 2 tweeters + 1 woofer',
+      'Conectividad':     'Wi-Fi 2.4/5 GHz + Bluetooth 5.0',
+      'Asistentes':       'Amazon Alexa + Google Assistant (ambos integrados)',
+      'Batería':          '24 horas · carga base magnética + USB-C',
+      'Resistencia':      'IP56 — resistente a salpicaduras y lluvia intensa',
+      'AirPlay':          'AirPlay 2',
+      'Trueplay':         'Sí — ajuste automático por análisis de sala',
+      'Peso':             '3 kg',
+      'Dimensiones':      '163 × 163 × 240 mm',
+      'Fuente':           'sonos.com/es-es'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
