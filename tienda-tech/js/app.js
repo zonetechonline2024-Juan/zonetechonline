@@ -4955,11 +4955,23 @@ function initAIAssistant() {
       return 'Tenemos <strong>26 anillos inteligentes</strong> de 7 marcas: <strong>Amazfit Helio Ring</strong> (€169,90, sin suscripción) · <strong>Movano Evie Ring</strong> (3 colores, €249, salud femenina) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, ECG) · <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
-    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares o gafas? ¿Practicas deporte? ¿Audio Hi-Fi, XR o AR? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas) y <strong>35 gafas</strong> (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid y Gentle Monster) — 126 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    if (/altavoz|altavoces|speaker|sonos|jbl|audio inteligente|bocina|bluetooth.*casa|casa.*bluetooth|wi.?fi.*sonido|sonido.*wifi/.test(ql)) {
+      return 'Tenemos <strong>10 altavoces inteligentes</strong> de 2 marcas premium:<br><br>🔊 <strong>JBL</strong> (5 modelos desde Depau, IP67, todos con Auracast): <strong>GO 5</strong> €49,99 · <strong>Clip 5</strong> €64,99 · <strong>Flip 6</strong> €99,99 · <strong>Flip 7</strong> €129,99 · <strong>Charge 6</strong> €169,99 (+ PowerBank USB-A, 24h batería)<br><br>🔊 <strong>Sonos</strong> (5 modelos, Wi-Fi+BT, Dolby Atmos, Alexa+Google): <strong>Era 100 Shadow Black</strong> €179 · <strong>Roam 2</strong> €199 (portátil IP67, 10h) · <strong>Era 100 White</strong> €229 · <strong>Era 300</strong> €399 (Spatial Audio 360°) · <strong>Move 2</strong> €499 (IP56, 24h, casa+exterior)<br><br>¿Buscas portátil o para casa? ¿Con asistente de voz integrado? <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver todos los altavoces →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>126 wearables premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Moondrop Hi-Fi, Shokz, Nothing, Sony, Sennheiser, Google) y 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster). Pregúntame sobre deporte, Hi-Fi, AR/XR o cualquier modelo. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/sonos era|era 100|era 300|roam 2|sonos move|move 2/.test(ql)) {
+      return '🔊 Gama <strong>Sonos</strong> disponible (5 modelos, todos con Wi-Fi, Bluetooth, Amazon Alexa y AirPlay 2):<br>• <strong>Era 100 Shadow Black</strong> — €179 — 3 drivers, Dolby Atmos, Trueplay<br>• <strong>Roam 2 Shadow Black</strong> — €199 — Portátil, IP67, 10h, Qi, Alexa+Google<br>• <strong>Era 100 White</strong> — €229 — 3 drivers, Dolby Atmos<br>• <strong>Era 300 White</strong> — €399 — 6 drivers, Spatial Audio 360°, Dolby Atmos<br>• <strong>Move 2 Olive</strong> — €499 — IP56, 24h, carga magnética, Alexa+Google<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Sonos">Ver Sonos →</a>';
+    }
+
+    if (/jbl go|jbl clip|jbl flip|jbl charge|altavoz.*jbl|jbl.*altavoz/.test(ql)) {
+      return '🔊 Gama <strong>JBL</strong> disponible (5 modelos de Depau, todos IP67 y Bluetooth 5.x):<br>• <strong>GO 5 Negro</strong> — €49,99 — 4,8W · 5h batería · 184g<br>• <strong>Clip 5 Negro</strong> — €64,99 — 7W · 12h · clip mosquetón<br>• <strong>Flip 6 Negro</strong> — €99,99 — 30W · 12h · PartyBoost<br>• <strong>Flip 7 Blanco</strong> — €129,99 — 35W · 12h · Auracast<br>• <strong>Charge 6 Negro</strong> — €169,99 — 45W · 24h · PowerBank USB-A<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=JBL">Ver JBL →</a>';
+    }
+
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz inteligente</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>10 altavoces</strong> (JBL + Sonos) — 136 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos <strong>136 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>10 altavoces inteligentes</strong> (JBL desde €49,99 · Sonos desde €179). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4991,7 +5003,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong> y <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) — 126 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>10 altavoces inteligentes</strong> (JBL + Sonos) — 136 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
