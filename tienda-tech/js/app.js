@@ -3734,37 +3734,79 @@ function initConfigurator() {
     if (!badge) return;
     var as = document.querySelector('#strap-colors .swatch.active');
     var am = document.querySelector('#case-materials .material-btn.active');
-    badge.textContent = (as ? (as.dataset.name || as.title) : 'Graphite') + ' · ' + (am ? am.dataset.finish : 'Ridge Sport');
+    badge.textContent = (as ? (as.dataset.name || as.title) : 'Graphite') + ' · ' + (am ? am.dataset.finish : 'Ridge Sport Band');
+    badge.classList.remove('badge-updated');
+    void badge.offsetWidth;
+    badge.classList.add('badge-updated');
   }
 
-  // ── Color → CSS filter map (base image is Silver; filters simulate each variant) ──
+  // ── Color → filter / aura / canvas-glow maps ──
   var colorFilters = {
-    'graphite':  'grayscale(100%) brightness(0.28) contrast(1.25)',
-    'silver':    'none',
-    'pinkgold':  'sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
-    'cream':     'sepia(35%) saturate(140%) brightness(1.12)',
-    'sapphire':  'hue-rotate(198deg) saturate(190%) brightness(0.82)',
-    'green':     'hue-rotate(82deg) saturate(230%) brightness(0.84)'
+    'graphite': 'grayscale(100%) brightness(0.28) contrast(1.25)',
+    'silver':   'none',
+    'pinkgold': 'sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
+    'cream':    'sepia(35%) saturate(140%) brightness(1.12)',
+    'sapphire': 'hue-rotate(198deg) saturate(190%) brightness(0.82)',
+    'green':    'hue-rotate(82deg) saturate(230%) brightness(0.84)'
+  };
+  var colorAuras = {
+    'graphite': 'rgba(70,72,80,0.55)',
+    'silver':   'rgba(99,102,241,0.65)',
+    'pinkgold': 'rgba(210,128,100,0.6)',
+    'cream':    'rgba(218,178,118,0.5)',
+    'sapphire': 'rgba(28,88,215,0.65)',
+    'green':    'rgba(20,155,68,0.65)'
+  };
+  var colorGlowRGBMap = {
+    'graphite': '70,72,80',
+    'silver':   '99,102,241',
+    'pinkgold': '210,128,100',
+    'cream':    '218,178,118',
+    'sapphire': '28,88,215',
+    'green':    '20,155,68'
   };
 
-  function applyColorFilter(color) {
+  function applyColorFilter(color, instant) {
     var watchImg = document.getElementById('config-watch-svg');
-    if (watchImg) watchImg.style.filter = colorFilters[color] || 'none';
+    if (watchImg) {
+      if (instant) {
+        watchImg.style.filter = colorFilters[color] || 'none';
+      } else {
+        watchImg.classList.add('cfg-img-fade');
+        setTimeout(function() {
+          watchImg.style.filter = colorFilters[color] || 'none';
+          watchImg.classList.remove('cfg-img-fade');
+        }, 230);
+      }
+    }
+    var aura = document.getElementById('cfg-watch-aura');
+    if (aura) {
+      var c = colorAuras[color] || colorAuras['silver'];
+      aura.style.background = 'radial-gradient(circle,' + c + ' 0%,transparent 65%)';
+    }
+    glowRGB = colorGlowRGBMap[color] || '99,102,241';
   }
 
   // ── Color swatches ──
   document.querySelectorAll('#strap-colors .swatch').forEach(function(swatch) {
     swatch.addEventListener('click', function() {
-      document.querySelectorAll('#strap-colors .swatch').forEach(function(s) { s.classList.remove('active'); });
+      document.querySelectorAll('#strap-colors .swatch').forEach(function(s) { s.classList.remove('active'); s.classList.remove('pop'); });
       swatch.classList.add('active');
+      void swatch.offsetWidth;
+      swatch.classList.add('pop');
       var nameEl = document.getElementById('strap-name');
-      if (nameEl) nameEl.textContent = swatch.dataset.name || swatch.title;
+      if (nameEl) {
+        nameEl.textContent = swatch.dataset.name || swatch.title;
+        nameEl.classList.remove('name-updated');
+        void nameEl.offsetWidth;
+        nameEl.classList.add('name-updated');
+      }
       applyColorFilter(swatch.dataset.color);
       updateConfigBadge();
     });
   });
 
-  // ── Material buttons (price/style only — do NOT swap watch image) ──
+  // ── Material buttons (price/style only — image stays driven by selected color) ──
   document.querySelectorAll('#case-materials .material-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('#case-materials .material-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -3772,15 +3814,20 @@ function initConfigurator() {
       var price = parseInt(btn.dataset.price);
       var priceEl = document.getElementById('config-price');
       var saveEl = document.getElementById('config-save');
-      if (priceEl) priceEl.textContent = '€' + price;
+      if (priceEl) {
+        priceEl.textContent = '€' + price;
+        priceEl.classList.remove('price-animate');
+        void priceEl.offsetWidth;
+        priceEl.classList.add('price-animate');
+      }
       if (saveEl) saveEl.textContent = 'Ahorras €' + (299 - price);
       updateConfigBadge();
     });
   });
 
-  // ── Apply default filter for pre-selected color (Graphite on load) ──
+  // ── Init: apply default color state (Graphite) without fade on page load ──
   var activeSwatch = document.querySelector('#strap-colors .swatch.active');
-  if (activeSwatch) applyColorFilter(activeSwatch.dataset.color);
+  if (activeSwatch) applyColorFilter(activeSwatch.dataset.color, true);
 
   // ── Add to cart ──
   var addBtn = document.getElementById('add-config-to-cart');
