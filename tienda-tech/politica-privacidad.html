@@ -1,232 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<style>
-.legal-page{max-width:860px;margin:0 auto;padding:120px 24px 80px;}
-.legal-page h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:700;margin-bottom:8px;}
-.legal-page .legal-date{font-size:13px;color:#606080;margin-bottom:48px;}
-.legal-page h2{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#6366f1;margin:36px 0 12px;padding-left:12px;border-left:3px solid #6366f1;}
-.legal-page h3{font-size:15px;font-weight:600;margin:20px 0 8px;color:#f1f1f8;}
-.legal-page p,.legal-page li{font-size:14.5px;line-height:1.8;color:#a0a0c0;margin-bottom:10px;}
-.legal-page ul{padding-left:20px;margin-bottom:14px;}
-.legal-page a{color:#6366f1;}
-.legal-page table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;}
-.legal-page th{background:#141428;color:#f1f1f8;padding:10px 14px;text-align:left;border:1px solid rgba(255,255,255,.07);}
-.legal-page td{padding:9px 14px;border:1px solid rgba(255,255,255,.07);color:#a0a0c0;}
-.legal-highlight{background:#141428;border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:20px 24px;margin:24px 0;}
-.legal-highlight p{margin:0;color:#f1f1f8;}
-</style>
-<title>Política de Privacidad | ZoneTechOnline</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Política de Privacidad — ZoneTechOnline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .lp{max-width:820px;margin:0 auto;padding:70px 24px 80px}
+    .lp-back{display:inline-flex;align-items:center;gap:7px;color:var(--text-3);font-size:13px;text-decoration:none;margin-bottom:36px;transition:color .2s}
+    .lp-back:hover{color:var(--accent)}
+    .lp h1{font-size:clamp(22px,4vw,34px);font-weight:700;margin:0 0 6px}
+    .lp-date{font-size:13px;color:var(--text-3);margin:0 0 36px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .lp h2{font-size:16px;font-weight:600;margin:30px 0 10px;color:var(--text-1)}
+    .lp h3{font-size:14.5px;font-weight:600;margin:20px 0 8px;color:var(--text-2)}
+    .lp p{font-size:14.5px;color:var(--text-2);line-height:1.78;margin:0 0 12px}
+    .lp ul{margin:0 0 14px;padding-left:22px}
+    .lp li{font-size:14.5px;color:var(--text-2);line-height:1.78;margin-bottom:5px}
+    .lp a{color:var(--accent);text-decoration:none}
+    .lp a:hover{text-decoration:underline}
+    .lp-box{background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:18px 22px;margin:16px 0 20px}
+    .lp-box p{margin:0;font-size:14px;line-height:1.85}
+    .lp-table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:13.5px}
+    .lp-table th{text-align:left;padding:10px 14px;background:rgba(99,102,241,.1);color:var(--text-1);font-weight:600;border-bottom:1px solid var(--border)}
+    .lp-table td{padding:10px 14px;color:var(--text-2);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
+    .lp-table tr:last-child td{border-bottom:none}
+    .lp-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:50px;padding-top:28px;border-top:1px solid var(--border)}
+    .lp-nav a{font-size:12.5px;color:var(--text-3);text-decoration:none;padding:6px 14px;border:1px solid var(--border);border-radius:20px;transition:var(--transition)}
+    .lp-nav a:hover{color:var(--accent);border-color:var(--accent)}
+  </style>
 </head>
 <body>
-<nav class="navbar scrolled" style="position:relative;padding:18px 0;">
-  <div class="nav-container"><a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a></div>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <a href="index.html" style="font-size:13px;color:var(--text-3);text-decoration:none;display:flex;align-items:center;gap:6px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+      Volver a la tienda
+    </a>
+  </div>
 </nav>
 
-<main class="legal-page">
-  <h1>Política de Privacidad</h1>
-  <p class="legal-date">Última actualización: mayo de 2026</p>
+<main class="lp">
+  <a href="index.html" class="lp-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg>
+    Volver a la tienda
+  </a>
 
-  <div class="legal-highlight">
-    <p>En ZoneTechOnline S.L. nos comprometemos a proteger tu privacidad y a tratar tus datos personales con total transparencia, en cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
+  <h1>Política de Privacidad</h1>
+  <p class="lp-date">Última actualización: mayo de 2026 · Conforme al RGPD (UE) 2016/679 y la LOPDGDD (LO 3/2018)</p>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <div class="lp-box">
+    <p>
+      <strong>Titular:</strong> Juan Sebastián Cárdenas Puertas<br>
+      <strong>NIE:</strong> Z0614778Q<br>
+      <strong>Dirección:</strong> Carrer l'Energia 1, Barcelona, España<br>
+      <strong>Email de contacto:</strong> <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a>
+    </p>
   </div>
 
-  <h2>1. Responsable del Tratamiento</h2>
-  <p>El responsable del tratamiento de tus datos personales es:</p>
-  <ul>
-    <li><strong>Denominación social:</strong> ZoneTechOnline S.L.</li>
-    <li><strong>NIF:</strong> Z0614778Q</li>
-    <li><strong>Domicilio social:</strong> Carrer de l'energia 3, España</li>
-    <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a></li>
-    <li><strong>Sitio web:</strong> <a href="https://zonetechonline.com">zonetechonline.com</a></li>
-  </ul>
-  <p>Para cualquier consulta relativa al tratamiento de tus datos personales, puedes dirigirte a nosotros a través del correo electrónico indicado.</p>
+  <h2>2. Datos que recopilamos y por qué</h2>
 
-  <h2>2. Datos Personales que Recogemos</h2>
-  <p>En función de la interacción que tengas con nuestro sitio web y servicios, podemos tratar las siguientes categorías de datos personales:</p>
-
-  <h3>2.1 Datos de identificación y contacto</h3>
-  <ul>
-    <li>Nombre y apellidos</li>
-    <li>Dirección de correo electrónico</li>
-    <li>Número de teléfono (opcional, para notificaciones de envío)</li>
-  </ul>
-
-  <h3>2.2 Datos de dirección y envío</h3>
-  <ul>
-    <li>Dirección postal completa (calle, número, piso, ciudad, código postal, país)</li>
-    <li>Dirección de facturación, si es diferente a la de envío</li>
-  </ul>
-
-  <h3>2.3 Datos de pago</h3>
-  <p>Los datos de tarjeta bancaria u otros medios de pago son procesados íntegramente por <strong>Stripe Payments Europe, Ltd.</strong>, nuestra pasarela de pago certificada PCI DSS. ZoneTechOnline S.L. <strong>no almacena ni tiene acceso</strong> a los datos completos de tarjeta. Únicamente recibimos confirmación del resultado del pago y, en su caso, los últimos cuatro dígitos de la tarjeta con fines de identificación de la transacción.</p>
-
-  <h3>2.4 Datos de navegación y uso</h3>
-  <ul>
-    <li>Dirección IP (anonimizada cuando sea posible)</li>
-    <li>Tipo de navegador y dispositivo</li>
-    <li>Páginas visitadas y tiempo de permanencia</li>
-    <li>Fuente de origen de la visita (referral)</li>
-  </ul>
-
-  <h3>2.5 Datos de comunicaciones</h3>
-  <ul>
-    <li>Contenido de los mensajes enviados a través del formulario de contacto</li>
-    <li>Historial de comunicaciones por correo electrónico</li>
-  </ul>
-
-  <h2>3. Finalidades del Tratamiento</h2>
-  <p>Tratamos tus datos personales para las siguientes finalidades:</p>
-
-  <h3>3.1 Gestión de pedidos y cumplimiento contractual</h3>
-  <p>Procesamos tu pedido, coordinamos el envío con nuestros proveedores logísticos, emitimos la factura correspondiente y gestionamos posibles incidencias, devoluciones o garantías relacionadas con la compra.</p>
-
-  <h3>3.2 Creación y gestión de cuenta de usuario</h3>
-  <p>Si creas una cuenta en nuestra tienda, utilizamos tus datos para gestionar el acceso, guardar tu historial de pedidos y preferencias, y facilitarte futuras compras.</p>
-
-  <h3>3.3 Comunicaciones comerciales y newsletter</h3>
-  <p>Si nos has dado tu consentimiento expreso, te enviaremos comunicaciones sobre nuevos productos, ofertas exclusivas, novedades del sector wearables y contenido de valor. Puedes darte de baja en cualquier momento desde el enlace incluido en cada correo o escribiéndonos a <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a>.</p>
-
-  <h3>3.4 Atención al cliente</h3>
-  <p>Tramitamos tus consultas, reclamaciones y solicitudes de soporte a través de los canales habilitados (correo electrónico y formulario web).</p>
-
-  <h3>3.5 Análisis y mejora del servicio</h3>
-  <p>Utilizamos datos de navegación de forma agregada y anonimizada para analizar el rendimiento del sitio web, identificar problemas técnicos y mejorar la experiencia de usuario.</p>
-
-  <h3>3.6 Cumplimiento de obligaciones legales</h3>
-  <p>Conservamos y comunicamos los datos que sean requeridos por obligaciones fiscales, contables o de cualquier otra naturaleza legal aplicable en España y la Unión Europea.</p>
-
-  <h2>4. Base Jurídica del Tratamiento</h2>
-  <table>
+  <table class="lp-table">
     <thead>
-      <tr>
-        <th>Finalidad</th>
-        <th>Base jurídica</th>
-      </tr>
+      <tr><th>Dato</th><th>Finalidad</th><th>Base jurídica (RGPD)</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>Gestión de pedidos y envíos</td>
-        <td>Ejecución de un contrato (Art. 6.1.b RGPD)</td>
+        <td>Nombre, apellidos, email, dirección de envío</td>
+        <td>Gestionar tu pedido, confirmación de compra y entrega</td>
+        <td>Art. 6.1.b — Ejecución de contrato</td>
       </tr>
       <tr>
-        <td>Gestión de cuenta de usuario</td>
-        <td>Ejecución de un contrato (Art. 6.1.b RGPD)</td>
+        <td>Datos de pago (procesados por Stripe)</td>
+        <td>Cobro seguro del pedido. <strong>No almacenamos datos de tarjeta.</strong></td>
+        <td>Art. 6.1.b — Ejecución de contrato</td>
       </tr>
       <tr>
-        <td>Envío de newsletter y ofertas</td>
-        <td>Consentimiento del interesado (Art. 6.1.a RGPD)</td>
+        <td>Historial de pedidos</td>
+        <td>Cumplimiento de obligaciones fiscales y contables</td>
+        <td>Art. 6.1.c — Obligación legal</td>
       </tr>
       <tr>
-        <td>Atención al cliente</td>
-        <td>Interés legítimo / ejecución de contrato (Art. 6.1.b y 6.1.f RGPD)</td>
+        <td>Email (con tu consentimiento)</td>
+        <td>Comunicaciones comerciales, novedades y ofertas</td>
+        <td>Art. 6.1.a — Consentimiento</td>
       </tr>
       <tr>
-        <td>Análisis de navegación (Analytics)</td>
-        <td>Consentimiento del interesado (Art. 6.1.a RGPD)</td>
-      </tr>
-      <tr>
-        <td>Obligaciones legales y contables</td>
-        <td>Cumplimiento de obligación legal (Art. 6.1.c RGPD)</td>
+        <td>Datos de navegación / cookies analíticas</td>
+        <td>Mejora de la experiencia de usuario y estadísticas del sitio</td>
+        <td>Art. 6.1.a — Consentimiento</td>
       </tr>
     </tbody>
   </table>
 
-  <h2>5. Tiempo de Conservación de los Datos</h2>
-  <p>Conservaremos tus datos personales durante el tiempo estrictamente necesario para cada finalidad:</p>
+  <h2>3. Plazos de conservación de los datos</h2>
   <ul>
-    <li><strong>Datos de pedidos y facturación:</strong> 5 años desde la emisión de la factura, en cumplimiento de la normativa tributaria española (Ley 58/2003 General Tributaria).</li>
-    <li><strong>Datos de cuenta de usuario:</strong> Mientras la cuenta permanezca activa. Tras solicitar la baja, los datos se eliminarán en un plazo máximo de 30 días, salvo obligación legal de conservación.</li>
-    <li><strong>Datos de newsletter:</strong> Hasta que retires tu consentimiento. Una vez dado de baja, eliminaremos tu dirección de la lista en un plazo máximo de 10 días hábiles.</li>
-    <li><strong>Datos de contacto y atención al cliente:</strong> 2 años desde la última interacción, por interés legítimo en el mantenimiento de un histórico de comunicaciones.</li>
-    <li><strong>Datos de navegación (Analytics):</strong> Máximo 26 meses, conforme a la configuración de Google Analytics.</li>
-    <li><strong>Datos de reclamaciones o litigios:</strong> Mientras exista un procedimiento abierto y hasta la prescripción de las acciones legales correspondientes.</li>
+    <li><strong>Datos de pedidos y facturación:</strong> 5 años (obligación fiscal, Ley 58/2003 General Tributaria) + 3 años adicionales para defensa legal.</li>
+    <li><strong>Datos de comunicaciones comerciales:</strong> Hasta que revocues tu consentimiento.</li>
+    <li><strong>Datos de navegación:</strong> Según lo establecido en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</li>
   </ul>
 
-  <h2>6. Cesión de Datos a Terceros</h2>
-  <p>ZoneTechOnline S.L. no vende ni cede tus datos personales a terceros con fines comerciales propios. No obstante, para la correcta prestación del servicio, compartimos datos con los siguientes terceros en calidad de encargados del tratamiento:</p>
-
-  <h3>6.1 Procesamiento de pagos — Stripe</h3>
-  <p><strong>Stripe Payments Europe, Ltd.</strong> (con sede en Irlanda) actúa como procesador de pagos. Los datos de pago se transmiten directamente a Stripe de forma cifrada. Stripe está certificado PCI DSS nivel 1 y cumple con el RGPD. Puedes consultar su política de privacidad en <a href="https://stripe.com/es/privacy" target="_blank" rel="noopener noreferrer">stripe.com/es/privacy</a>.</p>
-
-  <h3>6.2 Logística y envíos</h3>
-  <p>Compartimos tu nombre, dirección de entrega y, en su caso, número de teléfono con el operador logístico encargado de gestionar el envío de tu pedido. Este tercero actúa únicamente como encargado del tratamiento y no puede utilizar tus datos para otros fines. Trabajamos con operadores logísticos que operan en el Espacio Económico Europeo.</p>
-
-  <h3>6.3 Análisis web — Google Analytics</h3>
-  <p>Utilizamos Google Analytics (Google Ireland Limited) para obtener estadísticas de uso del sitio web. Los datos se recogen de forma anonimizada mediante cookies y se transmiten a los servidores de Google. Hemos configurado Google Analytics con anonimización de IP activada. Para más información, consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
-
-  <h3>6.4 Plataforma de email marketing</h3>
-  <p>Para el envío de newsletters, utilizamos un proveedor de email marketing que actúa como encargado del tratamiento y procesa los datos (nombre y email) exclusivamente para el envío de las comunicaciones autorizadas.</p>
-
-  <h3>6.5 Autoridades y organismos públicos</h3>
-  <p>Podremos comunicar datos a la Agencia Estatal de Administración Tributaria (AEAT), Fuerzas y Cuerpos de Seguridad del Estado u otras autoridades competentes cuando exista una obligación legal o requerimiento judicial.</p>
-
-  <p>En ningún caso se realizan transferencias internacionales de datos fuera del Espacio Económico Europeo salvo que existan garantías adecuadas conforme al Capítulo V del RGPD (como las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea).</p>
-
-  <h2>7. Tus Derechos como Interesado</h2>
-  <p>De conformidad con el RGPD y la LOPDGDD, tienes derecho a:</p>
-
-  <h3>7.1 Derecho de acceso</h3>
-  <p>Puedes solicitarnos confirmación de si estamos tratando tus datos personales y, en su caso, obtener una copia de los datos tratados, las finalidades, las categorías de datos, los destinatarios y el plazo de conservación.</p>
-
-  <h3>7.2 Derecho de rectificación</h3>
-  <p>Si tus datos son inexactos o están incompletos, puedes solicitarnos que los corrijamos o completemos sin dilación indebida.</p>
-
-  <h3>7.3 Derecho de supresión ("derecho al olvido")</h3>
-  <p>Puedes solicitar la eliminación de tus datos personales cuando, entre otros supuestos, ya no sean necesarios para la finalidad para la que fueron recogidos, hayas retirado tu consentimiento o te opongas al tratamiento y no existan motivos legítimos prevalentes.</p>
-
-  <h3>7.4 Derecho a la limitación del tratamiento</h3>
-  <p>Puedes solicitar que suspendamos temporalmente el tratamiento de tus datos en determinadas circunstancias, por ejemplo mientras verificamos la exactitud de los datos o la procedencia de una oposición.</p>
-
-  <h3>7.5 Derecho a la portabilidad</h3>
-  <p>Tienes derecho a recibir los datos que nos hayas proporcionado en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos directamente a otro responsable del tratamiento cuando el tratamiento esté basado en el consentimiento o en la ejecución de un contrato.</p>
-
-  <h3>7.6 Derecho de oposición</h3>
-  <p>Puedes oponerte al tratamiento de tus datos cuando este se base en el interés legítimo o en una misión de interés público. Asimismo, tienes derecho a oponerte en cualquier momento al tratamiento de tus datos con fines de marketing directo, incluida la elaboración de perfiles.</p>
-
-  <h3>7.7 Derechos relativos a decisiones automatizadas</h3>
-  <p>Tienes derecho a no ser objeto de una decisión basada únicamente en el tratamiento automatizado, incluida la elaboración de perfiles, que produzca efectos jurídicos o te afecte significativamente. Actualmente, ZoneTechOnline S.L. no utiliza procesos de toma de decisiones completamente automatizados.</p>
-
-  <h2>8. Cómo Ejercer tus Derechos</h2>
-  <div class="legal-highlight">
-    <p>Para ejercer cualquiera de los derechos descritos, envía un correo electrónico a <strong><a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a></strong> con el asunto "Ejercicio de derechos RGPD", indicando tu nombre completo, el derecho que deseas ejercer y, si es necesario para identificarte, una copia de tu DNI o documento equivalente.</p>
-  </div>
-  <p>Responderemos a tu solicitud en el plazo máximo de <strong>un mes</strong> desde su recepción. Este plazo puede ampliarse dos meses adicionales en casos de especial complejidad, informándote previamente de ello.</p>
-  <p>El ejercicio de estos derechos es gratuito. No obstante, si las solicitudes son manifiestamente infundadas o excesivas (en particular por su carácter repetitivo), podremos cobrar un canon razonable o negarnos a actuar, informándote debidamente.</p>
-
-  <h2>9. Reclamación ante la Autoridad de Control</h2>
-  <p>Si consideras que el tratamiento de tus datos personales no es conforme con la normativa aplicable, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, autoridad de control competente en España:</p>
+  <h2>4. Destinatarios y transferencias internacionales</h2>
+  <p>Tus datos pueden ser comunicados a:</p>
   <ul>
-    <li><strong>Web:</strong> <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a></li>
-    <li><strong>Dirección:</strong> C/ Jorge Juan, 6, 28001 Madrid</li>
-    <li><strong>Teléfono:</strong> 901 100 099 / 912 663 517</li>
+    <li><strong>Stripe, Inc.</strong> (procesador de pagos) — opera bajo un Acuerdo de Tratamiento de Datos (DPA) conforme al RGPD, con cláusulas contractuales tipo aprobadas por la CE para transferencias a EE. UU. (<a href="https://stripe.com/es/privacy" target="_blank" rel="noopener">Política de Privacidad de Stripe</a>).</li>
+    <li><strong>Empresas de transporte y logística</strong> — únicamente los datos necesarios para la entrega (nombre, dirección, teléfono de contacto).</li>
   </ul>
-  <p>Te animamos a contactar con nosotros antes de presentar cualquier reclamación para intentar resolver la situación de forma amistosa.</p>
+  <p>No vendemos, cedemos ni compartimos tus datos con terceros con fines comerciales propios.</p>
 
-  <h2>10. Seguridad de los Datos</h2>
-  <p>ZoneTechOnline S.L. ha adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizados, teniendo en cuenta el estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos. Entre estas medidas se incluyen:</p>
+  <h2>5. Tus derechos</h2>
+  <p>Conforme al RGPD, puedes ejercer en cualquier momento los siguientes derechos enviando un email a <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a> con copia de tu documento de identidad:</p>
   <ul>
-    <li>Cifrado de las comunicaciones mediante protocolo HTTPS/TLS</li>
-    <li>Control de acceso restringido a los sistemas que contienen datos personales</li>
-    <li>Contraseñas almacenadas mediante algoritmos de hash seguros (bcrypt)</li>
-    <li>Copias de seguridad periódicas</li>
-    <li>Procesamiento de pagos delegado íntegramente en Stripe (certificado PCI DSS nivel 1)</li>
+    <li><strong>Acceso:</strong> Conocer qué datos tenemos sobre ti.</li>
+    <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos.</li>
+    <li><strong>Supresión ("derecho al olvido"):</strong> Solicitar la eliminación de tus datos.</li>
+    <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado y legible por máquina.</li>
+    <li><strong>Limitación del tratamiento:</strong> Solicitar la restricción del uso de tus datos.</li>
+    <li><strong>Oposición:</strong> Oponerte al tratamiento para fines de marketing directo.</li>
+    <li><strong>Retirada del consentimiento:</strong> En cualquier momento, sin efecto retroactivo.</li>
   </ul>
+  <p>Responderemos en un plazo máximo de <strong>30 días</strong>. Si consideras que tus derechos no han sido atendidos, puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
 
-  <h2>11. Menores de Edad</h2>
-  <p>Nuestros servicios no están dirigidos a menores de 16 años. No recogemos conscientemente datos personales de menores sin el consentimiento verificable de sus padres o tutores legales. Si tienes conocimiento de que un menor nos ha proporcionado datos personales sin el consentimiento parental adecuado, te rogamos que nos lo comuniques a <a href="mailto:info@zonetechonline.com">info@zonetechonline.com</a> para proceder a su eliminación.</p>
+  <h2>6. Menores de edad</h2>
+  <p>Nuestros servicios no están dirigidos a menores de 16 años. Si eres padre/madre o tutor y crees que un menor ha proporcionado datos personales, contáctanos y los eliminaremos de inmediato.</p>
 
-  <h2>12. Modificaciones de esta Política</h2>
-  <p>ZoneTechOnline S.L. se reserva el derecho a modificar esta Política de Privacidad para adaptarla a cambios legislativos, jurisprudenciales o de negocio. Cualquier modificación relevante será comunicada mediante un aviso destacado en el sitio web o, cuando corresponda, mediante correo electrónico. La fecha de la última actualización siempre estará indicada al inicio de este documento.</p>
-  <p>Te recomendamos revisar esta política periódicamente. El uso continuado de nuestros servicios tras la publicación de cambios implica la aceptación de los mismos.</p>
+  <h2>7. Seguridad</h2>
+  <p>Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos contra el acceso no autorizado, pérdida o alteración: conexiones HTTPS/TLS, almacenamiento en servidores seguros y acceso restringido a los datos.</p>
 
+  <h2>8. Cambios en esta política</h2>
+  <p>Si realizamos cambios relevantes, te lo comunicaremos en el sitio web y, si procede, por email. Te recomendamos revisar esta página periódicamente.</p>
+
+  <nav class="lp-nav" aria-label="Otras páginas legales">
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="politica-cookies.html">Cookies</a>
+    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+    <a href="politica-envios.html">Política de Envíos</a>
+    <a href="politica-devoluciones.html">Devoluciones</a>
+  </nav>
 </main>
-
-<footer style="text-align:center;padding:32px 24px;border-top:1px solid rgba(255,255,255,.07);margin-top:60px;">
-  <p style="font-size:12px;color:#606080;">© 2026 ZoneTechOnline S.L. · <a href="politica-privacidad.html" style="color:#6366f1;">Privacidad</a> · <a href="politica-cookies.html" style="color:#6366f1;">Cookies</a> · <a href="aviso-legal.html" style="color:#6366f1;">Aviso Legal</a> · <a href="terminos-condiciones.html" style="color:#6366f1;">Términos</a> · <a href="index.html" style="color:#6366f1;">Volver a la tienda</a></p>
-</footer>
-</body></html>
+</body>
+</html>
