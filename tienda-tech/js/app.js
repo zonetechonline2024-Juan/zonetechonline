@@ -4059,78 +4059,165 @@ function initUserSession() {
 // ─── HERO SLIDER ─────────────────────────────────────────────────────────────
 
 function initSlider() {
-  var slides = document.querySelectorAll('.slide');
-  var dots = document.querySelectorAll('.slider-dot');
+  var slides   = document.querySelectorAll('.slide');
+  var dots     = document.querySelectorAll('.slider-dot');
   var progress = document.getElementById('slider-progress');
-  var prevBtn = document.getElementById('slider-prev');
-  var nextBtn = document.getElementById('slider-next');
+  var prevBtn  = document.getElementById('slider-prev');
+  var nextBtn  = document.getElementById('slider-next');
   if (!slides.length) return;
 
-  var current = 0;
-  var total = slides.length;
-  var duration = 7000;
-  var timer;
-  var progressTimer;
+  var current     = 0;
+  var total       = slides.length;
+  var DURATION    = 7000;
+  var ANIM_MS     = 750;
+  var timer       = null;
+  var isAnimating = false;
 
-  // Navbar tints per slide: purple, gold, teal
   var navTints = [
-    { bg: 'rgba(50,25,110,.58)',  border: 'rgba(99,102,241,.25)' },
-    { bg: 'rgba(80,42,4,.60)',    border: 'rgba(251,191,36,.22)' },
-    { bg: 'rgba(4,56,66,.60)',    border: 'rgba(45,212,191,.22)' }
+    { bg:'rgba(50,25,110,.58)',  border:'rgba(99,102,241,.25)' },
+    { bg:'rgba(80,42,4,.60)',    border:'rgba(251,191,36,.22)' },
+    { bg:'rgba(4,56,66,.60)',    border:'rgba(45,212,191,.22)' }
   ];
 
   function updateNavTint(idx) {
     var navbar = document.getElementById('navbar');
     if (!navbar || navbar.classList.contains('scrolled')) return;
-    navbar.style.setProperty('--nav-bg', navTints[idx].bg);
+    navbar.style.setProperty('--nav-bg',     navTints[idx].bg);
     navbar.style.setProperty('--nav-border', navTints[idx].border);
-    navbar.style.background = navTints[idx].bg;
+    navbar.style.background        = navTints[idx].bg;
     navbar.style.borderBottomColor = navTints[idx].border;
   }
 
-  function goTo(idx) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (idx + total) % total;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    updateNavTint(current);
-    startProgress();
+  // Load deferred YouTube iframes (data-src) on demand
+  function activateIframe(slide) {
+    var iframe = slide.querySelector('iframe[data-src]');
+    if (iframe && !iframe.getAttribute('src')) { iframe.src = iframe.dataset.src; }
+  }
+
+  // Place every slide at its offset position without animation
+  function initPositions() {
+    slides.forEach(function(slide, i) {
+      slide.style.transition    = 'none';
+      slide.style.transform     = 'translateX(' + ((i - current) * 100) + '%)';
+      slide.style.opacity       = (i === current) ? '1' : '0';
+      slide.style.pointerEvents = (i === current) ? 'all' : 'none';
+      if (i === current) slide.classList.add('active');
+      else               slide.classList.remove('active');
+    });
+  }
+
+  function goTo(idx, dir) {
+    if (isAnimating) return;
+    var next = ((idx % total) + total) % total;
+    if (next === current) return;
+    isAnimating = true;
+
+    if (dir === undefined) {
+      dir = next > current ? 1 : -1;
+      if (current === total - 1 && next === 0)         dir =  1;
+      if (current === 0         && next === total - 1) dir = -1;
+    }
+
+    var leaving  = current;
+    var entering = next;
+
+    activateIframe(slides[entering]);
+
+    // Snap entering slide to its off-screen start (no transition)
+    slides[entering].style.transition    = 'none';
+    slides[entering].style.transform     = 'translateX(' + (dir * 100) + '%)';
+    slides[entering].style.opacity       = '0';
+    slides[entering].style.pointerEvents = 'none';
+
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        var t = 'transform ' + ANIM_MS + 'ms cubic-bezier(0.4,0,0.2,1), opacity ' + ANIM_MS + 'ms ease';
+
+        slides[entering].style.transition = t;
+        slides[entering].style.transform  = 'translateX(0)';
+        slides[entering].style.opacity    = '1';
+
+        slides[leaving].style.transition  = t;
+        slides[leaving].style.transform   = 'translateX(' + (-dir * 100) + '%)';
+        slides[leaving].style.opacity     = '0';
+
+        if (dots[leaving])  dots[leaving].classList.remove('active');
+        if (dots[entering]) dots[entering].classList.add('active');
+        updateNavTint(entering);
+
+        setTimeout(function() {
+          slides[leaving].classList.remove('active');
+          slides[leaving].style.pointerEvents  = 'none';
+          slides[entering].classList.add('active');
+          slides[entering].style.pointerEvents = 'all';
+          current     = entering;
+          isAnimating = false;
+          startProgress();
+        }, ANIM_MS);
+      });
+    });
   }
 
   function startProgress() {
-    clearInterval(timer);
-    clearInterval(progressTimer);
+    clearTimeout(timer);
     if (progress) { progress.style.transition = 'none'; progress.style.width = '0%'; }
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
-        if (progress) { progress.style.transition = 'width ' + duration + 'ms linear'; progress.style.width = '100%'; }
+        if (progress) {
+          progress.style.transition = 'width ' + DURATION + 'ms linear';
+          progress.style.width      = '100%';
+        }
       });
     });
-    timer = setTimeout(function() { goTo(current + 1); }, duration);
+    timer = setTimeout(function() { goTo(current + 1, 1); }, DURATION);
   }
 
-  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
-  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+  // Buttons — stopPropagation prevents slide-content click interference
+  if (prevBtn) prevBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current - 1, -1); });
+  if (nextBtn) nextBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current + 1,  1); });
+
+  // Dots
   dots.forEach(function(dot) {
-    dot.addEventListener('click', function() { goTo(parseInt(dot.dataset.index)); });
+    dot.addEventListener('click', function(e) {
+      e.stopPropagation();
+      goTo(parseInt(dot.dataset.index, 10));
+    });
   });
 
-  // Pause on hover
-  var slider = document.getElementById('hero');
-  if (slider) {
-    slider.addEventListener('mouseenter', function() { clearTimeout(timer); clearInterval(progressTimer); });
-    slider.addEventListener('mouseleave', function() { startProgress(); });
+  // Keyboard arrow navigation
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('hero')) return;
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1, -1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1,  1); }
+  });
+
+  // Pause auto-advance on hover
+  var sliderEl = document.getElementById('hero');
+  if (sliderEl) {
+    sliderEl.addEventListener('mouseenter', function() {
+      clearTimeout(timer);
+      if (progress) progress.style.transition = 'none';
+    });
+    sliderEl.addEventListener('mouseleave', startProgress);
   }
 
-  // Touch swipe
-  var touchX = 0;
-  document.getElementById('hero').addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, {passive:true});
-  document.getElementById('hero').addEventListener('touchend', function(e) {
-    var diff = touchX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
-  }, {passive:true});
+  // Touch swipe (horizontal-primary, won't conflict with vertical scroll)
+  var touchX0 = 0, touchY0 = 0;
+  if (sliderEl) {
+    sliderEl.addEventListener('touchstart', function(e) {
+      touchX0 = e.touches[0].clientX;
+      touchY0 = e.touches[0].clientY;
+    }, { passive: true });
+    sliderEl.addEventListener('touchend', function(e) {
+      var dx = touchX0 - e.changedTouches[0].clientX;
+      var dy = touchY0 - e.changedTouches[0].clientY;
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+        dx > 0 ? goTo(current + 1, 1) : goTo(current - 1, -1);
+      }
+    }, { passive: true });
+  }
 
+  initPositions();
   updateNavTint(0);
   startProgress();
 }
