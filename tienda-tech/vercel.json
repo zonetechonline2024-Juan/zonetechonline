@@ -3,6 +3,14 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "zonetechonline.com" }],
+      "destination": "https://www.zonetechonline.com/$1",
+      "permanent": true
+    }
+  ],
   "functions": {
     "api/checkout.js": { "maxDuration": 15 },
     "api/review.js":   { "maxDuration": 10 }
