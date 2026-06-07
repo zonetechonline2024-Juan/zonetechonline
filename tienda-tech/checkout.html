@@ -429,34 +429,44 @@
       var payload = { items: items, email: email };
       if (discount > 0) payload.discountAmount = discount;
 
-      // Si estamos en localhost usar la URL absoluta de producción
+      // En localhost apuntar a producción directamente; en producción usar URL relativa
       var apiBase = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? 'https://zonetechonline.com'
         : '';
 
-      var res = await fetch(apiBase + '/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      var rawText = await res.text();
-      var data;
-      try {
-        data = rawText ? JSON.parse(rawText) : {};
-      } catch(_) {
-        throw new Error('Respuesta inesperada del servidor (HTTP ' + res.status + '). Recarga la página e inténtalo de nuevo.');
+      // Función de llamada a la API con 1 reintento automático
+      async function callAPI() {
+        var r = await fetch(apiBase + '/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        var text = await r.text();
+        var d = {};
+        try { d = text ? JSON.parse(text) : {}; } catch(_) {}
+        return { status: r.status, ok: r.ok, data: d, raw: text };
       }
 
-      if (!res.ok) {
-        throw new Error(data.error || 'Error del servidor (HTTP ' + res.status + '). Inténtalo de nuevo.');
+      var result = await callAPI();
+
+      // Si falla (no 200 y no hay url), esperar 1s y reintentar una vez
+      if (!result.ok && !result.data.url) {
+        document.getElementById('pay-btn-text').textContent = 'Reintentando...';
+        await new Promise(function(r){ setTimeout(r, 1200); });
+        result = await callAPI();
       }
 
-      if (data.url) {
+      if (!result.ok && !result.data.url) {
+        var msg = result.data.error
+          || (result.raw ? 'Error del servidor (HTTP ' + result.status + ')' : 'Sin respuesta del servidor');
+        throw new Error(msg + '. Recarga la página e inténtalo de nuevo.');
+      }
+
+      if (result.data.url) {
         document.getElementById('pay-btn-text').textContent = 'Redirigiendo a pago seguro...';
-        window.location.href = data.url;
+        window.location.href = result.data.url;
       } else {
-        throw new Error('No se recibió URL de pago. Inténtalo de nuevo.');
+        throw new Error('No se recibió URL de pago. Recarga la página e inténtalo de nuevo.');
       }
     } catch(err) {
       btn.disabled = false;
