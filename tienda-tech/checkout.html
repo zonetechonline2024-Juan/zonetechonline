@@ -430,11 +430,10 @@
       if (discount > 0) payload.discountAmount = discount;
       var payloadStr = JSON.stringify(payload);
 
-      // Intentar en orden: URL relativa → URL absoluta no-www → URL Vercel
+      // Intentar en orden: URL relativa → URL absoluta www (fallback)
       var apiEndpoints = [
         '/api/checkout',
-        'https://zonetechonline.com/api/checkout',
-        'https://zonetechonline.vercel.app/api/checkout'
+        'https://www.zonetechonline.com/api/checkout'
       ];
 
       async function tryEndpoint(url) {
