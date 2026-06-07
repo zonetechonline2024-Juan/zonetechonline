@@ -272,9 +272,11 @@ input{font-family:inherit;}
 .config-group{margin-bottom:22px;}
 .config-label{display:block;font-family:var(--font-head);font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:12px;text-transform:uppercase;letter-spacing:.08em;}
 .color-swatches{display:flex;gap:10px;flex-wrap:wrap;}
-.swatch{width:34px;height:34px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:var(--transition);}
-.swatch:hover{transform:scale(1.15);}
-.swatch.active{border-color:#fff;box-shadow:0 0 0 3px var(--accent);}
+.swatch{width:38px;height:38px;border-radius:50%;border:2.5px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.swatch:hover{transform:scale(1.18);}
+.swatch.active{border-color:rgba(255,255,255,.9);box-shadow:0 0 0 3.5px var(--accent);transform:scale(1.1);}
+@keyframes swatch-pop{0%{transform:scale(1.1);}35%{transform:scale(.88);}70%{transform:scale(1.2);}100%{transform:scale(1.1);}}
+.swatch.pop{animation:swatch-pop .32s cubic-bezier(.36,.07,.19,.97) both;}
 .material-options{display:flex;gap:10px;flex-wrap:wrap;}
 .material-btn{font-size:13px;font-weight:500;color:var(--text-2);padding:7px 16px;border-radius:100px;border:1.5px solid var(--border);transition:var(--transition);}
 .material-btn:hover{border-color:var(--accent);color:var(--accent);}
@@ -296,8 +298,14 @@ input{font-family:inherit;}
 .cfg-watch-aura{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.65) 0%,transparent 65%);filter:blur(38px);top:50%;left:50%;transform:translate(-50%,-50%);transition:background .55s ease;z-index:0;}
 .cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;}
 .cfg-watch-float::after{content:'';position:absolute;bottom:0;left:0;right:0;height:18%;background:linear-gradient(to bottom,transparent,var(--bg) 80%);pointer-events:none;z-index:2;}
-.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;transition:opacity .22s ease, filter .35s ease;}
+.cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;transition:opacity .22s ease;}
 .cfg-watch-real.cfg-img-fade{opacity:0;}
+@keyframes price-up{0%{opacity:0;transform:translateY(7px);}100%{opacity:1;transform:translateY(0);}}
+.config-price-value.price-animate{animation:price-up .26s ease forwards;}
+@keyframes badge-pulse{0%,100%{opacity:1;}45%{opacity:.55;}}
+.cfg-color-badge.badge-updated{animation:badge-pulse .32s ease;}
+@keyframes name-in{0%{opacity:0;transform:translateX(-6px);}100%{opacity:1;transform:translateX(0);}}
+.cfg-strap-name.name-updated{display:inline-block;animation:name-in .22s ease forwards;}
 @keyframes cfg-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
 .cfg-floating-chips{position:absolute;inset:0;pointer-events:none;z-index:2;}
 .cfg-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;background:rgba(8,8,20,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:7px 14px;font-size:12px;font-weight:600;color:white;white-space:nowrap;animation:chip-float 3.5s ease-in-out infinite;}
