@@ -3675,6 +3675,101 @@ PRODUCTS.push(
 
 );
 
+// ─── CMF BY NOTHING PRODUCTS (fuente: es.nothing.tech — datos junio 2026) ─
+PRODUCTS.push(
+
+  { id:157, name:'CMF by Nothing Buds 2a', brand:'CMF by Nothing', category:'auriculares',
+    price:39.95,
+    oldPrice: 49.95,
+    badge:'ANC 42dB · 35.5h · IP54',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0073_CMF-Buds-2a-case-orange.png?v=1753694874',
+    description:'CMF by Nothing Buds 2a: True Wireless con ANC híbrido hasta -42 dB, 35,5h de autonomía total, IP54, latencia gaming y app Nothing X. El TWS más accesible del ecosistema Nothing.',
+    specs:{
+      'Driver':      '10mm dinámico personalizado',
+      'ANC':         'Híbrido hasta -42dB · Modo Transparencia · Modo Viento',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '35,5h total (7h auriculares + 28,5h estuche)',
+      'Resistencia': 'IP54 (polvo + salpicaduras)',
+      'App':         'Nothing X (Android 6.0+ / iOS 13+)',
+      'Latencia':    'Modo gaming de baja latencia',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:158, name:'CMF by Nothing Buds 2', brand:'CMF by Nothing', category:'auriculares',
+    price:49.95,
+    oldPrice: 59.95,
+    badge:'ANC 48dB · 55h · IP55',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0077_CMF-Buds-2-case-lightgreen.png?v=1753694855',
+    description:'CMF by Nothing Buds 2: ANC híbrido hasta -48 dB, 55h de autonomía total, IP55, Modo Viento y app Nothing X. La mejor relación calidad-precio en TWS con cancelación activa de ruido.',
+    specs:{
+      'Driver':      '10mm dinámico personalizado',
+      'ANC':         'Híbrido hasta -48dB · Modo Transparencia · Modo Viento',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '55h total (11h auriculares + 44h estuche)',
+      'Resistencia': 'IP55 (polvo + chorro de agua)',
+      'App':         'Nothing X (Android 6.0+ / iOS 13+)',
+      'Peso':        '4,6g por auricular',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:159, name:'CMF by Nothing Buds 2 Plus', brand:'CMF by Nothing', category:'auriculares',
+    price:59.95,
+    oldPrice: 74.95,
+    badge:'ANC 50dB · LDAC · 61.5h · IP55',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0079_CMF-Buds-2-Plus-case-lightgrey.png?v=1753694836',
+    description:'CMF by Nothing Buds 2 Plus: ANC -50 dB, LDAC hasta 990 Kbps, Hi-Res Audio Wireless, 61,5h de batería total e IP55. El TWS más completo de CMF con audio de alta resolución.',
+    specs:{
+      'Driver':      '10mm dinámico personalizado',
+      'ANC':         'Híbrido hasta -50dB · Modo Transparencia · Modo Viento',
+      'Bluetooth':   '5.3 · LDAC (990 Kbps) · AAC · SBC',
+      'Batería':     '61,5h total (9h auriculares + 52,5h estuche)',
+      'Resistencia': 'IP55 (polvo + chorro de agua)',
+      'Audio':       'Hi-Res Audio Wireless certificado',
+      'App':         'Nothing X (Android 6.0+ / iOS 13+)',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:160, name:'CMF by Nothing Buds Pro 2', brand:'CMF by Nothing', category:'auriculares',
+    price:64.95,
+    oldPrice: 79.95,
+    badge:'ANC 50dB · 35.5h · Driver 11mm · IP54',
+    image:'https://cdn.sanity.io/images/gtd4w1cq/production/2f7f187714e728295aafbd50d57706a3a9869dd7-4096x2304.jpg',
+    description:'CMF by Nothing Buds Pro 2: driver de 11mm personalizado, ANC híbrido hasta -50 dB, 35,5h de autonomía total, IP54 y app Nothing X. El buds Pro con más potencia de cancelación de CMF.',
+    specs:{
+      'Driver':      '11mm dinámico personalizado (el mayor de CMF)',
+      'ANC':         'Híbrido hasta -50dB · Modo Transparencia · Modo Viento',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '35,5h total (7h auriculares + 28,5h estuche)',
+      'Resistencia': 'IP54 (polvo + salpicaduras)',
+      'App':         'Nothing X (Android 6.0+ / iOS 13+)',
+      'Latencia':    'Modo gaming de baja latencia',
+      'Fuente':      'es.nothing.tech'
+    }
+  },
+
+  { id:161, name:'CMF by Nothing Headphone Pro', brand:'CMF by Nothing', category:'auriculares',
+    price:99.00,
+    oldPrice: 119.00,
+    badge:'50h · ANC Over-Ear · Plegable · Nothing X',
+    image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/CMF_Headphone1-Light-Green.png?v=1758799951',
+    description:'CMF by Nothing Headphone Pro: auriculares over-ear circumaurales plegables con ANC activo, 50h de autonomía, carga rápida USB-C y app Nothing X. El salto a los cascos de diadema dentro del ecosistema CMF.',
+    specs:{
+      'Tipo':        'Over-ear circumaural plegable',
+      'ANC':         'Activo (~99% bloqueo de ruido) · Modo Transparencia',
+      'Bluetooth':   '5.3 · AAC · SBC',
+      'Batería':     '50h (ANC encendido) · Carga rápida USB-C',
+      'Resistencia': 'Sin certificación IP',
+      'Peso':        '240g',
+      'App':         'Nothing X (Android 6.0+ / iOS 13+)',
+      'Fuente':      'es.nothing.tech'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -5392,6 +5487,10 @@ function initAIAssistant() {
       return 'Gama <strong>Moondrop</strong> (5 productos Hi-Fi, desde €19,99): <strong>CHU</strong> (€19,99, IEM 1DD 10mm, 120dB) · <strong>QUARK2</strong> (€19,99, IEM 1BA) · <strong>CHU II</strong> (€22,99, IEM 2ª gen) · <strong>JIU</strong> (€24,99, IEM dinámico) · <strong>BLOCK TWS</strong> (€24,99, TWS+ANC, BT 5.3). Ingeniería Hi-Fi China de referencia mundial. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Moondrop">Ver Moondrop →</a>';
     }
 
+    if (/cmf|cmf by nothing|cmf buds|cmf headphone|nada buds/.test(ql)) {
+      return 'Gama <strong>CMF by Nothing</strong> (submarca asequible, 5 auriculares desde €39,95):<br>• <strong>Buds 2a</strong> — €39,95 — ANC -42dB · 35,5h · IP54 · BT5.3<br>• <strong>Buds 2</strong> — €49,95 — ANC -48dB · 55h · IP55 · Modo Viento<br>• <strong>Buds 2 Plus</strong> — €59,95 — ANC -50dB · <strong>LDAC 990 Kbps</strong> · 61,5h · IP55 · Hi-Res<br>• <strong>Buds Pro 2</strong> — €64,95 — ANC -50dB · Driver 11mm · 35,5h · IP54<br>• <strong>Headphone Pro</strong> — €99 — Over-ear · ANC · 50h · plegable · USB-C<br>Todos con app <strong>Nothing X</strong>. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=CMF%20by%20Nothing">Ver CMF →</a>';
+    }
+
     if (/nothing|ear.*a\b|ear \(a\)|ear \(3\)|ear3|nada phone/.test(ql)) {
       return 'Gama <strong>Nothing</strong> (5 auriculares, desde €69): <strong>Ear (a) Yellow</strong> (€69, ANC -42dB, 22,5h) · <strong>Ear (a) White</strong> (€69) · <strong>Ear (a) Black</strong> (€69) · <strong>Ear Black</strong> (€89, LDAC, 40h, ANC -45dB) · <strong>Ear (3) Black</strong> (€149, Hi-Res Audio Wireless, driver planar). Todos con ChatGPT integrado e IP55. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Nothing">Ver Nothing →</a>';
     }
@@ -5409,7 +5508,7 @@ function initAIAssistant() {
     }
 
     if (/auricular|tws|earbuds|sonido|m[uú]sica|cascos/.test(ql)) {
-      return 'Tenemos <strong>30 auriculares premium</strong> de 6 marcas: <strong>Moondrop</strong> (5 desde €19,99: IEM Hi-Fi y TWS), <strong>Nothing</strong> (5 desde €69: Ear a, Ear, Ear 3), <strong>Shokz</strong> (5 desde €69: conducción ósea y open-ear), <strong>Sony</strong> (5 desde €39,99), <strong>Sennheiser</strong> (5 desde €99,90) y <strong>Google Pixel Buds</strong> (5 desde €119). ANC, LDAC, Hi-Res, open-ear y Hi-Fi con cable. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
+      return 'Tenemos <strong>35 auriculares premium</strong> de 7 marcas: <strong>Moondrop</strong> (5 desde €19,99: IEM Hi-Fi y TWS), <strong>Nothing</strong> (5 desde €69: Ear a, Ear, Ear 3 + ChatGPT), <strong>CMF by Nothing</strong> (5 desde €39,95: ANC hasta -50dB, LDAC), <strong>Shokz</strong> (5 desde €69: conducción ósea y open-ear), <strong>Sony</strong> (5 desde €39,99), <strong>Sennheiser</strong> (5 desde €99,90) y <strong>Google Pixel Buds</strong> (5 desde €119). <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver todos los auriculares →</a>';
     }
 
     if (/amazfit|bip|active|helio|balance|gtr|gts/.test(ql)) {
@@ -5509,10 +5608,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 156 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>35 auriculares</strong> (7 marcas: + CMF by Nothing), <strong>35 gafas</strong> y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 161 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>156 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech desde €49,99). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>161 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 35 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, CMF by Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech). <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -5544,7 +5643,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 156 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>35 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 161 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
