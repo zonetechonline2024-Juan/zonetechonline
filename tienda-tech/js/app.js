@@ -3150,6 +3150,210 @@ PRODUCTS.push(
 
 );
 
+// ─── ALTAVOCES MARSHALL + EDIFIER (IDs 137–146) ──────────────────────────────
+// Fuente: marshall.com/es-es (CDN Contentful) + edifier.com/es (CDN Shopify)
+// Scraping: junio 2026 · script scrape-depau-marshall-edifier.js
+// Depau.es no distribuye Marshall ni Edifier → protocolo fuente oficial
+// Ordenados por precio ascendente dentro de cada marca
+PRODUCTS.push(
+
+  // ── Marshall Willen II Black and Brass ───────────────────────────────────
+  { id:137, name:'Marshall Willen II Black and Brass', brand:'Marshall', category:'altavoces',
+    price:119.00,
+    badge:'10W · IP67 · 17h · BT 5.3',
+    image:'https://images.ctfassets.net/javen7msabdh/64p3oStsWhiiMKa5EZZ7ck/5a834629dd5f778ef19b71e9fbde9cb8/willen-ii-black-and-brass-front-desktop.jpeg',
+    description:'El altavoz portátil más compacto de Marshall. 10W RMS con el inconfundible diseño rock, Bluetooth 5.3 de largo alcance (100m), resistencia IP67 sumergible y hasta 17 horas de batería. Carga rápida: 20 min = 5,5 h de música. Micrófono integrado para llamadas.',
+    specs:{
+      'Potencia RMS':         '10W (Class D)',
+      'Respuesta frecuencia': '75 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.3 LE · alcance 100m',
+      'Resistencia':          'IP67 — sumergible hasta 1m/30min',
+      'Batería':              '17+ horas · carga rápida 20min→5,5h',
+      'Micrófono':            'Sí — manos libres',
+      'Peso':                 '360g',
+      'Dimensiones':          '100,5 × 100,5 × 43,4 mm',
+      'Fuente':               'marshall.com/es-es — CDN verificado'
+    }
+  },
+
+  // ── Marshall Emberton III Black and Brass ────────────────────────────────
+  { id:138, name:'Marshall Emberton III Black and Brass', brand:'Marshall', category:'altavoces',
+    price:149.00,
+    badge:'38W · IP67 · 32h · BT 5.3 · 360°',
+    image:'https://images.ctfassets.net/javen7msabdh/Fttl4DrU7xxpEqrPBRiRB/58175527eaf6b1c3a114bfd04e5bbc9b/emberton-iii-blackandbrass-front-desktop.jpeg',
+    description:'El best-seller de Marshall redefinido. 38W RMS de potencia real (2×19W) con sonido 360° envolvente. IP67 sumergible, Bluetooth 5.3 a 100m y récord de batería: 32+ horas. Carga rápida aporta 6 horas en solo 20 minutos. Rejilla metálica y acabado Black and Brass icónico.',
+    specs:{
+      'Potencia RMS':         '38W (2×19W Class D)',
+      'Respuesta frecuencia': '65 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.3 LE · alcance 100m',
+      'Resistencia':          'IP67 — sumergible hasta 1m/30min',
+      'Batería':              '32+ horas · carga rápida 20min→6h',
+      'SPL máx':              '90 dB @ 1m',
+      'Micrófono':            'Sí — manos libres',
+      'Peso':                 '670g',
+      'Dimensiones':          '160 × 68 × 76,9 mm',
+      'Fuente':               'marshall.com/es-es — CDN verificado'
+    }
+  },
+
+  // ── Marshall Stockwell II Black and Brass ────────────────────────────────
+  { id:139, name:'Marshall Stockwell II Black and Brass', brand:'Marshall', category:'altavoces',
+    price:189.00,
+    badge:'60W · IPX4 · 20h · 2.1 estéreo · Asa cuero',
+    image:'https://images.ctfassets.net/javen7msabdh/64OGfz8TZlKfEN5YPVFCkF/0e2dc03e11f1bfb9f85ab56f4e30b0b4/stockwell-ii-front-desktop-1.jpeg',
+    description:'60W de potencia 2.1 (subwoofer 30W + 2 tweeters 15W) en formato portátil con asa de cuero. IPX4 resistente a salpicaduras, Bluetooth 5.0, 20 horas de batería y entrada jack 3,5mm. El altavoz de alto rendimiento Marshall para llevar a cualquier espacio.',
+    specs:{
+      'Potencia RMS':         '60W total (sub 30W + 2×15W tweeter)',
+      'Respuesta frecuencia': '60 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.0 · Jack 3,5mm AUX',
+      'Resistencia':          'IPX4 — resistente a salpicaduras',
+      'Batería':              '20+ horas · carga rápida 20min→6h',
+      'Asa':                  'Cuero genuino',
+      'Peso':                 '1,38 kg',
+      'Dimensiones':          '161 × 180 × 70 mm',
+      'Fuente':               'marshall.com/es-es — CDN verificado'
+    }
+  },
+
+  // ── Marshall Acton III Black ─────────────────────────────────────────────
+  { id:140, name:'Marshall Acton III Black', brand:'Marshall', category:'altavoces',
+    price:249.00,
+    badge:'60W · BT 5.2 · Estantería · Controles analógicos',
+    image:'https://images.ctfassets.net/javen7msabdh/2fAsrrgSUJsQwe7LKUphdO/0fd22fbd4cd8c83553d784505d15fde1/acton-iii-black-plp.jpeg',
+    description:'El altavoz de estantería más icónico de Marshall. 60W (2.1: woofer 30W + 2×15W tweeter), Bluetooth 5.2 con LE Audio y entrada jack 3,5mm. Controles analógicos de volumen, bajos y agudos. Un mueble de audio con alma de rock.',
+    specs:{
+      'Potencia RMS':         '60W total (woofer 30W + 2×15W tweeter)',
+      'Respuesta frecuencia': '45 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.2 (LE Audio ready) · Jack 3,5mm',
+      'Alimentación':         'Red eléctrica (sin batería)',
+      'Controles':            'Analógicos — volumen, bajos, agudos',
+      'SPL máx':              '95 dB @ 1m',
+      'Peso':                 '2,85 kg',
+      'Dimensiones':          '260 × 170 × 150 mm',
+      'Fuente':               'marshall.com/es-es — CDN verificado'
+    }
+  },
+
+  // ── Marshall Stanmore III Black ──────────────────────────────────────────
+  { id:141, name:'Marshall Stanmore III Black', brand:'Marshall', category:'altavoces',
+    price:349.00,
+    badge:'80W · BT 5.2 · Estantería · RCA + Jack · 97dB',
+    image:'https://images.ctfassets.net/javen7msabdh/5LOAFWVpiW6lzYx5Kva89z/16046df6b06376f322bc253117ad4977/stanmore_iii-front-desktop-1.jpeg',
+    description:'La joya de la corona de Marshall. 80W RMS (woofer 50W + 2×15W tweeter), Bluetooth 5.2, entradas jack 3,5mm y RCA estéreo. Controles analógicos con perillas de bronce y 97dB SPL máximo. El icono del rock en tu salón.',
+    specs:{
+      'Potencia RMS':         '80W total (woofer 50W + 2×15W tweeter)',
+      'Respuesta frecuencia': '45 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.2 (LE Audio ready) · Jack 3,5mm · RCA estéreo',
+      'Alimentación':         '100–240V AC (sin batería)',
+      'Controles':            'Analógicos — volumen, bajos, agudos con perillas doradas',
+      'SPL máx':              '97 dB @ 1m',
+      'Peso':                 '4,25 kg',
+      'Dimensiones':          '350 × 203 × 188 mm',
+      'Fuente':               'marshall.com/es-es — CDN verificado'
+    }
+  },
+
+  // ── Edifier R1280DB Black ────────────────────────────────────────────────
+  { id:142, name:'Edifier R1280DB Black', brand:'Edifier', category:'altavoces',
+    price:119.99,
+    badge:'42W · BT 5.1 · Óptica · Coaxial · Mando IR',
+    image:'https://edifier-online.com/cdn/shop/files/edifier-r1280db-black-2_924d95ae-99a6-4e7a-afd2-b78b4f0d6894.png?v=1775725999&width=800',
+    description:'El altavoz de estantería más vendido de Edifier. 42W RMS (2×21W), tweeter silk dome de 13mm y woofer de 4" con bass reflex. Conectividad completa: Bluetooth 5.1, óptica, coaxial y 2×RCA. Mando a distancia IR incluido. El punto de entrada perfecto al audio de calidad.',
+    specs:{
+      'Potencia RMS':         '42W total (2×21W)',
+      'Respuesta frecuencia': '55 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.1 · Óptica · Coaxial · 2×RCA',
+      'Tweeter':              '13mm silk dome',
+      'Woofer':               '4" (116mm) bass reflex',
+      'SNR':                  '≥85 dB(A)',
+      'Mando':                'IR incluido',
+      'Peso':                 '4,9 kg (pareja)',
+      'Dimensiones':          '146 × 234 × 196 mm',
+      'Fuente':               'edifier.com/es + edifier-online.com — CDN verificado'
+    }
+  },
+
+  // ── Edifier R1280DBs Black ───────────────────────────────────────────────
+  { id:143, name:'Edifier R1280DBs Black', brand:'Edifier', category:'altavoces',
+    price:139.99,
+    badge:'42W · BT 5.0 · Salida subwoofer · Bass reflex frontal',
+    image:'https://us.edifier.com/cdn/shop/files/R1280DBs-Brown-1.jpg?v=1761712444&width=800',
+    description:'Evolución del R1280DB con salida dedicada para subwoofer externo y crossover automático. Puerto de bass reflex frontal para mayor impacto de graves sin espacio libre detrás. Bluetooth 5.0, óptica, coaxial y doble RCA. El upgrade ideal para los que quieren más bajos.',
+    specs:{
+      'Potencia RMS':         '42W total (2×21W)',
+      'Respuesta frecuencia': '51 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.0 · Óptica · Coaxial · 2×RCA',
+      'Salida subwoofer':     'Sí — crossover automático',
+      'Bass reflex':          'Frontal',
+      'SNR':                  '≥85 dB(A)',
+      'Peso':                 '4,9 kg (pareja)',
+      'Dimensiones':          '146 × 234 × 196 mm',
+      'Fuente':               'edifier.com/es + us.edifier.com — CDN verificado'
+    }
+  },
+
+  // ── Edifier R1700BT Brown ────────────────────────────────────────────────
+  { id:144, name:'Edifier R1700BT Brown', brand:'Edifier', category:'altavoces',
+    price:149.99,
+    badge:'66W · BT 5.1 · Nearfield 10° · Eagle Eye tweeter',
+    image:'https://us.edifier.com/cdn/shop/files/R1700BT-Brown-7.jpg?v=1761635845&width=800',
+    description:'Monitor activo con diseño nearfield inclinado 10° para escucha en escritorio. 66W RMS con el tweeter "Eagle Eye" de 19mm silk dome. Bluetooth 5.1, doble RCA y AUX 3,5mm. El favorito de productores y audiofílos de escritorio.',
+    specs:{
+      'Potencia RMS':         '66W total (4×18W woofer + 4×15W tweeter)',
+      'Respuesta frecuencia': '60 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.1 · 2×RCA · AUX 3,5mm',
+      'Tweeter':              '19mm silk dome "Eagle Eye"',
+      'Woofer':               '4" (102mm) bass reflex',
+      'Inclinación':          '10° (diseño nearfield)',
+      'SNR':                  '≥85 dB(A)',
+      'Peso':                 '6,6 kg (pareja)',
+      'Dimensiones activo':   '154 × 254 × 214 mm',
+      'Fuente':               'edifier.com/es + us.edifier.com — CDN verificado'
+    }
+  },
+
+  // ── Edifier R2000DB Brown ────────────────────────────────────────────────
+  { id:145, name:'Edifier R2000DB Brown', brand:'Edifier', category:'altavoces',
+    price:259.99,
+    badge:'120W · BT 5.1 · Hi-Fi · Tweeter 25mm · Mando IR',
+    image:'https://us.edifier.com/cdn/shop/files/R2000DB-Brown-3.jpg?v=1763441435&width=800',
+    description:'El altavoz de estantería Hi-Fi de alta potencia de Edifier. 120W RMS con tweeter "Eagle Eye" de 25mm y dos drivers de 5" por canal. Bluetooth 5.1 con aptX, óptica, coaxial y doble RCA. Mando a distancia IR. El salto cualitativo definitivo.',
+    specs:{
+      'Potencia RMS':         '120W total (2×36W woofer + 2×24W tweeter)',
+      'Respuesta frecuencia': '50 Hz – 20 kHz',
+      'Conectividad':         'Bluetooth 5.1 · Óptica · Coaxial · 2×RCA',
+      'Tweeter':              '25mm silk dome "Eagle Eye"',
+      'Woofer':               '2 × drivers 5" por canal',
+      'SNR':                  '≥85 dB(A)',
+      'Mando':                'IR incluido',
+      'Peso':                 '9,72 kg (pareja)',
+      'Dimensiones':          '174 × 289 × 252 mm',
+      'Fuente':               'edifier.com/es + us.edifier.com — CDN verificado'
+    }
+  },
+
+  // ── Edifier S1000MKII Brown ──────────────────────────────────────────────
+  { id:146, name:'Edifier S1000MKII Brown', brand:'Edifier', category:'altavoces',
+    price:373.99,
+    badge:'120W · BT 5.0 aptX HD · Hi-Res Audio · Titanio + Aluminio',
+    image:'https://us.edifier.com/cdn/shop/files/S1000MKII-Brown-12.jpg?crop=center&height=1024&v=1762422696&width=1024',
+    description:'El altavoz Hi-Res Audio certificado de Edifier. 120W RMS con woofer de 5,5" en aluminio y tweeter de 1" en titanio, respuesta hasta 40kHz. Bluetooth 5.0 aptX HD para streaming a 24-bit/48kHz. Certificado Hi-Res Audio (24-bit/192kHz). El sonido de estudio en tu habitación.',
+    specs:{
+      'Potencia RMS':         '120W total (2×35W woofer + 2×25W tweeter)',
+      'Respuesta frecuencia': '45 Hz – 40 kHz',
+      'Conectividad':         'Bluetooth 5.0 aptX HD · Óptica · Coaxial · 2×RCA',
+      'Tweeter':              '1" titanio',
+      'Woofer':               '5,5" aluminio',
+      'Certificación':        'Hi-Res Audio (24-bit/192kHz)',
+      'SNR':                  '≥90 dB(A)',
+      'Peso':                 '16,7 kg (pareja)',
+      'Dimensiones':          '205 × 343 × 276 mm',
+      'Fuente':               'edifier.com/es + us.edifier.com — CDN verificado'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -4955,8 +5159,8 @@ function initAIAssistant() {
       return 'Tenemos <strong>26 anillos inteligentes</strong> de 7 marcas: <strong>Amazfit Helio Ring</strong> (€169,90, sin suscripción) · <strong>Movano Evie Ring</strong> (3 colores, €249, salud femenina) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, ECG) · <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
-    if (/altavoz|altavoces|speaker|sonos|jbl|audio inteligente|bocina|bluetooth.*casa|casa.*bluetooth|wi.?fi.*sonido|sonido.*wifi/.test(ql)) {
-      return 'Tenemos <strong>10 altavoces inteligentes</strong> de 2 marcas premium:<br><br>🔊 <strong>JBL</strong> (5 modelos desde Depau, IP67, todos con Auracast): <strong>GO 5</strong> €49,99 · <strong>Clip 5</strong> €64,99 · <strong>Flip 6</strong> €99,99 · <strong>Flip 7</strong> €129,99 · <strong>Charge 6</strong> €169,99 (+ PowerBank USB-A, 24h batería)<br><br>🔊 <strong>Sonos</strong> (5 modelos, Wi-Fi+BT, Dolby Atmos, Alexa+Google): <strong>Era 100 Shadow Black</strong> €179 · <strong>Roam 2</strong> €199 (portátil IP67, 10h) · <strong>Era 100 White</strong> €229 · <strong>Era 300</strong> €399 (Spatial Audio 360°) · <strong>Move 2</strong> €499 (IP56, 24h, casa+exterior)<br><br>¿Buscas portátil o para casa? ¿Con asistente de voz integrado? <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver todos los altavoces →</a>';
+    if (/altavoz|altavoces|speaker|sonos|jbl|marshall|edifier|audio inteligente|bocina|bluetooth.*casa|casa.*bluetooth|wi.?fi.*sonido|sonido.*wifi|estan.?er[ií]a|bookshelf/.test(ql)) {
+      return 'Tenemos <strong>20 altavoces</strong> de 4 marcas premium:<br><br>🎸 <strong>Marshall</strong> (5 modelos, desde marshall.com): <strong>Willen II</strong> €119 (10W·IP67·17h) · <strong>Emberton III</strong> €149 (38W·IP67·32h) · <strong>Stockwell II</strong> €189 (60W·IPX4·20h) · <strong>Acton III</strong> €249 (60W·estantería·BT5.2) · <strong>Stanmore III</strong> €349 (80W·estantería·RCA)<br><br>🎵 <strong>Edifier</strong> (5 modelos, Hi-Fi de estantería): <strong>R1280DB</strong> €119,99 (42W·BT5.1·Óptica) · <strong>R1280DBs</strong> €139,99 (+salida sub) · <strong>R1700BT</strong> €149,99 (66W·nearfield) · <strong>R2000DB</strong> €259,99 (120W) · <strong>S1000MKII</strong> €373,99 (aptX HD·Hi-Res)<br><br>🔊 <strong>JBL</strong> (5 portátiles IP67, BT5.x): desde €49,99 — GO 5 · Clip 5 · Flip 6/7 · Charge 6<br>🔊 <strong>Sonos</strong> (5 smart speakers Wi-Fi): desde €179 — Era 100 · Roam 2 · Era 300 · Move 2<br><br><a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver todos los altavoces →</a>';
     }
 
     if (/sonos era|era 100|era 300|roam 2|sonos move|move 2/.test(ql)) {
@@ -4967,11 +5171,19 @@ function initAIAssistant() {
       return '🔊 Gama <strong>JBL</strong> disponible (5 modelos de Depau, todos IP67 y Bluetooth 5.x):<br>• <strong>GO 5 Negro</strong> — €49,99 — 4,8W · 5h batería · 184g<br>• <strong>Clip 5 Negro</strong> — €64,99 — 7W · 12h · clip mosquetón<br>• <strong>Flip 6 Negro</strong> — €99,99 — 30W · 12h · PartyBoost<br>• <strong>Flip 7 Blanco</strong> — €129,99 — 35W · 12h · Auracast<br>• <strong>Charge 6 Negro</strong> — €169,99 — 45W · 24h · PowerBank USB-A<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=JBL">Ver JBL →</a>';
     }
 
-    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz inteligente</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>10 altavoces</strong> (JBL + Sonos) — 136 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    if (/marshall willen|marshall emberton|marshall stockwell|marshall acton|marshall stanmore|altavoz.*marshall|marshall.*altavoz|marshall.*portátil|portátil.*marshall/.test(ql)) {
+      return '🎸 Gama <strong>Marshall</strong> disponible (5 modelos, desde marshall.com/es-es):<br>• <strong>Willen II Black and Brass</strong> — €119 — 10W · IP67 · 17h · BT 5.3 · 360g<br>• <strong>Emberton III Black and Brass</strong> — €149 — 38W · IP67 · 32h · BT 5.3 · best-seller<br>• <strong>Stockwell II Black and Brass</strong> — €189 — 60W · IPX4 · 20h · 2.1 · asa cuero<br>• <strong>Acton III Black</strong> — €249 — 60W · BT 5.2 · estantería · controles analógicos<br>• <strong>Stanmore III Black</strong> — €349 — 80W · BT 5.2 · RCA + Jack · 97dB SPL<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Marshall">Ver Marshall →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>136 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>10 altavoces inteligentes</strong> (JBL desde €49,99 · Sonos desde €179). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/edifier r1280|edifier r1700|edifier r2000|edifier s1000|altavoz.*edifier|edifier.*altavoz|hifi|hi.fi|monitor.*escritorio|escritorio.*monitor/.test(ql)) {
+      return '🎵 Gama <strong>Edifier</strong> disponible (5 modelos de estantería Hi-Fi, desde edifier.com/es):<br>• <strong>R1280DB Black</strong> — €119,99 — 42W · BT5.1 · Óptica · Coaxial · Mando IR<br>• <strong>R1280DBs Black</strong> — €139,99 — 42W · BT5.0 · Salida subwoofer · Bass reflex frontal<br>• <strong>R1700BT Brown</strong> — €149,99 — 66W · BT5.1 · Nearfield 10° · Eagle Eye tweeter<br>• <strong>R2000DB Brown</strong> — €259,99 — 120W · BT5.1 · aptX · Tweeter 25mm<br>• <strong>S1000MKII Brown</strong> — €373,99 — 120W · BT5.0 aptX HD · Hi-Res Audio certificado<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Edifier">Ver Edifier →</a>';
+    }
+
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos) — 146 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos <strong>146 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos desde €49,99). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -5003,7 +5215,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>10 altavoces inteligentes</strong> (JBL + Sonos) — 136 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos) — 146 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
