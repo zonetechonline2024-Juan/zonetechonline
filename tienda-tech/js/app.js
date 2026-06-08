@@ -1,4 +1,4 @@
-﻿// ZoneTechOnline — Premium Tech Wearables
+// ZoneTechOnline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -3354,6 +3354,223 @@ PRODUCTS.push(
 
 );
 
+// ─── ALTAVOCES AUDIO PRO + LOGITECH (IDs 147–156) ────────────────────────────
+// Fuente: audiopro.com (CDN Shopify · 200 OK verificado) + pccomponentes.com (Logitech)
+// Scraping: junio 2026 · script scrape-depau-audiopro-logitech.js
+// Depau.es no distribuye Audio Pro ni la gama Z de altavoces Logitech
+PRODUCTS.push(
+
+  // ── Audio Pro Addon C5 MkII W ────────────────────────────────────────────
+  { id:147, name:'Audio Pro Addon C5 MkII W', brand:'Audio Pro', category:'altavoces',
+    price:299.00,
+    badge:'41W · AirPlay 2 · Google Cast · Spotify Connect · Wi-Fi+BT',
+    image:'https://audiopro.com/cdn/shop/files/Hero-wireless-multiroom-speaker-C5MkII-W-black-lifestyle02-airplay2-google-cast-chromecast-AudioPro.jpg?v=1758700369&width=800',
+    description:'Altavoz multiroom compacto con todo el ecosistema de streaming. 41W RMS (2×8W tweeter + 25W woofer), Wi-Fi 802.11 b/g/n/ac dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Streaming hasta 24bit/96kHz. Entradas LINE IN (RCA) y salida SUB OUT. Ideal para habitación o escritorio premium.',
+    specs:{
+      'Potencia RMS':         '41W total (2×8W tweeter + 25W woofer)',
+      'Respuesta frecuencia': '50 Hz – 22 kHz',
+      'Wi-Fi':                '802.11 b/g/n/ac · 2,4 y 5 GHz',
+      'Bluetooth':            '4.2',
+      'AirPlay 2':            'Sí',
+      'Google Cast':          'Sí',
+      'Spotify Connect':      'Sí',
+      'Streaming calidad':    'Hasta 24bit/96kHz',
+      'Entradas':             'LINE IN (RCA) · SUB OUT',
+      'Batería':              'No (alimentación red)',
+      'Peso':                 '2,4 kg',
+      'Dimensiones':          '130 × 250 × 150 mm',
+      'Fuente':               'audiopro.com — CDN verificado'
+    }
+  },
+
+  // ── Audio Pro Drumfire II Black ──────────────────────────────────────────
+  { id:148, name:'Audio Pro Drumfire II Black', brand:'Audio Pro', category:'altavoces',
+    price:385.00,
+    badge:'300W · AirPlay 2 · Tidal Connect · Qobuz · Wi-Fi+BT · Floor-standing',
+    image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-Drumfire-II-black-airplay2-google-cast-chromecast-AudioPro_1.png?v=1751551482&width=800',
+    description:'Altavoz floor-standing inalámbrico de alta potencia. ~300W RMS con configuración 2.1 interna (sub 8" + 2×woofer 4,5" + 2×tweeter 1"). Wi-Fi, Bluetooth 4.2, AirPlay 2, Google Cast, Tidal Connect, Qobuz y Amazon Music. Diseño plegable que revela el subwoofer frontal. El centro de audio de cualquier salón.',
+    specs:{
+      'Potencia RMS':         '~300W total (sub 200W + 2×20W woofer + 2×20W tweeter)',
+      'Respuesta frecuencia': '30 Hz – 22 kHz (sub: 30–120 Hz)',
+      'Wi-Fi':                '802.11 b/g/n/ac · 2,4 y 5 GHz',
+      'Bluetooth':            '4.2',
+      'AirPlay 2':            'Sí',
+      'Google Cast':          'Sí',
+      'Spotify Connect':      'Sí',
+      'Tidal Connect':        'Sí',
+      'Qobuz / Amazon Music': 'Sí',
+      'Drivers':              'Sub 8" + 2× woofer 4,5" + 2× tweeter 1"',
+      'Batería':              'No (alimentación red)',
+      'Peso':                 '16,6 kg',
+      'Dimensiones':          '155 × 365 × 190 mm (cerrado)',
+      'Fuente':               'audiopro.com — CDN verificado'
+    }
+  },
+
+  // ── Audio Pro Addon C10 MkII W ───────────────────────────────────────────
+  { id:149, name:'Audio Pro Addon C10 MkII W', brand:'Audio Pro', category:'altavoces',
+    price:399.00,
+    badge:'80W · AirPlay 2 · Google Cast · Spotify Connect · Wi-Fi+BT · 45Hz',
+    image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-black_1_8e1ce5f3-2eba-4ef7-a66f-d1ee29c5db1b.png?v=1759126923&width=800',
+    description:'La evolución del altavoz multiroom de estantería Audio Pro. 80W RMS (2×20W tweeter + 40W woofer), respuesta 45Hz–22kHz, Wi-Fi dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Streaming hasta 24bit/96kHz. Entradas LINE IN y salida SUB OUT para expandir el sistema con un subwoofer.',
+    specs:{
+      'Potencia RMS':         '80W total (2×20W tweeter + 40W woofer)',
+      'Respuesta frecuencia': '45 Hz – 22 kHz (±6 dB)',
+      'Wi-Fi':                '802.11 b/g/n/ac · 2,4 y 5 GHz',
+      'Bluetooth':            '4.2',
+      'AirPlay 2':            'Sí',
+      'Google Cast':          'Sí',
+      'Spotify Connect':      'Sí',
+      'Streaming calidad':    'Hasta 24bit/96kHz',
+      'Entradas':             'LINE IN (RCA) · SUB OUT',
+      'Batería':              'No (alimentación red)',
+      'Peso':                 '4,2 kg',
+      'Dimensiones':          '165 × 320 × 185 mm',
+      'Fuente':               'audiopro.com — CDN verificado'
+    }
+  },
+
+  // ── Audio Pro A15 W Black ────────────────────────────────────────────────
+  { id:150, name:'Audio Pro A15 W Black', brand:'Audio Pro', category:'altavoces',
+    price:399.00,
+    badge:'40W · AirPlay 2 · Spotify Connect · Wi-Fi+BT · 19h · IPX2 · Portátil',
+    image:'https://audiopro.com/cdn/shop/files/wireless-portable-multiroom-speaker-A15-black-airplay2-google-cast-chromecast-AudioPro_1.png?v=1759212245&width=800',
+    description:'Altavoz multiroom portátil con la conectividad completa de Audio Pro. 40W RMS, Wi-Fi dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Batería para 19 horas de reproducción, resistencia IPX2 (lluvia ligera) y entrada AUX 3,5mm. Lleva tu ecosistema multiroom a cualquier habitación sin cables.',
+    specs:{
+      'Potencia RMS':         '40W total (10W tweeter + 30W woofer)',
+      'Wi-Fi':                '802.11 b/g/n/ac · 2,4 y 5 GHz',
+      'Bluetooth':            '4.2',
+      'AirPlay 2':            'Sí',
+      'Google Cast':          'Sí',
+      'Spotify Connect':      'Sí',
+      'Batería / Autonomía':  '19 horas de reproducción',
+      'Resistencia':          'IPX2 (resistente a lluvia ligera)',
+      'Entrada':              'AUX 3,5mm',
+      'Peso':                 '3,4 kg',
+      'Dimensiones':          '206 × 286 × 137 mm',
+      'Fuente':               'audiopro.com — CDN verificado'
+    }
+  },
+
+  // ── Audio Pro C20 W Black ────────────────────────────────────────────────
+  { id:151, name:'Audio Pro C20 W Black', brand:'Audio Pro', category:'altavoces',
+    price:549.00,
+    badge:'190W · AirPlay 2 · HDMI ARC · PHONO · Wi-Fi+BT 5.0 · Hi-Res',
+    image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C20W-airplay2-google-cast-chromecast-AudioPro-black_1.png?v=1755610690&width=800',
+    description:'El altavoz de sala de estar definitivo de Audio Pro. 190W RMS (2×30W tweeter + 130W woofer 6,5"), Bluetooth 5.0, Wi-Fi, AirPlay 2, Google Cast y Spotify Connect. Entradas: LINE IN, PHONO con preamp RIAA para tocadiscos, Óptica y HDMI ARC para TV. Streaming hasta 24bit/192kHz.',
+    specs:{
+      'Potencia RMS':         '190W total (2×30W tweeter + 130W woofer)',
+      'Respuesta frecuencia': '42 Hz – 22 kHz (±6 dB)',
+      'Wi-Fi':                '802.11 b/g/n/ac · 2,4 y 5 GHz',
+      'Bluetooth':            '5.0',
+      'AirPlay 2':            'Sí',
+      'Google Cast':          'Sí',
+      'Spotify Connect':      'Sí',
+      'Streaming calidad':    'Hasta 24bit/192kHz',
+      'Entradas':             'LINE IN (RCA) · PHONO (preamp RIAA) · Óptica · HDMI ARC',
+      'Woofer':               '6,5"',
+      'Batería':              'No (alimentación red)',
+      'Peso':                 '6,2 kg',
+      'Dimensiones':          '196 × 410 × 220 mm',
+      'Fuente':               'audiopro.com — CDN verificado'
+    }
+  },
+
+  // ── Logitech Z150 ────────────────────────────────────────────────────────
+  { id:152, name:'Logitech Z150 Multimedia Speakers', brand:'Logitech', category:'altavoces',
+    price:27.00,
+    badge:'~3W · 2.0 · Cable 3,5mm · Ultracompacto · Control volumen',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/6/60858/logitech-z150-multimedia-speakers-blancos.jpg',
+    description:'Los altavoces multimedia más compactos y asequibles de Logitech. Configuración 2.0 estéreo, sonido limpio para escritorio con cable 3,5mm y control de volumen integrado. Compatibles con cualquier PC, Mac, tablet o smartphone con salida jack. El complemento esencial de cualquier mesa de trabajo.',
+    specs:{
+      'Potencia RMS':  '~3W total',
+      'Configuración': '2.0 estéreo',
+      'Conectividad':  'Cable jack 3,5mm',
+      'Bluetooth':     'No',
+      'Control':       'Rueda de volumen en altavoz',
+      'Alimentación':  'USB (corriente) + jack 3,5mm (audio)',
+      'Fuente':        'logitech.com/es-es + pccomponentes.com'
+    }
+  },
+
+  // ── Logitech Z313 2.1 ────────────────────────────────────────────────────
+  { id:153, name:'Logitech Z313 Speaker System 2.1', brand:'Logitech', category:'altavoces',
+    price:44.99,
+    badge:'25W · 2.1 · Subwoofer downfire · Cable 3,5mm · 48Hz–20kHz',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/3/39883/high-resolution-z313-satellite-top-withref.jpg',
+    description:'Sistema 2.1 de Logitech con subwoofer downfire dedicado para bajos potentes. 25W RMS (50W pico), respuesta 48Hz–20kHz. Dos satélites compactos y control de volumen con jack de auriculares en el subwoofer. El sistema 2.1 más vendido de Logitech para escritorio o sala de estar.',
+    specs:{
+      'Potencia RMS':          '25W total (50W pico)',
+      'Configuración':         '2.1 (2 satélites + subwoofer downfire)',
+      'Respuesta frecuencia':  '48 Hz – 20 kHz',
+      'Conectividad':          'Entrada 3,5mm + jack auriculares',
+      'Bluetooth':             'No',
+      'Dimensiones satélites': '81 × 89 × 146 mm c/u',
+      'Dimensiones subwoofer': '220 × 150 × 228 mm',
+      'Fuente':                'logitech.com/es-es + pccomponentes.com'
+    }
+  },
+
+  // ── Logitech Z207 Bluetooth ──────────────────────────────────────────────
+  { id:154, name:'Logitech Z207 2.0 Bluetooth', brand:'Logitech', category:'altavoces',
+    price:54.99,
+    badge:'5W · 2.0 · Bluetooth 4.2 · Easy-Switch · Radiador pasivo · Escritorio',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/25/257919/1400-logitech-z207-altavoces-bluetooth-20.jpg',
+    description:'Altavoces 2.0 Bluetooth para escritorio con Easy-Switch para alternar entre dos dispositivos simultáneamente. 5W RMS, radiador pasivo para graves mejorados, Bluetooth 4.2 con alcance 10m y entrada 3,5mm adicional. Jack de auriculares frontal. Diseño minimalista perfecto para escritorio o mesilla.',
+    specs:{
+      'Potencia RMS':           '5W total',
+      'Configuración':          '2.0 estéreo',
+      'Respuesta frecuencia':   '80 Hz – 20 kHz',
+      'Bluetooth':              '4.2 (alcance 10m · Easy-Switch 2 dispositivos)',
+      'Conectividad adicional': '3,5mm AUX + jack auriculares frontal',
+      'Radiador pasivo':        'Sí — mejora de graves',
+      'Peso total':             '~1,0 kg',
+      'Dimensiones (c/u)':      '241 × 90 × 124 mm',
+      'Fuente':                 'logitech.com/es-es + pccomponentes.com'
+    }
+  },
+
+  // ── Logitech Z407 Bluetooth 2.1 ─────────────────────────────────────────
+  { id:155, name:'Logitech Z407 2.1 Bluetooth', brand:'Logitech', category:'altavoces',
+    price:94.99,
+    badge:'40W · 2.1 · Bluetooth 5.0 · Subwoofer · Control inalámbrico · 40Hz',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/33/331619/1266-logitech-z407-bluetooth-altavoces-para-ordenador-con-subwoofer-y-control-inalambrico.jpg',
+    description:'Sistema 2.1 Bluetooth con control inalámbrico incluido. 40W RMS (2×10W satélites + 20W subwoofer), Bluetooth 5.0 (20m), respuesta 40Hz–20kHz. Dial rotatorio inalámbrico para ajuste de volumen a distancia. El sistema multimedia más completo de Logitech para trabajo y entretenimiento.',
+    specs:{
+      'Potencia RMS':          '40W total (2×10W satélites + 20W subwoofer)',
+      'Configuración':         '2.1',
+      'Respuesta frecuencia':  '40 Hz – 20 kHz',
+      'Bluetooth':             '5.0 (alcance 20m)',
+      'Conectividad adicional':'Micro USB · AUX 3,5mm',
+      'Control inalámbrico':   'Sí — dial rotatorio',
+      'Dimensiones satélites': '233,7 × 198,1 × 180,3 mm',
+      'Dimensiones subwoofer': '240 × 234 × 180 mm',
+      'Peso subwoofer':        '~2,45 kg',
+      'Fuente':                'logitech.com/es-es + pccomponentes.com'
+    }
+  },
+
+  // ── Logitech Z623 THX 2.1 ───────────────────────────────────────────────
+  { id:156, name:'Logitech Z623 2.1 THX', brand:'Logitech', category:'altavoces',
+    price:139.99,
+    badge:'200W · 2.1 · THX Certified · 3,5mm + RCA · Sub 130W · 35Hz',
+    image:'https://thumb.pccomponentes.com/w-530-530/articles/4/40168/1972-logitech-z623-altavoces-con-subwoofer-200w-rms-comprar.jpg',
+    description:'El sistema de altavoces multimedia de referencia de Logitech, certificado THX. 200W RMS totales (2×35W satélites + 130W subwoofer), respuesta 35Hz–20kHz. Tres entradas: 2× 3,5mm y 1× RCA estéreo. El estándar de facto para escritorios de alto rendimiento, mezclas de audio, streaming y gaming.',
+    specs:{
+      'Potencia RMS':   '200W total (2×35W satélites + 130W subwoofer)',
+      'Configuración':  '2.1 THX Certified',
+      'Respuesta frecuencia': '35 Hz – 20 kHz',
+      'Conectividad':   '2× entrada 3,5mm + 1× RCA estéreo + jack auriculares',
+      'Bluetooth':      'No',
+      'Certificación':  'THX Multimedia',
+      'Dimensiones':    '30,5 × 28,4 × 26,6 cm',
+      'Peso total':     '7 kg',
+      'Fuente':         'logitech.com/es-es + pccomponentes.com'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
@@ -5159,8 +5376,8 @@ function initAIAssistant() {
       return 'Tenemos <strong>26 anillos inteligentes</strong> de 7 marcas: <strong>Amazfit Helio Ring</strong> (€169,90, sin suscripción) · <strong>Movano Evie Ring</strong> (3 colores, €249, salud femenina) · <strong>RingConn</strong> (5 modelos Gen 2+3, desde €219) · <strong>Ultrahuman Ring AIR</strong> (5 colores, €379) · <strong>Circular Ring 2</strong> (4 colores, desde €349, ECG) · <strong>Oura Ring Gen 4</strong> (5 modelos, desde €379) · <strong>Samsung Galaxy Ring</strong> (3 colores, €449). <a class="ai-msg-link" href="catalogo.html?filter=rings">Ver todos los anillos →</a>';
     }
 
-    if (/altavoz|altavoces|speaker|sonos|jbl|marshall|edifier|audio inteligente|bocina|bluetooth.*casa|casa.*bluetooth|wi.?fi.*sonido|sonido.*wifi|estan.?er[ií]a|bookshelf/.test(ql)) {
-      return 'Tenemos <strong>20 altavoces</strong> de 4 marcas premium:<br><br>🎸 <strong>Marshall</strong> (5 modelos, desde marshall.com): <strong>Willen II</strong> €119 (10W·IP67·17h) · <strong>Emberton III</strong> €149 (38W·IP67·32h) · <strong>Stockwell II</strong> €189 (60W·IPX4·20h) · <strong>Acton III</strong> €249 (60W·estantería·BT5.2) · <strong>Stanmore III</strong> €349 (80W·estantería·RCA)<br><br>🎵 <strong>Edifier</strong> (5 modelos, Hi-Fi de estantería): <strong>R1280DB</strong> €119,99 (42W·BT5.1·Óptica) · <strong>R1280DBs</strong> €139,99 (+salida sub) · <strong>R1700BT</strong> €149,99 (66W·nearfield) · <strong>R2000DB</strong> €259,99 (120W) · <strong>S1000MKII</strong> €373,99 (aptX HD·Hi-Res)<br><br>🔊 <strong>JBL</strong> (5 portátiles IP67, BT5.x): desde €49,99 — GO 5 · Clip 5 · Flip 6/7 · Charge 6<br>🔊 <strong>Sonos</strong> (5 smart speakers Wi-Fi): desde €179 — Era 100 · Roam 2 · Era 300 · Move 2<br><br><a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver todos los altavoces →</a>';
+    if (/altavoz|altavoces|speaker|sonos|jbl|marshall|edifier|audio pro|logitech|multiroom|airplay|spotify connect|audio inteligente|bocina|bluetooth.*casa|wi.?fi.*sonido|estan.?er[ií]a|bookshelf|multimedia/.test(ql)) {
+      return 'Tenemos <strong>30 altavoces</strong> de 6 marcas premium:<br><br>🎸 <strong>Marshall</strong> (5 modelos, desde marshall.com): <strong>Willen II</strong> €119 (10W·IP67·17h) · <strong>Emberton III</strong> €149 (38W·IP67·32h) · <strong>Stockwell II</strong> €189 (60W·IPX4·20h) · <strong>Acton III</strong> €249 (60W·estantería·BT5.2) · <strong>Stanmore III</strong> €349 (80W·estantería·RCA)<br><br>🎵 <strong>Edifier</strong> (5 modelos, Hi-Fi de estantería): <strong>R1280DB</strong> €119,99 (42W·BT5.1·Óptica) · <strong>R1280DBs</strong> €139,99 (+salida sub) · <strong>R1700BT</strong> €149,99 (66W·nearfield) · <strong>R2000DB</strong> €259,99 (120W) · <strong>S1000MKII</strong> €373,99 (aptX HD·Hi-Res)<br><br>🔊 <strong>JBL</strong> (5 portátiles IP67, BT5.x): desde €49,99 — GO 5 · Clip 5 · Flip 6/7 · Charge 6<br>🔊 <strong>Sonos</strong> (5 smart speakers Wi-Fi): desde €179 — Era 100 · Roam 2 · Era 300 · Move 2<br><br>🎵 <strong>Audio Pro</strong> (5 modelos, Wi-Fi + AirPlay 2 + Google Cast + Spotify Connect): <strong>C5 MkII W</strong> €299 (41W) · <strong>Drumfire II</strong> €385 (~300W) · <strong>C10 MkII W</strong> €399 (80W) · <strong>A15 W</strong> €399 (portátil 19h) · <strong>C20 W</strong> €549 (190W·HDMI ARC)<br>💻 <strong>Logitech</strong> (5 altavoces multimedia gama Z): <strong>Z150</strong> €27 · <strong>Z313</strong> €44,99 (25W·2.1) · <strong>Z207</strong> €54,99 (BT4.2) · <strong>Z407</strong> €94,99 (40W·BT5.0) · <strong>Z623</strong> €139,99 (200W·THX)<br><br><a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver todos los altavoces →</a>';
     }
 
     if (/sonos era|era 100|era 300|roam 2|sonos move|move 2/.test(ql)) {
@@ -5179,11 +5396,19 @@ function initAIAssistant() {
       return '🎵 Gama <strong>Edifier</strong> disponible (5 modelos de estantería Hi-Fi, desde edifier.com/es):<br>• <strong>R1280DB Black</strong> — €119,99 — 42W · BT5.1 · Óptica · Coaxial · Mando IR<br>• <strong>R1280DBs Black</strong> — €139,99 — 42W · BT5.0 · Salida subwoofer · Bass reflex frontal<br>• <strong>R1700BT Brown</strong> — €149,99 — 66W · BT5.1 · Nearfield 10° · Eagle Eye tweeter<br>• <strong>R2000DB Brown</strong> — €259,99 — 120W · BT5.1 · aptX · Tweeter 25mm<br>• <strong>S1000MKII Brown</strong> — €373,99 — 120W · BT5.0 aptX HD · Hi-Res Audio certificado<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Edifier">Ver Edifier →</a>';
     }
 
-    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos) — 146 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    if (/audio pro|c5 mkii|c10 mkii|drumfire|a15 w|c20 w|airplay.*altavoz|altavoz.*airplay|multiroom|spotify connect/.test(ql)) {
+      return '🎵 Gama <strong>Audio Pro</strong> disponible (5 modelos desde audiopro.com · Wi-Fi · AirPlay 2 · Google Cast · Spotify Connect):<br>· <strong>C5 MkII W</strong> — €299 — 41W · BT 4.2 · compact shelf speaker<br>· <strong>Drumfire II</strong> — €385 — ~300W · floor-standing · Tidal Connect · 16,6kg<br>· <strong>C10 MkII W</strong> — €399 — 80W · BT 4.2 · 45Hz–22kHz<br>· <strong>A15 W</strong> — €399 — 40W · portátil 19h · IPX2<br>· <strong>C20 W</strong> — €549 — 190W · BT 5.0 · HDMI ARC · PHONO · 24bit/192kHz<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Audio Pro">Ver Audio Pro <
     }
 
-    return 'En ZoneTechOnline tenemos <strong>146 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos desde €49,99). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    if (/logitech z|logitech.*altavoz|altavoz.*logitech|z150|z207|z313|z407|z623|multimedia.*pc|pc.*multimedia|sistema.*altavoz/.test(ql)) {
+      return '💻 Gama <strong>Logitech</strong> disponible (5 altavoces gama Z, desde logitech.com/es-es):<br>· <strong>Z150</strong> — €27 — ~3W · 2.0 · cable 3,5mm<br>· <strong>Z313</strong> — €44,99 — 25W · 2.1 · subwoofer downfire<br>· <strong>Z207</strong> — €54,99 — 5W · BT 4.2 · Easy-Switch<br>· <strong>Z407</strong> — €94,99 — 40W · 2.1 · BT 5.0 · control inalámbrico<br>· <strong>Z623</strong> — €139,99 — 200W · 2.1 · THX Certified · 35Hz<br><a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=Logitech">Ver Logitech <
+    }
+
+    if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>30 auriculares</strong> (6 marcas), <strong>35 gafas</strong> y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 156 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+    }
+
+    return 'En ZoneTechOnline tenemos <strong>156 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 30 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech desde €49,99). Pregúntame sobre cualquier categoría. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -5215,7 +5440,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>20 altavoces</strong> (Marshall · Edifier · JBL · Sonos) — 146 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>30 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 156 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
