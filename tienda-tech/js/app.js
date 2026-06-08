@@ -1123,6 +1123,7 @@ PRODUCTS.push(
     brand: 'Samsung',
     category: 'anillos',
     price: 449.00,
+    oldPrice: 529,
     badge: 'Sin Suscripción',
     image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q509nzkamea/gallery/sa-en-galaxy-ring-q500-sm-q509nzkamea-543808321?$1164_776_PNG$',
     images: [
@@ -1149,6 +1150,7 @@ PRODUCTS.push(
     brand: 'Samsung',
     category: 'anillos',
     price: 449.00,
+    oldPrice: 529,
     badge: 'Sin Suscripción',
     image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzsamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzsamea-543808229?$1164_776_PNG$',
     images: [
@@ -1175,6 +1177,7 @@ PRODUCTS.push(
     brand: 'Samsung',
     category: 'anillos',
     price: 449.00,
+    oldPrice: 529,
     badge: 'Edición Dorada',
     image: 'https://images.samsung.com/is/image/samsung/p6pim/sa_en/sm-q508nzdamea/gallery/sa-en-galaxy-ring-q500-sm-q508nzdamea-543808157?$1164_776_PNG$',
     images: [
@@ -1351,6 +1354,7 @@ PRODUCTS.push(
     brand: 'Ultrahuman',
     category: 'anillos',
     price: 379.00,
+    oldPrice: 449,
     badge: 'Sin Suscripción',
     image: 'https://myultra.life/cdn/shop/files/Matte_Black_4.png?v=1728039848&width=800',
     images: [
@@ -1379,6 +1383,7 @@ PRODUCTS.push(
     brand: 'Ultrahuman',
     category: 'anillos',
     price: 379.00,
+    oldPrice: 449,
     badge: 'Sin Suscripción',
     image: 'https://myultra.life/cdn/shop/files/Aster_Black_2.png?v=1728039776&width=800',
     images: [
@@ -1407,6 +1412,7 @@ PRODUCTS.push(
     brand: 'Ultrahuman',
     category: 'anillos',
     price: 379.00,
+    oldPrice: 449,
     badge: 'Biohacking',
     image: 'https://myultra.life/cdn/shop/files/Space_Silver_4_1.png?v=1728039932&width=800',
     images: [
@@ -1435,6 +1441,7 @@ PRODUCTS.push(
     brand: 'Ultrahuman',
     category: 'anillos',
     price: 379.00,
+    oldPrice: 449,
     badge: 'Bionic Gold',
     image: 'https://myultra.life/cdn/shop/files/Bionic-Gold_2_1.png?v=1728039804&width=800',
     images: [
@@ -1463,6 +1470,7 @@ PRODUCTS.push(
     brand: 'Ultrahuman',
     category: 'anillos',
     price: 379.00,
+    oldPrice: 449,
     badge: 'Titanio Puro',
     image: 'https://myultra.life/cdn/shop/files/Titanium-Ring-Pic.png?v=1728039908&width=800',
     images: [
@@ -1496,6 +1504,7 @@ PRODUCTS.push(
     brand: 'Circular',
     category: 'anillos',
     price: 349.00,
+    oldPrice: 419,
     badge: 'ECG Integrado',
     image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086418_52c4e288-fce6-4d2b-b9af-8df46155d6e6.png',
     images: [
@@ -1526,6 +1535,7 @@ PRODUCTS.push(
     brand: 'Circular',
     category: 'anillos',
     price: 449.00,
+    oldPrice: 529,
     badge: 'ECG + AFib',
     image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086400_065c5676-3244-4f92-824d-d17526acf79e.png',
     images: [
@@ -1556,6 +1566,7 @@ PRODUCTS.push(
     brand: 'Circular',
     category: 'anillos',
     price: 549.00,
+    oldPrice: 649,
     badge: 'PVD Dorado',
     image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086406_95bdcbd8-5466-400d-8ca8-2078f0bacb02.png',
     images: [
@@ -1586,6 +1597,7 @@ PRODUCTS.push(
     brand: 'Circular',
     category: 'anillos',
     price: 549.00,
+    oldPrice: 649,
     badge: 'Oro Rosa',
     image: 'https://cdn.shopify.com/s/files/1/0680/5245/1613/files/CIRCULAR_PACKSHOT00086412_1dbc8ae9-727c-4c93-8a2a-273467d9f352.png',
     images: [
@@ -1621,6 +1633,7 @@ PRODUCTS.push(
     brand: 'Amazfit',
     category: 'anillos',
     price: 169.90,
+    oldPrice: 199.9,
     badge: 'Sin Suscripción',
     image: 'https://eu.amazfit.com/cdn/shop/files/Helioring_1024x1024.jpg?v=1716446501',
     images: [
@@ -1658,6 +1671,7 @@ PRODUCTS.push(
     brand: 'Movano',
     category: 'anillos',
     price: 249.00,
+    oldPrice: 299,
     badge: 'Salud Femenina',
     image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_Silver_ThreeQuarterView_Lighting-E.4.png',
     images: [
@@ -1689,6 +1703,7 @@ PRODUCTS.push(
     brand: 'Movano',
     category: 'anillos',
     price: 249.00,
+    oldPrice: 299,
     badge: 'Edición Dorada',
     image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_Gold_ThreeQuarterView_Lighting-E.1.png',
     images: [
@@ -1720,6 +1735,7 @@ PRODUCTS.push(
     brand: 'Movano',
     category: 'anillos',
     price: 249.00,
+    oldPrice: 299,
     badge: 'Oro Rosa',
     image: 'https://eviering.com/cdn/shop/files/EvieRing_2024_RoseGold_ThreeQuarterView_Lighting-E.2.png',
     images: [
@@ -1756,6 +1772,7 @@ PRODUCTS.push(
     brand: 'Sony',
     category: 'auriculares',
     price: 39.99,
+    oldPrice: 49.99,
     badge: 'Bluetooth 5.2',
     image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch520%20bk_1.jpg',
     images: [
@@ -1785,6 +1802,7 @@ PRODUCTS.push(
     brand: 'Sony',
     category: 'auriculares',
     price: 49.99,
+    oldPrice: 59.99,
     badge: 'True Wireless',
     image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c510%20wh_1.jpg',
     images: [
@@ -1813,6 +1831,7 @@ PRODUCTS.push(
     brand: 'Sony',
     category: 'auriculares',
     price: 89.99,
+    oldPrice: 109.99,
     badge: 'ANC Ligero',
     image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wh-ch720n%20bk_1.jpg',
     images: [
@@ -1842,6 +1861,7 @@ PRODUCTS.push(
     brand: 'Sony',
     category: 'auriculares',
     price: 99.99,
+    oldPrice: 119.99,
     badge: 'ANC True Wireless',
     image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20wf-c710n%20wh_1.jpg',
     images: [
@@ -1870,6 +1890,7 @@ PRODUCTS.push(
     brand: 'Sony',
     category: 'auriculares',
     price: 129.99,
+    oldPrice: 159.99,
     badge: 'ULT POWER SOUND',
     image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sony-aur%20ult%20wear%20bk_1.jpg',
     images: [
@@ -1963,6 +1984,7 @@ PRODUCTS.push(
     brand: 'Sennheiser',
     category: 'auriculares',
     price: 139.90,
+    oldPrice: 169.9,
     badge: 'aptX · 30h',
     image: 'https://eu.sennheiser-hearing.com/cdn/shop/files/3_a8ffb0e1-c722-4e7e-bbfa-1b1b71a6b37a.jpg',
     images: [
@@ -2045,6 +2067,7 @@ PRODUCTS.push(
 PRODUCTS.push(
 
   { id:72, name:'Nothing Ear (a) Yellow', brand:'Nothing', category:'auriculares', price:69.00,
+    oldPrice: 89,
     badge:'ANC Adaptativo',
     image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png',
     images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0025_Ear-a-yellow.png'],
@@ -2063,6 +2086,7 @@ PRODUCTS.push(
   },
 
   { id:73, name:'Nothing Ear (a) White', brand:'Nothing', category:'auriculares', price:69.00,
+    oldPrice: 89,
     badge:'ANC Adaptativo',
     image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0026_Ear-a-white.png',
     images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0026_Ear-a-white.png'],
@@ -2081,6 +2105,7 @@ PRODUCTS.push(
   },
 
   { id:74, name:'Nothing Ear (a) Black', brand:'Nothing', category:'auriculares', price:69.00,
+    oldPrice: 89,
     badge:'ANC Adaptativo',
     image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0027_Ear-a-black.png',
     images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0027_Ear-a-black.png'],
@@ -2099,6 +2124,7 @@ PRODUCTS.push(
   },
 
   { id:75, name:'Nothing Ear Black', brand:'Nothing', category:'auriculares', price:89.00,
+    oldPrice: 109,
     badge:'LDAC · ANC -45dB',
     image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0024_Ear-black.png',
     images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/0000s_0024_Ear-black.png'],
@@ -2117,6 +2143,7 @@ PRODUCTS.push(
   },
 
   { id:76, name:'Nothing Ear (3) Black', brand:'Nothing', category:'auriculares', price:149.00,
+    oldPrice: 179,
     badge:'Hi-Res Audio · LDAC',
     image:'https://cdn.shopify.com/s/files/1/0585/8908/5875/files/Ear3-black.png',
     images:['https://cdn.shopify.com/s/files/1/0585/8908/5875/files/Ear3-black.png'],
@@ -2140,6 +2167,7 @@ PRODUCTS.push(
 PRODUCTS.push(
 
   { id:77, name:'Google Pixel Buds 2a Hazel', brand:'Google', category:'auriculares', price:119.00,
+    oldPrice: 149,
     badge:'Google Assistant · ANC',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_160131089?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_160131089?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
@@ -2158,6 +2186,7 @@ PRODUCTS.push(
   },
 
   { id:78, name:'Google Pixel Buds 2a Iris', brand:'Google', category:'auriculares', price:119.00,
+    oldPrice: 149,
     badge:'Google Assistant · ANC',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_161455260?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_161455260?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
@@ -2176,6 +2205,7 @@ PRODUCTS.push(
   },
 
   { id:79, name:'Google Pixel Buds Pro 2 Hazel', brand:'Google', category:'auriculares', price:229.00,
+    oldPrice: 279,
     badge:'ANC Adaptativo · LDAC',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194248?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194248?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
@@ -2194,6 +2224,7 @@ PRODUCTS.push(
   },
 
   { id:80, name:'Google Pixel Buds Pro 2 Porcelain', brand:'Google', category:'auriculares', price:229.00,
+    oldPrice: 279,
     badge:'ANC Adaptativo · LDAC',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194139?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194139?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
@@ -2212,6 +2243,7 @@ PRODUCTS.push(
   },
 
   { id:81, name:'Google Pixel Buds Pro 2 Wintergreen', brand:'Google', category:'auriculares', price:229.00,
+    oldPrice: 279,
     badge:'ANC Adaptativo · LDAC',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194112?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     images:['https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_143194112?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource'],
@@ -2252,6 +2284,7 @@ PRODUCTS.push(
   },
 
   { id:83, name:'Shokz OpenFit Air Negro', brand:'Shokz', category:'auriculares', price:109.00,
+    oldPrice: 129,
     badge:'Open-Ear TWS · 28h',
     image:'https://es.shokz.com/cdn/shop/files/OpenFitAir-Black.webp?v=1716703749',
     images:['https://es.shokz.com/cdn/shop/files/OpenFitAir-Black.webp?v=1716703749'],
@@ -2269,6 +2302,7 @@ PRODUCTS.push(
   },
 
   { id:84, name:'Shokz OpenFit Negro', brand:'Shokz', category:'auriculares', price:139.00,
+    oldPrice: 169,
     badge:'Open-Ear · IP54 · EQ',
     image:'https://es.shokz.com/cdn/shop/products/BK-1.webp?v=1688471004',
     images:['https://es.shokz.com/cdn/shop/products/BK-1.webp?v=1688471004'],
@@ -2286,6 +2320,7 @@ PRODUCTS.push(
   },
 
   { id:85, name:'Shokz OpenRun Negro', brand:'Shokz', category:'auriculares', price:139.00,
+    oldPrice: 169,
     badge:'Deporte · IP55 · 8h',
     image:'https://es.shokz.com/cdn/shop/files/OpenRun-_Type-_C-Black_4b3b446b-e393-46a0-9247-bcbaa0c71fb1.webp?v=1756290929',
     images:['https://es.shokz.com/cdn/shop/files/OpenRun-_Type-_C-Black_4b3b446b-e393-46a0-9247-bcbaa0c71fb1.webp?v=1756290929'],
@@ -2303,6 +2338,7 @@ PRODUCTS.push(
   },
 
   { id:86, name:'Shokz OpenFit2 Negro', brand:'Shokz', category:'auriculares', price:189.00,
+    oldPrice: 229,
     badge:'Open-Ear · 46h · Qi',
     image:'https://es.shokz.com/cdn/shop/files/openfit2_-Black.png?v=1752113497',
     images:['https://es.shokz.com/cdn/shop/files/openfit2_-Black.png?v=1752113497'],
@@ -2325,6 +2361,7 @@ PRODUCTS.push(
 PRODUCTS.push(
 
   { id:87, name:'Moondrop CHU', brand:'Moondrop', category:'auriculares', price:19.99,
+    oldPrice: 24.99,
     badge:'IEM · 1DD Hi-Fi',
     image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e12cb742f38ea021d94_641d56d5c09aba2bbfecaf13_CHU.jpeg',
     images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e12cb742f38ea021d94_641d56d5c09aba2bbfecaf13_CHU.jpeg'],
@@ -2342,6 +2379,7 @@ PRODUCTS.push(
   },
 
   { id:88, name:'Moondrop QUARK2', brand:'Moondrop', category:'auriculares', price:19.99,
+    oldPrice: 24.99,
     badge:'IEM · 1BA Driver',
     image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842878fd457546dd0a50c_66c045b029fc359a031a235c_QUARK2.jpeg',
     images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842878fd457546dd0a50c_66c045b029fc359a031a235c_QUARK2.jpeg'],
@@ -2358,6 +2396,7 @@ PRODUCTS.push(
   },
 
   { id:89, name:'Moondrop CHU II', brand:'Moondrop', category:'auriculares', price:22.99,
+    oldPrice: 27.99,
     badge:'IEM · 2ª Gen · Hi-Fi',
     image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842812d75d04ae7da86dd_64a67decb6354a3471c0d4cd_CHU2.jpeg',
     images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842812d75d04ae7da86dd_64a67decb6354a3471c0d4cd_CHU2.jpeg'],
@@ -2374,6 +2413,7 @@ PRODUCTS.push(
   },
 
   { id:90, name:'Moondrop JIU', brand:'Moondrop', category:'auriculares', price:24.99,
+    oldPrice: 29.99,
     badge:'IEM · Hi-Fi · 3.5mm',
     image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e1387dd9368cf3de1db_643fc38234c94004ea61a96f_JIU.jpeg',
     images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/64409e1387dd9368cf3de1db_643fc38234c94004ea61a96f_JIU.jpeg'],
@@ -2390,6 +2430,7 @@ PRODUCTS.push(
   },
 
   { id:91, name:'Moondrop BLOCK TWS', brand:'Moondrop', category:'auriculares', price:24.99,
+    oldPrice: 29.99,
     badge:'TWS · ANC · BT 5.3',
     image:'https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842803b10a7723dab194e_66c0415d4a094cea4ba98188_BLOCK.jpeg',
     images:['https://cdn.prod.website-files.com/627128d862c9a44234848dda/67b842803b10a7723dab194e_66c0415d4a094cea4ba98188_BLOCK.jpeg'],
@@ -2411,6 +2452,7 @@ PRODUCTS.push(
 // ─── RAY-BAN META SMART GLASSES (fuente: MediaMarkt España) ─
 PRODUCTS.push(
   { id:92, name:'Ray-Ban Meta Wayfarer Negro Brillante', brand:'Ray-Ban Meta', category:'gafas', price:247.00,
+    oldPrice: 299,
     badge:'Meta AI · 12MP · OAP',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425222?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     description:'Ray-Ban Meta Wayfarer Negro Brillante: la icónica montura Wayfarer convertida en gafa inteligente. Cámara 12MP, vídeo 1080p, altavoces OAP para escuchar música sin tapones y Meta AI integrado por voz. 4h uso continuo, 36h con estuche. Lentes transparentes UV400.',
@@ -2425,6 +2467,7 @@ PRODUCTS.push(
     }
   },
   { id:93, name:'Ray-Ban Meta Wayfarer Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
+    oldPrice: 329,
     badge:'Meta AI · Polarizadas · OAP',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425093?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     description:'Ray-Ban Meta Wayfarer Negro Mate con lentes polarizadas: ideal para exteriores y conducción. Cámara 12MP, altavoces OAP, Meta AI por voz. Acabado mate premium. 4h reproducción, 36h con estuche de carga. Lentes polarizadas UV400 de alta definición.',
@@ -2438,6 +2481,7 @@ PRODUCTS.push(
     }
   },
   { id:94, name:'Ray-Ban Meta Wayfarer Grande Negro Mate Polarizadas', brand:'Ray-Ban Meta', category:'gafas', price:269.00,
+    oldPrice: 329,
     badge:'Meta AI · Large · Polarizadas',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_162038706?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     description:'Ray-Ban Meta Wayfarer Grande (XL): misma tecnología smart que la versión estándar pero en talla mayor para mayor cobertura. Lentes polarizadas, cámara 12MP, altavoces OAP y Meta AI. La opción ideal si la montura normal te queda pequeña.',
@@ -2452,6 +2496,7 @@ PRODUCTS.push(
     }
   },
   { id:95, name:'Ray-Ban Meta Wayfarer Transitions Verde Grafito', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
+    oldPrice: 369,
     badge:'Meta AI · Transitions · Adaptativas',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425210?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     description:'Ray-Ban Meta Wayfarer con lentes Transitions Verde Grafito: se oscurecen automáticamente bajo la luz solar y vuelven transparentes en interiores. La opción más versátil — válida como gafa de sol y de uso diario. Meta AI, 12MP, OAP. Todo en uno.',
@@ -2465,6 +2510,7 @@ PRODUCTS.push(
     }
   },
   { id:96, name:'Ray-Ban Meta Skyler Transitions Azul Cerúleo', brand:'Ray-Ban Meta', category:'gafas', price:307.00,
+    oldPrice: 369,
     badge:'Meta AI · Skyler · Transitions',
     image:'https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_152425478?x=600&y=600&format=jpg&quality=85&sp=yes&strip=yes&trim&ex=600&ey=600&align=center&resizesource',
     description:'Ray-Ban Meta Skyler con lentes Transitions Azul Cerúleo: montura mariposa femenina con la tecnología inteligente de Meta. Lentes adaptativas que pasan de transparentes a color azul cerúleo bajo el sol. Cámara 12MP, altavoces OAP y Meta AI. Estilo y tecnología.',
@@ -2483,6 +2529,7 @@ PRODUCTS.push(
 // ─── XREAL AR GLASSES (fuente: eu.shop.xreal.com) ─
 PRODUCTS.push(
   { id:97, name:'XREAL Air 2', brand:'XREAL', category:'gafas', price:199.00,
+    oldPrice: 249,
     badge:'AR · OLED · 120Hz · 46° FOV',
     image:'https://us.shop.xreal.com/cdn/shop/files/preview_images/2.jpg?v=1722059580',
     description:'XREAL Air 2: gafas de realidad aumentada con pantalla Micro-OLED 1080p y 120Hz — equivale a ver una pantalla de 201" a 6 metros. Conecta por USB-C a iPhone, Android, PC o Mac. Ultra-ligeras (72g), sin cómputo propio. La entrada más accesible al mundo AR de calidad.',
@@ -2510,6 +2557,7 @@ PRODUCTS.push(
     }
   },
   { id:99, name:'XREAL 1S', brand:'XREAL', category:'gafas', price:499.00,
+    oldPrice: 599,
     badge:'AR · FHD · 52° FOV · 500 nits',
     image:'https://us.shop.xreal.com/cdn/shop/files/00-_-01-1.jpg?v=1767513758',
     description:'XREAL 1S: la evolución directa del Air 2 con mayor campo de visión (52° FOV frente a 46°) y mayor luminosidad (500 nits). Micro-OLED FHD 120Hz, 80g y conexión USB-C. Sin cómputo propio — requiere dispositivo fuente. El equilibrio perfecto entre calidad óptica y precio.',
@@ -2537,6 +2585,7 @@ PRODUCTS.push(
     }
   },
   { id:101, name:'ROG XREAL R1', brand:'XREAL', category:'gafas', price:849.00,
+    oldPrice: 999,
     badge:'Gaming AR · ROG × XREAL',
     image:'https://us.shop.xreal.com/cdn/shop/files/XREAL_ROG___2400x2400_01_db14182b-1e05-4107-8e97-56dc97d0f14f.jpg?v=1778653953',
     description:'ROG XREAL R1: la colaboración definitiva entre ASUS Republic of Gamers y XREAL. Gafas AR gaming-first con chip Snapdragon AR1 Gen 1, OLED de alta tasa de refresco y diseño ROG exclusivo. Para gamers y entusiastas que quieren la experiencia AR más potente del mercado. Preventa — envíos julio 2026.',
@@ -2554,6 +2603,7 @@ PRODUCTS.push(
 // ─── VITURE XR GLASSES (fuente: PCComponentes España + viture.com) ─
 PRODUCTS.push(
   { id:102, name:'VITURE Luma XR Glasses', brand:'VITURE', category:'gafas', price:461.00,
+    oldPrice: 549,
     badge:'XR · 120Hz · 1000 nits · 146"',
     image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6C_01.jpg',
     description:'VITURE Luma XR Glasses: la nueva generación de gafas XR con pantalla virtual de 146 pulgadas a 4 metros de distancia. OLED 120Hz, 1000 nits, ajuste de dioptrías hasta -6.0D integrado y lentes electrocromáticas. Conéctate por USB-C a móvil, PC o consola. 77g. La mejor relación calidad-precio de la gama Luma.',
@@ -2570,6 +2620,7 @@ PRODUCTS.push(
     }
   },
   { id:103, name:'VITURE Luma Pro XR Glasses', brand:'VITURE', category:'gafas', price:509.00,
+    oldPrice: 599,
     badge:'XR · 120Hz · 52° FOV · RGB',
     image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6_01.jpg',
     description:'VITURE Luma Pro XR Glasses: el FOV más grande de la gama Luma (52°) y el primer diseño con iluminación RGB dinámica en el lateral. 152 pulgadas virtuales, 1000 nits, 120Hz y ajuste de dioptrías hasta -4.0D. Lentes electrocromáticas de 9 niveles. Audio HARMAN mejorado.',
@@ -2586,6 +2637,7 @@ PRODUCTS.push(
     }
   },
   { id:104, name:'VITURE Pro XR Glasses', brand:'VITURE', category:'gafas', price:549.00,
+    oldPrice: 649,
     badge:'XR · 120Hz · 1000 nits · HARMAN',
     image:'https://www.powerplanetonline.com/cdnassets/Viture-Pro-XR-001_l_sf.webp',
     description:'VITURE Pro XR Glasses: el modelo que estableció el estándar XR de VITURE. Pantalla virtual de 135 pulgadas, 1000 nits, 120Hz y audio HARMAN Kardon integrado. Ajuste de dioptrías para miopes. Lentes electrocromáticas. Compatible con USB-C y adaptadores Lightning para iPhone.',
@@ -2601,6 +2653,7 @@ PRODUCTS.push(
     }
   },
   { id:105, name:'VITURE Beast XR Glasses', brand:'VITURE', category:'gafas', price:628.00,
+    oldPrice: 749,
     badge:'XR · 58° FOV · 1250 nits · Cámara RGB',
     image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/R6_01.jpg',
     description:'VITURE Beast XR Glasses: el FOV más grande del mercado XR de consumo (58°) y 1250 nits de brillo máximo. 174 pulgadas virtuales a 4 metros. Cámara RGB frontal, VisionPair 3DoF integrado, 9 niveles electrocromáticos y cuerpo metal aluminio/magnesio. La experiencia XR más inmersiva de VITURE.',
@@ -2617,6 +2670,7 @@ PRODUCTS.push(
     }
   },
   { id:106, name:'VITURE Luma Ultra XR/AR Glasses', brand:'VITURE', category:'gafas', price:650.00,
+    oldPrice: 779,
     badge:'XR/AR · 6DoF · 1500 nits · Sony OLED',
     image:'https://cdn.shopify.com/s/files/1/0762/8760/7065/files/P6S_01_72d2ede5-9631-49b3-951f-f001b37900b5.jpg',
     description:'VITURE Luma Ultra XR/AR Glasses: el pináculo de la gama Luma. Panel Sony Micro OLED, 1500 nits (el mayor brillo de toda la gama), 6DoF completo con gestos de manos AR, cámaras de profundidad dual y conversión 2D a 3D en tiempo real. 83g. Para quien quiere lo mejor de las gafas XR/AR de consumo.',
@@ -2637,6 +2691,7 @@ PRODUCTS.push(
 // ─── EVEN REALITIES G1 SMART GLASSES (fuente: evenrealities.com/es-ES) ─
 PRODUCTS.push(
   { id:107, name:'Even G1 A Grey1', brand:'Even Realities', category:'gafas', price:599.00,
+    oldPrice: 699,
     badge:'MicroLED · IA · 44g · Traducción',
     image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/ER_Packshoot_G1A_Grey1_Front.png',
     description:'Even G1 A Grey1: las gafas inteligentes más ligeras del mercado (44g). Pantalla MicroLED verde monocromática 640×200, 1000 nits. Even AI + ChatGPT integrado, traducción en tiempo real a 13 idiomas, teleprompter, navegación y transcripción de voz. Diseñadas para el uso diario sin que parezcan gadgets. Montura gris mineral elegante.',
@@ -2653,6 +2708,7 @@ PRODUCTS.push(
     }
   },
   { id:108, name:'Even G1 A Brown1', brand:'Even Realities', category:'gafas', price:599.00,
+    oldPrice: 699,
     badge:'MicroLED · IA · 44g · Traducción',
     image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-brown-front-folded.png',
     description:'Even G1 A Brown1: la variante marrón cálido de las gafas inteligentes más ligeras del mundo (44g). Misma tecnología Even AI con ChatGPT, traducción en tiempo real a 13 idiomas y pantalla MicroLED verde que solo tú puedes ver. Montura marrón de aleación magnesio-titanio para un look refinado y natural.',
@@ -2669,6 +2725,7 @@ PRODUCTS.push(
     }
   },
   { id:109, name:'Even G1 A Green1', brand:'Even Realities', category:'gafas', price:599.00,
+    oldPrice: 699,
     badge:'MicroLED · IA · 44g · ChatGPT',
     image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-green-front-folded.png',
     description:'Even G1 A Green1: la montura verde salvia — la más reconocible del catálogo Even Realities. Pantalla MicroLED verde monocromática invisible para los demás, 44g, Even AI + ChatGPT integrado y traducción simultánea a 13 idiomas. Para quien quiere IA discreta en su día a día sin renunciar al estilo.',
@@ -2685,6 +2742,7 @@ PRODUCTS.push(
     }
   },
   { id:110, name:'Even G1 A Grey1 + Lentes Monofocales', brand:'Even Realities', category:'gafas', price:768.00,
+    oldPrice: 899,
     badge:'MicroLED · IA · Graduadas · 44g',
     image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/ER_Packshoot_G1A_Grey1_Front.png',
     description:'Even G1 A Grey1 con lentes monofocales de prescripción integradas: la solución completa para usuarios con miopía, hipermetropía o astigmatismo. Misma tecnología Even AI, ChatGPT y traducción en tiempo real, pero con tu graduación incorporada. No necesitas llevar gafas debajo. Precio incluye fabricación y montaje de lentes graduadas.',
@@ -2700,6 +2758,7 @@ PRODUCTS.push(
     }
   },
   { id:111, name:'Even G1 A Brown1 + Lentes Monofocales', brand:'Even Realities', category:'gafas', price:768.00,
+    oldPrice: 899,
     badge:'MicroLED · IA · Graduadas · Marrón',
     image:'https://cdn.shopify.com/s/files/1/0600/4513/1891/files/even-g1-smart-glasses-brown-front-folded.png',
     description:'Even G1 A Brown1 con lentes monofocales de prescripción integradas: gafas inteligentes con tu graduación en montura marrón cálido. Even AI + ChatGPT, traducción en tiempo real a 13 idiomas, teleprompter y navegación — todo en 44g con tu prescripción exacta. La opción más elegante para usuarios con gafas graduadas.',
@@ -2717,6 +2776,7 @@ PRODUCTS.push(
 
   // ── RayNeo (IDs 112–116) ─────────────────────────────────────────────────
   { id:112, name:'RayNeo Air 2', brand:'RayNeo', category:'gafas', price:199.00,
+    oldPrice: 249,
     badge:'Micro-OLED · 46° FOV · 500 nits · 72g',
     image:'https://eu.rayneo.com/cdn/shop/files/A2_b5ae514b-9ca5-45e9-9546-a8c04d32fbf3.png',
     description:'RayNeo Air 2: gafas XR con pantalla Micro-OLED Sony 1080p por ojo, 46° FOV y 500 nits. Conexión USB-C/DP a móvil o PC — convierte cualquier dispositivo en un cine privado de 201". Peso 72g, ajuste dióptrico -6D a +2D sin lentes adicionales. La entrada más accesible a las XR glasses premium.',
@@ -2731,6 +2791,7 @@ PRODUCTS.push(
     }
   },
   { id:113, name:'RayNeo Air 2s', brand:'RayNeo', category:'gafas', price:199.99,
+    oldPrice: 249.99,
     badge:'Micro-OLED · Electrochromic · 72g',
     image:'https://eu.rayneo.com/cdn/shop/files/A2S.png?v=1761641327',
     description:'RayNeo Air 2s: evolución del Air 2 con cristal electrocrómico que pasa de transparente a opaco en milisegundos — sin cambiar de lentes. Micro-OLED Sony 1080p, 46° FOV, USB-C/DP. Ideal para uso mixto interior/exterior. Solo 72g con ajuste dióptrico integrado.',
@@ -2745,6 +2806,7 @@ PRODUCTS.push(
     }
   },
   { id:114, name:'RayNeo Air 3s', brand:'RayNeo', category:'gafas', price:299.00,
+    oldPrice: 349,
     badge:'Micro-OLED · 54° FOV · 600 nits · 76g',
     image:'https://eu.rayneo.com/cdn/shop/files/A3.png?v=1761641338',
     description:'RayNeo Air 3s: pantalla Micro-OLED 1080p por ojo con 54° FOV ampliado y 600 nits. Óptica Birdbath mejorada para mayor nitidez en bordes. Electrocrómico de serie. USB-C con soporte para 144Hz. Perfecto para gaming, productividad y contenido HDR en movimiento.',
@@ -2759,6 +2821,7 @@ PRODUCTS.push(
     }
   },
   { id:115, name:'RayNeo Air 4 Pro', brand:'RayNeo', category:'gafas', price:324.99,
+    oldPrice: 389.99,
     badge:'Micro-OLED · Eye Tracking · 58° FOV',
     image:'https://eu.rayneo.com/cdn/shop/files/Air4_pro.png?v=1772183095',
     description:'RayNeo Air 4 Pro: el primer XR glasses con eye tracking integrado en su gama. 58° FOV con Micro-OLED Sony, foveated rendering y ajuste automático según dirección de mirada. Diseño sin cables laterales, bisagra magnética. El techo de los XR glasses de conexión a dispositivo.',
@@ -2773,6 +2836,7 @@ PRODUCTS.push(
     }
   },
   { id:116, name:'RayNeo X3 Pro', brand:'RayNeo', category:'gafas', price:1259.00,
+    oldPrice: 1499,
     badge:'AR · Snapdragon AR2 · Standalone · 6DoF',
     image:'https://eu.rayneo.com/cdn/shop/files/51474.png?v=1765775093',
     description:'RayNeo X3 Pro: AR glasses standalone con procesador Snapdragon AR2 Gen 1, 6DoF y hologramas superpuestos en el mundo real. Pantalla waveguide birdbath, cámara RGB para passthrough y manos libres completo. El dispositivo AR más avanzado de RayNeo — pensado para productividad espacial y desarrollo AR profesional.',
@@ -2789,6 +2853,7 @@ PRODUCTS.push(
 
   // ── Rokid (IDs 117–121) ──────────────────────────────────────────────────
   { id:117, name:'Rokid Max', brand:'Rokid', category:'gafas', price:329.00,
+    oldPrice: 399,
     badge:'Micro-OLED · 215" Virtual · 50° FOV · 75g',
     image:'https://de.rokid.com/cdn/shop/files/Max_01.jpg?v=1730433368',
     description:'Rokid Max: XR glasses con pantalla Micro-OLED 1080p, 50° FOV y brillo de 600 nits. Simula una pantalla virtual de 215" a 6 metros. Conexión USB-C/DP a móvil Android, iPhone 15+ o PC. Sistema de sonido estéreo integrado. 75g con ajuste dióptrico -6D a +2D — ideal para películas, gaming y productividad en movimiento.',
@@ -2803,6 +2868,7 @@ PRODUCTS.push(
     }
   },
   { id:118, name:'Rokid AI Glasses Neo', brand:'Rokid', category:'gafas', price:349.00,
+    oldPrice: 419,
     badge:'IA · Cámara 12MP · Sin pantalla · 46g',
     image:'https://de.rokid.com/cdn/shop/files/01_cbfb835e-f5d3-428c-8922-ed78b782cfa0.jpg?v=1777369748',
     description:'Rokid AI Glasses Neo: gafas de IA con cámara 12MP y altavoces abiertos — sin pantalla, diseño idéntico a unas gafas normales. Asistente IA Yoda integrado (acceso a GPT-4o y modelos multimodales), traducción en tiempo real y resumen de escenas en voz. La alternativa más avanzada en IA conversacional a las Ray-Ban Meta, con cámara de mayor resolución.',
@@ -2817,6 +2883,7 @@ PRODUCTS.push(
     }
   },
   { id:119, name:'Rokid Max 2', brand:'Rokid', category:'gafas', price:359.00,
+    oldPrice: 429,
     badge:'Micro-OLED · 57° FOV · 800 nits · 73g',
     image:'https://global.rokid.com/cdn/shop/files/max_2.jpg?v=1767063587',
     description:'Rokid Max 2: sucesor del Max con FOV ampliado a 57°, brillo 800 nits y refresco 120Hz. Micro-OLED 1080p, conexión USB-C/DP a móvil o PC, electrocrómico integrado y diseño rediseñado más ligero (73g). Compatible con Rokid Station 2 para uso standalone. El punto de equilibrio ideal entre precio y prestaciones XR.',
@@ -2831,6 +2898,7 @@ PRODUCTS.push(
     }
   },
   { id:120, name:'Rokid AR Joy 2', brand:'Rokid', category:'gafas', price:528.00,
+    oldPrice: 629,
     badge:'AR Standalone · Snapdragon XR2 · Max 2 + Station 2',
     image:'https://de.rokid.com/cdn/shop/files/0003.jpg?v=1730433208',
     description:'Rokid AR Joy 2: el kit AR standalone completo — incluye Rokid Max 2 (XR glasses 57° FOV, 800 nits) más Rokid Station 2 (Android 12, Snapdragon XR2 Gen 1, batería 4000mAh). Sin necesitar móvil ni PC. Apps Android, Google Play, streaming nativo, gaming y productividad en un sistema que cabe en el bolsillo. La mejor solución AR autónoma por precio.',
@@ -2845,6 +2913,7 @@ PRODUCTS.push(
     }
   },
   { id:121, name:'Rokid AR Spatial', brand:'Rokid', category:'gafas', price:568.00,
+    oldPrice: 679,
     badge:'AR · Hand Tracking · Spatial Computing · 6DoF',
     image:'https://de.rokid.com/cdn/shop/files/001_fab88f6f-4ade-46e8-a645-04f3a8acac4e.jpg?v=1750325927',
     description:'Rokid AR Spatial: el dispositivo AR más avanzado de Rokid, con seguimiento de manos (hand tracking), computación espacial 6DoF y hologramas anclados en el espacio físico. Micro-OLED, cámara RGB para passthrough y OS espacial propio. Diseñado para crear y consumir contenido AR de forma completamente manos libres. La opción más cercana al concepto de AR glasses del futuro.',
@@ -2861,6 +2930,7 @@ PRODUCTS.push(
 
   // ── Gentle Monster (IDs 122–126) ─────────────────────────────────────────
   { id:122, name:'HUAWEI X Gentle Monster Eyewear II SMART LANG-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    oldPrice: 399,
     badge:'Bluetooth 5.2 · IP54 · 5h · Gafas de sol · 44,2g',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/34/349799/1519-huawei-gentle-monster-x-eyewear-ii-lang-especificaciones.jpg',
     description:'HUAWEI X Gentle Monster Eyewear II SMART LANG-01: gafas de sol inteligentes con montura rectangular y altavoces semi-abiertos. Conexión Bluetooth 5.2, controles táctiles en las patillas (deslizar/tocar), 2 micrófonos con reducción de ruido para llamadas HD. Protección IP54 ante salpicaduras. La opción más deportiva y angular de la colección Eyewear II.',
@@ -2878,6 +2948,7 @@ PRODUCTS.push(
     }
   },
   { id:123, name:'HUAWEI X Gentle Monster Eyewear II SMART MYMA-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    oldPrice: 399,
     badge:'Bluetooth 5.2 · IP54 · 5h · Redondas · 48,1g',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/34/349810/1944-huawei-gentle-monster-x-eyewear-ii-black.jpg',
     description:'HUAWEI X Gentle Monster Eyewear II SMART MYMA-01: gafas de sol inteligentes con montura redonda oversize, la más llamativa de la colección. Altavoces semi-abiertos Bluetooth 5.2, controles táctiles en patillas y 2 micrófonos con reducción de ruido. El diseño más icónico y fashionista de la colaboración Huawei × Gentle Monster.',
@@ -2895,6 +2966,7 @@ PRODUCTS.push(
     }
   },
   { id:124, name:'HUAWEI X Gentle Monster Eyewear II SMART VERONA-01', brand:'Gentle Monster', category:'gafas', price:329.00,
+    oldPrice: 399,
     badge:'Bluetooth 5.2 · IP54 · 5h · Vintage · 44g',
     image:'https://www.gadgetmatch.com/wp-content/uploads/2020/12/gadgetmatch-20201209-huawei-gentle-monster-eyewear-II-01.jpg',
     description:'HUAWEI X Gentle Monster Eyewear II SMART VERONA-01: gafas de sol inteligentes con estética vintage italiana, la variante más sofisticada de la colección. Tecnología de audio semi-abierto Bluetooth 5.2 invisible al exterior. Controles táctiles en patillas, 2 micrófonos con reducción de ruido y protección IP54 contra salpicaduras.',
@@ -2912,6 +2984,7 @@ PRODUCTS.push(
     }
   },
   { id:125, name:'HUAWEI X Gentle Monster Eyewear II SMART HAVANA-01', brand:'Gentle Monster', category:'gafas', price:349.00,
+    oldPrice: 419,
     badge:'Bluetooth 5.2 · IP54 · Ópticas · Graduables · 44,6g',
     image:'https://www.gadgetmatch.com/wp-content/uploads/2020/12/Gadgetmatch-Huawei-Gentle-Monster-Eyewear-II-Flatlay-560x600.png',
     description:'HUAWEI X Gentle Monster Eyewear II SMART HAVANA-01: gafas ópticas inteligentes con lentes claras y montura redonda — aptas para lentes de prescripción. La solución ideal para personas que llevan gafas graduadas y quieren integrar audio inteligente sin sacrificar estilo. Bluetooth 5.2, controles táctiles y 2 micrófonos con reducción de ruido.',
@@ -2929,6 +3002,7 @@ PRODUCTS.push(
     }
   },
   { id:126, name:'HUAWEI X Gentle Monster Eyewear II SMART KUBO-01', brand:'Gentle Monster', category:'gafas', price:349.00,
+    oldPrice: 419,
     badge:'Bluetooth 5.2 · IP54 · Ópticas · Cuadradas · 45,45g',
     image:'https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/wearables/gentle-monster-eyewear2/imgs/Huawei-X-gentle-monster-eyewear-2.jpg',
     description:'HUAWEI X Gentle Monster Eyewear II SMART KUBO-01: gafas ópticas inteligentes con montura cuadrada y lentes claras, la opción más profesional y minimalista de la colección. Diseñadas para usuarios que llevan gafas graduadas y necesitan audio inteligente en reuniones, viajes y trabajo. Bluetooth 5.2 con 2 micrófonos de reducción de ruido y 5h de autonomía.',
@@ -2956,6 +3030,7 @@ PRODUCTS.push(
   // ── JBL GO 5 Negro ────────────────────────────────────────────────────────
   { id:127, name:'JBL GO 5 Negro', brand:'JBL', category:'altavoces',
     price:49.99,
+    oldPrice: 64.99,
     badge:'4,8W · IP67 · 5h · BT 5.3',
     image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20go5%20bk_1.jpg',
     description:'El altavoz portátil más compacto de JBL con audio potente para su tamaño (4,8W RMS). Bluetooth 5.3 para conexión instantánea, resistencia total al agua y polvo IP67 (sumergible) y hasta 5 horas de reproducción. Carga rápida via USB-C. Diseño de bolsillo — cabe en cualquier bolso.',
@@ -2974,6 +3049,7 @@ PRODUCTS.push(
   // ── JBL Clip 5 Negro ─────────────────────────────────────────────────────
   { id:128, name:'JBL Clip 5 Negro', brand:'JBL', category:'altavoces',
     price:64.99,
+    oldPrice: 79.99,
     badge:'7W · IP67 · 12h · Clip mosquetón',
     image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20clip5%20bk_1.jpg',
     description:'Altavoz portátil JBL con clip mosquetón integrado para engancharlo a la mochila, cinturón o tienda de campaña. 7W RMS con graves profundos, Bluetooth 5.3, IP67 sumergible y hasta 12 horas de batería. Carga USB-C. El compañero de aventuras ideal.',
@@ -2993,6 +3069,7 @@ PRODUCTS.push(
   // ── JBL Flip 6 Negro ─────────────────────────────────────────────────────
   { id:129, name:'JBL Flip 6 Negro', brand:'JBL', category:'altavoces',
     price:99.99,
+    oldPrice: 119.99,
     badge:'30W · IP67 · 12h · PartyBoost',
     image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20flip6%20bk_1.jpg',
     description:'El altavoz portátil más popular de JBL: 30W RMS con configuración 2×15W para un sonido potente y equilibrado. IP67, 12 horas de batería, carga USB-C y tecnología PartyBoost para conectar múltiples altavoces JBL en red. Sonido envolvente con radiadores pasivos.',
@@ -3013,6 +3090,7 @@ PRODUCTS.push(
   // ── JBL Flip 7 Blanco ────────────────────────────────────────────────────
   { id:130, name:'JBL Flip 7 Blanco', brand:'JBL', category:'altavoces',
     price:129.99,
+    oldPrice: 159.99,
     badge:'35W · IP67 · 12h · Auracast',
     image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20flip7%20wh_1.jpg',
     description:'JBL Flip 7: la evolución del Flip 6 con 35W RMS (+17% potencia) y tecnología Auracast™ para compartir audio con múltiples dispositivos Bluetooth simultáneamente. Bluetooth 5.3, IP67 sumergible, 12 horas de batería y diseño más compacto. Novedad 2025.',
@@ -3033,6 +3111,7 @@ PRODUCTS.push(
   // ── JBL Charge 6 Negro ───────────────────────────────────────────────────
   { id:131, name:'JBL Charge 6 Negro', brand:'JBL', category:'altavoces',
     price:169.99,
+    oldPrice: 199.99,
     badge:'45W · IP67 · 24h · PowerBank USB-A',
     image:'https://cdn2.depau.es/articulos/448/448/fixed/art_jbl-alt%20charge%206%20bk_1.jpg',
     description:'El altavoz portátil premium de JBL: 45W RMS con sonido potente y graves profundos, 24 horas de batería y función PowerBank USB-A para cargar tu móvil. IP67 sumergible, Bluetooth 5.3, Auracast™ y compatible con PartyBoost. El mejor altavoz portátil de la gama estándar JBL.',
@@ -3054,6 +3133,7 @@ PRODUCTS.push(
   // ── Sonos Era 100 Shadow Black ────────────────────────────────────────────
   { id:132, name:'Sonos Era 100 Shadow Black', brand:'Sonos', category:'altavoces',
     price:179.00,
+    oldPrice: 219,
     badge:'Wi-Fi · Dolby Atmos · AirPlay 2 · Alexa',
     image:'https://media.sonos.com/images/znqtjj88/production/ba7417c9ec5d2dcf54f46a4b3481eb1d5d55d1b5-2000x2000.png',
     description:'Sonos Era 100 en Shadow Black: altavoz inteligente compacto con sonido de alta fidelidad, Wi-Fi + Bluetooth, Trueplay Tuning automático que analiza el espacio y ajusta el audio, Dolby Atmos y Amazon Alexa integrada. Compatible con más de 100 servicios de streaming. Configurable en par estéreo.',
@@ -3073,6 +3153,7 @@ PRODUCTS.push(
   // ── Sonos Roam 2 Shadow Black ─────────────────────────────────────────────
   { id:133, name:'Sonos Roam 2 Shadow Black', brand:'Sonos', category:'altavoces',
     price:199.00,
+    oldPrice: 249,
     badge:'Portátil · IP67 · 10h · Alexa + Google',
     image:'https://media.sonos.com/images/znqtjj88/production/110a711ffb1d9ec82743734ef7477a7d400c8d11-2400x2400.png',
     description:'Sonos Roam 2: el altavoz portátil inteligente que cambia entre Wi-Fi (en casa) y Bluetooth (en movimiento) automáticamente. IP67 totalmente sumergible, 10 horas de batería, carga Qi inalámbrica y USB-C. Amazon Alexa y Google Assistant integrados. AutoPlay detecta la red y lanza el audio al llegar a casa. Solo 432g.',
@@ -3093,6 +3174,7 @@ PRODUCTS.push(
   // ── Sonos Era 100 White ───────────────────────────────────────────────────
   { id:134, name:'Sonos Era 100 White', brand:'Sonos', category:'altavoces',
     price:229.00,
+    oldPrice: 279,
     badge:'Wi-Fi · Dolby Atmos · AirPlay 2 · Alexa',
     image:'https://media.sonos.com/images/znqtjj88/production/c730c924a2d9fe4d3a3b9b9cb7432b7afd0ab392-2000x2000.png',
     description:'Sonos Era 100 en blanco: altavoz inteligente compacto con sonido de alta fidelidad, Wi-Fi + Bluetooth, Trueplay Tuning automático, Dolby Atmos y Amazon Alexa integrada. Más de 100 servicios de streaming. Configurable en par estéreo con otro Era 100. Diseño minimalista para cualquier espacio.',
@@ -3112,6 +3194,7 @@ PRODUCTS.push(
   // ── Sonos Era 300 White ───────────────────────────────────────────────────
   { id:135, name:'Sonos Era 300 White', brand:'Sonos', category:'altavoces',
     price:399.00,
+    oldPrice: 479,
     badge:'Spatial Audio · 6 drivers · Dolby Atmos 360°',
     image:'https://media.sonos.com/images/znqtjj88/production/1dfecdf1513cd96cd28e789adac4957b97adf50b-1800x1800.png',
     description:'El altavoz de audio espacial de Sonos: 6 drivers orientados en 5 direcciones para sonido 360° envolvente. Dolby Atmos nativo, Sony 360 Reality Audio, Trueplay Tuning avanzado con análisis de sala. Amazon Alexa integrada, AirPlay 2. El mejor altavoz de sobremesa de Sonos para escucha crítica.',
@@ -3131,6 +3214,7 @@ PRODUCTS.push(
   // ── Sonos Move 2 Olive ────────────────────────────────────────────────────
   { id:136, name:'Sonos Move 2 Olive', brand:'Sonos', category:'altavoces',
     price:499.00,
+    oldPrice: 599,
     badge:'Portátil + Casa · IP56 · 24h · Alexa + Google',
     image:'https://media.sonos.com/images/znqtjj88/production/87e816c0a480d8a27c1d379e02e84d84f6db5041-1280x1280.png',
     description:'Sonos Move 2 en Olive: el altavoz premium para hogar y exterior. Wi-Fi en casa, Bluetooth en movimiento. IP56 resistente al agua y lluvia, 24 horas de batería, carga por base magnética + USB-C. Amazon Alexa y Google Assistant integrados, AirPlay 2 y Trueplay Tuning. 3 canales amplificados con sonido Sonos de máxima calidad en cualquier lugar.',
@@ -3160,6 +3244,7 @@ PRODUCTS.push(
   // ── Marshall Willen II Black and Brass ───────────────────────────────────
   { id:137, name:'Marshall Willen II Black and Brass', brand:'Marshall', category:'altavoces',
     price:119.00,
+    oldPrice: 149,
     badge:'10W · IP67 · 17h · BT 5.3',
     image:'https://images.ctfassets.net/javen7msabdh/64p3oStsWhiiMKa5EZZ7ck/5a834629dd5f778ef19b71e9fbde9cb8/willen-ii-black-and-brass-front-desktop.jpeg',
     description:'El altavoz portátil más compacto de Marshall. 10W RMS con el inconfundible diseño rock, Bluetooth 5.3 de largo alcance (100m), resistencia IP67 sumergible y hasta 17 horas de batería. Carga rápida: 20 min = 5,5 h de música. Micrófono integrado para llamadas.',
@@ -3179,6 +3264,7 @@ PRODUCTS.push(
   // ── Marshall Emberton III Black and Brass ────────────────────────────────
   { id:138, name:'Marshall Emberton III Black and Brass', brand:'Marshall', category:'altavoces',
     price:149.00,
+    oldPrice: 179,
     badge:'38W · IP67 · 32h · BT 5.3 · 360°',
     image:'https://images.ctfassets.net/javen7msabdh/Fttl4DrU7xxpEqrPBRiRB/58175527eaf6b1c3a114bfd04e5bbc9b/emberton-iii-blackandbrass-front-desktop.jpeg',
     description:'El best-seller de Marshall redefinido. 38W RMS de potencia real (2×19W) con sonido 360° envolvente. IP67 sumergible, Bluetooth 5.3 a 100m y récord de batería: 32+ horas. Carga rápida aporta 6 horas en solo 20 minutos. Rejilla metálica y acabado Black and Brass icónico.',
@@ -3199,6 +3285,7 @@ PRODUCTS.push(
   // ── Marshall Stockwell II Black and Brass ────────────────────────────────
   { id:139, name:'Marshall Stockwell II Black and Brass', brand:'Marshall', category:'altavoces',
     price:189.00,
+    oldPrice: 229,
     badge:'60W · IPX4 · 20h · 2.1 estéreo · Asa cuero',
     image:'https://images.ctfassets.net/javen7msabdh/64OGfz8TZlKfEN5YPVFCkF/0e2dc03e11f1bfb9f85ab56f4e30b0b4/stockwell-ii-front-desktop-1.jpeg',
     description:'60W de potencia 2.1 (subwoofer 30W + 2 tweeters 15W) en formato portátil con asa de cuero. IPX4 resistente a salpicaduras, Bluetooth 5.0, 20 horas de batería y entrada jack 3,5mm. El altavoz de alto rendimiento Marshall para llevar a cualquier espacio.',
@@ -3218,6 +3305,7 @@ PRODUCTS.push(
   // ── Marshall Acton III Black ─────────────────────────────────────────────
   { id:140, name:'Marshall Acton III Black', brand:'Marshall', category:'altavoces',
     price:249.00,
+    oldPrice: 299,
     badge:'60W · BT 5.2 · Estantería · Controles analógicos',
     image:'https://images.ctfassets.net/javen7msabdh/2fAsrrgSUJsQwe7LKUphdO/0fd22fbd4cd8c83553d784505d15fde1/acton-iii-black-plp.jpeg',
     description:'El altavoz de estantería más icónico de Marshall. 60W (2.1: woofer 30W + 2×15W tweeter), Bluetooth 5.2 con LE Audio y entrada jack 3,5mm. Controles analógicos de volumen, bajos y agudos. Un mueble de audio con alma de rock.',
@@ -3237,6 +3325,7 @@ PRODUCTS.push(
   // ── Marshall Stanmore III Black ──────────────────────────────────────────
   { id:141, name:'Marshall Stanmore III Black', brand:'Marshall', category:'altavoces',
     price:349.00,
+    oldPrice: 419,
     badge:'80W · BT 5.2 · Estantería · RCA + Jack · 97dB',
     image:'https://images.ctfassets.net/javen7msabdh/5LOAFWVpiW6lzYx5Kva89z/16046df6b06376f322bc253117ad4977/stanmore_iii-front-desktop-1.jpeg',
     description:'La joya de la corona de Marshall. 80W RMS (woofer 50W + 2×15W tweeter), Bluetooth 5.2, entradas jack 3,5mm y RCA estéreo. Controles analógicos con perillas de bronce y 97dB SPL máximo. El icono del rock en tu salón.',
@@ -3256,6 +3345,7 @@ PRODUCTS.push(
   // ── Edifier R1280DB Black ────────────────────────────────────────────────
   { id:142, name:'Edifier R1280DB Black', brand:'Edifier', category:'altavoces',
     price:119.99,
+    oldPrice: 149.99,
     badge:'42W · BT 5.1 · Óptica · Coaxial · Mando IR',
     image:'https://edifier-online.com/cdn/shop/files/edifier-r1280db-black-2_924d95ae-99a6-4e7a-afd2-b78b4f0d6894.png?v=1775725999&width=800',
     description:'El altavoz de estantería más vendido de Edifier. 42W RMS (2×21W), tweeter silk dome de 13mm y woofer de 4" con bass reflex. Conectividad completa: Bluetooth 5.1, óptica, coaxial y 2×RCA. Mando a distancia IR incluido. El punto de entrada perfecto al audio de calidad.',
@@ -3276,6 +3366,7 @@ PRODUCTS.push(
   // ── Edifier R1280DBs Black ───────────────────────────────────────────────
   { id:143, name:'Edifier R1280DBs Black', brand:'Edifier', category:'altavoces',
     price:139.99,
+    oldPrice: 169.99,
     badge:'42W · BT 5.0 · Salida subwoofer · Bass reflex frontal',
     image:'https://us.edifier.com/cdn/shop/files/R1280DBs-Brown-1.jpg?v=1761712444&width=800',
     description:'Evolución del R1280DB con salida dedicada para subwoofer externo y crossover automático. Puerto de bass reflex frontal para mayor impacto de graves sin espacio libre detrás. Bluetooth 5.0, óptica, coaxial y doble RCA. El upgrade ideal para los que quieren más bajos.',
@@ -3295,6 +3386,7 @@ PRODUCTS.push(
   // ── Edifier R1700BT Brown ────────────────────────────────────────────────
   { id:144, name:'Edifier R1700BT Brown', brand:'Edifier', category:'altavoces',
     price:149.99,
+    oldPrice: 179.99,
     badge:'66W · BT 5.1 · Nearfield 10° · Eagle Eye tweeter',
     image:'https://us.edifier.com/cdn/shop/files/R1700BT-Brown-7.jpg?v=1761635845&width=800',
     description:'Monitor activo con diseño nearfield inclinado 10° para escucha en escritorio. 66W RMS con el tweeter "Eagle Eye" de 19mm silk dome. Bluetooth 5.1, doble RCA y AUX 3,5mm. El favorito de productores y audiofílos de escritorio.',
@@ -3315,6 +3407,7 @@ PRODUCTS.push(
   // ── Edifier R2000DB Brown ────────────────────────────────────────────────
   { id:145, name:'Edifier R2000DB Brown', brand:'Edifier', category:'altavoces',
     price:259.99,
+    oldPrice: 309.99,
     badge:'120W · BT 5.1 · Hi-Fi · Tweeter 25mm · Mando IR',
     image:'https://us.edifier.com/cdn/shop/files/R2000DB-Brown-3.jpg?v=1763441435&width=800',
     description:'El altavoz de estantería Hi-Fi de alta potencia de Edifier. 120W RMS con tweeter "Eagle Eye" de 25mm y dos drivers de 5" por canal. Bluetooth 5.1 con aptX, óptica, coaxial y doble RCA. Mando a distancia IR. El salto cualitativo definitivo.',
@@ -3335,6 +3428,7 @@ PRODUCTS.push(
   // ── Edifier S1000MKII Brown ──────────────────────────────────────────────
   { id:146, name:'Edifier S1000MKII Brown', brand:'Edifier', category:'altavoces',
     price:373.99,
+    oldPrice: 449.99,
     badge:'120W · BT 5.0 aptX HD · Hi-Res Audio · Titanio + Aluminio',
     image:'https://us.edifier.com/cdn/shop/files/S1000MKII-Brown-12.jpg?crop=center&height=1024&v=1762422696&width=1024',
     description:'El altavoz Hi-Res Audio certificado de Edifier. 120W RMS con woofer de 5,5" en aluminio y tweeter de 1" en titanio, respuesta hasta 40kHz. Bluetooth 5.0 aptX HD para streaming a 24-bit/48kHz. Certificado Hi-Res Audio (24-bit/192kHz). El sonido de estudio en tu habitación.',
@@ -3363,6 +3457,7 @@ PRODUCTS.push(
   // ── Audio Pro Addon C5 MkII W ────────────────────────────────────────────
   { id:147, name:'Audio Pro Addon C5 MkII W', brand:'Audio Pro', category:'altavoces',
     price:299.00,
+    oldPrice: 359,
     badge:'41W · AirPlay 2 · Google Cast · Spotify Connect · Wi-Fi+BT',
     image:'https://audiopro.com/cdn/shop/files/Hero-wireless-multiroom-speaker-C5MkII-W-black-lifestyle02-airplay2-google-cast-chromecast-AudioPro.jpg?v=1758700369&width=800',
     description:'Altavoz multiroom compacto con todo el ecosistema de streaming. 41W RMS (2×8W tweeter + 25W woofer), Wi-Fi 802.11 b/g/n/ac dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Streaming hasta 24bit/96kHz. Entradas LINE IN (RCA) y salida SUB OUT. Ideal para habitación o escritorio premium.',
@@ -3386,6 +3481,7 @@ PRODUCTS.push(
   // ── Audio Pro Drumfire II Black ──────────────────────────────────────────
   { id:148, name:'Audio Pro Drumfire II Black', brand:'Audio Pro', category:'altavoces',
     price:385.00,
+    oldPrice: 459,
     badge:'300W · AirPlay 2 · Tidal Connect · Qobuz · Wi-Fi+BT · Floor-standing',
     image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-Drumfire-II-black-airplay2-google-cast-chromecast-AudioPro_1.png?v=1751551482&width=800',
     description:'Altavoz floor-standing inalámbrico de alta potencia. ~300W RMS con configuración 2.1 interna (sub 8" + 2×woofer 4,5" + 2×tweeter 1"). Wi-Fi, Bluetooth 4.2, AirPlay 2, Google Cast, Tidal Connect, Qobuz y Amazon Music. Diseño plegable que revela el subwoofer frontal. El centro de audio de cualquier salón.',
@@ -3410,6 +3506,7 @@ PRODUCTS.push(
   // ── Audio Pro Addon C10 MkII W ───────────────────────────────────────────
   { id:149, name:'Audio Pro Addon C10 MkII W', brand:'Audio Pro', category:'altavoces',
     price:399.00,
+    oldPrice: 479,
     badge:'80W · AirPlay 2 · Google Cast · Spotify Connect · Wi-Fi+BT · 45Hz',
     image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C10MkII-W-airplay2-google-cast-chromecast-AudioPro-black_1_8e1ce5f3-2eba-4ef7-a66f-d1ee29c5db1b.png?v=1759126923&width=800',
     description:'La evolución del altavoz multiroom de estantería Audio Pro. 80W RMS (2×20W tweeter + 40W woofer), respuesta 45Hz–22kHz, Wi-Fi dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Streaming hasta 24bit/96kHz. Entradas LINE IN y salida SUB OUT para expandir el sistema con un subwoofer.',
@@ -3433,6 +3530,7 @@ PRODUCTS.push(
   // ── Audio Pro A15 W Black ────────────────────────────────────────────────
   { id:150, name:'Audio Pro A15 W Black', brand:'Audio Pro', category:'altavoces',
     price:399.00,
+    oldPrice: 479,
     badge:'40W · AirPlay 2 · Spotify Connect · Wi-Fi+BT · 19h · IPX2 · Portátil',
     image:'https://audiopro.com/cdn/shop/files/wireless-portable-multiroom-speaker-A15-black-airplay2-google-cast-chromecast-AudioPro_1.png?v=1759212245&width=800',
     description:'Altavoz multiroom portátil con la conectividad completa de Audio Pro. 40W RMS, Wi-Fi dual band, Bluetooth 4.2, AirPlay 2, Google Cast y Spotify Connect. Batería para 19 horas de reproducción, resistencia IPX2 (lluvia ligera) y entrada AUX 3,5mm. Lleva tu ecosistema multiroom a cualquier habitación sin cables.',
@@ -3455,6 +3553,7 @@ PRODUCTS.push(
   // ── Audio Pro C20 W Black ────────────────────────────────────────────────
   { id:151, name:'Audio Pro C20 W Black', brand:'Audio Pro', category:'altavoces',
     price:549.00,
+    oldPrice: 649,
     badge:'190W · AirPlay 2 · HDMI ARC · PHONO · Wi-Fi+BT 5.0 · Hi-Res',
     image:'https://audiopro.com/cdn/shop/files/wireless-multiroom-speaker-C20W-airplay2-google-cast-chromecast-AudioPro-black_1.png?v=1755610690&width=800',
     description:'El altavoz de sala de estar definitivo de Audio Pro. 190W RMS (2×30W tweeter + 130W woofer 6,5"), Bluetooth 5.0, Wi-Fi, AirPlay 2, Google Cast y Spotify Connect. Entradas: LINE IN, PHONO con preamp RIAA para tocadiscos, Óptica y HDMI ARC para TV. Streaming hasta 24bit/192kHz.',
@@ -3479,6 +3578,7 @@ PRODUCTS.push(
   // ── Logitech Z150 ────────────────────────────────────────────────────────
   { id:152, name:'Logitech Z150 Multimedia Speakers', brand:'Logitech', category:'altavoces',
     price:27.00,
+    oldPrice: 34.99,
     badge:'~3W · 2.0 · Cable 3,5mm · Ultracompacto · Control volumen',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/6/60858/logitech-z150-multimedia-speakers-blancos.jpg',
     description:'Los altavoces multimedia más compactos y asequibles de Logitech. Configuración 2.0 estéreo, sonido limpio para escritorio con cable 3,5mm y control de volumen integrado. Compatibles con cualquier PC, Mac, tablet o smartphone con salida jack. El complemento esencial de cualquier mesa de trabajo.',
@@ -3496,6 +3596,7 @@ PRODUCTS.push(
   // ── Logitech Z313 2.1 ────────────────────────────────────────────────────
   { id:153, name:'Logitech Z313 Speaker System 2.1', brand:'Logitech', category:'altavoces',
     price:44.99,
+    oldPrice: 54.99,
     badge:'25W · 2.1 · Subwoofer downfire · Cable 3,5mm · 48Hz–20kHz',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/3/39883/high-resolution-z313-satellite-top-withref.jpg',
     description:'Sistema 2.1 de Logitech con subwoofer downfire dedicado para bajos potentes. 25W RMS (50W pico), respuesta 48Hz–20kHz. Dos satélites compactos y control de volumen con jack de auriculares en el subwoofer. El sistema 2.1 más vendido de Logitech para escritorio o sala de estar.',
@@ -3514,6 +3615,7 @@ PRODUCTS.push(
   // ── Logitech Z207 Bluetooth ──────────────────────────────────────────────
   { id:154, name:'Logitech Z207 2.0 Bluetooth', brand:'Logitech', category:'altavoces',
     price:54.99,
+    oldPrice: 64.99,
     badge:'5W · 2.0 · Bluetooth 4.2 · Easy-Switch · Radiador pasivo · Escritorio',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/25/257919/1400-logitech-z207-altavoces-bluetooth-20.jpg',
     description:'Altavoces 2.0 Bluetooth para escritorio con Easy-Switch para alternar entre dos dispositivos simultáneamente. 5W RMS, radiador pasivo para graves mejorados, Bluetooth 4.2 con alcance 10m y entrada 3,5mm adicional. Jack de auriculares frontal. Diseño minimalista perfecto para escritorio o mesilla.',
@@ -3533,6 +3635,7 @@ PRODUCTS.push(
   // ── Logitech Z407 Bluetooth 2.1 ─────────────────────────────────────────
   { id:155, name:'Logitech Z407 2.1 Bluetooth', brand:'Logitech', category:'altavoces',
     price:94.99,
+    oldPrice: 114.99,
     badge:'40W · 2.1 · Bluetooth 5.0 · Subwoofer · Control inalámbrico · 40Hz',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/33/331619/1266-logitech-z407-bluetooth-altavoces-para-ordenador-con-subwoofer-y-control-inalambrico.jpg',
     description:'Sistema 2.1 Bluetooth con control inalámbrico incluido. 40W RMS (2×10W satélites + 20W subwoofer), Bluetooth 5.0 (20m), respuesta 40Hz–20kHz. Dial rotatorio inalámbrico para ajuste de volumen a distancia. El sistema multimedia más completo de Logitech para trabajo y entretenimiento.',
@@ -3553,6 +3656,7 @@ PRODUCTS.push(
   // ── Logitech Z623 THX 2.1 ───────────────────────────────────────────────
   { id:156, name:'Logitech Z623 2.1 THX', brand:'Logitech', category:'altavoces',
     price:139.99,
+    oldPrice: 169.99,
     badge:'200W · 2.1 · THX Certified · 3,5mm + RCA · Sub 130W · 35Hz',
     image:'https://thumb.pccomponentes.com/w-530-530/articles/4/40168/1972-logitech-z623-altavoces-con-subwoofer-200w-rms-comprar.jpg',
     description:'El sistema de altavoces multimedia de referencia de Logitech, certificado THX. 200W RMS totales (2×35W satélites + 130W subwoofer), respuesta 35Hz–20kHz. Tres entradas: 2× 3,5mm y 1× RCA estéreo. El estándar de facto para escritorios de alto rendimiento, mezclas de audio, streaming y gaming.',
