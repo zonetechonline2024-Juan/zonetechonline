@@ -41,56 +41,8 @@ const PRODUCTS = [
     }
   },
 
-  // ── 2 · Xiaomi Watch S3 ──────────────────────────────────────────────────
-  {
-    id: 2,
-    name: 'Xiaomi Watch S3',
-    brand: 'Xiaomi',
-    category: 'relojes',
-    price: 99.95,
-    oldPrice: 129.95,
-    badge: 'Nuevo 2024',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20sv_1.jpg'
-    ],
-    description: 'Smartwatch premium con pantalla AMOLED 1,43" HD y cristal de zafiro. GPS integrado, 150+ modos deportivos, NFC y llamadas Bluetooth. Hasta 12 días de batería.',
-    specs: {
-      'Pantalla': 'AMOLED 1,43" HD',
-      'Cristal': 'Zafiro',
-      'NFC': 'Sí',
-      'GPS': 'Integrado',
-      'Llamadas BT': 'Sí',
-      'Batería': 'Hasta 12 días',
-      'SKU': 'XIA-RELOJ WATCH S3 BK'
-    }
   },
 
-  // ── 3 · Xiaomi Watch S4 Sport ────────────────────────────────────────────
-  {
-    id: 3,
-    name: 'Xiaomi Watch S4 Sport',
-    brand: 'Xiaomi',
-    category: 'relojes',
-    price: 149.95,
-    oldPrice: 179.95,
-    badge: 'Sport Edition',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s4%20sport%20bk_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s4%20sport%20bk_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_xia-reloj%20watch%20s3%20bk_1.jpg'
-    ],
-    description: 'Smartwatch deportivo premium con GPS dual banda y pantalla AMOLED 1,43". Más de 140 modos deportivos, ECG, SpO₂, NFC y hasta 10 días de batería.',
-    specs: {
-      'Pantalla': 'AMOLED 1,43"',
-      'GPS': 'Dual banda',
-      'ECG': 'Sí',
-      'NFC': 'Sí',
-      'Modos deportivos': '140+',
-      'Batería': 'Hasta 10 días',
-      'SKU': 'XIA-RELOJ WATCH S4 SPORT BK'
-    }
   },
 
   // ── 4 ───────────────────────────────────────────────────────────────────
@@ -437,112 +389,12 @@ PRODUCTS.push(
     }
   },
 
-  // ── 17 · Samsung Galaxy Watch Ultra 47mm ────────────────────────────────────
-  {
-    id: 17,
-    name: 'Samsung Galaxy Watch Ultra 47mm Blanco',
-    brand: 'Samsung',
-    category: 'relojes',
-    price: 549.99,
-    oldPrice: 649.99,
-    badge: 'Ultra Premium',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l705%2047%20bt%20wh_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l705%2047%20bt%20wh_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l500%2046%20bt%20wh_1.jpg'
-    ],
-    description: 'El smartwatch más avanzado de Samsung. Carcasa de Titanio Grado 4. Super AMOLED 1,5" ultra resistente. GPS multibanda, ECG, SpO₂, composición corporal y presión arterial. Galaxy AI completo. Hasta 60h batería.',
-    specs: {
-      'Pantalla': 'Super AMOLED 1,5"',
-      'Carcasa': 'Titanio Grado 4',
-      'GPS': 'Multibanda',
-      'ECG + Presión arterial': 'Sí',
-      'Galaxy AI': 'Sí',
-      'Batería': 'Hasta 60h (100h modo ahorro)',
-      'P/N Depau': 'SAM-RELOJ L705 47 BT WH',
-      'Fuente': 'depau.es'
-    }
   },
 
-  // ── 18 · Galaxy Watch 7 40mm ────────────────────────────────────────────────
-  {
-    id: 18,
-    name: 'Samsung Galaxy Watch 7 40mm Verde',
-    brand: 'Samsung',
-    category: 'relojes',
-    price: 249.99,
-    oldPrice: 299.99,
-    badge: 'Nuevo 2024',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l300%2040%20bt%20gree_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l300%2040%20bt%20gree_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20sv_1.jpg'
-    ],
-    description: 'Smartwatch con procesador 3nm de última generación. Super AMOLED 1,3" circular. GPS multibanda, ECG, SpO₂, temperatura y sensor de composición corporal. Galaxy AI. Hasta 40h batería.',
-    specs: {
-      'Pantalla': 'Super AMOLED 1,3" circular',
-      'Procesador': '3nm',
-      'GPS': 'Multibanda',
-      'ECG': 'Sí',
-      'Composición corporal': 'Sí',
-      'Batería': 'Hasta 40h (87h modo ahorro)',
-      'P/N Depau': 'SAM-RELOJ L300 40 BT GREE',
-      'Fuente': 'depau.es'
-    }
   },
 
-  // ── 19 · Galaxy Watch 7 44mm ────────────────────────────────────────────────
-  {
-    id: 19,
-    name: 'Samsung Galaxy Watch 7 44mm Plata',
-    brand: 'Samsung',
-    category: 'relojes',
-    price: 279.99,
-    oldPrice: 329.99,
-    badge: 'Más vendido',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20sv_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20sv_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l300%2040%20bt%20gree_1.jpg'
-    ],
-    description: 'Smartwatch 44mm con pantalla Super AMOLED 1,5" circular. Procesador 3nm. GPS multibanda, ECG, SpO₂, temperatura y composición corporal avanzada. Galaxy AI integrado. Hasta 40h batería.',
-    specs: {
-      'Pantalla': 'Super AMOLED 1,5" circular',
-      'Procesador': '3nm',
-      'GPS': 'Multibanda',
-      'ECG': 'Sí',
-      'Galaxy AI': 'Sí',
-      'Batería': 'Hasta 40h (87h modo ahorro)',
-      'P/N Depau': 'SAM-RELOJ L310 44 BT SV',
-      'Fuente': 'depau.es'
-    }
   },
 
-  // ── 20 · Galaxy Watch 8 Classic 46mm ───────────────────────────────────────
-  {
-    id: 20,
-    name: 'Samsung Galaxy Watch 8 Classic 46mm Blanco',
-    brand: 'Samsung',
-    category: 'relojes',
-    price: 449.99,
-    oldPrice: 499.99,
-    badge: 'Premium',
-    image: 'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l500%2046%20bt%20wh_1.jpg',
-    images: [
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l500%2046%20bt%20wh_1.jpg',
-      'https://cdn2.depau.es/articulos/448/448/fixed/art_sam-reloj%20l310%2044%20bt%20sv_1.jpg'
-    ],
-    description: 'Smartwatch premium de 46mm con bisel rotatorio físico icónico. Super AMOLED 1,5". ECG, SpO₂, composición corporal y presión arterial. Galaxy AI completo. Resistencia 5 ATM. Hasta 40h batería.',
-    specs: {
-      'Pantalla': 'Super AMOLED 1,5"',
-      'Bisel': 'Rotatorio físico',
-      'GPS': 'Multibanda',
-      'ECG + Presión arterial': 'Sí',
-      'Galaxy AI': 'Sí',
-      'Batería': 'Hasta 40h (87h modo ahorro)',
-      'P/N Depau': 'SAM-RELOJ L500 46 BT WH',
-      'Fuente': 'depau.es'
-    }
   }
 
 );
@@ -5608,10 +5460,10 @@ function initAIAssistant() {
     }
 
     if (/compar|mejor|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>35 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>35 auriculares</strong> (7 marcas: + CMF by Nothing), <strong>35 gafas</strong> y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 161 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return 'Para recomendarte mejor, cuéntame: ¿buscas reloj, anillo, auriculares, gafas o <strong>altavoz</strong>? ¿Practicas deporte? ¿Audio Hi-Fi, XR/AR o smart speaker? Tenemos <strong>29 relojes</strong> (7 marcas), <strong>26 anillos</strong> (7 marcas), <strong>35 auriculares</strong> (7 marcas: + CMF by Nothing), <strong>35 gafas</strong> y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 155 productos desde €19,99. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>161 productos premium</strong>: 35 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 35 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, CMF by Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech). <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    return 'En ZoneTechOnline tenemos <strong>155 productos premium</strong>: 29 relojes inteligentes (Apple, Samsung, Huawei, Amazfit, Xiaomi, Coros, Garmin), 26 anillos (7 marcas), 35 auriculares (Sony, Sennheiser, Moondrop, Shokz, Nothing, CMF by Nothing, Google), 35 gafas inteligentes (Ray-Ban Meta, XREAL, VITURE, Even Realities, RayNeo, Rokid, Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech). <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -5643,7 +5495,7 @@ function initAIAssistant() {
     if (!opened) {
       opened = true;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>35 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>35 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 161 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
+        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>29 relojes</strong>, <strong>26 anillos inteligentes</strong>, <strong>35 auriculares premium</strong>, <strong>35 gafas inteligentes</strong> (Ray-Ban Meta, XREAL AR, VITURE XR, Even Realities G1, RayNeo, Rokid AR y Gentle Monster) y <strong>30 altavoces</strong> (Marshall · Edifier · JBL · Sonos · Audio Pro · Logitech) — 155 productos, desde €19,99. ¿Buscas reloj, anillo, auriculares, gafas XR/AR, altavoz o quieres que te recomiende algo?', 'bot');
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
