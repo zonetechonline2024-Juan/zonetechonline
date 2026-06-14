@@ -3332,34 +3332,16 @@ function initReviews() {
   var errorEl      = document.getElementById('cr-error');
   var submitBtn    = document.getElementById('cr-submit');
   var productSel   = document.getElementById('cr-product');
-  var productBrand = document.getElementById('cr-product-brand');
   var selectedR    = 0;
   var hints = ['','Muy mala','Mala','Regular','Buena','¡Excelente!'];
 
-  // ── Poblar el select con todos los productos del catálogo agrupados por categoría ──
-  if (productSel && typeof PRODUCTS !== 'undefined') {
-    var catLabels = { relojes:'Relojes Inteligentes', auriculares:'Auriculares', altavoces:'Altavoces', 'teclados gaming':'Teclados Gaming', smartphones:'Smartphones' };
-    var grouped = {};
+  // ── Poblar datalist con todos los productos ──
+  var dlEl = document.getElementById('cr-products-list');
+  if (dlEl && typeof PRODUCTS !== 'undefined') {
     PRODUCTS.forEach(function(p) {
-      if (!grouped[p.category]) grouped[p.category] = [];
-      grouped[p.category].push(p);
-    });
-    Object.keys(catLabels).forEach(function(cat) {
-      if (!grouped[cat] || grouped[cat].length === 0) return;
-      var og = document.createElement('optgroup');
-      og.label = catLabels[cat] || cat;
-      grouped[cat].forEach(function(p) {
-        var opt = document.createElement('option');
-        opt.value = p.name;
-        opt.dataset.brand = p.brand;
-        opt.textContent = p.name + ' — ' + p.brand;
-        og.appendChild(opt);
-      });
-      productSel.appendChild(og);
-    });
-    productSel.addEventListener('change', function() {
-      var sel = productSel.options[productSel.selectedIndex];
-      if (productBrand) productBrand.value = sel.dataset.brand || '';
+      var opt = document.createElement('option');
+      opt.value = p.name + ' — ' + p.brand;
+      dlEl.appendChild(opt);
     });
   }
 
@@ -3454,7 +3436,6 @@ function initReviews() {
     e.preventDefault();
     var name    = (document.getElementById('cr-name') || {}).value || '';
     var product = productSel ? productSel.value : '';
-    var brand   = productBrand ? productBrand.value : '';
     var rating  = ratingIn ? ratingIn.value : '';
     var text    = textarea ? textarea.value : '';
 
@@ -3470,7 +3451,7 @@ function initReviews() {
     fetch('/api/review', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, product: product, productBrand: brand, rating: parseInt(rating), text: text })
+      body: JSON.stringify({ name: name, product: product, rating: parseInt(rating), text: text })
     })
     .then(function(r) { return r.json(); })
     .then(function(data) {
@@ -3480,7 +3461,6 @@ function initReviews() {
         if (ratingIn) ratingIn.value = '';
         if (charEl) charEl.textContent = '0';
         if (hintEl) hintEl.textContent = 'Toca para valorar';
-        if (productBrand) productBrand.value = '';
         if (picker) picker.querySelectorAll('.cr-star').forEach(function(s) { s.classList.remove('active'); });
         if (successEl) { successEl.style.display = 'flex'; successEl.classList.add('visible'); }
         if (emptyEl) emptyEl.style.display = 'none';
