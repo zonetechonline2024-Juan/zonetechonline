@@ -1325,12 +1325,12 @@ function initConfigurator() {
 
   // ── Color → filter / aura / canvas-glow maps ──
   var colorFilters = {
-    'graphite': 'url(#remove-white) grayscale(100%) brightness(0.28) contrast(1.25)',
+    'graphite': 'url(#remove-white)',
     'silver':   'url(#remove-white)',
-    'pinkgold': 'url(#remove-white) sepia(70%) saturate(260%) hue-rotate(328deg) brightness(1.08)',
-    'cream':    'url(#remove-white) sepia(35%) saturate(140%) brightness(1.12)',
-    'sapphire': 'url(#remove-white) hue-rotate(198deg) saturate(190%) brightness(0.82)',
-    'green':    'url(#remove-white) hue-rotate(82deg) saturate(230%) brightness(0.84)'
+    'pinkgold': 'url(#remove-white)',
+    'cream':    'url(#remove-white)',
+    'sapphire': 'url(#remove-white)',
+    'green':    'url(#remove-white)'
   };
   var colorAuras = {
     'graphite': 'rgba(70,72,80,0.55)',
@@ -1384,6 +1384,7 @@ function initConfigurator() {
         void nameEl.offsetWidth;
         nameEl.classList.add('name-updated');
       }
+      if (swatch.dataset.img) swapWatchImg(swatch.dataset.img);
       applyColorFilter(swatch.dataset.color);
       updateConfigBadge();
     });
@@ -1408,9 +1409,13 @@ function initConfigurator() {
     });
   });
 
-  // ── Init: apply default color state (Graphite) without fade on page load ──
+  // ── Init: apply default color state and load correct image on page load ──
   var activeSwatch = document.querySelector('#strap-colors .swatch.active');
-  if (activeSwatch) applyColorFilter(activeSwatch.dataset.color, true);
+  if (activeSwatch) {
+    var initImg = document.getElementById('config-watch-svg');
+    if (initImg && activeSwatch.dataset.img) initImg.src = activeSwatch.dataset.img;
+    applyColorFilter(activeSwatch.dataset.color, true);
+  }
 
   // ── Add to cart ──
   var addBtn = document.getElementById('add-config-to-cart');
