@@ -9,7 +9,8 @@ const FILTER_MAP = {
   'headphones': 'auriculares',
   'glasses':    'gafas',
   'speakers':   'altavoces',
-  'masks':      'mascaras'
+  'masks':      'mascaras',
+  'peripherals':'perifericos'
 };
 
 // ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
@@ -1106,6 +1107,199 @@ PRODUCTS.push(
     image:'/images/products/infortisa-48.webp',
     description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose',
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-mystic-rose020725095502'}
+  }
+);
+
+
+// ─── PERIFÉRICOS GAMING (fuente: Megasur.es — junio 2026) ──────────────────
+// 29 teclados gaming verificados: 7 marcas × 5 productos
+PRODUCTS.push(
+
+  // ── ASUS ─────────────────────────────────────────────────────
+
+  { id:59, name:'TECLADO ASUS TUF GAMING K1 RGB NEGRO', brand:'ASUS', category:'perifericos',
+    price:51.99, oldPrice:61.35, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033622-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033622'}
+  },
+  { id:60, name:'TECLADO ASUS TUF GAMING K3 GEN II RGB NEGRO', brand:'ASUS', category:'perifericos',
+    price:69.99, oldPrice:82.59, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033630-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033630'}
+  },
+  { id:61, name:'TECLADO ASUS TUF GAMING K3 GEN II HATSUNE MIKU EDITION RGB', brand:'ASUS', category:'perifericos',
+    price:109.99, oldPrice:129.79, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033632-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033632'}
+  },
+  { id:49, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II X RGB NEGRO', brand:'ASUS', category:'perifericos',
+    price:139.98, oldPrice:165.18, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033634-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033634'}
+  },
+  { id:50, name:'TECLADO GAMING ASUS ROG FALCHION ACE HFX ZywOo EDITION RGB INGLES', brand:'ASUS', category:'perifericos',
+    price:174.99, oldPrice:206.49, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033636-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033636'}
+  },
+  { id:51, name:'TECLADO GAMING ASUS ROG FALCHION ACE 75 HE RGB NEGRO', brand:'ASUS', category:'perifericos',
+    price:189.99, oldPrice:224.19, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033638-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033638'}
+  },
+  { id:52, name:'TECLADO ASUS ROG STRIX SCOPE II 96 RX INHALLAMBRICO', brand:'ASUS', category:'perifericos',
+    price:219.99, oldPrice:259.59, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033860-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033860'}
+  },
+  { id:53, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II 96 INALAMBRICO RGB NEGRO', brand:'ASUS', category:'perifericos',
+    price:269.47, oldPrice:317.97, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000033626-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033626'}
+  },
+  // ── LOGITECH ─────────────────────────────────────────────────────
+
+  { id:54, name:'TECLADO LOGITECH G213 GAMING CON ILUMINACION', brand:'LOGITECH', category:'perifericos',
+    price:60.56, oldPrice:71.46, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/920-008086-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'920-008086'}
+  },
+  { id:55, name:'TECLADO GAMING LOGITECH G413 SE MECANICO USB NEGRO', brand:'LOGITECH', category:'perifericos',
+    price:128.22, oldPrice:151.3, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000019748-0.jpg',
+    description:'Switch: Mecánico',
+    specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000019748'}
+  },
+  { id:56, name:'TECLADO LOGITECH GAMING G512 USB', brand:'LOGITECH', category:'perifericos',
+    price:139.52, oldPrice:164.63, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000020626-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000020626'}
+  },
+  { id:57, name:'TECLADO LOGITECH G513 GAMING USB NEGRO CARBON', brand:'LOGITECH', category:'perifericos',
+    price:139.52, oldPrice:164.63, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/MGS0000032591-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000032591'}
+  },
+  { id:78, name:'TECLADO LOGITECH G G915 X LIGHTSPEED INALAMBRICO', brand:'LOGITECH', category:'perifericos',
+    price:159.99, oldPrice:188.79, badge:'Wireless Pro',
+    image:'https://img.megasur.es/img/MGS0000032592-0.jpg',
+    description:'Switch: GL Táctil (low-profile)',
+    specs:{'Switch':'GL Táctil (low-profile)', 'Iluminación':'RGB LIGHTSYNC per-key', 'Conexión':'Inalámbrica LIGHTSPEED 1ms + Bluetooth', 'Formato':'Full-Size', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000032592'}
+  },
+  // ── MARS GAMING ─────────────────────────────────────────────────────
+
+  { id:62, name:'TECLADO MARS GAMING MK320ES USB RGB MECANICO', brand:'MARS GAMING', category:'perifericos',
+    price:13.39, oldPrice:15.8, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000009116-0.jpg',
+    description:'Switch: Mecánico',
+    specs:{'Switch':'Mecánico', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000009116'}
+  },
+  { id:63, name:'TECLADO MARS GAMING MK124', brand:'MARS GAMING', category:'perifericos',
+    price:15.98, oldPrice:18.86, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000031004-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031004'}
+  },
+  { id:64, name:'TECLADO MARS GAMING MK124 BLANCO', brand:'MARS GAMING', category:'perifericos',
+    price:15.98, oldPrice:18.86, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000031005-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031005'}
+  },
+  { id:65, name:'KIT TECLADO + RATON MARS GAMING MCPTKLES RGB', brand:'MARS GAMING', category:'perifericos',
+    price:16.99, oldPrice:20.05, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000008843-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000008843'}
+  },
+  { id:66, name:'TECLADO MARS GAMING MK-SILENKEYSES', brand:'MARS GAMING', category:'perifericos',
+    price:19.9, oldPrice:23.48, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000038078-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038078'}
+  },
+  // ── PHOENIX TECHNOLOGIES ─────────────────────────────────────────────────────
+
+  { id:67, name:'Teclado Gaming Royal PBT Mecanico Negro', brand:'PHOENIX TECHNOLOGIES', category:'perifericos',
+    price:56.62, oldPrice:66.81, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000017092-0.jpg',
+    description:'Switch: Mecánico',
+    specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000017092'}
+  },
+  { id:68, name:'Teclado Gaming Royal PBT Mecanico Blanco', brand:'PHOENIX TECHNOLOGIES', category:'perifericos',
+    price:56.62, oldPrice:66.81, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000017093-0.jpg',
+    description:'Switch: Mecánico',
+    specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000017093'}
+  },
+  // ── GENESIS ─────────────────────────────────────────────────────
+
+  { id:69, name:'TECLADO GAMING GENESIS RHOD 350 RGB USB', brand:'GENESIS', category:'perifericos',
+    price:11.99, oldPrice:14.15, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000003250-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000003250'}
+  },
+  { id:70, name:'TECLADO GAMING GENESIS RHOD 500 RGB ESPAÑOL USB', brand:'GENESIS', category:'perifericos',
+    price:16.14, oldPrice:19.05, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000000581-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'Español QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000000581'}
+  },
+  { id:71, name:'TECLADO GAMING GENESIS RHOD 500 RGB PORTUGUES USB', brand:'GENESIS', category:'perifericos',
+    price:22.99, oldPrice:27.13, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000003246-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000003246'}
+  },
+  { id:72, name:'TECLADO GAMING GENESIS THOR230 TKL RGB USB', brand:'GENESIS', category:'perifericos',
+    price:59.99, oldPrice:70.79, badge:'TKL RGB',
+    image:'https://img.megasur.es/img/DSP0000029539-0.jpg',
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000029539'}
+  },
+  // ── CORSAIR ─────────────────────────────────────────────────────
+
+  { id:77, name:'TECLADO GAMING CORSAIR USB K55 CORE RGB', brand:'CORSAIR', category:'perifericos',
+    price:39.99, oldPrice:47.19, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000038844-0.jpg',
+    description:'Switch: Gaming',
+    specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038844'}
+  },
+  { id:74, name:'TECLADO GAMING CORSAIR K55 CORE TKL RGB NEGRO', brand:'CORSAIR', category:'perifericos',
+    price:49.99, oldPrice:58.99, badge:'TKL RGB',
+    image:'https://img.megasur.es/img/DSP0000035833-0.jpg',
+    description:'Switch: Gaming',
+    specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000035833'}
+  },
+  { id:73, name:'TECLADO GAMING CORSAIR K55 RGB PRO', brand:'CORSAIR', category:'perifericos',
+    price:64.98, oldPrice:76.68, badge:'Gaming RGB',
+    image:'https://img.megasur.es/img/DSP0000032320-0.jpg',
+    description:'Switch: Gaming',
+    specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000032320'}
+  },
+  { id:76, name:'TECLADO GAMING CORSAIR USB K70 CORE NEGRO', brand:'CORSAIR', category:'perifericos',
+    price:89.99, oldPrice:106.19, badge:'Pro Gaming',
+    image:'https://img.megasur.es/img/DSP0000038461-0.jpg',
+    description:'Switch: Gaming',
+    specs:{'Switch':'Gaming', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038461'}
+  },
+  { id:75, name:'TECLADO GAMING CORSAIR K70 CORE TKL INALAMBRICO', brand:'CORSAIR', category:'perifericos',
+    price:149.99, oldPrice:176.99, badge:'TKL RGB',
+    image:'https://img.megasur.es/img/DSP0000038098-0.jpg',
+    description:'Switch: Gaming',
+    specs:{'Switch':'Gaming', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038098'}
   }
 );
 
