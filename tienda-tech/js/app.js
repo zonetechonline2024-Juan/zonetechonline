@@ -3670,6 +3670,63 @@ function initAIAssistant() {
   }
 }
 
+// ─── PRODUCTOS ESTRELLA (footer dinámico) ────────────────────────────────────
+function renderProductosEstrella() {
+  var grid = document.getElementById('footer-products-grid');
+  if (!grid) return;
+
+  var CATS = [
+    { key: 'relojes',     label: 'Relojes Inteligentes', filter: 'watches'     },
+    { key: 'auriculares', label: 'Auriculares',           filter: 'headphones'  },
+    { key: 'altavoces',   label: 'Altavoces',             filter: 'speakers'    },
+    { key: 'perifericos', label: 'Periféricos Gaming',    filter: 'peripherals' },
+    { key: 'smartphones', label: 'Smartphones',           filter: 'smartphones' },
+  ];
+
+  var html = '';
+  CATS.forEach(function(cat) {
+    var products = PRODUCTS
+      .filter(function(p) { return p.category === cat.key; })
+      .slice(0, 4);
+    if (!products.length) return;
+
+    // Dos columnas por categoría: productos 1-2 y 3-4
+    [[0, 1], [2, 3]].forEach(function(pair) {
+      var group = products.slice(pair[0], pair[1] + 1).filter(Boolean);
+      if (!group.length) return;
+
+      var brands = group
+        .map(function(p) { return p.brand; })
+        .filter(function(v, i, a) { return a.indexOf(v) === i; })
+        .slice(0, 2).join(' · ');
+
+      var names = group
+        .map(function(p) {
+          return p.name
+            .replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO)\s+/i, '')
+            .trim().slice(0, 38);
+        })
+        .join(' · ');
+
+      var desc = group[0].description;
+      var specLine = Array.isArray(desc)
+        ? desc.slice(0, 2).join(' · ')
+        : (typeof desc === 'string' ? desc.slice(0, 70) : '');
+
+      var minPrice = Math.min.apply(null, group.map(function(p) { return p.price || 9999; }));
+      var priceStr = minPrice < 9999 ? 'desde ' + minPrice.toFixed(2) + ' EUR' : '';
+
+      html += '<div class="footer-product-item">' +
+        '<span class="footer-product-cat">' + cat.label + ' · ' + brands + '</span>' +
+        '<a href="catalogo.html?filter=' + cat.filter + '" class="footer-product-link">' + names + '</a>' +
+        '<span class="footer-product-tag">' + specLine + (priceStr ? ' · ' + priceStr : '') + '</span>' +
+      '</div>';
+    });
+  });
+
+  grid.innerHTML = html;
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -3707,6 +3764,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initClearComparator();
   initReviews();
   initAIAssistant();
+  renderProductosEstrella();
 
   // Cart toggle
   var cartToggle = document.getElementById('cart-toggle');
