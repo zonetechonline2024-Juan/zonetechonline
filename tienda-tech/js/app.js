@@ -3,14 +3,11 @@
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
 const FILTER_MAP = {
-  'all':        'todos',
-  'watches':    'relojes',
-  'rings':      'anillos',
-  'headphones': 'auriculares',
-  'glasses':    'gafas',
-  'speakers':   'altavoces',
-  'masks':      'mascaras',
-  'peripherals':'teclados gaming',
+  'all':         'todos',
+  'watches':     'relojes',
+  'headphones':  'auriculares',
+  'speakers':    'altavoces',
+  'peripherals': 'teclados gaming',
   'smartphones': 'smartphones'
 };
 
