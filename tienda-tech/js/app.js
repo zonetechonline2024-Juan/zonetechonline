@@ -1493,6 +1493,173 @@ PRODUCTS.push(
   }
 );
 
+
+// ─── AURICULARES INTELIGENTES MEGASUR (junio 2026)
+// 25 auriculares verificados: 5 marcas × 5 productos
+PRODUCTS.push(
+
+  // ── SONY ───────────────────────────────────────────────────
+
+  { id:111, name:'AURICULARES SONY WI-C100 INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
+    price:29.99, oldPrice:35.39, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000037821-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000037821'}
+  },
+  { id:110, name:'AURICULARES SONY WH-CH520 BLUETOOH BLANCO', brand:'SONY', category:'auriculares',
+    price:49.99, oldPrice:58.99, badge:'Noise Cancelling',
+    image:'https://img.megasur.es/img/MGS0000020797-0.jpg',
+    description:'ANC: Cancelación activa de ruido',
+    specs:{'ANC':'Cancelación activa de ruido','SKU Megasur':'MGS0000020797'}
+  },
+  { id:114, name:'AURICULARES SONY WF-C510 INALAMBRICO AZUL', brand:'SONY', category:'auriculares',
+    price:49.99, oldPrice:58.99, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000037829-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000037829'}
+  },
+  { id:113, name:'AURICULARES SONY WF-C710N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
+    price:69.99, oldPrice:82.59, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000037823-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000037823'}
+  },
+  { id:112, name:'AURICULARES SONY WH-CH720N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
+    price:99.99, oldPrice:117.99, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000037822-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000037822'}
+  },
+  // ── EPOS SENNHEISER ────────────────────────────────────────
+
+  { id:118, name:'AURICULARES EPOS SENNHEISER PC 5 CHAT JACK 3.5MM MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
+    price:19.99, oldPrice:23.59, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000012549-0.jpg',
+    description:'Conexión: Jack 3.5mm',
+    specs:{'Conexión':'Jack 3.5mm', 'Micrófono':'Integrado','SKU Megasur':'DSP0000012549'}
+  },
+  { id:115, name:'AURICULARES EPOS SENNHEISER PC 8 USB MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
+    price:24.99, oldPrice:29.49, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000012535-0.jpg',
+    description:'Micrófono: Integrado',
+    specs:{'Micrófono':'Integrado','SKU Megasur':'DSP0000012535'}
+  },
+  { id:116, name:'AURICULARES EPOS SENNHEISER RS 120-W TV NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
+    price:79.99, oldPrice:94.39, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000012542-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000012542'}
+  },
+  { id:117, name:'AURICULARES EPOS SENNHEISER RS 5200 RF', brand:'EPOS SENNHEISER', category:'auriculares',
+    price:89.99, oldPrice:106.19, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000012543-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000012543'}
+  },
+  { id:119, name:'AURICULARES EPOS SENNHEISER RS 2000 TV INALAMBRICO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
+    price:179.99, oldPrice:212.39, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000028398-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000028398'}
+  },
+  // ── JABRA ──────────────────────────────────────────────────
+
+  { id:123, name:'AURICULAR JABRA EVOLVE 30 II HS NEGRO', brand:'JABRA', category:'auriculares',
+    price:59.99, oldPrice:70.79, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000030414-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000030414'}
+  },
+  { id:124, name:'AURICULARES JABRA BIZ 2300 QD DUO', brand:'JABRA', category:'auriculares',
+    price:89.99, oldPrice:106.19, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000030416-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000030416'}
+  },
+  { id:121, name:'AURICULARES JABRA ENGAGE 45 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
+    price:179.99, oldPrice:212.39, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000030409-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000030409'}
+  },
+  { id:120, name:'AURICULARES JABRA EVOLVE2 65 MS', brand:'JABRA', category:'auriculares',
+    price:249.99, oldPrice:294.99, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/MGS0000025960-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'MGS0000025960'}
+  },
+  { id:122, name:'AURICULARES JABRA ENGAGE 65 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
+    price:289.99, oldPrice:342.19, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000030410-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000030410'}
+  },
+  // ── ENERGY SISTEM ──────────────────────────────────────────
+
+  { id:126, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 2 ANTHRACITE SUPRAURAL/ 30MM/ CABLE 150CM/ JACK 3.5MM/ ANTIPOP/ 20HZ', brand:'ENERGY SISTEM', category:'auriculares',
+    price:19.99, oldPrice:23.59, badge:'Audio Premium',
+    image:'https://img.megasur.es/img/DSP0000007049-0.jpg',
+    description:'Conexión: Jack 3.5mm',
+    specs:{'Conexión':'Jack 3.5mm','SKU Megasur':'DSP0000007049'}
+  },
+  { id:129, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 3 BLANCO SUPRAURAL/ 40MM/ JACK 3.5MM/ ANTIPOP/ 20HZ/ 32Ohms', brand:'ENERGY SISTEM', category:'auriculares',
+    price:24.99, oldPrice:29.49, badge:'Noise Cancelling',
+    image:'https://img.megasur.es/img/DSP0000007066-0.jpg',
+    description:'Conexión: Jack 3.5mm',
+    specs:{'Conexión':'Jack 3.5mm', 'ANC':'Cancelación activa de ruido','SKU Megasur':'DSP0000007066'}
+  },
+  { id:127, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
+    price:29.99, oldPrice:35.39, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000007055-0.jpg',
+    description:'Conectividad: Bluetooth 5.0',
+    specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007055'}
+  },
+  { id:128, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
+    price:29.99, oldPrice:35.39, badge:'Wireless',
+    image:'https://img.megasur.es/img/DSP0000007060-0.jpg',
+    description:'Conectividad: Bluetooth 5.0',
+    specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007060'}
+  },
+  { id:125, name:'AURICULARES MICRO GAMING ENERGY SISTEM ESG4 7.1 RED SUPRAURAL/ 50MM/ USB/ MULTIPLATAFORMA', brand:'ENERGY SISTEM', category:'auriculares',
+    price:34.99, oldPrice:41.29, badge:'Gaming',
+    image:'https://img.megasur.es/img/DSP0000007037-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000007037'}
+  },
+  // ── URBANISTA ──────────────────────────────────────────────
+
+  { id:130, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE', brand:'URBANISTA', category:'auriculares',
+    price:39.99, oldPrice:47.19, badge:'True Wireless',
+    image:'https://img.megasur.es/img/DSP0000014716-0.jpg',
+    description:'Tipo: True Wireless (TWS)',
+    specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014716'}
+  },
+  { id:132, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON VANILLA CREAM / AMARILLO VAINILLA', brand:'URBANISTA', category:'auriculares',
+    price:49.99, oldPrice:58.99, badge:'True Wireless',
+    image:'https://img.megasur.es/img/DSP0000013389-0.jpg',
+    description:'Tipo: True Wireless (TWS)',
+    specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013389'}
+  },
+  { id:134, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON MIDNIGHT BLACK', brand:'URBANISTA', category:'auriculares',
+    price:49.99, oldPrice:58.99, badge:'True Wireless',
+    image:'https://img.megasur.es/img/DSP0000014713-0.jpg',
+    description:'Tipo: True Wireless (TWS)',
+    specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014713'}
+  },
+  { id:131, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE', brand:'URBANISTA', category:'auriculares',
+    price:59.99, oldPrice:70.79, badge:'True Wireless',
+    image:'https://img.megasur.es/img/DSP0000013382-0.jpg',
+    description:'Tipo: True Wireless (TWS)',
+    specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013382'}
+  },
+  { id:133, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS PHOENIX DESERT ROSE CARGA SOLAR', brand:'URBANISTA', category:'auriculares',
+    price:99.99, oldPrice:117.99, badge:'True Wireless',
+    image:'https://img.megasur.es/img/DSP0000014707-0.jpg',
+    description:'Tipo: True Wireless (TWS)',
+    specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014707'}
+  }
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
