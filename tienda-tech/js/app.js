@@ -3314,6 +3314,32 @@ function initAuthModal() {
   });
 }
 
+// ─── MANIFESTO CHIPS ──────────────────────────────────────────────────────────
+
+function renderManifestoChips() {
+  if (typeof PRODUCTS === 'undefined') return;
+  var cats = [
+    { id: 'mf-chips-relojes',     cat: 'relojes',        filter: 'watches'     },
+    { id: 'mf-chips-auriculares', cat: 'auriculares',     filter: 'headphones'  },
+    { id: 'mf-chips-teclados',    cat: 'teclados gaming', filter: 'peripherals' },
+    { id: 'mf-chips-altavoces',   cat: 'altavoces',       filter: 'speakers'    },
+    { id: 'mf-chips-smartphones', cat: 'smartphones',     filter: 'smartphones' },
+  ];
+  cats.forEach(function(cfg) {
+    var el = document.getElementById(cfg.id);
+    if (!el) return;
+    PRODUCTS.filter(function(p) { return p.category === cfg.cat; })
+      .slice(0, 3)
+      .forEach(function(p) {
+        var a = document.createElement('a');
+        a.href = 'catalogo.html?filter=' + cfg.filter + '&brand=' + encodeURIComponent(p.brand);
+        a.className = 'mf-device-chip';
+        a.textContent = p.name;
+        el.appendChild(a);
+      });
+  });
+}
+
 // ─── REVIEWS ──────────────────────────────────────────────────────────────────
 
 function initReviews() {
@@ -3864,6 +3890,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderShowcase();
   renderCheapestShowcase();
   renderProductosEstrella();
+  renderManifestoChips();
 
   // Cart toggle
   var cartToggle = document.getElementById('cart-toggle');
