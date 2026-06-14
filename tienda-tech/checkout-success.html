@@ -133,7 +133,7 @@
       <div class="step">
         <div class="step-icon">🚚</div>
         <div class="step-title">Entrega estimada</div>
-        <div class="step-desc" id="delivery-est">2–4 días hábiles</div>
+        <div class="step-desc" id="delivery-est">5 a 8 días hábiles</div>
       </div>
     </div>
   </div>
@@ -207,7 +207,7 @@ localStorage.removeItem('zt_cart');
 
   // Delivery estimate
   document.getElementById('delivery-est').textContent =
-    order.shippingMethod === 'express' ? '24h hábiles (DHL Express)' : '2–4 días hábiles';
+    '5 a 8 días hábiles';
 
   // Products list
   var prodList = document.getElementById('prod-list');
@@ -232,7 +232,7 @@ localStorage.removeItem('zt_cart');
     document.getElementById('d-email').textContent   = order.customer.email   || '—';
     document.getElementById('d-address').textContent = order.customer.address || '—';
   }
-  document.getElementById('d-shipping').textContent = order.shippingMethod === 'express' ? 'Exprés 24h · DHL' : 'Estándar 2–4 días · MRW/SEUR';
+  document.getElementById('d-shipping').textContent = order.shippingMethod === 'express' ? 'Exprés · 5-8 días hábiles · DHL' : 'Estándar · 5-8 días hábiles · MRW/SEUR';
   document.getElementById('d-total').textContent    = fmt(order.total || 0);
   document.getElementById('order-detail').style.display = 'block';
 })();
