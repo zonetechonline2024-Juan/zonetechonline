@@ -1,0 +1,914 @@
+[
+  {
+    "id": 1,
+    "name": "Apple AirPods Max 2nd Gen Azul",
+    "price": 549.99,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000027018-0.jpg",
+    "description": [
+      "Cancelaci?n activa de ruido (ANC) adaptativa con chip H2",
+      "Audio espacial personalizado con seguimiento din?mico de cabeza",
+      "Transparencia adaptativa para escuchar el entorno",
+      "Hasta 20 horas de reproducci?n con ANC activado",
+      "Conectividad: Bluetooth 5.3, USB-C",
+      "Peso: 385g ? Compatible con Siri"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Apple",
+    "sku_megasur": "DSP0000027018"
+  },
+  {
+    "id": 2,
+    "name": "Apple Beats Flex Bluetooth Negro",
+    "price": 68.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000016997-0.jpg",
+    "description": [
+      "Chip Apple W1 para conectividad instant?nea con dispositivos Apple",
+      "Bluetooth 5.0 ? Cambio autom?tico entre dispositivos Apple",
+      "Hasta 12 horas de reproducci?n continua",
+      "Imanes flexibles en los auriculares para guardarlos c?modamente",
+      "Micr?fono integrado ? Compatible con iOS y Android (modo universal)",
+      "Peso: 16.4g ? Cable de cuello ultraligero"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Apple",
+    "sku_megasur": "DSP0000016997"
+  },
+  {
+    "id": 3,
+    "name": "Apple AirPods 4 Inal?mbrico Blanco",
+    "price": 135.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000028093-0.jpg",
+    "description": [
+      "Chip Apple H2 de nueva generaci?n ? Audio adaptativo",
+      "Modo Transparencia adaptativa y cancelaci?n de ruido",
+      "Audio espacial personalizado con seguimiento de cabeza",
+      "Hasta 5h de bater?a + 30h adicionales con estuche de carga",
+      "Bluetooth 5.3 ? USB-C ? Resistencia al sudor (IP54)",
+      "Compatible con Siri, Find My y cambio autom?tico de dispositivos"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Apple",
+    "sku_megasur": "DSP0000028093"
+  },
+  {
+    "id": 4,
+    "name": "Apple AirPods Max 2nd Gen Starlight",
+    "price": 544.93,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000027101-0.jpg",
+    "description": [
+      "Cancelaci?n activa de ruido (ANC) adaptativa con chip H2",
+      "Audio espacial personalizado con seguimiento din?mico de cabeza",
+      "Transparencia adaptativa para escuchar el entorno",
+      "Hasta 20 horas de reproducci?n con ANC activado",
+      "Conectividad: Bluetooth 5.3, USB-C",
+      "Peso: 385g ? Compatible con Siri ? Color Starlight"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Apple",
+    "sku_megasur": "DSP0000027101"
+  },
+  {
+    "id": 5,
+    "name": "Apple AirPods Max 2nd Gen Orange",
+    "price": 544.93,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000027423-0.jpg",
+    "description": [
+      "Cancelaci?n activa de ruido (ANC) adaptativa con chip H2",
+      "Audio espacial personalizado con seguimiento din?mico de cabeza",
+      "Transparencia adaptativa para escuchar el entorno",
+      "Hasta 20 horas de reproducci?n con ANC activado",
+      "Conectividad: Bluetooth 5.3, USB-C",
+      "Peso: 385g ? Compatible con Siri ? Color Orange"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Apple",
+    "sku_megasur": "DSP0000027423"
+  },
+  {
+    "id": 6,
+    "name": "Sony WF-C510 True Wireless Azul",
+    "price": 34.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000037829-0.jpg",
+    "description": [
+      "True Wireless in-ear ? Bluetooth 5.3 con conexi?n estable",
+      "Hasta 10h de bater?a + 25h adicionales con estuche = 35h total",
+      "Resistencia al agua y sudor IPX4",
+      "Drivers de 5.8mm ? Llamadas manos libres con micr?fono",
+      "Compatible con Google Assistant y Amazon Alexa",
+      "Peso auricular: 5.3g ? App Sony Headphones Connect"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Sony",
+    "sku_megasur": "DSP0000037829"
+  },
+  {
+    "id": 7,
+    "name": "Sony WH-CH520 Bluetooth Blanco",
+    "price": 40.56,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000020797-0.jpg",
+    "description": [
+      "Over-Ear inal?mbrico plegable ? Bluetooth 5.2 Multipoint",
+      "Hasta 50 horas de bater?a (mayor autonom?a de su gama)",
+      "Carga r?pida: 10 minutos = 90 minutos de uso",
+      "Drivers de 30mm ? Control de voz con Google Assistant y Alexa",
+      "Conexi?n simult?nea a 2 dispositivos (Multipoint)",
+      "Peso: 147g ultraligero ? Jack 3.5mm incluido"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Sony",
+    "sku_megasur": "MGS0000020797"
+  },
+  {
+    "id": 8,
+    "name": "Sony WI-C100 Inal?mbrico Negro",
+    "price": 49.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000037821-0.jpg",
+    "description": [
+      "In-ear con cable de cuello (neckband) ? Bluetooth 5.0",
+      "Hasta 25 horas de reproducci?n continua",
+      "Resistencia al agua y sudor IPX4",
+      "12.5g ultraligero ? Micr?fono integrado",
+      "Compatible con Google Assistant y Amazon Alexa",
+      "Ideal para deporte y uso activo ? Drivers de 9mm"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Sony",
+    "sku_megasur": "DSP0000037821"
+  },
+  {
+    "id": 9,
+    "name": "Sony WH-CH720N ANC Inal?mbrico Negro",
+    "price": 70.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000037822-0.jpg",
+    "description": [
+      "Cancelaci?n activa de ruido (ANC) con ajuste personalizado",
+      "Bluetooth 5.2 ? Conexi?n Multipoint a 2 dispositivos",
+      "Hasta 35h con ANC / 50h sin ANC ? Carga r?pida USB-C",
+      "Peso ultraligero: 192g ? Dise?o plegable para viaje",
+      "Micr?fono beamforming para llamadas cristalinas",
+      "Compatible con Google Assistant y Amazon Alexa"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Sony",
+    "sku_megasur": "DSP0000037822"
+  },
+  {
+    "id": 10,
+    "name": "Sony WF-C710N TWS ANC Negro",
+    "price": 93.28,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000037823-0.jpg",
+    "description": [
+      "True Wireless con cancelaci?n activa de ruido (ANC)",
+      "Bluetooth 5.3 ? LDAC para audio de alta resoluci?n",
+      "Hasta 7.5h (auriculares) + 15h (estuche) = 22.5h total",
+      "Resistencia al agua y sudor IPX4 ? Control t?ctil",
+      "Modo Speak-to-Chat: pausa autom?tica al hablar",
+      "Compatible con Google Assistant y Amazon Alexa"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Sony",
+    "sku_megasur": "DSP0000037823"
+  },
+  {
+    "id": 11,
+    "name": "JBL T160 Intrauditivo Cable Azul",
+    "price": 17.38,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000021837-0.jpg",
+    "description": [
+      "Intrauditivo con cable ? Jack 3.5mm universal",
+      "Drivers JBL Pure Bass de 8.7mm para graves profundos",
+      "Micr?fono integrado con bot?n multifunci?n universal",
+      "Control remoto de 1 bot?n para m?sica y llamadas",
+      "Cable plano anti-enredos ? 3 tallas de almohadillas incluidas",
+      "Peso: 13.5g ? Compatible iOS y Android"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "JBL",
+    "sku_megasur": "MGS0000021837"
+  },
+  {
+    "id": 12,
+    "name": "JBL Tune 500 On-Ear Cable Blanco",
+    "price": 26.15,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000016567-0.jpg",
+    "description": [
+      "On-Ear con cable ? Jack 3.5mm ? Dise?o plegable",
+      "Drivers JBL Pure Bass de 32mm para sonido potente",
+      "Micr?fono integrado para llamadas manos libres",
+      "Control remoto de 1 bot?n compatible iOS y Android",
+      "Peso ultraligero: 145g ? Almohadillas suaves acolchadas",
+      "Diadema ajustable ? Construcci?n compacta"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "JBL",
+    "sku_megasur": "MGS0000016567"
+  },
+  {
+    "id": 13,
+    "name": "JBL Tune 510BT Inal?mbrico Bluetooth Blanco",
+    "price": 29.99,
+    "price_source": "pvp_idealo",
+    "image_url": "https://img.megasur.es/img/MGS0000006825-0.jpg",
+    "description": [
+      "On-Ear inal?mbrico ? Bluetooth 5.0 plegable",
+      "Drivers JBL Pure Bass de 40mm ? 40 horas de bater?a",
+      "Carga r?pida: 5 minutos = 2 horas de reproducci?n",
+      "JBL Headphones App para personalizaci?n de sonido",
+      "Conexi?n Multipoint a 2 dispositivos simult?neos",
+      "Peso: 160g ? Llamadas manos libres con micr?fono"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "JBL",
+    "sku_megasur": "MGS0000006825"
+  },
+  {
+    "id": 14,
+    "name": "JBL Wave 200 TWS Negro",
+    "price": 34.99,
+    "price_source": "pvp_idealo",
+    "image_url": "https://img.megasur.es/img/MGS0000021078-0.jpg",
+    "description": [
+      "True Wireless in-ear ? Bluetooth 5.2",
+      "JBL Deep Bass Sound con drivers de 8mm",
+      "Hasta 5h (auriculares) + 20h (estuche) = 25h total",
+      "Resistencia al agua IPX2 ? Llamadas manos libres",
+      "Controles t?ctiles en el auricular ? Estuche compacto",
+      "Peso auricular: 5g ? Compatible iOS y Android"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "JBL",
+    "sku_megasur": "MGS0000021078"
+  },
+  {
+    "id": 15,
+    "name": "JBL Wave 300 TWS Negro",
+    "price": 43.89,
+    "price_source": "pvp_idealo",
+    "image_url": "https://img.megasur.es/img/MGS0000021836-0.jpg",
+    "description": [
+      "True Wireless in-ear ? Bluetooth 5.2 mejorado",
+      "JBL Deep Bass Sound con drivers de 8mm optimizados",
+      "Hasta 6h (auriculares) + 26h (estuche) = 32h total",
+      "3 micr?fonos para llamadas de alta calidad ? IPX2",
+      "Controles t?ctiles ? Dise?o ergon?mico ajustable",
+      "Carga USB-C ? Compatible con Google Assistant y Alexa"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "JBL",
+    "sku_megasur": "MGS0000021836"
+  },
+  {
+    "id": 16,
+    "name": "ASUS TUF Gaming H1 Gen II Negro",
+    "price": 26.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033609-0.jpg",
+    "description": [
+      "Gaming con cable ? Jack 3.5mm y USB-C (adaptador incluido)",
+      "Drivers de 40mm ASUS-Tuned para audio gaming preciso",
+      "Micr?fono boom de 6mm con cancelaci?n de ruido ambiental",
+      "Sonido envolvente virtual 7.1 (con software ASUS Sonic Studio)",
+      "Dise?o plegable ? Almohadillas de cuero sint?tico suave",
+      "Peso: 285g ? Compatible PC, PS4/PS5, Xbox, Nintendo Switch"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "ASUS",
+    "sku_megasur": "MGS0000033609"
+  },
+  {
+    "id": 17,
+    "name": "ASUS TUF Gaming H3 Gun Metal",
+    "price": 50.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033529-0.jpg",
+    "description": [
+      "Gaming USB ? Drivers de 50mm para graves profundos",
+      "Micr?fono bidireccional desmontable con cancelaci?n de ruido",
+      "Sonido envolvente virtual 7.1 (ASUS Sonic Studio III)",
+      "Almohadillas con espuma de memoria para m?ximo confort",
+      "Compatible PC, PS4/PS5, Xbox One/Series, Nintendo Switch",
+      "Peso: 310g ? Color Gun Metal"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "ASUS",
+    "sku_megasur": "MGS0000033529"
+  },
+  {
+    "id": 18,
+    "name": "ASUS TUF Gaming H1 Wireless Negro",
+    "price": 69.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033605-0.jpg",
+    "description": [
+      "Gaming inal?mbrico 2.4GHz + cable 3.5mm (dual mode)",
+      "Drivers de 40mm ASUS-Tuned ? Hasta 15h de bater?a",
+      "Micr?fono boom desmontable con cancelaci?n de ruido",
+      "Baja latencia con conexi?n 2.4GHz para gaming sin lag",
+      "Almohadillas con espuma de memoria ? Peso: 299g",
+      "Compatible PC, PS4/PS5, Nintendo Switch (modo cable)"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "ASUS",
+    "sku_megasur": "MGS0000033605"
+  },
+  {
+    "id": 19,
+    "name": "ASUS ROG Delta S Gaming Negro",
+    "price": 223.31,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033604-0.jpg",
+    "description": [
+      "Gaming USB-C con DAC ESS 9281 Quad-Core Hi-Res (32-bit)",
+      "Drivers MagX de 50mm con im?n de neodimio para audio premium",
+      "Sonido envolvente virtual 7.1 ? ROG Armoury Crate",
+      "Micr?fono cardioide de alta sensibilidad con ENC",
+      "Compatible PC, PS5, Nintendo Switch, iOS y Android (USB-C)",
+      "Peso: 322g ? Almohadillas intercambiables de espuma de memoria"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "ASUS",
+    "sku_megasur": "MGS0000033604"
+  },
+  {
+    "id": 20,
+    "name": "ASUS ROG Cetra True Wireless SpeedNova Negro",
+    "price": 223.37,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033611-0.jpg",
+    "description": [
+      "True Wireless gaming ? ANC h?brida + modo Transparencia",
+      "Bluetooth 5.3 con modo gaming de baja latencia",
+      "Drivers ROG Triforce de 10mm para graves de impacto",
+      "Hasta 6h (auriculares) + 21h (estuche) = 27h total",
+      "Resistencia al agua IPX4 ? Control t?ctil + bot?n f?sico",
+      "Compatible PC, consolas, iOS y Android"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "ASUS",
+    "sku_megasur": "MGS0000033611"
+  },
+  {
+    "id": 21,
+    "name": "Logitech Headset H110 Est?reo",
+    "price": 13.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/981-000271-0.jpg",
+    "description": [
+      "Cable doble Jack 3.5mm (PC port gaming) ? Ultraligero 73g",
+      "Drivers de 20mm est?reo ? Respuesta en frecuencia 20Hz?20kHz",
+      "Micr?fono boom flexible con cancelaci?n de ruido",
+      "Dise?o plegable para f?cil transporte y almacenamiento",
+      "Control de volumen integrado en cable ? Sin driver necesario",
+      "Compatible PC, port?tiles, tabletas con jack 3.5mm"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Logitech",
+    "sku_megasur": "981-000271"
+  },
+  {
+    "id": 22,
+    "name": "Logitech Headset H340 USB",
+    "price": 49.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000033721-0.jpg",
+    "description": [
+      "Cable USB-A ? Procesamiento de audio digital sin driver",
+      "Micr?fono con cancelaci?n de ruido y brazo ajustable",
+      "Control de volumen y silencio en cable accesible",
+      "Almohadillas suaves acolchadas ? Diadema ajustable",
+      "Certificado para Microsoft Teams, Zoom y Google Meet",
+      "Compatible Windows, macOS, ChromeOS ? Plug & Play"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Logitech",
+    "sku_megasur": "MGS0000033721"
+  },
+  {
+    "id": 23,
+    "name": "Logitech Zone Wired USB",
+    "price": 101.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000025967-0.jpg",
+    "description": [
+      "Cable USB-A / USB-C / Jack 3.5mm (3 conexiones incluidas)",
+      "Micr?fono con cancelaci?n activa de ruido (ANC) para voz n?tida",
+      "Certificado Microsoft Teams, Zoom, Google Meet y Cisco",
+      "Drivers de 40mm ajustados para claridad de voz en reuniones",
+      "Control de volumen y silencio on-ear ? Diadema ergon?mica",
+      "Compatible Windows, macOS, Linux, ChromeOS"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Logitech",
+    "sku_megasur": "MGS0000025967"
+  },
+  {
+    "id": 24,
+    "name": "Logitech PRO Gaming X Headset",
+    "price": 109.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000025666-0.jpg",
+    "description": [
+      "Gaming USB ? Drivers Pro-G de 50mm con membrana de fibra h?brida",
+      "Micr?fono Pro-G Supercardioid desprendible con certificaci?n Blue VO!CE",
+      "Sonido envolvente DTS Headphone:X 2.0 de 7.1 canales",
+      "Almohadillas de espuma de memoria intercambiables (cuero/tela)",
+      "Construcci?n de acero inoxidable ? Peso: 259g",
+      "Compatible PC, PS4/PS5, Xbox, Nintendo Switch (adaptador)"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Logitech",
+    "sku_megasur": "MGS0000025666"
+  },
+  {
+    "id": 25,
+    "name": "Logitech G G733 Gaming Wireless Negro",
+    "price": 90.59,
+    "price_source": "pvp_idealo",
+    "image_url": "https://img.megasur.es/img/MGS0000015732-0.jpg",
+    "description": [
+      "Gaming inal?mbrico LIGHTSPEED 2.4GHz ? Hasta 29h de bater?a",
+      "Micr?fono boom giratorio con tecnolog?a Blue VO!CE",
+      "RGB LIGHTSYNC personalizable ? Software G HUB",
+      "Sonido DTS Headphone:X 2.0 para audio envolvente 7.1",
+      "Almohadillas suaves reversibles en tela transpirable",
+      "Peso: 278g ? Compatible PC y Mac"
+    ],
+    "category": "Auriculares Inteligentes",
+    "brand": "Logitech",
+    "sku_megasur": "MGS0000015732"
+  },
+  {
+    "id": 26,
+    "name": "RELOJ SMARTWATCH GARMIN APPROACH, Reloj para Golf, Campos mundiales preinstalados, Bluetooth y Resistente al Agua, Blanco",
+    "price": 131.95,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000005628-0.jpg",
+    "description": [
+      "GPS especializado para golf · +41.000 campos mundiales",
+      "Pantalla MIP 1.1\" · Bluetooth · resistente al agua",
+      "Distancias precisas al verde · obstáculos · rango de llegada",
+      "Batería hasta 9h GPS · 12h modo reloj",
+      "Estadísticas hoyo a hoyo · puntuación digital",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Garmin",
+    "sku_megasur": "DSP0000005628"
+  },
+  {
+    "id": 27,
+    "name": "SMARTWATCH GARMIN FORERUNNER 165 43MM NEGRO GPS",
+    "price": 196.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000029844-0.jpg",
+    "description": [
+      "Pantalla AMOLED 1.2\" táctil 390×390 · GPS multi-satélite",
+      "FC óptico + SpO2 + estrés · hasta 11 días smartwatch",
+      "Hasta 19h GPS continuo · BT + WiFi",
+      "Métricas carrera avanzadas: VO2max · cadencia",
+      "Planes de entrenamiento Garmin Coach · Garmin Pay NFC",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Garmin",
+    "sku_megasur": "DSP0000029844"
+  },
+  {
+    "id": 28,
+    "name": "SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP BLANCO Resistencia Agua 5ATM Pulsómetro Sueño",
+    "price": 199.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000032958-0.jpg",
+    "description": [
+      "Pantalla MIP 1.04\" 208×208 · GPS integrado + GLONASS · 42mm",
+      "BT + WiFi · resistencia al agua 5ATM",
+      "FC óptico + SpO2 · seguimiento de sueño avanzado",
+      "Hasta 20h GPS activo · 2 semanas modo smartwatch",
+      "Planes de entrenamiento Garmin Coach para corredores",
+      "Compatible Garmin Pay · peso 49.7g"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Garmin",
+    "sku_megasur": "MGS0000032958"
+  },
+  {
+    "id": 29,
+    "name": "SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP Negro Resistencia Agua 5ATM Pulsómetro Sueño",
+    "price": 199.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/MGS0000032959-0.jpg",
+    "description": [
+      "Pantalla MIP 1.04\" 208×208 · GPS integrado + GLONASS · 42mm",
+      "BT + WiFi · resistencia al agua 5ATM",
+      "FC óptico + SpO2 · seguimiento de sueño avanzado",
+      "Hasta 20h GPS activo · 2 semanas modo smartwatch",
+      "Planes de entrenamiento Garmin Coach para corredores",
+      "Compatible Garmin Pay · peso 49.7g"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Garmin",
+    "sku_megasur": "MGS0000032959"
+  },
+  {
+    "id": 30,
+    "name": "Garmin Vívoactive 5, Smartwatch con GPS, Pantalla AMOLED, hasta 11 dias de autonomia",
+    "price": 201.24,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000028241-0.jpg",
+    "description": [
+      "Pantalla AMOLED 1.2\" táctil · GPS + GLONASS + Galileo",
+      "BT + WiFi + NFC Garmin Pay · hasta 11 días smartwatch",
+      "FC óptico 24h + SpO2 + variabilidad FC + estrés",
+      "Seguimiento de sueño avanzado · +25 deportes",
+      "Hasta 18h GPS continuo · altímetro barométrico",
+      "Diseño ultraligero · compatible Garmin Coach"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Garmin",
+    "sku_megasur": "DSP0000028241"
+  },
+  {
+    "id": 31,
+    "name": "SMARTWATCH HAMMER WATCH 2 LITE BLACK",
+    "price": 36.07,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000027299-0.jpg",
+    "description": [
+      "Pantalla IPS 1.6\" · resistencia militar IP68",
+      "Bluetooth 5.0 · FC óptico + SpO2 · podómetro",
+      "Monitorización de sueño · detección de actividad 24h",
+      "Batería hasta 5 días · recarga magnética",
+      "Alertas SOS · notificaciones de smartphone",
+      "Resistente a golpes y agua · diseño rugged outdoor"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Hammer",
+    "sku_megasur": "DSP0000027299"
+  },
+  {
+    "id": 32,
+    "name": "RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO",
+    "price": 49.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000024070-0.jpg",
+    "description": [
+      "Smartwatch para mayores con 4G LTE y GPS integrado",
+      "Llamadas bidireccionales · botón SOS de emergencia",
+      "Detector de caídas automático · alertas de salud",
+      "FC óptico · podómetro · pantalla táctil grande",
+      "Diseño sencillo pensado para personas mayores",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "MyPhone",
+    "sku_megasur": "DSP0000024070"
+  },
+  {
+    "id": 33,
+    "name": "RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK",
+    "price": 49.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000025695-0.jpg",
+    "description": [
+      "Smartwatch outdoor con GPS integrado · IP68",
+      "Bluetooth 5.0 · FC óptico + SpO2 · podómetro",
+      "Pantalla 1.4\" IPS color · múltiples modos deporte",
+      "Batería hasta 7 días en uso normal",
+      "Notificaciones de smartphone · diseño robusto",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "MyPhone",
+    "sku_megasur": "DSP0000025695"
+  },
+  {
+    "id": 34,
+    "name": "RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN",
+    "price": 29.99,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000026342-0.jpg",
+    "description": [
+      "Pantalla 1.7\" TFT color · Bluetooth 5.0",
+      "FC óptico + SpO2 + podómetro · +100 modos deporte",
+      "Monitorización de sueño y estrés 24h",
+      "Batería hasta 5 días · recarga magnética",
+      "Diseño lifestyle moderno · modos multideporte",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "MyPhone",
+    "sku_megasur": "DSP0000026342"
+  },
+  {
+    "id": 35,
+    "name": "RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN",
+    "price": 39.99,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000026343-0.jpg",
+    "description": [
+      "Smartwatch robusto para trabajo y exteriores · IP68",
+      "Bluetooth 5.0 · FC óptico + SpO2 + podómetro",
+      "Pantalla resistente 1.4\" · alertas y notificaciones",
+      "Batería hasta 7 días en uso normal",
+      "Diseño tool resistente · color Negro/Verde",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "MyPhone",
+    "sku_megasur": "DSP0000026343"
+  },
+  {
+    "id": 36,
+    "name": "SMARTWATCH SPC SMARTEE 4G KIDZ TURQUESA",
+    "price": 77.94,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "https://img.megasur.es/img/DSP0000023066-0.jpg",
+    "description": [
+      "Smartwatch infantil 4G con GPS antipérdida · nanoSIM",
+      "Llamadas bidireccionales · mensajes de voz y texto",
+      "Botón SOS con ubicación GPS en tiempo real",
+      "Control parental desde app SPC SMARTEE",
+      "Pantalla táctil · resistente al agua · cámara integrada",
+      "Para niños de 3 a 12 años · color Turquesa"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "SPC",
+    "sku_megasur": "DSP0000023066"
+  },
+  {
+    "id": 37,
+    "name": "SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS",
+    "price": 49.99,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/MGS0000033444-0.jpg",
+    "description": [
+      "Smartwatch infantil 4G con GPS antipérdida · nanoSIM",
+      "Llamadas bidireccionales · cámara integrada",
+      "Botón SOS con ubicación GPS en tiempo real",
+      "Control parental desde app TCL MOVETIME",
+      "Pantalla táctil · resistente al agua",
+      "Para niños de 4 a 12 años · geovalla configurable"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "TCL",
+    "sku_megasur": "MGS0000033444"
+  },
+  {
+    "id": 38,
+    "name": "SMARTWATCH LEOTEC LESWKIDS06K KIDS ALLO PLUS NEGRO",
+    "price": 59.94,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000020100-0.jpg",
+    "description": [
+      "GPS + LBS antipérdida · 4G LTE con ranura nanoSIM",
+      "Llamadas bidireccionales · mensajes de voz",
+      "Cámara integrada · mensajes SOS con geolocalización",
+      "Resistencia IP67 · control parental app",
+      "Para niños de 4 a 12 años · pantalla táctil",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Leotec",
+    "sku_megasur": "DSP0000020100"
+  },
+  {
+    "id": 39,
+    "name": "RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 NEGRO",
+    "price": 32.98,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000026333-0.jpg",
+    "description": [
+      "Pantalla AMOLED · Bluetooth 5.0 · diseño slim",
+      "FC óptico 24h + SpO2 + estrés · monitorización de sueño",
+      "Más de 20 modos de deporte · podómetro + calorías",
+      "Batería hasta 5-7 días · recarga magnética",
+      "Notificaciones de smartphone",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Forever",
+    "sku_megasur": "DSP0000026333"
+  },
+  {
+    "id": 40,
+    "name": "RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 ROJO",
+    "price": 33.99,
+    "price_source": "pvp_referencia",
+    "image_url": "https://img.megasur.es/img/DSP0000026334-0.jpg",
+    "description": [
+      "Pantalla AMOLED · Bluetooth 5.0 · diseño slim",
+      "FC óptico 24h + SpO2 + estrés · monitorización de sueño",
+      "Más de 20 modos de deporte · podómetro + calorías",
+      "Batería hasta 5-7 días · recarga magnética",
+      "Notificaciones de smartphone",
+      "Compatible iOS y Android"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Forever",
+    "sku_megasur": "DSP0000026334"
+  },
+  {
+    "id": 41,
+    "name": "Samsung Galaxy Fit3 1.6\" 40mm BT Gray",
+    "price": 40.16,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-41.webp",
+    "description": [
+      "Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Samsung",
+    "sku_infortisa": "samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "AMOLED 1,6”",
+      "Batería": "Hasta 13 días",
+      "Bluetooth": "5.3",
+      "Resistencia": "5 ATM",
+      "GPS": "Asistido (BT)",
+      "SpO2": "Sí",
+      "Modelo": "SM-R390NZAAEUB",
+      "SKU Infortisa": "samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Samsung Galaxy Fit3 1.6\" 40mm BT Pink",
+    "price": 40.16,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-42.webp",
+    "description": [
+      "Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Samsung",
+    "sku_infortisa": "samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "AMOLED 1,6”",
+      "Batería": "Hasta 13 días",
+      "Bluetooth": "5.3",
+      "Resistencia": "5 ATM",
+      "GPS": "Asistido (BT)",
+      "SpO2": "Sí",
+      "Modelo": "SM-R390NIDAEUB",
+      "SKU Infortisa": "samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green",
+    "price": 197.66,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-43.webp",
+    "description": [
+      "Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Samsung",
+    "sku_infortisa": "samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "Super AMOLED 1,3”",
+      "Tamaño": "40mm",
+      "Batería": "Hasta 40h",
+      "Conectividad": "Wi-Fi + BT 5.3 + NFC",
+      "GPS": "Integrado multibanda",
+      "Resistencia": "5 ATM",
+      "Modelo": "SM-L300NZGAPHE",
+      "SKU Infortisa": "samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green",
+    "price": 327.95,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-44.webp",
+    "description": [
+      "Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Samsung",
+    "sku_infortisa": "samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "Super AMOLED 1,5”",
+      "Tamaño": "44mm",
+      "Batería": "Hasta 40h",
+      "Conectividad": "Wi-Fi + BT 5.3 + NFC",
+      "GPS": "Integrado multibanda",
+      "Resistencia": "5 ATM",
+      "Modelo": "SM-L310NZGAPHE",
+      "SKU Infortisa": "samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Xiaomi Redmi Watch 5 Active Plata Mate",
+    "price": 29.97,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-45.webp",
+    "description": [
+      "Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Xiaomi",
+    "sku_infortisa": "xiaomi-redmi-watch-5-active-plata-mate181024095502",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "LCD 2” 320x385",
+      "Batería": "Hasta 20 días",
+      "Bluetooth": "5.3",
+      "GPS": "Integrado",
+      "Resistencia": "5 ATM",
+      "Modos deportivos": "160+",
+      "Modelo": "BHR8790GL",
+      "SKU Infortisa": "xiaomi-redmi-watch-5-active-plata-mate181024095502"
+    }
+  },
+  {
+    "id": 46,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Glacier Silver",
+    "price": 39.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-46.webp",
+    "description": [
+      "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Xiaomi",
+    "sku_infortisa": "xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "AMOLED 1,47”",
+      "Batería": "Hasta 8 días",
+      "Bluetooth": "5.4",
+      "Compatibilidad": "Android 8.0+ / iOS 14+",
+      "SpO2": "Sí",
+      "FC 24/7": "Sí",
+      "Modelo": "BHR07PSGL",
+      "SKU Infortisa": "xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503"
+    }
+  },
+  {
+    "id": 47,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Midnight Black",
+    "price": 39.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-47.webp",
+    "description": [
+      "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Xiaomi",
+    "sku_infortisa": "xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "AMOLED 1,47”",
+      "Batería": "Hasta 8 días",
+      "Bluetooth": "5.4",
+      "Compatibilidad": "Android 8.0+ / iOS 14+",
+      "SpO2": "Sí",
+      "FC 24/7": "Sí",
+      "Modelo": "BHR07PYGL",
+      "SKU Infortisa": "xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502"
+    }
+  },
+  {
+    "id": 48,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Mystic Rose",
+    "price": 39.99,
+    "price_source": "pvp_pccomponentes",
+    "image_url": "/images/products/infortisa-48.webp",
+    "description": [
+      "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose"
+    ],
+    "category": "Relojes Inteligentes",
+    "brand": "Xiaomi",
+    "sku_infortisa": "xiaomi-pulsera-mi-smart-band-10-mystic-rose020725095502",
+    "distributor": "Infortisa",
+    "specs": {
+      "Pantalla": "AMOLED 1,47”",
+      "Batería": "Hasta 8 días",
+      "Bluetooth": "5.4",
+      "Compatibilidad": "Android 8.0+ / iOS 14+",
+      "SpO2": "Sí",
+      "FC 24/7": "Sí",
+      "Modelo": "BHR9999GL",
+      "SKU Infortisa": "xiaomi-pulsera-mi-smart-band-10-mystic-rose020725095502"
+    }
+  }
+]
