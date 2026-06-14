@@ -3670,6 +3670,64 @@ function initAIAssistant() {
   }
 }
 
+// ─── CHEAPEST SHOWCASE (1 producto más barato por categoría) ─────────────────
+function renderCheapestShowcase() {
+  var grid = document.getElementById('cheapest-grid');
+  if (!grid) return;
+
+  var CATS = [
+    { key: 'relojes',         label: 'Relojes Inteligentes', bdg: 'sc-bdg-green'  },
+    { key: 'auriculares',     label: 'Auriculares',           bdg: 'sc-bdg-gold'   },
+    { key: 'altavoces',       label: 'Altavoces',             bdg: 'sc-bdg-accent' },
+    { key: 'teclados gaming', label: 'Teclados Gaming',       bdg: 'sc-bdg-orange' },
+    { key: 'smartphones',     label: 'Smartphones',           bdg: 'sc-bdg-red'    },
+  ];
+
+  var html = '';
+  CATS.forEach(function(cat) {
+    var p = PRODUCTS
+      .filter(function(x) { return x.category === cat.key && x.price; })
+      .sort(function(a, b) { return a.price - b.price; })[0];
+
+    if (!p) return;
+
+    var desc = Array.isArray(p.description)
+      ? p.description.slice(0, 2).join('. ')
+      : (typeof p.description === 'string' ? p.description.slice(0, 110) : '');
+
+    var badge = p.badge
+      || (Array.isArray(p.description) && p.description[0] ? p.description[0].slice(0, 40) : cat.label);
+
+    var name = p.name
+      .replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO)\s+/i, '')
+      .trim();
+
+    var priceStr = '€' + p.price.toFixed(2).replace('.', ',');
+
+    html +=
+      '<div class="sc-card">' +
+        '<div class="sc-img-wrap">' +
+          '<img class="sc-img" src="' + (p.image_url || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+          '<span class="sc-bdg ' + cat.bdg + '">' + badge + '</span>' +
+        '</div>' +
+        '<div class="sc-body">' +
+          '<div class="sc-meta-row">' +
+            '<span class="sc-brand">' + (p.brand || '') + '</span>' +
+            '<span class="sc-cat">' + cat.label + '</span>' +
+          '</div>' +
+          '<div class="sc-name">' + name + '</div>' +
+          '<div class="sc-desc">' + desc + '</div>' +
+          '<div class="sc-footer">' +
+            '<div class="sc-price">' + priceStr + '<small>IVA incluido</small></div>' +
+            '<button class="sc-btn-add" onclick="addToCart(' + p.id + ')">+ Carrito</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+  });
+
+  grid.innerHTML = html;
+}
+
 // ─── SHOWCASE (1 producto estrella por categoría) ────────────────────────────
 function renderShowcase() {
   var grid = document.getElementById('showcase-grid');
@@ -3824,6 +3882,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initReviews();
   initAIAssistant();
   renderShowcase();
+  renderCheapestShowcase();
   renderProductosEstrella();
 
   // Cart toggle
