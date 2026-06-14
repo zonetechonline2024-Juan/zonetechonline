@@ -292,12 +292,12 @@ input{font-family:inherit;}
 .cfg-add-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;padding:16px 24px;border-radius:14px;}
 .cfg-add-btn:disabled{opacity:.7;cursor:not-allowed;}
 .cfg-guarantee{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-3);margin-top:12px;justify-content:center;}
-.configurator-visual{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:520px;}
-.cfg-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:24px;}
-.cfg-watch-showcase{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;width:100%;}
+.configurator-visual{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:520px;overflow:visible;}
+.cfg-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.cfg-watch-showcase{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;width:100%;overflow:visible;}
 .cfg-watch-aura{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.65) 0%,transparent 65%);filter:blur(38px);top:50%;left:50%;transform:translate(-50%,-50%);transition:background .55s ease;z-index:0;}
-.cfg-watch-float{width:min(460px,100%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;}
-.cfg-watch-float::after{content:'';position:absolute;bottom:0;left:0;right:0;height:18%;background:linear-gradient(to bottom,transparent,var(--bg) 80%);pointer-events:none;z-index:2;}
+.cfg-watch-float{width:min(380px,92%);animation:cfg-float 4.5s ease-in-out infinite;position:relative;z-index:1;filter:drop-shadow(0 24px 48px rgba(0,0,0,.55));}
+
 .cfg-watch-real{width:100%;height:auto;display:block;border-radius:0;filter:url(#remove-white);transition:opacity .22s ease;}
 .cfg-watch-real.cfg-img-fade{opacity:0;}
 @keyframes price-up{0%{opacity:0;transform:translateY(7px);}100%{opacity:1;transform:translateY(0);}}
