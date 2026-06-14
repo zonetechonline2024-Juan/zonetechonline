@@ -530,6 +530,422 @@ PRODUCTS.push(
 
 );
 
+// ─── AURICULARES INTELIGENTES (fuente: Megasur.es — junio 2026) ──────────────
+// 25 productos · 5 marcas × 5 modelos · ordenados por precio ascendente
+PRODUCTS.push(
+
+  // ── Apple ────────────────────────────────────────────────────────────────
+
+  { id:200, name:'Apple Beats Flex Bluetooth Negro', brand:'Apple', category:'auriculares',
+    price:68.99, oldPrice:79.99, badge:'Chip W1 · 12h',
+    image:'https://img.megasur.es/img/DSP0000016997-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000016997-0.jpg'],
+    description:'Auriculares in-ear con cable de cuello de Apple, equipados con chip W1 para conectividad instantánea y cambio automático entre dispositivos Apple. Bluetooth 5.0 con hasta 12 horas de batería. Imanes flexibles, micrófono integrado y compatible con iOS y Android.',
+    specs:{
+      'Chip':'Apple W1',
+      'Batería':'Hasta 12 horas de reproducción',
+      'Conectividad':'Bluetooth 5.0',
+      'Micrófono':'Integrado · manos libres',
+      'Compatibilidad':'iOS y Android (modo universal)',
+      'Peso':'16.4g ultraligero',
+      'SKU Megasur':'DSP0000016997'
+    }
+  },
+
+  { id:201, name:'Apple AirPods 4 Inalámbrico Blanco', brand:'Apple', category:'auriculares',
+    price:135.99, oldPrice:149.00, badge:'Chip H2 · ANC',
+    image:'https://img.megasur.es/img/DSP0000028093-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000028093-0.jpg'],
+    description:'AirPods de 4ª generación con chip H2 y cancelación de ruido. Modo Transparencia adaptativa, audio espacial personalizado con seguimiento de cabeza y resistencia al sudor IP54. Estuche con USB-C: hasta 5h propios y 30h adicionales. Siri siempre disponible.',
+    specs:{
+      'Chip':'Apple H2',
+      'ANC':'Cancelación de ruido + Transparencia adaptativa',
+      'Batería':'5h (auriculares) + 30h (estuche)',
+      'Conectividad':'Bluetooth 5.3 · USB-C',
+      'Resistencia':'IP54 (sudor y salpicaduras)',
+      'Asistentes':'Siri',
+      'SKU Megasur':'DSP0000028093'
+    }
+  },
+
+  { id:202, name:'Apple AirPods Max 2nd Gen Azul', brand:'Apple', category:'auriculares',
+    price:549.99, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    image:'https://img.megasur.es/img/DSP0000027018-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000027018-0.jpg'],
+    description:'Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de cabeza. Hasta 20 horas con ANC, USB-C y Bluetooth 5.3. Color Azul.',
+    specs:{
+      'ANC':'Cancelación activa adaptativa (chip H2)',
+      'Audio':'Audio espacial + seguimiento dinámico de cabeza',
+      'Transparencia':'Modo Transparencia adaptativa',
+      'Batería':'Hasta 20h con ANC activado',
+      'Conectividad':'Bluetooth 5.3 · USB-C',
+      'Peso':'385g',
+      'SKU Megasur':'DSP0000027018'
+    }
+  },
+
+  { id:203, name:'Apple AirPods Max 2nd Gen Starlight', brand:'Apple', category:'auriculares',
+    price:544.93, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    image:'https://img.megasur.es/img/DSP0000027101-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000027101-0.jpg'],
+    description:'Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de cabeza. Hasta 20 horas con ANC, USB-C y Bluetooth 5.3. Color Starlight.',
+    specs:{
+      'ANC':'Cancelación activa adaptativa (chip H2)',
+      'Audio':'Audio espacial + seguimiento dinámico de cabeza',
+      'Transparencia':'Modo Transparencia adaptativa',
+      'Batería':'Hasta 20h con ANC activado',
+      'Conectividad':'Bluetooth 5.3 · USB-C',
+      'Peso':'385g',
+      'SKU Megasur':'DSP0000027101'
+    }
+  },
+
+  { id:204, name:'Apple AirPods Max 2nd Gen Orange', brand:'Apple', category:'auriculares',
+    price:544.93, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    image:'https://img.megasur.es/img/DSP0000027423-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000027423-0.jpg'],
+    description:'Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de cabeza. Hasta 20 horas con ANC, USB-C y Bluetooth 5.3. Color Orange.',
+    specs:{
+      'ANC':'Cancelación activa adaptativa (chip H2)',
+      'Audio':'Audio espacial + seguimiento dinámico de cabeza',
+      'Transparencia':'Modo Transparencia adaptativa',
+      'Batería':'Hasta 20h con ANC activado',
+      'Conectividad':'Bluetooth 5.3 · USB-C',
+      'Peso':'385g',
+      'SKU Megasur':'DSP0000027423'
+    }
+  },
+
+  // ── Sony ─────────────────────────────────────────────────────────────────
+
+  { id:205, name:'Sony WF-C510 True Wireless Azul', brand:'Sony', category:'auriculares',
+    price:34.99, oldPrice:49.99, badge:'TWS · 35h total',
+    image:'https://img.megasur.es/img/DSP0000037829-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000037829-0.jpg'],
+    description:'Auriculares True Wireless de Sony con Bluetooth 5.3 y resistencia al agua IPX4. Drivers de 5.8mm con sonido equilibrado y 35 horas de autonomía total (10h propios + 25h estuche). Compatible con Google Assistant y Alexa. Estuche de carga compacto.',
+    specs:{
+      'Tipo':'True Wireless in-ear',
+      'Batería':'10h (auriculares) + 25h (estuche) = 35h total',
+      'Conectividad':'Bluetooth 5.3',
+      'Resistencia':'IPX4 (agua y sudor)',
+      'Driver':'5.8mm',
+      'Asistentes':'Google Assistant · Amazon Alexa',
+      'SKU Megasur':'DSP0000037829'
+    }
+  },
+
+  { id:206, name:'Sony WH-CH520 Bluetooth Blanco', brand:'Sony', category:'auriculares',
+    price:40.56, oldPrice:59.99, badge:'50h batería · Multipoint',
+    image:'https://img.megasur.es/img/MGS0000020797-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000020797-0.jpg'],
+    description:'Auriculares over-ear inalámbricos de Sony con la mayor autonomía de su gama: hasta 50 horas de batería. Bluetooth 5.2 con Multipoint para conectar 2 dispositivos a la vez, carga rápida (10 min = 90 min de uso), drivers de 30mm y control de voz con Google Assistant y Alexa.',
+    specs:{
+      'Tipo':'Over-Ear inalámbrico plegable',
+      'Batería':'Hasta 50h · Carga rápida 10 min = 90 min',
+      'Conectividad':'Bluetooth 5.2 · Multipoint (2 dispositivos)',
+      'Driver':'30mm',
+      'Asistentes':'Google Assistant · Amazon Alexa',
+      'Peso':'147g ultraligero',
+      'SKU Megasur':'MGS0000020797'
+    }
+  },
+
+  { id:207, name:'Sony WI-C100 Inalámbrico Negro', brand:'Sony', category:'auriculares',
+    price:49.99, oldPrice:59.99, badge:'IPX4 · 25h · Sport',
+    image:'https://img.megasur.es/img/DSP0000037821-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000037821-0.jpg'],
+    description:'Auriculares in-ear con cable de cuello (neckband) de Sony. Bluetooth 5.0 con hasta 25 horas de autonomía, resistencia al agua y sudor IPX4, y solo 12.5g de peso. Diseñados para el deporte y uso activo con micrófono integrado. Compatibles con Google Assistant y Alexa.',
+    specs:{
+      'Tipo':'In-ear neckband',
+      'Batería':'Hasta 25h de reproducción',
+      'Conectividad':'Bluetooth 5.0',
+      'Resistencia':'IPX4 (agua y sudor)',
+      'Asistentes':'Google Assistant · Amazon Alexa',
+      'Peso':'12.5g ultraligero',
+      'SKU Megasur':'DSP0000037821'
+    }
+  },
+
+  { id:208, name:'Sony WH-CH720N ANC Inalámbrico Negro', brand:'Sony', category:'auriculares',
+    price:70.99, oldPrice:89.99, badge:'ANC · 35h · 192g',
+    image:'https://img.megasur.es/img/DSP0000037822-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000037822-0.jpg'],
+    description:'Auriculares over-ear con cancelación activa de ruido (ANC) de Sony. Bluetooth 5.2 con Multipoint, hasta 35h con ANC (50h sin ANC), carga rápida USB-C y diseño plegable ultraligero de 192g. Micrófono beamforming para llamadas nítidas. Compatible con Google Assistant y Alexa.',
+    specs:{
+      'ANC':'Cancelación activa de ruido ajustable',
+      'Batería':'35h con ANC / 50h sin ANC · USB-C',
+      'Conectividad':'Bluetooth 5.2 · Multipoint',
+      'Micrófono':'Beamforming para llamadas',
+      'Asistentes':'Google Assistant · Amazon Alexa',
+      'Peso':'192g plegable',
+      'SKU Megasur':'DSP0000037822'
+    }
+  },
+
+  { id:209, name:'Sony WF-C710N TWS ANC Negro', brand:'Sony', category:'auriculares',
+    price:93.28, oldPrice:119.99, badge:'ANC · LDAC Hi-Res',
+    image:'https://img.megasur.es/img/DSP0000037823-0.jpg',
+    images:['https://img.megasur.es/img/DSP0000037823-0.jpg'],
+    description:'Auriculares True Wireless de Sony con cancelación activa de ruido (ANC) y audio de alta resolución LDAC. Bluetooth 5.3, control táctil, resistencia IPX4 y hasta 22.5h totales (7.5h + 15h estuche). Modo Speak-to-Chat: pausa automática al hablar. Compatible con Google Assistant.',
+    specs:{
+      'ANC':'Cancelación activa de ruido TWS',
+      'Audio':'LDAC alta resolución',
+      'Batería':'7.5h (auriculares) + 15h (estuche) = 22.5h',
+      'Conectividad':'Bluetooth 5.3',
+      'Resistencia':'IPX4 · Control táctil',
+      'Asistentes':'Google Assistant · Amazon Alexa',
+      'SKU Megasur':'DSP0000037823'
+    }
+  },
+
+  // ── JBL ──────────────────────────────────────────────────────────────────
+
+  { id:210, name:'JBL T160 Intrauditivo Cable Azul', brand:'JBL', category:'auriculares',
+    price:17.38, badge:'Pure Bass · Jack 3.5mm',
+    image:'https://img.megasur.es/img/MGS0000021837-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000021837-0.jpg'],
+    description:'Auriculares intrauditivos con cable de JBL. Drivers JBL Pure Bass de 8.7mm para graves profundos y nítidos. Cable plano anti-enredos, micrófono integrado con botón multifunción universal y 3 tallas de almohadillas incluidas. Compatible con iOS y Android.',
+    specs:{
+      'Tipo':'Intrauditivo con cable · Jack 3.5mm',
+      'Driver':'JBL Pure Bass 8.7mm',
+      'Micrófono':'Integrado · botón multifunción',
+      'Cable':'Plano anti-enredos',
+      'Almohadillas':'3 tallas incluidas (S/M/L)',
+      'Peso':'13.5g',
+      'SKU Megasur':'MGS0000021837'
+    }
+  },
+
+  { id:211, name:'JBL Tune 500 On-Ear Cable Blanco', brand:'JBL', category:'auriculares',
+    price:26.15, oldPrice:34.99, badge:'Pure Bass 32mm',
+    image:'https://img.megasur.es/img/MGS0000016567-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000016567-0.jpg'],
+    description:'Auriculares on-ear con cable de JBL y drivers Pure Bass de 32mm para un sonido potente y envolvente. Diseño plegable ultraligero de 145g con diadema ajustable y almohadillas acolchadas. Micrófono integrado con control de 1 botón compatible con iOS y Android.',
+    specs:{
+      'Tipo':'On-Ear con cable · Jack 3.5mm',
+      'Driver':'JBL Pure Bass 32mm',
+      'Micrófono':'Integrado · 1 botón universal',
+      'Diseño':'Plegable',
+      'Peso':'145g ultraligero',
+      'Compatibilidad':'iOS y Android',
+      'SKU Megasur':'MGS0000016567'
+    }
+  },
+
+  { id:212, name:'JBL Tune 510BT Inalámbrico Bluetooth Blanco', brand:'JBL', category:'auriculares',
+    price:29.99, oldPrice:49.99, badge:'40h · Carga 5min',
+    image:'https://img.megasur.es/img/MGS0000006825-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000006825-0.jpg'],
+    description:'Auriculares on-ear inalámbricos de JBL con 40 horas de batería y carga rápida (5 minutos = 2 horas de uso). Bluetooth 5.0 con Multipoint para conectar 2 dispositivos simultáneamente, drivers Pure Bass de 40mm y app JBL Headphones para personalizar el sonido.',
+    specs:{
+      'Tipo':'On-Ear inalámbrico plegable',
+      'Batería':'40h · Carga rápida 5 min = 2h',
+      'Conectividad':'Bluetooth 5.0 · Multipoint',
+      'Driver':'JBL Pure Bass 40mm',
+      'App':'JBL Headphones (personalización EQ)',
+      'Peso':'160g',
+      'SKU Megasur':'MGS0000006825'
+    }
+  },
+
+  { id:213, name:'JBL Wave 200 TWS Negro', brand:'JBL', category:'auriculares',
+    price:34.99, oldPrice:44.99, badge:'TWS · 25h total',
+    image:'https://img.megasur.es/img/MGS0000021078-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000021078-0.jpg'],
+    description:'Auriculares True Wireless de JBL con JBL Deep Bass Sound y drivers de 8mm. Bluetooth 5.2 con hasta 25 horas de autonomía total (5h propios + 20h estuche), resistencia IPX2 y controles táctiles. Estuche de carga compacto y llamadas manos libres.',
+    specs:{
+      'Tipo':'True Wireless in-ear',
+      'Batería':'5h (auriculares) + 20h (estuche) = 25h',
+      'Conectividad':'Bluetooth 5.2',
+      'Driver':'JBL Deep Bass 8mm',
+      'Resistencia':'IPX2 · Controles táctiles',
+      'Peso auricular':'5g',
+      'SKU Megasur':'MGS0000021078'
+    }
+  },
+
+  { id:214, name:'JBL Wave 300 TWS Negro', brand:'JBL', category:'auriculares',
+    price:43.89, oldPrice:59.99, badge:'TWS · 32h · 3 mics',
+    image:'https://img.megasur.es/img/MGS0000021836-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000021836-0.jpg'],
+    description:'Auriculares True Wireless de JBL con JBL Deep Bass Sound y 32 horas de autonomía total (6h propios + 26h estuche). Bluetooth 5.2, 3 micrófonos para llamadas de alta calidad, resistencia IPX2, controles táctiles y carga USB-C. Compatible con Google Assistant y Alexa.',
+    specs:{
+      'Tipo':'True Wireless in-ear',
+      'Batería':'6h (auriculares) + 26h (estuche) = 32h',
+      'Conectividad':'Bluetooth 5.2 · USB-C',
+      'Micrófonos':'3 micrófonos para llamadas HD',
+      'Driver':'JBL Deep Bass 8mm mejorado',
+      'Resistencia':'IPX2',
+      'SKU Megasur':'MGS0000021836'
+    }
+  },
+
+  // ── ASUS ─────────────────────────────────────────────────────────────────
+
+  { id:215, name:'ASUS TUF Gaming H1 Gen II Negro', brand:'ASUS', category:'auriculares',
+    price:26.99, oldPrice:39.99, badge:'7.1 virtual · USB-C',
+    image:'https://img.megasur.es/img/MGS0000033609-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033609-0.jpg'],
+    description:'Auriculares gaming con cable de ASUS TUF, compatibles con Jack 3.5mm y USB-C. Drivers de 40mm ASUS-Tuned para audio gaming preciso, micrófono boom de 6mm con cancelación de ruido y sonido envolvente virtual 7.1 con ASUS Sonic Studio. Diseño plegable de 285g.',
+    specs:{
+      'Tipo':'Gaming cable · Jack 3.5mm + USB-C',
+      'Driver':'40mm ASUS-Tuned',
+      'Sonido envolvente':'Virtual 7.1 (ASUS Sonic Studio)',
+      'Micrófono':'Boom 6mm · cancelación de ruido',
+      'Plataformas':'PC · PS4/PS5 · Xbox · Switch',
+      'Peso':'285g plegable',
+      'SKU Megasur':'MGS0000033609'
+    }
+  },
+
+  { id:216, name:'ASUS TUF Gaming H3 Gun Metal', brand:'ASUS', category:'auriculares',
+    price:50.99, oldPrice:69.99, badge:'Drivers 50mm · 7.1',
+    image:'https://img.megasur.es/img/MGS0000033529-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033529-0.jpg'],
+    description:'Auriculares gaming USB de ASUS TUF con drivers de 50mm para graves profundos y explosivos. Micrófono bidireccional desmontable con cancelación de ruido, sonido envolvente virtual 7.1 y almohadillas de espuma de memoria para sesiones largas. Compatible con todas las plataformas.',
+    specs:{
+      'Tipo':'Gaming USB',
+      'Driver':'50mm · graves profundos',
+      'Sonido envolvente':'Virtual 7.1 (ASUS Sonic Studio III)',
+      'Micrófono':'Bidireccional desmontable con ENC',
+      'Almohadillas':'Espuma de memoria',
+      'Plataformas':'PC · PS4/PS5 · Xbox · Switch',
+      'SKU Megasur':'MGS0000033529'
+    }
+  },
+
+  { id:217, name:'ASUS TUF Gaming H1 Wireless Negro', brand:'ASUS', category:'auriculares',
+    price:69.99, oldPrice:89.99, badge:'2.4GHz · 15h · Dual',
+    image:'https://img.megasur.es/img/MGS0000033605-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033605-0.jpg'],
+    description:'Auriculares gaming inalámbricos de ASUS TUF con conexión dual: 2.4GHz sin latencia y cable 3.5mm para consolas. Drivers de 40mm ASUS-Tuned, hasta 15h de batería, micrófono boom desmontable y almohadillas de espuma de memoria para máximo confort.',
+    specs:{
+      'Tipo':'Gaming inalámbrico 2.4GHz + cable 3.5mm',
+      'Driver':'40mm ASUS-Tuned',
+      'Batería':'Hasta 15h',
+      'Latencia':'Baja latencia 2.4GHz',
+      'Micrófono':'Boom desmontable con ENC',
+      'Peso':'299g',
+      'SKU Megasur':'MGS0000033605'
+    }
+  },
+
+  { id:218, name:'ASUS ROG Delta S Gaming Negro', brand:'ASUS', category:'auriculares',
+    price:223.31, oldPrice:249.99, badge:'DAC ESS 9281 · Hi-Res',
+    image:'https://img.megasur.es/img/MGS0000033604-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033604-0.jpg'],
+    description:'Auriculares gaming USB-C premium de ASUS ROG con DAC ESS 9281 Quad-Core de 32 bits para audio Hi-Res certificado. Drivers MagX de 50mm con imán de neodimio, sonido envolvente virtual 7.1 y micrófono cardioide con ENC. Compatible con PC, PS5, Switch, iOS y Android.',
+    specs:{
+      'DAC':'ESS 9281 Quad-Core 32-bit Hi-Res',
+      'Driver':'MagX 50mm (imán neodimio)',
+      'Sonido envolvente':'Virtual 7.1 · ROG Armoury Crate',
+      'Micrófono':'Cardioide alta sensibilidad + ENC',
+      'Conexión':'USB-C',
+      'Plataformas':'PC · PS5 · Switch · iOS · Android',
+      'SKU Megasur':'MGS0000033604'
+    }
+  },
+
+  { id:219, name:'ASUS ROG Cetra TWS SpeedNova Negro', brand:'ASUS', category:'auriculares',
+    price:223.37, oldPrice:249.99, badge:'TWS Gaming · ANC',
+    image:'https://img.megasur.es/img/MGS0000033611-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033611-0.jpg'],
+    description:'Auriculares True Wireless gaming de ASUS ROG con ANC híbrida y modo gaming de baja latencia. Bluetooth 5.3 con drivers ROG Triforce de 10mm, modo Transparencia, resistencia IPX4 y hasta 27h de autonomía (6h + 21h estuche). Control táctil y botón físico.',
+    specs:{
+      'Tipo':'True Wireless gaming · ANC híbrida',
+      'Driver':'ROG Triforce 10mm',
+      'Batería':'6h (auriculares) + 21h (estuche) = 27h',
+      'Conectividad':'Bluetooth 5.3 · baja latencia gaming',
+      'Resistencia':'IPX4 · control táctil + botón físico',
+      'Transparencia':'Modo Transparencia integrado',
+      'SKU Megasur':'MGS0000033611'
+    }
+  },
+
+  // ── Logitech ─────────────────────────────────────────────────────────────
+
+  { id:220, name:'Logitech Headset H110 Estéreo', brand:'Logitech', category:'auriculares',
+    price:13.99, badge:'Dual Jack 3.5mm · 73g',
+    image:'https://img.megasur.es/img/981-000271-0.jpg',
+    images:['https://img.megasur.es/img/981-000271-0.jpg'],
+    description:'Auriculares con micrófono de Logitech con doble Jack 3.5mm (puerto PC gaming). Drivers de 20mm estéreo, micrófono boom flexible con cancelación de ruido, diseño plegable de 73g y control de volumen en cable. Sin driver necesario: plug & play en PC y portátiles.',
+    specs:{
+      'Tipo':'Cable doble Jack 3.5mm',
+      'Driver':'20mm estéreo',
+      'Micrófono':'Boom flexible con cancelación de ruido',
+      'Control':'Volumen en cable',
+      'Peso':'73g ultraligero plegable',
+      'Plug & Play':'Sí (sin driver)',
+      'SKU Megasur':'981-000271'
+    }
+  },
+
+  { id:221, name:'Logitech Headset H340 USB', brand:'Logitech', category:'auriculares',
+    price:49.99, oldPrice:59.99, badge:'USB · Teams · Zoom',
+    image:'https://img.megasur.es/img/MGS0000033721-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000033721-0.jpg'],
+    description:'Auriculares USB de Logitech certificados para Microsoft Teams, Zoom y Google Meet. Procesamiento de audio digital sin driver, micrófono con cancelación de ruido y brazo ajustable, control de volumen y silencio en cable y almohadillas acolchadas suaves. Plug & play universal.',
+    specs:{
+      'Tipo':'Cable USB-A · Plug & Play',
+      'Certificación':'Microsoft Teams · Zoom · Google Meet',
+      'Micrófono':'Cancelación de ruido · brazo ajustable',
+      'Control':'Volumen y silencio en cable',
+      'SO':'Windows · macOS · ChromeOS',
+      'Almohadillas':'Suaves acolchadas',
+      'SKU Megasur':'MGS0000033721'
+    }
+  },
+
+  { id:222, name:'Logitech Zone Wired USB', brand:'Logitech', category:'auriculares',
+    price:101.99, oldPrice:119.99, badge:'ANC voz · 3-en-1',
+    image:'https://img.megasur.es/img/MGS0000025967-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000025967-0.jpg'],
+    description:'Auriculares profesionales de Logitech con micrófono de cancelación activa de ruido (ANC) para voz nítida en reuniones. Incluye 3 conexiones: USB-A, USB-C y Jack 3.5mm. Certificado para Microsoft Teams, Zoom, Google Meet y Cisco. Drivers de 40mm ajustados para voz.',
+    specs:{
+      'Tipo':'Cable 3-en-1 · USB-A / USB-C / Jack 3.5mm',
+      'Micrófono':'ANC activa para reuniones',
+      'Certificación':'Teams · Zoom · Google Meet · Cisco',
+      'Driver':'40mm ajustados para claridad de voz',
+      'Control':'Volumen y silencio on-ear',
+      'SO':'Windows · macOS · Linux · ChromeOS',
+      'SKU Megasur':'MGS0000025967'
+    }
+  },
+
+  { id:223, name:'Logitech G733 Gaming Wireless Negro', brand:'Logitech', category:'auriculares',
+    price:90.59, oldPrice:119.99, badge:'LIGHTSPEED · 29h · RGB',
+    image:'https://img.megasur.es/img/MGS0000015732-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000015732-0.jpg'],
+    description:'Auriculares gaming inalámbricos de Logitech con tecnología LIGHTSPEED 2.4GHz y hasta 29 horas de batería. Micrófono boom giratorio con tecnología Blue VO!CE, RGB LIGHTSYNC personalizable, sonido DTS Headphone:X 2.0 de 7.1 canales y almohadillas de tela transpirable.',
+    specs:{
+      'Tipo':'Gaming inalámbrico LIGHTSPEED 2.4GHz',
+      'Batería':'Hasta 29h de reproducción',
+      'Micrófono':'Boom giratorio Blue VO!CE',
+      'RGB':'LIGHTSYNC personalizable (G HUB)',
+      'Sonido':'DTS Headphone:X 2.0 · 7.1 canales',
+      'Almohadillas':'Tela transpirable reversible',
+      'SKU Megasur':'MGS0000015732'
+    }
+  },
+
+  { id:224, name:'Logitech PRO Gaming X Headset', brand:'Logitech', category:'auriculares',
+    price:109.99, oldPrice:139.99, badge:'Pro-G 50mm · DTS 7.1',
+    image:'https://img.megasur.es/img/MGS0000025666-0.jpg',
+    images:['https://img.megasur.es/img/MGS0000025666-0.jpg'],
+    description:'Auriculares gaming USB de Logitech con drivers Pro-G de 50mm y membrana de fibra híbrida para un sonido preciso y potente. Micrófono Pro-G Supercardioid desprendible con tecnología Blue VO!CE, sonido envolvente DTS 7.1, almohadillas de espuma de memoria y construcción de acero inoxidable.',
+    specs:{
+      'Driver':'Pro-G 50mm · membrana fibra híbrida',
+      'Micrófono':'Pro-G Supercardioid desprendible Blue VO!CE',
+      'Sonido envolvente':'DTS Headphone:X 2.0 · 7.1 canales',
+      'Almohadillas':'Espuma de memoria intercambiables',
+      'Construcción':'Acero inoxidable',
+      'Peso':'259g',
+      'SKU Megasur':'MGS0000025666'
+    }
+  }
+
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
