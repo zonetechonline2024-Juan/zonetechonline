@@ -1303,6 +1303,196 @@ PRODUCTS.push(
   }
 );
 
+
+
+// ─── ALTAVOCES INTELIGENTES (fuente: Megasur.es — junio 2026)
+// 28 altavoces verificados: 7 marcas × 5 productos
+PRODUCTS.push(
+
+  // ── FONESTAR ───────────────────────────────────────────────
+
+  { id:82, name:'ALTAVOZ PORTATIL FONESTAR BOX-35LED BLUETOOTH/ KARAOKE/ USB/ SD/ MICROFONO INALAMBRICO/ 35W RMS', brand:'FONESTAR', category:'altavoces',
+    price:59.99, oldPrice:70.79, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/BOX-35LED-0.jpg',
+    description:'Tipo: Altavoz portátil',
+    specs:{'Tipo':'Altavoz portátil', 'Potencia':'35W RMS RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'BOX-35LED'}
+  },
+  { id:79, name:'ALTAVOZ PORTATIL CON MICROFONO FONESTAR MALIBU-315 / 50W RMS', brand:'FONESTAR', category:'altavoces',
+    price:149.99, oldPrice:176.99, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000030725-0.jpg',
+    description:'Tipo: Altavoz portátil',
+    specs:{'Tipo':'Altavoz portátil', 'Potencia':'50W RMS RMS', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'MGS0000030725'}
+  },
+  { id:81, name:'ALTAVOZ PORTATIL FONESTAR CALIFORNIA 200W / JACK / AUXILIAR / FUNCION KARAOKE / BLUETOOTH / USB / MP3 / RADIO FM / MICROFONO', brand:'FONESTAR', category:'altavoces',
+    price:199.99, oldPrice:235.99, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/MGS0000031143-0.jpg',
+    description:'Tipo: Altavoz portátil',
+    specs:{'Tipo':'Altavoz portátil', 'Potencia':'200W RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'MGS0000031143'}
+  },
+  // ── PHOENIX TECHNOLOGIES ───────────────────────────────────
+
+  { id:88, name:'Altavoces PrivateSound Jack y USB', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000004797-0.jpg',
+    description:'Entrada: USB',
+    specs:{'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'MGS0000004797'}
+  },
+  { id:87, name:'Altavoces Phoenix para Ordenador Portables 2.0 USB negros', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
+    price:29.99, oldPrice:35.39, badge:'Audio',
+    image:'https://img.megasur.es/img/PHAPORTABLE2.0-0.jpg',
+    description:'Sistema: 2.0 estéreo',
+    specs:{'Sistema':'2.0 estéreo', 'Entrada':'USB','SKU Megasur':'PHAPORTABLE2.0'}
+  },
+  { id:84, name:'Altavoces PC Ordenador de Estudio Phoenix Serenade 60W RMS USB Bluetooth Optico Jack RCA', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
+    price:79.99, oldPrice:94.39, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/DSP0000019433-0.jpg',
+    description:'Potencia: 60W RMS RMS',
+    specs:{'Potencia':'60W RMS RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000019433'}
+  },
+  { id:85, name:'Altavoces de Estudio Phoenix Sonika 50W con Bluetooth Jack USB para Ordenador', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
+    price:89.99, oldPrice:106.19, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/DSP0000019639-0.jpg',
+    description:'Potencia: 50W RMS',
+    specs:{'Potencia':'50W RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000019639'}
+  },
+  { id:86, name:'Altavoz RumbleBoss Phoenix 80W RMS Bateria 4000 mah Funcion Karaoke 2 Microfonos Inalambricos Incluidos', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
+    price:109.99, oldPrice:129.79, badge:'Karaoke',
+    image:'https://img.megasur.es/img/DSP0000026295-0.jpg',
+    description:'Potencia: 80W RMS RMS',
+    specs:{'Potencia':'80W RMS RMS', 'Batería':'Recargable integrada', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'DSP0000026295'}
+  },
+  // ── LOGITECH ───────────────────────────────────────────────
+
+  { id:93, name:'ALTAVOCES LOGITECH Z150 2.0/ BLANCOS/ 6W', brand:'LOGITECH', category:'altavoces',
+    price:14.99, oldPrice:17.69, badge:'Audio',
+    image:'https://img.megasur.es/img/980-000815-0.jpg',
+    description:'Sistema: 2.0 estéreo',
+    specs:{'Sistema':'2.0 estéreo', 'Potencia':'6W RMS','SKU Megasur':'980-000815'}
+  },
+  { id:89, name:'ALTAVOCES LOGITECH Z207 BLUETOOTH BLANCO', brand:'LOGITECH', category:'altavoces',
+    price:34.99, oldPrice:41.29, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/980-001292-0.jpg',
+    description:'Conectividad: Bluetooth',
+    specs:{'Conectividad':'Bluetooth','SKU Megasur':'980-001292'}
+  },
+  { id:91, name:'ALTAVOCES LOGITECH Z623 2.1 200 RMS /THX', brand:'LOGITECH', category:'altavoces',
+    price:94.99, oldPrice:112.09, badge:'Sistema 2.1',
+    image:'https://img.megasur.es/img/980-000403-0.jpg',
+    description:'Sistema: 2.1 (satélites + subwoofer)',
+    specs:{'Sistema':'2.1 (satélites + subwoofer)','SKU Megasur':'980-000403'}
+  },
+  { id:90, name:'ALTAVOCES LOGITECH Z906 5.1 THX / 500 W RMS SONIDO ENVOLVENTE', brand:'LOGITECH', category:'altavoces',
+    price:259.99, oldPrice:306.79, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000031037-0.jpg',
+    description:'Potencia: 500 W RMS RMS',
+    specs:{'Potencia':'500 W RMS RMS','SKU Megasur':'MGS0000031037'}
+  },
+  // ── MARS GAMING ────────────────────────────────────────────
+
+  { id:94, name:'ALTAVOCES MARS GAMING MS1 2.0 NEGRO/ROJO', brand:'MARS GAMING', category:'altavoces',
+    price:15.99, oldPrice:18.87, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000008707-0.jpg',
+    description:'Sistema: 2.0 estéreo',
+    specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000008707'}
+  },
+  { id:95, name:'ALTAVOCES MARS GAMING MSCUBE PREMIUM 8W BLACK', brand:'MARS GAMING', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000008709-0.jpg',
+    description:'Potencia: 8W RMS',
+    specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008709'}
+  },
+  { id:96, name:'ALTAVOCES MARS GAMING MSCUBEW 8W BLANCO', brand:'MARS GAMING', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000008846-0.jpg',
+    description:'Potencia: 8W RMS',
+    specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008846'}
+  },
+  { id:98, name:'ALTAVOCES MARS GAMING MSCUBEP PREMIUM 8W ROSA', brand:'MARS GAMING', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000008873-0.jpg',
+    description:'Potencia: 8W RMS',
+    specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008873'}
+  },
+  { id:97, name:'ALTAVOCES MARS GAMING MS22W 2.2 35W USB + JACK 3.5MM BLANCO', brand:'MARS GAMING', category:'altavoces',
+    price:39.99, oldPrice:47.19, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000008862-0.jpg',
+    description:'Potencia: 22W RMS',
+    specs:{'Potencia':'22W RMS', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000008862'}
+  },
+  // ── NGS ────────────────────────────────────────────────────
+
+  { id:102, name:'ALTAVOZ PARA PC NGS SB 350/ 12W/ USB/ JACK 3.5MM', brand:'NGS', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000009027-0.jpg',
+    description:'Potencia: 12W RMS',
+    specs:{'Potencia':'12W RMS', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000009027'}
+  },
+  { id:99, name:'ALTAVOZ BLUETOOTH NGS ROLLER FURIA 1 NEGRO', brand:'NGS', category:'altavoces',
+    price:24.99, oldPrice:29.49, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/DSP0000023318-0.jpg',
+    description:'Conectividad: Bluetooth',
+    specs:{'Conectividad':'Bluetooth','SKU Megasur':'DSP0000023318'}
+  },
+  { id:100, name:'ALTAVOCES NGS COMET 2.1 USB 20W RMS', brand:'NGS', category:'altavoces',
+    price:29.99, oldPrice:35.39, badge:'Sistema 2.1',
+    image:'https://img.megasur.es/img/DSP0000013251-0.jpg',
+    description:'Sistema: 2.1 (satélites + subwoofer)',
+    specs:{'Sistema':'2.1 (satélites + subwoofer)', 'Potencia':'20W RMS RMS', 'Entrada':'USB','SKU Megasur':'DSP0000013251'}
+  },
+  { id:101, name:'ALTAVOZ PORTATIL BLUETOOTH NGS WILD TEMPER 200W', brand:'NGS', category:'altavoces',
+    price:74.99, oldPrice:88.49, badge:'Bluetooth',
+    image:'https://img.megasur.es/img/DSP0000028000-0.jpg',
+    description:'Tipo: Altavoz portátil',
+    specs:{'Tipo':'Altavoz portátil', 'Potencia':'200W RMS', 'Conectividad':'Bluetooth','SKU Megasur':'DSP0000028000'}
+  },
+  // ── HAMA ───────────────────────────────────────────────────
+
+  { id:106, name:'ALTAVOZ HAMA BALL SHAPE MONO ROSA', brand:'HAMA', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000024055-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'MGS0000024055'}
+  },
+  { id:103, name:'ALTAVOZ HAMA SHINE 2.0 BLANCO', brand:'HAMA', category:'altavoces',
+    price:24.99, oldPrice:29.49, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000024269-0.jpg',
+    description:'Sistema: 2.0 estéreo',
+    specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000024269'}
+  },
+  { id:105, name:'ALTAVOZ HAMA SHINE 2.0 NEGRO', brand:'HAMA', category:'altavoces',
+    price:24.99, oldPrice:29.49, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000024270-0.jpg',
+    description:'Sistema: 2.0 estéreo',
+    specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000024270'}
+  },
+  { id:104, name:'ALTAVOZ HAMA TWIN 3.0 BLANCO', brand:'HAMA', category:'altavoces',
+    price:34.99, oldPrice:41.29, badge:'Audio',
+    image:'https://img.megasur.es/img/DSP0000024274-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'DSP0000024274'}
+  },
+  // ── QCHARX ─────────────────────────────────────────────────
+
+  { id:109, name:'ALTAVOZ QCHARX FLOW MINI NEGRO 10W', brand:'QCHARX', category:'altavoces',
+    price:19.99, oldPrice:23.59, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000024590-0.jpg',
+    description:'Potencia: 10W RMS',
+    specs:{'Potencia':'10W RMS','SKU Megasur':'MGS0000024590'}
+  },
+  { id:108, name:'ALTAVOZ QCHARX FLOW NEGRO', brand:'QCHARX', category:'altavoces',
+    price:29.99, oldPrice:35.39, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000023191-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'MGS0000023191'}
+  },
+  { id:107, name:'ALTAVOZ QCHARX FLOWMAX NEGRO', brand:'QCHARX', category:'altavoces',
+    price:39.99, oldPrice:47.19, badge:'Audio',
+    image:'https://img.megasur.es/img/MGS0000023189-0.jpg',
+    description:'',
+    specs:{'SKU Megasur':'MGS0000023189'}
+  }
+);
+
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
 
 function watchSVG(color) {
