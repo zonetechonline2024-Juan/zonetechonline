@@ -1,0 +1,20 @@
+# ZoneTechOnline — robots.txt
+# https://zonetechonline.com
+
+User-agent: *
+Allow: /
+
+# Páginas privadas y de proceso — sin indexar
+Disallow: /checkout.html
+Disallow: /checkout-success.html
+Disallow: /checkout-cancel.html
+Disallow: /login.html
+Disallow: /register.html
+
+# Archivos de datos internos (no son páginas web)
+Disallow: /src/data/
+Disallow: /audit-catalog-images.js
+Disallow: /push-to-github.js
+
+# Sitemap
+Sitemap: https://zonetechonline.com/sitemap.xml
