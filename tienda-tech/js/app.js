@@ -10,7 +10,8 @@ const FILTER_MAP = {
   'glasses':    'gafas',
   'speakers':   'altavoces',
   'masks':      'mascaras',
-  'peripherals':'perifericos'
+  'peripherals':'perifericos',
+  'smartphones': 'smartphones'
 };
 
 // ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
@@ -1657,6 +1658,237 @@ PRODUCTS.push(
     image:'https://img.megasur.es/img/DSP0000014707-0.jpg',
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014707'}
+  }
+);
+
+
+// ─── SMARTPHONES MEGASUR (junio 2026)
+// 35 smartphones verificados: 7 marcas
+PRODUCTS.push(
+
+  // ── SAMSUNG ────────────────────────────────────────────────
+
+  { id:135, name:'SAMSUNG GALAXY A37 5G 8/256GB VERDE', brand:'SAMSUNG', category:'smartphones',
+    price:328.9, oldPrice:388.1, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033302-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033302'}
+  },
+  { id:136, name:'SAMSUNG GALAXY A37 5G 8/256GB GRIS', brand:'SAMSUNG', category:'smartphones',
+    price:328.9, oldPrice:388.1, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033303-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033303'}
+  },
+  { id:137, name:'SAMSUNG GALAXY A37 5G 8/256GB BLANCO', brand:'SAMSUNG', category:'smartphones',
+    price:328.9, oldPrice:388.1, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033305-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033305'}
+  },
+  { id:138, name:'SAMSUNG GALAXY A37 5G 8/256GB VIOLETA', brand:'SAMSUNG', category:'smartphones',
+    price:328.9, oldPrice:388.1, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033304-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033304'}
+  },
+  { id:139, name:'SAMSUNG GALAXY A57 5G 8/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
+    price:449, oldPrice:529.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033306-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033306'}
+  },
+  // ── APPLE ──────────────────────────────────────────────────
+
+  { id:141, name:'APPLE IPHONE 14 5G 128GB AZUL ACONDICIONADO', brand:'APPLE', category:'smartphones',
+    price:299, oldPrice:352.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033831-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033831'}
+  },
+  { id:142, name:'APPLE IPHONE 14 5G 128GB PURPURA ACONDICIONADO', brand:'APPLE', category:'smartphones',
+    price:299, oldPrice:352.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033834-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033834'}
+  },
+  { id:143, name:'APPLE IPHONE 14 5G 128GB AMARILLO ACONDICIONADO', brand:'APPLE', category:'smartphones',
+    price:299, oldPrice:352.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000033838-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033838'}
+  },
+  { id:144, name:'APPLE IPHONE 14 PRO 5G 256GB NEGRO ACONDICIONADO', brand:'APPLE', category:'smartphones',
+    price:499, oldPrice:588.82, badge:'Pro',
+    image:'https://img.megasur.es/img/MGS0000033840-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033840'}
+  },
+  { id:140, name:'APPLE IPHONE 16E 128GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:619, oldPrice:730.42, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000029938-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000029938'}
+  },
+  // ── XIAOMI ─────────────────────────────────────────────────
+
+  { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
+    price:129, oldPrice:152.22, badge:'Pro',
+    image:'https://img.megasur.es/img/MGS0000033059-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033059'}
+  },
+  { id:146, name:'XIAOMI REDMI A7 PRO 4/128GB VERDE', brand:'XIAOMI', category:'smartphones',
+    price:129, oldPrice:152.22, badge:'Pro',
+    image:'https://img.megasur.es/img/MGS0000033060-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033060'}
+  },
+  { id:148, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" NEGRO', brand:'XIAOMI', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'Smartphone',
+    image:'https://img.megasur.es/img/MGS0000031676-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'8GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000031676'}
+  },
+  { id:149, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" AZUL', brand:'XIAOMI', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'Smartphone',
+    image:'https://img.megasur.es/img/MGS0000031681-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'8GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000031681'}
+  },
+  { id:147, name:'XIAOMI REDMI NOTE 14 5G 8/256GB LILA', brand:'XIAOMI', category:'smartphones',
+    price:219, oldPrice:258.42, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000025157-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000025157'}
+  },
+  // ── REALME ─────────────────────────────────────────────────
+
+  { id:154, name:'REALME C100 5G 4/256GB VERDE', brand:'REALME', category:'smartphones',
+    price:149, oldPrice:175.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000034179-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000034179'}
+  },
+  { id:150, name:'REALME 14T 5G 8/256GB NEGRO', brand:'REALME', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000038803-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000038803'}
+  },
+  { id:151, name:'REALME 14T 5G 8/256GB PURPURA', brand:'REALME', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000038804-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000038804'}
+  },
+  { id:152, name:'REALME 16 5G 8/256GB BLANCO', brand:'REALME', category:'smartphones',
+    price:249, oldPrice:293.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000034177-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000034177'}
+  },
+  { id:153, name:'REALME 16 5G 8/256GB NEGRO', brand:'REALME', category:'smartphones',
+    price:249, oldPrice:293.82, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000034178-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000034178'}
+  },
+  // ── TCL ────────────────────────────────────────────────────
+
+  { id:155, name:'TCL 60 SE NXTPAPER 5G 8/256GB GRIS', brand:'TCL', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'NXTPAPER',
+    image:'https://img.megasur.es/img/MGS0000027846-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000027846'}
+  },
+  { id:156, name:'TCL 60 SE NXTPAPER 5G 8/256GB VERDE', brand:'TCL', category:'smartphones',
+    price:199, oldPrice:234.82, badge:'NXTPAPER',
+    image:'https://img.megasur.es/img/MGS0000027847-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000027847'}
+  },
+  { id:157, name:'TCL NXTPAPER 70 PRO 5G 8/256GB AZUL', brand:'TCL', category:'smartphones',
+    price:249, oldPrice:293.82, badge:'NXTPAPER',
+    image:'https://img.megasur.es/img/MGS0000033439-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033439'}
+  },
+  { id:158, name:'TCL NXTPAPER 70 PRO 5G 8/256GB ORO', brand:'TCL', category:'smartphones',
+    price:249, oldPrice:293.82, badge:'NXTPAPER',
+    image:'https://img.megasur.es/img/MGS0000033440-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033440'}
+  },
+  { id:159, name:'TCL 60 ULTRA NXTPAPER 5G 12/512GB NEGRO', brand:'TCL', category:'smartphones',
+    price:329, oldPrice:388.22, badge:'NXTPAPER',
+    image:'https://img.megasur.es/img/MGS0000033437-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'512GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Ultra/Pro Max','SKU Megasur':'MGS0000033437'}
+  },
+  // ── MOTOROLA ───────────────────────────────────────────────
+
+  { id:160, name:'MOTOROLA MOTO G05 4/128GB VERDE', brand:'MOTOROLA', category:'smartphones',
+    price:109, oldPrice:128.62, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000040159-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000040159'}
+  },
+  { id:162, name:'MOTOROLA MOTO G15 8/128GB NARANJA', brand:'MOTOROLA', category:'smartphones',
+    price:159, oldPrice:187.62, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000029690-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000029690'}
+  },
+  { id:163, name:'MOTOROLA MOTO G15 8/128GB VERDE', brand:'MOTOROLA', category:'smartphones',
+    price:159, oldPrice:187.62, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000029691-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000029691'}
+  },
+  { id:161, name:'MOTOROLA MOTO G85 5G 12/256GB GRIS', brand:'MOTOROLA', category:'smartphones',
+    price:269, oldPrice:317.42, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000027349-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000027349'}
+  },
+  { id:164, name:'MOTOROLA THINKPHONE 25 5G 8/256GB CARBON BLACK', brand:'MOTOROLA', category:'smartphones',
+    price:449, oldPrice:529.82, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000035470-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000035470'}
+  },
+  // ── HAMMER ─────────────────────────────────────────────────
+
+  { id:165, name:'RUGERIZADO HAMMER IRON V 6+6/64GB NEGRO', brand:'HAMMER', category:'smartphones',
+    price:149, oldPrice:175.82, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000023573-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'64GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023573'}
+  },
+  { id:166, name:'RUGERIZADO HAMMER IRON V 6+6/64GB NARANJA', brand:'HAMMER', category:'smartphones',
+    price:149, oldPrice:175.82, badge:'Smartphone',
+    image:'https://img.megasur.es/img/DSP0000023574-0.jpg',
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE', 'Almacenamiento':'64GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023574'}
+  },
+  { id:168, name:'RUGERIZADO HAMMER BLADE VA 5G 8/128GB NEGRO', brand:'HAMMER', category:'smartphones',
+    price:249, oldPrice:293.82, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000027300-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000027300'}
+  },
+  { id:169, name:'HAMMER CONSTRUCTION 2 5G 6/128GB PLATA', brand:'HAMMER', category:'smartphones',
+    price:279, oldPrice:329.22, badge:'5G',
+    image:'https://img.megasur.es/img/MGS0000025076-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000025076'}
+  },
+  { id:167, name:'RUGERIZADO HAMMER BLADE V 5G 8/256GB NEGRO', brand:'HAMMER', category:'smartphones',
+    price:299, oldPrice:352.82, badge:'5G',
+    image:'https://img.megasur.es/img/DSP0000023575-0.jpg',
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023575'}
   }
 );
 
