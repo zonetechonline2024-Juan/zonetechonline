@@ -181,7 +181,7 @@
         <label class="pay-method">
           <input type="radio" name="shipping" value="standard" checked>
           <div class="pay-method-info">
-            <strong>Envío estándar · 2–4 días hábiles</strong>
+            <strong>Envío estándar · 5 a 8 días hábiles</strong>
             <span>MRW / SEUR con seguimiento</span>
           </div>
           <span id="shipping-price-std" style="font-size:14px;font-weight:700;color:var(--accent);">Gratis</span>
@@ -189,7 +189,7 @@
         <label class="pay-method">
           <input type="radio" name="shipping" value="express">
           <div class="pay-method-info">
-            <strong>Envío exprés 24h</strong>
+            <strong>Envío exprés · 5 a 8 días hábiles</strong>
             <span>DHL Express · Pedidos antes de 13:00 h</span>
           </div>
           <span style="font-size:14px;font-weight:700;">9,90 €</span>
@@ -407,7 +407,7 @@
       return { id: i.id, name: i.name, price: i.price, qty: i.qty, category: i.category };
     });
     if (shippingCost > 0) {
-      items.push({ id: 0, name: shippingMethod === 'express' ? 'Envío exprés 24h · DHL' : 'Gastos de envío estándar', price: shippingCost, qty: 1, category: 'shipping' });
+      items.push({ id: 0, name: shippingMethod === 'express' ? 'Envío exprés · 5-8 días hábiles · DHL' : 'Gastos de envío estándar', price: shippingCost, qty: 1, category: 'shipping' });
     }
 
     // Save order snapshot so success page can display it
