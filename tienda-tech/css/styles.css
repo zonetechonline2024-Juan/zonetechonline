@@ -355,6 +355,7 @@ input{font-family:inherit;}
 .mf-badge--orange .mf-metric-num{color:#fb923c;}
 .mf-badge--red .mf-metric-num{color:#f87171;}
 .mf-badge--purple .mf-metric-num{color:#a855f7;}
+.mf-badge--blue .mf-metric-num{color:#38bdf8;}
 /* Content side */
 .mf-content{padding:52px 56px;display:flex;flex-direction:column;justify-content:center;gap:20px;background:var(--bg-card);}
 /* Category tag */
@@ -363,6 +364,7 @@ input{font-family:inherit;}
 .mf-cat--fitness{background:rgba(251,146,60,.12);color:#fb923c;border:1px solid rgba(251,146,60,.25);}
 .mf-cat--heart{background:rgba(248,113,113,.12);color:#f87171;border:1px solid rgba(248,113,113,.25);}
 .mf-cat--stress{background:rgba(168,85,247,.12);color:#a855f7;border:1px solid rgba(168,85,247,.25);}
+.mf-cat--tech{background:rgba(56,189,248,.12);color:#38bdf8;border:1px solid rgba(56,189,248,.25);}
 /* Text */
 .mf-headline{font-family:var(--font-head);font-size:clamp(22px,2.8vw,34px);font-weight:700;line-height:1.2;color:var(--text);}
 .mf-body{font-size:15px;line-height:1.8;color:var(--text-2);max-width:440px;}
