@@ -315,21 +315,27 @@
   var brandK  = params.get('brand')  || '';
 
   var CAT_LABELS = {
-    all:'Catálogo Completo', watches:'Relojes Inteligentes', rings:'Anillos Smart',
-    headphones:'Auriculares Premium', glasses:'Gafas Inteligentes',
-    speakers:'Altavoces Smart', masks:'Máscaras LED'
+    all:         'Catálogo Completo',
+    watches:     'Relojes Inteligentes',
+    headphones:  'Auriculares Premium',
+    speakers:    'Altavoces Smart',
+    peripherals: 'Teclados Gaming',
+    smartphones: 'Smartphones'
   };
   var CAT_GRAD = {
-    all:'Completo', watches:'Inteligentes', rings:'Smart',
-    headphones:'Premium', glasses:'Inteligentes', speakers:'Smart', masks:'LED'
+    all:         'Completo',
+    watches:     'Inteligentes',
+    headphones:  'Premium',
+    speakers:    'Smart',
+    peripherals: 'Gaming',
+    smartphones: 'Smartphones'
   };
   var BRANDS_BY_CAT = {
-    watches:    [['Xiaomi',3],['Samsung',1],['Apple',5]],
-    rings:      [],
-    headphones: [['Sony',5]],
-    glasses:    [],
-    speakers:   [['JBL',5]],
-    masks:      []
+    watches:     [['Apple',5],['Samsung',3],['Xiaomi',4],['Amazfit',3]],
+    headphones:  [['Sony',10],['JBL',8],['Samsung',5],['Apple',4],['Jabra',3]],
+    speakers:    [['JBL',12],['Fonestar',5],['Phoenix',4],['Logitech',3]],
+    peripherals: [['ASUS ROG',8],['Razer',7],['Logitech G',6],['Corsair',4]],
+    smartphones: [['Samsung',7],['Apple',5],['Xiaomi',5],['TCL',5],['Motorola',4],['Hammer',3]]
   };
 
   // ── Update page header ──
