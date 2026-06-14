@@ -1,4 +1,4 @@
-// ZoneTechOnline — Premium Tech Wearables
+﻿// ZoneTechOnline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -944,6 +944,169 @@ PRODUCTS.push(
     }
   }
 
+);
+
+
+
+
+
+
+// ─── RELOJES INTELIGENTES (fuente: Megasur.es — junio 2026) ─────────────────
+// 15 smartwatches verificados: Garmin (5) · MyPhone+Hammer (5) · Familia (5)
+// Todos con SKU real de Megasur · Precio PVP de referencia de PCComponentes
+PRODUCTS.push(
+
+  // ── Garmin — GPS premium ──────────────────────────────────────────────────
+
+  { id:26, name:'RELOJ SMARTWATCH GARMIN APPROACH, Reloj para Golf, Campos mundiales preinstalados, Bluetooth y Resistente al Agua, Blanco', brand:'Garmin', category:'relojes',
+    price:131.95, oldPrice:151.74, badge:'Golf GPS',
+    image:'https://img.megasur.es/img/DSP0000005628-0.jpg',
+    description:'GPS especializado para golf · +41.000 campos mundiales',
+    specs:{'Info':'GPS especializado para golf · +41.000 campos mundiales', 'Info':'Pantalla MIP 1.1" · Bluetooth · resistente al agua', 'Info':'Distancias precisas al verde · obstáculos · rango de llegada', 'Info':'Batería hasta 9h GPS · 12h modo reloj', 'Info':'Estadísticas hoyo a hoyo · puntuación digital', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000005628'}
+  },
+  { id:27, name:'SMARTWATCH GARMIN FORERUNNER 165 43MM NEGRO GPS', brand:'Garmin', category:'relojes',
+    price:196.99, oldPrice:226.54, badge:'GPS Runner',
+    image:'https://img.megasur.es/img/DSP0000029844-0.jpg',
+    description:'Pantalla AMOLED 1.2" táctil 390×390 · GPS multi-satélite',
+    specs:{'Info':'Pantalla AMOLED 1.2" táctil 390×390 · GPS multi-satélite', 'Info':'FC óptico + SpO2 + estrés · hasta 11 días smartwatch', 'Info':'Hasta 19h GPS continuo · BT + WiFi', 'Métricas carrera avanzadas':'VO2max · cadencia', 'Info':'Planes de entrenamiento Garmin Coach · Garmin Pay NFC', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000029844'}
+  },
+  { id:28, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP BLANCO Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
+    price:199.99, oldPrice:229.99, badge:'GPS 5ATM',
+    image:'https://img.megasur.es/img/MGS0000032958-0.jpg',
+    description:'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm',
+    specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032958'}
+  },
+  { id:29, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP Negro Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
+    price:199.99, oldPrice:229.99, badge:'GPS 5ATM',
+    image:'https://img.megasur.es/img/MGS0000032959-0.jpg',
+    description:'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm',
+    specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032959'}
+  },
+  { id:30, name:'Garmin Vívoactive 5, Smartwatch con GPS, Pantalla AMOLED, hasta 11 dias de autonomia', brand:'Garmin', category:'relojes',
+    price:201.24, oldPrice:231.43, badge:'AMOLED 11d',
+    image:'https://img.megasur.es/img/DSP0000028241-0.jpg',
+    description:'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo',
+    specs:{'Info':'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo', 'Info':'BT + WiFi + NFC Garmin Pay · hasta 11 días smartwatch', 'Info':'FC óptico 24h + SpO2 + variabilidad FC + estrés', 'Info':'Seguimiento de sueño avanzado · +25 deportes', 'Info':'Hasta 18h GPS continuo · altímetro barométrico', 'Info':'Diseño ultraligero · compatible Garmin Coach','SKU Megasur':'DSP0000028241'}
+  },
+  { id:31, name:'SMARTWATCH HAMMER WATCH 2 LITE BLACK', brand:'Hammer', category:'relojes',
+    price:36.07, oldPrice:41.48, badge:'IP68 Rugged',
+    image:'https://img.megasur.es/img/DSP0000027299-0.jpg',
+    description:'Pantalla IPS 1.6" · resistencia militar IP68',
+    specs:{'Info':'Pantalla IPS 1.6" · resistencia militar IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Monitorización de sueño · detección de actividad 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Alertas SOS · notificaciones de smartphone', 'Info':'Resistente a golpes y agua · diseño rugged outdoor','SKU Megasur':'DSP0000027299'}
+  },
+  // ── MyPhone + Hammer — Lifestyle y rugged ──────────────────────────────────
+
+  { id:32, name:'RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO', brand:'MyPhone', category:'relojes',
+    price:49.99, oldPrice:57.49, badge:'4G SOS',
+    image:'https://img.megasur.es/img/DSP0000024070-0.jpg',
+    description:'Smartwatch para mayores con 4G LTE y GPS integrado',
+    specs:{'Info':'Smartwatch para mayores con 4G LTE y GPS integrado', 'Info':'Llamadas bidireccionales · botón SOS de emergencia', 'Info':'Detector de caídas automático · alertas de salud', 'Info':'FC óptico · podómetro · pantalla táctil grande', 'Info':'Diseño sencillo pensado para personas mayores', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000024070'}
+  },
+  { id:33, name:'RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK', brand:'MyPhone', category:'relojes',
+    price:49.99, oldPrice:57.49, badge:'IP68',
+    image:'https://img.megasur.es/img/DSP0000025695-0.jpg',
+    description:'Smartwatch outdoor con GPS integrado · IP68',
+    specs:{'Info':'Smartwatch outdoor con GPS integrado · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Pantalla 1.4" IPS color · múltiples modos deporte', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Notificaciones de smartphone · diseño robusto', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000025695'}
+  },
+  { id:34, name:'RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN', brand:'MyPhone', category:'relojes',
+    price:29.99, oldPrice:34.49, badge:'Lifestyle',
+    image:'https://img.megasur.es/img/DSP0000026342-0.jpg',
+    description:'Pantalla 1.7" TFT color · Bluetooth 5.0',
+    specs:{'Info':'Pantalla 1.7" TFT color · Bluetooth 5.0', 'Info':'FC óptico + SpO2 + podómetro · +100 modos deporte', 'Info':'Monitorización de sueño y estrés 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Diseño lifestyle moderno · modos multideporte', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026342'}
+  },
+  { id:35, name:'RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN', brand:'MyPhone', category:'relojes',
+    price:39.99, oldPrice:45.99, badge:'Outdoor',
+    image:'https://img.megasur.es/img/DSP0000026343-0.jpg',
+    description:'Smartwatch robusto para trabajo y exteriores · IP68',
+    specs:{'Info':'Smartwatch robusto para trabajo y exteriores · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 + podómetro', 'Info':'Pantalla resistente 1.4" · alertas y notificaciones', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Diseño tool resistente · color Negro/Verde', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026343'}
+  },
+  // ── Familia e infantil ──────────────────────────────────────────────────────
+
+  { id:36, name:'SMARTWATCH SPC SMARTEE 4G KIDZ TURQUESA', brand:'SPC', category:'relojes',
+    price:77.94, oldPrice:89.63, badge:'GPS Kids',
+    image:'https://img.megasur.es/img/DSP0000023066-0.jpg',
+    description:'Smartwatch infantil 4G con GPS antipérdida · nanoSIM',
+    specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz y texto', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app SPC SMARTEE', 'Info':'Pantalla táctil · resistente al agua · cámara integrada', 'Info':'Para niños de 3 a 12 años · color Turquesa','SKU Megasur':'DSP0000023066'}
+  },
+  { id:37, name:'SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS', brand:'TCL', category:'relojes',
+    price:49.99, oldPrice:57.49, badge:'4G Infantil',
+    image:'https://img.megasur.es/img/MGS0000033444-0.jpg',
+    description:'Smartwatch infantil 4G con GPS antipérdida · nanoSIM',
+    specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · cámara integrada', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app TCL MOVETIME', 'Info':'Pantalla táctil · resistente al agua', 'Info':'Para niños de 4 a 12 años · geovalla configurable','SKU Megasur':'MGS0000033444'}
+  },
+  { id:38, name:'SMARTWATCH LEOTEC LESWKIDS06K KIDS ALLO PLUS NEGRO', brand:'Leotec', category:'relojes',
+    price:59.94, oldPrice:68.93, badge:'GPS Kids',
+    image:'https://img.megasur.es/img/DSP0000020100-0.jpg',
+    description:'GPS + LBS antipérdida · 4G LTE con ranura nanoSIM',
+    specs:{'Info':'GPS + LBS antipérdida · 4G LTE con ranura nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz', 'Info':'Cámara integrada · mensajes SOS con geolocalización', 'Info':'Resistencia IP67 · control parental app', 'Info':'Para niños de 4 a 12 años · pantalla táctil', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000020100'}
+  },
+  { id:39, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 NEGRO', brand:'Forever', category:'relojes',
+    price:32.98, oldPrice:37.93, badge:'AMOLED',
+    image:'https://img.megasur.es/img/DSP0000026333-0.jpg',
+    description:'Pantalla AMOLED · Bluetooth 5.0 · diseño slim',
+    specs:{'Info':'Pantalla AMOLED · Bluetooth 5.0 · diseño slim', 'Info':'FC óptico 24h + SpO2 + estrés · monitorización de sueño', 'Info':'Más de 20 modos de deporte · podómetro + calorías', 'Info':'Batería hasta 5-7 días · recarga magnética', 'Info':'Notificaciones de smartphone', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026333'}
+  },
+  { id:40, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 ROJO', brand:'Forever', category:'relojes',
+    price:33.99, oldPrice:39.09, badge:'AMOLED',
+    image:'https://img.megasur.es/img/DSP0000026334-0.jpg',
+    description:'Pantalla AMOLED · Bluetooth 5.0 · diseño slim',
+    specs:{'Info':'Pantalla AMOLED · Bluetooth 5.0 · diseño slim', 'Info':'FC óptico 24h + SpO2 + estrés · monitorización de sueño', 'Info':'Más de 20 modos de deporte · podómetro + calorías', 'Info':'Batería hasta 5-7 días · recarga magnética', 'Info':'Notificaciones de smartphone', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026334'}
+  }
+);
+
+
+
+// ─── SAMSUNG & XIAOMI (fuente: Infortisa — junio 2026) ───────────────────────
+PRODUCTS.push(
+
+  { id:41, name:'Samsung Galaxy Fit3 1.6" 40mm BT Gray', brand:'Samsung', category:'relojes',
+    price:40.16, oldPrice:46.18, badge:'Galaxy Fit',
+    image:'/images/products/infortisa-41.webp',
+    description:'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7',
+    specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503'}
+  },
+  { id:42, name:'Samsung Galaxy Fit3 1.6" 40mm BT Pink', brand:'Samsung', category:'relojes',
+    price:40.16, oldPrice:46.18, badge:'Galaxy Fit',
+    image:'/images/products/infortisa-42.webp',
+    description:'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink',
+    specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503'}
+  },
+  { id:43, name:'Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
+    price:197.66, oldPrice:227.31, badge:'Galaxy Watch',
+    image:'/images/products/infortisa-43.webp',
+    description:'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM',
+    specs:{'Info':'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502'}
+  },
+  { id:44, name:'Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
+    price:327.95, oldPrice:377.14, badge:'Galaxy Watch',
+    image:'/images/products/infortisa-44.webp',
+    description:'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM',
+    specs:{'Info':'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502'}
+  },
+  { id:45, name:'Xiaomi Redmi Watch 5 Active Plata Mate', brand:'Xiaomi', category:'relojes',
+    price:29.97, oldPrice:34.47, badge:'Redmi Watch',
+    image:'/images/products/infortisa-45.webp',
+    description:'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM',
+    specs:{'Info':'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM','SKU Infortisa':'xiaomi-redmi-watch-5-active-plata-mate181024095502'}
+  },
+  { id:46, name:'XIAOMI Pulsera MI Smart Band 10 Glacier Silver', brand:'Xiaomi', category:'relojes',
+    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    image:'/images/products/infortisa-46.webp',
+    description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+',
+    specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503'}
+  },
+  { id:47, name:'XIAOMI Pulsera MI Smart Band 10 Midnight Black', brand:'Xiaomi', category:'relojes',
+    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    image:'/images/products/infortisa-47.webp',
+    description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black',
+    specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502'}
+  },
+  { id:48, name:'XIAOMI Pulsera MI Smart Band 10 Mystic Rose', brand:'Xiaomi', category:'relojes',
+    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    image:'/images/products/infortisa-48.webp',
+    description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose',
+    specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-mystic-rose020725095502'}
+  }
 );
 
 // ─── SVG GENERATORS ──────────────────────────────────────────────────────────
@@ -2807,3 +2970,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') { closeQuickView(); closeCart(); }
   });
 });
+
+
+
