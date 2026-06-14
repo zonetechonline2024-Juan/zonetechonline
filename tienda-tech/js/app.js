@@ -3338,7 +3338,7 @@ function initReviews() {
 
   // ── Poblar el select con todos los productos del catálogo agrupados por categoría ──
   if (productSel && typeof PRODUCTS !== 'undefined') {
-    var catLabels = { relojes:'Relojes', anillos:'Anillos', auriculares:'Auriculares', gafas:'Gafas', altavoces:'Altavoces', mascaras:'Máscaras LED' };
+    var catLabels = { relojes:'Relojes Inteligentes', auriculares:'Auriculares', altavoces:'Altavoces', 'teclados gaming':'Teclados Gaming', smartphones:'Smartphones' };
     var grouped = {};
     PRODUCTS.forEach(function(p) {
       if (!grouped[p.category]) grouped[p.category] = [];
