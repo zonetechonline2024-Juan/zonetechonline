@@ -3713,7 +3713,7 @@ function renderCheapestShowcase() {
     html +=
       '<div class="sc-card">' +
         '<div class="sc-img-wrap">' +
-          '<img class="sc-img" src="' + (p.image_url || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+          '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
           '<span class="sc-bdg ' + cat.bdg + '">' + badge + '</span>' +
         '</div>' +
         '<div class="sc-body">' +
@@ -3772,7 +3772,7 @@ function renderShowcase() {
     html +=
       '<div class="sc-card">' +
         '<div class="sc-img-wrap">' +
-          '<img class="sc-img" src="' + (p.image_url || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+          '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
           '<span class="sc-bdg ' + cat.bdg + '">' + badge + '</span>' +
         '</div>' +
         '<div class="sc-body">' +
@@ -3888,7 +3888,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initReviews();
   initAIAssistant();
   renderShowcase();
-  renderCheapestShowcase();
   renderProductosEstrella();
   renderManifestoChips();
 
