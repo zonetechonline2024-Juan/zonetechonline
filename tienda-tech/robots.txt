@@ -1,5 +1,5 @@
 # ZoneTechOnline — robots.txt
-# https://zonetechonline.com
+# https://www.zonetechonline.com
 
 User-agent: *
 Allow: /
@@ -17,4 +17,4 @@ Disallow: /audit-catalog-images.js
 Disallow: /push-to-github.js
 
 # Sitemap
-Sitemap: https://zonetechonline.com/sitemap.xml
+Sitemap: https://www.zonetechonline.com/sitemap.xml
