@@ -237,6 +237,12 @@
 .sc-btn-add:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(99,102,241,.45);}
 .sc-btn-link{padding:9px 16px;background:transparent;color:var(--text-2);border:1px solid var(--border);border-radius:50px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:var(--transition);white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;}
 .sc-btn-link:hover{border-color:var(--accent);color:var(--accent);}
+/* ── Slide 4 — Smartphones (Azul) ── */
+.slide-overlay-blue{background:linear-gradient(120deg,rgba(3,12,40,.92) 0%,rgba(5,20,60,.65) 55%,rgba(0,0,0,.2) 100%);}
+.tag-dot-blue{background:#3b82f6;box-shadow:0 0 10px #3b82f6;}
+.em-blue{background:linear-gradient(135deg,#60a5fa,#3b82f6) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
+.btn-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8) !important;border:none !important;color:#fff !important;}
+.btn-blue:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.35) !important;}
 </style>
 </head>
 <body>
@@ -412,7 +418,7 @@
   <!-- SLIDE 1: SALUD & DEPORTE -->
   <div class="slide slide-1 active" data-index="0">
     <div class="slide-video-wrap">
-      <iframe class="slide-video" src="https://www.youtube.com/embed/TuU6mQ64AXc?autoplay=1&mute=1&loop=1&playlist=TuU6mQ64AXc&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe class="slide-video" data-src="https://www.youtube.com/embed/TuU6mQ64AXc?autoplay=1&mute=1&loop=1&playlist=TuU6mQ64AXc&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" title="Relojes inteligentes ZoneTechOnline"></iframe>
     </div>
     <div class="slide-overlay"></div>
     <div class="slide-content">
@@ -487,6 +493,32 @@
     </div>
   </div>
 
+  <!-- SLIDE 4: SMARTPHONES -->
+  <div class="slide slide-4" data-index="3">
+    <div class="slide-video-wrap">
+      <iframe class="slide-video" data-src="https://www.youtube.com/embed/Jl6APmJZJ70?autoplay=1&mute=1&loop=1&playlist=Jl6APmJZJ70&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" title="Smartphones 5G ZoneTechOnline"></iframe>
+    </div>
+    <div class="slide-overlay slide-overlay-blue"></div>
+    <div class="slide-content">
+      <div class="slide-body">
+        <span class="slide-tag"><span class="tag-dot tag-dot-blue"></span>Smartphones · 5G · Libres</span>
+        <h1 class="slide-title">Conecta con<br><em class="em-blue">La Velocidad</em></h1>
+        <p class="slide-desc">Samsung Galaxy, Motorola, Xiaomi, TCL NXTPAPER y Hammer Rugged — smartphones 5G libres con cámaras pro y pantallas AMOLED de última generación. Desde 109,00 €.</p>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-badges">
+          <span class="slide-badge">📶 Conectividad 5G</span>
+          <span class="slide-badge">📷 Cámara multicuerpo pro</span>
+          <span class="slide-badge">🔋 Batería de larga duración</span>
+        </div>
+        <div class="slide-ctas">
+          <button class="btn-primary btn-lg btn-blue" onclick="window.location.href='catalogo.html?filter=smartphones'">Ver Smartphones</button>
+          <button class="btn-glass btn-lg" onclick="document.getElementById('login-btn').click()">Regístrate — 10% descuento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- NAVEGACIÓN -->
   <button class="slider-arrow slider-prev" id="slider-prev" aria-label="Anterior">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
@@ -499,6 +531,7 @@
     <button class="slider-dot active" data-index="0" aria-label="Banner 1"></button>
     <button class="slider-dot" data-index="1" aria-label="Banner 2"></button>
     <button class="slider-dot" data-index="2" aria-label="Banner 3"></button>
+    <button class="slider-dot" data-index="3" aria-label="Banner 4"></button>
   </div>
 
   <div class="slider-progress-bar"><div class="slider-progress-fill" id="slider-progress"></div></div>
