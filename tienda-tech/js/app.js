@@ -3198,7 +3198,7 @@ function renderProducts(filterKey, customFilter) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-    var reviews = 1 + (product.id % 3);
+
 
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
@@ -3209,7 +3209,7 @@ function renderProducts(filterKey, customFilter) {
       '</div>' +
       '<div class="product-info">' +
         '<h3 class="product-name">' + product.name + '</h3>' +
-        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span><span class="product-reviews">(' + reviews + ')</span></div>' +
+        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span></div>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row">' +
           '<span class="product-price">€' + product.price.toLocaleString() + '</span>' +
@@ -3269,7 +3269,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 88 ? product.description.substring(0, 88) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-    var reviews = 1 + (product.id % 3);
+
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
@@ -3279,7 +3279,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
       '</div>' +
       '<div class="product-info">' +
         '<h3 class="product-name">' + product.name + '</h3>' +
-        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span><span class="product-reviews">(' + reviews + ')</span></div>' +
+        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span></div>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
         '<div class="product-actions">' +
