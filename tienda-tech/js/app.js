@@ -3198,7 +3198,7 @@ function renderProducts(filterKey, customFilter) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-    var reviews = 40 + (product.id * 7) % 180;
+    var reviews = 1 + (product.id % 3);
 
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
@@ -3269,7 +3269,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 88 ? product.description.substring(0, 88) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-    var reviews = 40 + (product.id * 7) % 180;
+    var reviews = 1 + (product.id % 3);
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
