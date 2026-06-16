@@ -2918,10 +2918,10 @@ function getProductSVG(category, color) {
 }
 
 function productImgHTML(product, imgClass, svgWrapClass) {
-  var svg = '<div class="' + svgWrapClass + '">' + getProductSVG(product.category, '#6366f1') + '</div>';
-  if (!product.image) return svg;
+  var placeholder = '<div class="' + svgWrapClass + ' product-img-ph"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-5L5 19"/></svg></div>';
+  if (!product.image) return placeholder;
   return '<img class="' + imgClass + '" src="' + product.image + '" alt="' + product.name + '" loading="lazy" ' +
-    'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + svg;
+    'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + placeholder;
 }
 
 function productCardGalleryHTML(product) {
@@ -2929,7 +2929,7 @@ function productCardGalleryHTML(product) {
   var mainImg = product.image
     ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
     : '';
-  var svgBack = '<div class="product-svg-back">' + getProductSVG(product.category, '#6366f1') + '</div>';
+  var svgBack = '<div class="product-svg-back product-img-ph"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-5L5 19"/></svg></div>';
   if (!imgs) return mainImg + svgBack;
   var L = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M7 1.5L3 5l4 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var R = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M3 1.5L7 5l-4 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
