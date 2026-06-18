@@ -205,14 +205,6 @@ select:-webkit-autofill:focus {
           </div>
           <span id="shipping-price-std" style="font-size:14px;font-weight:700;color:var(--accent);">Gratis</span>
         </label>
-        <label class="pay-method">
-          <input type="radio" name="shipping" value="express">
-          <div class="pay-method-info">
-            <strong>Envío exprés · 5 a 8 días hábiles</strong>
-            <span>DHL Express · Pedidos antes de 13:00 h</span>
-          </div>
-          <span style="font-size:14px;font-weight:700;">9,90 €</span>
-        </label>
       </div>
     </div>
 
@@ -308,10 +300,7 @@ select:-webkit-autofill:focus {
   var discount = 0;
 
   function getShippingCost() {
-    var sub = cart.reduce(function(a, b) { return a + b.price * b.qty; }, 0);
-    var method = document.querySelector('input[name=shipping]:checked').value;
-    if (method === 'express') return 9.9;
-    return sub >= 150 ? 0 : 4.9;
+    return 0;
   }
 
   function updateTotals() {
@@ -426,7 +415,7 @@ select:-webkit-autofill:focus {
       return { id: i.id, name: i.name, price: i.price, qty: i.qty, category: i.category };
     });
     if (shippingCost > 0) {
-      items.push({ id: 0, name: shippingMethod === 'express' ? 'Envío exprés · 5-8 días hábiles · DHL' : 'Gastos de envío estándar', price: shippingCost, qty: 1, category: 'shipping' });
+      items.push({ id: 0, name: 'Gastos de envío estándar', price: shippingCost, qty: 1, category: 'shipping' });
     }
 
     // Save order snapshot so success page can display it
