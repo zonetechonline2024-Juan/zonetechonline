@@ -4031,8 +4031,47 @@ function initSlider() {
   // Load deferred YouTube iframes (data-src) on demand
   function activateIframe(slide) {
     var iframe = slide.querySelector('iframe[data-src]');
-    if (iframe && !iframe.getAttribute('src')) { iframe.src = iframe.dataset.src; }
+    if (!iframe || iframe.getAttribute('src')) return;
+
+    // Añadir enablejsapi para recibir eventos de error de YouTube
+    var src = iframe.dataset.src;
+    if (src.indexOf('enablejsapi') === -1) src += '&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
+    iframe.src = src;
+
+    var wrap = slide.querySelector('.slide-video-wrap');
+
+    // Fallback por timeout: si en 10s el iframe no respondió visualmente, ocultarlo
+    var errorTimer = setTimeout(function() {
+      if (wrap) wrap.classList.add('video-unavailable');
+    }, 10000);
+
+    iframe.addEventListener('load', function() { clearTimeout(errorTimer); }, { once: true });
+    iframe.addEventListener('error', function() {
+      clearTimeout(errorTimer);
+      if (wrap) wrap.classList.add('video-unavailable');
+    }, { once: true });
   }
+
+  // Detectar errores de YouTube Iframe API (vídeo no disponible → código 100/101/150)
+  window.addEventListener('message', function(e) {
+    if (!e.data || typeof e.data !== 'string') return;
+    var msg;
+    try { msg = JSON.parse(e.data); } catch (_) { return; }
+    if (msg.event === 'onError') {
+      // Buscar el iframe del que provino el mensaje
+      slides.forEach(function(sl) {
+        var fr = sl.querySelector('iframe');
+        if (!fr) return;
+        try {
+          var url = new URL(fr.src);
+          if (url.origin === e.origin || e.origin === 'https://www.youtube.com') {
+            var w = sl.querySelector('.slide-video-wrap');
+            if (w) w.classList.add('video-unavailable');
+          }
+        } catch (_) {}
+      });
+    }
+  });
 
   // Place every slide at its offset position without animation
   function initPositions() {
