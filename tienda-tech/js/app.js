@@ -23,7 +23,7 @@ const PRODUCTS = [
     category: 'relojes',
     price: 39.95,
     oldPrice: 49.95,
-    badge: 'Oferta',
+    badge: 'OFERTA',
     image: 'img/productos/1648-xiaomi-smart-band-9-amoled-pulsera-de-actividad-negra.jpg',
     images: [
       'img/productos/1648-xiaomi-smart-band-9-amoled-pulsera-de-actividad-negra.jpg',
@@ -50,7 +50,7 @@ const PRODUCTS = [
     category: 'relojes',
     price: 49.95,
     oldPrice: 69.99,
-    badge: 'Más vendido',
+    badge: 'OFERTA',
     image: 'img/productos/art_xia-reloj_redmi_w_5_act_bk_1.jpg',
     images: [
       'img/productos/art_xia-reloj_redmi_w_5_act_bk_1.jpg',
@@ -78,7 +78,7 @@ const PRODUCTS = [
     category: 'relojes',
     price: 49.95,
     oldPrice: 69.99,
-    badge: 'Nuevo 2026',
+    badge: 'OFERTA',
     image: 'img/productos/art_xia-reloj_redmi_w_5_act_sv_1.jpg',
     images: [
       'img/productos/art_xia-reloj_redmi_w_5_act_sv_1.jpg',
@@ -113,7 +113,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 279.99,
     oldPrice: 329.99,
-    badge: 'Nuevo 2024',
+    badge: 'OFERTA',
     image: 'img/productos/art_sam-reloj_l310_44_bt_gree_v2_1.jpg',
     images: [
       'img/productos/art_sam-reloj_l310_44_bt_gree_v2_1.jpg',
@@ -148,7 +148,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 249.00,
     oldPrice: 279.00,
-    badge: 'Más económico',
+    badge: 'OFERTA',
     image: 'img/productos/1108-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-f5cd37f4-3157-43fd-8e1e-70024c314a33.jpg',
     images: [
       'img/productos/1108-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-f5cd37f4-3157-43fd-8e1e-70024c314a33.jpg',
@@ -175,7 +175,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 279.00,
     oldPrice: 309.00,
-    badge: 'GPS',
+    badge: 'OFERTA',
     image: 'img/productos/183-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-6a76ad09-9ed3-4f05-b81e-c8051193e595.jpg',
     images: [
       'img/productos/183-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-6a76ad09-9ed3-4f05-b81e-c8051193e595.jpg',
@@ -202,7 +202,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 299.00,
     oldPrice: 349.00,
-    badge: 'GPS+Cellular',
+    badge: 'OFERTA',
     image: 'img/productos/1777-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-fcb78ea0-aac6-4a68-baae-89d47a46dd12.jpg',
     images: [
       'img/productos/1777-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-fcb78ea0-aac6-4a68-baae-89d47a46dd12.jpg',
@@ -229,7 +229,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 329.00,
     oldPrice: 379.00,
-    badge: 'GPS+Cellular',
+    badge: 'OFERTA',
     image: 'img/productos/1472-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-bcea6e32-fdd3-41ac-a126-1691e2b54484.jpg',
     images: [
       'img/productos/1472-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-bcea6e32-fdd3-41ac-a126-1691e2b54484.jpg',
@@ -256,7 +256,7 @@ PRODUCTS.push(
     category: 'relojes',
     price: 399.00,
     oldPrice: 449.00,
-    badge: 'ECG + SpO₂',
+    badge: 'OFERTA',
     image: 'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
     images: [
       'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
@@ -289,7 +289,7 @@ PRODUCTS.push(
     category: 'auriculares',
     price: 39.99,
     oldPrice: 49.99,
-    badge: 'Bluetooth 5.2',
+    badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wh-ch520_bk_1.jpg',
     images: [
       'img/productos/art_sony-aur_wh-ch520_bk_1.jpg',
@@ -353,7 +353,7 @@ PRODUCTS.push(
     category: 'auriculares',
     price: 89.99,
     oldPrice: 109.99,
-    badge: 'ANC Ligero',
+    badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wh-ch720n_bk_1.jpg',
     images: [
       'img/productos/art_sony-aur_wh-ch720n_bk_1.jpg',
@@ -416,7 +416,7 @@ PRODUCTS.push(
     category: 'auriculares',
     price: 129.99,
     oldPrice: 159.99,
-    badge: 'ULT POWER SOUND',
+    badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_ult_wear_bk_1.jpg',
     images: [
       'img/productos/art_sony-aur_ult_wear_bk_1.jpg',
@@ -451,7 +451,7 @@ PRODUCTS.push(
   { id:127, name:'JBL GO 5 Negro', brand:'JBL', category:'altavoces',
     price:49.99,
     oldPrice: 64.99,
-    badge:'4,8W · IP67 · 5h · BT 5.3',
+    badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_go5_bk_1.jpg',
     images: [
       'img/productos/art_jbl-alt_go5_bk_1.jpg',
@@ -477,7 +477,7 @@ PRODUCTS.push(
   { id:128, name:'JBL Clip 5 Negro', brand:'JBL', category:'altavoces',
     price:64.99,
     oldPrice: 79.99,
-    badge:'7W · IP67 · 12h · Clip mosquetón',
+    badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_clip5_bk_1.jpg',
     images: [
       'img/productos/art_jbl-alt_clip5_bk_1.jpg',
@@ -504,7 +504,7 @@ PRODUCTS.push(
   { id:129, name:'JBL Flip 6 Negro', brand:'JBL', category:'altavoces',
     price:99.99,
     oldPrice: 119.99,
-    badge:'30W · IP67 · 12h · PartyBoost',
+    badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_flip6_bk_1.jpg',
     images: [
       'img/productos/art_jbl-alt_flip6_bk_1.jpg',
@@ -532,7 +532,7 @@ PRODUCTS.push(
   { id:130, name:'JBL Flip 7 Blanco', brand:'JBL', category:'altavoces',
     price:129.99,
     oldPrice: 159.99,
-    badge:'35W · IP67 · 12h · Auracast',
+    badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_flip7_wh_1.jpg',
     images: [
       'img/productos/art_jbl-alt_flip7_wh_1.jpg',
@@ -560,7 +560,7 @@ PRODUCTS.push(
   { id:131, name:'JBL Charge 6 Negro', brand:'JBL', category:'altavoces',
     price:169.99,
     oldPrice: 199.99,
-    badge:'45W · IP67 · 24h · PowerBank USB-A',
+    badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_charge_6_bk_1.jpg',
     images: [
       'img/productos/art_jbl-alt_charge_6_bk_1.jpg',
@@ -594,7 +594,7 @@ PRODUCTS.push(
   // ── Apple ────────────────────────────────────────────────────────────────
 
   { id:200, name:'Apple Beats Flex Bluetooth Negro', brand:'Apple', category:'auriculares',
-    price:68.99, oldPrice:79.99, badge:'Chip W1 · 12h',
+    price:68.99, oldPrice:79.99, badge: 'OFERTA',
     image:'img/productos/DSP0000016997-0.jpg',
     images: [
       'img/productos/DSP0000016997-0.jpg',
@@ -616,7 +616,7 @@ PRODUCTS.push(
   },
 
   { id:201, name:'Apple AirPods 4 Inalámbrico Blanco', brand:'Apple', category:'auriculares',
-    price:135.99, oldPrice:149.00, badge:'Chip H2 · ANC',
+    price:135.99, oldPrice:149.00, badge: 'OFERTA',
     image:'img/productos/DSP0000028093-0.jpg',
     images: [
       'img/productos/DSP0000028093-0.jpg',
@@ -636,7 +636,7 @@ PRODUCTS.push(
   },
 
   { id:202, name:'Apple AirPods Max 2nd Gen Azul', brand:'Apple', category:'auriculares',
-    price:549.99, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    price:549.99, oldPrice:599.00, badge: 'OFERTA',
     image:'img/productos/DSP0000027018-0.jpg',
     images: [
       'img/productos/DSP0000027018-0.jpg',
@@ -657,7 +657,7 @@ PRODUCTS.push(
   },
 
   { id:203, name:'Apple AirPods Max 2nd Gen Starlight', brand:'Apple', category:'auriculares',
-    price:544.93, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    price:544.93, oldPrice:599.00, badge: 'OFERTA',
     image:'img/productos/DSP0000027101-0.jpg',
     images: [
       'img/productos/DSP0000027101-0.jpg',
@@ -678,7 +678,7 @@ PRODUCTS.push(
   },
 
   { id:204, name:'Apple AirPods Max 2nd Gen Orange', brand:'Apple', category:'auriculares',
-    price:544.93, oldPrice:599.00, badge:'ANC Adaptativo · H2',
+    price:544.93, oldPrice:599.00, badge: 'OFERTA',
     image:'img/productos/DSP0000027423-0.jpg',
     images: [
       'img/productos/DSP0000027423-0.jpg',
@@ -701,7 +701,7 @@ PRODUCTS.push(
   // ── Sony ─────────────────────────────────────────────────────────────────
 
   { id:205, name:'Sony WF-C510 True Wireless Azul', brand:'Sony', category:'auriculares',
-    price:34.99, oldPrice:49.99, badge:'TWS · 35h total',
+    price:34.99, oldPrice:49.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037829-0.jpg',
     images: [
       'img/productos/DSP0000037829-0.jpg',
@@ -722,7 +722,7 @@ PRODUCTS.push(
   },
 
   { id:206, name:'Sony WH-CH520 Bluetooth Blanco', brand:'Sony', category:'auriculares',
-    price:40.56, oldPrice:59.99, badge:'50h batería · Multipoint',
+    price:40.56, oldPrice:59.99, badge: 'OFERTA',
     image:'img/productos/MGS0000020797-0.jpg',
     images: [
       'img/productos/MGS0000020797-0.jpg',
@@ -744,7 +744,7 @@ PRODUCTS.push(
   },
 
   { id:207, name:'Sony WI-C100 Inalámbrico Negro', brand:'Sony', category:'auriculares',
-    price:49.99, oldPrice:59.99, badge:'IPX4 · 25h · Sport',
+    price:49.99, oldPrice:59.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037821-0.jpg',
     images: [
       'img/productos/DSP0000037821-0.jpg',
@@ -765,7 +765,7 @@ PRODUCTS.push(
   },
 
   { id:208, name:'Sony WH-CH720N ANC Inalámbrico Negro', brand:'Sony', category:'auriculares',
-    price:70.99, oldPrice:89.99, badge:'ANC · 35h · 192g',
+    price:70.99, oldPrice:89.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037822-0.jpg',
     images: [
       'img/productos/DSP0000037822-0.jpg',
@@ -787,7 +787,7 @@ PRODUCTS.push(
   },
 
   { id:209, name:'Sony WF-C710N TWS ANC Negro', brand:'Sony', category:'auriculares',
-    price:93.28, oldPrice:119.99, badge:'ANC · LDAC Hi-Res',
+    price:93.28, oldPrice:119.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037823-0.jpg',
     images: [
       'img/productos/DSP0000037823-0.jpg',
@@ -811,7 +811,7 @@ PRODUCTS.push(
   // ── JBL ──────────────────────────────────────────────────────────────────
 
   { id:210, name:'JBL T160 Intrauditivo Cable Azul', brand:'JBL', category:'auriculares',
-    price:17.38, badge:'Pure Bass · Jack 3.5mm',
+    price:17.38, badge: 'OFERTA',
     image:'img/productos/MGS0000021837-0.jpg',
     images: [
       'img/productos/MGS0000021837-0.jpg',
@@ -833,7 +833,7 @@ PRODUCTS.push(
   },
 
   { id:211, name:'JBL Tune 500 On-Ear Cable Blanco', brand:'JBL', category:'auriculares',
-    price:26.15, oldPrice:34.99, badge:'Pure Bass 32mm',
+    price:26.15, oldPrice:34.99, badge: 'OFERTA',
     image:'img/productos/MGS0000016567-0.jpg',
     images: [
       'img/productos/MGS0000016567-0.jpg',
@@ -855,7 +855,7 @@ PRODUCTS.push(
   },
 
   { id:212, name:'JBL Tune 510BT Inalámbrico Bluetooth Blanco', brand:'JBL', category:'auriculares',
-    price:29.99, oldPrice:49.99, badge:'40h · Carga 5min',
+    price:29.99, oldPrice:49.99, badge: 'OFERTA',
     image:'img/productos/MGS0000006825-0.jpg',
     images: [
       'img/productos/MGS0000006825-0.jpg',
@@ -877,7 +877,7 @@ PRODUCTS.push(
   },
 
   { id:213, name:'JBL Wave 200 TWS Negro', brand:'JBL', category:'auriculares',
-    price:34.99, oldPrice:44.99, badge:'TWS · 25h total',
+    price:34.99, oldPrice:44.99, badge: 'OFERTA',
     image:'img/productos/MGS0000021078-0.jpg',
     images: [
       'img/productos/MGS0000021078-0.jpg',
@@ -899,7 +899,7 @@ PRODUCTS.push(
   },
 
   { id:214, name:'JBL Wave 300 TWS Negro', brand:'JBL', category:'auriculares',
-    price:43.89, oldPrice:59.99, badge:'TWS · 32h · 3 mics',
+    price:43.89, oldPrice:59.99, badge: 'OFERTA',
     image:'img/productos/MGS0000021836-0.jpg',
     images: [
       'img/productos/MGS0000021836-0.jpg',
@@ -923,7 +923,7 @@ PRODUCTS.push(
   // ── ASUS ─────────────────────────────────────────────────────────────────
 
   { id:215, name:'ASUS TUF Gaming H1 Gen II Negro', brand:'ASUS', category:'auriculares',
-    price:26.99, oldPrice:39.99, badge:'7.1 virtual · USB-C',
+    price:26.99, oldPrice:39.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033609-0.jpg',
     images: [
       'img/productos/MGS0000033609-0.jpg',
@@ -945,7 +945,7 @@ PRODUCTS.push(
   },
 
   { id:216, name:'ASUS TUF Gaming H3 Gun Metal', brand:'ASUS', category:'auriculares',
-    price:50.99, oldPrice:69.99, badge:'Drivers 50mm · 7.1',
+    price:50.99, oldPrice:69.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033529-0.jpg',
     images: [
       'img/productos/MGS0000033529-0.jpg',
@@ -966,7 +966,7 @@ PRODUCTS.push(
   },
 
   { id:217, name:'ASUS TUF Gaming H1 Wireless Negro', brand:'ASUS', category:'auriculares',
-    price:69.99, oldPrice:89.99, badge:'2.4GHz · 15h · Dual',
+    price:69.99, oldPrice:89.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033605-0.jpg',
     images: [
       'img/productos/MGS0000033605-0.jpg',
@@ -987,7 +987,7 @@ PRODUCTS.push(
   },
 
   { id:218, name:'ASUS ROG Delta S Gaming Negro', brand:'ASUS', category:'auriculares',
-    price:223.31, oldPrice:249.99, badge:'DAC ESS 9281 · Hi-Res',
+    price:223.31, oldPrice:249.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033604-0.jpg',
     images: [
       'img/productos/MGS0000033604-0.jpg',
@@ -1009,7 +1009,7 @@ PRODUCTS.push(
   },
 
   { id:219, name:'ASUS ROG Cetra TWS SpeedNova Negro', brand:'ASUS', category:'auriculares',
-    price:223.37, oldPrice:249.99, badge:'TWS Gaming · ANC',
+    price:223.37, oldPrice:249.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033611-0.jpg',
     images: [
       'img/productos/MGS0000033611-0.jpg',
@@ -1032,7 +1032,7 @@ PRODUCTS.push(
   // ── Logitech ─────────────────────────────────────────────────────────────
 
   { id:220, name:'Logitech Headset H110 Estéreo', brand:'Logitech', category:'auriculares',
-    price:13.99, badge:'Dual Jack 3.5mm · 73g',
+    price:13.99, badge: 'OFERTA',
     image:'img/productos/981-000271-0.jpg',
     images: [
       'img/productos/981-000271-0.jpg',
@@ -1053,7 +1053,7 @@ PRODUCTS.push(
   },
 
   { id:221, name:'Logitech Headset H340 USB', brand:'Logitech', category:'auriculares',
-    price:49.99, oldPrice:59.99, badge:'USB · Teams · Zoom',
+    price:49.99, oldPrice:59.99, badge: 'OFERTA',
     image:'img/productos/MGS0000033721-0.jpg',
     images: [
       'img/productos/MGS0000033721-0.jpg',
@@ -1075,7 +1075,7 @@ PRODUCTS.push(
   },
 
   { id:222, name:'Logitech Zone Wired USB', brand:'Logitech', category:'auriculares',
-    price:101.99, oldPrice:119.99, badge:'ANC voz · 3-en-1',
+    price:101.99, oldPrice:119.99, badge: 'OFERTA',
     image:'img/productos/MGS0000025967-0.jpg',
     images: [
       'img/productos/MGS0000025967-0.jpg',
@@ -1097,7 +1097,7 @@ PRODUCTS.push(
   },
 
   { id:223, name:'Logitech G733 Gaming Wireless Negro', brand:'Logitech', category:'auriculares',
-    price:90.59, oldPrice:119.99, badge:'LIGHTSPEED · 29h · RGB',
+    price:90.59, oldPrice:119.99, badge: 'OFERTA',
     image:'img/productos/MGS0000015732-0.jpg',
     images: [
       'img/productos/MGS0000015732-0.jpg',
@@ -1118,7 +1118,7 @@ PRODUCTS.push(
   },
 
   { id:224, name:'Logitech PRO Gaming X Headset', brand:'Logitech', category:'auriculares',
-    price:109.99, oldPrice:139.99, badge:'Pro-G 50mm · DTS 7.1',
+    price:109.99, oldPrice:139.99, badge: 'OFERTA',
     image:'img/productos/MGS0000025666-0.jpg',
     images: [
       'img/productos/MGS0000025666-0.jpg',
@@ -1153,7 +1153,7 @@ PRODUCTS.push(
   // ── Garmin — GPS premium ──────────────────────────────────────────────────
 
   { id:26, name:'RELOJ SMARTWATCH GARMIN APPROACH, Reloj para Golf, Campos mundiales preinstalados, Bluetooth y Resistente al Agua, Blanco', brand:'Garmin', category:'relojes',
-    price:131.95, oldPrice:151.74, badge:'Golf GPS',
+    price:131.95, oldPrice:151.74, badge: 'OFERTA',
     image:'img/productos/DSP0000005628-0.jpg',
     images: [
       'img/productos/DSP0000005628-0.jpg',
@@ -1166,7 +1166,7 @@ PRODUCTS.push(
     specs:{'Info':'GPS especializado para golf · +41.000 campos mundiales', 'Info':'Pantalla MIP 1.1" · Bluetooth · resistente al agua', 'Info':'Distancias precisas al verde · obstáculos · rango de llegada', 'Info':'Batería hasta 9h GPS · 12h modo reloj', 'Info':'Estadísticas hoyo a hoyo · puntuación digital', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000005628'}
   },
   { id:27, name:'SMARTWATCH GARMIN FORERUNNER 165 43MM NEGRO GPS', brand:'Garmin', category:'relojes',
-    price:196.99, oldPrice:226.54, badge:'GPS Runner',
+    price:196.99, oldPrice:226.54, badge: 'OFERTA',
     image:'img/productos/DSP0000029844-0.jpg',
     images: [
       'img/productos/DSP0000029844-0.jpg',
@@ -1179,7 +1179,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED 1.2" táctil 390×390 · GPS multi-satélite', 'Info':'FC óptico + SpO2 + estrés · hasta 11 días smartwatch', 'Info':'Hasta 19h GPS continuo · BT + WiFi', 'Métricas carrera avanzadas':'VO2max · cadencia', 'Info':'Planes de entrenamiento Garmin Coach · Garmin Pay NFC', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000029844'}
   },
   { id:28, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP BLANCO Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
-    price:199.99, oldPrice:229.99, badge:'GPS 5ATM',
+    price:199.99, oldPrice:229.99, badge: 'OFERTA',
     image:'img/productos/MGS0000032958-0.jpg',
     images: [
       'img/productos/MGS0000032958-0.jpg',
@@ -1191,7 +1191,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032958'}
   },
   { id:29, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP Negro Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
-    price:199.99, oldPrice:229.99, badge:'GPS 5ATM',
+    price:199.99, oldPrice:229.99, badge: 'OFERTA',
     image:'img/productos/MGS0000032959-0.jpg',
     images: [
       'img/productos/MGS0000032959-0.jpg',
@@ -1203,7 +1203,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032959'}
   },
   { id:30, name:'Garmin Vívoactive 5, Smartwatch con GPS, Pantalla AMOLED, hasta 11 dias de autonomia', brand:'Garmin', category:'relojes',
-    price:201.24, oldPrice:231.43, badge:'AMOLED 11d',
+    price:201.24, oldPrice:231.43, badge: 'OFERTA',
     image:'img/productos/DSP0000028241-0.jpg',
     images: [
       'img/productos/DSP0000028241-0.jpg',
@@ -1216,7 +1216,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo', 'Info':'BT + WiFi + NFC Garmin Pay · hasta 11 días smartwatch', 'Info':'FC óptico 24h + SpO2 + variabilidad FC + estrés', 'Info':'Seguimiento de sueño avanzado · +25 deportes', 'Info':'Hasta 18h GPS continuo · altímetro barométrico', 'Info':'Diseño ultraligero · compatible Garmin Coach','SKU Megasur':'DSP0000028241'}
   },
   { id:31, name:'SMARTWATCH HAMMER WATCH 2 LITE BLACK', brand:'Hammer', category:'relojes',
-    price:36.07, oldPrice:41.48, badge:'IP68 Rugged',
+    price:36.07, oldPrice:41.48, badge: 'OFERTA',
     image:'img/productos/DSP0000027299-0.jpg',
     description:'Pantalla IPS 1.6" · resistencia militar IP68',
     specs:{'Info':'Pantalla IPS 1.6" · resistencia militar IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Monitorización de sueño · detección de actividad 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Alertas SOS · notificaciones de smartphone', 'Info':'Resistente a golpes y agua · diseño rugged outdoor','SKU Megasur':'DSP0000027299'}
@@ -1224,25 +1224,25 @@ PRODUCTS.push(
   // ── MyPhone + Hammer — Lifestyle y rugged ──────────────────────────────────
 
   { id:32, name:'RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO', brand:'MyPhone', category:'relojes',
-    price:49.99, oldPrice:57.49, badge:'4G SOS',
+    price:49.99, oldPrice:57.49, badge: 'OFERTA',
     image:'img/productos/DSP0000024070-0.jpg',
     description:'Smartwatch para mayores con 4G LTE y GPS integrado',
     specs:{'Info':'Smartwatch para mayores con 4G LTE y GPS integrado', 'Info':'Llamadas bidireccionales · botón SOS de emergencia', 'Info':'Detector de caídas automático · alertas de salud', 'Info':'FC óptico · podómetro · pantalla táctil grande', 'Info':'Diseño sencillo pensado para personas mayores', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000024070'}
   },
   { id:33, name:'RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK', brand:'MyPhone', category:'relojes',
-    price:49.99, oldPrice:57.49, badge:'IP68',
+    price:49.99, oldPrice:57.49, badge: 'OFERTA',
     image:'img/productos/DSP0000025695-0.jpg',
     description:'Smartwatch outdoor con GPS integrado · IP68',
     specs:{'Info':'Smartwatch outdoor con GPS integrado · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Pantalla 1.4" IPS color · múltiples modos deporte', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Notificaciones de smartphone · diseño robusto', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000025695'}
   },
   { id:34, name:'RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN', brand:'MyPhone', category:'relojes',
-    price:29.99, oldPrice:34.49, badge:'Lifestyle',
+    price:29.99, oldPrice:34.49, badge: 'OFERTA',
     image:'img/productos/DSP0000026342-0.jpg',
     description:'Pantalla 1.7" TFT color · Bluetooth 5.0',
     specs:{'Info':'Pantalla 1.7" TFT color · Bluetooth 5.0', 'Info':'FC óptico + SpO2 + podómetro · +100 modos deporte', 'Info':'Monitorización de sueño y estrés 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Diseño lifestyle moderno · modos multideporte', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026342'}
   },
   { id:35, name:'RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN', brand:'MyPhone', category:'relojes',
-    price:39.99, oldPrice:45.99, badge:'Outdoor',
+    price:39.99, oldPrice:45.99, badge: 'OFERTA',
     image:'img/productos/DSP0000026343-0.jpg',
     description:'Smartwatch robusto para trabajo y exteriores · IP68',
     specs:{'Info':'Smartwatch robusto para trabajo y exteriores · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 + podómetro', 'Info':'Pantalla resistente 1.4" · alertas y notificaciones', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Diseño tool resistente · color Negro/Verde', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026343'}
@@ -1250,7 +1250,7 @@ PRODUCTS.push(
   // ── Familia e infantil ──────────────────────────────────────────────────────
 
   { id:36, name:'SMARTWATCH SPC SMARTEE 4G KIDZ TURQUESA', brand:'SPC', category:'relojes',
-    price:77.94, oldPrice:89.63, badge:'GPS Kids',
+    price:77.94, oldPrice:89.63, badge: 'OFERTA',
     image:'img/productos/DSP0000023066-0.jpg',
     images: [
       'img/productos/DSP0000023066-0.jpg',
@@ -1261,7 +1261,7 @@ PRODUCTS.push(
     specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz y texto', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app SPC SMARTEE', 'Info':'Pantalla táctil · resistente al agua · cámara integrada', 'Info':'Para niños de 3 a 12 años · color Turquesa','SKU Megasur':'DSP0000023066'}
   },
   { id:37, name:'SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS', brand:'TCL', category:'relojes',
-    price:49.99, oldPrice:57.49, badge:'4G Infantil',
+    price:49.99, oldPrice:57.49, badge: 'OFERTA',
     image:'img/productos/MGS0000033444-0.jpg',
     images: [
       'img/productos/MGS0000033444-0.jpg',
@@ -1271,7 +1271,7 @@ PRODUCTS.push(
     specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · cámara integrada', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app TCL MOVETIME', 'Info':'Pantalla táctil · resistente al agua', 'Info':'Para niños de 4 a 12 años · geovalla configurable','SKU Megasur':'MGS0000033444'}
   },
   { id:38, name:'SMARTWATCH LEOTEC LESWKIDS06K KIDS ALLO PLUS NEGRO', brand:'Leotec', category:'relojes',
-    price:59.94, oldPrice:68.93, badge:'GPS Kids',
+    price:59.94, oldPrice:68.93, badge: 'OFERTA',
     image:'img/productos/DSP0000020100-0.jpg',
     images: [
       'img/productos/DSP0000020100-0.jpg',
@@ -1284,7 +1284,7 @@ PRODUCTS.push(
     specs:{'Info':'GPS + LBS antipérdida · 4G LTE con ranura nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz', 'Info':'Cámara integrada · mensajes SOS con geolocalización', 'Info':'Resistencia IP67 · control parental app', 'Info':'Para niños de 4 a 12 años · pantalla táctil', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000020100'}
   },
   { id:39, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 NEGRO', brand:'Forever', category:'relojes',
-    price:32.98, oldPrice:37.93, badge:'AMOLED',
+    price:32.98, oldPrice:37.93, badge: 'OFERTA',
     image:'img/productos/DSP0000026333-0.jpg',
     images: [
       'img/productos/DSP0000026333-0.jpg',
@@ -1297,7 +1297,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED · Bluetooth 5.0 · diseño slim', 'Info':'FC óptico 24h + SpO2 + estrés · monitorización de sueño', 'Info':'Más de 20 modos de deporte · podómetro + calorías', 'Info':'Batería hasta 5-7 días · recarga magnética', 'Info':'Notificaciones de smartphone', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026333'}
   },
   { id:40, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 ROJO', brand:'Forever', category:'relojes',
-    price:33.99, oldPrice:39.09, badge:'AMOLED',
+    price:33.99, oldPrice:39.09, badge: 'OFERTA',
     image:'img/productos/DSP0000026334-0.jpg',
     images: [
       'img/productos/DSP0000026334-0.jpg',
@@ -1317,7 +1317,7 @@ PRODUCTS.push(
 PRODUCTS.push(
 
   { id:41, name:'Samsung Galaxy Fit3 1.6" 40mm BT Gray', brand:'Samsung', category:'relojes',
-    price:40.16, oldPrice:46.18, badge:'Galaxy Fit',
+    price:40.16, oldPrice:46.18, badge: 'OFERTA',
     image:'/images/products/infortisa-41.webp',
     images: [
       '/images/products/infortisa-41.webp'
@@ -1326,7 +1326,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503'}
   },
   { id:42, name:'Samsung Galaxy Fit3 1.6" 40mm BT Pink', brand:'Samsung', category:'relojes',
-    price:40.16, oldPrice:46.18, badge:'Galaxy Fit',
+    price:40.16, oldPrice:46.18, badge: 'OFERTA',
     image:'/images/products/infortisa-42.webp',
     images: [
       '/images/products/infortisa-42.webp'
@@ -1335,7 +1335,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503'}
   },
   { id:43, name:'Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
-    price:197.66, oldPrice:227.31, badge:'Galaxy Watch',
+    price:197.66, oldPrice:227.31, badge: 'OFERTA',
     image:'/images/products/infortisa-43.webp',
     images: [
       '/images/products/infortisa-43.webp'
@@ -1344,7 +1344,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:44, name:'Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
-    price:327.95, oldPrice:377.14, badge:'Galaxy Watch',
+    price:327.95, oldPrice:377.14, badge: 'OFERTA',
     image:'/images/products/infortisa-44.webp',
     images: [
       '/images/products/infortisa-44.webp'
@@ -1353,7 +1353,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:45, name:'Xiaomi Redmi Watch 5 Active Plata Mate', brand:'Xiaomi', category:'relojes',
-    price:29.97, oldPrice:34.47, badge:'Redmi Watch',
+    price:29.97, oldPrice:34.47, badge: 'OFERTA',
     image:'/images/products/infortisa-45.webp',
     images: [
       '/images/products/infortisa-45.webp'
@@ -1362,7 +1362,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM','SKU Infortisa':'xiaomi-redmi-watch-5-active-plata-mate181024095502'}
   },
   { id:46, name:'XIAOMI Pulsera MI Smart Band 10 Glacier Silver', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    price:39.99, oldPrice:45.99, badge: 'OFERTA',
     image:'/images/products/infortisa-46.webp',
     images: [
       '/images/products/infortisa-46.webp'
@@ -1371,7 +1371,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503'}
   },
   { id:47, name:'XIAOMI Pulsera MI Smart Band 10 Midnight Black', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    price:39.99, oldPrice:45.99, badge: 'OFERTA',
     image:'/images/products/infortisa-47.webp',
     images: [
       '/images/products/infortisa-47.webp'
@@ -1380,7 +1380,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502'}
   },
   { id:48, name:'XIAOMI Pulsera MI Smart Band 10 Mystic Rose', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge:'Smart Band',
+    price:39.99, oldPrice:45.99, badge: 'OFERTA',
     image:'/images/products/infortisa-48.webp',
     images: [
       '/images/products/infortisa-48.webp'
@@ -1398,7 +1398,7 @@ PRODUCTS.push(
   // ── ASUS ─────────────────────────────────────────────────────
 
   { id:59, name:'TECLADO ASUS TUF GAMING K1 RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:51.99, oldPrice:61.35, badge:'Gaming RGB',
+    price:51.99, oldPrice:61.35, badge: 'OFERTA',
     image:'img/productos/MGS0000033622-0.jpg',
     images: [
       'img/productos/MGS0000033622-0.jpg',
@@ -1411,7 +1411,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033622'}
   },
   { id:60, name:'TECLADO ASUS TUF GAMING K3 GEN II RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:69.99, oldPrice:82.59, badge:'Gaming RGB',
+    price:69.99, oldPrice:82.59, badge: 'OFERTA',
     image:'img/productos/MGS0000033630-0.jpg',
     images: [
       'img/productos/MGS0000033630-0.jpg',
@@ -1423,7 +1423,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033630'}
   },
   { id:61, name:'TECLADO ASUS TUF GAMING K3 GEN II HATSUNE MIKU EDITION RGB', brand:'ASUS', category:'teclados gaming',
-    price:109.99, oldPrice:129.79, badge:'Gaming RGB',
+    price:109.99, oldPrice:129.79, badge: 'OFERTA',
     image:'img/productos/MGS0000033632-0.jpg',
     images: [
       'img/productos/MGS0000033632-0.jpg',
@@ -1435,7 +1435,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033632'}
   },
   { id:49, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II X RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:139.98, oldPrice:165.18, badge:'Gaming RGB',
+    price:139.98, oldPrice:165.18, badge: 'OFERTA',
     image:'img/productos/MGS0000033634-0.jpg',
     images: [
       'img/productos/MGS0000033634-0.jpg',
@@ -1447,7 +1447,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033634'}
   },
   { id:50, name:'TECLADO GAMING ASUS ROG FALCHION ACE HFX ZywOo EDITION RGB INGLES', brand:'ASUS', category:'teclados gaming',
-    price:174.99, oldPrice:206.49, badge:'Gaming RGB',
+    price:174.99, oldPrice:206.49, badge: 'OFERTA',
     image:'img/productos/MGS0000033636-0.jpg',
     images: [
       'img/productos/MGS0000033636-0.jpg',
@@ -1459,7 +1459,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033636'}
   },
   { id:51, name:'TECLADO GAMING ASUS ROG FALCHION ACE 75 HE RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:189.99, oldPrice:224.19, badge:'Gaming RGB',
+    price:189.99, oldPrice:224.19, badge: 'OFERTA',
     image:'img/productos/MGS0000033638-0.jpg',
     images: [
       'img/productos/MGS0000033638-0.jpg',
@@ -1471,7 +1471,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033638'}
   },
   { id:52, name:'TECLADO ASUS ROG STRIX SCOPE II 96 RX INHALLAMBRICO', brand:'ASUS', category:'teclados gaming',
-    price:219.99, oldPrice:259.59, badge:'Gaming RGB',
+    price:219.99, oldPrice:259.59, badge: 'OFERTA',
     image:'img/productos/MGS0000033860-0.jpg',
     images: [
       'img/productos/MGS0000033860-0.jpg',
@@ -1483,7 +1483,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033860'}
   },
   { id:53, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II 96 INALAMBRICO RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:269.47, oldPrice:317.97, badge:'Gaming RGB',
+    price:269.47, oldPrice:317.97, badge: 'OFERTA',
     image:'img/productos/MGS0000033626-0.jpg',
     images: [
       'img/productos/MGS0000033626-0.jpg',
@@ -1498,7 +1498,7 @@ PRODUCTS.push(
   // ── LOGITECH ─────────────────────────────────────────────────────
 
   { id:54, name:'TECLADO LOGITECH G213 GAMING CON ILUMINACION', brand:'LOGITECH', category:'teclados gaming',
-    price:60.56, oldPrice:71.46, badge:'Gaming RGB',
+    price:60.56, oldPrice:71.46, badge: 'OFERTA',
     image:'img/productos/920-008086-0.jpg',
     images: [
       'img/productos/920-008086-0.jpg',
@@ -1511,7 +1511,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'920-008086'}
   },
   { id:55, name:'TECLADO GAMING LOGITECH G413 SE MECANICO USB NEGRO', brand:'LOGITECH', category:'teclados gaming',
-    price:128.22, oldPrice:151.3, badge:'Gaming RGB',
+    price:128.22, oldPrice:151.3, badge: 'OFERTA',
     image:'img/productos/MGS0000019748-0.jpg',
     images: [
       'img/productos/MGS0000019748-0.jpg',
@@ -1522,7 +1522,7 @@ PRODUCTS.push(
     specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000019748'}
   },
   { id:56, name:'TECLADO LOGITECH GAMING G512 USB', brand:'LOGITECH', category:'teclados gaming',
-    price:139.52, oldPrice:164.63, badge:'Gaming RGB',
+    price:139.52, oldPrice:164.63, badge: 'OFERTA',
     image:'img/productos/MGS0000020626-0.jpg',
     images: [
       'img/productos/MGS0000020626-0.jpg',
@@ -1534,7 +1534,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000020626'}
   },
   { id:57, name:'TECLADO LOGITECH G513 GAMING USB NEGRO CARBON', brand:'LOGITECH', category:'teclados gaming',
-    price:139.52, oldPrice:164.63, badge:'Gaming RGB',
+    price:139.52, oldPrice:164.63, badge: 'OFERTA',
     image:'img/productos/MGS0000032591-0.jpg',
     images: [
       'img/productos/MGS0000032591-0.jpg',
@@ -1544,7 +1544,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000032591'}
   },
   { id:78, name:'TECLADO LOGITECH G G915 X LIGHTSPEED INALAMBRICO', brand:'LOGITECH', category:'teclados gaming',
-    price:159.99, oldPrice:188.79, badge:'Wireless Pro',
+    price:159.99, oldPrice:188.79, badge: 'OFERTA',
     image:'img/productos/MGS0000032592-0.jpg',
     images: [
       'img/productos/MGS0000032592-0.jpg',
@@ -1558,31 +1558,31 @@ PRODUCTS.push(
   // ── MARS GAMING ─────────────────────────────────────────────────────
 
   { id:62, name:'TECLADO MARS GAMING MK320ES USB RGB MECANICO', brand:'MARS GAMING', category:'teclados gaming',
-    price:13.39, oldPrice:15.8, badge:'Gaming RGB',
+    price:13.39, oldPrice:15.8, badge: 'OFERTA',
     image:'img/productos/DSP0000009116-0.jpg',
     description:'Switch: Mecánico',
     specs:{'Switch':'Mecánico', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000009116'}
   },
   { id:63, name:'TECLADO MARS GAMING MK124', brand:'MARS GAMING', category:'teclados gaming',
-    price:15.98, oldPrice:18.86, badge:'Gaming RGB',
+    price:15.98, oldPrice:18.86, badge: 'OFERTA',
     image:'img/productos/DSP0000031004-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031004'}
   },
   { id:64, name:'TECLADO MARS GAMING MK124 BLANCO', brand:'MARS GAMING', category:'teclados gaming',
-    price:15.98, oldPrice:18.86, badge:'Gaming RGB',
+    price:15.98, oldPrice:18.86, badge: 'OFERTA',
     image:'img/productos/DSP0000031005-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031005'}
   },
   { id:65, name:'KIT TECLADO + RATON MARS GAMING MCPTKLES RGB', brand:'MARS GAMING', category:'teclados gaming',
-    price:16.99, oldPrice:20.05, badge:'Gaming RGB',
+    price:16.99, oldPrice:20.05, badge: 'OFERTA',
     image:'img/productos/DSP0000008843-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000008843'}
   },
   { id:66, name:'TECLADO MARS GAMING MK-SILENKEYSES', brand:'MARS GAMING', category:'teclados gaming',
-    price:19.9, oldPrice:23.48, badge:'Gaming RGB',
+    price:19.9, oldPrice:23.48, badge: 'OFERTA',
     image:'img/productos/DSP0000038078-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038078'}
@@ -1590,7 +1590,7 @@ PRODUCTS.push(
   // ── PHOENIX TECHNOLOGIES ─────────────────────────────────────────────────────
 
   { id:67, name:'Teclado Gaming Royal PBT Mecanico Negro', brand:'PHOENIX TECHNOLOGIES', category:'teclados gaming',
-    price:56.62, oldPrice:66.81, badge:'Gaming RGB',
+    price:56.62, oldPrice:66.81, badge: 'OFERTA',
     image:'img/productos/DSP0000017092-0.jpg',
     images: [
       'img/productos/DSP0000017092-0.jpg',
@@ -1603,7 +1603,7 @@ PRODUCTS.push(
     specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000017092'}
   },
   { id:68, name:'Teclado Gaming Royal PBT Mecanico Blanco', brand:'PHOENIX TECHNOLOGIES', category:'teclados gaming',
-    price:56.62, oldPrice:66.81, badge:'Gaming RGB',
+    price:56.62, oldPrice:66.81, badge: 'OFERTA',
     image:'img/productos/DSP0000017093-0.jpg',
     images: [
       'img/productos/DSP0000017093-0.jpg',
@@ -1618,7 +1618,7 @@ PRODUCTS.push(
   // ── GENESIS ─────────────────────────────────────────────────────
 
   { id:69, name:'TECLADO GAMING GENESIS RHOD 350 RGB USB', brand:'GENESIS', category:'teclados gaming',
-    price:11.99, oldPrice:14.15, badge:'Gaming RGB',
+    price:11.99, oldPrice:14.15, badge: 'OFERTA',
     image:'img/productos/DSP0000003250-0.jpg',
     images: [
       'img/productos/DSP0000003250-0.jpg',
@@ -1630,7 +1630,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000003250'}
   },
   { id:70, name:'TECLADO GAMING GENESIS RHOD 500 RGB ESPAÑOL USB', brand:'GENESIS', category:'teclados gaming',
-    price:16.14, oldPrice:19.05, badge:'Gaming RGB',
+    price:16.14, oldPrice:19.05, badge: 'OFERTA',
     image:'img/productos/DSP0000000581-0.jpg',
     images: [
       'img/productos/DSP0000000581-0.jpg',
@@ -1641,7 +1641,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'Español QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000000581'}
   },
   { id:71, name:'TECLADO GAMING GENESIS RHOD 500 RGB PORTUGUES USB', brand:'GENESIS', category:'teclados gaming',
-    price:22.99, oldPrice:27.13, badge:'Gaming RGB',
+    price:22.99, oldPrice:27.13, badge: 'OFERTA',
     image:'img/productos/DSP0000003246-0.jpg',
     images: [
       'img/productos/DSP0000003246-0.jpg',
@@ -1652,7 +1652,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000003246'}
   },
   { id:72, name:'TECLADO GAMING GENESIS THOR230 TKL RGB USB', brand:'GENESIS', category:'teclados gaming',
-    price:59.99, oldPrice:70.79, badge:'TKL RGB',
+    price:59.99, oldPrice:70.79, badge: 'OFERTA',
     image:'img/productos/DSP0000029539-0.jpg',
     images: [
       'img/productos/DSP0000029539-0.jpg',
@@ -1667,7 +1667,7 @@ PRODUCTS.push(
   // ── CORSAIR ─────────────────────────────────────────────────────
 
   { id:77, name:'TECLADO GAMING CORSAIR USB K55 CORE RGB', brand:'CORSAIR', category:'teclados gaming',
-    price:39.99, oldPrice:47.19, badge:'Gaming RGB',
+    price:39.99, oldPrice:47.19, badge: 'OFERTA',
     image:'img/productos/DSP0000038844-0.jpg',
     images: [
       'img/productos/DSP0000038844-0.jpg',
@@ -1677,7 +1677,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038844'}
   },
   { id:74, name:'TECLADO GAMING CORSAIR K55 CORE TKL RGB NEGRO', brand:'CORSAIR', category:'teclados gaming',
-    price:49.99, oldPrice:58.99, badge:'TKL RGB',
+    price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000035833-0.jpg',
     images: [
       'img/productos/DSP0000035833-0.jpg',
@@ -1689,7 +1689,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000035833'}
   },
   { id:73, name:'TECLADO GAMING CORSAIR K55 RGB PRO', brand:'CORSAIR', category:'teclados gaming',
-    price:64.98, oldPrice:76.68, badge:'Gaming RGB',
+    price:64.98, oldPrice:76.68, badge: 'OFERTA',
     image:'img/productos/DSP0000032320-0.jpg',
     images: [
       'img/productos/DSP0000032320-0.jpg',
@@ -1701,7 +1701,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000032320'}
   },
   { id:76, name:'TECLADO GAMING CORSAIR USB K70 CORE NEGRO', brand:'CORSAIR', category:'teclados gaming',
-    price:89.99, oldPrice:106.19, badge:'Pro Gaming',
+    price:89.99, oldPrice:106.19, badge: 'OFERTA',
     image:'img/productos/DSP0000038461-0.jpg',
     images: [
       'img/productos/DSP0000038461-0.jpg',
@@ -1713,7 +1713,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038461'}
   },
   { id:75, name:'TECLADO GAMING CORSAIR K70 CORE TKL INALAMBRICO', brand:'CORSAIR', category:'teclados gaming',
-    price:149.99, oldPrice:176.99, badge:'TKL RGB',
+    price:149.99, oldPrice:176.99, badge: 'OFERTA',
     image:'img/productos/DSP0000038098-0.jpg',
     images: [
       'img/productos/DSP0000038098-0.jpg',
@@ -1735,7 +1735,7 @@ PRODUCTS.push(
   // ── FONESTAR ───────────────────────────────────────────────
 
   { id:82, name:'ALTAVOZ PORTATIL FONESTAR BOX-35LED BLUETOOTH/ KARAOKE/ USB/ SD/ MICROFONO INALAMBRICO/ 35W RMS', brand:'FONESTAR', category:'altavoces',
-    price:59.99, oldPrice:70.79, badge:'Bluetooth',
+    price:59.99, oldPrice:70.79, badge: 'OFERTA',
     image:'img/productos/BOX-35LED-0.jpg',
     images: [
       'img/productos/BOX-35LED-0.jpg',
@@ -1746,7 +1746,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Altavoz portátil', 'Potencia':'35W RMS RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'BOX-35LED'}
   },
   { id:79, name:'ALTAVOZ PORTATIL CON MICROFONO FONESTAR MALIBU-315 / 50W RMS', brand:'FONESTAR', category:'altavoces',
-    price:149.99, oldPrice:176.99, badge:'Audio',
+    price:149.99, oldPrice:176.99, badge: 'OFERTA',
     image:'img/productos/MGS0000030725-0.jpg',
     images: [
       'img/productos/MGS0000030725-0.jpg',
@@ -1759,7 +1759,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Altavoz portátil', 'Potencia':'50W RMS RMS', 'Micrófono':'Integrado (manos libres)','SKU Megasur':'MGS0000030725'}
   },
   { id:81, name:'ALTAVOZ PORTATIL FONESTAR CALIFORNIA 200W / JACK / AUXILIAR / FUNCION KARAOKE / BLUETOOTH / USB / MP3 / RADIO FM / MICROFONO', brand:'FONESTAR', category:'altavoces',
-    price:199.99, oldPrice:235.99, badge:'Bluetooth',
+    price:199.99, oldPrice:235.99, badge: 'OFERTA',
     image:'img/productos/MGS0000031143-0.jpg',
     images: [
       'img/productos/MGS0000031143-0.jpg',
@@ -1772,7 +1772,7 @@ PRODUCTS.push(
   // ── PHOENIX TECHNOLOGIES ───────────────────────────────────
 
   { id:88, name:'Altavoces PrivateSound Jack y USB', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/MGS0000004797-0.jpg',
     images: [
       'img/productos/MGS0000004797-0.jpg',
@@ -1785,7 +1785,7 @@ PRODUCTS.push(
     specs:{'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'MGS0000004797'}
   },
   { id:87, name:'Altavoces Phoenix para Ordenador Portables 2.0 USB negros', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:29.99, oldPrice:35.39, badge:'Audio',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/PHAPORTABLE2.0-0.jpg',
     images: [
       'img/productos/PHAPORTABLE2.0-0.jpg',
@@ -1798,7 +1798,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.0 estéreo', 'Entrada':'USB','SKU Megasur':'PHAPORTABLE2.0'}
   },
   { id:84, name:'Altavoces PC Ordenador de Estudio Phoenix Serenade 60W RMS USB Bluetooth Optico Jack RCA', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:79.99, oldPrice:94.39, badge:'Bluetooth',
+    price:79.99, oldPrice:94.39, badge: 'OFERTA',
     image:'img/productos/DSP0000019433-0.jpg',
     images: [
       'img/productos/DSP0000019433-0.jpg',
@@ -1811,7 +1811,7 @@ PRODUCTS.push(
     specs:{'Potencia':'60W RMS RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000019433'}
   },
   { id:85, name:'Altavoces de Estudio Phoenix Sonika 50W con Bluetooth Jack USB para Ordenador', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:89.99, oldPrice:106.19, badge:'Bluetooth',
+    price:89.99, oldPrice:106.19, badge: 'OFERTA',
     image:'img/productos/DSP0000019639-0.jpg',
     images: [
       'img/productos/DSP0000019639-0.jpg',
@@ -1824,7 +1824,7 @@ PRODUCTS.push(
     specs:{'Potencia':'50W RMS', 'Conectividad':'Bluetooth', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000019639'}
   },
   { id:86, name:'Altavoz RumbleBoss Phoenix 80W RMS Bateria 4000 mah Funcion Karaoke 2 Microfonos Inalambricos Incluidos', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:109.99, oldPrice:129.79, badge:'Karaoke',
+    price:109.99, oldPrice:129.79, badge: 'OFERTA',
     image:'img/productos/DSP0000026295-0.jpg',
     images: [
       'img/productos/DSP0000026295-0.jpg',
@@ -1839,7 +1839,7 @@ PRODUCTS.push(
   // ── LOGITECH ───────────────────────────────────────────────
 
   { id:93, name:'ALTAVOCES LOGITECH Z150 2.0/ BLANCOS/ 6W', brand:'LOGITECH', category:'altavoces',
-    price:14.99, oldPrice:17.69, badge:'Audio',
+    price:14.99, oldPrice:17.69, badge: 'OFERTA',
     image:'img/productos/980-000815-0.jpg',
     images: [
       'img/productos/980-000815-0.jpg',
@@ -1851,7 +1851,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.0 estéreo', 'Potencia':'6W RMS','SKU Megasur':'980-000815'}
   },
   { id:89, name:'ALTAVOCES LOGITECH Z207 BLUETOOTH BLANCO', brand:'LOGITECH', category:'altavoces',
-    price:34.99, oldPrice:41.29, badge:'Bluetooth',
+    price:34.99, oldPrice:41.29, badge: 'OFERTA',
     image:'img/productos/980-001292-0.jpg',
     images: [
       'img/productos/980-001292-0.jpg',
@@ -1862,7 +1862,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'Bluetooth','SKU Megasur':'980-001292'}
   },
   { id:91, name:'ALTAVOCES LOGITECH Z623 2.1 200 RMS /THX', brand:'LOGITECH', category:'altavoces',
-    price:94.99, oldPrice:112.09, badge:'Sistema 2.1',
+    price:94.99, oldPrice:112.09, badge: 'OFERTA',
     image:'img/productos/980-000403-0.jpg',
     images: [
       'img/productos/980-000403-0.jpg',
@@ -1874,7 +1874,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.1 (satélites + subwoofer)','SKU Megasur':'980-000403'}
   },
   { id:90, name:'ALTAVOCES LOGITECH Z906 5.1 THX / 500 W RMS SONIDO ENVOLVENTE', brand:'LOGITECH', category:'altavoces',
-    price:259.99, oldPrice:306.79, badge:'Audio',
+    price:259.99, oldPrice:306.79, badge: 'OFERTA',
     image:'img/productos/MGS0000031037-0.jpg',
     images: [
       'img/productos/MGS0000031037-0.jpg',
@@ -1889,7 +1889,7 @@ PRODUCTS.push(
   // ── MARS GAMING ────────────────────────────────────────────
 
   { id:94, name:'ALTAVOCES MARS GAMING MS1 2.0 NEGRO/ROJO', brand:'MARS GAMING', category:'altavoces',
-    price:15.99, oldPrice:18.87, badge:'Audio',
+    price:15.99, oldPrice:18.87, badge: 'OFERTA',
     image:'img/productos/DSP0000008707-0.jpg',
     images: [
       'img/productos/DSP0000008707-0.jpg',
@@ -1900,7 +1900,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000008707'}
   },
   { id:95, name:'ALTAVOCES MARS GAMING MSCUBE PREMIUM 8W BLACK', brand:'MARS GAMING', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000008709-0.jpg',
     images: [
       'img/productos/DSP0000008709-0.jpg',
@@ -1911,7 +1911,7 @@ PRODUCTS.push(
     specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008709'}
   },
   { id:96, name:'ALTAVOCES MARS GAMING MSCUBEW 8W BLANCO', brand:'MARS GAMING', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000008846-0.jpg',
     images: [
       'img/productos/DSP0000008846-0.jpg',
@@ -1922,7 +1922,7 @@ PRODUCTS.push(
     specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008846'}
   },
   { id:98, name:'ALTAVOCES MARS GAMING MSCUBEP PREMIUM 8W ROSA', brand:'MARS GAMING', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000008873-0.jpg',
     images: [
       'img/productos/DSP0000008873-0.jpg',
@@ -1933,7 +1933,7 @@ PRODUCTS.push(
     specs:{'Potencia':'8W RMS','SKU Megasur':'DSP0000008873'}
   },
   { id:97, name:'ALTAVOCES MARS GAMING MS22W 2.2 35W USB + JACK 3.5MM BLANCO', brand:'MARS GAMING', category:'altavoces',
-    price:39.99, oldPrice:47.19, badge:'Audio',
+    price:39.99, oldPrice:47.19, badge: 'OFERTA',
     image:'img/productos/DSP0000008862-0.jpg',
     images: [
       'img/productos/DSP0000008862-0.jpg',
@@ -1945,7 +1945,7 @@ PRODUCTS.push(
   // ── NGS ────────────────────────────────────────────────────
 
   { id:102, name:'ALTAVOZ PARA PC NGS SB 350/ 12W/ USB/ JACK 3.5MM', brand:'NGS', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000009027-0.jpg',
     images: [
       'img/productos/DSP0000009027-0.jpg',
@@ -1958,7 +1958,7 @@ PRODUCTS.push(
     specs:{'Potencia':'12W RMS', 'Entrada':'USB', 'Entrada':'Jack 3.5mm AUX','SKU Megasur':'DSP0000009027'}
   },
   { id:99, name:'ALTAVOZ BLUETOOTH NGS ROLLER FURIA 1 NEGRO', brand:'NGS', category:'altavoces',
-    price:24.99, oldPrice:29.49, badge:'Bluetooth',
+    price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000023318-0.jpg',
     images: [
       'img/productos/DSP0000023318-0.jpg',
@@ -1970,7 +1970,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'Bluetooth','SKU Megasur':'DSP0000023318'}
   },
   { id:100, name:'ALTAVOCES NGS COMET 2.1 USB 20W RMS', brand:'NGS', category:'altavoces',
-    price:29.99, oldPrice:35.39, badge:'Sistema 2.1',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000013251-0.jpg',
     images: [
       'img/productos/DSP0000013251-0.jpg',
@@ -1980,7 +1980,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.1 (satélites + subwoofer)', 'Potencia':'20W RMS RMS', 'Entrada':'USB','SKU Megasur':'DSP0000013251'}
   },
   { id:101, name:'ALTAVOZ PORTATIL BLUETOOTH NGS WILD TEMPER 200W', brand:'NGS', category:'altavoces',
-    price:74.99, oldPrice:88.49, badge:'Bluetooth',
+    price:74.99, oldPrice:88.49, badge: 'OFERTA',
     image:'img/productos/DSP0000028000-0.jpg',
     images: [
       'img/productos/DSP0000028000-0.jpg',
@@ -1995,7 +1995,7 @@ PRODUCTS.push(
   // ── HAMA ───────────────────────────────────────────────────
 
   { id:106, name:'ALTAVOZ HAMA BALL SHAPE MONO ROSA', brand:'HAMA', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/MGS0000024055-0.jpg',
     images: [
       'img/productos/MGS0000024055-0.jpg',
@@ -2006,7 +2006,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'MGS0000024055'}
   },
   { id:103, name:'ALTAVOZ HAMA SHINE 2.0 BLANCO', brand:'HAMA', category:'altavoces',
-    price:24.99, oldPrice:29.49, badge:'Audio',
+    price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000024269-0.jpg',
     images: [
       'img/productos/DSP0000024269-0.jpg',
@@ -2017,7 +2017,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000024269'}
   },
   { id:105, name:'ALTAVOZ HAMA SHINE 2.0 NEGRO', brand:'HAMA', category:'altavoces',
-    price:24.99, oldPrice:29.49, badge:'Audio',
+    price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000024270-0.jpg',
     images: [
       'img/productos/DSP0000024270-0.jpg',
@@ -2028,7 +2028,7 @@ PRODUCTS.push(
     specs:{'Sistema':'2.0 estéreo','SKU Megasur':'DSP0000024270'}
   },
   { id:104, name:'ALTAVOZ HAMA TWIN 3.0 BLANCO', brand:'HAMA', category:'altavoces',
-    price:34.99, oldPrice:41.29, badge:'Audio',
+    price:34.99, oldPrice:41.29, badge: 'OFERTA',
     image:'img/productos/DSP0000024274-0.jpg',
     images: [
       'img/productos/DSP0000024274-0.jpg',
@@ -2043,7 +2043,7 @@ PRODUCTS.push(
   // ── QCHARX ─────────────────────────────────────────────────
 
   { id:109, name:'ALTAVOZ QCHARX FLOW MINI NEGRO 10W', brand:'QCHARX', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge:'Audio',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/MGS0000024590-0.jpg',
     images: [
       'img/productos/MGS0000024590-0.jpg'
@@ -2052,7 +2052,7 @@ PRODUCTS.push(
     specs:{'Potencia':'10W RMS','SKU Megasur':'MGS0000024590'}
   },
   { id:108, name:'ALTAVOZ QCHARX FLOW NEGRO', brand:'QCHARX', category:'altavoces',
-    price:29.99, oldPrice:35.39, badge:'Audio',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/MGS0000023191-0.jpg',
     images: [
       'img/productos/MGS0000023191-0.jpg',
@@ -2062,7 +2062,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'MGS0000023191'}
   },
   { id:107, name:'ALTAVOZ QCHARX FLOWMAX NEGRO', brand:'QCHARX', category:'altavoces',
-    price:39.99, oldPrice:47.19, badge:'Audio',
+    price:39.99, oldPrice:47.19, badge: 'OFERTA',
     image:'img/productos/MGS0000023189-0.jpg',
     images: [
       'img/productos/MGS0000023189-0.jpg',
@@ -2081,31 +2081,31 @@ PRODUCTS.push(
   // ── SONY ───────────────────────────────────────────────────
 
   { id:111, name:'AURICULARES SONY WI-C100 INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:29.99, oldPrice:35.39, badge:'Wireless',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000037821-0.jpg',
     description:'',
     specs:{'SKU Megasur':'DSP0000037821'}
   },
   { id:110, name:'AURICULARES SONY WH-CH520 BLUETOOH BLANCO', brand:'SONY', category:'auriculares',
-    price:49.99, oldPrice:58.99, badge:'Noise Cancelling',
+    price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/MGS0000020797-0.jpg',
     description:'ANC: Cancelación activa de ruido',
     specs:{'ANC':'Cancelación activa de ruido','SKU Megasur':'MGS0000020797'}
   },
   { id:114, name:'AURICULARES SONY WF-C510 INALAMBRICO AZUL', brand:'SONY', category:'auriculares',
-    price:49.99, oldPrice:58.99, badge:'Wireless',
+    price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037829-0.jpg',
     description:'',
     specs:{'SKU Megasur':'DSP0000037829'}
   },
   { id:113, name:'AURICULARES SONY WF-C710N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:69.99, oldPrice:82.59, badge:'Wireless',
+    price:69.99, oldPrice:82.59, badge: 'OFERTA',
     image:'img/productos/DSP0000037823-0.jpg',
     description:'',
     specs:{'SKU Megasur':'DSP0000037823'}
   },
   { id:112, name:'AURICULARES SONY WH-CH720N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:99.99, oldPrice:117.99, badge:'Wireless',
+    price:99.99, oldPrice:117.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037822-0.jpg',
     description:'',
     specs:{'SKU Megasur':'DSP0000037822'}
@@ -2113,7 +2113,7 @@ PRODUCTS.push(
   // ── EPOS SENNHEISER ────────────────────────────────────────
 
   { id:118, name:'AURICULARES EPOS SENNHEISER PC 5 CHAT JACK 3.5MM MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:19.99, oldPrice:23.59, badge:'Audio Premium',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000012549-0.jpg',
     images: [
       'img/productos/DSP0000012549-0.jpg',
@@ -2126,7 +2126,7 @@ PRODUCTS.push(
     specs:{'Conexión':'Jack 3.5mm', 'Micrófono':'Integrado','SKU Megasur':'DSP0000012549'}
   },
   { id:115, name:'AURICULARES EPOS SENNHEISER PC 8 USB MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:24.99, oldPrice:29.49, badge:'Audio Premium',
+    price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000012535-0.jpg',
     images: [
       'img/productos/DSP0000012535-0.jpg',
@@ -2138,7 +2138,7 @@ PRODUCTS.push(
     specs:{'Micrófono':'Integrado','SKU Megasur':'DSP0000012535'}
   },
   { id:116, name:'AURICULARES EPOS SENNHEISER RS 120-W TV NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:79.99, oldPrice:94.39, badge:'Audio Premium',
+    price:79.99, oldPrice:94.39, badge: 'OFERTA',
     image:'img/productos/DSP0000012542-0.jpg',
     images: [
       'img/productos/DSP0000012542-0.jpg',
@@ -2149,7 +2149,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'DSP0000012542'}
   },
   { id:117, name:'AURICULARES EPOS SENNHEISER RS 5200 RF', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:89.99, oldPrice:106.19, badge:'Audio Premium',
+    price:89.99, oldPrice:106.19, badge: 'OFERTA',
     image:'img/productos/DSP0000012543-0.jpg',
     images: [
       'img/productos/DSP0000012543-0.jpg',
@@ -2162,7 +2162,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'DSP0000012543'}
   },
   { id:119, name:'AURICULARES EPOS SENNHEISER RS 2000 TV INALAMBRICO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:179.99, oldPrice:212.39, badge:'Wireless',
+    price:179.99, oldPrice:212.39, badge: 'OFERTA',
     image:'img/productos/DSP0000028398-0.jpg',
     images: [
       'img/productos/DSP0000028398-0.jpg',
@@ -2177,7 +2177,7 @@ PRODUCTS.push(
   // ── JABRA ──────────────────────────────────────────────────
 
   { id:123, name:'AURICULAR JABRA EVOLVE 30 II HS NEGRO', brand:'JABRA', category:'auriculares',
-    price:59.99, oldPrice:70.79, badge:'Audio Premium',
+    price:59.99, oldPrice:70.79, badge: 'OFERTA',
     image:'img/productos/DSP0000030414-0.jpg',
     images: [
       'img/productos/DSP0000030414-0.jpg',
@@ -2188,7 +2188,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'DSP0000030414'}
   },
   { id:124, name:'AURICULARES JABRA BIZ 2300 QD DUO', brand:'JABRA', category:'auriculares',
-    price:89.99, oldPrice:106.19, badge:'Audio Premium',
+    price:89.99, oldPrice:106.19, badge: 'OFERTA',
     image:'img/productos/DSP0000030416-0.jpg',
     images: [
       'img/productos/DSP0000030416-0.jpg',
@@ -2201,7 +2201,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'DSP0000030416'}
   },
   { id:121, name:'AURICULARES JABRA ENGAGE 45 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
-    price:179.99, oldPrice:212.39, badge:'Wireless',
+    price:179.99, oldPrice:212.39, badge: 'OFERTA',
     image:'img/productos/DSP0000030409-0.jpg',
     images: [
       'img/productos/DSP0000030409-0.jpg',
@@ -2212,7 +2212,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'DSP0000030409'}
   },
   { id:120, name:'AURICULARES JABRA EVOLVE2 65 MS', brand:'JABRA', category:'auriculares',
-    price:249.99, oldPrice:294.99, badge:'Audio Premium',
+    price:249.99, oldPrice:294.99, badge: 'OFERTA',
     image:'img/productos/MGS0000025960-0.jpg',
     images: [
       'img/productos/MGS0000025960-0.jpg',
@@ -2223,7 +2223,7 @@ PRODUCTS.push(
     specs:{'SKU Megasur':'MGS0000025960'}
   },
   { id:122, name:'AURICULARES JABRA ENGAGE 65 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
-    price:289.99, oldPrice:342.19, badge:'Wireless',
+    price:289.99, oldPrice:342.19, badge: 'OFERTA',
     image:'img/productos/DSP0000030410-0.jpg',
     images: [
       'img/productos/DSP0000030410-0.jpg',
@@ -2236,7 +2236,7 @@ PRODUCTS.push(
   // ── ENERGY SISTEM ──────────────────────────────────────────
 
   { id:126, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 2 ANTHRACITE SUPRAURAL/ 30MM/ CABLE 150CM/ JACK 3.5MM/ ANTIPOP/ 20HZ', brand:'ENERGY SISTEM', category:'auriculares',
-    price:19.99, oldPrice:23.59, badge:'Audio Premium',
+    price:19.99, oldPrice:23.59, badge: 'OFERTA',
     image:'img/productos/DSP0000007049-0.jpg',
     images: [
       'img/productos/DSP0000007049-0.jpg',
@@ -2247,25 +2247,25 @@ PRODUCTS.push(
     specs:{'Conexión':'Jack 3.5mm','SKU Megasur':'DSP0000007049'}
   },
   { id:129, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 3 BLANCO SUPRAURAL/ 40MM/ JACK 3.5MM/ ANTIPOP/ 20HZ/ 32Ohms', brand:'ENERGY SISTEM', category:'auriculares',
-    price:24.99, oldPrice:29.49, badge:'Noise Cancelling',
+    price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000007066-0.jpg',
     description:'Conexión: Jack 3.5mm',
     specs:{'Conexión':'Jack 3.5mm', 'ANC':'Cancelación activa de ruido','SKU Megasur':'DSP0000007066'}
   },
   { id:127, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
-    price:29.99, oldPrice:35.39, badge:'Wireless',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000007055-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
     specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007055'}
   },
   { id:128, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
-    price:29.99, oldPrice:35.39, badge:'Wireless',
+    price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000007060-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
     specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007060'}
   },
   { id:125, name:'AURICULARES MICRO GAMING ENERGY SISTEM ESG4 7.1 RED SUPRAURAL/ 50MM/ USB/ MULTIPLATAFORMA', brand:'ENERGY SISTEM', category:'auriculares',
-    price:34.99, oldPrice:41.29, badge:'Gaming',
+    price:34.99, oldPrice:41.29, badge: 'OFERTA',
     image:'img/productos/DSP0000007037-0.jpg',
     images: [
       'img/productos/DSP0000007037-0.jpg',
@@ -2278,13 +2278,13 @@ PRODUCTS.push(
   // ── URBANISTA ──────────────────────────────────────────────
 
   { id:130, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE', brand:'URBANISTA', category:'auriculares',
-    price:39.99, oldPrice:47.19, badge:'True Wireless',
+    price:39.99, oldPrice:47.19, badge: 'OFERTA',
     image:'img/productos/DSP0000014716-0.jpg',
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014716'}
   },
   { id:132, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON VANILLA CREAM / AMARILLO VAINILLA', brand:'URBANISTA', category:'auriculares',
-    price:49.99, oldPrice:58.99, badge:'True Wireless',
+    price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000013389-0.jpg',
     images: [
       'img/productos/DSP0000013389-0.jpg',
@@ -2297,7 +2297,7 @@ PRODUCTS.push(
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013389'}
   },
   { id:134, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON MIDNIGHT BLACK', brand:'URBANISTA', category:'auriculares',
-    price:49.99, oldPrice:58.99, badge:'True Wireless',
+    price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000014713-0.jpg',
     images: [
       'img/productos/DSP0000014713-0.jpg',
@@ -2310,13 +2310,13 @@ PRODUCTS.push(
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014713'}
   },
   { id:131, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE', brand:'URBANISTA', category:'auriculares',
-    price:59.99, oldPrice:70.79, badge:'True Wireless',
+    price:59.99, oldPrice:70.79, badge: 'OFERTA',
     image:'img/productos/DSP0000013382-0.jpg',
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013382'}
   },
   { id:133, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS PHOENIX DESERT ROSE CARGA SOLAR', brand:'URBANISTA', category:'auriculares',
-    price:99.99, oldPrice:117.99, badge:'True Wireless',
+    price:99.99, oldPrice:117.99, badge: 'OFERTA',
     image:'img/productos/DSP0000014707-0.jpg',
     images: [
       'img/productos/DSP0000014707-0.jpg',
@@ -2338,7 +2338,7 @@ PRODUCTS.push(
   // ── SAMSUNG ────────────────────────────────────────────────
 
   { id:135, name:'SAMSUNG GALAXY A37 5G 8/256GB VERDE', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge:'5G',
+    price:328.9, oldPrice:388.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033302-0.jpg',
     images: [
       'img/productos/MGS0000033302-0.jpg',
@@ -2350,7 +2350,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033302'}
   },
   { id:136, name:'SAMSUNG GALAXY A37 5G 8/256GB GRIS', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge:'5G',
+    price:328.9, oldPrice:388.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033303-0.jpg',
     images: [
       'img/productos/MGS0000033303-0.jpg',
@@ -2363,7 +2363,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033303'}
   },
   { id:137, name:'SAMSUNG GALAXY A37 5G 8/256GB BLANCO', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge:'5G',
+    price:328.9, oldPrice:388.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033305-0.jpg',
     images: [
       'img/productos/MGS0000033305-0.jpg',
@@ -2376,7 +2376,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033305'}
   },
   { id:138, name:'SAMSUNG GALAXY A37 5G 8/256GB VIOLETA', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge:'5G',
+    price:328.9, oldPrice:388.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033304-0.jpg',
     images: [
       'img/productos/MGS0000033304-0.jpg',
@@ -2389,7 +2389,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033304'}
   },
   { id:139, name:'SAMSUNG GALAXY A57 5G 8/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
-    price:449, oldPrice:529.82, badge:'5G',
+    price:449, oldPrice:529.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033306-0.jpg',
     images: [
       'img/productos/MGS0000033306-0.jpg',
@@ -2404,7 +2404,7 @@ PRODUCTS.push(
   // ── APPLE ──────────────────────────────────────────────────
 
   { id:141, name:'APPLE IPHONE 14 5G 128GB AZUL ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge:'5G',
+    price:299, oldPrice:352.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033831-0.jpg',
     images: [
       'img/productos/MGS0000033831-0.jpg',
@@ -2415,7 +2415,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033831'}
   },
   { id:142, name:'APPLE IPHONE 14 5G 128GB PURPURA ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge:'5G',
+    price:299, oldPrice:352.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033834-0.jpg',
     images: [
       'img/productos/MGS0000033834-0.jpg',
@@ -2426,7 +2426,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033834'}
   },
   { id:143, name:'APPLE IPHONE 14 5G 128GB AMARILLO ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge:'5G',
+    price:299, oldPrice:352.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033838-0.jpg',
     images: [
       'img/productos/MGS0000033838-0.jpg',
@@ -2438,7 +2438,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033838'}
   },
   { id:144, name:'APPLE IPHONE 14 PRO 5G 256GB NEGRO ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:499, oldPrice:588.82, badge:'Pro',
+    price:499, oldPrice:588.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033840-0.jpg',
     images: [
       'img/productos/MGS0000033840-0.jpg',
@@ -2451,7 +2451,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033840'}
   },
   { id:140, name:'APPLE IPHONE 16E 128GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:619, oldPrice:730.42, badge:'Smartphone',
+    price:619, oldPrice:730.42, badge: 'OFERTA',
     image:'img/productos/DSP0000029938-0.jpg',
     images: [
       'img/productos/DSP0000029938-0.jpg',
@@ -2465,7 +2465,7 @@ PRODUCTS.push(
   // ── XIAOMI ─────────────────────────────────────────────────
 
   { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
-    price:129, oldPrice:152.22, badge:'Pro',
+    price:129, oldPrice:152.22, badge: 'OFERTA',
     image:'img/productos/MGS0000033059-0.jpg',
     images: [
       'img/productos/MGS0000033059-0.jpg'
@@ -2474,7 +2474,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033059'}
   },
   { id:146, name:'XIAOMI REDMI A7 PRO 4/128GB VERDE', brand:'XIAOMI', category:'smartphones',
-    price:129, oldPrice:152.22, badge:'Pro',
+    price:129, oldPrice:152.22, badge: 'OFERTA',
     image:'img/productos/MGS0000033060-0.jpg',
     images: [
       'img/productos/MGS0000033060-0.jpg'
@@ -2483,7 +2483,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033060'}
   },
   { id:148, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" NEGRO', brand:'XIAOMI', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'Smartphone',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/MGS0000031676-0.jpg',
     images: [
       'img/productos/MGS0000031676-0.jpg',
@@ -2496,7 +2496,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'8GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000031676'}
   },
   { id:149, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" AZUL', brand:'XIAOMI', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'Smartphone',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/MGS0000031681-0.jpg',
     images: [
       'img/productos/MGS0000031681-0.jpg',
@@ -2509,7 +2509,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'8GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000031681'}
   },
   { id:147, name:'XIAOMI REDMI NOTE 14 5G 8/256GB LILA', brand:'XIAOMI', category:'smartphones',
-    price:219, oldPrice:258.42, badge:'5G',
+    price:219, oldPrice:258.42, badge: 'OFERTA',
     image:'img/productos/MGS0000025157-0.jpg',
     images: [
       'img/productos/MGS0000025157-0.jpg',
@@ -2524,7 +2524,7 @@ PRODUCTS.push(
   // ── REALME ─────────────────────────────────────────────────
 
   { id:154, name:'REALME C100 5G 4/256GB VERDE', brand:'REALME', category:'smartphones',
-    price:149, oldPrice:175.82, badge:'5G',
+    price:149, oldPrice:175.82, badge: 'OFERTA',
     image:'img/productos/MGS0000034179-0.jpg',
     images: [
       'img/productos/MGS0000034179-0.jpg',
@@ -2537,7 +2537,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000034179'}
   },
   { id:150, name:'REALME 14T 5G 8/256GB NEGRO', brand:'REALME', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'5G',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/DSP0000038803-0.jpg',
     images: [
       'img/productos/DSP0000038803-0.jpg',
@@ -2549,7 +2549,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000038803'}
   },
   { id:151, name:'REALME 14T 5G 8/256GB PURPURA', brand:'REALME', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'5G',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/DSP0000038804-0.jpg',
     images: [
       'img/productos/DSP0000038804-0.jpg',
@@ -2560,7 +2560,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000038804'}
   },
   { id:152, name:'REALME 16 5G 8/256GB BLANCO', brand:'REALME', category:'smartphones',
-    price:249, oldPrice:293.82, badge:'5G',
+    price:249, oldPrice:293.82, badge: 'OFERTA',
     image:'img/productos/MGS0000034177-0.jpg',
     images: [
       'img/productos/MGS0000034177-0.jpg',
@@ -2573,7 +2573,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000034177'}
   },
   { id:153, name:'REALME 16 5G 8/256GB NEGRO', brand:'REALME', category:'smartphones',
-    price:249, oldPrice:293.82, badge:'5G',
+    price:249, oldPrice:293.82, badge: 'OFERTA',
     image:'img/productos/MGS0000034178-0.jpg',
     images: [
       'img/productos/MGS0000034178-0.jpg',
@@ -2588,7 +2588,7 @@ PRODUCTS.push(
   // ── TCL ────────────────────────────────────────────────────
 
   { id:155, name:'TCL 60 SE NXTPAPER 5G 8/256GB GRIS', brand:'TCL', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'NXTPAPER',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/MGS0000027846-0.jpg',
     images: [
       'img/productos/MGS0000027846-0.jpg',
@@ -2600,7 +2600,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000027846'}
   },
   { id:156, name:'TCL 60 SE NXTPAPER 5G 8/256GB VERDE', brand:'TCL', category:'smartphones',
-    price:199, oldPrice:234.82, badge:'NXTPAPER',
+    price:199, oldPrice:234.82, badge: 'OFERTA',
     image:'img/productos/MGS0000027847-0.jpg',
     images: [
       'img/productos/MGS0000027847-0.jpg',
@@ -2613,7 +2613,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000027847'}
   },
   { id:157, name:'TCL NXTPAPER 70 PRO 5G 8/256GB AZUL', brand:'TCL', category:'smartphones',
-    price:249, oldPrice:293.82, badge:'NXTPAPER',
+    price:249, oldPrice:293.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033439-0.jpg',
     images: [
       'img/productos/MGS0000033439-0.jpg',
@@ -2626,7 +2626,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033439'}
   },
   { id:158, name:'TCL NXTPAPER 70 PRO 5G 8/256GB ORO', brand:'TCL', category:'smartphones',
-    price:249, oldPrice:293.82, badge:'NXTPAPER',
+    price:249, oldPrice:293.82, badge: 'OFERTA',
     image:'img/productos/MGS0000033440-0.jpg',
     images: [
       'img/productos/MGS0000033440-0.jpg',
@@ -2639,7 +2639,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'Pantalla':'NXTPAPER (anti-fatiga visual)', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033440'}
   },
   { id:159, name:'TCL 60 ULTRA NXTPAPER 5G 12/512GB NEGRO', brand:'TCL', category:'smartphones',
-    price:329, oldPrice:388.22, badge:'NXTPAPER',
+    price:329, oldPrice:388.22, badge: 'OFERTA',
     image:'img/productos/MGS0000033437-0.jpg',
     images: [
       'img/productos/MGS0000033437-0.jpg',
@@ -2654,7 +2654,7 @@ PRODUCTS.push(
   // ── MOTOROLA ───────────────────────────────────────────────
 
   { id:160, name:'MOTOROLA MOTO G05 4/128GB VERDE', brand:'MOTOROLA', category:'smartphones',
-    price:109, oldPrice:128.62, badge:'Smartphone',
+    price:109, oldPrice:128.62, badge: 'OFERTA',
     image:'img/productos/DSP0000040159-0.jpg',
     images: [
       'img/productos/DSP0000040159-0.jpg',
@@ -2667,7 +2667,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000040159'}
   },
   { id:162, name:'MOTOROLA MOTO G15 8/128GB NARANJA', brand:'MOTOROLA', category:'smartphones',
-    price:159, oldPrice:187.62, badge:'Smartphone',
+    price:159, oldPrice:187.62, badge: 'OFERTA',
     image:'img/productos/DSP0000029690-0.jpg',
     images: [
       'img/productos/DSP0000029690-0.jpg',
@@ -2680,7 +2680,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000029690'}
   },
   { id:163, name:'MOTOROLA MOTO G15 8/128GB VERDE', brand:'MOTOROLA', category:'smartphones',
-    price:159, oldPrice:187.62, badge:'Smartphone',
+    price:159, oldPrice:187.62, badge: 'OFERTA',
     image:'img/productos/DSP0000029691-0.jpg',
     images: [
       'img/productos/DSP0000029691-0.jpg',
@@ -2693,7 +2693,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000029691'}
   },
   { id:161, name:'MOTOROLA MOTO G85 5G 12/256GB GRIS', brand:'MOTOROLA', category:'smartphones',
-    price:269, oldPrice:317.42, badge:'5G',
+    price:269, oldPrice:317.42, badge: 'OFERTA',
     image:'img/productos/DSP0000027349-0.jpg',
     images: [
       'img/productos/DSP0000027349-0.jpg',
@@ -2706,7 +2706,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000027349'}
   },
   { id:164, name:'MOTOROLA THINKPHONE 25 5G 8/256GB CARBON BLACK', brand:'MOTOROLA', category:'smartphones',
-    price:449, oldPrice:529.82, badge:'5G',
+    price:449, oldPrice:529.82, badge: 'OFERTA',
     image:'img/productos/DSP0000035470-0.jpg',
     images: [
       'img/productos/DSP0000035470-0.jpg',
@@ -2720,7 +2720,7 @@ PRODUCTS.push(
   // ── HAMMER ─────────────────────────────────────────────────
 
   { id:165, name:'RUGERIZADO HAMMER IRON V 6+6/64GB NEGRO', brand:'HAMMER', category:'smartphones',
-    price:149, oldPrice:175.82, badge:'Smartphone',
+    price:149, oldPrice:175.82, badge: 'OFERTA',
     image:'img/productos/DSP0000023573-0.jpg',
     images: [
       'img/productos/DSP0000023573-0.jpg',
@@ -2732,7 +2732,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'64GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023573'}
   },
   { id:166, name:'RUGERIZADO HAMMER IRON V 6+6/64GB NARANJA', brand:'HAMMER', category:'smartphones',
-    price:149, oldPrice:175.82, badge:'Smartphone',
+    price:149, oldPrice:175.82, badge: 'OFERTA',
     image:'img/productos/DSP0000023574-0.jpg',
     images: [
       'img/productos/DSP0000023574-0.jpg',
@@ -2744,7 +2744,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'64GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023574'}
   },
   { id:168, name:'RUGERIZADO HAMMER BLADE VA 5G 8/128GB NEGRO', brand:'HAMMER', category:'smartphones',
-    price:249, oldPrice:293.82, badge:'5G',
+    price:249, oldPrice:293.82, badge: 'OFERTA',
     image:'img/productos/DSP0000027300-0.jpg',
     images: [
       'img/productos/DSP0000027300-0.jpg',
@@ -2757,7 +2757,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000027300'}
   },
   { id:169, name:'HAMMER CONSTRUCTION 2 5G 6/128GB PLATA', brand:'HAMMER', category:'smartphones',
-    price:279, oldPrice:329.22, badge:'5G',
+    price:279, oldPrice:329.22, badge: 'OFERTA',
     image:'img/productos/MGS0000025076-0.jpg',
     images: [
       'img/productos/MGS0000025076-0.jpg',
@@ -2770,7 +2770,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000025076'}
   },
   { id:167, name:'RUGERIZADO HAMMER BLADE V 5G 8/256GB NEGRO', brand:'HAMMER', category:'smartphones',
-    price:299, oldPrice:352.82, badge:'5G',
+    price:299, oldPrice:352.82, badge: 'OFERTA',
     image:'img/productos/DSP0000023575-0.jpg',
     images: [
       'img/productos/DSP0000023575-0.jpg',
