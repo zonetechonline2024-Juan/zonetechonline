@@ -395,13 +395,6 @@
     peripherals: 'Gaming',
     smartphones: 'Smartphones'
   };
-  var BRANDS_BY_CAT = {
-    watches:     [['Apple',5],['Samsung',3],['Xiaomi',4],['Amazfit',3]],
-    headphones:  [['Sony',10],['JBL',8],['Samsung',5],['Apple',4],['Jabra',3]],
-    speakers:    [['JBL',12],['Fonestar',5],['Phoenix',4],['Logitech',3]],
-    peripherals: [['ASUS ROG',8],['Razer',7],['Logitech G',6],['Corsair',4]],
-    smartphones: [['Samsung',7],['Apple',5],['Xiaomi',5],['TCL',5],['Motorola',4],['Hammer',3]]
-  };
 
   // ── Update page header ──
   var catLabel = CAT_LABELS[filterK] || 'Catálogo';
@@ -434,23 +427,41 @@
     if (lf === filterK && !brandK) link.classList.add('active');
   });
 
-  // ── Brand sidebar ──
-  if (filterK !== 'all' && BRANDS_BY_CAT[filterK]) {
-    var bSect = document.getElementById('brands-sect');
-    var bList = document.getElementById('brand-list');
-    bSect.style.display = '';
-    bList.innerHTML = BRANDS_BY_CAT[filterK].map(function(b) {
-      var bEncoded = encodeURIComponent(b[0]);
-      var isActive = brandK && decodeURIComponent(brandK) === b[0];
-      return '<a href="catalogo.html?filter=' + filterK + '&brand=' + bEncoded + '" class="cat-sb-link' + (isActive ? ' active' : '') + '">' +
-        b[0] + '<span class="sb-badge">' + b[1] + '</span></a>';
-    }).join('');
-  }
 
   // ── Render products ──
   document.addEventListener('DOMContentLoaded', function() {
     var count = renderCatalogGrid('catalog-grid', filterK, brandK);
     document.getElementById('result-count').textContent = count;
+
+    // ── Marcas: extracción dinámica de PRODUCTS (sin hardcodear) ────────────
+    if (filterK !== 'all' && typeof PRODUCTS !== 'undefined' && typeof FILTER_MAP !== 'undefined') {
+      var catKey = FILTER_MAP[filterK];
+      if (catKey) {
+        var catProds = PRODUCTS.filter(function(p) { return p.category === catKey; });
+        // Agrupa case-insensitive, conserva el displayName con capitalización del primer hit
+        var brandMap = {};
+        catProds.forEach(function(p) {
+          var raw = (p.brand || '').trim();
+          if (!raw) return;
+          var key = raw.toLowerCase();
+          if (!brandMap[key]) brandMap[key] = { display: raw, count: 0 };
+          brandMap[key].count++;
+        });
+        // Ordena: mayor stock primero, luego alfabético
+        var brandEntries = Object.values(brandMap)
+          .sort(function(a, b) { return b.count - a.count || a.display.localeCompare(b.display); });
+        if (brandEntries.length) {
+          document.getElementById('brands-sect').style.display = '';
+          var activeLow = brandK ? decodeURIComponent(brandK).toLowerCase() : '';
+          document.getElementById('brand-list').innerHTML = brandEntries.map(function(b) {
+            var isActive = activeLow && b.display.toLowerCase() === activeLow;
+            return '<a href="catalogo.html?filter=' + filterK + '&brand=' + encodeURIComponent(b.display) +
+                   '" class="cat-sb-link' + (isActive ? ' active' : '') + '">' +
+                   b.display + '<span class="sb-badge">' + b.count + '</span></a>';
+          }).join('');
+        }
+      }
+    }
 
     // Cart & quick-view listeners
     var cartToggle = document.getElementById('cart-toggle');
