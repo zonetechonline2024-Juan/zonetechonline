@@ -4089,14 +4089,15 @@ function initUserSession() {
       if (couponRow) {
         dropdown.querySelector('#ud-coupon').addEventListener('click', function() {
           closeDropdown();
-          var copied = false;
-          try {
-            navigator.clipboard.writeText('ZONE10');
-            copied = true;
-          } catch(ex) {}
-          showToast(copied
-            ? '✅ Código ZONE10 copiado — aplícalo en el carrito para tu 10% de descuento.'
-            : '🎁 Tu código: ZONE10 — introdúcelo al pagar para obtener el 10% dto.');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText('ZONE10').then(function() {
+              showToast('✅ Código ZONE10 copiado — aplícalo en el carrito para tu 10% de descuento.');
+            }).catch(function() {
+              showToast('🎁 Tu código: ZONE10 — introdúcelo al pagar para obtener el 10% dto.');
+            });
+          } else {
+            showToast('🎁 Tu código: ZONE10 — introdúcelo al pagar para obtener el 10% dto.');
+          }
         });
       }
 
@@ -4355,7 +4356,8 @@ function initAuthModal() {
     document.body.style.overflow = '';
   }
 
-  if (loginBtn) loginBtn.addEventListener('click', openAuth);
+  // Solo abrir modal si el usuario NO está ya logueado (si está logueado, el dropdown ya gestiona el click)
+  if (loginBtn && !localStorage.getItem('zt_user')) loginBtn.addEventListener('click', openAuth);
   if (closeBtn) closeBtn.addEventListener('click', closeAuth);
   backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closeAuth(); });
 
