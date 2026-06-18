@@ -3867,7 +3867,7 @@ function initClearComparator() {
 
 // ─── SEARCH ──────────────────────────────────────────────────────────────────
 
-var CATEGORY_LABELS = { watches:'Relojes', rings:'Anillos', headphones:'Auriculares', glasses:'Gafas', speakers:'Altavoces', masks:'Máscaras LED' };
+var CATEGORY_LABELS = { relojes:'Relojes', auriculares:'Auriculares', altavoces:'Altavoces', 'teclados gaming':'Teclados Gaming', smartphones:'Smartphones' };
 
 function initSearch() {
   var overlay  = document.getElementById('search-overlay');
@@ -3901,13 +3901,14 @@ function initSearch() {
   input.addEventListener('input', function() { renderSearchResults(input.value.trim()); });
 
   function renderSearchResults(query) {
-    var q = query.toLowerCase();
+    var q = query.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
     var filtered = PRODUCTS.filter(function(p) {
       return !q ||
-        p.name.toLowerCase().includes(q) ||
-        p.brand.toLowerCase().includes(q) ||
-        (CATEGORY_LABELS[p.category] || '').toLowerCase().includes(q) ||
-        (p.description || '').toLowerCase().includes(q);
+        norm(p.name).includes(q) ||
+        norm(p.brand).includes(q) ||
+        norm(CATEGORY_LABELS[p.category]).includes(q) ||
+        norm(p.description).includes(q);
     }).slice(0, 8);
 
     if (!filtered.length) {
@@ -3918,7 +3919,7 @@ function initSearch() {
     results.innerHTML = filtered.map(function(p) {
       var imgHtml = p.image
         ? '<img class="sri-img" src="' + p.image + '" alt="' + p.name + '" onerror="this.src=\'\';">'
-        : '<div class="sri-img" style="display:flex;align-items:center;justify-content:center;font-size:22px;">' + (p.category==='watches'?'⌚':p.category==='rings'?'💍':p.category==='headphones'?'🎧':p.category==='glasses'?'👓':p.category==='speakers'?'🔊':'✨') + '</div>';
+        : '<div class="sri-img" style="display:flex;align-items:center;justify-content:center;font-size:22px;">' + (p.category==='relojes'?'⌚':p.category==='auriculares'?'🎧':p.category==='altavoces'?'🔊':p.category==='teclados gaming'?'⌨️':p.category==='smartphones'?'📱':'✨') + '</div>';
       return '<div class="search-result-item" onclick="goToProduct(\'' + p.id + '\')">' +
         imgHtml +
         '<div class="sri-info"><div class="sri-name">' + p.name + '</div><div class="sri-meta">' + (CATEGORY_LABELS[p.category] || '') + ' · ' + p.brand + '</div></div>' +
@@ -3934,14 +3935,33 @@ function initSearch() {
 
   window.goToProduct = function(id) {
     closeSearch();
-    var cat = '';
-    PRODUCTS.forEach(function(p) { if (p.id === id) cat = p.category; });
-    if (cat) setFilter(cat);
+    var product = null;
+    PRODUCTS.forEach(function(p) { if (String(p.id) === String(id)) product = p; });
+    if (!product) return;
+
+    // Reverse-lookup: category value → FILTER_MAP key (e.g. 'relojes' → 'watches')
+    var filterKey = 'all';
+    Object.keys(FILTER_MAP).forEach(function(k) {
+      if (FILTER_MAP[k] === product.category) filterKey = k;
+    });
+
+    if (document.getElementById('products-grid')) {
+      setFilter(filterKey);
+    } else if (document.getElementById('catalog-grid')) {
+      renderCatalogGrid('catalog-grid', filterKey);
+    }
+
     setTimeout(function() {
-      var el = document.getElementById('prod-' + id);
-      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.classList.add('highlight-pulse'); setTimeout(function() { el.classList.remove('highlight-pulse'); }, 1800); }
-      else document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
-    }, 200);
+      var el = document.querySelector('[data-product-id="' + id + '"]');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('highlight-pulse');
+        setTimeout(function() { el.classList.remove('highlight-pulse'); }, 1800);
+      } else {
+        var sec = document.getElementById('productos') || document.getElementById('catalog-section');
+        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 300);
   };
 }
 
