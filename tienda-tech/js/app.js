@@ -3414,7 +3414,7 @@ function openQuickView(productId) {
       '</div>' +
       '<div class="qv-trust-row">' +
         '<span class="qv-trust-item">✓ Garantía oficial 2 años</span>' +
-        '<span class="qv-trust-item">✓ Envío gratis 24–48h</span>' +
+        '<span class="qv-trust-item">✓ Envío gratis · 5 a 8 días hábiles</span>' +
         '<span class="qv-trust-item">✓ Devolución 30 días</span>' +
       '</div>' +
       '<button class="btn-primary qv-add-btn" onclick="addToCart(' + product.id + ');closeQuickView()">Añadir al carrito — €' + product.price.toLocaleString() + '</button>' +
