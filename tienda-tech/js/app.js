@@ -321,7 +321,7 @@ PRODUCTS.push(
     category: 'auriculares',
     price: 49.99,
     oldPrice: 59.99,
-    badge: 'True Wireless',
+    badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wf-c510_wh_1.jpg',
     images: [
       'img/productos/art_sony-aur_wf-c510_wh_1.jpg',
@@ -386,7 +386,7 @@ PRODUCTS.push(
     category: 'auriculares',
     price: 99.99,
     oldPrice: 119.99,
-    badge: 'ANC True Wireless',
+    badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wf-c710n_wh_1.jpg',
     images: [
       'img/productos/art_sony-aur_wf-c710n_wh_1.jpg',
