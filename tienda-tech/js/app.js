@@ -3234,8 +3234,8 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
   var category = FILTER_MAP[filterKey] || (filterKey === 'all' ? 'todos' : null);
   var filtered = (!category || category === 'todos') ? PRODUCTS.slice() : PRODUCTS.filter(function(p) { return p.category === category; });
   if (brandKey) {
-    var bDecoded = decodeURIComponent(brandKey);
-    filtered = filtered.filter(function(p) { return p.brand === bDecoded; });
+    var bDecoded = decodeURIComponent(brandKey).toLowerCase();
+    filtered = filtered.filter(function(p) { return (p.brand || '').toLowerCase() === bDecoded; });
   }
   if (!filtered.length) {
     grid.innerHTML =
