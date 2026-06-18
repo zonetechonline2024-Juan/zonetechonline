@@ -149,10 +149,8 @@ PRODUCTS.push(
     price: 249.00,
     oldPrice: 279.00,
     badge: 'Más económico',
-    image: 'img/productos/art_apl-watch_meh54qlbardera_1.jpg',
+    image: 'img/productos/1108-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-f5cd37f4-3157-43fd-8e1e-70024c314a33.jpg',
     images: [
-      'img/productos/art_apl-watch_meh54qlbardera_1.jpg',
-      'img/productos/913-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l.jpg',
       'img/productos/1108-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-f5cd37f4-3157-43fd-8e1e-70024c314a33.jpg',
       'img/productos/2997-apple-watch-se-3-gps-40mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-f11f1ec4-254d-46bd-a7d4-44c06ac8afec.jpg'
     ],
@@ -178,12 +176,10 @@ PRODUCTS.push(
     price: 279.00,
     oldPrice: 309.00,
     badge: 'GPS',
-    image: 'img/productos/art_apl-watch_mehj4qlbardera_1.jpg',
+    image: 'img/productos/183-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-6a76ad09-9ed3-4f05-b81e-c8051193e595.jpg',
     images: [
-      'img/productos/art_apl-watch_mehj4qlbardera_1.jpg',
       'img/productos/183-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-6a76ad09-9ed3-4f05-b81e-c8051193e595.jpg',
-      'img/productos/2521-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-bcf9aa62-3061-45cf-a23f-4c6ea5b0925d.jpg',
-      'img/productos/9886-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l.jpg'
+      'img/productos/2521-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l-bcf9aa62-3061-45cf-a23f-4c6ea5b0925d.jpg'
     ],
     description: 'Apple Watch SE3 de aluminio Blanco Estrella, 44mm. Chip S9 SiP. Pantalla Retina OLED mayor. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes de tráfico. GPS integrado. WatchOS 11. Resistente al agua 50m. Hasta 18h batería.',
     specs: {
@@ -207,10 +203,8 @@ PRODUCTS.push(
     price: 299.00,
     oldPrice: 349.00,
     badge: 'GPS+Cellular',
-    image: 'img/productos/art_apl-watch_mep94qlbardera_1.jpg',
+    image: 'img/productos/1777-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-fcb78ea0-aac6-4a68-baae-89d47a46dd12.jpg',
     images: [
-      'img/productos/art_apl-watch_mep94qlbardera_1.jpg',
-      'img/productos/9583-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m.jpg',
       'img/productos/1777-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-fcb78ea0-aac6-4a68-baae-89d47a46dd12.jpg',
       'img/productos/2900-apple-watch-se-3-gps-cellular-40mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-86dda146-55fe-4620-80a7-0ffbbf0389dd.jpg'
     ],
@@ -236,10 +230,8 @@ PRODUCTS.push(
     price: 329.00,
     oldPrice: 379.00,
     badge: 'GPS+Cellular',
-    image: 'img/productos/art_apl-watch_mepj4qlbardera_1.jpg',
+    image: 'img/productos/1472-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-bcea6e32-fdd3-41ac-a126-1691e2b54484.jpg',
     images: [
-      'img/productos/art_apl-watch_mepj4qlbardera_1.jpg',
-      'img/productos/994-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m.jpg',
       'img/productos/1472-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-bcea6e32-fdd3-41ac-a126-1691e2b54484.jpg',
       'img/productos/299-apple-watch-se-3-gps-cellular-44mm-aluminio-medianoche-con-correa-deportiva-medianoche-s-m-a2013e9a-6b02-4570-a3f1-f479a5f16c12.jpg'
     ],
@@ -265,10 +257,8 @@ PRODUCTS.push(
     price: 399.00,
     oldPrice: 449.00,
     badge: 'ECG + SpO₂',
-    image: 'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
+    image: 'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
     images: [
-      'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
-      'img/productos/art_apl-watch_meqw4qlbardera_1.jpg',
       'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
       'img/productos/Apple-Watch-Series-10-aluminum-silver-240909_inline.jpg.large.jpg'
     ],
