@@ -4640,51 +4640,189 @@ function initAIAssistant() {
   function getResponse(q) {
     var ql = q.toLowerCase();
 
+    // ── helpers ────────────────────────────────────────────────────────────
+    function fmt(n) { return '€' + Number(n).toFixed(2).replace('.', ','); }
+
+    function byCat(cat) {
+      return PRODUCTS.filter(function(p) { return p.category === cat && p.price; });
+    }
+    function byBrand(brand) {
+      var bl = brand.toLowerCase();
+      return PRODUCTS.filter(function(p) { return p.brand && p.brand.toLowerCase() === bl && p.price; });
+    }
+    function byCatBrand(cat, brand) {
+      var bl = brand.toLowerCase();
+      return PRODUCTS.filter(function(p) { return p.category === cat && p.brand && p.brand.toLowerCase() === bl && p.price; });
+    }
+    function minP(arr) {
+      return arr.reduce(function(m, p) { return p.price < m ? p.price : m; }, Infinity);
+    }
+    function topN(arr, n, asc) {
+      return arr.slice().sort(function(a, b) { return asc ? a.price - b.price : b.price - a.price; }).slice(0, n);
+    }
+    function cleanName(name) {
+      return name.replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO|TECLADO|AURICULARES?)\s+/i, '').trim();
+    }
+    function listItems(arr, n, asc) {
+      return topN(arr, n, asc).map(function(p) {
+        return '<strong>' + cleanName(p.name) + '</strong> (' + fmt(p.price) + ')';
+      }).join(' · ');
+    }
+    function brandCounts(arr) {
+      var m = {};
+      arr.forEach(function(p) { if (p.brand) m[p.brand] = (m[p.brand] || 0) + 1; });
+      return m;
+    }
+
+    // ── catálogo live stats ─────────────────────────────────────────────────
+    var allPriced   = PRODUCTS.filter(function(p) { return p.price; });
+    var relojes     = byCat('relojes');
+    var auriculares = byCat('auriculares');
+    var altavoces   = byCat('altavoces');
+    var gaming      = byCat('teclados gaming');
+    var phones      = byCat('smartphones');
+
+    // ── marca: Xiaomi ───────────────────────────────────────────────────────
     if (/xiaomi|redmi watch|mi band|smart band/.test(ql)) {
-      return 'Gama <strong>Xiaomi</strong> (3 relojes de Depau): <strong>Smart Band 9</strong> (€39,95 · AMOLED 1,62" · 14 días · 5 ATM) · <strong>Redmi Watch 5 Active Negro</strong> (€49,95 · AMOLED 2,05" · GPS · 20 días) · <strong>Redmi Watch 5 Active Plata</strong> (€49,95). <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Xiaomi">Ver Xiaomi →</a>';
+      var xp = byBrand('Xiaomi');
+      return 'Gama <strong>Xiaomi</strong> (' + xp.length + ' productos desde ' + fmt(minP(xp)) + '): ' +
+             listItems(xp, 5, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Xiaomi">Ver Xiaomi →</a>';
     }
 
+    // ── marca: Samsung ──────────────────────────────────────────────────────
     if (/samsung|galaxy watch/.test(ql)) {
-      return '<strong>Samsung Galaxy Watch 7 44mm Verde</strong> (€279,99): Super AMOLED 1,5" circular, procesador 3nm, GPS multibanda, ECG, SpO₂, temperatura y Galaxy AI. Hasta 40h batería. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Samsung">Ver Samsung →</a>';
+      var sp = byBrand('Samsung');
+      return 'Gama <strong>Samsung</strong> (' + sp.length + ' productos desde ' + fmt(minP(sp)) + '): ' +
+             listItems(sp, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Samsung">Ver Samsung →</a>';
     }
 
-    if (/apple|iphone|apple watch|watch se|series 11/.test(ql)) {
-      return 'Gama <strong>Apple Watch</strong> (5 modelos de Depau): <strong>SE3 GPS 40mm</strong> (€249) · <strong>SE3 GPS 44mm</strong> (€279) · <strong>SE3 Cellular 40mm</strong> (€299) · <strong>SE3 Cellular 44mm</strong> (€329) · <strong>Series 11 GPS 42mm</strong> (€399 · ECG · SpO₂ · temperatura · chip S11). Todos WatchOS 11, resistencia 50m. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Apple">Ver Apple Watch →</a>';
+    // ── marca: Apple ────────────────────────────────────────────────────────
+    if (/\bapple\b|apple watch|watch se|series 11/.test(ql)) {
+      var ap = byBrand('Apple');
+      return 'Gama <strong>Apple Watch</strong> (' + ap.length + ' modelos desde ' + fmt(minP(ap)) + '): ' +
+             listItems(ap, 5, true) +
+             '. Todos WatchOS 11, resistencia 50m. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Apple">Ver Apple Watch →</a>';
     }
 
-    if (/sony.*auricular|auricular.*sony|wh.ch|wf.c[57]|ult wear|wh-ch|wf-c/.test(ql)) {
-      return 'Gama <strong>Sony</strong> (5 auriculares de Depau): <strong>WH-CH520</strong> (€39,99 · 50h · BT5.2) · <strong>WF-C510</strong> (€49,99 · True Wireless · 20h) · <strong>WH-CH720N</strong> (€89,99 · ANC · 35h · 192g) · <strong>WF-C710N</strong> (€99,99 · ANC TWS · 30h) · <strong>ULT WEAR</strong> (€129,99 · ANC + ULT POWER SOUND). <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sony">Ver Sony →</a>';
+    // ── marca: Garmin ───────────────────────────────────────────────────────
+    if (/garmin|forerunner|fenix/.test(ql)) {
+      var gp = byBrand('Garmin');
+      return 'Gama <strong>Garmin</strong> (' + gp.length + ' modelos desde ' + fmt(minP(gp)) + '): ' +
+             listItems(gp, 5, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Garmin">Ver Garmin →</a>';
     }
 
-    if (/jbl go|jbl clip|jbl flip|jbl charge|altavoz.*jbl|jbl.*altavoz/.test(ql)) {
-      return 'Gama <strong>JBL</strong> (5 altavoces de Depau, todos IP67): <strong>GO 5</strong> (€49,99 · 4,8W · 5h) · <strong>Clip 5</strong> (€64,99 · 7W · 12h · clip) · <strong>Flip 6</strong> (€99,99 · 30W · 12h · PartyBoost) · <strong>Flip 7</strong> (€129,99 · 35W · Auracast) · <strong>Charge 6</strong> (€169,99 · 45W · 24h · PowerBank USB-A). <a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=JBL">Ver JBL →</a>';
+    // ── marca: TCL ──────────────────────────────────────────────────────────
+    if (/\btcl\b/.test(ql)) {
+      var tp = byBrand('TCL');
+      return 'Gama <strong>TCL</strong> (' + tp.length + ' productos desde ' + fmt(minP(tp)) + '): ' +
+             listItems(tp, 5, true) +
+             '. <a class="ai-msg-link" href="catalogo.html">Ver TCL →</a>';
     }
 
+    // ── Sony + auriculares ──────────────────────────────────────────────────
+    if (/sony.*auricular|auricular.*sony|wh.ch|wf.c|ult wear|wh-ch|wf-c/.test(ql)) {
+      var sa = byCatBrand('auriculares', 'Sony');
+      return 'Gama <strong>Sony Auriculares</strong> (' + sa.length + ' modelos desde ' + fmt(minP(sa)) + '): ' +
+             listItems(sa, 5, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sony">Ver Sony →</a>';
+    }
+
+    // ── marca: JBL ──────────────────────────────────────────────────────────
+    if (/jbl go|jbl clip|jbl flip|jbl charge|altavoz.*jbl|jbl.*altavoz|\bjbl\b/.test(ql)) {
+      var jp = byBrand('JBL');
+      return 'Gama <strong>JBL</strong> (' + jp.length + ' altavoces desde ' + fmt(minP(jp)) + '): ' +
+             listItems(jp, 5, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=JBL">Ver JBL →</a>';
+    }
+
+    // ── categoría: auriculares ──────────────────────────────────────────────
     if (/auricular|tws|earbuds|cascos|headphone/.test(ql)) {
-      return 'Tenemos <strong>5 auriculares Sony</strong> de Depau: <strong>WH-CH520</strong> (€39,99 · 50h) · <strong>WF-C510</strong> (€49,99 · True Wireless) · <strong>WH-CH720N</strong> (€89,99 · ANC) · <strong>WF-C710N</strong> (€99,99 · ANC TWS) · <strong>ULT WEAR</strong> (€129,99 · ANC graves). <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver auriculares →</a>';
+      var aurBC = brandCounts(auriculares);
+      var aurBrStr = Object.keys(aurBC).slice(0, 4).map(function(b) {
+        return '<strong>' + b + '</strong> (' + aurBC[b] + ')';
+      }).join(' · ');
+      return 'Auriculares (' + auriculares.length + ' modelos · ' + aurBrStr + ' · desde ' + fmt(minP(auriculares)) + '): ' +
+             listItems(auriculares, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver auriculares →</a>';
     }
 
+    // ── categoría: altavoces ────────────────────────────────────────────────
     if (/altavoz|altavoces|speaker|bocina/.test(ql)) {
-      return 'Tenemos <strong>5 altavoces JBL</strong> de Depau, todos IP67: <strong>GO 5</strong> (€49,99) · <strong>Clip 5</strong> (€64,99) · <strong>Flip 6</strong> (€99,99) · <strong>Flip 7</strong> (€129,99) · <strong>Charge 6</strong> (€169,99 · PowerBank). <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver altavoces →</a>';
+      var altBC = brandCounts(altavoces);
+      var altBrStr = Object.keys(altBC).slice(0, 3).map(function(b) {
+        return '<strong>' + b + '</strong> (' + altBC[b] + ')';
+      }).join(' · ');
+      return 'Altavoces (' + altavoces.length + ' modelos · ' + altBrStr + ' · desde ' + fmt(minP(altavoces)) + '): ' +
+             listItems(altavoces, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver altavoces →</a>';
     }
 
+    // ── categoría: relojes ──────────────────────────────────────────────────
     if (/reloj|smartwatch|wearable/.test(ql)) {
-      return 'Tenemos <strong>9 relojes de Depau</strong>: <strong>Xiaomi</strong> (3 desde €39,95) · <strong>Samsung Galaxy Watch 7</strong> (€279,99) · <strong>Apple Watch</strong> (5 modelos desde €249). <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
+      var relBC = brandCounts(relojes);
+      var relBrStr = Object.keys(relBC).slice(0, 4).map(function(b) {
+        return '<strong>' + b + '</strong> (' + relBC[b] + ')';
+      }).join(' · ');
+      return 'Relojes inteligentes (' + relojes.length + ' modelos · ' + relBrStr + ' · desde ' + fmt(minP(relojes)) + '): ' +
+             listItems(relojes, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
     }
 
+    // ── categoría: gaming / periféricos ────────────────────────────────────
+    if (/asus|rog|logitech|gaming|teclado|perif[eé]rico/.test(ql)) {
+      var gamBC = brandCounts(gaming);
+      var gamBrStr = Object.keys(gamBC).slice(0, 3).map(function(b) {
+        return '<strong>' + b + '</strong> (' + gamBC[b] + ')';
+      }).join(' · ');
+      return 'Periféricos gaming (' + gaming.length + ' modelos · ' + gamBrStr + ' · desde ' + fmt(minP(gaming)) + '): ' +
+             listItems(gaming, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=peripherals">Ver periféricos →</a>';
+    }
+
+    // ── categoría: smartphones ──────────────────────────────────────────────
+    if (/smartphone|m[oó]vil|tel[eé]fono/.test(ql)) {
+      var phBC = brandCounts(phones);
+      var phBrStr = Object.keys(phBC).slice(0, 4).map(function(b) {
+        return '<strong>' + b + '</strong> (' + phBC[b] + ')';
+      }).join(' · ');
+      return 'Smartphones (' + phones.length + ' modelos · ' + phBrStr + ' · desde ' + fmt(minP(phones)) + '): ' +
+             listItems(phones, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html?filter=smartphones">Ver smartphones →</a>';
+    }
+
+    // ── precio: los más baratos ─────────────────────────────────────────────
     if (/barato|econ[oó]mico|precio|asequible|oferta|bajo precio|menos de/.test(ql)) {
-      return 'Los más económicos: <strong>Xiaomi Smart Band 9</strong> (€39,95), <strong>Sony WH-CH520</strong> (€39,99) y <strong>Xiaomi Redmi Watch 5</strong> (€49,95). Todo de Depau, stock verificado. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+      return 'Los más económicos del catálogo: ' + listItems(allPriced, 4, true) +
+             '. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
     }
 
+    // ── precio: premium ─────────────────────────────────────────────────────
     if (/premium|caro|mejor|top|m[aá]s completo|el mejor/.test(ql)) {
-      return 'Los más premium: <strong>Apple Watch Series 11</strong> (€399 · ECG · chip S11), <strong>JBL Charge 6</strong> (€169,99 · 45W · 24h · PowerBank) y <strong>Sony ULT WEAR</strong> (€129,99 · ANC + ULT POWER SOUND). <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+      return 'Los más premium: ' + listItems(allPriced, 3, false) +
+             '. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
     }
 
+    // ── recomendación general ───────────────────────────────────────────────
     if (/compar|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return '¿Qué buscas? <strong>Reloj</strong> (Xiaomi desde €39,95 · Samsung €279,99 · Apple Watch desde €249), <strong>auriculares Sony</strong> (desde €39,99, con o sin ANC) o <strong>altavoz JBL</strong> (portátil IP67 desde €49,99). Todos de <strong>Depau.es</strong>, stock verificado. <a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return '¿Qué buscas? <strong>Relojes</strong> (' + relojes.length + ' desde ' + fmt(minP(relojes)) + ') · ' +
+             '<strong>Auriculares</strong> (' + auriculares.length + ' desde ' + fmt(minP(auriculares)) + ') · ' +
+             '<strong>Altavoces</strong> (' + altavoces.length + ' desde ' + fmt(minP(altavoces)) + ') · ' +
+             '<strong>Gaming</strong> (' + gaming.length + ') · ' +
+             '<strong>Smartphones</strong> (' + phones.length + '). ' +
+             '<a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
     }
 
-    return 'En ZoneTechOnline tenemos <strong>19 productos verificados en Depau</strong>: <strong>9 relojes</strong> (Xiaomi · Samsung · Apple Watch), <strong>5 auriculares Sony</strong> y <strong>5 altavoces JBL</strong> — desde €39,95. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+    // ── fallback dinámico ───────────────────────────────────────────────────
+    return 'En ZoneTechOnline tenemos <strong>' + PRODUCTS.length + ' productos</strong>: ' +
+           '<strong>Relojes</strong> (' + relojes.length + ') · ' +
+           '<strong>Auriculares</strong> (' + auriculares.length + ') · ' +
+           '<strong>Altavoces</strong> (' + altavoces.length + ') · ' +
+           '<strong>Periféricos</strong> (' + gaming.length + ') · ' +
+           '<strong>Smartphones</strong> (' + phones.length + ') — desde ' + fmt(minP(allPriced)) + '. ' +
+           '<a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
@@ -4715,8 +4853,25 @@ function initAIAssistant() {
     document.body.style.overflow = 'hidden';
     if (!opened) {
       opened = true;
+      // Calcular métricas del catálogo en tiempo real
+      var allPriced = PRODUCTS.filter(function(p) { return p.price; });
+      var minPrice  = allPriced.reduce(function(m, p) { return p.price < m ? p.price : m; }, Infinity);
+      var fmtMin    = '€' + minPrice.toFixed(2).replace('.', ',');
+      var nRel  = PRODUCTS.filter(function(p) { return p.category === 'relojes';         }).length;
+      var nAur  = PRODUCTS.filter(function(p) { return p.category === 'auriculares';     }).length;
+      var nAlt  = PRODUCTS.filter(function(p) { return p.category === 'altavoces';       }).length;
+      var nGam  = PRODUCTS.filter(function(p) { return p.category === 'teclados gaming'; }).length;
+      var nPho  = PRODUCTS.filter(function(p) { return p.category === 'smartphones';     }).length;
       setTimeout(function() {
-        appendMsg('¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>19 productos verificados en Depau</strong>: 9 relojes (Xiaomi · Samsung · Apple Watch), 5 auriculares Sony y 5 altavoces JBL — desde €39,95. ¿Qué buscas?', 'bot');
+        appendMsg(
+          '¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>' + PRODUCTS.length + ' productos</strong> en catálogo: ' +
+          '<strong>' + nRel + ' relojes</strong> · ' +
+          '<strong>' + nAur + ' auriculares</strong> · ' +
+          '<strong>' + nAlt + ' altavoces</strong> · ' +
+          '<strong>' + nGam + ' periféricos</strong> · ' +
+          '<strong>' + nPho + ' smartphones</strong> — desde ' + fmtMin + '. ¿Qué buscas?',
+          'bot'
+        );
       }, 200);
     }
     setTimeout(function() { if (input) input.focus(); }, 360);
