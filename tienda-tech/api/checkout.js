@@ -27,8 +27,11 @@ module.exports = async (req, res) => {
     const { items, email, discountAmount, paymentMethod } = body;
 
     // Mapeo de métodos de pago al tipo de Stripe
-    // Bizum requiere activación en: Stripe Dashboard → Configuración → Métodos de pago
-    const stripeMethodTypes = paymentMethod === 'bizum' ? ['bizum'] : ['card'];
+    // Bizum y PayPal requieren activación en: Stripe Dashboard → Configuración → Métodos de pago
+    const stripeMethodTypes =
+      paymentMethod === 'bizum'  ? ['bizum']  :
+      paymentMethod === 'paypal' ? ['paypal'] :
+      ['card'];
 
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
