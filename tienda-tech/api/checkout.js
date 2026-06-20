@@ -24,7 +24,11 @@ module.exports = async (req, res) => {
     }
     if (!body || typeof body !== 'object') body = {};
 
-    const { items, email, discountAmount } = body;
+    const { items, email, discountAmount, paymentMethod } = body;
+
+    // Mapeo de métodos de pago al tipo de Stripe
+    // Bizum requiere activación en: Stripe Dashboard → Configuración → Métodos de pago
+    const stripeMethodTypes = paymentMethod === 'bizum' ? ['bizum'] : ['card'];
 
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
@@ -53,7 +57,7 @@ module.exports = async (req, res) => {
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
-      payment_method_types: ['card'],
+      payment_method_types: stripeMethodTypes,
       line_items: lineItems,
       mode: 'payment',
       locale: 'es',
