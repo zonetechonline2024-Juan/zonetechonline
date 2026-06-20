@@ -123,7 +123,7 @@
       <div class="step">
         <div class="step-icon">✅</div>
         <div class="step-title">Pago confirmado</div>
-        <div class="step-desc">Stripe ha procesado tu pago correctamente</div>
+        <div class="step-desc" id="payment-processor-desc">Pago procesado correctamente</div>
       </div>
       <div class="step">
         <div class="step-icon">📦</div>
@@ -197,6 +197,11 @@ localStorage.removeItem('zt_cart');
   localStorage.removeItem('zt_pending_order');
 
   function fmt(n) { return n.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' }); }
+
+  // Texto del procesador según método de pago
+  var processorLabels = { card:'Stripe ha procesado tu pago con tarjeta correctamente', bizum:'Bizum ha procesado tu pago al instante', paypal:'PayPal ha confirmado tu pago correctamente' };
+  var processorEl = document.getElementById('payment-processor-desc');
+  if (processorEl && order.paymentMethod) processorEl.textContent = processorLabels[order.paymentMethod] || 'Pago procesado correctamente';
 
   // Update subtitle with customer name
   if (order.customer && order.customer.name) {
