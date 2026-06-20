@@ -257,10 +257,12 @@ PRODUCTS.push(
     price: 399.00,
     oldPrice: 449.00,
     badge: 'OFERTA',
-    image: 'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
+    image: 'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
     images: [
-      'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
-      'img/productos/Apple-Watch-Series-10-aluminum-silver-240909_inline.jpg.large.jpg'
+      'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
+      'img/productos/art_apl-watch_meqw4qlbardera_1.jpg',
+      'img/productos/art_apl-watch_mep94qlbardera_1.jpg',
+      'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg'
     ],
     description: 'Apple Watch Series 11 de aluminio Gris Espacial, 42mm. Chip S11 SiP. Pantalla Always-On Retina OLED. ECG, SpO₂, temperatura cutánea, frecuencia cardíaca 24/7 y detector de choques. GPS dual frecuencia L1+L5. WatchOS 11. Resistente 50m.',
     specs: {
@@ -4812,60 +4814,74 @@ function renderCheapestShowcase() {
   grid.innerHTML = html;
 }
 
-// ─── SHOWCASE (1 producto estrella por categoría) ────────────────────────────
+// ─── SHOWCASE (5 estrellas por categoría + 3 opciones accesibles = grid 4×2) ──
 function renderShowcase() {
   var grid = document.getElementById('showcase-grid');
   if (!grid) return;
 
   var CATS = [
-    { key: 'relojes',     label: 'Relojes Inteligentes', bdg: 'sc-bdg-green'  },
-    { key: 'auriculares', label: 'Auriculares Premium',   bdg: 'sc-bdg-gold'   },
-    { key: 'altavoces',   label: 'Altavoces',             bdg: 'sc-bdg-accent' },
+    { key: 'relojes',         label: 'Relojes Inteligentes', bdg: 'sc-bdg-green'  },
+    { key: 'auriculares',     label: 'Auriculares Premium',   bdg: 'sc-bdg-gold'   },
+    { key: 'altavoces',       label: 'Altavoces',             bdg: 'sc-bdg-accent' },
     { key: 'teclados gaming', label: 'Periféricos Gaming',    bdg: 'sc-bdg-orange' },
-    { key: 'smartphones', label: 'Smartphones',           bdg: 'sc-bdg-red'    },
+    { key: 'smartphones',     label: 'Smartphones',           bdg: 'sc-bdg-red'    },
   ];
 
-  var html = '';
-  CATS.forEach(function(cat) {
-    // Producto más representativo: el de mayor precio dentro de la categoría
-    var p = PRODUCTS
-      .filter(function(x) { return x.category === cat.key && x.price; })
-      .sort(function(a, b) { return (b.price || 0) - (a.price || 0); })[0];
+  // 3 productos accesibles fijos para completar el grid 4×2
+  var EXTRA = [
+    { id: 1,   label: 'Reloj Inteligente', bdg: 'sc-bdg-green'  },
+    { id: 62,  label: 'Auriculares',        bdg: 'sc-bdg-gold'   },
+    { id: 127, label: 'Altavoz Portátil',   bdg: 'sc-bdg-accent' },
+  ];
 
-    if (!p) return;
-
+  function buildCard(p, catLabel, catBdg) {
     var desc = Array.isArray(p.description)
       ? p.description.slice(0, 2).join('. ')
       : (typeof p.description === 'string' ? p.description.slice(0, 110) : '');
 
     var badge = p.badge
-      || (Array.isArray(p.description) && p.description[0] ? p.description[0].slice(0, 40) : cat.label);
+      || (Array.isArray(p.description) && p.description[0] ? p.description[0].slice(0, 40) : catLabel);
 
     var name = p.name
-      .replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO)\s+/i, '')
+      .replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO|TECLADO)\s+/i, '')
       .trim();
 
     var priceStr = '€' + p.price.toFixed(2).replace('.', ',');
 
-    html +=
-      '<div class="sc-card">' +
-        '<div class="sc-img-wrap">' +
-          '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
-          '<span class="sc-bdg ' + cat.bdg + '">' + badge + '</span>' +
+    return '<div class="sc-card">' +
+      '<div class="sc-img-wrap">' +
+        '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+        '<span class="sc-bdg ' + catBdg + '">' + badge + '</span>' +
+      '</div>' +
+      '<div class="sc-body">' +
+        '<div class="sc-meta-row">' +
+          '<span class="sc-brand">' + (p.brand || '') + '</span>' +
+          '<span class="sc-cat">' + catLabel + '</span>' +
         '</div>' +
-        '<div class="sc-body">' +
-          '<div class="sc-meta-row">' +
-            '<span class="sc-brand">' + (p.brand || '') + '</span>' +
-            '<span class="sc-cat">' + cat.label + '</span>' +
-          '</div>' +
-          '<div class="sc-name">' + name + '</div>' +
-          '<div class="sc-desc">' + desc + '</div>' +
-          '<div class="sc-footer">' +
-            '<div class="sc-price">' + priceStr + '<small>IVA incluido</small></div>' +
-            '<button class="sc-btn-add" onclick="addToCart(' + p.id + ')">+ Carrito</button>' +
-          '</div>' +
+        '<div class="sc-name">' + name + '</div>' +
+        '<div class="sc-desc">' + desc + '</div>' +
+        '<div class="sc-footer">' +
+          '<div class="sc-price">' + priceStr + '<small>IVA incluido</small></div>' +
+          '<button class="sc-btn-add" onclick="addToCart(' + p.id + ')">+ Carrito</button>' +
         '</div>' +
-      '</div>';
+      '</div>' +
+    '</div>';
+  }
+
+  var html = '';
+
+  CATS.forEach(function(cat) {
+    var p = PRODUCTS
+      .filter(function(x) { return x.category === cat.key && x.price; })
+      .sort(function(a, b) { return (b.price || 0) - (a.price || 0); })[0];
+    if (!p) return;
+    html += buildCard(p, cat.label, cat.bdg);
+  });
+
+  EXTRA.forEach(function(acc) {
+    var p = PRODUCTS.filter(function(x) { return x.id === acc.id; })[0];
+    if (!p) return;
+    html += buildCard(p, acc.label, acc.bdg);
   });
 
   grid.innerHTML = html;
