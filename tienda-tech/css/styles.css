@@ -698,7 +698,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide-overlay-future{background:linear-gradient(120deg,rgba(0,8,20,.9) 0%,rgba(0,20,35,.65) 55%,rgba(0,0,0,.2) 100%);}
 .slide-overlay-blue{background:linear-gradient(120deg,rgba(3,15,48,.93) 0%,rgba(6,26,72,.68) 55%,rgba(0,5,22,.22) 100%);}
 /* slide-content: padding-left usa max() para que nunca solape con la flecha ← (52px+24px+14px=90px) */
-.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:108px 8% 76px max(8%,90px);max-width:760px;overflow:hidden;}
+.slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:108px 8% 76px max(8%,90px);max-width:760px;}
 .slide-body{display:flex;flex-direction:column;}
 .slide-footer{display:flex;flex-direction:column;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;}
@@ -839,9 +839,13 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 }
 @media(max-width:768px){
   .slider-arrow{display:none;}
+  .slide-content{padding:84px 5% 28px max(5%,70px);}
   .slide-title{font-size:2rem;}
+  .slide-desc{font-size:.95rem;line-height:1.55;margin-bottom:16px;}
+  .slide-badges{gap:7px;margin-bottom:12px;}
+  .slide-badge{font-size:11px;padding:5px 10px;}
   .search-overlay{padding-top:60px;}
-  .slide-ctas{flex-direction:column;}
+  .slide-ctas{flex-direction:column;gap:10px;}
   .btn-glass,.btn-primary.btn-lg{width:100%;justify-content:center;text-align:center;}
   .slider-scroll-hint{display:none;}
   .auth-modal{padding:28px 20px 24px;}
@@ -852,6 +856,14 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .btn-login span{display:none;}
   .btn-login{padding:8px 10px;}
   .hero-slider{height:100svh;}
+  .slide-content{padding:70px 16px 20px 16px;}
+  .slide-tag{font-size:11px;margin-bottom:8px;}
+  .slide-title{font-size:1.75rem;margin-bottom:10px;}
+  .slide-desc{font-size:.88rem;margin-bottom:12px;line-height:1.5;}
+  .slide-badges{gap:6px;margin-bottom:10px;}
+  .slide-badge{font-size:10.5px;padding:4px 9px;}
+  .slide-ctas{gap:8px;}
+  .btn-glass,.btn-primary.btn-lg{padding:13px 20px;font-size:14px;}
 }
 
 /* ─── MEGA-MENU ─────────────────────────────────────────────────── */
