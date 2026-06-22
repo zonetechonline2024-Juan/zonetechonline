@@ -699,8 +699,8 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide-overlay-blue{background:linear-gradient(120deg,rgba(3,15,48,.93) 0%,rgba(6,26,72,.68) 55%,rgba(0,5,22,.22) 100%);}
 /* slide-content: padding-left usa max() para que nunca solape con la flecha ← (52px+24px+14px=90px) */
 .slide-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:108px 8% 76px max(8%,90px);max-width:760px;}
-.slide-body{display:flex;flex-direction:column;}
-.slide-footer{display:flex;flex-direction:column;}
+.slide-body{display:flex;flex-direction:column;flex:1 1 0;min-height:0;overflow:hidden;}
+.slide-footer{display:flex;flex-direction:column;flex-shrink:0;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;}
 .tag-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2s infinite;}
 .tag-dot-gold{background:var(--gold);box-shadow:0 0 10px var(--gold);}
@@ -712,7 +712,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .em-gold{background:linear-gradient(135deg,#fbbf24,#f97316) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .em-teal{background:linear-gradient(135deg,#2dd4bf,#06b6d4) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .em-blue{background:linear-gradient(135deg,#60a5fa,#818cf8) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
-.slide-desc{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:28px;max-width:520px;}
+.slide-desc{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:28px;max-width:520px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;}
 .slide-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
 .slide-badge{padding:7px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50px;font-size:12px;font-weight:500;color:rgba(255,255,255,.85);backdrop-filter:blur(8px);}
 .slide-ctas{display:flex;gap:14px;flex-wrap:wrap;}
@@ -842,6 +842,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .slide-content{padding:84px 5% 28px max(5%,70px);}
   .slide-title{font-size:2rem;}
   .slide-desc{font-size:.95rem;line-height:1.55;margin-bottom:16px;}
+  .slide-desc{-webkit-line-clamp:3;}
   .slide-badges{gap:7px;margin-bottom:12px;}
   .slide-badge{font-size:11px;padding:5px 10px;}
   .search-overlay{padding-top:60px;}
@@ -860,6 +861,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .slide-tag{font-size:11px;margin-bottom:8px;}
   .slide-title{font-size:1.75rem;margin-bottom:10px;}
   .slide-desc{font-size:.88rem;margin-bottom:12px;line-height:1.5;}
+  .slide-desc{-webkit-line-clamp:2;}
   .slide-badges{gap:6px;margin-bottom:10px;}
   .slide-badge{font-size:10.5px;padding:4px 9px;}
   .slide-ctas{gap:8px;}
