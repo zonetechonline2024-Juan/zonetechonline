@@ -3158,6 +3158,32 @@ var BRAND_GROUPS = {
   'sonos-marshall':   ['Sonos', 'Marshall']
 };
 
+// ─── WISHLIST ─────────────────────────────────────────────────────────────────
+function getWishlist() {
+  try { return JSON.parse(localStorage.getItem('zt_wishlist') || '[]'); } catch(e) { return []; }
+}
+function isInWishlist(id) {
+  return getWishlist().some(function(item) { return item.id === id; });
+}
+function toggleWishlist(id, btn) {
+  var list = getWishlist();
+  var idx = -1;
+  list.forEach(function(item, i) { if (item.id === id) idx = i; });
+  var product = null;
+  PRODUCTS.forEach(function(p) { if (p.id === id) product = p; });
+  if (!product) return;
+  if (idx >= 0) {
+    list.splice(idx, 1);
+    showToast('Eliminado de tu lista de deseos');
+    if (btn) { btn.classList.remove('active'); btn.title = 'Añadir a favoritos'; var path = btn.querySelector('path'); if (path) path.setAttribute('fill','none'); }
+  } else {
+    list.push({ id: product.id, name: product.name, brand: product.brand || '', price: product.price, image: product.image || '', category: product.category || '' });
+    showToast('❤️ Añadido a tu lista de deseos');
+    if (btn) { btn.classList.add('active'); btn.title = 'Quitar de favoritos'; var path = btn.querySelector('path'); if (path) path.setAttribute('fill','#f87171'); }
+  }
+  localStorage.setItem('zt_wishlist', JSON.stringify(list));
+}
+
 function renderProducts(filterKey, customFilter) {
   filterKey = filterKey || 'all';
   var category = FILTER_MAP[filterKey] || 'todos';
@@ -3190,7 +3216,10 @@ function renderProducts(filterKey, customFilter) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-
+    var inWl = isInWishlist(product.id);
+    var wlFill = inWl ? '#f87171' : 'none';
+    var wlClass = inWl ? ' active' : '';
+    var wlTitle = inWl ? 'Quitar de favoritos' : 'Añadir a favoritos';
 
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
@@ -3209,6 +3238,9 @@ function renderProducts(filterKey, customFilter) {
         '</div>' +
         '<div class="product-actions">' +
           '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          '<button class="btn-wishlist' + wlClass + '" onclick="toggleWishlist(' + product.id + ', this)" title="' + wlTitle + '">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + wlFill + '" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
+          '</button>' +
           '<button class="btn-compare" onclick="addToComparator(' + product.id + ')" title="Comparar">⇄</button>' +
           '<button class="btn-qv" onclick="openQuickView(' + product.id + ')" title="Vista rápida">⊙</button>' +
         '</div>' +
@@ -3261,6 +3293,10 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 88 ? product.description.substring(0, 88) + '...' : product.description;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
+    var inWl2 = isInWishlist(product.id);
+    var wlFill2 = inWl2 ? '#f87171' : 'none';
+    var wlClass2 = inWl2 ? ' active' : '';
+    var wlTitle2 = inWl2 ? 'Quitar de favoritos' : 'Añadir a favoritos';
 
     return '<article class="product-card" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
@@ -3276,6 +3312,9 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
         '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
         '<div class="product-actions">' +
           '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          '<button class="btn-wishlist' + wlClass2 + '" onclick="toggleWishlist(' + product.id + ', this)" title="' + wlTitle2 + '">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + wlFill2 + '" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
+          '</button>' +
           '<button class="btn-compare" onclick="addToComparator(' + product.id + ')" title="Comparar">⇄</button>' +
           '<button class="btn-qv" onclick="openQuickView(' + product.id + ')" title="Vista rápida">⊙</button>' +
         '</div>' +
@@ -4080,12 +4119,12 @@ function initUserSession() {
       // ── Menu actions ─────────────────────────────────────────────
       dropdown.querySelector('#ud-pedidos').addEventListener('click', function() {
         closeDropdown();
-        showToast('📦 Área de pedidos próximamente — te avisaremos cuando esté lista.');
+        window.location.href = 'mis-pedidos.html';
       });
 
       dropdown.querySelector('#ud-wishlist').addEventListener('click', function() {
         closeDropdown();
-        showToast('❤️ Lista de deseos próximamente — ¡guardamos tus favoritos pronto!');
+        window.location.href = 'lista-deseos.html';
       });
 
       if (couponRow) {
@@ -4105,7 +4144,7 @@ function initUserSession() {
 
       dropdown.querySelector('#ud-cuenta').addEventListener('click', function() {
         closeDropdown();
-        window.location.href = 'register.html';
+        window.location.href = 'mi-cuenta.html';
       });
 
       dropdown.querySelector('#ud-logout').addEventListener('click', function() {
