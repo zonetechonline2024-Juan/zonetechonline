@@ -240,6 +240,14 @@ localStorage.removeItem('zt_cart');
   document.getElementById('d-shipping').textContent = order.shippingMethod === 'express' ? 'Exprés · 5-8 días hábiles · DHL' : 'Estándar · 5-8 días hábiles · MRW/SEUR';
   document.getElementById('d-total').textContent    = fmt(order.total || 0);
   document.getElementById('order-detail').style.display = 'block';
+
+  // Guardar en historial de pedidos
+  try {
+    var orders = JSON.parse(localStorage.getItem('zt_orders') || '[]');
+    orders.unshift({ orderNo: orderNo, date: now.toISOString(), items: order.items || [], total: order.total || 0, paymentMethod: order.paymentMethod || 'card', customer: order.customer || {}, shippingMethod: order.shippingMethod || 'standard' });
+    if (orders.length > 20) orders = orders.slice(0, 20);
+    localStorage.setItem('zt_orders', JSON.stringify(orders));
+  } catch(e) {}
 })();
 
 // Minimal particle effect
