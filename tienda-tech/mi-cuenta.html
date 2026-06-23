@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mi Cuenta — ZoneTechOnline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg:#08080f;--bg-card:#0e0e1a;--bg-card2:#12122a;--border:rgba(255,255,255,.08);--border-h:rgba(255,255,255,.14);--text:#f0f0fa;--text-2:#a0a0c0;--text-3:#606080;--accent:#6366f1;--accent-2:#a855f7;--red:#f87171;--green:#34d399;}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;padding:0;}
+
+    /* Nav */
+    .top-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--border);background:rgba(8,8,15,.95);backdrop-filter:blur(16px);position:sticky;top:0;z-index:100;}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;text-decoration:none;color:var(--text);letter-spacing:.05em;}
+    .logo span{color:var(--accent);}
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-3);text-decoration:none;transition:color .2s;}
+    .back-link:hover{color:var(--text);}
+
+    .page{max-width:680px;margin:0 auto;padding:40px 20px 80px;}
+
+    /* Header */
+    .page-header{margin-bottom:32px;}
+    .page-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,4vw,30px);font-weight:700;letter-spacing:-.02em;margin-bottom:6px;}
+    .page-sub{font-size:14px;color:var(--text-3);}
+
+    /* Profile card */
+    .profile-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;display:flex;align-items:center;gap:20px;margin-bottom:20px;}
+    .avatar-wrap{position:relative;flex-shrink:0;}
+    .avatar{width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:#fff;}
+    .provider-dot{position:absolute;bottom:2px;right:2px;width:22px;height:22px;border-radius:50%;background:var(--bg-card);border:2px solid var(--bg-card);display:flex;align-items:center;justify-content:center;}
+    .profile-info{flex:1;min-width:0;}
+    .profile-name{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .profile-email{font-size:13px;color:var(--text-3);margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .provider-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--text-3);background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:3px 10px;}
+    .member-since{font-size:11px;color:var(--text-3);margin-top:6px;}
+
+    /* Edit form */
+    .section{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px;}
+    .section-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--text-2);letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px;}
+    .form-group{margin-bottom:14px;}
+    .form-group label{display:block;font-size:12px;font-weight:500;color:var(--text-3);letter-spacing:.05em;text-transform:uppercase;margin-bottom:7px;}
+    .form-group input{width:100%;background:var(--bg-card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;}
+    .form-group input:focus{border-color:var(--accent);}
+    .form-group input:disabled{opacity:.5;cursor:not-allowed;}
+    .form-hint{font-size:11px;color:var(--text-3);margin-top:5px;}
+    .btn-save{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none;border-radius:10px;padding:11px 22px;font-size:14px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:opacity .2s;}
+    .btn-save:hover{opacity:.88;}
+    .save-ok{display:none;font-size:13px;color:var(--green);margin-top:10px;}
+
+    /* Quick links */
+    .quick-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+    .ql-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px;text-decoration:none;color:var(--text);transition:border-color .2s,background .2s;display:flex;align-items:center;gap:12px;}
+    .ql-item:hover{border-color:var(--border-h);background:var(--bg-card2);}
+    .ql-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .ql-icon-orders{background:rgba(99,102,241,.12);}
+    .ql-icon-wl{background:rgba(248,113,113,.1);}
+    .ql-label{font-size:14px;font-weight:600;}
+    .ql-sub{font-size:11px;color:var(--text-3);margin-top:2px;}
+
+    /* Danger zone */
+    .danger-zone{background:rgba(248,113,113,.04);border:1px solid rgba(248,113,113,.14);border-radius:16px;padding:20px;}
+    .danger-title{font-size:13px;font-weight:600;color:var(--red);margin-bottom:12px;}
+    .btn-logout{display:inline-flex;align-items:center;gap:8px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.25);color:var(--red);border-radius:10px;padding:10px 20px;font-size:14px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .2s;}
+    .btn-logout:hover{background:rgba(248,113,113,.18);}
+
+    @media(max-width:480px){
+      .quick-links{grid-template-columns:1fr;}
+      .profile-card{flex-direction:column;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a class="logo" href="index.html">ZONE<span>TECH</span>ONLINE</a>
+  <a class="back-link" href="index.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12H4M4 12l6-6M4 12l6 6"/></svg>
+    Volver a la tienda
+  </a>
+</nav>
+
+<div class="page">
+  <div class="page-header">
+    <h1 class="page-title">Mi cuenta</h1>
+    <p class="page-sub">Gestiona tu perfil y preferencias</p>
+  </div>
+
+  <!-- Profile -->
+  <div class="profile-card">
+    <div class="avatar-wrap">
+      <div class="avatar" id="user-avatar">?</div>
+      <div class="provider-dot" id="provider-dot"></div>
+    </div>
+    <div class="profile-info">
+      <div class="profile-name" id="user-name">Cargando...</div>
+      <div class="profile-email" id="user-email"></div>
+      <div class="provider-badge" id="provider-badge"></div>
+      <div class="member-since" id="member-since"></div>
+    </div>
+  </div>
+
+  <!-- Edit name -->
+  <div class="section">
+    <div class="section-title">Editar perfil</div>
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" id="inp-name" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="inp-email" disabled>
+      <div class="form-hint">El email se gestiona desde tu proveedor de inicio de sesión.</div>
+    </div>
+    <button class="btn-save" id="btn-save" onclick="saveProfile()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Guardar cambios
+    </button>
+    <div class="save-ok" id="save-ok">✓ Cambios guardados correctamente</div>
+  </div>
+
+  <!-- Quick links -->
+  <div class="quick-links">
+    <a class="ql-item" href="mis-pedidos.html">
+      <div class="ql-icon ql-icon-orders">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div>
+        <div class="ql-label">Mis pedidos</div>
+        <div class="ql-sub">Historial de compras</div>
+      </div>
+    </a>
+    <a class="ql-item" href="lista-deseos.html">
+      <div class="ql-icon ql-icon-wl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div>
+        <div class="ql-label">Lista de deseos</div>
+        <div class="ql-sub" id="wl-count">Cargando...</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Danger zone -->
+  <div class="danger-zone">
+    <div class="danger-title">Sesión</div>
+    <button class="btn-logout" onclick="logout()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Cerrar sesión
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var user = null;
+  try { user = JSON.parse(localStorage.getItem('zt_user') || 'null'); } catch(e) {}
+  if (!user) { window.location.href = 'login.html'; return; }
+
+  var initial = (user.name || user.email || 'U').charAt(0).toUpperCase();
+  document.getElementById('user-avatar').textContent = initial;
+  document.getElementById('user-name').textContent = user.name || 'Usuario';
+  document.getElementById('user-email').textContent = user.email || '';
+  document.getElementById('inp-name').value = user.name || '';
+  document.getElementById('inp-email').value = user.email || '';
+
+  var prov = user.provider || 'Email';
+  var provIconHtml = prov === 'Google'
+    ? '<svg width="11" height="11" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> Google'
+    : '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email';
+  document.getElementById('provider-badge').innerHTML = provIconHtml;
+
+  if (user.joined) {
+    document.getElementById('member-since').textContent = 'Miembro desde ' + new Date(user.joined).toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
+  }
+
+  // Dot color
+  var dot = document.getElementById('provider-dot');
+  dot.innerHTML = prov === 'Google'
+    ? '<svg width="13" height="13" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>'
+    : '';
+
+  // Wishlist count
+  var wl = [];
+  try { wl = JSON.parse(localStorage.getItem('zt_wishlist') || '[]'); } catch(e) {}
+  document.getElementById('wl-count').textContent = wl.length + (wl.length === 1 ? ' producto guardado' : ' productos guardados');
+
+  window.saveProfile = function() {
+    var name = document.getElementById('inp-name').value.trim();
+    if (!name) return;
+    user.name = name;
+    localStorage.setItem('zt_user', JSON.stringify(user));
+    document.getElementById('user-name').textContent = name;
+    document.getElementById('user-avatar').textContent = name.charAt(0).toUpperCase();
+    var ok = document.getElementById('save-ok');
+    ok.style.display = 'block';
+    setTimeout(function() { ok.style.display = 'none'; }, 3000);
+  };
+
+  window.logout = function() {
+    localStorage.removeItem('zt_user');
+    window.location.href = 'index.html';
+  };
+})();
+</script>
+</body>
+</html>
