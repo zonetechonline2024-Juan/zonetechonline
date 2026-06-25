@@ -693,24 +693,26 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide.active{opacity:1;pointer-events:all;z-index:2;}
 .slide-video-wrap{position:absolute;inset:0;overflow:hidden;}
 .slide-video{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;}
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(4,4,20,.93) 0%,rgba(6,6,22,.76) 46%,rgba(0,0,8,.52) 70%,rgba(0,0,8,.64) 100%);}
-.slide-overlay-audio{background:linear-gradient(115deg,rgba(10,5,2,.94) 0%,rgba(22,10,3,.78) 46%,rgba(8,4,0,.54) 70%,rgba(6,3,0,.66) 100%);}
-.slide-overlay-future{background:linear-gradient(115deg,rgba(0,8,20,.94) 0%,rgba(0,16,30,.78) 46%,rgba(0,8,16,.54) 70%,rgba(0,6,14,.66) 100%);}
-.slide-overlay-blue{background:linear-gradient(115deg,rgba(3,12,40,.96) 0%,rgba(5,18,56,.80) 46%,rgba(2,8,22,.56) 70%,rgba(2,6,18,.68) 100%);}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(2,8,2,.94) 0%,rgba(4,12,4,.78) 46%,rgba(0,6,0,.52) 70%,rgba(0,4,0,.64) 100%);}
+.slide-overlay-violet{background:linear-gradient(115deg,rgba(4,2,14,.94) 0%,rgba(8,4,20,.78) 46%,rgba(2,0,10,.52) 70%,rgba(2,0,8,.64) 100%);}
+.slide-overlay-red{background:linear-gradient(115deg,rgba(14,2,2,.94) 0%,rgba(22,3,3,.78) 46%,rgba(10,0,0,.52) 70%,rgba(8,0,0,.64) 100%);}
+.slide-overlay-navy{background:linear-gradient(115deg,rgba(1,4,14,.96) 0%,rgba(2,8,24,.80) 46%,rgba(1,3,10,.56) 70%,rgba(1,2,8,.68) 100%);}
 /* slide-content: ocupa la mitad izquierda; padding-left usa max() para no solapar flecha ← */
 .slide-content{position:absolute;top:0;left:0;bottom:0;width:54%;max-width:680px;display:flex;flex-direction:column;justify-content:space-between;padding:108px 40px 76px max(8%,90px);overflow:hidden;}
 .slide-body{display:flex;flex-direction:column;flex:1 1 0;min-height:0;overflow:hidden;}
 .slide-footer{display:flex;flex-direction:column;flex-shrink:0;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;}
 .tag-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2s infinite;}
-.tag-dot-gold{background:var(--gold);box-shadow:0 0 10px var(--gold);}
-.tag-dot-teal{background:#2dd4bf;box-shadow:0 0 10px #2dd4bf;}
+.tag-dot-green{background:#22c55e;box-shadow:0 0 10px #22c55e;}
+.tag-dot-violet{background:#a855f7;box-shadow:0 0 10px #a855f7;}
+.tag-dot-red{background:#ef4444;box-shadow:0 0 10px #ef4444;}
 .tag-dot-blue{background:#60a5fa;box-shadow:0 0 10px #60a5fa;}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.6;transform:scale(1.4);}}
 .slide-title{font-family:var(--font-head);font-size:clamp(2.4rem,5vw,4.6rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:14px;}
 .slide-title em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.em-gold{background:linear-gradient(135deg,#fbbf24,#f97316) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
-.em-teal{background:linear-gradient(135deg,#2dd4bf,#06b6d4) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
+.em-green{background:linear-gradient(135deg,#22c55e,#86efac) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
+.em-violet{background:linear-gradient(135deg,#a855f7,#c084fc) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
+.em-red{background:linear-gradient(135deg,#ef4444,#f87171) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .em-blue{background:linear-gradient(135deg,#60a5fa,#818cf8) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important;background-clip:text !important;}
 .slide-desc{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:28px;max-width:520px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;}
 .slide-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
@@ -724,27 +726,37 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .btn-teal:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,212,191,.35) !important;}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#6366f1) !important;border:none !important;color:#fff !important;}
 .btn-blue:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.40) !important;}
-/* ── Fondos cinematográficos CSS de los 4 banners (sin vídeo) ─────────── */
+.btn-green{background:linear-gradient(135deg,#22c55e,#16a34a) !important;border:none !important;color:#001a08 !important;}
+.btn-green:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(34,197,94,.38) !important;}
+.btn-violet{background:linear-gradient(135deg,#8b5cf6,#a855f7) !important;border:none !important;color:#fff !important;}
+.btn-violet:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(139,92,246,.38) !important;}
+.btn-red{background:linear-gradient(135deg,#ef4444,#dc2626) !important;border:none !important;color:#fff !important;}
+.btn-red:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(239,68,68,.38) !important;}
+/* ── Fondos cinematográficos CSS de los 4 banners — alineados por color de producto ─ */
+/* Slide 1: Verde militar — Samsung Galaxy Watch 7 (cuerpo oliva, pantalla lima) */
 .slide-1{background:
-  radial-gradient(ellipse 95% 80% at 80% 45%,rgba(99,102,241,.38) 0%,transparent 58%),
-  radial-gradient(ellipse 60% 55% at 16% 72%,rgba(139,92,246,.24) 0%,transparent 54%),
-  radial-gradient(ellipse 45% 35% at 55% 18%,rgba(79,70,229,.18) 0%,transparent 48%),
-  linear-gradient(145deg,#040414 0%,#070822 40%,#0c0a2e 68%,#060418 100%);}
+  radial-gradient(ellipse 95% 80% at 80% 45%,rgba(34,197,94,.34) 0%,transparent 58%),
+  radial-gradient(ellipse 65% 60% at 16% 74%,rgba(21,128,61,.24) 0%,transparent 54%),
+  radial-gradient(ellipse 45% 35% at 58% 16%,rgba(163,230,53,.16) 0%,transparent 48%),
+  linear-gradient(145deg,#050d05 0%,#081408 40%,#0d1c0b 68%,#060f06 100%);}
+/* Slide 2: Violeta profundo — Sony ULT Wear (logo iridiscente azul-violeta) */
 .slide-2{background:
-  radial-gradient(ellipse 95% 80% at 78% 48%,rgba(251,191,36,.32) 0%,transparent 56%),
-  radial-gradient(ellipse 60% 55% at 14% 72%,rgba(249,115,22,.22) 0%,transparent 52%),
-  radial-gradient(ellipse 45% 35% at 52% 22%,rgba(245,158,11,.16) 0%,transparent 48%),
-  linear-gradient(145deg,#080502 0%,#150a02 40%,#1e0e03 68%,#0c0703 100%);}
+  radial-gradient(ellipse 95% 80% at 78% 48%,rgba(139,92,246,.32) 0%,transparent 58%),
+  radial-gradient(ellipse 65% 60% at 14% 70%,rgba(168,85,247,.20) 0%,transparent 54%),
+  radial-gradient(ellipse 45% 35% at 52% 20%,rgba(99,102,241,.16) 0%,transparent 48%),
+  linear-gradient(145deg,#060412 0%,#09061c 40%,#0e0b24 68%,#06041a 100%);}
+/* Slide 3: Crimson ROG — ASUS ROG Strix Scope II (RGB arcoíris + brand color rojo ROG) */
 .slide-3{background:
-  radial-gradient(ellipse 95% 80% at 80% 46%,rgba(45,212,191,.30) 0%,transparent 56%),
-  radial-gradient(ellipse 60% 55% at 14% 72%,rgba(6,182,212,.22) 0%,transparent 52%),
-  radial-gradient(ellipse 45% 35% at 55% 18%,rgba(20,184,166,.16) 0%,transparent 48%),
-  linear-gradient(145deg,#020a0e 0%,#031318 40%,#041a22 68%,#030d15 100%);}
+  radial-gradient(ellipse 95% 80% at 80% 46%,rgba(239,68,68,.30) 0%,transparent 58%),
+  radial-gradient(ellipse 65% 60% at 16% 72%,rgba(220,38,38,.20) 0%,transparent 54%),
+  radial-gradient(ellipse 45% 35% at 55% 18%,rgba(251,113,133,.14) 0%,transparent 48%),
+  linear-gradient(145deg,#120204 0%,#1c0305 40%,#220508 68%,#140304 100%);}
+/* Slide 4: Navy oscuro — Samsung Galaxy A37 5G (cuerpo azul marino / teal oscuro) */
 .slide-4{background:
-  radial-gradient(ellipse 95% 80% at 80% 44%,rgba(59,130,246,.34) 0%,transparent 56%),
-  radial-gradient(ellipse 60% 55% at 16% 70%,rgba(99,102,241,.22) 0%,transparent 52%),
-  radial-gradient(ellipse 45% 35% at 52% 18%,rgba(96,165,250,.16) 0%,transparent 48%),
-  linear-gradient(145deg,#030c22 0%,#06102e 40%,#0a1432 68%,#040c22 100%);}
+  radial-gradient(ellipse 95% 80% at 80% 44%,rgba(6,182,212,.30) 0%,transparent 58%),
+  radial-gradient(ellipse 65% 60% at 16% 72%,rgba(14,165,233,.20) 0%,transparent 54%),
+  radial-gradient(ellipse 45% 35% at 52% 18%,rgba(8,145,178,.14) 0%,transparent 48%),
+  linear-gradient(145deg,#010a12 0%,#010f1e 40%,#031a2c 68%,#010c18 100%);}
 /* Fallback genérico: oculta video-wrap si el iframe falla (añadido por JS) */
 .slide-video-wrap.video-unavailable{opacity:0;pointer-events:none;transition:opacity .4s ease;}
 /* Slider navigation */
@@ -829,10 +841,10 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 @keyframes slide-up-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes product-enter{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(0)}}
 @keyframes product-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes glow-p-indigo{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(99,102,241,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(99,102,241,.42)}}
-@keyframes glow-p-gold{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(251,191,36,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(251,191,36,.42)}}
-@keyframes glow-p-teal{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(45,212,191,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(45,212,191,.42)}}
-@keyframes glow-p-blue{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(96,165,250,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(96,165,250,.42)}}
+@keyframes glow-p-green{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(34,197,94,.22)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 160px rgba(34,197,94,.46)}}
+@keyframes glow-p-violet{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(139,92,246,.22)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 160px rgba(139,92,246,.46)}}
+@keyframes glow-p-red{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(239,68,68,.22)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 160px rgba(239,68,68,.46)}}
+@keyframes glow-p-navy{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(6,182,212,.22)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 160px rgba(6,182,212,.46)}}
 /* Texto: animación escalonada al activarse el slide */
 .slide.active .slide-tag{animation:slide-up-in .45s ease .08s both}
 .slide.active .slide-title{animation:slide-up-in .52s cubic-bezier(.25,.46,.45,.94) .2s both}
@@ -843,10 +855,10 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide-product{position:absolute;top:0;right:0;bottom:0;width:46%;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;z-index:3;padding:0 4% 64px 0}
 .slide-product-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:85%;max-width:380px;border-radius:28px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.96);padding:20px 16px;opacity:0;box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.15)}
 /* Entrada + glow pulsante por slide */
-.slide-1.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-indigo 4s ease-in-out 1.2s infinite}
-.slide-2.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-gold 4s ease-in-out 1.2s infinite}
-.slide-3.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-teal 4s ease-in-out 1.2s infinite}
-.slide-4.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-blue 4s ease-in-out 1.2s infinite}
+.slide-1.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-green 4s ease-in-out 1.2s infinite}
+.slide-2.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-violet 4s ease-in-out 1.2s infinite}
+.slide-3.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-red 4s ease-in-out 1.2s infinite}
+.slide-4.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-navy 4s ease-in-out 1.2s infinite}
 .slide.active .slide-product-img{animation:product-float 5s ease-in-out 1.1s infinite}
 .slide-product-img{width:100%;max-height:52vh;object-fit:contain;filter:drop-shadow(0 6px 20px rgba(0,0,0,.25))}
 /* CTAs hero mejorados */
