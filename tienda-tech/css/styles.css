@@ -699,7 +699,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide-overlay-red{position:absolute;inset:0;background:linear-gradient(105deg,rgba(22,3,3,.96) 0%,rgba(16,2,2,.80) 32%,rgba(8,1,1,.38) 60%,rgba(0,0,0,.05) 100%);}
 .slide-overlay-navy{position:absolute;inset:0;background:linear-gradient(105deg,rgba(2,6,22,.96) 0%,rgba(1,4,16,.80) 32%,rgba(1,2,8,.38) 60%,rgba(0,0,0,.05) 100%);}
 /* slide-content: ocupa la mitad izquierda; padding-left usa max() para no solapar flecha ← */
-.slide-content{position:absolute;top:0;left:0;bottom:0;width:54%;max-width:680px;display:flex;flex-direction:column;justify-content:space-between;padding:108px 40px 76px max(8%,90px);overflow:hidden;}
+.slide-content{position:absolute;top:0;left:0;bottom:0;width:54%;max-width:680px;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:80px 40px 72px max(8%,90px);overflow:hidden;}
 .slide-body{display:flex;flex-direction:column;flex:1 1 0;min-height:0;overflow:hidden;}
 .slide-footer{display:flex;flex-direction:column;flex-shrink:0;}
 .slide-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px;}
