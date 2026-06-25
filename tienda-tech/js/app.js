@@ -4187,10 +4187,10 @@ function initSlider() {
   var isAnimating = false;
 
   var navTints = [
-    { bg:'rgba(50,25,110,.58)',  border:'rgba(99,102,241,.25)' },
-    { bg:'rgba(80,42,4,.60)',    border:'rgba(251,191,36,.22)' },
-    { bg:'rgba(4,56,66,.60)',    border:'rgba(45,212,191,.22)' },
-    { bg:'rgba(3,20,55,.60)',    border:'rgba(59,130,246,.22)' }
+    { bg:'rgba(3,10,3,.88)',    border:'rgba(34,197,94,.28)'  },  // slide-1: verde oscuro (fitness watch)
+    { bg:'rgba(8,3,22,.88)',    border:'rgba(168,85,247,.28)' },  // slide-2: violeta oscuro (auriculares)
+    { bg:'rgba(18,3,3,.88)',    border:'rgba(239,68,68,.28)'  },  // slide-3: rojo oscuro (gaming RGB)
+    { bg:'rgba(2,6,22,.88)',    border:'rgba(59,130,246,.28)' }   // slide-4: azul marino (smartphone)
   ];
 
   function updateNavTint(idx) {
