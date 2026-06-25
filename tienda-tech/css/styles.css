@@ -693,11 +693,11 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide.active{opacity:1;pointer-events:all;z-index:2;}
 .slide-video-wrap{position:absolute;inset:0;overflow:hidden;}
 .slide-video{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;}
-/* Overlays para foto real: oscuro a la izquierda (texto), foto visible a la derecha */
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(3,10,3,.96) 0%,rgba(2,8,2,.80) 32%,rgba(0,0,0,.38) 60%,rgba(0,0,0,.06) 100%);}
-.slide-overlay-violet{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,3,22,.96) 0%,rgba(6,2,16,.80) 32%,rgba(3,1,10,.38) 60%,rgba(0,0,0,.05) 100%);}
-.slide-overlay-red{position:absolute;inset:0;background:linear-gradient(105deg,rgba(22,3,3,.96) 0%,rgba(16,2,2,.80) 32%,rgba(8,1,1,.38) 60%,rgba(0,0,0,.05) 100%);}
-.slide-overlay-navy{position:absolute;inset:0;background:linear-gradient(105deg,rgba(2,6,22,.96) 0%,rgba(1,4,16,.80) 32%,rgba(1,2,8,.38) 60%,rgba(0,0,0,.05) 100%);}
+/* Overlays — izquierda oscura (texto), derecha abierta (foto) */
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(3,10,3,.86) 0%,rgba(2,8,2,.66) 32%,rgba(0,0,0,.28) 60%,rgba(0,0,0,.04) 100%);}
+.slide-overlay-violet{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,3,22,.86) 0%,rgba(6,2,16,.66) 32%,rgba(3,1,10,.28) 60%,rgba(0,0,0,.04) 100%);}
+.slide-overlay-red{position:absolute;inset:0;background:linear-gradient(105deg,rgba(22,3,3,.86) 0%,rgba(16,2,2,.66) 32%,rgba(8,1,1,.28) 60%,rgba(0,0,0,.04) 100%);}
+.slide-overlay-navy{position:absolute;inset:0;background:linear-gradient(105deg,rgba(2,6,22,.86) 0%,rgba(1,4,16,.66) 32%,rgba(1,2,8,.28) 60%,rgba(0,0,0,.04) 100%);}
 /* slide-content: ocupa la mitad izquierda; padding-left usa max() para no solapar flecha ← */
 .slide-content{position:absolute;top:0;left:0;bottom:0;width:54%;max-width:680px;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding:80px 40px 72px max(8%,90px);overflow:hidden;}
 .slide-body{display:flex;flex-direction:column;flex:0 0 auto;}
@@ -757,9 +757,8 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slider-arrow:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4);transform:translateY(-50%) scale(1.05);}
 .slider-prev{left:24px;}
 .slider-next{right:24px;}
-.slider-dots{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:30;}
-.slider-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);border:none;transition:var(--transition);}
-.slider-dot.active{width:28px;border-radius:4px;background:#fff;}
+.slider-dots{display:none;}
+.slider-dot{display:none;}
 .slider-progress-bar{position:absolute;bottom:0;left:0;width:100%;height:3px;background:rgba(255,255,255,.1);z-index:30;}
 .slider-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0%;transition:width linear;}
 .slider-scroll-hint{position:absolute;bottom:44px;right:36px;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:30;}
@@ -995,6 +994,11 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
   .features-container{flex-direction:column;align-items:center;}
 }
 @media(max-width:768px){
+  /* En móvil: gradiente vertical — foto visible en la parte superior, texto legible abajo */
+  .slide-overlay{background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.22) 40%,rgba(0,0,0,.70) 70%,rgba(0,0,0,.88) 100%) !important;}
+  .slide-overlay-violet{background:linear-gradient(180deg,rgba(8,3,22,.08) 0%,rgba(8,3,22,.22) 40%,rgba(8,3,22,.70) 70%,rgba(8,3,22,.88) 100%) !important;}
+  .slide-overlay-red{background:linear-gradient(180deg,rgba(22,3,3,.08) 0%,rgba(22,3,3,.22) 40%,rgba(22,3,3,.70) 70%,rgba(22,3,3,.88) 100%) !important;}
+  .slide-overlay-navy{background:linear-gradient(180deg,rgba(2,6,22,.08) 0%,rgba(2,6,22,.22) 40%,rgba(2,6,22,.70) 70%,rgba(2,6,22,.88) 100%) !important;}
   .slider-arrow{display:none;}
   .slide-product{display:none;}
   .slide-content{width:100%;max-width:none;padding:84px 5% 28px max(5%,70px);}
