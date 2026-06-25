@@ -375,9 +375,10 @@
 (function() {
 
   // ── URL params ──
-  var params  = new URLSearchParams(window.location.search);
-  var filterK = params.get('filter') || 'all';
-  var brandK  = params.get('brand')  || '';
+  var params    = new URLSearchParams(window.location.search);
+  var filterK   = params.get('filter')  || 'all';
+  var brandK    = params.get('brand')   || '';
+  var productId = params.get('product') || '';
 
   var CAT_LABELS = {
     all:         'Catálogo Completo',
@@ -432,6 +433,18 @@
   document.addEventListener('DOMContentLoaded', function() {
     var count = renderCatalogGrid('catalog-grid', filterK, brandK);
     document.getElementById('result-count').textContent = count;
+
+    // Si viene ?product=ID desde el buscador, desplazar y resaltar ese producto
+    if (productId) {
+      setTimeout(function() {
+        var el = document.querySelector('[data-product-id="' + productId + '"]');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('highlight-pulse');
+          setTimeout(function() { el.classList.remove('highlight-pulse'); }, 2000);
+        }
+      }, 500);
+    }
 
     // ── Marcas: extracción dinámica de PRODUCTS (sin hardcodear) ────────────
     if (filterK !== 'all' && typeof PRODUCTS !== 'undefined' && typeof FILTER_MAP !== 'undefined') {
