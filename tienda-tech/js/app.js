@@ -3911,16 +3911,85 @@ function initClearComparator() {
 var CATEGORY_LABELS = { relojes:'Relojes', auriculares:'Auriculares', altavoces:'Altavoces', 'teclados gaming':'Teclados Gaming', smartphones:'Smartphones' };
 
 function initSearch() {
-  var overlay  = document.getElementById('search-overlay');
+  var overlay   = document.getElementById('search-overlay');
   var searchBtn = document.getElementById('search-btn');
-  var closeBtn = document.getElementById('search-close');
-  var input    = document.getElementById('search-input');
-  var results  = document.getElementById('search-results');
+  var closeBtn  = document.getElementById('search-close');
+  var input     = document.getElementById('search-input');
+  var results   = document.getElementById('search-results');
   if (!overlay || !input) return;
+
+  var focusedIdx    = -1;
+  var debounceTimer = null;
+
+  // Grupos de sinónimos — se expande la consulta con todos los términos del grupo
+  var SYNONYMS = [
+    ['reloj', 'relojes', 'watch', 'watches', 'smartwatch', 'smart watch', 'reloj inteligente', 'pulsera', 'smart band', 'banda', 'wearable'],
+    ['auricular', 'auriculares', 'headphone', 'headphones', 'headset', 'cascos', 'earphone', 'earphones', 'earbuds', 'earbud', 'audifono', 'audifonos'],
+    ['altavoz', 'altavoces', 'speaker', 'speakers', 'bocina', 'bocinas', 'parlante', 'parlantes', 'sonos'],
+    ['teclado', 'teclados', 'keyboard', 'keyboards', 'gaming', 'periferico', 'perifericos'],
+    ['smartphone', 'smartphones', 'telefono', 'telefonos', 'movil', 'moviles', 'celular', 'celulares', 'phone', 'iphone', 'android'],
+    ['airpods', 'air pods', 'airpod'],
+    ['galaxy watch', 'samsung watch', 'samsung reloj', 'galaxywatch'],
+    ['galaxy a', 'samsung galaxy', 'samsung phone', 'samsung movil'],
+    ['sony wh', 'sony xm', 'sony auriculares', 'wh1000', 'xm5', 'xm4'],
+  ];
+
+  function norm(s) {
+    return (s || '').toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9 ]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function expandQuery(q) {
+    var terms = [q];
+    SYNONYMS.forEach(function(group) {
+      var hit = group.some(function(syn) {
+        var sn = norm(syn);
+        return q === sn || q.includes(sn) || sn.includes(q);
+      });
+      if (hit) group.forEach(function(syn) { var sn = norm(syn); if (terms.indexOf(sn) === -1) terms.push(sn); });
+    });
+    return terms;
+  }
+
+  function scoreProduct(p, q) {
+    if (!q) return 1;
+    var name  = norm(p.name);
+    var brand = norm(p.brand);
+    var cat   = norm(CATEGORY_LABELS[p.category] || p.category || '');
+    var desc  = norm(p.description || '');
+    var terms = expandQuery(q);
+    var best  = 0;
+    terms.forEach(function(t) {
+      if (!t) return;
+      var s = 0;
+      if (name === t || brand === t)    s = 100;
+      else if (name.startsWith(t))      s = 90;
+      else if (brand.startsWith(t))     s = 85;
+      else if (name.includes(t))        s = 70;
+      else if (brand.includes(t))       s = 65;
+      else if (cat.includes(t))         s = 50;
+      else if (desc.includes(t))        s = 30;
+      else {
+        t.split(' ').forEach(function(word) {
+          if (word.length > 2) {
+            if (name.includes(word))  s = Math.max(s, 45);
+            if (brand.includes(word)) s = Math.max(s, 40);
+            if (cat.includes(word))   s = Math.max(s, 28);
+          }
+        });
+      }
+      best = Math.max(best, s);
+    });
+    return best;
+  }
 
   function openSearch() {
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    focusedIdx = -1;
     setTimeout(function() { input.focus(); }, 80);
     renderSearchResults('');
   }
@@ -3929,81 +3998,148 @@ function initSearch() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
     input.value = '';
+    focusedIdx = -1;
+  }
+
+  function moveFocus(dir) {
+    var items = results.querySelectorAll('.search-result-item');
+    if (!items.length) return;
+    items[focusedIdx] && items[focusedIdx].classList.remove('focused');
+    focusedIdx = Math.max(-1, Math.min(items.length - 1, focusedIdx + dir));
+    if (focusedIdx >= 0) {
+      items[focusedIdx].classList.add('focused');
+      items[focusedIdx].scrollIntoView({ block: 'nearest' });
+    }
   }
 
   if (searchBtn) searchBtn.addEventListener('click', openSearch);
   if (closeBtn)  closeBtn.addEventListener('click', closeSearch);
   overlay.addEventListener('click', function(e) { if (e.target === overlay) closeSearch(); });
+
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); return; }
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape')    { closeSearch(); return; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); moveFocus(1); return; }
+    if (e.key === 'ArrowUp')   { e.preventDefault(); moveFocus(-1); return; }
+    if (e.key === 'Enter') {
+      var items = results.querySelectorAll('.search-result-item');
+      if (focusedIdx >= 0 && items[focusedIdx]) {
+        items[focusedIdx].click();
+      } else if (items.length === 1) {
+        items[0].click();
+      }
+    }
   });
 
-  input.addEventListener('input', function() { renderSearchResults(input.value.trim()); });
+  input.addEventListener('input', function() {
+    focusedIdx = -1;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() { renderSearchResults(input.value.trim()); }, 60);
+  });
+
+  function catIcon(cat) {
+    return cat === 'relojes' ? '⌚' : cat === 'auriculares' ? '🎧' : cat === 'altavoces' ? '🔊' : cat === 'teclados gaming' ? '⌨️' : cat === 'smartphones' ? '📱' : '✨';
+  }
 
   function renderSearchResults(query) {
-    var q = query.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-    function norm(s) { return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
-    var filtered = PRODUCTS.filter(function(p) {
-      return !q ||
-        norm(p.name).includes(q) ||
-        norm(p.brand).includes(q) ||
-        norm(CATEGORY_LABELS[p.category]).includes(q) ||
-        norm(p.description).includes(q);
-    }).slice(0, 8);
+    var q = norm(query);
 
-    if (!filtered.length) {
-      results.innerHTML = '<div class="search-empty"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>No encontramos resultados para <strong>"' + query + '"</strong></p><p style="margin-top:6px;font-size:12px">Prueba con otro término o explora las categorías.</p></div>';
+    if (!q) {
+      results.innerHTML =
+        '<p style="font-size:12px;color:var(--text-3);margin-bottom:10px;text-align:center;">Explorar por categoría</p>' +
+        '<div class="search-cats">' +
+        Object.keys(FILTER_MAP).filter(function(k) { return k !== 'all'; }).map(function(k) {
+          var label = CATEGORY_LABELS[FILTER_MAP[k]] || k;
+          return '<button class="search-cat-btn" onclick="window._searchGoCategory(\'' + k + '\')">' + catIcon(FILTER_MAP[k]) + ' ' + label + '</button>';
+        }).join('') +
+        '</div>';
       return;
     }
 
-    results.innerHTML = filtered.map(function(p) {
+    var scored = PRODUCTS.map(function(p) {
+      return { p: p, score: scoreProduct(p, q) };
+    }).filter(function(x) { return x.score > 0; })
+      .sort(function(a, b) { return b.score - a.score; })
+      .slice(0, 8);
+
+    if (!scored.length) {
+      results.innerHTML =
+        '<div class="search-empty">' +
+        '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>' +
+        '<p>Sin resultados para <strong>"' + query + '"</strong></p>' +
+        '<p style="margin-top:6px;font-size:12px">Prueba con el nombre de marca o categoría.</p>' +
+        '</div>';
+      return;
+    }
+
+    results.innerHTML = scored.map(function(x) {
+      var p = x.p;
       var imgHtml = p.image
-        ? '<img class="sri-img" src="' + p.image + '" alt="' + p.name + '" onerror="this.src=\'\';">'
-        : '<div class="sri-img" style="display:flex;align-items:center;justify-content:center;font-size:22px;">' + (p.category==='relojes'?'⌚':p.category==='auriculares'?'🎧':p.category==='altavoces'?'🔊':p.category==='teclados gaming'?'⌨️':p.category==='smartphones'?'📱':'✨') + '</div>';
-      return '<div class="search-result-item" onclick="goToProduct(\'' + p.id + '\')">' +
+        ? '<img class="sri-img" src="' + p.image + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+        : '<div class="sri-img sri-img-ph">' + catIcon(p.category) + '</div>';
+      return '<div class="search-result-item" data-product-id="' + p.id + '" onclick="window._searchGoProduct(' + p.id + ')" role="option" tabindex="-1">' +
         imgHtml +
-        '<div class="sri-info"><div class="sri-name">' + p.name + '</div><div class="sri-meta">' + (CATEGORY_LABELS[p.category] || '') + ' · ' + p.brand + '</div></div>' +
-        '<div class="sri-price">€' + p.price + '</div>' +
+        '<div class="sri-info"><div class="sri-name">' + p.name + '</div>' +
+        '<div class="sri-meta">' + (CATEGORY_LABELS[p.category] || p.category) + ' · ' + p.brand + '</div></div>' +
+        '<div class="sri-price">€' + Number(p.price).toFixed(2) + '</div>' +
         '</div>';
     }).join('');
   }
 
-  window.searchByCategory = function(cat) {
-    closeSearch();
-    filterAndScroll(cat);
-  };
+  window.searchByCategory = function(cat) { closeSearch(); filterAndScroll(cat); };
 
-  window.goToProduct = function(id) {
+  // Navega al producto desde cualquier página
+  window._searchGoProduct = function(id) {
     closeSearch();
-    var product = null;
-    PRODUCTS.forEach(function(p) { if (String(p.id) === String(id)) product = p; });
+    var product = PRODUCTS.find(function(p) { return String(p.id) === String(id); });
     if (!product) return;
-
-    // Reverse-lookup: category value → FILTER_MAP key (e.g. 'relojes' → 'watches')
     var filterKey = 'all';
     Object.keys(FILTER_MAP).forEach(function(k) {
       if (FILTER_MAP[k] === product.category) filterKey = k;
     });
 
-    if (document.getElementById('products-grid')) {
-      setFilter(filterKey);
-    } else if (document.getElementById('catalog-grid')) {
-      renderCatalogGrid('catalog-grid', filterKey);
+    function highlight(id) {
+      setTimeout(function() {
+        var el = document.querySelector('[data-product-id="' + id + '"]');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('highlight-pulse');
+          setTimeout(function() { el.classList.remove('highlight-pulse'); }, 1800);
+        }
+      }, 350);
     }
 
-    setTimeout(function() {
-      var el = document.querySelector('[data-product-id="' + id + '"]');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        el.classList.add('highlight-pulse');
-        setTimeout(function() { el.classList.remove('highlight-pulse'); }, 1800);
-      } else {
-        var sec = document.getElementById('productos') || document.getElementById('catalog-section');
-        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 300);
+    if (document.getElementById('catalog-grid')) {
+      renderCatalogGrid('catalog-grid', filterKey);
+      highlight(id);
+      return;
+    }
+    if (document.getElementById('products-grid')) {
+      setFilter(filterKey);
+      highlight(id);
+      return;
+    }
+    // Cualquier otra página (index.html, etc.) → navegar al catálogo
+    window.location.href = 'catalogo.html?filter=' + filterKey + '&product=' + id;
   };
+
+  // Navega a categoría desde cualquier página
+  window._searchGoCategory = function(filterKey) {
+    closeSearch();
+    if (document.getElementById('catalog-grid')) {
+      renderCatalogGrid('catalog-grid', filterKey);
+      var sec = document.getElementById('catalog-section');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+    } else if (document.getElementById('products-grid')) {
+      filterAndScroll(filterKey);
+    } else {
+      window.location.href = 'catalogo.html?filter=' + filterKey;
+    }
+  };
+
+  // Compatibilidad con llamadas antiguas a goToProduct
+  window.goToProduct = window._searchGoProduct;
 }
 
 // ─── USER SESSION ────────────────────────────────────────────────────────────
