@@ -693,11 +693,11 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide.active{opacity:1;pointer-events:all;z-index:2;}
 .slide-video-wrap{position:absolute;inset:0;overflow:hidden;}
 .slide-video{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100vw;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;}
-/* Overlays para foto real: top oscuro para texto, zona media muestra la foto */
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.76) 0%,rgba(0,0,0,.42) 28%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.38) 100%);}
-.slide-overlay-violet{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,3,28,.82) 0%,rgba(8,2,20,.44) 28%,rgba(6,1,16,.20) 58%,rgba(10,2,24,.42) 100%);}
-.slide-overlay-red{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,3,3,.82) 0%,rgba(18,2,2,.44) 28%,rgba(12,1,1,.20) 58%,rgba(20,2,2,.42) 100%);}
-.slide-overlay-navy{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,8,22,.82) 0%,rgba(1,5,16,.44) 28%,rgba(1,3,12,.20) 58%,rgba(2,6,18,.42) 100%);}
+/* Overlays para foto real: oscuro a la izquierda (texto), foto visible a la derecha */
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(3,10,3,.96) 0%,rgba(2,8,2,.80) 32%,rgba(0,0,0,.38) 60%,rgba(0,0,0,.06) 100%);}
+.slide-overlay-violet{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,3,22,.96) 0%,rgba(6,2,16,.80) 32%,rgba(3,1,10,.38) 60%,rgba(0,0,0,.05) 100%);}
+.slide-overlay-red{position:absolute;inset:0;background:linear-gradient(105deg,rgba(22,3,3,.96) 0%,rgba(16,2,2,.80) 32%,rgba(8,1,1,.38) 60%,rgba(0,0,0,.05) 100%);}
+.slide-overlay-navy{position:absolute;inset:0;background:linear-gradient(105deg,rgba(2,6,22,.96) 0%,rgba(1,4,16,.80) 32%,rgba(1,2,8,.38) 60%,rgba(0,0,0,.05) 100%);}
 /* slide-content: ocupa la mitad izquierda; padding-left usa max() para no solapar flecha ← */
 .slide-content{position:absolute;top:0;left:0;bottom:0;width:54%;max-width:680px;display:flex;flex-direction:column;justify-content:space-between;padding:108px 40px 76px max(8%,90px);overflow:hidden;}
 .slide-body{display:flex;flex-direction:column;flex:1 1 0;min-height:0;overflow:hidden;}
