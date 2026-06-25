@@ -724,12 +724,27 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .btn-teal:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,212,191,.35) !important;}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#6366f1) !important;border:none !important;color:#fff !important;}
 .btn-blue:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.40) !important;}
-/* Slide 4: fondo gradiente dark-blue animado (fallback de vídeo) */
-.slide-4{background:linear-gradient(135deg,#040d1f 0%,#0b1945 25%,#0f0a2e 55%,#040c20 100%);}
-.slide-4-bg-particles{position:absolute;inset:0;background:
-  radial-gradient(ellipse 70% 60% at 80% 20%,rgba(59,130,246,.18) 0%,transparent 70%),
-  radial-gradient(ellipse 50% 70% at 15% 80%,rgba(99,102,241,.14) 0%,transparent 65%),
-  radial-gradient(ellipse 40% 40% at 60% 60%,rgba(96,165,250,.08) 0%,transparent 60%);}
+/* ── Fondos cinematográficos CSS de los 4 banners (sin vídeo) ─────────── */
+.slide-1{background:
+  radial-gradient(ellipse 95% 80% at 80% 45%,rgba(99,102,241,.38) 0%,transparent 58%),
+  radial-gradient(ellipse 60% 55% at 16% 72%,rgba(139,92,246,.24) 0%,transparent 54%),
+  radial-gradient(ellipse 45% 35% at 55% 18%,rgba(79,70,229,.18) 0%,transparent 48%),
+  linear-gradient(145deg,#040414 0%,#070822 40%,#0c0a2e 68%,#060418 100%);}
+.slide-2{background:
+  radial-gradient(ellipse 95% 80% at 78% 48%,rgba(251,191,36,.32) 0%,transparent 56%),
+  radial-gradient(ellipse 60% 55% at 14% 72%,rgba(249,115,22,.22) 0%,transparent 52%),
+  radial-gradient(ellipse 45% 35% at 52% 22%,rgba(245,158,11,.16) 0%,transparent 48%),
+  linear-gradient(145deg,#080502 0%,#150a02 40%,#1e0e03 68%,#0c0703 100%);}
+.slide-3{background:
+  radial-gradient(ellipse 95% 80% at 80% 46%,rgba(45,212,191,.30) 0%,transparent 56%),
+  radial-gradient(ellipse 60% 55% at 14% 72%,rgba(6,182,212,.22) 0%,transparent 52%),
+  radial-gradient(ellipse 45% 35% at 55% 18%,rgba(20,184,166,.16) 0%,transparent 48%),
+  linear-gradient(145deg,#020a0e 0%,#031318 40%,#041a22 68%,#030d15 100%);}
+.slide-4{background:
+  radial-gradient(ellipse 95% 80% at 80% 44%,rgba(59,130,246,.34) 0%,transparent 56%),
+  radial-gradient(ellipse 60% 55% at 16% 70%,rgba(99,102,241,.22) 0%,transparent 52%),
+  radial-gradient(ellipse 45% 35% at 52% 18%,rgba(96,165,250,.16) 0%,transparent 48%),
+  linear-gradient(145deg,#030c22 0%,#06102e 40%,#0a1432 68%,#040c22 100%);}
 /* Fallback genérico: oculta video-wrap si el iframe falla (añadido por JS) */
 .slide-video-wrap.video-unavailable{opacity:0;pointer-events:none;transition:opacity .4s ease;}
 /* Slider navigation */
@@ -814,10 +829,10 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 @keyframes slide-up-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes product-enter{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(0)}}
 @keyframes product-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes glow-p-indigo{0%,100%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 80px rgba(99,102,241,.15)}50%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 140px rgba(99,102,241,.36)}}
-@keyframes glow-p-gold{0%,100%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 80px rgba(251,191,36,.15)}50%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 140px rgba(251,191,36,.36)}}
-@keyframes glow-p-teal{0%,100%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 80px rgba(45,212,191,.15)}50%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 140px rgba(45,212,191,.36)}}
-@keyframes glow-p-blue{0%,100%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 80px rgba(96,165,250,.15)}50%{box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 140px rgba(96,165,250,.36)}}
+@keyframes glow-p-indigo{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(99,102,241,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(99,102,241,.42)}}
+@keyframes glow-p-gold{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(251,191,36,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(251,191,36,.42)}}
+@keyframes glow-p-teal{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(45,212,191,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(45,212,191,.42)}}
+@keyframes glow-p-blue{0%,100%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(96,165,250,.2)}50%{box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.18),0 0 150px rgba(96,165,250,.42)}}
 /* Texto: animación escalonada al activarse el slide */
 .slide.active .slide-tag{animation:slide-up-in .45s ease .08s both}
 .slide.active .slide-title{animation:slide-up-in .52s cubic-bezier(.25,.46,.45,.94) .2s both}
@@ -826,7 +841,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .slide.active .slide-ctas{animation:slide-up-in .48s ease .54s both}
 /* Product showcase — columna derecha */
 .slide-product{position:absolute;top:0;right:0;bottom:0;width:46%;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;z-index:3;padding:0 4% 64px 0}
-.slide-product-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:85%;max-width:380px;border-radius:24px;background:rgba(255,255,255,.05);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);padding:20px;opacity:0;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.slide-product-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:85%;max-width:380px;border-radius:28px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.96);padding:20px 16px;opacity:0;box-shadow:0 32px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.15)}
 /* Entrada + glow pulsante por slide */
 .slide-1.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-indigo 4s ease-in-out 1.2s infinite}
 .slide-2.active .slide-product-wrap{animation:product-enter .75s cubic-bezier(.25,.46,.45,.94) .28s both,glow-p-gold 4s ease-in-out 1.2s infinite}
