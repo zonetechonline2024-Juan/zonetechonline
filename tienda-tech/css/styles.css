@@ -814,7 +814,8 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .search-results::-webkit-scrollbar{width:4px;}
 .search-results::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
 .search-result-item{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px 18px;cursor:pointer;transition:background .2s,border-color .2s,transform .15s;}
-.search-result-item:hover{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3);transform:translateX(4px);}
+.search-result-item:hover,.search-result-item.focused{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3);transform:translateX(4px);}
+.sri-img-ph{display:flex;align-items:center;justify-content:center;font-size:22px;}
 .sri-img{width:52px;height:52px;border-radius:10px;object-fit:cover;background:rgba(99,102,241,.1);flex-shrink:0;}
 .sri-info{flex:1;min-width:0;}
 .sri-name{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px;}
