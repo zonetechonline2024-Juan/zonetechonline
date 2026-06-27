@@ -4640,6 +4640,18 @@ function initAuthModal() {
 
 function renderManifestoChips() {
   if (typeof PRODUCTS === 'undefined') return;
+
+  var CLEAN_RE = /^(?:RELOJ\s+INTELIGENTE|SMARTWATCH|MOVIL|SMARTPHONE|TELEFONO\s+MOVIL|RUGERIZADO|TECLADO\s+GAMING|TECLADO|AURICULARES?\s+(?:GAMING\s+)?|ALTAVOZ(?:ES)?|SPEAKER)\s+/i;
+
+  function chipLabel(p) {
+    var brand = (p.brand || '').trim();
+    var name  = (p.name  || '').replace(CLEAN_RE, '').trim();
+    // Si el nombre ya empieza por la marca, usar el nombre limpio directamente
+    if (name.toLowerCase().startsWith(brand.toLowerCase())) return name.slice(0, 40);
+    // Si no, anteponer la marca
+    return (brand + ' ' + name).slice(0, 42);
+  }
+
   var cats = [
     { id: 'mf-chips-relojes',     cat: 'relojes',        filter: 'watches'     },
     { id: 'mf-chips-auriculares', cat: 'auriculares',     filter: 'headphones'  },
@@ -4647,18 +4659,36 @@ function renderManifestoChips() {
     { id: 'mf-chips-altavoces',   cat: 'altavoces',       filter: 'speakers'    },
     { id: 'mf-chips-smartphones', cat: 'smartphones',     filter: 'smartphones' },
   ];
+
   cats.forEach(function(cfg) {
     var el = document.getElementById(cfg.id);
     if (!el) return;
-    PRODUCTS.filter(function(p) { return p.category === cfg.cat; })
-      .slice(0, 3)
-      .forEach(function(p) {
-        var a = document.createElement('a');
-        a.href = 'catalogo.html?filter=' + cfg.filter + '&brand=' + encodeURIComponent(p.brand);
-        a.className = 'mf-device-chip';
-        a.textContent = p.name;
-        el.appendChild(a);
+
+    // Elige 4 productos representativos (distintas marcas prioritariamente)
+    var pool = PRODUCTS.filter(function(p) { return p.category === cfg.cat && p.price; });
+    var seen = {}, chosen = [];
+    pool.forEach(function(p) {
+      if (chosen.length >= 4) return;
+      var bk = (p.brand || '').toLowerCase();
+      if (!seen[bk]) { seen[bk] = true; chosen.push(p); }
+    });
+    if (chosen.length < 4) {
+      pool.forEach(function(p) {
+        if (chosen.length >= 4) return;
+        if (chosen.indexOf(p) === -1) chosen.push(p);
       });
+    }
+
+    el.innerHTML = '';
+    chosen.forEach(function(p) {
+      var a = document.createElement('a');
+      // URL directa al producto específico con scroll + highlight
+      a.href = 'catalogo.html?filter=' + cfg.filter + '&product=' + p.id;
+      a.className = 'mf-device-chip';
+      a.setAttribute('aria-label', 'Ver ' + chipLabel(p));
+      a.textContent = chipLabel(p);
+      el.appendChild(a);
+    });
   });
 }
 
