@@ -1071,6 +1071,7 @@ a.mf-device-chip:hover{color:var(--accent);border-color:rgba(99,102,241,.4);back
 .mega-drop{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(10px);background:#12122a;border:1px solid rgba(99,102,241,.22);border-radius:18px;box-shadow:0 28px 80px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.03);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:400;min-width:360px;will-change:opacity,transform;}
 .mega-drop::before{content:'';position:absolute;top:-8px;left:0;right:0;height:8px;}
 .nav-item:hover .mega-drop,.nav-item.mega-open .mega-drop{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0);}
+.nav-item:hover .mega-b,.nav-item.mega-open .mega-b,.nav-item:hover .mega-all-link,.nav-item.mega-open .mega-all-link,.nav-item:hover .mega-see,.nav-item.mega-open .mega-see{pointer-events:all;}
 .mega-inner{display:grid;grid-template-columns:1fr 156px;overflow:hidden;border-radius:18px;}
 .mega-left{padding:20px 18px 18px;}
 .mega-cat-lbl{display:block;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
