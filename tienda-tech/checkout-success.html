@@ -248,6 +248,28 @@ localStorage.removeItem('zt_cart');
     if (orders.length > 20) orders = orders.slice(0, 20);
     localStorage.setItem('zt_orders', JSON.stringify(orders));
   } catch(e) {}
+
+  // Email de confirmación de pedido (no bloqueante — falla en silencio)
+  if (order.customer && order.customer.email) {
+    var emailKey = 'zt_email_sent_' + orderNo;
+    if (!sessionStorage.getItem(emailKey)) {
+      sessionStorage.setItem(emailKey, '1');
+      fetch('/api/email-order-confirm', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email:         order.customer.email,
+          name:          order.customer.name || '',
+          orderNo:       orderNo,
+          items:         (order.items || []).map(function(i) { return { name: i.name, qty: i.qty || 1, price: i.price || 0 }; }),
+          total:         order.total || 0,
+          address:       order.customer.address || '',
+          paymentMethod: order.paymentMethod || 'card',
+          orderDate:     now.toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' }),
+        }),
+      }).catch(function() { /* silencioso — el email no bloquea la página */ });
+    }
+  }
 })();
 
 // Minimal particle effect
