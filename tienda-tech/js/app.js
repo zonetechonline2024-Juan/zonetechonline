@@ -257,12 +257,11 @@ PRODUCTS.push(
     price: 399.00,
     oldPrice: 449.00,
     badge: 'OFERTA',
-    image: 'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
+    image: 'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
     images: [
-      'img/productos/art_apl-watch_meqx4qlbardera_1.jpg',
-      'img/productos/art_apl-watch_meqw4qlbardera_1.jpg',
-      'img/productos/art_apl-watch_mep94qlbardera_1.jpg',
-      'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg'
+      'img/productos/Apple-Watch-Series-10-aluminum-jet-black-240909_inline.jpg.large.jpg',
+      'img/productos/Apple-Watch-Series-10-aluminum-silver-240909_inline.jpg.large.jpg',
+      'img/productos/9886-apple-watch-se-3-gps-44mm-caja-de-aluminio-blanco-estrella-con-correa-deportiva-blanco-estrella-m-l.jpg'
     ],
     description: 'Apple Watch Series 11 de aluminio Gris Espacial, 42mm. Chip S11 SiP. Pantalla Always-On Retina OLED. ECG, SpO₂, temperatura cutánea, frecuencia cardíaca 24/7 y detector de choques. GPS dual frecuencia L1+L5. WatchOS 11. Resistente 50m.',
     specs: {
