@@ -3825,34 +3825,17 @@ function initMegaMenu() {
     if (allLinkSpan) allLinkSpan.textContent = totalCat + ' modelos →';
   });
 
-  // ── Delegación de eventos: funciona para links estáticos Y dinámicos ──
-  document.addEventListener('click', function(e) {
-    var a = e.target.closest('.mega-b, .mega-all-link, .mega-see');
-    if (!a) return;
-    var href = a.getAttribute('href');
-    if (href && href.charAt(0) !== '#') {
-      window.location.href = href;
-    }
-  });
-
-  // ── Mantiene el dropdown abierto durante la transición del ratón (180ms) ──
+  // ── Hover con clase JS: garantiza pointer-events:all durante toda la interacción ──
   document.querySelectorAll('.nav-item').forEach(function(item) {
     var drop = item.querySelector('.mega-drop');
     if (!drop) return;
     var t;
-    function hideDrop() {
-      t = setTimeout(function() {
-        drop.style.opacity = '';
-        drop.style.visibility = '';
-        drop.style.pointerEvents = '';
-        drop.style.transform = '';
-      }, 180);
-    }
-    function cancelHide() { clearTimeout(t); }
-    item.addEventListener('mouseleave', hideDrop);
-    item.addEventListener('mouseenter', cancelHide);
-    drop.addEventListener('mouseenter', cancelHide);
-    drop.addEventListener('mouseleave', hideDrop);
+    function openDrop()  { clearTimeout(t); item.classList.add('mega-open'); }
+    function closeDrop() { t = setTimeout(function() { item.classList.remove('mega-open'); }, 180); }
+    item.addEventListener('mouseenter', openDrop);
+    item.addEventListener('mouseleave', closeDrop);
+    drop.addEventListener('mouseenter', openDrop);
+    drop.addEventListener('mouseleave', closeDrop);
   });
 }
 
