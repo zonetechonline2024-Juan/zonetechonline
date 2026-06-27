@@ -1216,7 +1216,7 @@ PRODUCTS.push(
     description:'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo',
     specs:{'Info':'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo', 'Info':'BT + WiFi + NFC Garmin Pay · hasta 11 días smartwatch', 'Info':'FC óptico 24h + SpO2 + variabilidad FC + estrés', 'Info':'Seguimiento de sueño avanzado · +25 deportes', 'Info':'Hasta 18h GPS continuo · altímetro barométrico', 'Info':'Diseño ultraligero · compatible Garmin Coach','SKU Megasur':'DSP0000028241'}
   },
-  { id:31, name:'SMARTWATCH HAMMER WATCH 2 LITE BLACK', brand:'Hammer', category:'relojes',
+  { id:231, name:'SMARTWATCH HAMMER WATCH 2 LITE BLACK', brand:'Hammer', category:'relojes',
     price:36.07, oldPrice:41.48, badge: 'OFERTA',
     image:'img/productos/DSP0000027299-0.jpg',
     description:'Pantalla IPS 1.6" · resistencia militar IP68',
@@ -1224,25 +1224,25 @@ PRODUCTS.push(
   },
   // ── MyPhone + Hammer — Lifestyle y rugged ──────────────────────────────────
 
-  { id:32, name:'RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO', brand:'MyPhone', category:'relojes',
+  { id:232, name:'RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO', brand:'MyPhone', category:'relojes',
     price:49.99, oldPrice:57.49, badge: 'OFERTA',
     image:'img/productos/DSP0000024070-0.jpg',
     description:'Smartwatch para mayores con 4G LTE y GPS integrado',
     specs:{'Info':'Smartwatch para mayores con 4G LTE y GPS integrado', 'Info':'Llamadas bidireccionales · botón SOS de emergencia', 'Info':'Detector de caídas automático · alertas de salud', 'Info':'FC óptico · podómetro · pantalla táctil grande', 'Info':'Diseño sencillo pensado para personas mayores', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000024070'}
   },
-  { id:33, name:'RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK', brand:'MyPhone', category:'relojes',
+  { id:233, name:'RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK', brand:'MyPhone', category:'relojes',
     price:49.99, oldPrice:57.49, badge: 'OFERTA',
     image:'img/productos/DSP0000025695-0.jpg',
     description:'Smartwatch outdoor con GPS integrado · IP68',
     specs:{'Info':'Smartwatch outdoor con GPS integrado · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Pantalla 1.4" IPS color · múltiples modos deporte', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Notificaciones de smartphone · diseño robusto', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000025695'}
   },
-  { id:34, name:'RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN', brand:'MyPhone', category:'relojes',
+  { id:234, name:'RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN', brand:'MyPhone', category:'relojes',
     price:29.99, oldPrice:34.49, badge: 'OFERTA',
     image:'img/productos/DSP0000026342-0.jpg',
     description:'Pantalla 1.7" TFT color · Bluetooth 5.0',
     specs:{'Info':'Pantalla 1.7" TFT color · Bluetooth 5.0', 'Info':'FC óptico + SpO2 + podómetro · +100 modos deporte', 'Info':'Monitorización de sueño y estrés 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Diseño lifestyle moderno · modos multideporte', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026342'}
   },
-  { id:35, name:'RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN', brand:'MyPhone', category:'relojes',
+  { id:235, name:'RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN', brand:'MyPhone', category:'relojes',
     price:39.99, oldPrice:45.99, badge: 'OFERTA',
     image:'img/productos/DSP0000026343-0.jpg',
     description:'Smartwatch robusto para trabajo y exteriores · IP68',
@@ -1558,31 +1558,31 @@ PRODUCTS.push(
   },
   // ── MARS GAMING ─────────────────────────────────────────────────────
 
-  { id:62, name:'TECLADO MARS GAMING MK320ES USB RGB MECANICO', brand:'MARS GAMING', category:'teclados gaming',
+  { id:262, name:'TECLADO MARS GAMING MK320ES USB RGB MECANICO', brand:'MARS GAMING', category:'teclados gaming',
     price:13.39, oldPrice:15.8, badge: 'OFERTA',
     image:'img/productos/DSP0000009116-0.jpg',
     description:'Switch: Mecánico',
     specs:{'Switch':'Mecánico', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000009116'}
   },
-  { id:63, name:'TECLADO MARS GAMING MK124', brand:'MARS GAMING', category:'teclados gaming',
+  { id:263, name:'TECLADO MARS GAMING MK124', brand:'MARS GAMING', category:'teclados gaming',
     price:15.98, oldPrice:18.86, badge: 'OFERTA',
     image:'img/productos/DSP0000031004-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031004'}
   },
-  { id:64, name:'TECLADO MARS GAMING MK124 BLANCO', brand:'MARS GAMING', category:'teclados gaming',
+  { id:264, name:'TECLADO MARS GAMING MK124 BLANCO', brand:'MARS GAMING', category:'teclados gaming',
     price:15.98, oldPrice:18.86, badge: 'OFERTA',
     image:'img/productos/DSP0000031005-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031005'}
   },
-  { id:65, name:'KIT TECLADO + RATON MARS GAMING MCPTKLES RGB', brand:'MARS GAMING', category:'teclados gaming',
+  { id:265, name:'KIT TECLADO + RATON MARS GAMING MCPTKLES RGB', brand:'MARS GAMING', category:'teclados gaming',
     price:16.99, oldPrice:20.05, badge: 'OFERTA',
     image:'img/productos/DSP0000008843-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000008843'}
   },
-  { id:66, name:'TECLADO MARS GAMING MK-SILENKEYSES', brand:'MARS GAMING', category:'teclados gaming',
+  { id:266, name:'TECLADO MARS GAMING MK-SILENKEYSES', brand:'MARS GAMING', category:'teclados gaming',
     price:19.9, oldPrice:23.48, badge: 'OFERTA',
     image:'img/productos/DSP0000038078-0.jpg',
     description:'Switch: Consultar ficha',
@@ -2247,19 +2247,19 @@ PRODUCTS.push(
     description:'Conexión: Jack 3.5mm',
     specs:{'Conexión':'Jack 3.5mm','SKU Megasur':'DSP0000007049'}
   },
-  { id:129, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 3 BLANCO SUPRAURAL/ 40MM/ JACK 3.5MM/ ANTIPOP/ 20HZ/ 32Ohms', brand:'ENERGY SISTEM', category:'auriculares',
+  { id:329, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 3 BLANCO SUPRAURAL/ 40MM/ JACK 3.5MM/ ANTIPOP/ 20HZ/ 32Ohms', brand:'ENERGY SISTEM', category:'auriculares',
     price:24.99, oldPrice:29.49, badge: 'OFERTA',
     image:'img/productos/DSP0000007066-0.jpg',
     description:'Conexión: Jack 3.5mm',
     specs:{'Conexión':'Jack 3.5mm', 'ANC':'Cancelación activa de ruido','SKU Megasur':'DSP0000007066'}
   },
-  { id:127, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
+  { id:327, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
     price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000007055-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
     specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007055'}
   },
-  { id:128, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
+  { id:328, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
     price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000007060-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
@@ -2278,7 +2278,7 @@ PRODUCTS.push(
   },
   // ── URBANISTA ──────────────────────────────────────────────
 
-  { id:130, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE', brand:'URBANISTA', category:'auriculares',
+  { id:330, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE', brand:'URBANISTA', category:'auriculares',
     price:39.99, oldPrice:47.19, badge: 'OFERTA',
     image:'img/productos/DSP0000014716-0.jpg',
     description:'Tipo: True Wireless (TWS)',
@@ -2310,7 +2310,7 @@ PRODUCTS.push(
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014713'}
   },
-  { id:131, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE', brand:'URBANISTA', category:'auriculares',
+  { id:331, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE', brand:'URBANISTA', category:'auriculares',
     price:59.99, oldPrice:70.79, badge: 'OFERTA',
     image:'img/productos/DSP0000013382-0.jpg',
     description:'Tipo: True Wireless (TWS)',
@@ -3168,8 +3168,7 @@ function toggleWishlist(id, btn) {
   var list = getWishlist();
   var idx = -1;
   list.forEach(function(item, i) { if (item.id === id) idx = i; });
-  var product = null;
-  PRODUCTS.forEach(function(p) { if (p.id === id) product = p; });
+  var product = PRODUCTS.find(function(p) { return p.id === id; });
   if (!product) return;
   if (idx >= 0) {
     list.splice(idx, 1);
@@ -3401,10 +3400,10 @@ function openQuickView(productId) {
   var content = document.getElementById('quick-view-content');
   if (!modal || !content) return;
 
-  var specsHTML = Object.keys(product.specs).map(function(key) {
+  var specsHTML = product.specs ? Object.keys(product.specs).map(function(key) {
     var val = product.specs[key];
     return '<div class="qv-spec-row"><span class="qv-spec-label">' + key + '</span><span class="qv-spec-value">' + val + '</span></div>';
-  }).join('');
+  }).join('') : '';
 
   var qvDiscount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
   var qvStars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
@@ -3497,7 +3496,7 @@ function renderComparator() {
 
   var allSpecs = [];
   comparatorItems.forEach(function(p) {
-    Object.keys(p.specs).forEach(function(k) {
+    if (p.specs) Object.keys(p.specs).forEach(function(k) {
       if (allSpecs.indexOf(k) === -1) allSpecs.push(k);
     });
   });
