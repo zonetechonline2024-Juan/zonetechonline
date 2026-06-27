@@ -3796,46 +3796,85 @@ function initScrollReveal() {
 // ─── MEGA-MENU NAVIGATION ────────────────────────────────────────────────────
 
 function initMegaMenu() {
-  // ── Genera marcas dinámicas en todos los .mega-brands[data-filter] (index + catalogo) ──
+
+  // ══ FUENTE ÚNICA DE VERDAD: registro de marcas desde PRODUCTS ══
+  // Mapeo inverso: category string → filter key
+  var CAT_TO_FK = {};
+  Object.keys(FILTER_MAP).forEach(function(fk) {
+    if (fk !== 'all') CAT_TO_FK[FILTER_MAP[fk]] = fk;
+  });
+
+  // Construye el registro global de marcas
+  var BRAND_REGISTRY = {}; // key = "fk::brand_lower"
+  PRODUCTS.forEach(function(p) {
+    var cat   = (p.category || '').trim();
+    var brand = (p.brand || '').trim();
+    if (!cat || !brand) return;
+    var fk = CAT_TO_FK[cat];
+    if (!fk) return;
+    var key = fk + '::' + brand.toLowerCase();
+    if (!BRAND_REGISTRY[key]) {
+      BRAND_REGISTRY[key] = {
+        name:   brand,
+        filter: fk,
+        url:    'catalogo.html?filter=' + fk + '&brand=' + encodeURIComponent(brand),
+        count:  0
+      };
+    }
+    BRAND_REGISTRY[key].count++;
+  });
+
+  // ══ GENERA LINKS EN CADA DROPDOWN ══
   document.querySelectorAll('.mega-brands[data-filter]').forEach(function(container) {
     var fk = container.getAttribute('data-filter');
-    var catKey = FILTER_MAP[fk];
-    if (!catKey) return;
-    var brandMap = {};
-    PRODUCTS.forEach(function(p) {
-      if (p.category !== catKey) return;
-      var raw = (p.brand || '').trim();
-      if (!raw) return;
-      var key = raw.toLowerCase();
-      if (!brandMap[key]) brandMap[key] = { display: raw, count: 0 };
-      brandMap[key].count++;
-    });
-    var sorted = Object.values(brandMap)
-      .sort(function(a, b) { return b.count - a.count || a.display.localeCompare(b.display); })
+    if (!FILTER_MAP[fk]) return;
+
+    var brands = Object.values(BRAND_REGISTRY)
+      .filter(function(b) { return b.filter === fk; })
+      .sort(function(a, b) { return b.count - a.count || a.name.localeCompare(b.name); })
       .slice(0, 6);
-    container.innerHTML = sorted.map(function(b) {
-      return '<a href="catalogo.html?filter=' + fk + '&brand=' + encodeURIComponent(b.display) + '" class="mega-b">' +
-             '<strong>' + b.display + '</strong>' +
+
+    container.innerHTML = brands.map(function(b) {
+      return '<a href="' + b.url + '" class="mega-b" data-nav="' + b.url + '">' +
+             '<strong>' + b.name + '</strong>' +
              '<span class="mega-bc">' + b.count + ' modelo' + (b.count !== 1 ? 's' : '') + '</span>' +
              '</a>';
     }).join('');
-    // Actualiza el conteo en "Ver X modelos →" del enlace principal de categoría
-    var totalCat = PRODUCTS.filter(function(p) { return p.category === catKey; }).length;
-    var allLinkSpan = container.closest('.mega-left') && container.closest('.mega-left').querySelector('.mega-all-link span');
-    if (allLinkSpan) allLinkSpan.textContent = totalCat + ' modelos →';
+
+    // Actualiza "Ver X modelos →"
+    var catKey = FILTER_MAP[fk];
+    var total  = PRODUCTS.filter(function(p) { return p.category === catKey; }).length;
+    var span   = container.closest('.mega-left') && container.closest('.mega-left').querySelector('.mega-all-link span');
+    if (span) span.textContent = total + ' modelos →';
   });
 
-  // ── Hover con clase JS: garantiza pointer-events:all durante toda la interacción ──
+  // ══ HOVER: clase JS garantiza pointer-events durante toda la interacción ══
   document.querySelectorAll('.nav-item').forEach(function(item) {
     var drop = item.querySelector('.mega-drop');
     if (!drop) return;
-    var t;
-    function openDrop()  { clearTimeout(t); item.classList.add('mega-open'); }
-    function closeDrop() { t = setTimeout(function() { item.classList.remove('mega-open'); }, 180); }
-    item.addEventListener('mouseenter', openDrop);
-    item.addEventListener('mouseleave', closeDrop);
-    drop.addEventListener('mouseenter', openDrop);
-    drop.addEventListener('mouseleave', closeDrop);
+    var closeTimer;
+    function open()  { clearTimeout(closeTimer); item.classList.add('mega-open'); }
+    function close() { closeTimer = setTimeout(function() { item.classList.remove('mega-open'); }, 200); }
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+    drop.addEventListener('mouseenter', open);
+    drop.addEventListener('mouseleave', close);
+  });
+
+  // ══ NAVEGACIÓN CENTRALIZADA: un solo handler, máxima fiabilidad ══
+  document.addEventListener('click', function(e) {
+    // Links de marca (.mega-b con data-nav)
+    var brandLink = e.target.closest('[data-nav]');
+    if (brandLink) {
+      var url = brandLink.getAttribute('data-nav');
+      if (url) { window.location.href = url; return; }
+    }
+    // "Ver todos" (.mega-all-link) y CTA lateral (.mega-see)
+    var catLink = e.target.closest('a.mega-all-link, a.mega-see');
+    if (catLink) {
+      var href = catLink.getAttribute('href');
+      if (href && href[0] !== '#') { window.location.href = href; }
+    }
   });
 }
 
