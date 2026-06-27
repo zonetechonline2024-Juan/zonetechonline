@@ -4881,9 +4881,11 @@ function initAIAssistant() {
     function cleanName(name) {
       return name.replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO|TECLADO|AURICULARES?)\s+/i, '').trim();
     }
+    var catToFilter = { 'relojes':'watches', 'auriculares':'headphones', 'altavoces':'speakers', 'teclados gaming':'peripherals', 'smartphones':'smartphones' };
     function listItems(arr, n, asc) {
       return topN(arr, n, asc).map(function(p) {
-        return '<strong>' + cleanName(p.name) + '</strong> (' + fmt(p.price) + ')';
+        var fk = catToFilter[p.category] || 'all';
+        return '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=' + fk + '&product=' + p.id + '">' + cleanName(p.name) + ' (' + fmt(p.price) + ')</a>';
       }).join(' · ');
     }
     function brandCounts(arr) {
