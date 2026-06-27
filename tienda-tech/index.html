@@ -1413,35 +1413,6 @@ function cookieConsent(choice){
   </div>
 </div>
 
-<script>
-// ── Mega menú: marcas dinámicas desde PRODUCTS (sin hardcodear) ──────────────
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof PRODUCTS === 'undefined' || typeof FILTER_MAP === 'undefined') return;
-  document.querySelectorAll('.mega-brands[data-filter]').forEach(function(container) {
-    var fk = container.getAttribute('data-filter');
-    var catKey = FILTER_MAP[fk];
-    if (!catKey) return;
-    var brandMap = {};
-    PRODUCTS.forEach(function(p) {
-      if (p.category !== catKey) return;
-      var raw = (p.brand || '').trim();
-      if (!raw) return;
-      var key = raw.toLowerCase();
-      if (!brandMap[key]) brandMap[key] = { display: raw, count: 0 };
-      brandMap[key].count++;
-    });
-    var sorted = Object.values(brandMap)
-      .sort(function(a, b) { return b.count - a.count || a.display.localeCompare(b.display); })
-      .slice(0, 6);
-    container.innerHTML = sorted.map(function(b) {
-      return '<a href="catalogo.html?filter=' + fk + '&brand=' + encodeURIComponent(b.display) + '" class="mega-b">' +
-             '<strong>' + b.display + '</strong>' +
-             '<span class="mega-bc">' + b.count + ' modelo' + (b.count !== 1 ? 's' : '') + '</span>' +
-             '</a>';
-    }).join('');
-  });
-});
-</script>
 </body>
 </html>
 
