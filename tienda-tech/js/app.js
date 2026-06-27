@@ -4729,13 +4729,108 @@ function initReviews() {
   var selectedR    = 0;
   var hints = ['','Muy mala','Mala','Regular','Buena','¡Excelente!'];
 
-  // ── Poblar datalist con todos los productos ──
-  var dlEl = document.getElementById('cr-products-list');
-  if (dlEl && typeof PRODUCTS !== 'undefined') {
-    PRODUCTS.forEach(function(p) {
-      var opt = document.createElement('option');
-      opt.value = p.name + ' — ' + p.brand;
-      dlEl.appendChild(opt);
+  // ── Custom product dropdown (reemplaza datalist nativo) ──
+  var crDrop = document.getElementById('cr-product-drop');
+  if (productSel && crDrop) {
+    var dropOpen = false;
+
+    // Construye filterKey a partir de la categoría del producto
+    function productUrl(p) {
+      var fk = 'all';
+      Object.keys(FILTER_MAP).forEach(function(k) {
+        if (FILTER_MAP[k] === p.category) fk = k;
+      });
+      return 'catalogo.html?filter=' + fk + '&product=' + p.id;
+    }
+
+    function renderDrop(query) {
+      var q = (query || '').toLowerCase().trim();
+      var matches = q.length < 1
+        ? PRODUCTS.slice(0, 30)
+        : PRODUCTS.filter(function(p) {
+            return (p.name + ' ' + p.brand).toLowerCase().indexOf(q) !== -1;
+          }).slice(0, 40);
+
+      if (!matches.length) {
+        crDrop.innerHTML = '<div class="cr-pd-empty">Sin resultados para "' + query + '"</div>';
+      } else {
+        crDrop.innerHTML = matches.map(function(p) {
+          var url = productUrl(p);
+          return '<div class="cr-pd-item" data-name="' + p.name + ' — ' + p.brand + '" data-url="' + url + '" role="option" tabindex="-1">' +
+            '<div class="cr-pd-item-info">' +
+              '<div class="cr-pd-name">' + p.name + '</div>' +
+              '<div class="cr-pd-meta"><span class="cr-pd-brand">' + p.brand + '</span> · €' + Number(p.price).toFixed(2) + '</div>' +
+            '</div>' +
+            '<a href="' + url + '" class="cr-pd-nav" data-nav="' + url + '" tabindex="-1">Ver →</a>' +
+          '</div>';
+        }).join('');
+      }
+    }
+
+    function openDrop() {
+      renderDrop(productSel.value);
+      crDrop.classList.add('open');
+      productSel.setAttribute('aria-expanded', 'true');
+      dropOpen = true;
+    }
+    function closeDrop() {
+      crDrop.classList.remove('open');
+      productSel.setAttribute('aria-expanded', 'false');
+      dropOpen = false;
+    }
+
+    // Abrir al hacer focus / input
+    productSel.addEventListener('focus', function() { openDrop(); });
+    productSel.addEventListener('input', function() { renderDrop(productSel.value); if (!dropOpen) openDrop(); });
+
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', function(e) {
+      var wrap = document.getElementById('cr-product-wrap');
+      if (wrap && !wrap.contains(e.target)) closeDrop();
+    });
+
+    // Clic en item: selecciona y cierra (sin navegar)
+    // Clic en "Ver →": navega a la ficha del producto
+    crDrop.addEventListener('click', function(e) {
+      var navLink = e.target.closest('[data-nav]');
+      if (navLink) {
+        e.stopPropagation();
+        window.location.href = navLink.getAttribute('data-nav');
+        return;
+      }
+      var item = e.target.closest('.cr-pd-item');
+      if (item) {
+        productSel.value = item.getAttribute('data-name');
+        closeDrop();
+        productSel.focus();
+      }
+    });
+
+    // Navegación por teclado
+    productSel.addEventListener('keydown', function(e) {
+      var items = crDrop.querySelectorAll('.cr-pd-item');
+      var focused = crDrop.querySelector('.cr-pd-item[aria-selected="true"]');
+      var idx = focused ? Array.prototype.indexOf.call(items, focused) : -1;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!dropOpen) openDrop();
+        var next = items[idx + 1] || items[0];
+        if (focused) focused.removeAttribute('aria-selected');
+        if (next) next.setAttribute('aria-selected', 'true');
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = items[idx - 1] || items[items.length - 1];
+        if (focused) focused.removeAttribute('aria-selected');
+        if (prev) prev.setAttribute('aria-selected', 'true');
+      } else if (e.key === 'Enter') {
+        if (focused) {
+          e.preventDefault();
+          productSel.value = focused.getAttribute('data-name');
+          closeDrop();
+        }
+      } else if (e.key === 'Escape') {
+        closeDrop();
+      }
     });
   }
 
