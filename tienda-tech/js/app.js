@@ -1122,10 +1122,7 @@ PRODUCTS.push(
     price:109.99, oldPrice:139.99, badge: 'OFERTA',
     image:'img/productos/MGS0000025666-0.jpg',
     images: [
-      'img/productos/MGS0000025666-0.jpg',
-      'img/productos/1.jpg',
-      'img/productos/2.jpg',
-      'img/productos/3.jpg'
+      'img/productos/MGS0000025666-0.jpg'
     ],
     description:'Auriculares gaming USB de Logitech con drivers Pro-G de 50mm y membrana de fibra híbrida para un sonido preciso y potente. Micrófono Pro-G Supercardioid desprendible con tecnología Blue VO!CE, sonido envolvente DTS 7.1, almohadillas de espuma de memoria y construcción de acero inoxidable.',
     specs:{
@@ -1682,9 +1679,7 @@ PRODUCTS.push(
     image:'img/productos/DSP0000035833-0.jpg',
     images: [
       'img/productos/DSP0000035833-0.jpg',
-      'img/productos/1646-teclado-de-membrana-corsair-k55-core-tkl-layout-es-rgb-resistente-a-derrames.jpg',
-      'https://thumb.pccomponentes.com/w-530-530/articles/1094/10948874/2579-teclado-de-membrana-corsair-k55-core-tkl-layout-es-rgb-resistente-a-derrames.jpg',
-      'https://thumb.pccomponentes.com/w-530-530/articles/1094/10948874/3208-teclado-de-membrana-corsair-k55-core-tkl-layout-es-rgb-resistente-a-derrames.jpg'
+      'img/productos/1646-teclado-de-membrana-corsair-k55-core-tkl-layout-es-rgb-resistente-a-derrames.jpg'
     ],
     description:'Switch: Gaming',
     specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000035833'}
@@ -2003,8 +1998,8 @@ PRODUCTS.push(
       'img/productos/MGS0000024055-1.jpg',
       'img/productos/MGS0000024055-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'MGS0000024055'}
+    description:'Altavoz Bluetooth compacto con diseño esférico · conexión inalámbrica · color Rosa',
+    specs:{'Diseño':'Ball Shape Mono', 'Conectividad':'Bluetooth', 'Color':'Rosa', 'SKU Megasur':'MGS0000024055'}
   },
   { id:103, name:'ALTAVOZ HAMA SHINE 2.0 BLANCO', brand:'HAMA', category:'altavoces',
     price:24.99, oldPrice:29.49, badge: 'OFERTA',
@@ -2038,8 +2033,8 @@ PRODUCTS.push(
       'img/productos/DSP0000024274-3.jpg',
       'img/productos/DSP0000024274-4.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000024274'}
+    description:'Sistema de altavoces 3.0 estéreo con subwoofer · 3 canales de audio · color Blanco',
+    specs:{'Sistema':'3.0 con subwoofer', 'Canales':'3', 'Color':'Blanco', 'SKU Megasur':'DSP0000024274'}
   },
   // ── QCHARX ─────────────────────────────────────────────────
 
@@ -2059,8 +2054,8 @@ PRODUCTS.push(
       'img/productos/MGS0000023191-0.jpg',
       'img/productos/MGS0000023191-1.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'MGS0000023191'}
+    description:'Altavoz portátil Bluetooth con sonido 360° · resistente y compacto · color Negro',
+    specs:{'Conectividad':'Bluetooth', 'Sonido':'360°', 'Color':'Negro', 'SKU Megasur':'MGS0000023191'}
   },
   { id:107, name:'ALTAVOZ QCHARX FLOWMAX NEGRO', brand:'QCHARX', category:'altavoces',
     price:39.99, oldPrice:47.19, badge: 'OFERTA',
@@ -2069,8 +2064,8 @@ PRODUCTS.push(
       'img/productos/MGS0000023189-0.jpg',
       'img/productos/MGS0000023189-1.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'MGS0000023189'}
+    description:'Altavoz portátil Bluetooth premium con mayor potencia · sonido potente y envolvente · color Negro',
+    specs:{'Conectividad':'Bluetooth', 'Modelo':'FlowMax', 'Color':'Negro', 'SKU Megasur':'MGS0000023189'}
   }
 );
 
@@ -2084,8 +2079,8 @@ PRODUCTS.push(
   { id:111, name:'AURICULARES SONY WI-C100 INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
     price:29.99, oldPrice:35.39, badge: 'OFERTA',
     image:'img/productos/DSP0000037821-0.jpg',
-    description:'',
-    specs:{'SKU Megasur':'DSP0000037821'}
+    description:'Auriculares in-ear inalámbricos Bluetooth · hasta 25h de batería · con micrófono integrado',
+    specs:{'Tipo':'In-ear inalámbrico', 'Batería':'Hasta 25h', 'Micrófono':'Integrado', 'SKU Megasur':'DSP0000037821'}
   },
   { id:110, name:'AURICULARES SONY WH-CH520 BLUETOOH BLANCO', brand:'SONY', category:'auriculares',
     price:49.99, oldPrice:58.99, badge: 'OFERTA',
@@ -2096,20 +2091,20 @@ PRODUCTS.push(
   { id:114, name:'AURICULARES SONY WF-C510 INALAMBRICO AZUL', brand:'SONY', category:'auriculares',
     price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037829-0.jpg',
-    description:'',
-    specs:{'SKU Megasur':'DSP0000037829'}
+    description:'True wireless in-ear Bluetooth 5.3 · hasta 22h con estuche · color Azul',
+    specs:{'Tipo':'True Wireless', 'Bluetooth':'5.3', 'Batería':'Hasta 22h', 'SKU Megasur':'DSP0000037829'}
   },
   { id:113, name:'AURICULARES SONY WF-C710N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
     price:69.99, oldPrice:82.59, badge: 'OFERTA',
     image:'img/productos/DSP0000037823-0.jpg',
-    description:'',
-    specs:{'SKU Megasur':'DSP0000037823'}
+    description:'True wireless con cancelación activa de ruido (ANC) · sonido Sony 360° · hasta 15h + estuche',
+    specs:{'ANC':'Cancelación activa de ruido', 'Tipo':'True Wireless', 'Batería':'Hasta 15h + estuche', 'SKU Megasur':'DSP0000037823'}
   },
   { id:112, name:'AURICULARES SONY WH-CH720N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
     price:99.99, oldPrice:117.99, badge: 'OFERTA',
     image:'img/productos/DSP0000037822-0.jpg',
-    description:'',
-    specs:{'SKU Megasur':'DSP0000037822'}
+    description:'Over-ear inalámbrico con cancelación activa de ruido (ANC) · Bluetooth 5.2 · hasta 35h de batería',
+    specs:{'ANC':'Cancelación activa de ruido', 'Tipo':'Over-ear', 'Batería':'Hasta 35h', 'Bluetooth':'5.2', 'SKU Megasur':'DSP0000037822'}
   },
   // ── EPOS SENNHEISER ────────────────────────────────────────
 
@@ -2146,8 +2141,8 @@ PRODUCTS.push(
       'img/productos/DSP0000012542-1.jpg',
       'img/productos/DSP0000012542-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000012542'}
+    description:'Auriculares inalámbricos para TV por radiofrecuencia (RF) · sonido estéreo · conexión a TV sin Bluetooth',
+    specs:{'Tipo':'Over-ear inalámbrico RF', 'Uso':'Televisión', 'Sonido':'Estéreo', 'SKU Megasur':'DSP0000012542'}
   },
   { id:117, name:'AURICULARES EPOS SENNHEISER RS 5200 RF', brand:'EPOS SENNHEISER', category:'auriculares',
     price:89.99, oldPrice:106.19, badge: 'OFERTA',
@@ -2159,8 +2154,8 @@ PRODUCTS.push(
       'img/productos/DSP0000012543-3.jpg',
       'img/productos/DSP0000012543-4.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000012543'}
+    description:'Auriculares inalámbricos RF premium para TV · calidad de sonido Sennheiser · diseño cerrado',
+    specs:{'Tipo':'Over-ear inalámbrico RF', 'Uso':'Televisión', 'Marca calidad':'Sennheiser', 'SKU Megasur':'DSP0000012543'}
   },
   { id:119, name:'AURICULARES EPOS SENNHEISER RS 2000 TV INALAMBRICO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
     price:179.99, oldPrice:212.39, badge: 'OFERTA',
@@ -2172,8 +2167,8 @@ PRODUCTS.push(
       'img/productos/DSP0000028398-3.jpg',
       'img/productos/DSP0000028398-4.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000028398'}
+    description:'Auriculares inalámbricos para TV con sonido Sennheiser de alta fidelidad · RF 900 MHz · hasta 20h batería',
+    specs:{'Tipo':'Over-ear inalámbrico RF', 'Frecuencia':'900 MHz', 'Batería':'Hasta 20h', 'SKU Megasur':'DSP0000028398'}
   },
   // ── JABRA ──────────────────────────────────────────────────
 
@@ -2185,8 +2180,8 @@ PRODUCTS.push(
       'img/productos/DSP0000030414-1.jpg',
       'img/productos/DSP0000030414-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000030414'}
+    description:'Auricular profesional con cable para oficina · micrófono con cancelación de ruido · certificado UC',
+    specs:{'Tipo':'Monoaural con cable', 'Micrófono':'Cancelación de ruido', 'Certificación':'UC', 'SKU Megasur':'DSP0000030414'}
   },
   { id:124, name:'AURICULARES JABRA BIZ 2300 QD DUO', brand:'JABRA', category:'auriculares',
     price:89.99, oldPrice:106.19, badge: 'OFERTA',
@@ -2198,19 +2193,19 @@ PRODUCTS.push(
       'img/productos/DSP0000030416-3.jpg',
       'img/productos/DSP0000030416-4.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000030416'}
+    description:'Auricular binaural profesional para centro de llamadas · micrófono de alta calidad · conector QD',
+    specs:{'Tipo':'Binaural (DUO)', 'Conector':'Quick Disconnect (QD)', 'Uso':'Call center', 'SKU Megasur':'DSP0000030416'}
   },
   { id:121, name:'AURICULARES JABRA ENGAGE 45 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
     price:179.99, oldPrice:212.39, badge: 'OFERTA',
     image:'img/productos/DSP0000030409-0.jpg',
     images: [
       'img/productos/DSP0000030409-0.jpg',
-      'https://www.jabra.com/-/media/Images/Products/Jabra-Engage-45SE/jabra-engage-45se-d.png',
-      'https://www.jabra.com/-/media/Images/Products/Jabra-Engage-45SE/Jabra_Engage_45SE_Stereo_UC_Docked.png'
+      'img/productos/jabra-engage-45se-1.png',
+      'img/productos/jabra-engage-45se-2.png'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000030409'}
+    description:'Auricular inalámbrico DECT profesional para empresa · hasta 13h de batería · micrófono con cancelación de ruido',
+    specs:{'Tipo':'Inalámbrico DECT', 'Batería':'Hasta 13h', 'Micrófono':'Cancelación de ruido', 'SKU Megasur':'DSP0000030409'}
   },
   { id:120, name:'AURICULARES JABRA EVOLVE2 65 MS', brand:'JABRA', category:'auriculares',
     price:249.99, oldPrice:294.99, badge: 'OFERTA',
@@ -2220,8 +2215,8 @@ PRODUCTS.push(
       'img/productos/MGS0000025960-1.jpg',
       'img/productos/MGS0000025960-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'MGS0000025960'}
+    description:'Auricular inalámbrico premium certificado Microsoft Teams · ANC avanzado · hasta 37h de batería',
+    specs:{'Certificación':'Microsoft Teams', 'ANC':'Cancelación activa de ruido', 'Batería':'Hasta 37h', 'SKU Megasur':'MGS0000025960'}
   },
   { id:122, name:'AURICULARES JABRA ENGAGE 65 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
     price:289.99, oldPrice:342.19, badge: 'OFERTA',
@@ -2231,8 +2226,8 @@ PRODUCTS.push(
       'img/productos/DSP0000030410-1.jpg',
       'img/productos/DSP0000030410-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000030410'}
+    description:'Auricular DECT inalámbrico profesional avanzado · rango hasta 150m · micrófono con cancelación de ruido',
+    specs:{'Tipo':'Inalámbrico DECT', 'Rango':'Hasta 150m', 'Micrófono':'Cancelación de ruido', 'SKU Megasur':'DSP0000030410'}
   },
   // ── ENERGY SISTEM ──────────────────────────────────────────
 
@@ -2273,8 +2268,8 @@ PRODUCTS.push(
       'img/productos/DSP0000007037-1.jpg',
       'img/productos/DSP0000007037-2.jpg'
     ],
-    description:'',
-    specs:{'SKU Megasur':'DSP0000007037'}
+    description:'Auriculares gaming supraaurales con sonido 7.1 virtual · drivers 50mm · conexión USB · multiplataforma',
+    specs:{'Sonido':'7.1 virtual', 'Driver':'50mm', 'Conexión':'USB', 'Plataformas':'PC/PS/Xbox/Switch', 'SKU Megasur':'DSP0000007037'}
   },
   // ── URBANISTA ──────────────────────────────────────────────
 
