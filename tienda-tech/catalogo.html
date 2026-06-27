@@ -446,42 +446,35 @@
       }, 500);
     }
 
-    // ── Marcas: extraídas de la categoría activa, contador y link al total de la marca ──
+    // ── Marcas: filtradas por la categoría activa, link mantiene el filtro de categoría ──
     if (typeof PRODUCTS !== 'undefined') {
-      // Muestra solo las marcas que tienen productos en la categoría activa
       var srcProds = (filterK !== 'all' && FILTER_MAP[filterK])
         ? PRODUCTS.filter(function(p) { return p.category === FILTER_MAP[filterK]; })
         : PRODUCTS.slice();
-
-      // Contar total de productos por marca en todo el catálogo (para el badge)
-      var totalByBrand = {};
-      PRODUCTS.forEach(function(p) {
-        var key = (p.brand || '').trim().toLowerCase();
-        if (!key) return;
-        totalByBrand[key] = (totalByBrand[key] || 0) + 1;
-      });
 
       var brandMap = {};
       srcProds.forEach(function(p) {
         var raw = (p.brand || '').trim();
         if (!raw) return;
         var key = raw.toLowerCase();
-        if (!brandMap[key]) brandMap[key] = { display: raw };
+        if (!brandMap[key]) brandMap[key] = { display: raw, count: 0 };
+        brandMap[key].count++;
       });
 
-      var brandEntries = Object.keys(brandMap)
-        .map(function(k) { return { display: brandMap[k].display, total: totalByBrand[k] || 0 }; })
-        .sort(function(a, b) { return b.total - a.total || a.display.localeCompare(b.display); });
+      var brandEntries = Object.values(brandMap)
+        .sort(function(a, b) { return b.count - a.count || a.display.localeCompare(b.display); });
 
       if (brandEntries.length) {
         document.getElementById('brands-sect').style.display = '';
         var activeLow = brandK ? decodeURIComponent(brandK).toLowerCase() : '';
         document.getElementById('brand-list').innerHTML = brandEntries.map(function(b) {
           var isActive = activeLow && b.display.toLowerCase() === activeLow;
-          // Link solo a ?brand=X → muestra TODOS los productos de esa marca
-          var href = 'catalogo.html?brand=' + encodeURIComponent(b.display);
+          // Mantiene la categoría activa + añade filtro de marca
+          var href = filterK !== 'all'
+            ? 'catalogo.html?filter=' + filterK + '&brand=' + encodeURIComponent(b.display)
+            : 'catalogo.html?brand=' + encodeURIComponent(b.display);
           return '<a href="' + href + '" class="cat-sb-link' + (isActive ? ' active' : '') + '">' +
-                 b.display + '<span class="sb-badge">' + b.total + '</span></a>';
+                 b.display + '<span class="sb-badge">' + b.count + '</span></a>';
         }).join('');
       }
     }
