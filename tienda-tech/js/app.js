@@ -5209,7 +5209,12 @@ function renderShowcase() {
     { id: 127, label: 'Altavoz Portátil',   bdg: 'sc-bdg-accent' },
   ];
 
+  var CAT_FILTER = { 'relojes':'watches', 'auriculares':'headphones', 'altavoces':'speakers', 'teclados gaming':'peripherals', 'smartphones':'smartphones' };
+
   function buildCard(p, catLabel, catBdg) {
+    var fk  = CAT_FILTER[p.category] || 'all';
+    var url = 'catalogo.html?filter=' + fk + '&product=' + p.id;
+
     var desc = Array.isArray(p.description)
       ? p.description.slice(0, 2).join('. ')
       : (typeof p.description === 'string' ? p.description.slice(0, 110) : '');
@@ -5223,9 +5228,11 @@ function renderShowcase() {
 
     var priceStr = '€' + p.price.toFixed(2).replace('.', ',');
 
-    return '<div class="sc-card">' +
+    return '<div class="sc-card" role="article">' +
       '<div class="sc-img-wrap">' +
-        '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+        '<a href="' + url + '" class="sc-img-link" aria-hidden="true" tabindex="-1">' +
+          '<img class="sc-img" src="' + (p.image || '') + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">' +
+        '</a>' +
         '<span class="sc-bdg ' + catBdg + '">' + badge + '</span>' +
       '</div>' +
       '<div class="sc-body">' +
@@ -5233,11 +5240,14 @@ function renderShowcase() {
           '<span class="sc-brand">' + (p.brand || '') + '</span>' +
           '<span class="sc-cat">' + catLabel + '</span>' +
         '</div>' +
-        '<div class="sc-name">' + name + '</div>' +
+        '<a href="' + url + '" class="sc-name" aria-label="Ver ' + name + '">' + name + '</a>' +
         '<div class="sc-desc">' + desc + '</div>' +
         '<div class="sc-footer">' +
           '<div class="sc-price">' + priceStr + '<small>IVA incluido</small></div>' +
-          '<button class="sc-btn-add" onclick="addToCart(' + p.id + ')">+ Carrito</button>' +
+          '<div class="sc-actions">' +
+            '<a class="sc-btn-view" href="' + url + '" aria-label="Ver producto ' + name + '">Ver Producto <span class="sc-arrow">→</span></a>' +
+            '<button class="sc-btn-add" onclick="addToCart(' + p.id + ')" aria-label="Añadir ' + name + ' al carrito">+ Carrito</button>' +
+          '</div>' +
         '</div>' +
       '</div>' +
     '</div>';
