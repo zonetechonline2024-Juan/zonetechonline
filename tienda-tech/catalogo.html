@@ -374,31 +374,35 @@
   var gradWord = CAT_GRAD[filterK] || titleParts[titleParts.length - 1];
   var baseTitle = catLabel.replace(gradWord, '').trim();
 
-  document.getElementById('page-title').textContent =
-    (brandK ? decodeURIComponent(brandK) + ' · ' : '') + catLabel + ' | ZoneTechOnline';
+  function $id(id) { return document.getElementById(id); }
+  function setText(id, v) { var e = $id(id); if (e) e.textContent = v; }
+  function setHTML(id, v) { var e = $id(id); if (e) e.innerHTML  = v; }
+  function show(id)       { var e = $id(id); if (e) e.style.display = '';  }
+  function showI(id)      { var e = $id(id); if (e) e.style.display = 'inline-block'; }
 
-  var heroTitle = document.getElementById('cat-hero-title');
-  if (brandK) {
-    var bName = decodeURIComponent(brandK);
-    heroTitle.innerHTML = bName + ' <span class="gradient-text">' + catLabel + '</span>';
-    document.getElementById('brand-tag').textContent = bName;
-    document.getElementById('brand-tag').style.display = 'inline-block';
-    document.getElementById('bc-cat').textContent = catLabel;
-    document.getElementById('bc-brand-sep').style.display = '';
-    document.getElementById('bc-brand').textContent = bName;
-    document.getElementById('bc-brand').style.display = '';
-    document.getElementById('bc-cat').innerHTML = '<a href="catalogo.html?filter=' + filterK + '">' + catLabel + '</a>';
-  } else {
-    heroTitle.innerHTML = (baseTitle ? baseTitle + ' ' : '') + '<span class="gradient-text">' + gradWord + '</span>';
-    document.getElementById('bc-cat').textContent = filterK === 'all' ? 'Catálogo' : catLabel;
-  }
+  try {
+    setText('page-title',
+      (brandK ? decodeURIComponent(brandK) + ' · ' : '') + catLabel + ' | ZoneTechOnline');
+
+    var heroTitle = $id('cat-hero-title');
+    if (brandK && heroTitle) {
+      var bName = decodeURIComponent(brandK);
+      heroTitle.innerHTML = bName + ' <span class="gradient-text">' + catLabel + '</span>';
+      setText('brand-tag', bName); showI('brand-tag');
+      setHTML('bc-cat', '<a href="catalogo.html?filter=' + filterK + '">' + catLabel + '</a>');
+      setText('bc-brand', bName); show('bc-brand');
+      show('bc-brand-sep');
+    } else if (heroTitle) {
+      heroTitle.innerHTML = (baseTitle ? baseTitle + ' ' : '') + '<span class="gradient-text">' + gradWord + '</span>';
+      setText('bc-cat', filterK === 'all' ? 'Catálogo' : catLabel);
+    }
+  } catch(e) {}
 
   // ── Sidebar active state ──
   document.querySelectorAll('.cat-sb-link').forEach(function(link) {
     var lf = link.getAttribute('data-filter');
     if (lf === filterK && !brandK) link.classList.add('active');
   });
-
 
   // ── Render products ──
   document.addEventListener('DOMContentLoaded', function() {
