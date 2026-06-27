@@ -3290,7 +3290,8 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
-    var shortDesc = product.description.length > 88 ? product.description.substring(0, 88) + '...' : product.description;
+    var descRaw = Array.isArray(product.description) ? product.description.join('. ') : (product.description || '');
+    var shortDesc = descRaw.length > 88 ? descRaw.substring(0, 88) + '...' : descRaw;
     var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
     var inWl2 = isInWishlist(product.id);
     var wlFill2 = inWl2 ? '#f87171' : 'none';
@@ -3801,40 +3802,63 @@ function initScrollReveal() {
 // ─── MEGA-MENU NAVIGATION ────────────────────────────────────────────────────
 
 function initMegaMenu() {
-  // Force navigation on mega-menu links (CSS hover may lose focus before click registers)
-  document.querySelectorAll('.mega-b, .mega-all-link, .mega-see, .nav-link').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-      var href = a.getAttribute('href');
-      if (href && href.charAt(0) !== '#') {
-        e.preventDefault();
-        window.location.href = href;
-      }
+  // ── Genera marcas dinámicas en todos los .mega-brands[data-filter] (index + catalogo) ──
+  document.querySelectorAll('.mega-brands[data-filter]').forEach(function(container) {
+    var fk = container.getAttribute('data-filter');
+    var catKey = FILTER_MAP[fk];
+    if (!catKey) return;
+    var brandMap = {};
+    PRODUCTS.forEach(function(p) {
+      if (p.category !== catKey) return;
+      var raw = (p.brand || '').trim();
+      if (!raw) return;
+      var key = raw.toLowerCase();
+      if (!brandMap[key]) brandMap[key] = { display: raw, count: 0 };
+      brandMap[key].count++;
     });
+    var sorted = Object.values(brandMap)
+      .sort(function(a, b) { return b.count - a.count || a.display.localeCompare(b.display); })
+      .slice(0, 6);
+    container.innerHTML = sorted.map(function(b) {
+      return '<a href="catalogo.html?filter=' + fk + '&brand=' + encodeURIComponent(b.display) + '" class="mega-b">' +
+             '<strong>' + b.display + '</strong>' +
+             '<span class="mega-bc">' + b.count + ' modelo' + (b.count !== 1 ? 's' : '') + '</span>' +
+             '</a>';
+    }).join('');
+    // Actualiza el conteo en "Ver X modelos →" del enlace principal de categoría
+    var totalCat = PRODUCTS.filter(function(p) { return p.category === catKey; }).length;
+    var allLinkSpan = container.closest('.mega-left') && container.closest('.mega-left').querySelector('.mega-all-link span');
+    if (allLinkSpan) allLinkSpan.textContent = totalCat + ' modelos →';
   });
 
-  // Keep dropdown open during mouse transition (hover delay)
+  // ── Delegación de eventos: funciona para links estáticos Y dinámicos ──
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('.mega-b, .mega-all-link, .mega-see');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href && href.charAt(0) !== '#') {
+      window.location.href = href;
+    }
+  });
+
+  // ── Mantiene el dropdown abierto durante la transición del ratón (180ms) ──
   document.querySelectorAll('.nav-item').forEach(function(item) {
     var drop = item.querySelector('.mega-drop');
     if (!drop) return;
     var t;
-    item.addEventListener('mouseleave', function() {
+    function hideDrop() {
       t = setTimeout(function() {
         drop.style.opacity = '';
         drop.style.visibility = '';
         drop.style.pointerEvents = '';
         drop.style.transform = '';
       }, 180);
-    });
-    item.addEventListener('mouseenter', function() { clearTimeout(t); });
-    drop.addEventListener('mouseenter', function() { clearTimeout(t); });
-    drop.addEventListener('mouseleave', function() {
-      t = setTimeout(function() {
-        drop.style.opacity = '';
-        drop.style.visibility = '';
-        drop.style.pointerEvents = '';
-        drop.style.transform = '';
-      }, 180);
-    });
+    }
+    function cancelHide() { clearTimeout(t); }
+    item.addEventListener('mouseleave', hideDrop);
+    item.addEventListener('mouseenter', cancelHide);
+    drop.addEventListener('mouseenter', cancelHide);
+    drop.addEventListener('mouseleave', hideDrop);
   });
 }
 
@@ -4110,7 +4134,8 @@ function initSearch() {
     }
 
     if (document.getElementById('catalog-grid')) {
-      renderCatalogGrid('catalog-grid', filterKey);
+      var curBrand = new URLSearchParams(window.location.search).get('brand') || '';
+      renderCatalogGrid('catalog-grid', filterKey, curBrand);
       highlight(id);
       return;
     }
@@ -4128,8 +4153,7 @@ function initSearch() {
     closeSearch();
     if (document.getElementById('catalog-grid')) {
       renderCatalogGrid('catalog-grid', filterKey);
-      var sec = document.getElementById('catalog-section');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (document.getElementById('products-grid')) {
       filterAndScroll(filterKey);
     } else {
