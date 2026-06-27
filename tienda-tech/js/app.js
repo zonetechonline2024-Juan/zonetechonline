@@ -4882,9 +4882,12 @@ function initAIAssistant() {
   function getResponse(q) {
     var ql = q.toLowerCase();
 
-    // ── helpers ────────────────────────────────────────────────────────────
+    // ── Helpers ────────────────────────────────────────────────────────────
     function fmt(n) { return '€' + Number(n).toFixed(2).replace('.', ','); }
-
+    function safeMin(arr) {
+      if (!arr || !arr.length) return 0;
+      return arr.reduce(function(m, p) { return p.price < m ? p.price : m; }, Infinity);
+    }
     function byCat(cat) {
       return PRODUCTS.filter(function(p) { return p.category === cat && p.price; });
     }
@@ -4896,29 +4899,47 @@ function initAIAssistant() {
       var bl = brand.toLowerCase();
       return PRODUCTS.filter(function(p) { return p.category === cat && p.brand && p.brand.toLowerCase() === bl && p.price; });
     }
-    function minP(arr) {
-      return arr.reduce(function(m, p) { return p.price < m ? p.price : m; }, Infinity);
-    }
     function topN(arr, n, asc) {
       return arr.slice().sort(function(a, b) { return asc ? a.price - b.price : b.price - a.price; }).slice(0, n);
     }
     function cleanName(name) {
       return name.replace(/^(?:MOVIL|SMARTPHONE|TELEFONO MOVIL|RUGERIZADO|TECLADO|AURICULARES?)\s+/i, '').trim();
     }
+    // Obtiene el valor exacto de brand del catálogo (respeta mayúsculas reales)
+    function realBrand(name) {
+      var bl = name.toLowerCase();
+      var p = PRODUCTS.filter(function(x) { return x.brand && x.brand.toLowerCase() === bl; })[0];
+      return p ? p.brand : name;
+    }
     var catToFilter = { 'relojes':'watches', 'auriculares':'headphones', 'altavoces':'speakers', 'teclados gaming':'peripherals', 'smartphones':'smartphones' };
     function listItems(arr, n, asc) {
+      if (!arr || !arr.length) return '<em>Sin stock disponible</em>';
       return topN(arr, n, asc).map(function(p) {
         var fk = catToFilter[p.category] || 'all';
         return '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=' + fk + '&product=' + p.id + '">' + cleanName(p.name) + ' (' + fmt(p.price) + ')</a>';
       }).join(' · ');
+    }
+    // Genera botón CTA con URL correcta y aria-label accesible
+    function cta(label, fk, brand) {
+      var rb = brand ? realBrand(brand) : null;
+      var url = rb
+        ? 'catalogo.html?filter=' + fk + '&brand=' + encodeURIComponent(rb)
+        : 'catalogo.html?filter=' + fk;
+      return '<a class="ai-msg-link" href="' + url + '" aria-label="Ver ' + label + '">' + label + ' →</a>';
     }
     function brandCounts(arr) {
       var m = {};
       arr.forEach(function(p) { if (p.brand) m[p.brand] = (m[p.brand] || 0) + 1; });
       return m;
     }
+    function brandCountStr(arr, n) {
+      var bc = brandCounts(arr);
+      return Object.keys(bc).slice(0, n || 4).map(function(b) {
+        return '<strong>' + b + '</strong> (' + bc[b] + ')';
+      }).join(' · ');
+    }
 
-    // ── catálogo live stats ─────────────────────────────────────────────────
+    // ── Live stats ─────────────────────────────────────────────────────────
     var allPriced   = PRODUCTS.filter(function(p) { return p.price; });
     var relojes     = byCat('relojes');
     var auriculares = byCat('auriculares');
@@ -4926,147 +4947,236 @@ function initAIAssistant() {
     var gaming      = byCat('teclados gaming');
     var phones      = byCat('smartphones');
 
-    // ── marca: Xiaomi ───────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════
+    // PRODUCTOS ESPECÍFICOS (más específico primero)
+    // ══════════════════════════════════════════════════════════════════════
+
+    // ── AirPods → auriculares + Apple ──────────────────────────────────────
+    if (/airpods?|air pods?/.test(ql)) {
+      var airp = byCatBrand('auriculares', 'Apple');
+      var src  = airp.length ? airp : byBrand('Apple');
+      return 'AirPods <strong>Apple</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' +
+             cta('Ver AirPods', 'headphones', 'Apple');
+    }
+
+    // ── iPhone → smartphones + Apple ──────────────────────────────────────
+    if (/iphone/.test(ql)) {
+      var iphp = byCatBrand('smartphones', 'Apple');
+      var src  = iphp.length ? iphp : byBrand('Apple');
+      return 'iPhone <strong>Apple</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' +
+             cta('Ver iPhone', 'smartphones', 'Apple');
+    }
+
+    // ── Apple Watch / Watch SE / Series → relojes + Apple ─────────────────
+    if (/apple watch|watch se|series \d+/.test(ql)) {
+      var awp = byCatBrand('relojes', 'Apple');
+      var src  = awp.length ? awp : byBrand('Apple');
+      return '<strong>Apple Watch</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. WatchOS 11 · resistencia 50m. ' +
+             cta('Ver Apple Watch', 'watches', 'Apple');
+    }
+
+    // ── Apple genérico → muestra todos los productos Apple por categoría ───
+    if (/\bapple\b/.test(ql)) {
+      var allApple  = byBrand('Apple');
+      var apWatches = byCatBrand('relojes', 'Apple');
+      var apAir     = byCatBrand('auriculares', 'Apple');
+      var apPhone   = byCatBrand('smartphones', 'Apple');
+      var ctaLinks  = [];
+      if (apWatches.length) ctaLinks.push(cta('Apple Watch', 'watches', 'Apple'));
+      if (apAir.length)     ctaLinks.push(cta('AirPods', 'headphones', 'Apple'));
+      if (apPhone.length)   ctaLinks.push(cta('iPhone', 'smartphones', 'Apple'));
+      return 'Gama <strong>Apple</strong> (' + allApple.length + ' productos desde ' + fmt(safeMin(allApple)) + '): ' +
+             listItems(allApple, 5, true) + '. ' + ctaLinks.join(' ');
+    }
+
+    // ── Garmin → relojes deportivos ───────────────────────────────────────
+    if (/garmin|forerunner|fen[i]x|venu|vivoactive|instinct/.test(ql)) {
+      var gp  = byCatBrand('relojes', 'Garmin');
+      var src = gp.length ? gp : byBrand('Garmin');
+      return 'Gama <strong>Garmin</strong> (' + src.length + ' relojes desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. GPS multibanda · Salud avanzada · Deportes. ' +
+             cta('Ver Garmin', 'watches', 'Garmin');
+    }
+
+    // ── Samsung Galaxy Watch → relojes ────────────────────────────────────
+    if (/galaxy watch|galaxy.*reloj|reloj.*samsung/.test(ql)) {
+      var sgw = byCatBrand('relojes', 'Samsung');
+      var src = sgw.length ? sgw : byCat('relojes');
+      return '<strong>Samsung Galaxy Watch</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' +
+             cta('Ver Galaxy Watch', 'watches', 'Samsung');
+    }
+
+    // ── Samsung Galaxy A/S → smartphones ─────────────────────────────────
+    if (/galaxy [as]\d|samsung.*m[oó]vil|samsung.*smartphone|m[oó]vil.*samsung/.test(ql)) {
+      var ssp = byCatBrand('smartphones', 'Samsung');
+      var src = ssp.length ? ssp : phones;
+      return '<strong>Samsung Smartphones</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' +
+             cta('Ver Samsung Phones', 'smartphones', 'Samsung');
+    }
+
+    // ── Samsung genérico → multi-categoría ───────────────────────────────
+    if (/\bsamsung\b/.test(ql)) {
+      var sAll     = byBrand('Samsung');
+      var sWatches = byCatBrand('relojes', 'Samsung');
+      var sPhones  = byCatBrand('smartphones', 'Samsung');
+      var sCtas    = [];
+      if (sWatches.length) sCtas.push(cta('Relojes Samsung', 'watches', 'Samsung'));
+      if (sPhones.length)  sCtas.push(cta('Phones Samsung', 'smartphones', 'Samsung'));
+      return 'Gama <strong>Samsung</strong> (' + sAll.length + ' productos desde ' + fmt(safeMin(sAll)) + '): ' +
+             listItems(sAll, 4, true) + '. ' + (sCtas.length ? sCtas.join(' ') : cta('Ver Samsung', 'watches', 'Samsung'));
+    }
+
+    // ── Sony auriculares (específico) ─────────────────────────────────────
+    if (/sony.*auricular|auricular.*sony|wh[\-. ]c|wf[\-. ]c|ult wear/.test(ql)) {
+      var sa  = byCatBrand('auriculares', 'Sony');
+      var src = sa.length ? sa : byBrand('Sony');
+      return '<strong>Sony Auriculares</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. Cancelación de ruido · Hi-Res Audio. ' +
+             cta('Ver Sony', 'headphones', 'Sony');
+    }
+
+    // ── Sony genérico → auriculares (categoría principal de Sony) ─────────
+    if (/\bsony\b/.test(ql)) {
+      var soAll  = byBrand('Sony');
+      var soHead = byCatBrand('auriculares', 'Sony');
+      var src    = soAll.length ? soAll : auriculares;
+      return '<strong>Sony</strong> (' + src.length + ' productos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. ' +
+             cta('Ver Sony', 'headphones', 'Sony');
+    }
+
+    // ── JBL → altavoces ───────────────────────────────────────────────────
+    if (/\bjbl\b|jbl go|jbl clip|jbl flip|jbl charge/.test(ql)) {
+      var jp  = byBrand('JBL');
+      var src = jp.length ? jp : altavoces;
+      return '<strong>JBL</strong> (' + src.length + ' altavoces desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. Portátiles · Resistentes al agua. ' +
+             cta('Ver JBL', 'speakers', 'JBL');
+    }
+
+    // ── Xiaomi → relojes + posiblemente phones ────────────────────────────
     if (/xiaomi|redmi watch|mi band|smart band/.test(ql)) {
-      var xp = byBrand('Xiaomi');
-      return 'Gama <strong>Xiaomi</strong> (' + xp.length + ' productos desde ' + fmt(minP(xp)) + '): ' +
-             listItems(xp, 5, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Xiaomi">Ver Xiaomi →</a>';
+      var xAll     = byBrand('Xiaomi');
+      var xWatches = byCatBrand('relojes', 'Xiaomi');
+      var xPhones  = byCatBrand('smartphones', 'Xiaomi');
+      var xCta     = xWatches.length
+        ? cta('Ver Xiaomi Relojes', 'watches', 'Xiaomi')
+        : (xPhones.length ? cta('Ver Xiaomi Phones', 'smartphones', 'Xiaomi') : cta('Ver Xiaomi', 'watches', 'Xiaomi'));
+      var src = xAll.length ? xAll : relojes;
+      return 'Gama <strong>Xiaomi</strong> (' + src.length + ' productos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. ' + xCta;
     }
 
-    // ── marca: Samsung ──────────────────────────────────────────────────────
-    if (/samsung|galaxy watch/.test(ql)) {
-      var sp = byBrand('Samsung');
-      return 'Gama <strong>Samsung</strong> (' + sp.length + ' productos desde ' + fmt(minP(sp)) + '): ' +
-             listItems(sp, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Samsung">Ver Samsung →</a>';
+    // ── TCL → smartphones ─────────────────────────────────────────────────
+    if (/\btcl\b|nxtpaper/.test(ql)) {
+      var tp  = byCatBrand('smartphones', 'TCL');
+      var src = tp.length ? tp : phones;
+      return '<strong>TCL NXTPAPER</strong> (' + src.length + ' smartphones desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 5, true) + '. ' +
+             cta('Ver TCL', 'smartphones', 'TCL');
     }
 
-    // ── marca: Apple ────────────────────────────────────────────────────────
-    if (/\bapple\b|apple watch|watch se|series 11/.test(ql)) {
-      var ap = byBrand('Apple');
-      return 'Gama <strong>Apple Watch</strong> (' + ap.length + ' modelos desde ' + fmt(minP(ap)) + '): ' +
-             listItems(ap, 5, true) +
-             '. Todos WatchOS 11, resistencia 50m. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Apple">Ver Apple Watch →</a>';
+    // ── ASUS → periféricos gaming (+ auriculares gaming si aplica) ─────────
+    if (/\basus\b|\brog\b/.test(ql)) {
+      var asusGam = byCatBrand('teclados gaming', 'ASUS');
+      var asusAur = byCatBrand('auriculares', 'ASUS');
+      var src     = asusGam.length ? asusGam : (asusAur.length ? asusAur : byBrand('ASUS'));
+      var aCta    = asusGam.length
+        ? cta('Ver ASUS Gaming', 'peripherals', 'ASUS')
+        : cta('Ver ASUS', 'headphones', 'ASUS');
+      return '<strong>ASUS ROG</strong> (' + src.length + ' modelos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' + aCta;
     }
 
-    // ── marca: Garmin ───────────────────────────────────────────────────────
-    if (/garmin|forerunner|fenix/.test(ql)) {
-      var gp = byBrand('Garmin');
-      return 'Gama <strong>Garmin</strong> (' + gp.length + ' modelos desde ' + fmt(minP(gp)) + '): ' +
-             listItems(gp, 5, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=watches&brand=Garmin">Ver Garmin →</a>';
+    // ── Logitech → periféricos/altavoces ─────────────────────────────────
+    if (/logitech/.test(ql)) {
+      var logAll  = byBrand('LOGITECH');
+      if (!logAll.length) logAll = byBrand('Logitech');
+      var src = logAll.length ? logAll : gaming;
+      return '<strong>Logitech</strong> (' + src.length + ' productos desde ' + fmt(safeMin(src)) + '): ' +
+             listItems(src, 4, true) + '. ' +
+             cta('Ver Logitech', 'peripherals', 'LOGITECH');
     }
 
-    // ── marca: TCL ──────────────────────────────────────────────────────────
-    if (/\btcl\b/.test(ql)) {
-      var tp = byBrand('TCL');
-      return 'Gama <strong>TCL</strong> (' + tp.length + ' productos desde ' + fmt(minP(tp)) + '): ' +
-             listItems(tp, 5, true) +
-             '. <a class="ai-msg-link" href="catalogo.html">Ver TCL →</a>';
+    // ══════════════════════════════════════════════════════════════════════
+    // CATEGORÍAS (menos específico)
+    // ══════════════════════════════════════════════════════════════════════
+
+    // ── auriculares ───────────────────────────────────────────────────────
+    if (/auricular|tws|earbuds|cascos|headphone|in.ear|inalámbrico.*escuchar/.test(ql)) {
+      return 'Auriculares (' + auriculares.length + ' modelos · ' + brandCountStr(auriculares, 4) +
+             ' · desde ' + fmt(safeMin(auriculares)) + '): ' +
+             listItems(auriculares, 4, true) + '. ' +
+             cta('Ver auriculares', 'headphones', null);
     }
 
-    // ── Sony + auriculares ──────────────────────────────────────────────────
-    if (/sony.*auricular|auricular.*sony|wh.ch|wf.c|ult wear|wh-ch|wf-c/.test(ql)) {
-      var sa = byCatBrand('auriculares', 'Sony');
-      return 'Gama <strong>Sony Auriculares</strong> (' + sa.length + ' modelos desde ' + fmt(minP(sa)) + '): ' +
-             listItems(sa, 5, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=headphones&brand=Sony">Ver Sony →</a>';
+    // ── altavoces ─────────────────────────────────────────────────────────
+    if (/altavoz|altavoces|speaker|bocina|bluetooth.*sonido|sonido.*bluetooth/.test(ql)) {
+      return 'Altavoces (' + altavoces.length + ' modelos · ' + brandCountStr(altavoces, 3) +
+             ' · desde ' + fmt(safeMin(altavoces)) + '): ' +
+             listItems(altavoces, 4, true) + '. ' +
+             cta('Ver altavoces', 'speakers', null);
     }
 
-    // ── marca: JBL ──────────────────────────────────────────────────────────
-    if (/jbl go|jbl clip|jbl flip|jbl charge|altavoz.*jbl|jbl.*altavoz|\bjbl\b/.test(ql)) {
-      var jp = byBrand('JBL');
-      return 'Gama <strong>JBL</strong> (' + jp.length + ' altavoces desde ' + fmt(minP(jp)) + '): ' +
-             listItems(jp, 5, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=speakers&brand=JBL">Ver JBL →</a>';
+    // ── relojes / deportivo / running ─────────────────────────────────────
+    if (/reloj|smartwatch|wearable|deport|running|fitness|pulsera|salud/.test(ql)) {
+      return 'Relojes inteligentes (' + relojes.length + ' modelos · ' + brandCountStr(relojes, 4) +
+             ' · desde ' + fmt(safeMin(relojes)) + '): ' +
+             listItems(relojes, 4, true) + '. ' +
+             cta('Ver relojes', 'watches', null);
     }
 
-    // ── categoría: auriculares ──────────────────────────────────────────────
-    if (/auricular|tws|earbuds|cascos|headphone/.test(ql)) {
-      var aurBC = brandCounts(auriculares);
-      var aurBrStr = Object.keys(aurBC).slice(0, 4).map(function(b) {
-        return '<strong>' + b + '</strong> (' + aurBC[b] + ')';
-      }).join(' · ');
-      return 'Auriculares (' + auriculares.length + ' modelos · ' + aurBrStr + ' · desde ' + fmt(minP(auriculares)) + '): ' +
-             listItems(auriculares, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=headphones">Ver auriculares →</a>';
+    // ── gaming / teclado / periférico ─────────────────────────────────────
+    if (/gaming|teclado|perif[eé]rico|ratón|mouse/.test(ql)) {
+      return 'Periféricos gaming (' + gaming.length + ' modelos · ' + brandCountStr(gaming, 3) +
+             ' · desde ' + fmt(safeMin(gaming)) + '): ' +
+             listItems(gaming, 4, true) + '. ' +
+             cta('Ver gaming', 'peripherals', null);
     }
 
-    // ── categoría: altavoces ────────────────────────────────────────────────
-    if (/altavoz|altavoces|speaker|bocina/.test(ql)) {
-      var altBC = brandCounts(altavoces);
-      var altBrStr = Object.keys(altBC).slice(0, 3).map(function(b) {
-        return '<strong>' + b + '</strong> (' + altBC[b] + ')';
-      }).join(' · ');
-      return 'Altavoces (' + altavoces.length + ' modelos · ' + altBrStr + ' · desde ' + fmt(minP(altavoces)) + '): ' +
-             listItems(altavoces, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=speakers">Ver altavoces →</a>';
+    // ── smartphones / móvil / teléfono ───────────────────────────────────
+    if (/smartphone|m[oó]vil|tel[eé]fono|celular/.test(ql)) {
+      return 'Smartphones (' + phones.length + ' modelos · ' + brandCountStr(phones, 4) +
+             ' · desde ' + fmt(safeMin(phones)) + '): ' +
+             listItems(phones, 4, true) + '. ' +
+             cta('Ver smartphones', 'smartphones', null);
     }
 
-    // ── categoría: relojes ──────────────────────────────────────────────────
-    if (/reloj|smartwatch|wearable/.test(ql)) {
-      var relBC = brandCounts(relojes);
-      var relBrStr = Object.keys(relBC).slice(0, 4).map(function(b) {
-        return '<strong>' + b + '</strong> (' + relBC[b] + ')';
-      }).join(' · ');
-      return 'Relojes inteligentes (' + relojes.length + ' modelos · ' + relBrStr + ' · desde ' + fmt(minP(relojes)) + '): ' +
-             listItems(relojes, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=watches">Ver relojes →</a>';
-    }
-
-    // ── categoría: gaming / periféricos ────────────────────────────────────
-    if (/asus|rog|logitech|gaming|teclado|perif[eé]rico/.test(ql)) {
-      var gamBC = brandCounts(gaming);
-      var gamBrStr = Object.keys(gamBC).slice(0, 3).map(function(b) {
-        return '<strong>' + b + '</strong> (' + gamBC[b] + ')';
-      }).join(' · ');
-      return 'Periféricos gaming (' + gaming.length + ' modelos · ' + gamBrStr + ' · desde ' + fmt(minP(gaming)) + '): ' +
-             listItems(gaming, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=peripherals">Ver periféricos →</a>';
-    }
-
-    // ── categoría: smartphones ──────────────────────────────────────────────
-    if (/smartphone|m[oó]vil|tel[eé]fono/.test(ql)) {
-      var phBC = brandCounts(phones);
-      var phBrStr = Object.keys(phBC).slice(0, 4).map(function(b) {
-        return '<strong>' + b + '</strong> (' + phBC[b] + ')';
-      }).join(' · ');
-      return 'Smartphones (' + phones.length + ' modelos · ' + phBrStr + ' · desde ' + fmt(minP(phones)) + '): ' +
-             listItems(phones, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html?filter=smartphones">Ver smartphones →</a>';
-    }
-
-    // ── precio: los más baratos ─────────────────────────────────────────────
+    // ── precio: los más baratos ───────────────────────────────────────────
     if (/barato|econ[oó]mico|precio|asequible|oferta|bajo precio|menos de/.test(ql)) {
       return 'Los más económicos del catálogo: ' + listItems(allPriced, 4, true) +
-             '. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+             '. <a class="ai-msg-link" href="catalogo.html" aria-label="Ver catálogo completo">Ver catálogo →</a>';
     }
 
-    // ── precio: premium ─────────────────────────────────────────────────────
+    // ── precio: premium ───────────────────────────────────────────────────
     if (/premium|caro|mejor|top|m[aá]s completo|el mejor/.test(ql)) {
       return 'Los más premium: ' + listItems(allPriced, 3, false) +
-             '. <a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+             '. <a class="ai-msg-link" href="catalogo.html" aria-label="Ver catálogo completo">Ver catálogo →</a>';
     }
 
-    // ── recomendación general ───────────────────────────────────────────────
+    // ── recomendación general ─────────────────────────────────────────────
     if (/compar|recomiend|sugier|cu[aá]l|qu[eé].*comprar/.test(ql)) {
-      return '¿Qué buscas? <strong>Relojes</strong> (' + relojes.length + ' desde ' + fmt(minP(relojes)) + ') · ' +
-             '<strong>Auriculares</strong> (' + auriculares.length + ' desde ' + fmt(minP(auriculares)) + ') · ' +
-             '<strong>Altavoces</strong> (' + altavoces.length + ' desde ' + fmt(minP(altavoces)) + ') · ' +
-             '<strong>Gaming</strong> (' + gaming.length + ') · ' +
-             '<strong>Smartphones</strong> (' + phones.length + '). ' +
-             '<a class="ai-msg-link" href="catalogo.html">Explorar catálogo →</a>';
+      return '¿Qué buscas? ' +
+             '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=watches">Relojes (' + relojes.length + ')</a> · ' +
+             '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=headphones">Auriculares (' + auriculares.length + ')</a> · ' +
+             '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=speakers">Altavoces (' + altavoces.length + ')</a> · ' +
+             '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=peripherals">Gaming (' + gaming.length + ')</a> · ' +
+             '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=smartphones">Smartphones (' + phones.length + ')</a>';
     }
 
-    // ── fallback dinámico ───────────────────────────────────────────────────
+    // ── fallback dinámico ─────────────────────────────────────────────────
     return 'En ZoneTechOnline tenemos <strong>' + PRODUCTS.length + ' productos</strong>: ' +
            '<strong>Relojes</strong> (' + relojes.length + ') · ' +
            '<strong>Auriculares</strong> (' + auriculares.length + ') · ' +
            '<strong>Altavoces</strong> (' + altavoces.length + ') · ' +
            '<strong>Periféricos</strong> (' + gaming.length + ') · ' +
-           '<strong>Smartphones</strong> (' + phones.length + ') — desde ' + fmt(minP(allPriced)) + '. ' +
-           '<a class="ai-msg-link" href="catalogo.html">Ver catálogo →</a>';
+           '<strong>Smartphones</strong> (' + phones.length + ') — desde ' + fmt(safeMin(allPriced)) + '. ' +
+           '<a class="ai-msg-link" href="catalogo.html" aria-label="Ver catálogo completo">Ver catálogo →</a>';
   }
 
   function sendMessage(text) {
