@@ -983,8 +983,10 @@
       <form class="cr-form" id="cr-form" novalidate>
         <div class="cr-row">
           <input type="text" id="cr-name" class="cr-input" placeholder="Tu nombre (ej: Carlos M.)" maxlength="60">
-          <input type="text" id="cr-product" class="cr-input" placeholder="¿Qué producto compraste? (opcional)" list="cr-products-list" autocomplete="off" maxlength="120">
-          <datalist id="cr-products-list"></datalist>
+          <div class="cr-product-wrap" id="cr-product-wrap">
+            <input type="text" id="cr-product" class="cr-input" placeholder="¿Qué producto compraste? (opcional)" autocomplete="off" maxlength="120" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-autocomplete="list" aria-controls="cr-product-drop">
+            <div class="cr-product-drop" id="cr-product-drop" role="listbox" aria-label="Productos"></div>
+          </div>
         </div>
         <div class="cr-stars-row">
           <span class="cr-stars-lbl">Tu valoración:</span>
