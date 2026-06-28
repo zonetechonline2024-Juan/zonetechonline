@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pedidos — ZoneTechOnline Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a18;--sidebar:#0d0d22;--card:#13132b;--border:rgba(99,102,241,.15);--text:#e8e8f8;--text2:#a0a0c0;--text3:#606080;--accent:#6366f1;--accent2:#818cf8;--green:#34d399;--yellow:#fbbf24;--red:#f87171;--sidebar-w:240px;}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;}
+.sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.sidebar-logo{padding:20px 20px 16px;border-bottom:1px solid var(--border);}
+.sidebar-logo a{font-size:16px;font-weight:900;letter-spacing:.1em;color:#fff;text-decoration:none;}
+.sidebar-logo a span{color:var(--accent);}
+.sidebar-logo .badge{display:block;font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+.sidebar-nav{flex:1;padding:16px 0;overflow-y:auto;}
+.nav-section{padding:0 12px 8px;font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:8px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:13.5px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:8px;margin:1px 8px;transition:all .15s;}
+.nav-item:hover{background:rgba(99,102,241,.1);color:var(--text);}
+.nav-item.active{background:rgba(99,102,241,.18);color:var(--accent);}
+.sidebar-footer{padding:16px;border-top:1px solid var(--border);}
+.user-row{display:flex;align-items:center;gap:10px;}
+.user-avatar{width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;}
+.user-name{font-size:12px;font-weight:600;}
+.user-role{font-size:11px;color:var(--text3);}
+.main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;}
+.topbar{background:var(--sidebar);border-bottom:1px solid var(--border);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+.topbar-title{font-size:15px;font-weight:700;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;text-decoration:none;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-sm{padding:5px 12px;font-size:12px;}
+.content{padding:24px 28px;flex:1;}
+.filters{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.search-box{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:8px 14px;flex:1;min-width:220px;}
+.search-box input{background:none;border:none;color:var(--text);font-size:13px;outline:none;width:100%;}
+.filter-btn{padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:13px;cursor:pointer;transition:all .15s;}
+.filter-btn.active,.filter-btn:hover{border-color:var(--accent);color:var(--accent);}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text3);padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;}
+.data-table td{padding:14px 16px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:hover td{background:rgba(99,102,241,.04);}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.badge-pending{background:rgba(251,191,36,.1);color:var(--yellow);}
+.badge-processing{background:rgba(99,102,241,.15);color:var(--accent2);}
+.badge-shipped{background:rgba(52,211,153,.1);color:var(--green);}
+.badge-delivered{background:rgba(52,211,153,.2);color:#6ee7b7;}
+.badge-cancelled{background:rgba(248,113,113,.1);color:var(--red);}
+.loading{text-align:center;padding:32px;color:var(--text3);font-size:13px;}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--card);border:1.5px solid var(--border);border-radius:18px;padding:32px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;position:relative;}
+.modal h3{font-size:18px;font-weight:800;margin-bottom:4px;}
+.modal-sub{font-size:13px;color:var(--text2);margin-bottom:24px;}
+.form-group{margin-bottom:16px;}
+.form-label{display:block;font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.form-input,.form-select{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;font-size:14px;color:var(--text);outline:none;}
+.form-input:focus,.form-select:focus{border-color:var(--accent);}
+.form-select option{background:var(--bg);}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px;}
+.btn-cancel{background:transparent;border:1px solid var(--border);color:var(--text2);border-radius:8px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--text3);font-size:22px;cursor:pointer;}
+.order-detail{background:var(--bg);border-radius:10px;padding:14px;margin-bottom:16px;}
+.detail-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.detail-row:last-child{border-bottom:none;}
+.detail-row .lbl{color:var(--text3);}
+.detail-row .val{font-weight:600;text-align:right;}
+#toast{position:fixed;bottom:24px;right:24px;background:#064e3b;color:#6ee7b7;border:1px solid #065f46;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;display:none;}
+#toast.err{background:#7f1d1d;color:var(--red);border-color:#991b1b;}
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;}
+.login-box{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:44px 40px;width:100%;max-width:400px;text-align:center;}
+.login-box h2{font-size:22px;font-weight:800;margin-bottom:6px;}
+.login-box p{font-size:13px;color:var(--text2);margin-bottom:28px;}
+.login-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--text);outline:none;margin-bottom:12px;}
+.login-input:focus{border-color:var(--accent);}
+.login-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;}
+.login-err{font-size:12px;color:var(--red);margin-top:8px;display:none;}
+</style>
+</head>
+<body>
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size:40px;margin-bottom:12px;">🔐</div>
+    <h2>ZoneTechOnline</h2>
+    <p>Panel de administración</p>
+    <input type="password" id="key-input" class="login-input" placeholder="Clave de acceso">
+    <button class="login-btn" onclick="doLogin()">Entrar</button>
+    <div class="login-err" id="login-err">Clave incorrecta</div>
+  </div>
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html">ZONE<span>TECH</span>ONLINE</a>
+    <span class="badge">Panel Admin</span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">Principal</div>
+    <a class="nav-item" href="index.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item active" href="pedidos.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Pedidos
+    </a>
+    <a class="nav-item" href="productos.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      Productos & Stock
+    </a>
+    <a class="nav-item" href="clientes.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      Clientes
+    </a>
+    <div class="nav-section" style="margin-top:16px;">Tienda</div>
+    <a class="nav-item" href="https://www.zonetechonline.com" target="_blank">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Ver tienda
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-row">
+      <div class="user-avatar">Z</div>
+      <div style="flex:1">
+        <div class="user-name">ZoneTechOnline</div>
+        <div class="user-role">Administrador</div>
+      </div>
+      <button onclick="logout()" style="background:none;border:none;color:var(--text3);cursor:pointer;">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">Pedidos</div>
+    <div style="display:flex;gap:10px;">
+      <button class="btn btn-ghost" onclick="loadOrders()">⟳ Actualizar</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="filters">
+      <div class="search-box">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search" placeholder="Buscar por nombre, email o nº pedido..." oninput="loadOrders()">
+      </div>
+      <button class="filter-btn active" data-status="all"     onclick="setFilter(this)">Todos</button>
+      <button class="filter-btn"        data-status="pending"    onclick="setFilter(this)">Pendientes</button>
+      <button class="filter-btn"        data-status="processing" onclick="setFilter(this)">En proceso</button>
+      <button class="filter-btn"        data-status="shipped"    onclick="setFilter(this)">Enviados</button>
+      <button class="filter-btn"        data-status="delivered"  onclick="setFilter(this)">Entregados</button>
+    </div>
+    <div class="panel">
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Pedido</th><th>Cliente</th><th>Importe</th><th>Método</th><th>Estado</th><th>Fecha</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody">
+            <tr><td colspan="7" class="loading">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal detalle/edición -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="modal-title">Pedido</h3>
+    <p class="modal-sub" id="modal-sub"></p>
+    <div class="order-detail" id="modal-detail"></div>
+    <div class="form-group">
+      <label class="form-label">Estado del pedido</label>
+      <select id="m-status" class="form-select">
+        <option value="pending">Pendiente</option>
+        <option value="processing">En proceso</option>
+        <option value="shipped">Enviado</option>
+        <option value="delivered">Entregado</option>
+        <option value="cancelled">Cancelado</option>
+      </select>
+    </div>
+    <div id="shipping-fields">
+      <div class="form-group">
+        <label class="form-label">Número de seguimiento</label>
+        <input type="text" id="m-tracking" class="form-input" placeholder="ej. MRW123456789">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Transportista</label>
+        <input type="text" id="m-carrier" class="form-input" placeholder="MRW, SEUR, DHL...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">URL seguimiento (opcional)</label>
+        <input type="url" id="m-tracking-url" class="form-input" placeholder="https://...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notas internas</label>
+      <input type="text" id="m-notes" class="form-input" placeholder="Notas privadas sobre el pedido">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn btn-primary" id="save-btn" onclick="saveOrder()">💾 Guardar cambios</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script>
+var ADMIN_KEY = sessionStorage.getItem('zt_admin_key') || '';
+var currentStatus = 'all';
+var currentOrder  = null;
+
+function fmt(n){return Number(n||0).toLocaleString('es-ES',{style:'currency',currency:'EUR'});}
+function fmtDate(d){return new Date(d).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}
+function toast(msg,err){var el=document.getElementById('toast');el.textContent=msg;el.className=err?'err':'';el.style.display='block';setTimeout(function(){el.style.display='none';},3500);}
+function statusBadge(s){var m={pending:'badge-pending',processing:'badge-processing',shipped:'badge-shipped',delivered:'badge-delivered',cancelled:'badge-cancelled'};var l={pending:'Pendiente',processing:'En proceso',shipped:'Enviado',delivered:'Entregado',cancelled:'Cancelado'};return '<span class="badge '+(m[s]||'badge-pending')+'">'+(l[s]||s)+'</span>';}
+function doLogin(){var key=document.getElementById('key-input').value.trim();if(!key)return;fetch('/api/admin-stats',{headers:{'X-Admin-Key':key}}).then(function(r){if(r.status===401){document.getElementById('login-err').style.display='block';return;}ADMIN_KEY=key;sessionStorage.setItem('zt_admin_key',key);document.getElementById('login-screen').style.display='none';loadOrders();}).catch(function(){document.getElementById('login-err').style.display='block';});}
+document.getElementById('key-input').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+function logout(){sessionStorage.removeItem('zt_admin_key');ADMIN_KEY='';document.getElementById('login-screen').style.display='flex';}
+if(ADMIN_KEY){document.getElementById('login-screen').style.display='none';loadOrders();}
+
+function setFilter(btn){document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');currentStatus=btn.dataset.status;loadOrders();}
+
+function loadOrders(){
+  var search=document.getElementById('search').value.trim();
+  var url='/api/admin-orders?limit=100';
+  if(currentStatus!=='all')url+='&status='+currentStatus;
+  if(search)url+='&search='+encodeURIComponent(search);
+  var tbody=document.getElementById('orders-tbody');
+  tbody.innerHTML='<tr><td colspan="7" class="loading">Cargando...</td></tr>';
+  fetch(url,{headers:{'X-Admin-Key':ADMIN_KEY}}).then(function(r){return r.json();}).then(function(data){
+    if(!data.ok){tbody.innerHTML='<tr><td colspan="7" class="loading">Error cargando pedidos</td></tr>';return;}
+    var orders=data.orders||[];
+    if(!orders.length){tbody.innerHTML='<tr><td colspan="7" class="loading">No hay pedidos</td></tr>';return;}
+    var payLabels={card:'💳 Tarjeta',bizum:'📱 Bizum',paypal:'🅿️ PayPal'};
+    tbody.innerHTML=orders.map(function(o){
+      return '<tr>'+
+        '<td><strong style="color:var(--accent);font-family:monospace;font-size:12px;">#'+o.order_no+'</strong></td>'+
+        '<td><div style="font-weight:600;">'+(o.customer_name||'—')+'</div><div style="font-size:11px;color:var(--text3);">'+(o.customer_email||'')+'</div></td>'+
+        '<td style="font-weight:700;">'+fmt(o.total)+'</td>'+
+        '<td style="font-size:12px;">'+(payLabels[o.payment_method]||o.payment_method||'—')+'</td>'+
+        '<td>'+statusBadge(o.status)+'</td>'+
+        '<td style="color:var(--text3);font-size:11px;">'+fmtDate(o.created_at)+'</td>'+
+        '<td><button class="btn btn-ghost btn-sm" onclick="openModal('+JSON.stringify(JSON.stringify(o))+')">Gestionar</button></td>'+
+      '</tr>';
+    }).join('');
+  }).catch(function(){tbody.innerHTML='<tr><td colspan="7" class="loading">Error de conexión</td></tr>';});
+}
+
+function openModal(encodedOrder){
+  currentOrder=JSON.parse(encodedOrder);
+  document.getElementById('modal-title').textContent='Pedido #'+currentOrder.order_no;
+  document.getElementById('modal-sub').textContent=(currentOrder.customer_name||'')+(currentOrder.customer_email?' — '+currentOrder.customer_email:'');
+  document.getElementById('m-status').value=currentOrder.status||'pending';
+  document.getElementById('m-tracking').value=currentOrder.tracking_number||'';
+  document.getElementById('m-carrier').value=currentOrder.carrier||'';
+  document.getElementById('m-tracking-url').value=currentOrder.tracking_url||'';
+  document.getElementById('m-notes').value=currentOrder.notes||'';
+  var items=currentOrder.items||[];
+  document.getElementById('modal-detail').innerHTML=
+    '<div class="detail-row"><span class="lbl">Fecha</span><span class="val">'+fmtDate(currentOrder.created_at)+'</span></div>'+
+    '<div class="detail-row"><span class="lbl">Dirección</span><span class="val">'+(currentOrder.customer_address||'—')+'</span></div>'+
+    '<div class="detail-row"><span class="lbl">Total</span><span class="val" style="color:var(--accent);">'+fmt(currentOrder.total)+'</span></div>'+
+    (items.length?'<div style="margin-top:10px;font-size:12px;color:var(--text3);">Productos: '+items.map(function(i){return i.product_name+' x'+i.qty;}).join(', ')+'</div>':'');
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');currentOrder=null;}
+
+function saveOrder(){
+  if(!currentOrder)return;
+  var btn=document.getElementById('save-btn');btn.disabled=true;btn.textContent='Guardando...';
+  var payload={
+    status:document.getElementById('m-status').value,
+    tracking_number:document.getElementById('m-tracking').value.trim(),
+    carrier:document.getElementById('m-carrier').value.trim(),
+    tracking_url:document.getElementById('m-tracking-url').value.trim(),
+    notes:document.getElementById('m-notes').value.trim(),
+  };
+  fetch('/api/admin-orders?id='+currentOrder.id,{method:'PATCH',headers:{'Content-Type':'application/json','X-Admin-Key':ADMIN_KEY},body:JSON.stringify(payload)})
+    .then(function(r){return r.json();}).then(function(data){
+      if(data.ok){toast('✅ Pedido actualizado'+(payload.status==='shipped'?' — Email de envío enviado':''));closeModal();loadOrders();}
+      else{toast('Error: '+data.error,true);}
+    }).catch(function(){toast('Error de conexión',true);})
+    .finally(function(){btn.disabled=false;btn.textContent='💾 Guardar cambios';});
+}
+</script>
+</body>
+</html>
