@@ -14,7 +14,6 @@
   "functions": {
     "api/checkout.js":            { "maxDuration": 15 },
     "api/review.js":              { "maxDuration": 10 },
-    "api/email-welcome.js":       { "maxDuration": 10 },
     "api/email-order-confirm.js": { "maxDuration": 10 },
     "api/email-shipping.js":      { "maxDuration": 10 },
     "api/email-contact.js":       { "maxDuration": 10 },
@@ -24,8 +23,7 @@
     "api/admin-orders.js":              { "maxDuration": 15 },
     "api/admin-products.js":            { "maxDuration": 15 },
     "api/admin-customers.js":           { "maxDuration": 15 },
-    "api/admin-import-products.js":     { "maxDuration": 30 },
-    "api/debug-env.js":                 { "maxDuration": 5 }
+    "api/admin-import-products.js":     { "maxDuration": 30 }
   },
   "headers": [
     {
