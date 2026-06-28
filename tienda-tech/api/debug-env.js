@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 module.exports = (req, res) => {
   res.status(200).json({
     resend_set:  !!process.env.RESEND_API_KEY,
@@ -9,3 +9,6 @@ module.exports = (req, res) => {
     ts:          Date.now(),
   });
 };
+
+// v2
+
