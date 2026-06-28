@@ -20,6 +20,29 @@ module.exports = async (req, res) => {
     return res.status(500).json({ ok: false, error: 'Variables de Supabase no configuradas' });
   }
 
+  // Acción especial: registrar webhook de Stripe (POST con action=setup_stripe)
+  if ((req.body || {}).action === 'setup_stripe') {
+    const sk = process.env.STRIPE_SECRET_KEY;
+    if (!sk) return res.status(500).json({ ok: false, error: 'STRIPE_SECRET_KEY no configurada' });
+    try {
+      const form = new URLSearchParams({
+        url: 'https://www.zonetechonline.com/api/stripe-webhook',
+        'enabled_events[]': 'checkout.session.completed',
+        description: 'ZoneTechOnline pedidos',
+      }).toString();
+      const sr = await fetch('https://api.stripe.com/v1/webhook_endpoints', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${sk}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: form,
+      });
+      const sd = await sr.json();
+      if (!sr.ok) return res.status(400).json({ ok: false, error: sd.error?.message });
+      return res.status(200).json({ ok: true, webhook_id: sd.id, STRIPE_WEBHOOK_SECRET: sd.secret, mode: sk.startsWith('sk_live') ? 'LIVE' : 'TEST' });
+    } catch (e) {
+      return res.status(500).json({ ok: false, error: e.message });
+    }
+  }
+
   try {
     const { products } = req.body || {};
     if (!Array.isArray(products) || !products.length) {
