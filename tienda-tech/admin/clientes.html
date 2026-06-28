@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Clientes — ZoneTechOnline Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a18;--sidebar:#0d0d22;--card:#13132b;--border:rgba(99,102,241,.15);--text:#e8e8f8;--text2:#a0a0c0;--text3:#606080;--accent:#6366f1;--accent2:#818cf8;--green:#34d399;--yellow:#fbbf24;--red:#f87171;--sidebar-w:240px;}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;}
+.sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.sidebar-logo{padding:20px 20px 16px;border-bottom:1px solid var(--border);}
+.sidebar-logo a{font-size:16px;font-weight:900;letter-spacing:.1em;color:#fff;text-decoration:none;}
+.sidebar-logo a span{color:var(--accent);}
+.sidebar-logo .badge{display:block;font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+.sidebar-nav{flex:1;padding:16px 0;}
+.nav-section{padding:0 12px 8px;font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:8px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:13.5px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:8px;margin:1px 8px;transition:all .15s;}
+.nav-item:hover{background:rgba(99,102,241,.1);color:var(--text);}
+.nav-item.active{background:rgba(99,102,241,.18);color:var(--accent);}
+.sidebar-footer{padding:16px;border-top:1px solid var(--border);}
+.user-row{display:flex;align-items:center;gap:10px;}
+.user-avatar{width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;}
+.main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;}
+.topbar{background:var(--sidebar);border-bottom:1px solid var(--border);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+.topbar-title{font-size:15px;font-weight:700;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;text-decoration:none;}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.content{padding:24px 28px;flex:1;}
+.filters{display:flex;gap:12px;margin-bottom:20px;}
+.search-box{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:9px;padding:8px 14px;flex:1;}
+.search-box input{background:none;border:none;color:var(--text);font-size:13px;outline:none;width:100%;}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text3);padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;}
+.data-table td{padding:14px 16px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:hover td{background:rgba(99,102,241,.04);}
+.loading{text-align:center;padding:32px;color:var(--text3);font-size:13px;}
+.badge-vip{display:inline-block;background:rgba(251,191,36,.15);color:var(--yellow);font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:6px;}
+#toast{position:fixed;bottom:24px;right:24px;background:#064e3b;color:#6ee7b7;border:1px solid #065f46;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;display:none;}
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;}
+.login-box{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:44px 40px;width:100%;max-width:400px;text-align:center;}
+.login-box h2{font-size:22px;font-weight:800;margin-bottom:6px;}
+.login-box p{font-size:13px;color:var(--text2);margin-bottom:28px;}
+.login-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--text);outline:none;margin-bottom:12px;}
+.login-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;}
+.login-err{font-size:12px;color:var(--red);margin-top:8px;display:none;}
+</style>
+</head>
+<body>
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size:40px;margin-bottom:12px;">🔐</div>
+    <h2>ZoneTechOnline</h2><p>Panel de administración</p>
+    <input type="password" id="key-input" class="login-input" placeholder="Clave de acceso">
+    <button class="login-btn" onclick="doLogin()">Entrar</button>
+    <div class="login-err" id="login-err">Clave incorrecta</div>
+  </div>
+</div>
+<aside class="sidebar">
+  <div class="sidebar-logo"><a href="index.html">ZONE<span>TECH</span>ONLINE</a><span class="badge">Panel Admin</span></div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">Principal</div>
+    <a class="nav-item" href="index.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a class="nav-item" href="pedidos.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Pedidos</a>
+    <a class="nav-item" href="productos.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos & Stock</a>
+    <a class="nav-item active" href="clientes.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clientes</a>
+    <div class="nav-section" style="margin-top:16px;">Tienda</div>
+    <a class="nav-item" href="https://www.zonetechonline.com" target="_blank"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Ver tienda</a>
+  </nav>
+  <div class="sidebar-footer"><div class="user-row"><div class="user-avatar">Z</div><div style="flex:1"><div style="font-size:12px;font-weight:600;">ZoneTechOnline</div><div style="font-size:11px;color:var(--text3);">Administrador</div></div><button onclick="logout()" style="background:none;border:none;color:var(--text3);cursor:pointer;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button></div></div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">Clientes</div>
+    <button class="btn btn-ghost" onclick="loadCustomers()">⟳ Actualizar</button>
+  </div>
+  <div class="content">
+    <div class="filters">
+      <div class="search-box">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search" placeholder="Buscar por nombre o email..." oninput="loadCustomers()">
+      </div>
+    </div>
+    <div class="panel">
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Cliente</th><th>Pedidos</th><th>Total gastado</th><th>Último pedido</th><th>Cliente desde</th></tr></thead>
+          <tbody id="customers-tbody"><tr><td colspan="5" class="loading">Cargando...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+<div id="toast"></div>
+<script>
+var ADMIN_KEY = sessionStorage.getItem('zt_admin_key') || '';
+function fmt(n){return Number(n||0).toLocaleString('es-ES',{style:'currency',currency:'EUR'});}
+function fmtDate(d){return d?new Date(d).toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'}):'—';}
+function toast(msg,err){var el=document.getElementById('toast');el.textContent=msg;el.className=err?'err':'';el.style.display='block';setTimeout(function(){el.style.display='none';},3000);}
+function doLogin(){var key=document.getElementById('key-input').value.trim();if(!key)return;fetch('/api/admin-stats',{headers:{'X-Admin-Key':key}}).then(function(r){if(r.status===401){document.getElementById('login-err').style.display='block';return;}ADMIN_KEY=key;sessionStorage.setItem('zt_admin_key',key);document.getElementById('login-screen').style.display='none';loadCustomers();}).catch(function(){document.getElementById('login-err').style.display='block';});}
+document.getElementById('key-input').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+function logout(){sessionStorage.removeItem('zt_admin_key');ADMIN_KEY='';document.getElementById('login-screen').style.display='flex';}
+if(ADMIN_KEY){document.getElementById('login-screen').style.display='none';loadCustomers();}
+
+function loadCustomers(){
+  var search=document.getElementById('search').value.trim();
+  var url='/api/admin-customers'+(search?'?search='+encodeURIComponent(search):'');
+  var tbody=document.getElementById('customers-tbody');
+  tbody.innerHTML='<tr><td colspan="5" class="loading">Cargando...</td></tr>';
+  fetch(url,{headers:{'X-Admin-Key':ADMIN_KEY}}).then(function(r){return r.json();}).then(function(data){
+    if(!data.ok){tbody.innerHTML='<tr><td colspan="5" class="loading">Sin clientes todavía</td></tr>';return;}
+    var customers=data.customers||[];
+    if(!customers.length){tbody.innerHTML='<tr><td colspan="5" class="loading">No se encontraron clientes</td></tr>';return;}
+    tbody.innerHTML=customers.map(function(c){
+      var isVip=c.total_orders>=3||c.total_spent>=500;
+      var lastOrder=c.recent_orders&&c.recent_orders[0];
+      var initials=(c.name||c.email).slice(0,2).toUpperCase();
+      return '<tr>'+
+        '<td>'+
+          '<div style="display:flex;align-items:center;gap:10px;">'+
+            '<div style="width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;">'+initials+'</div>'+
+            '<div>'+
+              '<div style="font-weight:600;">'+(c.name||'—')+(isVip?'<span class="badge-vip">VIP</span>':'')+'</div>'+
+              '<div style="font-size:11px;color:var(--text3);">'+c.email+'</div>'+
+            '</div>'+
+          '</div>'+
+        '</td>'+
+        '<td><strong style="color:var(--accent);">'+c.total_orders+'</strong></td>'+
+        '<td><strong>'+fmt(c.total_spent)+'</strong></td>'+
+        '<td style="font-size:12px;color:var(--text3);">'+(lastOrder?fmtDate(lastOrder.created_at):'—')+'</td>'+
+        '<td style="font-size:12px;color:var(--text3);">'+fmtDate(c.created_at)+'</td>'+
+      '</tr>';
+    }).join('');
+  }).catch(function(){toast('Error de conexión',true);});
+}
+</script>
+</body>
+</html>
