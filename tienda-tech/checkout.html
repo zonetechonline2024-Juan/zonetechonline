@@ -303,8 +303,8 @@ select:-webkit-autofill:focus {
       </div>
       <span id="promo-msg" class="field-err" style="display:block;margin:-8px 0 8px;"></span>
       <div class="order-totals">
-        <div class="order-line"><span>Subtotal</span><span id="subtotal-val">—</span></div>
-        <div class="order-line"><span>IVA (21% inc.)</span><span id="tax-val">—</span></div>
+        <div class="order-line"><span>Subtotal (sin IVA)</span><span id="subtotal-val">—</span></div>
+        <div class="order-line"><span>IVA (21%)</span><span id="tax-val">—</span></div>
         <div id="discount-line" class="order-line" style="display:none;color:#34d399;"><span>Descuento</span><span id="discount-val">—</span></div>
         <div class="order-line total"><span>Total</span><span id="total-val">—</span></div>
       </div>
@@ -355,10 +355,11 @@ select:-webkit-autofill:focus {
   }
 
   function updateTotals() {
-    var sub = cart.reduce(function(a, b) { return a + b.price * b.qty; }, 0);
+    var total_bruto = cart.reduce(function(a, b) { return a + b.price * b.qty; }, 0);
     var shipping = getShippingCost();
-    var tax = sub * 0.21 / 1.21;
-    var total = sub + shipping - discount;
+    var tax = total_bruto * 0.21 / 1.21;
+    var sub = total_bruto - tax;
+    var total = total_bruto + shipping - discount;
     document.getElementById('subtotal-val').textContent = fmt(sub);
     document.getElementById('tax-val').textContent = fmt(tax);
     document.getElementById('total-val').textContent = fmt(total);
