@@ -3208,7 +3208,6 @@ function renderProducts(filterKey, customFilter) {
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
-    var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
     var inWl = isInWishlist(product.id);
     var wlFill = inWl ? '#f87171' : 'none';
     var wlClass = inWl ? ' active' : '';
@@ -3223,7 +3222,6 @@ function renderProducts(filterKey, customFilter) {
       '</div>' +
       '<div class="product-info">' +
         '<h3 class="product-name">' + product.name + '</h3>' +
-        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span></div>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row">' +
           '<span class="product-price">€' + product.price.toLocaleString() + '</span>' +
@@ -3286,7 +3284,6 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var descRaw = Array.isArray(product.description) ? product.description.join('. ') : (product.description || '');
     var shortDesc = descRaw.length > 88 ? descRaw.substring(0, 88) + '...' : descRaw;
-    var stars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
     var inWl2 = isInWishlist(product.id);
     var wlFill2 = inWl2 ? '#f87171' : 'none';
     var wlClass2 = inWl2 ? ' active' : '';
@@ -3301,7 +3298,6 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
       '</div>' +
       '<div class="product-info">' +
         '<h3 class="product-name">' + product.name + '</h3>' +
-        '<div class="product-rating-row"><span class="product-stars">' + stars + '</span></div>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
         '<div class="product-actions">' +
@@ -3401,8 +3397,6 @@ function openQuickView(productId) {
   }).join('') : '';
 
   var qvDiscount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
-  var qvStars = '★★★★' + (product.id % 3 === 0 ? '★' : '½');
-  var qvReviews = 40 + (product.id * 7) % 180;
 
   _qvImgs = (product.images && product.images.length) ? product.images : (product.image ? [product.image] : []);
   _qvIdx  = 0;
@@ -3429,7 +3423,6 @@ function openQuickView(productId) {
     '<div class="qv-details">' +
       '<span class="qv-brand">' + product.brand + '</span>' +
       '<h2 class="qv-title">' + product.name + '</h2>' +
-      '<div class="qv-rating-row"><span style="color:var(--gold);font-size:13px">' + qvStars + '</span><span style="font-size:12px;color:var(--text-3);margin-left:6px">(' + qvReviews + ' reseñas)</span></div>' +
       '<p class="qv-desc">' + (product.description || product.badge || '') + '</p>' +
       '<div class="qv-specs">' + specsHTML + '</div>' +
       '<div class="qv-price-row">' +
