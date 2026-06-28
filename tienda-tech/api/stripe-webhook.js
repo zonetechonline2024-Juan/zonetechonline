@@ -25,10 +25,17 @@ module.exports = async (req, res) => {
   const sig    = req.headers['stripe-signature'];
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
 
-  // Leer raw body
+  // Leer raw body — Vercel puede pre-parsear el body, lo manejamos en ambos casos
+  let rawBody;
   const chunks = [];
   for await (const chunk of req) chunks.push(chunk);
-  const rawBody = Buffer.concat(chunks).toString('utf8');
+  if (chunks.length > 0) {
+    rawBody = Buffer.concat(chunks).toString('utf8');
+  } else if (req.body) {
+    rawBody = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
+  } else {
+    return res.status(400).json({ error: 'Body vacío' });
+  }
 
   // Verificar firma si hay secret configurado
   if (secret && sig) {
