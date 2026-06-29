@@ -3699,15 +3699,24 @@ function initConfigurator() {
     applyColorFilter(activeSwatch.dataset.color, true);
   }
 
-  // ── Add to cart ──
+  // ── Consigue el tuyo: añade al carrito y redirige al checkout ──
   var addBtn = document.getElementById('add-config-to-cart');
   if (addBtn) {
     addBtn.addEventListener('click', function() {
-      var orig = addBtn.innerHTML;
-      addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido al Carrito!';
-      addBtn.disabled = true;
-      setTimeout(function() { addBtn.innerHTML = orig; addBtn.disabled = false; }, 2200);
+      var activeSw = document.querySelector('#strap-colors .swatch.active');
+      var activeStr = document.querySelector('#case-materials .material-btn.active');
+      var color = activeSw ? (activeSw.dataset.name || 'Graphite') : 'Graphite';
+      var strap = activeStr ? (activeStr.dataset.finish || 'Ridge Sport Band') : 'Ridge Sport Band';
+
       addToCart(18);
+
+      var orig = addBtn.innerHTML;
+      addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido! Yendo al carrito…';
+      addBtn.disabled = true;
+
+      setTimeout(function() {
+        window.location.href = 'checkout.html';
+      }, 900);
     });
   }
 }
@@ -3903,13 +3912,72 @@ function initNavbar() {
 function initNewsletter() {
   var form = document.getElementById('newsletter-form');
   if (!form) return;
+  var btn = form.querySelector('button[type="submit"]');
+  var input = form.querySelector('input[type="email"]');
+  var disclaimer = form.closest('.newsletter-content') && form.closest('.newsletter-content').querySelector('.newsletter-disclaimer');
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    var emailInput = form.querySelector('input[type="email"]');
-    if (emailInput && emailInput.value) {
-      showToast('¡Gracias! Recibirás un 10% de descuento en tu email');
-      form.reset();
+    var email = (input && input.value || '').trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      input && input.focus();
+      return;
     }
+    if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+
+    fetch('/api/review', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'newsletter', email: email })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.success) {
+        form.innerHTML = '<p style="color:#a5b4fc;font-weight:600;font-size:15px;">✅ ¡Suscrito! Recibirás novedades y ofertas exclusivas en tu email.</p>';
+      } else {
+        if (btn) { btn.disabled = false; btn.textContent = 'Suscribirme'; }
+        showToast(data.error || 'Error al suscribirse. Inténtalo de nuevo.');
+      }
+    })
+    .catch(function() {
+      if (btn) { btn.disabled = false; btn.textContent = 'Suscribirme'; }
+      showToast('Error de conexión. Inténtalo de nuevo.');
+    });
+  });
+}
+
+// ─── MOBILE MENU ─────────────────────────────────────────────────────────────
+
+function initMobileMenu() {
+  var toggle  = document.getElementById('menu-toggle');
+  var drawer  = document.getElementById('mobile-nav-drawer');
+  var overlay = document.getElementById('mobile-nav-overlay');
+  var closeBtn = document.getElementById('mobile-nav-close');
+  if (!toggle || !drawer) return;
+
+  function openMenu() {
+    drawer.classList.add('open');
+    overlay && overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    drawer.classList.remove('open');
+    overlay && overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', function() {
+    drawer.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  closeBtn && closeBtn.addEventListener('click', closeMenu);
+  overlay && overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+  drawer.querySelectorAll('.mnd-link').forEach(function(link) {
+    link.addEventListener('click', function() { closeMenu(); });
   });
 }
 
@@ -5602,6 +5670,7 @@ function renderProductosEstrella() {
 document.addEventListener('DOMContentLoaded', function() {
   initMegaMenu();
   initNavbar();
+  initMobileMenu();
   initSearch();
   initUserSession();
   initSlider();
