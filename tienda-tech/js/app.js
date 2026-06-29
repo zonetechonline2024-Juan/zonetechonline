@@ -3699,24 +3699,15 @@ function initConfigurator() {
     applyColorFilter(activeSwatch.dataset.color, true);
   }
 
-  // ── Consigue el tuyo: añade al carrito y redirige al checkout ──
+  // ── Consigue el tuyo: añade al carrito y abre panel lateral ──
   var addBtn = document.getElementById('add-config-to-cart');
   if (addBtn) {
     addBtn.addEventListener('click', function() {
-      var activeSw = document.querySelector('#strap-colors .swatch.active');
-      var activeStr = document.querySelector('#case-materials .material-btn.active');
-      var color = activeSw ? (activeSw.dataset.name || 'Graphite') : 'Graphite';
-      var strap = activeStr ? (activeStr.dataset.finish || 'Ridge Sport Band') : 'Ridge Sport Band';
-
-      addToCart(18);
-
       var orig = addBtn.innerHTML;
-      addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido! Yendo al carrito…';
+      addBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ¡Añadido al Carrito!';
       addBtn.disabled = true;
-
-      setTimeout(function() {
-        window.location.href = 'checkout.html';
-      }, 900);
+      setTimeout(function() { addBtn.innerHTML = orig; addBtn.disabled = false; }, 2200);
+      addToCart(16);
     });
   }
 }
