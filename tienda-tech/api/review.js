@@ -1,6 +1,8 @@
 const REPO = 'zonetechonline2024-Juan/zonetechonline';
 const FILE = 'tienda-tech/data/reviews.json';
+const SUBS_FILE = 'tienda-tech/data/subscribers.json';
 const GH_API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
+const GH_SUBS_API = `https://api.github.com/repos/${REPO}/contents/${SUBS_FILE}`;
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -8,6 +10,43 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Método no permitido' });
+
+  const token = process.env.GITHUB_PAT;
+  if (!token) return res.status(500).json({ error: 'Configuración incompleta del servidor.' });
+  const ghHeaders = {
+    Authorization: `token ${token}`,
+    Accept: 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+
+  // ── Newsletter subscription ──────────────────────────────────────────────
+  if ((req.body || {}).action === 'newsletter') {
+    try {
+      const email = String(req.body.email || '').trim().toLowerCase();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({ error: 'Email inválido.' });
+      }
+      const getRes = await fetch(GH_SUBS_API, { headers: ghHeaders });
+      let existing = [], sha = null;
+      if (getRes.ok) {
+        const fd = await getRes.json();
+        sha = fd.sha;
+        existing = JSON.parse(Buffer.from(fd.content, 'base64').toString('utf8'));
+      }
+      if (existing.find(function(s) { return s.email === email; })) {
+        return res.status(200).json({ success: true, duplicate: true });
+      }
+      existing.push({ email, date: new Date().toISOString() });
+      const putBody = { message: 'newsletter: ' + email, content: Buffer.from(JSON.stringify(existing, null, 2)).toString('base64'), branch: 'main' };
+      if (sha) putBody.sha = sha;
+      const putRes = await fetch(GH_SUBS_API, { method: 'PUT', headers: ghHeaders, body: JSON.stringify(putBody) });
+      if (!putRes.ok) throw new Error('GitHub PUT ' + putRes.status);
+      return res.status(200).json({ success: true });
+    } catch (err) {
+      console.error('[newsletter]', err.message);
+      return res.status(500).json({ error: 'Error al procesar la suscripción.' });
+    }
+  }
 
   try {
     const { name, product, productBrand, rating, text } = req.body || {};
@@ -31,15 +70,6 @@ module.exports = async (req, res) => {
       rating: ratingNum,
       text: String(text).trim().slice(0, 600),
       date: new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
-    };
-
-    const token = process.env.GITHUB_PAT;
-    if (!token) return res.status(500).json({ error: 'Configuración incompleta del servidor.' });
-
-    const ghHeaders = {
-      Authorization: `token ${token}`,
-      Accept: 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
     };
 
     const getRes = await fetch(GH_API, { headers: ghHeaders });
