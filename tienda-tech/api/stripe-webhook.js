@@ -2,7 +2,7 @@
 const crypto = require('crypto');
 const { db }        = require('./_db');
 const { sendEmail } = require('./_send-email');
-const { orderConfirm, welcome } = require('./_email-templates');
+const { orderConfirm } = require('./_email-templates');
 
 function verifyStripeSignature(rawBody, sigHeader, secret) {
   const parts  = sigHeader.split(',');
@@ -100,10 +100,6 @@ module.exports = async (req, res) => {
       });
     } else {
       await db('customers', { method: 'POST', body: { email, name, total_orders: 1, total_spent: total } });
-      if (email) {
-        const { subject, html } = welcome({ name, email });
-        await sendEmail({ to: email, subject, html });
-      }
     }
 
     // Email de confirmación
