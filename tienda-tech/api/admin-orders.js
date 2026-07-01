@@ -1,7 +1,7 @@
 'use strict';
 const { db }           = require('./_db');
 const { sendEmail }    = require('./_send-email');
-const { orderShipped, orderDelivered } = require('./_email-templates');
+const { orderShipped, orderDelivered, orderCancelled } = require('./_email-templates');
 
 function authCheck(req) {
   const key = process.env.ADMIN_API_KEY;
@@ -98,6 +98,16 @@ module.exports = async (req, res) => {
             email:   updated.customer_email,
             name:    updated.customer_name,
             orderNo: '#' + updated.order_no,
+          });
+          await sendEmail({ to: updated.customer_email, subject, html });
+        }
+        if (status === 'cancelled') {
+          const { subject, html } = orderCancelled({
+            email:   updated.customer_email,
+            name:    updated.customer_name,
+            orderNo: '#' + updated.order_no,
+            total:   updated.total,
+            reason:  req.body.cancel_reason || null,
           });
           await sendEmail({ to: updated.customer_email, subject, html });
         }
