@@ -327,7 +327,57 @@ function orderDelivered({ name, email, orderNo, items }) {
   };
 }
 
-// ─── 5. AUTO-REPLY CONTACTO ──────────────────────────────────────────────────
+// ─── 5. PEDIDO CANCELADO ─────────────────────────────────────────────────────
+function orderCancelled({ name, email, orderNo, reason, total }) {
+  const firstName = (name || email || 'cliente').split(' ')[0];
+  const fmt = v => Number(v).toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
+  return {
+    subject: `❌ Pedido ${orderNo} cancelado — ZoneTechOnline`,
+    html: base(`
+      <div style="text-align:center;margin-bottom:20px;">
+        <div style="width:64px;height:64px;background:#fef2f2;border:2px solid #fca5a5;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:12px;">❌</div>
+        <br>${badge('🚫', 'PEDIDO CANCELADO')}
+      </div>
+      <h1 style="font-size:24px;font-weight:800;color:#1a1a2e;margin:0 0 8px;text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        Tu pedido ha sido cancelado, ${firstName}
+      </h1>
+      <p style="font-size:14px;color:#666;text-align:center;margin:0 0 28px;line-height:1.6;">
+        Lamentamos los inconvenientes. A continuación encontrarás los detalles de la cancelación.
+      </p>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:28px;">
+      <tr><td style="background:#fef2f2;border:1px solid #fca5a5;border-radius:12px;padding:20px 24px;">
+        <div style="font-size:11px;color:#991b1b;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;font-weight:700;">Número de pedido</div>
+        <div style="font-size:20px;font-weight:900;color:#1a1a2e;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">${orderNo}</div>
+        ${total ? `<div style="font-size:13px;color:#666;margin-top:6px;">Importe: <strong>${fmt(total)}</strong></div>` : ''}
+        ${reason ? `<div style="font-size:13px;color:#666;margin-top:6px;">Motivo: ${reason}</div>` : ''}
+      </td></tr>
+      </table>
+
+      ${divider()}
+      <p style="font-size:14px;color:#555;text-align:center;margin:0 0 20px;line-height:1.7;">
+        Si realizaste el pago, el reembolso se procesará en un plazo de <strong>5–10 días hábiles</strong> en tu método de pago original.
+      </p>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td width="48%" style="background:#f9f9fc;border-radius:10px;padding:16px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">🛒</div>
+            <div style="font-size:12.5px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">¿Quieres volver a pedir?</div>
+            <a href="${SITE_URL}/catalogo.html" style="display:inline-block;margin-top:8px;font-size:12px;color:${BRAND_COLOR};text-decoration:none;font-weight:600;">Ver catálogo →</a>
+          </td>
+          <td width="4%"></td>
+          <td width="48%" style="background:#f9f9fc;border-radius:10px;padding:16px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">💬</div>
+            <div style="font-size:12.5px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">¿Tienes preguntas?</div>
+            <a href="mailto:${SUPPORT_EMAIL}" style="display:inline-block;margin-top:8px;font-size:12px;color:${BRAND_COLOR};text-decoration:none;font-weight:600;">Contactar →</a>
+          </td>
+        </tr>
+      </table>
+    `, `Tu pedido ${orderNo} ha sido cancelado`)
+  };
+}
+
+// ─── 6. AUTO-REPLY CONTACTO ──────────────────────────────────────────────────
 function contactAutoReply({ name, email, subject, message }) {
   const firstName = (name || 'cliente').split(' ')[0];
   return {
@@ -357,4 +407,4 @@ function contactAutoReply({ name, email, subject, message }) {
   };
 }
 
-module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, contactAutoReply };
+module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply };
