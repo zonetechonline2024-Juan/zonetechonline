@@ -247,6 +247,7 @@
     var name = emailVal.split('@')[0];
     name = name.charAt(0).toUpperCase() + name.slice(1);
     localStorage.setItem('zt_user', JSON.stringify({ name: name, email: emailVal, provider: currentProvider, joined: new Date().toISOString(), discount: 'ZONE10', isNew: true }));
+    fetch('/api/email-welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, email: emailVal }) }).catch(function(){});
     document.getElementById('social-waiting').classList.remove('open');
     document.getElementById('alert-ok').classList.add('show');
     setTimeout(function() { window.location.href = 'index.html?welcome=1'; }, 1200);
@@ -272,7 +273,10 @@
     if (pw2.value !== pw.value) { pw2.classList.add('error'); document.getElementById('password2-error').classList.add('show'); ok = false; }
     if (!document.getElementById('rgpd').checked) { alert('Debes aceptar la política de privacidad para continuar.'); ok = false; }
     if (!ok) return;
-    localStorage.setItem('zt_user', JSON.stringify({ name: fn.value.trim() + ' ' + ln.value.trim(), email: em.value.trim(), joined: new Date().toISOString(), discount: 'ZONE10', isNew: true }));
+    var fullName = fn.value.trim() + ' ' + ln.value.trim();
+    var emailReg = em.value.trim();
+    localStorage.setItem('zt_user', JSON.stringify({ name: fullName, email: emailReg, joined: new Date().toISOString(), discount: 'ZONE10', isNew: true }));
+    fetch('/api/email-welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: fullName, email: emailReg }) }).catch(function(){});
     document.getElementById('alert-ok').classList.add('show');
     setTimeout(function() { window.location.href = 'index.html?welcome=1'; }, 1500);
   });
