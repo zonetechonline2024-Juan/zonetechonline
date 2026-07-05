@@ -1,8 +1,9 @@
 'use strict';
 const crypto = require('crypto');
-const { db }        = require('./_db');
-const { sendEmail } = require('./_send-email');
-const { orderConfirm } = require('./_email-templates');
+const { db }               = require('./_db');
+const { sendEmail }        = require('./_send-email');
+const { orderConfirm }     = require('./_email-templates');
+const { placeMegasurOrder } = require('./_megasur');
 
 function verifyStripeSignature(rawBody, sigHeader, secret) {
   const parts  = sigHeader.split(',');
@@ -115,6 +116,41 @@ module.exports = async (req, res) => {
       });
       await sendEmail({ to: email, subject, html });
       await db('orders', { method: 'PATCH', params: `?id=eq.${order.id}`, body: { email_sent: true } });
+    }
+
+    // Pedido automático a Megasur (dropshipping)
+    try {
+      const cartRows = await db('cart_sessions', { filters: [`stripe_session_id=eq.${session.id}`] });
+      const cartItems = cartRows?.[0]?.items || [];
+
+      const sd = session.shipping_details || {};
+      const shipping = {
+        name:        sd.name        || name,
+        line1:       sd.address?.line1       || '',
+        city:        sd.address?.city        || '',
+        postal_code: sd.address?.postal_code || '',
+        country:     sd.address?.country     || 'ES',
+        phone:       session.customer_details?.phone || '',
+      };
+
+      const result = await placeMegasurOrder({ orderNo, items: cartItems, shipping });
+
+      if (result.megasurRef) {
+        await db('orders', {
+          method: 'PATCH',
+          params: `?id=eq.${order.id}`,
+          body: { megasur_ref: result.megasurRef, megasur_status: 'placed' },
+        });
+      } else if (result.pending) {
+        await db('orders', {
+          method: 'PATCH',
+          params: `?id=eq.${order.id}`,
+          body: { megasur_status: 'pending_credentials' },
+        });
+      }
+    } catch (megasurErr) {
+      console.error('[stripe-webhook] Megasur order failed:', megasurErr.message);
+      // No fallar el webhook por errores de Megasur
     }
 
     res.status(200).json({ received: true, orderNo });
