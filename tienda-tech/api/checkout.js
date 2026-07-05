@@ -1,5 +1,7 @@
+'use strict';
+const { db } = require('./_db');
+
 module.exports = async (req, res) => {
-  // CORS headers (vercel.json las añade también, pero las repetimos por seguridad)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -13,11 +15,8 @@ module.exports = async (req, res) => {
       return res.status(500).json({ error: 'Configuración de pago incompleta. Contacta con soporte.' });
     }
 
-    // Stripe lazy init — dentro del try para capturar cualquier error de inicialización
     const stripe = require('stripe')(apiKey);
 
-    // Vercel auto-parsea el body cuando Content-Type: application/json
-    // Si por algún motivo llegara como string, lo parseamos aquí
     let body = req.body;
     if (typeof body === 'string') {
       try { body = JSON.parse(body); } catch (_) { body = {}; }
@@ -26,8 +25,6 @@ module.exports = async (req, res) => {
 
     const { items, email, discountAmount, paymentMethod } = body;
 
-    // Mapeo de métodos de pago al tipo de Stripe
-    // Bizum y PayPal requieren activación en: Stripe Dashboard → Configuración → Métodos de pago
     const stripeMethodTypes =
       paymentMethod === 'bizum'  ? ['bizum']  :
       paymentMethod === 'paypal' ? ['paypal'] :
@@ -66,6 +63,10 @@ module.exports = async (req, res) => {
       locale: 'es',
       success_url: `${base}/checkout-success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${base}/checkout-cancel.html`,
+      // Recogemos dirección de envío para dropshipping con Megasur
+      shipping_address_collection: {
+        allowed_countries: ['ES', 'PT', 'FR', 'DE', 'IT', 'GB', 'NL', 'BE', 'AT', 'CH', 'IE', 'PL'],
+      },
       billing_address_collection: 'auto',
     };
 
@@ -84,6 +85,26 @@ module.exports = async (req, res) => {
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
+
+    // Guardar carrito en Supabase vinculado al session ID (para dropshipping Megasur)
+    try {
+      const cartItems = items.map(item => ({
+        name:        String(item.name || '').trim().slice(0, 250),
+        price:       parseFloat(item.price) || 0,
+        qty:         Math.max(1, parseInt(item.qty) || 1),
+        ean:         item.ean         || null,
+        megasurCode: item.megasurCode || null,
+        image:       item.image       || null,
+      }));
+      await db('cart_sessions', {
+        method: 'POST',
+        body: { stripe_session_id: session.id, items: cartItems },
+      });
+    } catch (cartErr) {
+      // No bloquear el pago si falla el guardado del carrito
+      console.warn('[checkout] cart_sessions save failed:', cartErr.message);
+    }
+
     return res.status(200).json({ url: session.url });
 
   } catch (error) {
