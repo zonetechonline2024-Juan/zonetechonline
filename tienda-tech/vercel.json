@@ -23,7 +23,8 @@
     "api/admin-orders.js":              { "maxDuration": 15 },
     "api/admin-products.js":            { "maxDuration": 15 },
     "api/admin-customers.js":           { "maxDuration": 15 },
-    "api/admin-import-products.js":     { "maxDuration": 30 }
+    "api/admin-import-products.js":     { "maxDuration": 30 },
+    "api/megasur.js":                   { "maxDuration": 30 }
   },
   "headers": [
     {
