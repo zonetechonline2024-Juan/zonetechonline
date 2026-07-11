@@ -14,7 +14,6 @@
   "functions": {
     "api/checkout.js":            { "maxDuration": 15 },
     "api/review.js":              { "maxDuration": 10 },
-    "api/email-shipping.js":      { "maxDuration": 10 },
     "api/email-contact.js":       { "maxDuration": 10 },
     "api/orders.js":                    { "maxDuration": 15 },
     "api/stripe-webhook.js":            { "maxDuration": 15 },
