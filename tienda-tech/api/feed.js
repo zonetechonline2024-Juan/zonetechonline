@@ -67,22 +67,29 @@ function esc(str) {
 
 function productItem(p) {
   const filter    = FILTER[p.category] || 'all';
-  const link      = `${STORE}/catalogo.html?filter=${filter}&product=${p.id}`;
+  const link      = `${STORE}/catalogo.html?product=${p.id}`;
   const imageLink = p.image ? `${STORE}/${p.image.replace(/^\//, '')}` : '';
   const price     = `${(parseFloat(p.price) || 0).toFixed(2)} EUR`;
   const gcat      = GCAT[p.category] || '888';
   const brand     = esc(p.brand || 'ZoneTechOnline');
   const sku       = p.specs?.SKU || p.specs?.['P/N Depau'] || `ZT-${p.id}`;
 
+  // Prefijo de categoría en el título para evitar falsos positivos de Google
+  // (ej. "GINESTRA" confundido con bebida alcohólica)
+  const catPrefix = {
+    'relojes': 'Smartwatch', 'auriculares': 'Auriculares',
+    'altavoces': 'Altavoz', 'teclados gaming': 'Teclado Gaming', 'smartphones': 'Smartphone'
+  }[p.category] || '';
+  const title = catPrefix ? `${catPrefix} ${p.name}` : p.name;
+
   return `
     <item>
       <g:id>${esc(String(p.id))}</g:id>
-      <g:title>${esc(p.name)}</g:title>
+      <g:title>${esc(title.slice(0, 150))}</g:title>
       <g:description>${esc((p.description || p.name).slice(0, 5000))}</g:description>
       <g:link>${esc(link)}</g:link>
       <g:image_link>${esc(imageLink)}</g:image_link>
       <g:price>${price}</g:price>
-      <g:sale_price>${price}</g:sale_price>
       <g:availability>in stock</g:availability>
       <g:condition>new</g:condition>
       <g:brand>${brand}</g:brand>
@@ -91,7 +98,7 @@ function productItem(p) {
       <g:product_type>${esc(p.category)}</g:product_type>
       <g:shipping>
         <g:country>ES</g:country>
-        <g:service>Estándar</g:service>
+        <g:service>Estándar MRW/SEUR</g:service>
         <g:price>0.00 EUR</g:price>
       </g:shipping>
     </item>`;
