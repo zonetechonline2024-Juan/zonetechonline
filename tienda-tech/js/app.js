@@ -3016,6 +3016,10 @@ function updateCartBadge() {
 function addToCart(productId) {
   var product = PRODUCTS.find(function(p) { return p.id === productId; });
   if (!product) return;
+  if (product.inStock === false) {
+    showToast('Este producto está temporalmente sin stock');
+    return;
+  }
   var existing = cart.find(function(i) { return i.id === productId; });
   if (existing) {
     existing.qty++;
@@ -3203,17 +3207,23 @@ function renderProducts(filterKey, customFilter) {
   }
 
   grid.innerHTML = filtered.map(function(product) {
-    var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
+    var isOOS = product.inStock === false;
+    var badgeHTML = isOOS
+      ? '<span class="product-badge product-badge--oos">AGOTADO</span>'
+      : (product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '');
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
-    var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
+    var discountHTML = (!isOOS && discount > 0) ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var shortDesc = product.description.length > 90 ? product.description.substring(0, 90) + '...' : product.description;
     var inWl = isInWishlist(product.id);
     var wlFill = inWl ? '#f87171' : 'none';
     var wlClass = inWl ? ' active' : '';
     var wlTitle = inWl ? 'Quitar de favoritos' : 'Añadir a favoritos';
+    var cartBtn = isOOS
+      ? '<button class="btn-cart btn-cart--oos" disabled>Sin stock</button>'
+      : '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>';
 
-    return '<article class="product-card" data-product-id="' + product.id + '">' +
+    return '<article class="product-card' + (isOOS ? ' product-card--oos' : '') + '" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
       '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
@@ -3228,7 +3238,7 @@ function renderProducts(filterKey, customFilter) {
           oldPriceHTML + discountHTML +
         '</div>' +
         '<div class="product-actions">' +
-          '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          cartBtn +
           '<button class="btn-wishlist' + wlClass + '" onclick="toggleWishlist(' + product.id + ', this)" title="' + wlTitle + '">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + wlFill + '" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
           '</button>' +
@@ -3278,18 +3288,24 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     return 0;
   }
   grid.innerHTML = filtered.map(function(product) {
-    var badgeHTML = product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '';
+    var isOOS2 = product.inStock === false;
+    var badgeHTML = isOOS2
+      ? '<span class="product-badge product-badge--oos">AGOTADO</span>'
+      : (product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '');
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
-    var discountHTML = discount > 0 ? '<span class="product-discount">-' + discount + '%</span>' : '';
+    var discountHTML = (!isOOS2 && discount > 0) ? '<span class="product-discount">-' + discount + '%</span>' : '';
     var descRaw = Array.isArray(product.description) ? product.description.join('. ') : (product.description || '');
     var shortDesc = descRaw.length > 88 ? descRaw.substring(0, 88) + '...' : descRaw;
     var inWl2 = isInWishlist(product.id);
     var wlFill2 = inWl2 ? '#f87171' : 'none';
     var wlClass2 = inWl2 ? ' active' : '';
     var wlTitle2 = inWl2 ? 'Quitar de favoritos' : 'Añadir a favoritos';
+    var cartBtn2 = isOOS2
+      ? '<button class="btn-cart btn-cart--oos" disabled>Sin stock</button>'
+      : '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>';
 
-    return '<article class="product-card" data-product-id="' + product.id + '">' +
+    return '<article class="product-card' + (isOOS2 ? ' product-card--oos' : '') + '" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
       '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
@@ -3301,7 +3317,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
         '<div class="product-actions">' +
-          '<button class="btn-cart" onclick="addToCart(' + product.id + ')">Añadir al carrito</button>' +
+          cartBtn2 +
           '<button class="btn-wishlist' + wlClass2 + '" onclick="toggleWishlist(' + product.id + ', this)" title="' + wlTitle2 + '">' +
             '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + wlFill2 + '" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
           '</button>' +
@@ -3435,7 +3451,9 @@ function openQuickView(productId) {
         '<span class="qv-trust-item">✓ Envío gratis · 5 a 8 días hábiles</span>' +
         '<span class="qv-trust-item">✓ Devolución 30 días</span>' +
       '</div>' +
-      '<button class="btn-primary qv-add-btn" onclick="addToCart(' + product.id + ');closeQuickView()">Añadir al carrito — €' + product.price.toLocaleString() + '</button>' +
+      (product.inStock === false
+        ? '<button class="btn-primary qv-add-btn" disabled style="opacity:.45;cursor:not-allowed;background:rgba(99,102,241,.2)">Sin stock temporalmente</button>'
+        : '<button class="btn-primary qv-add-btn" onclick="addToCart(' + product.id + ');closeQuickView()">Añadir al carrito — €' + product.price.toLocaleString() + '</button>') +
     '</div>';
 
   modal.classList.add('open');
