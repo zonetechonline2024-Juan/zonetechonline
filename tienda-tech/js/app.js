@@ -1315,7 +1315,7 @@ PRODUCTS.push(
 PRODUCTS.push(
 
   { id:41, name:'Samsung Galaxy Fit3 1.6" 40mm BT Gray', brand:'Samsung', category:'relojes',
-    price:40.16, oldPrice:46.18, badge: 'OFERTA',
+    price:64.35, oldPrice:75.95, badge: 'OFERTA',
     image:'/images/products/infortisa-41.webp',
     images: [
       '/images/products/infortisa-41.webp'
@@ -1324,7 +1324,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503'}
   },
   { id:42, name:'Samsung Galaxy Fit3 1.6" 40mm BT Pink', brand:'Samsung', category:'relojes',
-    price:40.16, oldPrice:46.18, badge: 'OFERTA',
+    price:64.35, oldPrice:75.95, badge: 'OFERTA',
     image:'/images/products/infortisa-42.webp',
     images: [
       '/images/products/infortisa-42.webp'
@@ -1333,7 +1333,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503'}
   },
   { id:43, name:'Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
-    price:197.66, oldPrice:227.31, badge: 'OFERTA',
+    price:272.15, oldPrice:321.15, badge: 'OFERTA',
     image:'/images/products/infortisa-43.webp',
     images: [
       '/images/products/infortisa-43.webp'
@@ -1342,7 +1342,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:44, name:'Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
-    price:327.95, oldPrice:377.14, badge: 'OFERTA',
+    price:426.3, oldPrice:503.05, badge: 'OFERTA',
     image:'/images/products/infortisa-44.webp',
     images: [
       '/images/products/infortisa-44.webp'
@@ -1351,7 +1351,7 @@ PRODUCTS.push(
     specs:{'Info':'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:45, name:'Xiaomi Redmi Watch 5 Active Plata Mate', brand:'Xiaomi', category:'relojes',
-    price:29.97, oldPrice:34.47, badge: 'OFERTA',
+    price:51.5, oldPrice:60.75, badge: 'OFERTA',
     image:'/images/products/infortisa-45.webp',
     images: [
       '/images/products/infortisa-45.webp'
@@ -1360,7 +1360,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM','SKU Infortisa':'xiaomi-redmi-watch-5-active-plata-mate181024095502'}
   },
   { id:46, name:'XIAOMI Pulsera MI Smart Band 10 Glacier Silver', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge: 'OFERTA',
+    price:64.35, oldPrice:75.95, badge: 'OFERTA',
     image:'/images/products/infortisa-46.webp',
     images: [
       '/images/products/infortisa-46.webp'
@@ -1369,7 +1369,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503'}
   },
   { id:47, name:'XIAOMI Pulsera MI Smart Band 10 Midnight Black', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge: 'OFERTA',
+    price:64.35, oldPrice:75.95, badge: 'OFERTA',
     image:'/images/products/infortisa-47.webp',
     images: [
       '/images/products/infortisa-47.webp'
@@ -1378,7 +1378,7 @@ PRODUCTS.push(
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502'}
   },
   { id:48, name:'XIAOMI Pulsera MI Smart Band 10 Mystic Rose', brand:'Xiaomi', category:'relojes',
-    price:39.99, oldPrice:45.99, badge: 'OFERTA',
+    price:64.35, oldPrice:75.95, badge: 'OFERTA',
     image:'/images/products/infortisa-48.webp',
     images: [
       '/images/products/infortisa-48.webp'
