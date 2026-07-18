@@ -1164,7 +1164,7 @@ PRODUCTS.push(
     specs:{'Info':'GPS especializado para golf · +41.000 campos mundiales', 'Info':'Pantalla MIP 1.1" · Bluetooth · resistente al agua', 'Info':'Distancias precisas al verde · obstáculos · rango de llegada', 'Info':'Batería hasta 9h GPS · 12h modo reloj', 'Info':'Estadísticas hoyo a hoyo · puntuación digital', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000005628'}
   },
   { id:27, name:'SMARTWATCH GARMIN FORERUNNER 165 43MM NEGRO GPS', brand:'Garmin', category:'relojes',
-    price:196.99, oldPrice:226.54, badge: 'OFERTA',
+    price:310.15, oldPrice:366, badge: 'OFERTA',
     image:'img/productos/DSP0000029844-0.jpg',
     images: [
       'img/productos/DSP0000029844-0.jpg',
@@ -1177,7 +1177,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED 1.2" táctil 390×390 · GPS multi-satélite', 'Info':'FC óptico + SpO2 + estrés · hasta 11 días smartwatch', 'Info':'Hasta 19h GPS continuo · BT + WiFi', 'Métricas carrera avanzadas':'VO2max · cadencia', 'Info':'Planes de entrenamiento Garmin Coach · Garmin Pay NFC', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000029844'}
   },
   { id:28, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP BLANCO Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
-    price:199.99, oldPrice:229.99, badge: 'OFERTA',
+    price:289.1, oldPrice:341.15, badge: 'OFERTA',
     image:'img/productos/MGS0000032958-0.jpg',
     images: [
       'img/productos/MGS0000032958-0.jpg',
@@ -1189,7 +1189,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032958'}
   },
   { id:29, name:'SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP Negro Resistencia Agua 5ATM Pulsómetro Sueño', brand:'Garmin', category:'relojes',
-    price:199.99, oldPrice:229.99, badge: 'OFERTA',
+    price:289.1, oldPrice:341.15, badge: 'OFERTA',
     image:'img/productos/MGS0000032959-0.jpg',
     images: [
       'img/productos/MGS0000032959-0.jpg',
@@ -1201,7 +1201,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla MIP 1.04" 208×208 · GPS integrado + GLONASS · 42mm', 'Info':'BT + WiFi · resistencia al agua 5ATM', 'Info':'FC óptico + SpO2 · seguimiento de sueño avanzado', 'Info':'Hasta 20h GPS activo · 2 semanas modo smartwatch', 'Info':'Planes de entrenamiento Garmin Coach para corredores', 'Info':'Compatible Garmin Pay · peso 49.7g','SKU Megasur':'MGS0000032959'}
   },
   { id:30, name:'Garmin Vívoactive 5, Smartwatch con GPS, Pantalla AMOLED, hasta 11 dias de autonomia', brand:'Garmin', category:'relojes',
-    price:201.24, oldPrice:231.43, badge: 'OFERTA',
+    price:330.75, oldPrice:390.3, badge: 'OFERTA',
     image:'img/productos/DSP0000028241-0.jpg',
     images: [
       'img/productos/DSP0000028241-0.jpg',
@@ -1214,7 +1214,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED 1.2" táctil · GPS + GLONASS + Galileo', 'Info':'BT + WiFi + NFC Garmin Pay · hasta 11 días smartwatch', 'Info':'FC óptico 24h + SpO2 + variabilidad FC + estrés', 'Info':'Seguimiento de sueño avanzado · +25 deportes', 'Info':'Hasta 18h GPS continuo · altímetro barométrico', 'Info':'Diseño ultraligero · compatible Garmin Coach','SKU Megasur':'DSP0000028241'}
   },
   { id:231, name:'SMARTWATCH HAMMER WATCH 2 LITE BLACK', brand:'Hammer', category:'relojes',
-    price:36.07, oldPrice:41.48, badge: 'OFERTA',
+    price:120.8, oldPrice:142.55, badge: 'OFERTA',
     image:'img/productos/DSP0000027299-0.jpg',
     description:'Pantalla IPS 1.6" · resistencia militar IP68',
     specs:{'Info':'Pantalla IPS 1.6" · resistencia militar IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Monitorización de sueño · detección de actividad 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Alertas SOS · notificaciones de smartphone', 'Info':'Resistente a golpes y agua · diseño rugged outdoor','SKU Megasur':'DSP0000027299'}
@@ -1222,7 +1222,7 @@ PRODUCTS.push(
   // ── MyPhone + Hammer — Lifestyle y rugged ──────────────────────────────────
 
   { id:232, name:'RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO', brand:'MyPhone', category:'relojes',
-    price:49.99, oldPrice:57.49, badge: 'OFERTA',
+    price:117.6, oldPrice:138.75, badge: 'OFERTA',
     image:'img/productos/DSP0000024070-0.jpg',
     description:'Smartwatch para mayores con 4G LTE y GPS integrado',
     specs:{'Info':'Smartwatch para mayores con 4G LTE y GPS integrado', 'Info':'Llamadas bidireccionales · botón SOS de emergencia', 'Info':'Detector de caídas automático · alertas de salud', 'Info':'FC óptico · podómetro · pantalla táctil grande', 'Info':'Diseño sencillo pensado para personas mayores', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000024070'}
@@ -1248,7 +1248,7 @@ PRODUCTS.push(
   // ── Familia e infantil ──────────────────────────────────────────────────────
 
   { id:36, name:'SMARTWATCH SPC SMARTEE 4G KIDZ TURQUESA', brand:'SPC', category:'relojes',
-    price:77.94, oldPrice:89.63, badge: 'OFERTA',
+    price:130.6, oldPrice:154.1, badge: 'OFERTA',
     image:'img/productos/DSP0000023066-0.jpg',
     images: [
       'img/productos/DSP0000023066-0.jpg',
@@ -1259,7 +1259,7 @@ PRODUCTS.push(
     specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz y texto', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app SPC SMARTEE', 'Info':'Pantalla táctil · resistente al agua · cámara integrada', 'Info':'Para niños de 3 a 12 años · color Turquesa','SKU Megasur':'DSP0000023066'}
   },
   { id:37, name:'SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS', brand:'TCL', category:'relojes',
-    price:49.99, oldPrice:57.49, badge: 'OFERTA',
+    price:230.6, oldPrice:272.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033444-0.jpg',
     images: [
       'img/productos/MGS0000033444-0.jpg',
@@ -1269,7 +1269,7 @@ PRODUCTS.push(
     specs:{'Info':'Smartwatch infantil 4G con GPS antipérdida · nanoSIM', 'Info':'Llamadas bidireccionales · cámara integrada', 'Info':'Botón SOS con ubicación GPS en tiempo real', 'Info':'Control parental desde app TCL MOVETIME', 'Info':'Pantalla táctil · resistente al agua', 'Info':'Para niños de 4 a 12 años · geovalla configurable','SKU Megasur':'MGS0000033444'}
   },
   { id:38, name:'SMARTWATCH LEOTEC LESWKIDS06K KIDS ALLO PLUS NEGRO', brand:'Leotec', category:'relojes',
-    price:59.94, oldPrice:68.93, badge: 'OFERTA',
+    price:99.85, oldPrice:117.8, badge: 'OFERTA',
     image:'img/productos/DSP0000020100-0.jpg',
     images: [
       'img/productos/DSP0000020100-0.jpg',
