@@ -1737,9 +1737,12 @@ PRODUCTS.push(
 
   { id:268, name:'TECLADO GAMING CHERRY MX 6.0 MK6601 RGB NEGRO', brand:'CHERRY', category:'teclados gaming',
     price:185.70, oldPrice:219.15, badge: 'OFERTA',
-    image:'img/productos/MGS0000033630-0.jpg',
+    image:'img/productos/cherry-mx60-gaming-negro-0.jpg',
     images: [
-      'img/productos/MGS0000033630-0.jpg'
+      'img/productos/cherry-mx60-gaming-negro-0.jpg',
+      'img/productos/cherry-mx60-gaming-negro-1.jpg',
+      'img/productos/cherry-mx60-gaming-negro-2.jpg',
+      'img/productos/cherry-mx60-gaming-negro-3.jpg'
     ],
     description:'Switch: Cherry MX Red (lineal)',
     specs:{'Switch':'Cherry MX Red', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Full N-Key Rollover', 'SKU Megasur':'Consultar ficha'}
@@ -1747,9 +1750,12 @@ PRODUCTS.push(
 
   { id:269, name:'TECLADO GAMING DELL ALIENWARE AW410K RGB NEGRO', brand:'ALIENWARE', category:'teclados gaming',
     price:235.85, oldPrice:278.30, badge: 'OFERTA',
-    image:'img/productos/MGS0000033634-0.jpg',
+    image:'img/productos/1434-dell-alienware-aw410k-teclado-mecanico-gaming-rgb-qzerty-cherry-mx-layout-usa.jpg',
     images: [
-      'img/productos/MGS0000033634-0.jpg'
+      'img/productos/1434-dell-alienware-aw410k-teclado-mecanico-gaming-rgb-qzerty-cherry-mx-layout-usa.jpg',
+      'img/productos/2312-dell-alienware-aw410k-teclado-mecanico-gaming-rgb-qzerty-cherry-mx-layout-usa-comprar.jpg',
+      'img/productos/3791-dell-alienware-aw410k-teclado-mecanico-gaming-rgb-qzerty-cherry-mx-layout-usa-mejor-precio.jpg',
+      'img/productos/4777-dell-alienware-aw410k-teclado-mecanico-gaming-rgb-qzerty-cherry-mx-layout-usa-especificaciones.jpg'
     ],
     description:'Switch: Cherry MX Red (lineal)',
     specs:{'Switch':'Cherry MX Red', 'Iluminación':'RGB AlienFX por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
@@ -1757,9 +1763,12 @@ PRODUCTS.push(
 
   { id:270, name:'TECLADO GAMING KROM KERID USB MECANICO RETROILUMINADO NEGRO', brand:'KROM', category:'teclados gaming',
     price:89.70, oldPrice:105.85, badge: 'OFERTA',
-    image:'img/productos/DSP0000038844-0.jpg',
+    image:'img/productos/krom-kerid-usb-mecanico-negro-0.jpg',
     images: [
-      'img/productos/DSP0000038844-0.jpg'
+      'img/productos/krom-kerid-usb-mecanico-negro-0.jpg',
+      'img/productos/krom-kerid-usb-mecanico-negro-1.jpg',
+      'img/productos/krom-kerid-usb-mecanico-negro-2.jpg',
+      'img/productos/krom-kerid-usb-mecanico-negro-3.jpg'
     ],
     description:'Switch: Mecánico (Brown táctil)',
     specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB retroiluminado', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
@@ -1767,9 +1776,11 @@ PRODUCTS.push(
 
   { id:271, name:'TECLADO GAMING HADES HEK T0 MECANICO SWITCHES BROWN NEGRO', brand:'HADES', category:'teclados gaming',
     price:138.15, oldPrice:163.00, badge: 'OFERTA',
-    image:'img/productos/DSP0000038461-0.jpg',
+    image:'img/productos/hades-hek-t0-mecanico-brown-negro-0.jpg',
     images: [
-      'img/productos/DSP0000038461-0.jpg'
+      'img/productos/hades-hek-t0-mecanico-brown-negro-0.jpg',
+      'img/productos/hades-hek-t0-mecanico-brown-negro-1.jpg',
+      'img/productos/hades-hek-t0-mecanico-brown-negro-2.jpg'
     ],
     description:'Switch: Brown (táctil)',
     specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
