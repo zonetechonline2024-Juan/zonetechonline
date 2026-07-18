@@ -1778,7 +1778,7 @@ PRODUCTS.push(
 
   // ── Corsair K70 RGB PRO (añadido 2026-07-18, sustituye a Hades HEK T0) ──
   { id:271, name:'TECLADO GAMING CORSAIR K70 RGB PRO MECANICO CHERRY MX RED NEGRO', brand:'CORSAIR', category:'teclados gaming',
-    price:207.55, oldPrice:244.9, badge: 'OFERTA',
+    price:184.45, oldPrice:217.65, badge: 'OFERTA',
     image:'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
     images: [
       'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
