@@ -1433,7 +1433,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033632'}
   },
   { id:49, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II X RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:139.98, oldPrice:165.18, badge: 'OFERTA',
+    price:292.15, oldPrice:344.75, badge: 'OFERTA',
     image:'img/productos/MGS0000033634-0.jpg',
     images: [
       'img/productos/MGS0000033634-0.jpg',
@@ -1445,7 +1445,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033634'}
   },
   { id:50, name:'TECLADO GAMING ASUS ROG FALCHION ACE HFX ZywOo EDITION RGB INGLES', brand:'ASUS', category:'teclados gaming',
-    price:174.99, oldPrice:206.49, badge: 'OFERTA',
+    price:406.25, oldPrice:479.4, badge: 'OFERTA',
     image:'img/productos/MGS0000033636-0.jpg',
     images: [
       'img/productos/MGS0000033636-0.jpg',
@@ -1457,7 +1457,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033636'}
   },
   { id:51, name:'TECLADO GAMING ASUS ROG FALCHION ACE 75 HE RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:189.99, oldPrice:224.19, badge: 'OFERTA',
+    price:424.4, oldPrice:500.8, badge: 'OFERTA',
     image:'img/productos/MGS0000033638-0.jpg',
     images: [
       'img/productos/MGS0000033638-0.jpg',
@@ -1481,7 +1481,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033860'}
   },
   { id:53, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II 96 INALAMBRICO RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:269.47, oldPrice:317.97, badge: 'OFERTA',
+    price:351.85, oldPrice:415.2, badge: 'OFERTA',
     image:'img/productos/MGS0000033626-0.jpg',
     images: [
       'img/productos/MGS0000033626-0.jpg',
@@ -1719,6 +1719,60 @@ PRODUCTS.push(
     ],
     description:'Switch: Gaming',
     specs:{'Switch':'Gaming', 'Conexión':'USB-A cableado', 'Formato':'TKL Sin numpad', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038098'}
+  },
+
+  // ── 5 TECLADOS NUEVOS (añadidos 2026-07-18) ─────────────────────────────
+
+  { id:267, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II RGB NEGRO', brand:'ASUS', category:'teclados gaming',
+    price:311.15, oldPrice:367.15, badge: 'OFERTA',
+    image:'img/productos/MGS0000033628-0.jpg',
+    images: [
+      'img/productos/MGS0000033628-0.jpg',
+      'img/productos/MGS0000033628-2.jpg',
+      'img/productos/MGS0000033628-3.jpg'
+    ],
+    description:'Switch: Consultar ficha',
+    specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'MGS0000033628'}
+  },
+
+  { id:268, name:'TECLADO GAMING CHERRY MX 6.0 MK6601 RGB NEGRO', brand:'CHERRY', category:'teclados gaming',
+    price:185.70, oldPrice:219.15, badge: 'OFERTA',
+    image:'img/productos/MGS0000033630-0.jpg',
+    images: [
+      'img/productos/MGS0000033630-0.jpg'
+    ],
+    description:'Switch: Cherry MX Red (lineal)',
+    specs:{'Switch':'Cherry MX Red', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Full N-Key Rollover', 'SKU Megasur':'Consultar ficha'}
+  },
+
+  { id:269, name:'TECLADO GAMING DELL ALIENWARE AW410K RGB NEGRO', brand:'ALIENWARE', category:'teclados gaming',
+    price:235.85, oldPrice:278.30, badge: 'OFERTA',
+    image:'img/productos/MGS0000033634-0.jpg',
+    images: [
+      'img/productos/MGS0000033634-0.jpg'
+    ],
+    description:'Switch: Cherry MX Red (lineal)',
+    specs:{'Switch':'Cherry MX Red', 'Iluminación':'RGB AlienFX por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
+  },
+
+  { id:270, name:'TECLADO GAMING KROM KERID USB MECANICO RETROILUMINADO NEGRO', brand:'KROM', category:'teclados gaming',
+    price:89.70, oldPrice:105.85, badge: 'OFERTA',
+    image:'img/productos/DSP0000038844-0.jpg',
+    images: [
+      'img/productos/DSP0000038844-0.jpg'
+    ],
+    description:'Switch: Mecánico (Brown táctil)',
+    specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB retroiluminado', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
+  },
+
+  { id:271, name:'TECLADO GAMING HADES HEK T0 MECANICO SWITCHES BROWN NEGRO', brand:'HADES', category:'teclados gaming',
+    price:138.15, oldPrice:163.00, badge: 'OFERTA',
+    image:'img/productos/DSP0000038461-0.jpg',
+    images: [
+      'img/productos/DSP0000038461-0.jpg'
+    ],
+    description:'Switch: Brown (táctil)',
+    specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
   }
 );
 
