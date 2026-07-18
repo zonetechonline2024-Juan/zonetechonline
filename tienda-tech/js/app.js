@@ -1151,7 +1151,7 @@ PRODUCTS.push(
   // ── Garmin — GPS premium ──────────────────────────────────────────────────
 
   { id:26, name:'RELOJ SMARTWATCH GARMIN APPROACH, Reloj para Golf, Campos mundiales preinstalados, Bluetooth y Resistente al Agua, Blanco', brand:'Garmin', category:'relojes',
-    price:131.95, oldPrice:151.74, badge: 'OFERTA',
+    price:262.6, oldPrice:309.85, badge: 'OFERTA',
     image:'img/productos/DSP0000005628-0.jpg',
     images: [
       'img/productos/DSP0000005628-0.jpg',
@@ -1228,19 +1228,19 @@ PRODUCTS.push(
     specs:{'Info':'Smartwatch para mayores con 4G LTE y GPS integrado', 'Info':'Llamadas bidireccionales · botón SOS de emergencia', 'Info':'Detector de caídas automático · alertas de salud', 'Info':'FC óptico · podómetro · pantalla táctil grande', 'Info':'Diseño sencillo pensado para personas mayores', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000024070'}
   },
   { id:233, name:'RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK', brand:'MyPhone', category:'relojes',
-    price:49.99, oldPrice:57.49, badge: 'OFERTA',
+    price:108.05, oldPrice:127.5, badge: 'OFERTA',
     image:'img/productos/DSP0000025695-0.jpg',
     description:'Smartwatch outdoor con GPS integrado · IP68',
     specs:{'Info':'Smartwatch outdoor con GPS integrado · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 · podómetro', 'Info':'Pantalla 1.4" IPS color · múltiples modos deporte', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Notificaciones de smartphone · diseño robusto', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000025695'}
   },
   { id:234, name:'RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN', brand:'MyPhone', category:'relojes',
-    price:29.99, oldPrice:34.49, badge: 'OFERTA',
+    price:68, oldPrice:80.25, badge: 'OFERTA',
     image:'img/productos/DSP0000026342-0.jpg',
     description:'Pantalla 1.7" TFT color · Bluetooth 5.0',
     specs:{'Info':'Pantalla 1.7" TFT color · Bluetooth 5.0', 'Info':'FC óptico + SpO2 + podómetro · +100 modos deporte', 'Info':'Monitorización de sueño y estrés 24h', 'Info':'Batería hasta 5 días · recarga magnética', 'Info':'Diseño lifestyle moderno · modos multideporte', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026342'}
   },
   { id:235, name:'RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN', brand:'MyPhone', category:'relojes',
-    price:39.99, oldPrice:45.99, badge: 'OFERTA',
+    price:58, oldPrice:68.45, badge: 'OFERTA',
     image:'img/productos/DSP0000026343-0.jpg',
     description:'Smartwatch robusto para trabajo y exteriores · IP68',
     specs:{'Info':'Smartwatch robusto para trabajo y exteriores · IP68', 'Info':'Bluetooth 5.0 · FC óptico + SpO2 + podómetro', 'Info':'Pantalla resistente 1.4" · alertas y notificaciones', 'Info':'Batería hasta 7 días en uso normal', 'Info':'Diseño tool resistente · color Negro/Verde', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026343'}
@@ -1282,7 +1282,7 @@ PRODUCTS.push(
     specs:{'Info':'GPS + LBS antipérdida · 4G LTE con ranura nanoSIM', 'Info':'Llamadas bidireccionales · mensajes de voz', 'Info':'Cámara integrada · mensajes SOS con geolocalización', 'Info':'Resistencia IP67 · control parental app', 'Info':'Para niños de 4 a 12 años · pantalla táctil', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000020100'}
   },
   { id:39, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 NEGRO', brand:'Forever', category:'relojes',
-    price:32.98, oldPrice:37.93, badge: 'OFERTA',
+    price:56.45, oldPrice:66.6, badge: 'OFERTA',
     image:'img/productos/DSP0000026333-0.jpg',
     images: [
       'img/productos/DSP0000026333-0.jpg',
@@ -1295,7 +1295,7 @@ PRODUCTS.push(
     specs:{'Info':'Pantalla AMOLED · Bluetooth 5.0 · diseño slim', 'Info':'FC óptico 24h + SpO2 + estrés · monitorización de sueño', 'Info':'Más de 20 modos de deporte · podómetro + calorías', 'Info':'Batería hasta 5-7 días · recarga magnética', 'Info':'Notificaciones de smartphone', 'Info':'Compatible iOS y Android','SKU Megasur':'DSP0000026333'}
   },
   { id:40, name:'RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 ROJO', brand:'Forever', category:'relojes',
-    price:33.99, oldPrice:39.09, badge: 'OFERTA',
+    price:56.45, oldPrice:66.6, badge: 'OFERTA',
     image:'img/productos/DSP0000026334-0.jpg',
     images: [
       'img/productos/DSP0000026334-0.jpg',
