@@ -1773,22 +1773,6 @@ PRODUCTS.push(
     description:'Switch: Mecánico (Brown táctil)',
     specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB retroiluminado', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
   }
-
-,
-
-  // ── Corsair K70 RGB PRO (añadido 2026-07-18, sustituye a Hades HEK T0) ──
-  { id:271, name:'TECLADO GAMING CORSAIR K70 RGB PRO MECANICO CHERRY MX RED NEGRO', brand:'CORSAIR', category:'teclados gaming',
-    price:184.45, oldPrice:217.65, badge: 'OFERTA',
-    image:'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
-    images: [
-      'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
-      'img/productos/5718-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-cara.jpg',
-      'img/productos/6659-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-angulo.jpg',
-      'img/productos/7379-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-lateral.jpg'
-    ],
-    description:'Switch: Cherry MX Red (lineal)',
-    specs:{'Switch':'Cherry MX Red (lineal)', 'Iluminación':'RGB AXON per-key 16,8M colores', 'Conexión':'USB-A cableado (extraíble)', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'100% NKRO', 'Polling Rate':'8.000 Hz', 'SKU Megasur':'Consultar ficha'}
-  }
 );
 
 
