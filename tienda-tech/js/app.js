@@ -1772,18 +1772,22 @@ PRODUCTS.push(
     ],
     description:'Switch: Mecánico (Brown táctil)',
     specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB retroiluminado', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
-  },
+  }
 
-  { id:271, name:'TECLADO GAMING HADES HEK T0 MECANICO SWITCHES BROWN NEGRO', brand:'HADES', category:'teclados gaming',
-    price:138.15, oldPrice:163.00, badge: 'OFERTA',
-    image:'img/productos/hades-hek-t0-mecanico-brown-negro-0.jpg',
+,
+
+  // ── Corsair K70 RGB PRO (añadido 2026-07-18, sustituye a Hades HEK T0) ──
+  { id:271, name:'TECLADO GAMING CORSAIR K70 RGB PRO MECANICO CHERRY MX RED NEGRO', brand:'CORSAIR', category:'teclados gaming',
+    price:207.55, oldPrice:244.9, badge: 'OFERTA',
+    image:'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
     images: [
-      'img/productos/hades-hek-t0-mecanico-brown-negro-0.jpg',
-      'img/productos/hades-hek-t0-mecanico-brown-negro-1.jpg',
-      'img/productos/hades-hek-t0-mecanico-brown-negro-2.jpg'
+      'img/productos/1817-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro.jpg',
+      'img/productos/5718-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-cara.jpg',
+      'img/productos/6659-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-angulo.jpg',
+      'img/productos/7379-corsair-k70-rgb-pro-teclado-mecanico-gaming-switch-cherry-mx-red-negro-lateral.jpg'
     ],
-    description:'Switch: Brown (táctil)',
-    specs:{'Switch':'Mecánico Brown táctil', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)', 'SKU Megasur':'Consultar ficha'}
+    description:'Switch: Cherry MX Red (lineal)',
+    specs:{'Switch':'Cherry MX Red (lineal)', 'Iluminación':'RGB AXON per-key 16,8M colores', 'Conexión':'USB-A cableado (extraíble)', 'Formato':'Full-Size', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'100% NKRO', 'Polling Rate':'8.000 Hz', 'SKU Megasur':'Consultar ficha'}
   }
 );
 
