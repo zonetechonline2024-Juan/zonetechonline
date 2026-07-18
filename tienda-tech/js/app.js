@@ -1396,7 +1396,7 @@ PRODUCTS.push(
   // ── ASUS ─────────────────────────────────────────────────────
 
   { id:59, name:'TECLADO ASUS TUF GAMING K1 RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:51.99, oldPrice:61.35, badge: 'OFERTA',
+    price:127.1, oldPrice:150, badge: 'OFERTA',
     image:'img/productos/MGS0000033622-0.jpg',
     images: [
       'img/productos/MGS0000033622-0.jpg',
@@ -1409,7 +1409,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000033622'}
   },
   { id:60, name:'TECLADO ASUS TUF GAMING K3 GEN II RGB NEGRO', brand:'ASUS', category:'teclados gaming',
-    price:69.99, oldPrice:82.59, badge: 'OFERTA',
+    price:178.3, oldPrice:210.4, badge: 'OFERTA',
     image:'img/productos/MGS0000033630-0.jpg',
     images: [
       'img/productos/MGS0000033630-0.jpg',
@@ -1496,7 +1496,7 @@ PRODUCTS.push(
   // ── LOGITECH ─────────────────────────────────────────────────────
 
   { id:54, name:'TECLADO LOGITECH G213 GAMING CON ILUMINACION', brand:'LOGITECH', category:'teclados gaming',
-    price:60.56, oldPrice:71.46, badge: 'OFERTA',
+    price:115.65, oldPrice:136.45, badge: 'OFERTA',
     image:'img/productos/920-008086-0.jpg',
     images: [
       'img/productos/920-008086-0.jpg',
@@ -1509,7 +1509,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'920-008086'}
   },
   { id:55, name:'TECLADO GAMING LOGITECH G413 SE MECANICO USB NEGRO', brand:'LOGITECH', category:'teclados gaming',
-    price:128.22, oldPrice:151.3, badge: 'OFERTA',
+    price:171.7, oldPrice:202.6, badge: 'OFERTA',
     image:'img/productos/MGS0000019748-0.jpg',
     images: [
       'img/productos/MGS0000019748-0.jpg',
@@ -1532,7 +1532,7 @@ PRODUCTS.push(
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'MGS0000020626'}
   },
   { id:57, name:'TECLADO LOGITECH G513 GAMING USB NEGRO CARBON', brand:'LOGITECH', category:'teclados gaming',
-    price:139.52, oldPrice:164.63, badge: 'OFERTA',
+    price:133.25, oldPrice:157.25, badge: 'OFERTA',
     image:'img/productos/MGS0000032591-0.jpg',
     images: [
       'img/productos/MGS0000032591-0.jpg',
@@ -1556,25 +1556,25 @@ PRODUCTS.push(
   // ── MARS GAMING ─────────────────────────────────────────────────────
 
   { id:262, name:'TECLADO MARS GAMING MK320ES USB RGB MECANICO', brand:'MARS GAMING', category:'teclados gaming',
-    price:13.39, oldPrice:15.8, badge: 'OFERTA',
+    price:28, oldPrice:33.05, badge: 'OFERTA',
     image:'img/productos/DSP0000009116-0.jpg',
     description:'Switch: Mecánico',
     specs:{'Switch':'Mecánico', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000009116'}
   },
   { id:263, name:'TECLADO MARS GAMING MK124', brand:'MARS GAMING', category:'teclados gaming',
-    price:15.98, oldPrice:18.86, badge: 'OFERTA',
+    price:31.35, oldPrice:37, badge: 'OFERTA',
     image:'img/productos/DSP0000031004-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031004'}
   },
   { id:264, name:'TECLADO MARS GAMING MK124 BLANCO', brand:'MARS GAMING', category:'teclados gaming',
-    price:15.98, oldPrice:18.86, badge: 'OFERTA',
+    price:33.35, oldPrice:39.35, badge: 'OFERTA',
     image:'img/productos/DSP0000031005-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000031005'}
   },
   { id:265, name:'KIT TECLADO + RATON MARS GAMING MCPTKLES RGB', brand:'MARS GAMING', category:'teclados gaming',
-    price:16.99, oldPrice:20.05, badge: 'OFERTA',
+    price:42.15, oldPrice:49.75, badge: 'OFERTA',
     image:'img/productos/DSP0000008843-0.jpg',
     description:'Switch: Consultar ficha',
     specs:{'Switch':'Consultar ficha', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000008843'}
@@ -1588,7 +1588,7 @@ PRODUCTS.push(
   // ── PHOENIX TECHNOLOGIES ─────────────────────────────────────────────────────
 
   { id:67, name:'Teclado Gaming Royal PBT Mecanico Negro', brand:'PHOENIX TECHNOLOGIES', category:'teclados gaming',
-    price:56.62, oldPrice:66.81, badge: 'OFERTA',
+    price:102.75, oldPrice:121.25, badge: 'OFERTA',
     image:'img/productos/DSP0000017092-0.jpg',
     images: [
       'img/productos/DSP0000017092-0.jpg',
@@ -1601,7 +1601,7 @@ PRODUCTS.push(
     specs:{'Switch':'Mecánico', 'Conexión':'USB-A cableado', 'Layout':'QWERTY (ver descripción)', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000017092'}
   },
   { id:68, name:'Teclado Gaming Royal PBT Mecanico Blanco', brand:'PHOENIX TECHNOLOGIES', category:'teclados gaming',
-    price:56.62, oldPrice:66.81, badge: 'OFERTA',
+    price:102.75, oldPrice:121.25, badge: 'OFERTA',
     image:'img/productos/DSP0000017093-0.jpg',
     images: [
       'img/productos/DSP0000017093-0.jpg',
@@ -1665,7 +1665,7 @@ PRODUCTS.push(
   // ── CORSAIR ─────────────────────────────────────────────────────
 
   { id:77, name:'TECLADO GAMING CORSAIR USB K55 CORE RGB', brand:'CORSAIR', category:'teclados gaming',
-    price:39.99, oldPrice:47.19, badge: 'OFERTA',
+    price:110.95, oldPrice:130.9, badge: 'OFERTA',
     image:'img/productos/DSP0000038844-0.jpg',
     images: [
       'img/productos/DSP0000038844-0.jpg',
@@ -1697,7 +1697,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Iluminación':'RGB por tecla', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000032320'}
   },
   { id:76, name:'TECLADO GAMING CORSAIR USB K70 CORE NEGRO', brand:'CORSAIR', category:'teclados gaming',
-    price:89.99, oldPrice:106.19, badge: 'OFERTA',
+    price:159.55, oldPrice:188.25, badge: 'OFERTA',
     image:'img/productos/DSP0000038461-0.jpg',
     images: [
       'img/productos/DSP0000038461-0.jpg',
@@ -1709,7 +1709,7 @@ PRODUCTS.push(
     specs:{'Switch':'Gaming', 'Conexión':'USB-A cableado', 'Layout':'QWERTY', 'Anti-ghosting':'Sí (gaming)','SKU Megasur':'DSP0000038461'}
   },
   { id:75, name:'TECLADO GAMING CORSAIR K70 CORE TKL INALAMBRICO', brand:'CORSAIR', category:'teclados gaming',
-    price:149.99, oldPrice:176.99, badge: 'OFERTA',
+    price:293.25, oldPrice:346.05, badge: 'OFERTA',
     image:'img/productos/DSP0000038098-0.jpg',
     images: [
       'img/productos/DSP0000038098-0.jpg',
