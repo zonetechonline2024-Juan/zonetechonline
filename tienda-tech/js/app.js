@@ -2387,7 +2387,7 @@ PRODUCTS.push(
   // ── SAMSUNG ────────────────────────────────────────────────
 
   { id:135, name:'SAMSUNG GALAXY A37 5G 8/256GB VERDE', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge: 'OFERTA',
+    price:773.4, oldPrice:912.6, badge: 'OFERTA',
     image:'img/productos/MGS0000033302-0.jpg',
     images: [
       'img/productos/MGS0000033302-0.jpg',
@@ -2399,7 +2399,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033302'}
   },
   { id:136, name:'SAMSUNG GALAXY A37 5G 8/256GB GRIS', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge: 'OFERTA',
+    price:766.3, oldPrice:904.25, badge: 'OFERTA',
     image:'img/productos/MGS0000033303-0.jpg',
     images: [
       'img/productos/MGS0000033303-0.jpg',
@@ -2412,7 +2412,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033303'}
   },
   { id:137, name:'SAMSUNG GALAXY A37 5G 8/256GB BLANCO', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge: 'OFERTA',
+    price:773.4, oldPrice:912.6, badge: 'OFERTA',
     image:'img/productos/MGS0000033305-0.jpg',
     images: [
       'img/productos/MGS0000033305-0.jpg',
@@ -2425,7 +2425,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033305'}
   },
   { id:138, name:'SAMSUNG GALAXY A37 5G 8/256GB VIOLETA', brand:'SAMSUNG', category:'smartphones',
-    price:328.9, oldPrice:388.1, badge: 'OFERTA',
+    price:766.3, oldPrice:904.25, badge: 'OFERTA',
     image:'img/productos/MGS0000033304-0.jpg',
     images: [
       'img/productos/MGS0000033304-0.jpg',
@@ -2438,7 +2438,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033304'}
   },
   { id:139, name:'SAMSUNG GALAXY A57 5G 8/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
-    price:449, oldPrice:529.82, badge: 'OFERTA',
+    price:953.75, oldPrice:1125.4, badge: 'OFERTA',
     image:'img/productos/MGS0000033306-0.jpg',
     images: [
       'img/productos/MGS0000033306-0.jpg',
@@ -2449,6 +2449,30 @@ PRODUCTS.push(
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'MGS0000033306'}
+  },
+  
+  // ── SAMSUNG NUEVOS (Megasur 2026-07) ───────────────────────
+
+  { id:400, name:'SAMSUNG GALAXY A16 4/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
+    price:282.10, oldPrice:332.90, badge:'OFERTA',
+    image:'img/productos/DSP0000000232-0.jpg',
+    images:['img/productos/DSP0000000232-0.jpg'],
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000232'}
+  },
+  { id:401, name:'SAMSUNG GALAXY A26 5G 6/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
+    price:417.40, oldPrice:492.55, badge:'OFERTA',
+    image:'img/productos/MGS0000000332-0.jpg',
+    images:['img/productos/MGS0000000332-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000332'}
+  },
+  { id:402, name:'SAMSUNG GALAXY S25 12/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
+    price:1324.10, oldPrice:1562.45, badge:'NUEVO',
+    image:'img/productos/MGS0000000709-0.jpg',
+    images:['img/productos/MGS0000000709-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Serie S premium','SKU Megasur':'MGS0000000709'}
   },
   // ── APPLE ──────────────────────────────────────────────────
 
