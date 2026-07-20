@@ -2524,7 +2524,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033840'}
   },
   { id:140, name:'APPLE IPHONE 16E 128GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:619, oldPrice:730.42, badge: 'OFERTA',
+    price:1149.15, oldPrice:1356, badge: 'OFERTA',
     image:'img/productos/DSP0000029938-0.jpg',
     images: [
       'img/productos/DSP0000029938-0.jpg',
@@ -2535,10 +2535,41 @@ PRODUCTS.push(
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000029938'}
   },
+  
+  // ── APPLE NUEVOS (Megasur 2026-07) ─────────────────────────
+
+  { id:403, name:'APPLE IPHONE 16E 128GB BLANCO', brand:'APPLE', category:'smartphones',
+    price:1149.15, oldPrice:1356.00, badge:'NUEVO',
+    image:'img/productos/DSP0000029638-0.jpg',
+    images:['img/productos/DSP0000029638-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000029638'}
+  },
+  { id:404, name:'APPLE IPHONE 15 128GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1358.90, oldPrice:1603.50, badge:'OFERTA',
+    image:'img/productos/DSP0000018612-0.jpg',
+    images:['img/productos/DSP0000018612-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000018612'}
+  },
+  { id:405, name:'APPLE IPHONE 16 128GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1653.10, oldPrice:1950.65, badge:'NUEVO',
+    image:'img/productos/DSP0000027150-0.jpg',
+    images:['img/productos/DSP0000027150-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000027150'}
+  },
+  { id:406, name:'APPLE IPHONE 17 256GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1844.70, oldPrice:2176.75, badge:'NUEVO',
+    image:'img/productos/DSP0000025870-0.jpg',
+    images:['img/productos/DSP0000025870-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'iPhone 17','SKU Megasur':'DSP0000025870'}
+  },
   // ── XIAOMI ─────────────────────────────────────────────────
 
   { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
-    price:129, oldPrice:152.22, badge: 'OFERTA',
+    price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033059-0.jpg',
     images: [
       'img/productos/MGS0000033059-0.jpg'
@@ -2547,7 +2578,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033059'}
   },
   { id:146, name:'XIAOMI REDMI A7 PRO 4/128GB VERDE', brand:'XIAOMI', category:'smartphones',
-    price:129, oldPrice:152.22, badge: 'OFERTA',
+    price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033060-0.jpg',
     images: [
       'img/productos/MGS0000033060-0.jpg'
@@ -2556,7 +2587,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033060'}
   },
   { id:148, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" NEGRO', brand:'XIAOMI', category:'smartphones',
-    price:199, oldPrice:234.82, badge: 'OFERTA',
+    price:392.15, oldPrice:462.75, badge: 'OFERTA',
     image:'img/productos/MGS0000031676-0.jpg',
     images: [
       'img/productos/MGS0000031676-0.jpg',
@@ -2569,7 +2600,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'8GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000031676'}
   },
   { id:149, name:'XIAOMI REDMI NOTE 15 8GB 256GB 6.77" AZUL', brand:'XIAOMI', category:'smartphones',
-    price:199, oldPrice:234.82, badge: 'OFERTA',
+    price:410.45, oldPrice:484.35, badge: 'OFERTA',
     image:'img/productos/MGS0000031681-0.jpg',
     images: [
       'img/productos/MGS0000031681-0.jpg',
@@ -2593,6 +2624,37 @@ PRODUCTS.push(
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Serie premium','SKU Megasur':'MGS0000025157'}
+  },
+  
+  // ── XIAOMI NUEVOS (Megasur 2026-07) ────────────────────────
+
+  { id:407, name:'XIAOMI REDMI A7 PRO 4/128GB NEGRO', brand:'XIAOMI', category:'smartphones',
+    price:229.05, oldPrice:270.30, badge:'OFERTA',
+    image:'img/productos/MGS0000000306-0.jpg',
+    images:['img/productos/MGS0000000306-0.jpg'],
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000306'}
+  },
+  { id:408, name:'XIAOMI REDMI 15C 4/256GB AZUL', brand:'XIAOMI', category:'smartphones',
+    price:269.95, oldPrice:318.55, badge:'OFERTA',
+    image:'img/productos/MGS0000000242-0.jpg',
+    images:['img/productos/MGS0000000242-0.jpg'],
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000242'}
+  },
+  { id:409, name:'XIAOMI REDMI NOTE 15 PRO 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
+    price:480.65, oldPrice:567.15, badge:'OFERTA',
+    image:'img/productos/MGS0000000186-0.jpg',
+    images:['img/productos/MGS0000000186-0.jpg'],
+    description:'Conectividad: 4G LTE',
+    specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000186'}
+  },
+  { id:410, name:'XIAOMI REDMI NOTE 15 PRO+ 5G 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
+    price:689.75, oldPrice:813.90, badge:'NUEVO',
+    image:'img/productos/MGS0000000135-0.jpg',
+    images:['img/productos/MGS0000000135-0.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000135'}
   },
   // ── REALME ─────────────────────────────────────────────────
 
