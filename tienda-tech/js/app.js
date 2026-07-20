@@ -450,8 +450,8 @@ PRODUCTS.push(
 
   // ── JBL GO 5 Negro ────────────────────────────────────────────────────────
   { id:127, name:'JBL GO 5 Negro', brand:'JBL', category:'altavoces',
-    price:49.99,
-    oldPrice: 64.99,
+    price:49.85,
+    oldPrice: 58.8,
     badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_go5_bk_1.jpg',
     images: [
@@ -476,8 +476,8 @@ PRODUCTS.push(
 
   // ── JBL Clip 5 Negro ─────────────────────────────────────────────────────
   { id:128, name:'JBL Clip 5 Negro', brand:'JBL', category:'altavoces',
-    price:64.99,
-    oldPrice: 79.99,
+    price:64.35,
+    oldPrice: 75.95,
     badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_clip5_bk_1.jpg',
     images: [
@@ -503,8 +503,8 @@ PRODUCTS.push(
 
   // ── JBL Flip 6 Negro ─────────────────────────────────────────────────────
   { id:129, name:'JBL Flip 6 Negro', brand:'JBL', category:'altavoces',
-    price:99.99,
-    oldPrice: 119.99,
+    price:99.85,
+    oldPrice: 117.8,
     badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_flip6_bk_1.jpg',
     images: [
@@ -531,8 +531,8 @@ PRODUCTS.push(
 
   // ── JBL Flip 7 Blanco ────────────────────────────────────────────────────
   { id:130, name:'JBL Flip 7 Blanco', brand:'JBL', category:'altavoces',
-    price:129.99,
-    oldPrice: 159.99,
+    price:130.5,
+    oldPrice: 154,
     badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_flip7_wh_1.jpg',
     images: [
@@ -559,8 +559,8 @@ PRODUCTS.push(
 
   // ── JBL Charge 6 Negro ───────────────────────────────────────────────────
   { id:131, name:'JBL Charge 6 Negro', brand:'JBL', category:'altavoces',
-    price:169.99,
-    oldPrice: 199.99,
+    price:170.6,
+    oldPrice: 201.3,
     badge: 'OFERTA',
     image:'img/productos/art_jbl-alt_charge_6_bk_1.jpg',
     images: [
