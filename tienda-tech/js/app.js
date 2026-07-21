@@ -1121,7 +1121,7 @@ PRODUCTS.push(
   { id:224, name:'Logitech PRO Gaming X Headset', brand:'Logitech', category:'auriculares',
     price:183.2, oldPrice:216.2, badge: 'OFERTA',
     image:'img/productos/MGS0000025666-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000025666-0.jpg'
     ],
     description:'Auriculares gaming USB de Logitech con drivers Pro-G de 50mm y membrana de fibra híbrida para un sonido preciso y potente. Micrófono Pro-G Supercardioid desprendible con tecnología Blue VO!CE, sonido envolvente DTS 7.1, almohadillas de espuma de memoria y construcción de acero inoxidable.',
@@ -1261,7 +1261,7 @@ PRODUCTS.push(
   { id:37, name:'SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS', brand:'TCL', category:'relojes',
     price:230.6, oldPrice:272.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033444-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000033444-0.jpg',
       'img/productos/MGS0000033444-1.jpg'
     ],
@@ -1534,7 +1534,7 @@ PRODUCTS.push(
   { id:57, name:'TECLADO LOGITECH G513 GAMING USB NEGRO CARBON', brand:'LOGITECH', category:'teclados gaming',
     price:133.25, oldPrice:157.25, badge: 'OFERTA',
     image:'img/productos/MGS0000032591-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000032591-0.jpg',
       'img/productos/MGS0000032591-1.jpg'
     ],
@@ -1667,7 +1667,7 @@ PRODUCTS.push(
   { id:77, name:'TECLADO GAMING CORSAIR USB K55 CORE RGB', brand:'CORSAIR', category:'teclados gaming',
     price:110.95, oldPrice:130.9, badge: 'OFERTA',
     image:'img/productos/DSP0000038844-0.jpg',
-    images: [
+    images:[
       'img/productos/DSP0000038844-0.jpg',
       'img/productos/DSP0000038844-1.jpg'
     ],
@@ -1677,7 +1677,7 @@ PRODUCTS.push(
   { id:74, name:'TECLADO GAMING CORSAIR K55 CORE TKL RGB NEGRO', brand:'CORSAIR', category:'teclados gaming',
     price:49.99, oldPrice:58.99, badge: 'OFERTA',
     image:'img/productos/DSP0000035833-0.jpg',
-    images: [
+    images:[
       'img/productos/DSP0000035833-0.jpg',
       'img/productos/1646-teclado-de-membrana-corsair-k55-core-tkl-layout-es-rgb-resistente-a-derrames.jpg'
     ],
@@ -1984,7 +1984,7 @@ PRODUCTS.push(
   { id:97, name:'ALTAVOCES MARS GAMING MS22W 2.2 35W USB + JACK 3.5MM BLANCO', brand:'MARS GAMING', category:'altavoces',
     price:42.35, oldPrice:49.95, badge: 'OFERTA',
     image:'img/productos/DSP0000008862-0.jpg',
-    images: [
+    images:[
       'img/productos/DSP0000008862-0.jpg',
       'img/productos/DSP0000008862-1.jpg'
     ],
@@ -2021,7 +2021,7 @@ PRODUCTS.push(
   { id:100, name:'ALTAVOCES NGS COMET 2.1 USB 20W RMS', brand:'NGS', category:'altavoces',
     price:48.95, oldPrice:57.75, badge: 'OFERTA',
     image:'img/productos/DSP0000013251-0.jpg',
-    images: [
+    images:[
       'img/productos/DSP0000013251-0.jpg',
       'img/productos/DSP0000013251-1.jpg'
     ],
@@ -2094,7 +2094,7 @@ PRODUCTS.push(
   { id:109, name:'ALTAVOZ QCHARX FLOW MINI NEGRO 10W', brand:'QCHARX', category:'altavoces',
     price:36.35, oldPrice:42.9, badge: 'OFERTA',
     image:'img/productos/MGS0000024590-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000024590-0.jpg'
     ],
     description:'Potencia: 10W RMS',
@@ -2103,7 +2103,7 @@ PRODUCTS.push(
   { id:108, name:'ALTAVOZ QCHARX FLOW NEGRO', brand:'QCHARX', category:'altavoces',
     price:43, oldPrice:50.75, badge: 'OFERTA',
     image:'img/productos/MGS0000023191-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000023191-0.jpg',
       'img/productos/MGS0000023191-1.jpg'
     ],
@@ -2113,7 +2113,7 @@ PRODUCTS.push(
   { id:107, name:'ALTAVOZ QCHARX FLOWMAX NEGRO', brand:'QCHARX', category:'altavoces',
     price:55.85, oldPrice:65.9, badge: 'OFERTA',
     image:'img/productos/MGS0000023189-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000023189-0.jpg',
       'img/productos/MGS0000023189-1.jpg'
     ],
@@ -2456,21 +2456,31 @@ PRODUCTS.push(
   { id:400, name:'SAMSUNG GALAXY A16 4/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
     price:282.10, oldPrice:332.90, badge:'OFERTA',
     image:'img/productos/DSP0000000232-0.jpg',
-    images:['img/productos/DSP0000000232-0.jpg'],
+    images:[
+      'img/productos/DSP0000000232-0.jpg',
+      'img/productos/DSP0000000232-1.jpg',
+      'img/productos/DSP0000000232-2.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000232'}
   },
   { id:401, name:'SAMSUNG GALAXY A26 5G 6/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
     price:417.40, oldPrice:492.55, badge:'OFERTA',
     image:'img/productos/MGS0000000332-0.jpg',
-    images:['img/productos/MGS0000000332-0.jpg'],
+    images:[
+      'img/productos/MGS0000000332-0.jpg',
+      'img/productos/MGS0000000332-1.jpg',
+      'img/productos/MGS0000000332-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000332'}
   },
   { id:402, name:'SAMSUNG GALAXY S25 12/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
     price:1324.10, oldPrice:1562.45, badge:'NUEVO',
     image:'img/productos/MGS0000000709-0.jpg',
-    images:['img/productos/MGS0000000709-0.jpg'],
+    images:[
+      'img/productos/MGS0000000709-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Serie S premium','SKU Megasur':'MGS0000000709'}
   },
@@ -2541,28 +2551,42 @@ PRODUCTS.push(
   { id:403, name:'APPLE IPHONE 16E 128GB BLANCO', brand:'APPLE', category:'smartphones',
     price:1149.15, oldPrice:1356.00, badge:'NUEVO',
     image:'img/productos/DSP0000029638-0.jpg',
-    images:['img/productos/DSP0000029638-0.jpg'],
+    images:[
+      'img/productos/DSP0000029638-0.jpg',
+      'img/productos/DSP0000029638-1.jpg',
+      'img/productos/DSP0000029638-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000029638'}
   },
   { id:404, name:'APPLE IPHONE 15 128GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1358.90, oldPrice:1603.50, badge:'OFERTA',
     image:'img/productos/DSP0000018612-0.jpg',
-    images:['img/productos/DSP0000018612-0.jpg'],
+    images:[
+      'img/productos/DSP0000018612-0.jpg',
+      'img/productos/DSP0000018612-1.jpg',
+      'img/productos/DSP0000018612-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000018612'}
   },
   { id:405, name:'APPLE IPHONE 16 128GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1653.10, oldPrice:1950.65, badge:'NUEVO',
     image:'img/productos/DSP0000027150-0.jpg',
-    images:['img/productos/DSP0000027150-0.jpg'],
+    images:[
+      'img/productos/DSP0000027150-0.jpg',
+      'img/productos/DSP0000027150-1.jpg',
+      'img/productos/DSP0000027150-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000027150'}
   },
   { id:406, name:'APPLE IPHONE 17 256GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1844.70, oldPrice:2176.75, badge:'NUEVO',
     image:'img/productos/DSP0000025870-0.jpg',
-    images:['img/productos/DSP0000025870-0.jpg'],
+    images:[
+      'img/productos/DSP0000025870-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'iPhone 17','SKU Megasur':'DSP0000025870'}
   },
@@ -2571,7 +2595,7 @@ PRODUCTS.push(
   { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
     price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033059-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000033059-0.jpg'
     ],
     description:'Conectividad: 4G LTE',
@@ -2580,7 +2604,7 @@ PRODUCTS.push(
   { id:146, name:'XIAOMI REDMI A7 PRO 4/128GB VERDE', brand:'XIAOMI', category:'smartphones',
     price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033060-0.jpg',
-    images: [
+    images:[
       'img/productos/MGS0000033060-0.jpg'
     ],
     description:'Conectividad: 4G LTE',
@@ -2631,28 +2655,38 @@ PRODUCTS.push(
   { id:407, name:'XIAOMI REDMI A7 PRO 4/128GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:229.05, oldPrice:270.30, badge:'OFERTA',
     image:'img/productos/MGS0000000306-0.jpg',
-    images:['img/productos/MGS0000000306-0.jpg'],
+    images:[
+      'img/productos/MGS0000000306-0.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000306'}
   },
   { id:408, name:'XIAOMI REDMI 15C 4/256GB AZUL', brand:'XIAOMI', category:'smartphones',
     price:269.95, oldPrice:318.55, badge:'OFERTA',
     image:'img/productos/MGS0000000242-0.jpg',
-    images:['img/productos/MGS0000000242-0.jpg'],
+    images:[
+      'img/productos/MGS0000000242-0.jpg',
+      'img/productos/MGS0000000242-1.jpg',
+      'img/productos/MGS0000000242-2.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000242'}
   },
   { id:409, name:'XIAOMI REDMI NOTE 15 PRO 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:480.65, oldPrice:567.15, badge:'OFERTA',
     image:'img/productos/MGS0000000186-0.jpg',
-    images:['img/productos/MGS0000000186-0.jpg'],
+    images:[
+      'img/productos/MGS0000000186-0.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000186'}
   },
   { id:410, name:'XIAOMI REDMI NOTE 15 PRO+ 5G 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:689.75, oldPrice:813.90, badge:'NUEVO',
     image:'img/productos/MGS0000000135-0.jpg',
-    images:['img/productos/MGS0000000135-0.jpg'],
+    images:[
+      'img/productos/MGS0000000135-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000135'}
   },
@@ -2726,21 +2760,30 @@ PRODUCTS.push(
   { id:411, name:'REALME C100 5G 4/256GB PURPURA', brand:'REALME', category:'smartphones',
     price:421.00, oldPrice:496.80, badge:'OFERTA',
     image:'img/productos/MGS0000034180-0.jpg',
-    images:['img/productos/MGS0000034180-0.jpg'],
+    images:[
+      'img/productos/MGS0000034180-0.jpg',
+      'img/productos/MGS0000034180-1.jpg',
+      'img/productos/MGS0000034180-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000034180'}
   },
   { id:412, name:'REALME C71 4/256GB FOREST OWL', brand:'REALME', category:'smartphones',
     price:268.45, oldPrice:316.75, badge:'OFERTA',
     image:'img/productos/MGS0000034145-0.jpg',
-    images:['img/productos/MGS0000034145-0.jpg'],
+    images:[
+      'img/productos/MGS0000034145-0.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000034145'}
   },
   { id:413, name:'REALME NOTE 70T 4/256GB NEGRO', brand:'REALME', category:'smartphones',
     price:234.95, oldPrice:277.25, badge:'OFERTA',
     image:'img/productos/DSP0000000020-0.jpg',
-    images:['img/productos/DSP0000000020-0.jpg'],
+    images:[
+      'img/productos/DSP0000000020-0.jpg',
+      'img/productos/DSP0000000020-1.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000020'}
   },
@@ -2816,21 +2859,30 @@ PRODUCTS.push(
   { id:414, name:'TCL 60S 4/128GB NEGRO', brand:'TCL', category:'smartphones',
     price:197.15, oldPrice:232.65, badge:'OFERTA',
     image:'img/productos/MGS0000027638-0.jpg',
-    images:['img/productos/MGS0000027638-0.jpg'],
+    images:[
+      'img/productos/MGS0000027638-0.jpg',
+      'img/productos/MGS0000027638-1.jpg',
+      'img/productos/MGS0000027638-2.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000027638'}
   },
   { id:415, name:'TCL K70 4/128GB NEGRO', brand:'TCL', category:'smartphones',
     price:272.75, oldPrice:321.85, badge:'OFERTA',
     image:'img/productos/MGS0000003340-0.jpg',
-    images:['img/productos/MGS0000003340-0.jpg'],
+    images:[
+      'img/productos/MGS0000003340-0.jpg',
+      'img/productos/MGS0000003340-1.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000003340'}
   },
   { id:416, name:'TCL K70 SE 4/64GB NEGRO', brand:'TCL', category:'smartphones',
     price:216.10, oldPrice:255.00, badge:'OFERTA',
     image:'img/productos/MGS0000000888-0.jpg',
-    images:['img/productos/MGS0000000888-0.jpg'],
+    images:[
+      'img/productos/MGS0000000888-0.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'64GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000888'}
   },
@@ -2906,28 +2958,40 @@ PRODUCTS.push(
   { id:417, name:'MOTOROLA MOTO EDGE 60 PRO 5G 12/512GB AZUL', brand:'MOTOROLA', category:'smartphones',
     price:882.20, oldPrice:1041.00, badge:'NUEVO',
     image:'img/productos/DSP0000000548-0.jpg',
-    images:['img/productos/DSP0000000548-0.jpg'],
+    images:[
+      'img/productos/DSP0000000548-0.jpg',
+      'img/productos/DSP0000000548-1.jpg',
+      'img/productos/DSP0000000548-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'512GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000000548'}
   },
   { id:418, name:'MOTOROLA MOTO G35 5G 8/256GB GREYSTONE', brand:'MOTOROLA', category:'smartphones',
     price:334.05, oldPrice:394.20, badge:'OFERTA',
     image:'img/productos/DSP0000000549-0.jpg',
-    images:['img/productos/DSP0000000549-0.jpg'],
+    images:[
+      'img/productos/DSP0000000549-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000549'}
   },
   { id:419, name:'MOTOROLA MOTO EDGE 60 FUSION 5G 8/256GB AMAZONTE', brand:'MOTOROLA', category:'smartphones',
     price:502.55, oldPrice:593.00, badge:'NUEVO',
     image:'img/productos/DSP0000000550-0.jpg',
-    images:['img/productos/DSP0000000550-0.jpg'],
+    images:[
+      'img/productos/DSP0000000550-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000000550'}
   },
   { id:420, name:'MOTOROLA MOTO G86 5G 8/256GB AZUL OSCURO', brand:'MOTOROLA', category:'smartphones',
     price:449.20, oldPrice:530.05, badge:'OFERTA',
     image:'img/productos/DSP0000000551-0.jpg',
-    images:['img/productos/DSP0000000551-0.jpg'],
+    images:[
+      'img/productos/DSP0000000551-0.jpg',
+      'img/productos/DSP0000000551-1.jpg',
+      'img/productos/DSP0000000551-2.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000551'}
   },
@@ -3001,21 +3065,29 @@ PRODUCTS.push(
   { id:421, name:'RUGERIZADO HAMMER IRON 6 6/128GB NEGRO', brand:'HAMMER', category:'smartphones',
     price:475.35, oldPrice:560.90, badge:'NUEVO',
     image:'img/productos/MGS0000000864-0.jpg',
-    images:['img/productos/MGS0000000864-0.jpg'],
+    images:[
+      'img/productos/MGS0000000864-0.jpg',
+      'img/productos/MGS0000000864-1.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000864'}
   },
   { id:422, name:'RUGERIZADO HAMMER ENERGY X2 5G 6/128GB NARANJA', brand:'HAMMER', category:'smartphones',
     price:537.05, oldPrice:633.70, badge:'NUEVO',
     image:'img/productos/MGS0000000022-0.jpg',
-    images:['img/productos/MGS0000000022-0.jpg'],
+    images:[
+      'img/productos/MGS0000000022-0.jpg'
+    ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000022'}
   },
   { id:423, name:'RUGERIZADO HAMMER RANGER 4G 6/128GB NEGRO VERDE', brand:'HAMMER', category:'smartphones',
     price:484.50, oldPrice:571.70, badge:'NUEVO',
     image:'img/productos/MGS0000000028-0.jpg',
-    images:['img/productos/MGS0000000028-0.jpg'],
+    images:[
+      'img/productos/MGS0000000028-0.jpg',
+      'img/productos/MGS0000000028-1.jpg'
+    ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000028'}
   },
