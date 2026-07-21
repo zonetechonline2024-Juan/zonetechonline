@@ -2995,7 +2995,7 @@ PRODUCTS.push(
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'Android', 'SIM':'Dual SIM','SKU Megasur':'DSP0000023575'}
-  }
+  },
   // ── HAMMER NUEVOS (Megasur 2026-07) ────────────────────────
 
   { id:421, name:'RUGERIZADO HAMMER IRON 6 6/128GB NEGRO', brand:'HAMMER', category:'smartphones',
