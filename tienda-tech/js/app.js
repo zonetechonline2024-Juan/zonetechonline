@@ -12,7 +12,7 @@ const FILTER_MAP = {
 };
 
 // ─── PRODUCT CATALOG ─────────────────────────────────────────────────────────
-// Fuente: Depau.es — 19 productos verificados activos — junio 2026
+// Fuente: Megasur B2B — 212 productos verificados — julio 2026
 const PRODUCTS = [
 
   // ── 1 · Xiaomi Smart Band 9 ──────────────────────────────────────────────
@@ -6022,6 +6022,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') { closeQuickView(); closeCart(); }
   });
 });
+
 
 
 
