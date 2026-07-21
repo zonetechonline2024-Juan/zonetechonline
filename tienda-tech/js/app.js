@@ -1821,7 +1821,7 @@ PRODUCTS.push(
   // ── PHOENIX TECHNOLOGIES ───────────────────────────────────
 
   { id:88, name:'Altavoces PrivateSound Jack y USB', brand:'PHOENIX TECHNOLOGIES', category:'altavoces',
-    price:19.99, oldPrice:23.59, badge: 'OFERTA',
+    price:24.20, oldPrice:28.55, badge: 'OFERTA',
     image:'img/productos/MGS0000004797-0.jpg',
     images: [
       'img/productos/MGS0000004797-0.jpg',
