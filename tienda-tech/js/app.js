@@ -288,8 +288,8 @@ PRODUCTS.push(
     name: 'Sony WH-CH520 Negro',
     brand: 'Sony',
     category: 'auriculares',
-    price: 39.99,
-    oldPrice: 49.99,
+    price: 115.5,
+    oldPrice: 136.3,
     badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wh-ch520_bk_1.jpg',
     images: [
@@ -320,8 +320,8 @@ PRODUCTS.push(
     name: 'Sony WF-C510 Blanco',
     brand: 'Sony',
     category: 'auriculares',
-    price: 49.99,
-    oldPrice: 59.99,
+    price: 120.6,
+    oldPrice: 142.3,
     badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wf-c510_wh_1.jpg',
     images: [
@@ -352,8 +352,8 @@ PRODUCTS.push(
     name: 'Sony WH-CH720N Negro',
     brand: 'Sony',
     category: 'auriculares',
-    price: 89.99,
-    oldPrice: 109.99,
+    price: 276,
+    oldPrice: 325.7,
     badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wh-ch720n_bk_1.jpg',
     images: [
@@ -385,8 +385,8 @@ PRODUCTS.push(
     name: 'Sony WF-C710N Blanco',
     brand: 'Sony',
     category: 'auriculares',
-    price: 99.99,
-    oldPrice: 119.99,
+    price: 229.8,
+    oldPrice: 271.15,
     badge: 'OFERTA',
     image: 'img/productos/art_sony-aur_wf-c710n_wh_1.jpg',
     images: [
@@ -702,7 +702,7 @@ PRODUCTS.push(
   // ── Sony ─────────────────────────────────────────────────────────────────
 
   { id:205, name:'Sony WF-C510 True Wireless Azul', brand:'Sony', category:'auriculares',
-    price:62.75, oldPrice:74.05, badge: 'OFERTA',
+    price:120.6, oldPrice:142.3, badge: 'OFERTA',
     image:'img/productos/DSP0000037829-0.jpg',
     images: [
       'img/productos/DSP0000037829-0.jpg',
@@ -723,7 +723,7 @@ PRODUCTS.push(
   },
 
   { id:206, name:'Sony WH-CH520 Bluetooth Blanco', brand:'Sony', category:'auriculares',
-    price:70.8, oldPrice:83.55, badge: 'OFERTA',
+    price:107.9, oldPrice:127.3, badge: 'OFERTA',
     image:'img/productos/MGS0000020797-0.jpg',
     images: [
       'img/productos/MGS0000020797-0.jpg',
@@ -745,7 +745,7 @@ PRODUCTS.push(
   },
 
   { id:207, name:'Sony WI-C100 Inalámbrico Negro', brand:'Sony', category:'auriculares',
-    price:46.5, oldPrice:54.85, badge: 'OFERTA',
+    price:63.85, oldPrice:75.35, badge: 'OFERTA',
     image:'img/productos/DSP0000037821-0.jpg',
     images: [
       'img/productos/DSP0000037821-0.jpg',
@@ -766,7 +766,7 @@ PRODUCTS.push(
   },
 
   { id:208, name:'Sony WH-CH720N ANC Inalámbrico Negro', brand:'Sony', category:'auriculares',
-    price:109.5, oldPrice:129.2, badge: 'OFERTA',
+    price:276, oldPrice:325.7, badge: 'OFERTA',
     image:'img/productos/DSP0000037822-0.jpg',
     images: [
       'img/productos/DSP0000037822-0.jpg',
@@ -788,7 +788,7 @@ PRODUCTS.push(
   },
 
   { id:209, name:'Sony WF-C710N TWS ANC Negro', brand:'Sony', category:'auriculares',
-    price:132.1, oldPrice:155.9, badge: 'OFERTA',
+    price:229.8, oldPrice:271.15, badge: 'OFERTA',
     image:'img/productos/DSP0000037823-0.jpg',
     images: [
       'img/productos/DSP0000037823-0.jpg',
@@ -812,7 +812,7 @@ PRODUCTS.push(
   // ── JBL ──────────────────────────────────────────────────────────────────
 
   { id:210, name:'JBL T160 Intrauditivo Cable Azul', brand:'JBL', category:'auriculares',
-    price:26.5, badge: 'OFERTA',
+    price:27.75, badge: 'OFERTA',
     image:'img/productos/MGS0000021837-0.jpg',
     images: [
       'img/productos/MGS0000021837-0.jpg',
@@ -834,7 +834,7 @@ PRODUCTS.push(
   },
 
   { id:211, name:'JBL Tune 500 On-Ear Cable Blanco', brand:'JBL', category:'auriculares',
-    price:46.5, oldPrice:54.85, badge: 'OFERTA',
+    price:53.55, oldPrice:63.2, badge: 'OFERTA',
     image:'img/productos/MGS0000016567-0.jpg',
     images: [
       'img/productos/MGS0000016567-0.jpg',
@@ -856,7 +856,7 @@ PRODUCTS.push(
   },
 
   { id:212, name:'JBL Tune 510BT Inalámbrico Bluetooth Blanco', brand:'JBL', category:'auriculares',
-    price:65.95, oldPrice:77.8, badge: 'OFERTA',
+    price:85.15, oldPrice:100.5, badge: 'OFERTA',
     image:'img/productos/MGS0000006825-0.jpg',
     images: [
       'img/productos/MGS0000006825-0.jpg',
@@ -878,7 +878,7 @@ PRODUCTS.push(
   },
 
   { id:213, name:'JBL Wave 200 TWS Negro', brand:'JBL', category:'auriculares',
-    price:62.75, oldPrice:74.05, badge: 'OFERTA',
+    price:94.25, oldPrice:111.2, badge: 'OFERTA',
     image:'img/productos/MGS0000021078-0.jpg',
     images: [
       'img/productos/MGS0000021078-0.jpg',
@@ -900,7 +900,7 @@ PRODUCTS.push(
   },
 
   { id:214, name:'JBL Wave 300 TWS Negro', brand:'JBL', category:'auriculares',
-    price:75.65, oldPrice:89.25, badge: 'OFERTA',
+    price:106.35, oldPrice:125.5, badge: 'OFERTA',
     image:'img/productos/MGS0000021836-0.jpg',
     images: [
       'img/productos/MGS0000021836-0.jpg',
@@ -924,7 +924,7 @@ PRODUCTS.push(
   // ── ASUS ─────────────────────────────────────────────────────────────────
 
   { id:215, name:'ASUS TUF Gaming H1 Gen II Negro', brand:'ASUS', category:'auriculares',
-    price:85.3, oldPrice:100.65, badge: 'OFERTA',
+    price:129.45, oldPrice:152.75, badge: 'OFERTA',
     image:'img/productos/MGS0000033609-0.jpg',
     images: [
       'img/productos/MGS0000033609-0.jpg',
@@ -946,7 +946,7 @@ PRODUCTS.push(
   },
 
   { id:216, name:'ASUS TUF Gaming H3 Gun Metal', brand:'ASUS', category:'auriculares',
-    price:86.95, oldPrice:102.6, badge: 'OFERTA',
+    price:129.45, oldPrice:152.75, badge: 'OFERTA',
     image:'img/productos/MGS0000033529-0.jpg',
     images: [
       'img/productos/MGS0000033529-0.jpg',
@@ -967,7 +967,7 @@ PRODUCTS.push(
   },
 
   { id:217, name:'ASUS TUF Gaming H1 Wireless Negro', brand:'ASUS', category:'auriculares',
-    price:103.05, oldPrice:121.6, badge: 'OFERTA',
+    price:181.45, oldPrice:214.1, badge: 'OFERTA',
     image:'img/productos/MGS0000033605-0.jpg',
     images: [
       'img/productos/MGS0000033605-0.jpg',
@@ -988,7 +988,7 @@ PRODUCTS.push(
   },
 
   { id:218, name:'ASUS ROG Delta S Gaming Negro', brand:'ASUS', category:'auriculares',
-    price:273.7, oldPrice:322.95, badge: 'OFERTA',
+    price:393.35, oldPrice:464.15, badge: 'OFERTA',
     image:'img/productos/MGS0000033604-0.jpg',
     images: [
       'img/productos/MGS0000033604-0.jpg',
@@ -1010,7 +1010,7 @@ PRODUCTS.push(
   },
 
   { id:219, name:'ASUS ROG Cetra TWS SpeedNova Negro', brand:'ASUS', category:'auriculares',
-    price:262.9, oldPrice:310.2, badge: 'OFERTA',
+    price:376.7, oldPrice:444.5, badge: 'OFERTA',
     image:'img/productos/MGS0000033611-0.jpg',
     images: [
       'img/productos/MGS0000033611-0.jpg',
@@ -1033,7 +1033,7 @@ PRODUCTS.push(
   // ── Logitech ─────────────────────────────────────────────────────────────
 
   { id:220, name:'Logitech Headset H110 Estéreo', brand:'Logitech', category:'auriculares',
-    price:24.85, badge: 'OFERTA',
+    price:26.9, badge: 'OFERTA',
     image:'img/productos/981-000271-0.jpg',
     images: [
       'img/productos/981-000271-0.jpg',
@@ -1054,7 +1054,7 @@ PRODUCTS.push(
   },
 
   { id:221, name:'Logitech Headset H340 USB', brand:'Logitech', category:'auriculares',
-    price:57.9, oldPrice:68.3, badge: 'OFERTA',
+    price:50.35, oldPrice:59.4, badge: 'OFERTA',
     image:'img/productos/MGS0000033721-0.jpg',
     images: [
       'img/productos/MGS0000033721-0.jpg',
@@ -1076,7 +1076,7 @@ PRODUCTS.push(
   },
 
   { id:222, name:'Logitech Zone Wired USB', brand:'Logitech', category:'auriculares',
-    price:175.25, oldPrice:206.8, badge: 'OFERTA',
+    price:241, oldPrice:284.4, badge: 'OFERTA',
     image:'img/productos/MGS0000025967-0.jpg',
     images: [
       'img/productos/MGS0000025967-0.jpg',
@@ -1098,7 +1098,7 @@ PRODUCTS.push(
   },
 
   { id:223, name:'Logitech G733 Gaming Wireless Negro', brand:'Logitech', category:'auriculares',
-    price:161.4, oldPrice:190.45, badge: 'OFERTA',
+    price:206.25, oldPrice:243.4, badge: 'OFERTA',
     image:'img/productos/MGS0000015732-0.jpg',
     images: [
       'img/productos/MGS0000015732-0.jpg',
@@ -1119,7 +1119,7 @@ PRODUCTS.push(
   },
 
   { id:224, name:'Logitech PRO Gaming X Headset', brand:'Logitech', category:'auriculares',
-    price:133.7, oldPrice:157.75, badge: 'OFERTA',
+    price:183.2, oldPrice:216.2, badge: 'OFERTA',
     image:'img/productos/MGS0000025666-0.jpg',
     images: [
       'img/productos/MGS0000025666-0.jpg'
@@ -2130,31 +2130,31 @@ PRODUCTS.push(
   // ── SONY ───────────────────────────────────────────────────
 
   { id:111, name:'AURICULARES SONY WI-C100 INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:46.5, oldPrice:54.85, badge: 'OFERTA',
+    price:63.85, oldPrice:75.35, badge: 'OFERTA',
     image:'img/productos/DSP0000037821-0.jpg',
     description:'Auriculares in-ear inalámbricos Bluetooth · hasta 25h de batería · con micrófono integrado',
     specs:{'Tipo':'In-ear inalámbrico', 'Batería':'Hasta 25h', 'Micrófono':'Integrado', 'SKU Megasur':'DSP0000037821'}
   },
   { id:110, name:'AURICULARES SONY WH-CH520 BLUETOOH BLANCO', brand:'SONY', category:'auriculares',
-    price:70.8, oldPrice:83.55, badge: 'OFERTA',
+    price:107.9, oldPrice:127.3, badge: 'OFERTA',
     image:'img/productos/MGS0000020797-0.jpg',
     description:'ANC: Cancelación activa de ruido',
     specs:{'ANC':'Cancelación activa de ruido','SKU Megasur':'MGS0000020797'}
   },
   { id:114, name:'AURICULARES SONY WF-C510 INALAMBRICO AZUL', brand:'SONY', category:'auriculares',
-    price:62.75, oldPrice:74.05, badge: 'OFERTA',
+    price:120.6, oldPrice:142.3, badge: 'OFERTA',
     image:'img/productos/DSP0000037829-0.jpg',
     description:'True wireless in-ear Bluetooth 5.3 · hasta 22h con estuche · color Azul',
     specs:{'Tipo':'True Wireless', 'Bluetooth':'5.3', 'Batería':'Hasta 22h', 'SKU Megasur':'DSP0000037829'}
   },
   { id:113, name:'AURICULARES SONY WF-C710N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:132.1, oldPrice:155.9, badge: 'OFERTA',
+    price:229.8, oldPrice:271.15, badge: 'OFERTA',
     image:'img/productos/DSP0000037823-0.jpg',
     description:'True wireless con cancelación activa de ruido (ANC) · sonido Sony 360° · hasta 15h + estuche',
     specs:{'ANC':'Cancelación activa de ruido', 'Tipo':'True Wireless', 'Batería':'Hasta 15h + estuche', 'SKU Megasur':'DSP0000037823'}
   },
   { id:112, name:'AURICULARES SONY WH-CH720N INALAMBRICO NEGRO', brand:'SONY', category:'auriculares',
-    price:109.5, oldPrice:129.2, badge: 'OFERTA',
+    price:276, oldPrice:325.7, badge: 'OFERTA',
     image:'img/productos/DSP0000037822-0.jpg',
     description:'Over-ear inalámbrico con cancelación activa de ruido (ANC) · Bluetooth 5.2 · hasta 35h de batería',
     specs:{'ANC':'Cancelación activa de ruido', 'Tipo':'Over-ear', 'Batería':'Hasta 35h', 'Bluetooth':'5.2', 'SKU Megasur':'DSP0000037822'}
@@ -2162,7 +2162,7 @@ PRODUCTS.push(
   // ── EPOS SENNHEISER ────────────────────────────────────────
 
   { id:118, name:'AURICULARES EPOS SENNHEISER PC 5 CHAT JACK 3.5MM MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:31.5, oldPrice:37.15, badge: 'OFERTA',
+    price:41.9, oldPrice:49.45, badge: 'OFERTA',
     image:'img/productos/DSP0000012549-0.jpg',
     images: [
       'img/productos/DSP0000012549-0.jpg',
@@ -2175,7 +2175,7 @@ PRODUCTS.push(
     specs:{'Conexión':'Jack 3.5mm', 'Micrófono':'Integrado','SKU Megasur':'DSP0000012549'}
   },
   { id:115, name:'AURICULARES EPOS SENNHEISER PC 8 USB MICROFONO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:44.85, oldPrice:52.9, badge: 'OFERTA',
+    price:67.5, oldPrice:79.65, badge: 'OFERTA',
     image:'img/productos/DSP0000012535-0.jpg',
     images: [
       'img/productos/DSP0000012535-0.jpg',
@@ -2187,7 +2187,7 @@ PRODUCTS.push(
     specs:{'Micrófono':'Integrado','SKU Megasur':'DSP0000012535'}
   },
   { id:116, name:'AURICULARES EPOS SENNHEISER RS 120-W TV NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:109.5, oldPrice:129.2, badge: 'OFERTA',
+    price:222.6, oldPrice:262.65, badge: 'OFERTA',
     image:'img/productos/DSP0000012542-0.jpg',
     images: [
       'img/productos/DSP0000012542-0.jpg',
@@ -2198,7 +2198,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Over-ear inalámbrico RF', 'Uso':'Televisión', 'Sonido':'Estéreo', 'SKU Megasur':'DSP0000012542'}
   },
   { id:117, name:'AURICULARES EPOS SENNHEISER RS 5200 RF', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:142.9, oldPrice:168.6, badge: 'OFERTA',
+    price:400.5, oldPrice:472.6, badge: 'OFERTA',
     image:'img/productos/DSP0000012543-0.jpg',
     images: [
       'img/productos/DSP0000012543-0.jpg',
@@ -2211,7 +2211,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Over-ear inalámbrico RF', 'Uso':'Televisión', 'Marca calidad':'Sennheiser', 'SKU Megasur':'DSP0000012543'}
   },
   { id:119, name:'AURICULARES EPOS SENNHEISER RS 2000 TV INALAMBRICO NEGRO', brand:'EPOS SENNHEISER', category:'auriculares',
-    price:250.6, oldPrice:295.7, badge: 'OFERTA',
+    price:307.9, oldPrice:363.3, badge: 'OFERTA',
     image:'img/productos/DSP0000028398-0.jpg',
     images: [
       'img/productos/DSP0000028398-0.jpg',
@@ -2226,7 +2226,7 @@ PRODUCTS.push(
   // ── JABRA ──────────────────────────────────────────────────
 
   { id:123, name:'AURICULAR JABRA EVOLVE 30 II HS NEGRO', brand:'JABRA', category:'auriculares',
-    price:93.4, oldPrice:110.2, badge: 'OFERTA',
+    price:117.05, oldPrice:138.1, badge: 'OFERTA',
     image:'img/productos/DSP0000030414-0.jpg',
     images: [
       'img/productos/DSP0000030414-0.jpg',
@@ -2237,7 +2237,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Monoaural con cable', 'Micrófono':'Cancelación de ruido', 'Certificación':'UC', 'SKU Megasur':'DSP0000030414'}
   },
   { id:124, name:'AURICULARES JABRA BIZ 2300 QD DUO', brand:'JABRA', category:'auriculares',
-    price:135.25, oldPrice:159.6, badge: 'OFERTA',
+    price:254.25, oldPrice:300, badge: 'OFERTA',
     image:'img/productos/DSP0000030416-0.jpg',
     images: [
       'img/productos/DSP0000030416-0.jpg',
@@ -2250,7 +2250,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Binaural (DUO)', 'Conector':'Quick Disconnect (QD)', 'Uso':'Call center', 'SKU Megasur':'DSP0000030416'}
   },
   { id:121, name:'AURICULARES JABRA ENGAGE 45 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
-    price:253.7, oldPrice:299.35, badge: 'OFERTA',
+    price:389.1, oldPrice:459.15, badge: 'OFERTA',
     image:'img/productos/DSP0000030409-0.jpg',
     images: [
       'img/productos/DSP0000030409-0.jpg',
@@ -2261,7 +2261,7 @@ PRODUCTS.push(
     specs:{'Tipo':'Inalámbrico DECT', 'Batería':'Hasta 13h', 'Micrófono':'Cancelación de ruido', 'SKU Megasur':'DSP0000030409'}
   },
   { id:120, name:'AURICULARES JABRA EVOLVE2 65 MS', brand:'JABRA', category:'auriculares',
-    price:330.75, oldPrice:390.3, badge: 'OFERTA',
+    price:383.75, oldPrice:452.85, badge: 'OFERTA',
     image:'img/productos/MGS0000025960-0.jpg',
     images: [
       'img/productos/MGS0000025960-0.jpg',
@@ -2272,7 +2272,7 @@ PRODUCTS.push(
     specs:{'Certificación':'Microsoft Teams', 'ANC':'Cancelación activa de ruido', 'Batería':'Hasta 37h', 'SKU Megasur':'MGS0000025960'}
   },
   { id:122, name:'AURICULARES JABRA ENGAGE 65 SE INALAMBRICO NEGRO', brand:'JABRA', category:'auriculares',
-    price:401.3, oldPrice:473.55, badge: 'OFERTA',
+    price:635.3, oldPrice:749.65, badge: 'OFERTA',
     image:'img/productos/DSP0000030410-0.jpg',
     images: [
       'img/productos/DSP0000030410-0.jpg',
@@ -2285,7 +2285,7 @@ PRODUCTS.push(
   // ── ENERGY SISTEM ──────────────────────────────────────────
 
   { id:126, name:'AURICULARES MICRO ENERGY SISTEM OFFICE 2 ANTHRACITE SUPRAURAL/ 30MM/ CABLE 150CM/ JACK 3.5MM/ ANTIPOP/ 20HZ', brand:'ENERGY SISTEM', category:'auriculares',
-    price:29.85, oldPrice:35.2, badge: 'OFERTA',
+    price:33.25, oldPrice:39.25, badge: 'OFERTA',
     image:'img/productos/DSP0000007049-0.jpg',
     images: [
       'img/productos/DSP0000007049-0.jpg',
@@ -2302,19 +2302,19 @@ PRODUCTS.push(
     specs:{'Conexión':'Jack 3.5mm', 'ANC':'Cancelación activa de ruido','SKU Megasur':'DSP0000007066'}
   },
   { id:327, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
-    price:48.15, oldPrice:56.8, badge: 'OFERTA',
+    price:35.2, oldPrice:41.55, badge: 'OFERTA',
     image:'img/productos/DSP0000007055-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
     specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007055'}
   },
   { id:328, name:'AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C', brand:'ENERGY SISTEM', category:'auriculares',
-    price:48.15, oldPrice:56.8, badge: 'OFERTA',
+    price:65.85, oldPrice:77.7, badge: 'OFERTA',
     image:'img/productos/DSP0000007060-0.jpg',
     description:'Conectividad: Bluetooth 5.0',
     specs:{'Conectividad':'Bluetooth 5.0', 'Batería':'20h de autonomía', 'Micrófono':'Integrado','SKU Megasur':'DSP0000007060'}
   },
   { id:125, name:'AURICULARES MICRO GAMING ENERGY SISTEM ESG4 7.1 RED SUPRAURAL/ 50MM/ USB/ MULTIPLATAFORMA', brand:'ENERGY SISTEM', category:'auriculares',
-    price:53.15, oldPrice:62.7, badge: 'OFERTA',
+    price:75.6, oldPrice:89.2, badge: 'OFERTA',
     image:'img/productos/DSP0000007037-0.jpg',
     images: [
       'img/productos/DSP0000007037-0.jpg',
@@ -2327,13 +2327,13 @@ PRODUCTS.push(
   // ── URBANISTA ──────────────────────────────────────────────
 
   { id:330, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE', brand:'URBANISTA', category:'auriculares',
-    price:64.35, oldPrice:75.95, badge: 'OFERTA',
+    price:207.7, oldPrice:245.1, badge: 'OFERTA',
     image:'img/productos/DSP0000014716-0.jpg',
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014716'}
   },
   { id:132, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON VANILLA CREAM / AMARILLO VAINILLA', brand:'URBANISTA', category:'auriculares',
-    price:77.25, oldPrice:91.15, badge: 'OFERTA',
+    price:106.05, oldPrice:125.15, badge: 'OFERTA',
     image:'img/productos/DSP0000013389-0.jpg',
     images: [
       'img/productos/DSP0000013389-0.jpg',
@@ -2346,7 +2346,7 @@ PRODUCTS.push(
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013389'}
   },
   { id:134, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON MIDNIGHT BLACK', brand:'URBANISTA', category:'auriculares',
-    price:77.25, oldPrice:91.15, badge: 'OFERTA',
+    price:106.05, oldPrice:125.15, badge: 'OFERTA',
     image:'img/productos/DSP0000014713-0.jpg',
     images: [
       'img/productos/DSP0000014713-0.jpg',
@@ -2359,13 +2359,13 @@ PRODUCTS.push(
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000014713'}
   },
   { id:331, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE', brand:'URBANISTA', category:'auriculares',
-    price:96.6, oldPrice:114, badge: 'OFERTA',
+    price:141.25, oldPrice:166.65, badge: 'OFERTA',
     image:'img/productos/DSP0000013382-0.jpg',
     description:'Tipo: True Wireless (TWS)',
     specs:{'Tipo':'True Wireless (TWS)','SKU Megasur':'DSP0000013382'}
   },
   { id:133, name:'AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS PHOENIX DESERT ROSE CARGA SOLAR', brand:'URBANISTA', category:'auriculares',
-    price:142.9, oldPrice:168.6, badge: 'OFERTA',
+    price:292.25, oldPrice:344.85, badge: 'OFERTA',
     image:'img/productos/DSP0000014707-0.jpg',
     images: [
       'img/productos/DSP0000014707-0.jpg',
