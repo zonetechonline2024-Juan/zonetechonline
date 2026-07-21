@@ -3132,6 +3132,25 @@ function maskSVG(color) {
   </svg>`;
 }
 
+function phoneSVG(color) {
+  color = color || '#6366f1';
+  return `<svg viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="4" width="76" height="152" rx="14" fill="#1a1a2e" stroke="${color}" stroke-width="2"/>
+    <rect x="16" y="16" width="68" height="114" rx="6" fill="#0d0d1a"/>
+    <rect x="35" y="20" width="30" height="7" rx="3.5" fill="${color}" opacity=".5"/>
+    <rect x="8" y="38" width="4" height="14" rx="2" fill="${color}" opacity=".5"/>
+    <rect x="8" y="56" width="4" height="22" rx="2" fill="${color}" opacity=".5"/>
+    <rect x="88" y="46" width="4" height="22" rx="2" fill="${color}" opacity=".5"/>
+    <rect x="26" y="98" width="48" height="3" rx="1.5" fill="${color}" opacity=".2"/>
+    <rect x="26" y="105" width="36" height="3" rx="1.5" fill="${color}" opacity=".15"/>
+    <path d="M 26 72 Q 32 60 40 67 Q 48 74 50 58 Q 52 42 62 50 Q 68 55 74 72" stroke="#10b981" stroke-width="1.5" fill="none" opacity=".8"/>
+    <circle cx="50" cy="80" r="14" fill="none" stroke="${color}" stroke-width="1" opacity=".2"/>
+    <circle cx="50" cy="80" r="6" fill="${color}" opacity=".3"/>
+    <circle cx="50" cy="80" r="2" fill="${color}" opacity=".8"/>
+    <rect x="36" y="122" width="28" height="4" rx="2" fill="${color}" opacity=".4"/>
+  </svg>`;
+}
+
 function getProductSVG(category, color) {
   switch (category) {
     case 'relojes':     return watchSVG(color);
@@ -3140,6 +3159,7 @@ function getProductSVG(category, color) {
     case 'auriculares': return headphonesSVG(color);
     case 'altavoces':   return speakerSVG(color);
     case 'mascaras':    return maskSVG(color);
+    case 'smartphones': return phoneSVG(color);
     default:            return watchSVG(color);
   }
 }
@@ -3156,7 +3176,7 @@ function productCardGalleryHTML(product) {
   var mainImg = product.image
     ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
     : '';
-  var svgBack = '<div class="product-svg-back product-img-ph"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-5L5 19"/></svg></div>';
+  var svgBack = '<div class="product-svg-back product-img-ph">' + getProductSVG(product.category, '#6366f1') + '</div>';
   if (!imgs) return mainImg + svgBack;
   var L = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M7 1.5L3 5l4 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var R = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M3 1.5L7 5l-4 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
