@@ -1122,7 +1122,8 @@ PRODUCTS.push(
     price:183.2, oldPrice:216.2, badge: 'OFERTA',
     image:'img/productos/MGS0000025666-0.jpg',
     images:[
-      'img/productos/MGS0000025666-0.jpg'
+      'img/productos/MGS0000025666-0.jpg',
+      'img/productos/920-008086-1.jpg'
     ],
     description:'Auriculares gaming USB de Logitech con drivers Pro-G de 50mm y membrana de fibra híbrida para un sonido preciso y potente. Micrófono Pro-G Supercardioid desprendible con tecnología Blue VO!CE, sonido envolvente DTS 7.1, almohadillas de espuma de memoria y construcción de acero inoxidable.',
     specs:{
@@ -2479,7 +2480,11 @@ PRODUCTS.push(
     price:1324.10, oldPrice:1562.45, badge:'NUEVO',
     image:'img/productos/MGS0000000709-0.jpg',
     images:[
-      'img/productos/MGS0000000709-0.jpg'
+      'img/productos/MGS0000000709-0.jpg',
+      'img/productos/1401-samsung-galaxy-s25-fe-8gb-256gb-67-azul-glacial-version-importada-eu.jpg',
+      'img/productos/1254-samsung-galaxy-s25-fe-8gb-256gb-67-blanco-version-importada-eu.jpg',
+      'img/productos/1987-samsung-galaxy-s25-fe-8gb-256gb-67-negro-intenso-version-importada-eu-mejor-precio.jpg',
+      'img/productos/1575-samsung-galaxy-s25-fe-5g-8gb-256gb-67-azul-marino.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Serie S premium','SKU Megasur':'MGS0000000709'}
@@ -2585,7 +2590,11 @@ PRODUCTS.push(
     price:1844.70, oldPrice:2176.75, badge:'NUEVO',
     image:'img/productos/DSP0000025870-0.jpg',
     images:[
-      'img/productos/DSP0000025870-0.jpg'
+      'img/productos/DSP0000025870-0.jpg',
+      'img/productos/1892-apple-iphone-17-256gb-azul-neblina.jpg',
+      'img/productos/1328-apple-iphone-17-256gb-blanco.jpg',
+      'img/productos/1792-apple-iphone-17-256gb-lavanda.jpg',
+      'img/productos/1573-apple-iphone-17-256-gb-verde-salvia.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'iPhone 17','SKU Megasur':'DSP0000025870'}
@@ -2596,7 +2605,10 @@ PRODUCTS.push(
     price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033059-0.jpg',
     images:[
-      'img/productos/MGS0000033059-0.jpg'
+      'img/productos/MGS0000033059-0.jpg',
+      'img/productos/1627-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-negro.jpg',
+      'img/productos/1543-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-verde-palmera.jpg',
+      'img/productos/1269-xiaomi-redmi-a7-pro-4g-4gb-64gb-69-azul-niebla.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033059'}
@@ -2605,7 +2617,10 @@ PRODUCTS.push(
     price:229.05, oldPrice:270.3, badge: 'OFERTA',
     image:'img/productos/MGS0000033060-0.jpg',
     images:[
-      'img/productos/MGS0000033060-0.jpg'
+      'img/productos/MGS0000033060-0.jpg',
+      'img/productos/1747-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-azul-niebla.jpg',
+      'img/productos/1627-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-negro.jpg',
+      'img/productos/1412-xiaomi-redmi-a7-pro-4g-4gb-64gb-69-verde-palmera.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE', 'Almacenamiento':'128GB', 'SO':'Android', 'SIM':'Dual SIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033060'}
@@ -2656,7 +2671,10 @@ PRODUCTS.push(
     price:229.05, oldPrice:270.30, badge:'OFERTA',
     image:'img/productos/MGS0000000306-0.jpg',
     images:[
-      'img/productos/MGS0000000306-0.jpg'
+      'img/productos/MGS0000000306-0.jpg',
+      'img/productos/1747-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-azul-niebla.jpg',
+      'img/productos/1543-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-verde-palmera.jpg',
+      'img/productos/1489-xiaomi-redmi-a7-pro-4g-4gb-64gb-69-negro.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000306'}
@@ -2676,7 +2694,11 @@ PRODUCTS.push(
     price:480.65, oldPrice:567.15, badge:'OFERTA',
     image:'img/productos/MGS0000000186-0.jpg',
     images:[
-      'img/productos/MGS0000000186-0.jpg'
+      'img/productos/MGS0000000186-0.jpg',
+      'img/productos/1120-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-azul-glaciar.jpg',
+      'img/productos/1760-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-titanio-cf9a9d70-144c-4e4e-9803-6046ff158133.jpg',
+      'img/productos/1578-xiaomi-redmi-note-15-pro-4g-8gb-256gb-677-negro-8a9aea1a-d79a-43f0-bffa-c43bebfcbe05.jpg',
+      'img/productos/1321-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-negro-bde5d6a1-05ca-4ede-9d0a-cc94b9d2c13e.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000186'}
@@ -2685,7 +2707,11 @@ PRODUCTS.push(
     price:689.75, oldPrice:813.90, badge:'NUEVO',
     image:'img/productos/MGS0000000135-0.jpg',
     images:[
-      'img/productos/MGS0000000135-0.jpg'
+      'img/productos/MGS0000000135-0.jpg',
+      'img/productos/1236-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-azul-glaciar.jpg',
+      'img/productos/1547-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-cafe-moca.jpg',
+      'img/productos/1578-xiaomi-redmi-note-15-pro-4g-8gb-256gb-677-negro-8a9aea1a-d79a-43f0-bffa-c43bebfcbe05.jpg',
+      'img/productos/1609-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-negro-5907fe68-3314-4a02-9523-24bdfa094312.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'MGS0000000135'}
@@ -2782,7 +2808,8 @@ PRODUCTS.push(
     image:'img/productos/DSP0000000020-0.jpg',
     images:[
       'img/productos/DSP0000000020-0.jpg',
-      'img/productos/DSP0000000020-1.jpg'
+      'img/productos/DSP0000000020-1.jpg',
+      'img/productos/1152-realme-note-70t-4g-4gb-256gb-674-dorado-f4b4d7e4-ecd5-4336-aa2c-9cb2053ac912.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000020'}
@@ -2979,7 +3006,8 @@ PRODUCTS.push(
     price:502.55, oldPrice:593.00, badge:'NUEVO',
     image:'img/productos/DSP0000000550-0.jpg',
     images:[
-      'img/productos/DSP0000000550-0.jpg'
+      'img/productos/DSP0000000550-0.jpg',
+      'img/productos/1865-motorola-edge-60-fusion-5g-8gb-256gb-667-azul-review.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000000550'}
