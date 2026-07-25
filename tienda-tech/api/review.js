@@ -4,6 +4,7 @@ const SUBS_FILE = 'tienda-tech/data/subscribers.json';
 const GH_API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
 const GH_SUBS_API = `https://api.github.com/repos/${REPO}/contents/${SUBS_FILE}`;
 const { rateLimit } = require('./_ratelimit');
+const logger        = require('./_logger');
 const reviewRL      = rateLimit('review');
 const newsletterRL  = rateLimit('newsletter');
 
@@ -51,7 +52,7 @@ module.exports = async (req, res) => {
       if (!putRes.ok) throw new Error('GitHub PUT ' + putRes.status);
       return res.status(200).json({ success: true });
     } catch (err) {
-      console.error('[newsletter]', err.message);
+      logger.error('newsletter', err.message, logger.ctx(req));
       return res.status(500).json({ error: 'Error al procesar la suscripción.' });
     }
   }
@@ -106,7 +107,7 @@ module.exports = async (req, res) => {
     return res.status(200).json({ success: true, review });
 
   } catch (err) {
-    console.error('[review]', err.message);
+    logger.error('review', err.message, logger.ctx(req));
     return res.status(500).json({ error: 'Error al publicar la reseña. Inténtalo más tarde.' });
   }
 };
