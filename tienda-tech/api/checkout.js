@@ -1,13 +1,16 @@
 'use strict';
-const { db } = require('./_db');
+const { db }         = require('./_db');
+const { rateLimit }  = require('./_ratelimit');
+const checkoutRL     = rateLimit('checkout');
 
 module.exports = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.zonetechonline.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (!checkoutRL(req, res)) return;
 
   try {
     const apiKey = process.env.STRIPE_SECRET_KEY;
