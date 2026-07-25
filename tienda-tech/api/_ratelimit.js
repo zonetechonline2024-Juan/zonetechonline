@@ -2,7 +2,7 @@
 
 const _store = new Map();
 const WINDOW_MS = 60 * 1000;
-const LIMITS = { checkout: 5, review: 3, newsletter: 3, contact: 3 };
+const LIMITS = { checkout: 5, review: 3, newsletter: 3, contact: 3, ai: 10 };
 
 function getIP(req) {
   return (req.headers['x-forwarded-for'] || '').split(',')[0].trim()
