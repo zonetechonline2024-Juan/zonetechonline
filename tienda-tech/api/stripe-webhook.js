@@ -103,12 +103,34 @@ module.exports = async (req, res) => {
       await db('customers', { method: 'POST', body: { email, name, total_orders: 1, total_spent: total } });
     }
 
+    // Recuperar items del carrito (para email, order_items y Megasur)
+    const cartRows = await db('cart_sessions', { filters: [`stripe_session_id=eq.${session.id}`] });
+    const cartItems = cartRows?.[0]?.items || [];
+
+    // Guardar items en order_items
+    if (cartItems.length > 0 && order?.id) {
+      try {
+        const orderItemsData = cartItems.map(item => ({
+          order_id:     order.id,
+          product_name: String(item.name || '').trim().slice(0, 250),
+          price:        parseFloat(item.price) || 0,
+          quantity:     Math.max(1, parseInt(item.qty) || 1),
+          ean:          item.ean         || null,
+          megasur_code: item.megasurCode || null,
+          image:        item.image       || null,
+        }));
+        await db('order_items', { method: 'POST', body: orderItemsData });
+      } catch (itemsErr) {
+        console.warn('[stripe-webhook] order_items save failed:', itemsErr.message);
+      }
+    }
+
     // Email de confirmación
     if (email && !order.email_sent) {
       const { subject, html } = orderConfirm({
         name, email,
         orderNo: '#' + orderNo,
-        items: [],
+        items: cartItems,
         total,
         address: addr,
         paymentMethod: payMethod,
@@ -120,9 +142,6 @@ module.exports = async (req, res) => {
 
     // Pedido automático a Megasur (dropshipping)
     try {
-      const cartRows = await db('cart_sessions', { filters: [`stripe_session_id=eq.${session.id}`] });
-      const cartItems = cartRows?.[0]?.items || [];
-
       const sd = session.shipping_details || {};
       const shipping = {
         name:        sd.name        || name,
