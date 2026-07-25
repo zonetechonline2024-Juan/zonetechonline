@@ -1,14 +1,5 @@
 'use strict';
-/**
- * Shared middleware factory for Vercel serverless functions.
- *
- * Centralizes: CORS, authentication, error handling, OPTIONS preflight.
- * Eliminates duplication across all API handlers.
- *
- * Usage:
- *   const { withAdmin, withPublic } = require('./_middleware');
- *   module.exports = withAdmin(async (req, res) => { ... });
- */
+const logger = require('./_logger');
 
 const ALLOWED_ORIGIN = 'https://www.zonetechonline.com';
 
@@ -39,18 +30,12 @@ function withAdmin(handler, methods = 'GET, POST, PATCH, DELETE, OPTIONS') {
     try {
       await handler(req, res);
     } catch (err) {
-      const route = req.url || 'unknown';
-      console.error(`[API:admin] ${route} — ${err.message}`);
-      if (!res.headersSent) {
-        res.status(500).json({ error: 'Error interno del servidor' });
-      }
+      logger.error('admin', err.message, logger.ctx(req));
+      if (!res.headersSent) res.status(500).json({ error: 'Error interno del servidor' });
     }
   };
 }
 
-/**
- * Wraps a public handler with CORS + error handling (no auth).
- */
 function withPublic(handler, methods = 'POST, OPTIONS') {
   return async (req, res) => {
     setCORSHeaders(res, methods);
@@ -59,11 +44,8 @@ function withPublic(handler, methods = 'POST, OPTIONS') {
     try {
       await handler(req, res);
     } catch (err) {
-      const route = req.url || 'unknown';
-      console.error(`[API:public] ${route} — ${err.message}`);
-      if (!res.headersSent) {
-        res.status(500).json({ error: 'Error interno del servidor' });
-      }
+      logger.error('public', err.message, logger.ctx(req));
+      if (!res.headersSent) res.status(500).json({ error: 'Error interno del servidor' });
     }
   };
 }
