@@ -3271,10 +3271,11 @@ function productImgHTML(product, imgClass, svgWrapClass) {
     'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + placeholder;
 }
 
-function productCardGalleryHTML(product) {
+function productCardGalleryHTML(product, eager) {
+  var loadAttr = eager ? ' fetchpriority="high"' : ' loading="lazy"';
   var imgs = (product.images && product.images.length > 1) ? product.images : null;
   var mainImg = product.image
-    ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+    ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '"' + loadAttr + ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
     : '';
   var svgBack = '<div class="product-svg-back product-img-ph">' + getProductSVG(product.category, '#6366f1') + '</div>';
   if (!imgs) return mainImg + svgBack;
@@ -3648,7 +3649,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
       '</div>';
     return 0;
   }
-  grid.innerHTML = filtered.map(function(product) {
+  grid.innerHTML = filtered.map(function(product, idx) {
     var isOOS2 = product.inStock === false;
     var badgeHTML = isOOS2
       ? '<span class="product-badge product-badge--oos">AGOTADO</span>'
@@ -3670,7 +3671,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
       '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
-        productCardGalleryHTML(product) +
+        productCardGalleryHTML(product, idx < 4) +
         '<div class="product-qv-overlay"><span>Vista rápida</span></div>' +
       '</div>' +
       '<div class="product-info">' +
@@ -5751,6 +5752,8 @@ function initAIAssistant() {
            '<a class="ai-msg-link" href="catalogo.html" aria-label="Ver catálogo completo">Ver catálogo →</a>';
   }
 
+  var chatHistory = [];
+
   function sendMessage(text) {
     var clean = text.trim();
     if (!clean) return;
@@ -5766,12 +5769,24 @@ function initAIAssistant() {
 
     appendMsg(escHtml(clean), 'user');
     showTyping();
+    chatHistory.push({ role: 'user', content: clean });
 
-    var captured = clean;
-    setTimeout(function() {
+    fetch('/api/ai-assistant', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: chatHistory })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
       removeTyping();
-      appendMsg(getResponse(captured), 'bot');
-    }, 1050);
+      var reply = data.reply || (data.error ? '⚠️ ' + data.error : 'No he podido responder ahora. Inténtalo de nuevo.');
+      appendMsg(reply, 'bot');
+      chatHistory.push({ role: 'assistant', content: reply });
+    })
+    .catch(function() {
+      removeTyping();
+      appendMsg('Error de conexión con el asistente. Inténtalo de nuevo.', 'bot');
+    });
   }
 
   function openAI() {
