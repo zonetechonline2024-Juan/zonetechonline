@@ -1,0 +1,1910 @@
+[
+  {
+    "id": 1,
+    "name": "Xiaomi Smart Band 9",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 39.95,
+    "description": "Pulsera inteligente ultra delgada con pantalla AMOLED 1,62\". Monitorización cardíaca 24/7, SpO₂ continuo, 150+ modos deportivos y hasta 14 días de batería. Resistente al agua 5 ATM",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Xiaomi Redmi Watch 5 Active Negro",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 49.95,
+    "description": "Smartwatch con pantalla de 2.05\" AMOLED. Monitor de frecuencia cardíaca y SpO₂ continuo. 160+ modos deportivos. GPS integrado. Notificaciones. Batería 20 días. Color negro.",
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi Redmi Watch 5 Active Plata",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 49.95,
+    "description": "Smartwatch con pantalla de 2.05\" AMOLED. Monitor de frecuencia cardíaca y SpO₂ continuo. 160+ modos deportivos. GPS integrado. Notificaciones. Batería 20 días. Color plata.",
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "name": "Samsung Galaxy Watch 7 44mm Verde",
+    "brand": "Samsung",
+    "category": "relojes",
+    "price": 279.99,
+    "description": "Smartwatch 44mm en color verde con Super AMOLED 1,5\" circular. Procesador 3nm. GPS multibanda, ECG, SpO₂, temperatura y composición corporal avanzada. Galaxy AI integrado. Hasta 40",
+    "inStock": true
+  },
+  {
+    "id": 31,
+    "name": "Apple Watch SE3 GPS 40mm Blanco Estrella",
+    "brand": "Apple",
+    "category": "relojes",
+    "price": 249,
+    "description": "Apple Watch SE3 de aluminio Blanco Estrella, 40mm. Chip S9 SiP. Pantalla Retina OLED Always-On. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes de tráfico. GPS ",
+    "inStock": true
+  },
+  {
+    "id": 32,
+    "name": "Apple Watch SE3 GPS 44mm Blanco Estrella",
+    "brand": "Apple",
+    "category": "relojes",
+    "price": 279,
+    "description": "Apple Watch SE3 de aluminio Blanco Estrella, 44mm. Chip S9 SiP. Pantalla Retina OLED mayor. Frecuencia cardíaca continua, SpO₂, detector de caídas y accidentes de tráfico. GPS inte",
+    "inStock": true
+  },
+  {
+    "id": 33,
+    "name": "Apple Watch SE3 GPS+Cellular 40mm Medianoche",
+    "brand": "Apple",
+    "category": "relojes",
+    "price": 299,
+    "description": "Apple Watch SE3 Medianoche con conectividad Cellular independiente. Chip S9 SiP. Llama y recibe mensajes sin iPhone cerca. Frecuencia cardíaca continua, SpO₂, detector de caídas y ",
+    "inStock": true
+  },
+  {
+    "id": 34,
+    "name": "Apple Watch SE3 GPS+Cellular 44mm Medianoche",
+    "brand": "Apple",
+    "category": "relojes",
+    "price": 329,
+    "description": "Apple Watch SE3 Medianoche 44mm con conectividad Cellular. Chip S9 SiP. Pantalla Retina OLED mayor. Llamadas y mensajes independientes del iPhone. Frecuencia cardíaca, SpO₂, detect",
+    "inStock": true
+  },
+  {
+    "id": 35,
+    "name": "Apple Watch Series 11 GPS 42mm Gris Espacial",
+    "brand": "Apple",
+    "category": "relojes",
+    "price": 399,
+    "description": "Apple Watch Series 11 de aluminio Gris Espacial, 42mm. Chip S11 SiP. Pantalla Always-On Retina OLED. ECG, SpO₂, temperatura cutánea, frecuencia cardíaca 24/7 y detector de choques.",
+    "inStock": true
+  },
+  {
+    "id": 62,
+    "name": "Sony WH-CH520 Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 115.5,
+    "description": "Sony WH-CH520 Negro: auriculares inalámbricos de diadema ligeros y cómodos con 50 horas de autonomía y carga rápida USB-C (3 min = 90 min de música). Bluetooth 5.2 con función Mult",
+    "inStock": true
+  },
+  {
+    "id": 63,
+    "name": "Sony WF-C510 Blanco",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 120.6,
+    "description": "Sony WF-C510 Blanco: auriculares True Wireless completamente inalámbricos (sin cable) con hasta 20 horas de autonomía total (5h auriculares + 15h estuche). Bluetooth 5.3. Resistenc",
+    "inStock": true
+  },
+  {
+    "id": 64,
+    "name": "Sony WH-CH720N Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 276,
+    "description": "Sony WH-CH720N Negro: auriculares inalámbricos de diadema con cancelación activa de ruido (ANC) y el diseño más ligero de Sony (192g). Hasta 35h con ANC activo / 50h sin ANC. Bluet",
+    "inStock": true
+  },
+  {
+    "id": 65,
+    "name": "Sony WF-C710N Blanco",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 229.8,
+    "description": "Sony WF-C710N Blanco: auriculares True Wireless con cancelación activa de ruido (ANC) Dual Noise Sensor. Hasta 30 horas de autonomía total (7,5h + 22,5h estuche) con ANC. Bluetooth",
+    "inStock": true
+  },
+  {
+    "id": 66,
+    "name": "Sony ULT WEAR Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 129.99,
+    "description": "Sony ULT WEAR Negro: auriculares inalámbricos de diadema con ULT POWER SOUND (botón dedicado para máximo impacto de graves), cancelación activa de ruido (ANC) y hasta 30h de baterí",
+    "inStock": true
+  },
+  {
+    "id": 127,
+    "name": "JBL GO 5 Negro",
+    "brand": "JBL",
+    "category": "altavoces",
+    "price": 49.85,
+    "description": "El altavoz portátil más compacto de JBL con audio potente para su tamaño (4,8W RMS). Bluetooth 5.3 para conexión instantánea, resistencia total al agua y polvo IP67 (sumergible) y ",
+    "inStock": true
+  },
+  {
+    "id": 128,
+    "name": "JBL Clip 5 Negro",
+    "brand": "JBL",
+    "category": "altavoces",
+    "price": 64.35,
+    "description": "Altavoz portátil JBL con clip mosquetón integrado para engancharlo a la mochila, cinturón o tienda de campaña. 7W RMS con graves profundos, Bluetooth 5.3, IP67 sumergible y hasta 1",
+    "inStock": true
+  },
+  {
+    "id": 129,
+    "name": "JBL Flip 6 Negro",
+    "brand": "JBL",
+    "category": "altavoces",
+    "price": 99.85,
+    "description": "El altavoz portátil más popular de JBL: 30W RMS con configuración 2×15W para un sonido potente y equilibrado. IP67, 12 horas de batería, carga USB-C y tecnología PartyBoost para co",
+    "inStock": true
+  },
+  {
+    "id": 130,
+    "name": "JBL Flip 7 Blanco",
+    "brand": "JBL",
+    "category": "altavoces",
+    "price": 130.5,
+    "description": "JBL Flip 7: la evolución del Flip 6 con 35W RMS (+17% potencia) y tecnología Auracast™ para compartir audio con múltiples dispositivos Bluetooth simultáneamente. Bluetooth 5.3, IP6",
+    "inStock": true
+  },
+  {
+    "id": 131,
+    "name": "JBL Charge 6 Negro",
+    "brand": "JBL",
+    "category": "altavoces",
+    "price": 170.6,
+    "description": "El altavoz portátil premium de JBL: 45W RMS con sonido potente y graves profundos, 24 horas de batería y función PowerBank USB-A para cargar tu móvil. IP67 sumergible, Bluetooth 5.",
+    "inStock": true
+  },
+  {
+    "id": 200,
+    "name": "Apple Beats Flex Bluetooth Negro",
+    "brand": "Apple",
+    "category": "auriculares",
+    "price": 93.4,
+    "description": "Auriculares in-ear con cable de cuello de Apple, equipados con chip W1 para conectividad instantánea y cambio automático entre dispositivos Apple. Bluetooth 5.0 con hasta 12 horas ",
+    "inStock": true
+  },
+  {
+    "id": 201,
+    "name": "Apple AirPods 4 Inalámbrico Blanco",
+    "brand": "Apple",
+    "category": "auriculares",
+    "price": 209.1,
+    "description": "AirPods de 4ª generación con chip H2 y cancelación de ruido. Modo Transparencia adaptativa, audio espacial personalizado con seguimiento de cabeza y resistencia al sudor IP54. Estu",
+    "inStock": true
+  },
+  {
+    "id": 202,
+    "name": "Apple AirPods Max 2nd Gen Azul",
+    "brand": "Apple",
+    "category": "auriculares",
+    "price": 717.5,
+    "description": "Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de",
+    "inStock": true
+  },
+  {
+    "id": 203,
+    "name": "Apple AirPods Max 2nd Gen Starlight",
+    "brand": "Apple",
+    "category": "auriculares",
+    "price": 717.5,
+    "description": "Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de",
+    "inStock": true
+  },
+  {
+    "id": 204,
+    "name": "Apple AirPods Max 2nd Gen Orange",
+    "brand": "Apple",
+    "category": "auriculares",
+    "price": 717.5,
+    "description": "Auriculares over-ear premium de Apple con chip H2. Cancelación activa de ruido (ANC) adaptativa, Transparencia adaptativa y audio espacial personalizado con seguimiento dinámico de",
+    "inStock": true
+  },
+  {
+    "id": 205,
+    "name": "Sony WF-C510 True Wireless Azul",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 120.6,
+    "description": "Auriculares True Wireless de Sony con Bluetooth 5.3 y resistencia al agua IPX4. Drivers de 5.8mm con sonido equilibrado y 35 horas de autonomía total (10h propios + 25h estuche). C",
+    "inStock": true
+  },
+  {
+    "id": 206,
+    "name": "Sony WH-CH520 Bluetooth Blanco",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 107.9,
+    "description": "Auriculares over-ear inalámbricos de Sony con la mayor autonomía de su gama: hasta 50 horas de batería. Bluetooth 5.2 con Multipoint para conectar 2 dispositivos a la vez, carga rá",
+    "inStock": true
+  },
+  {
+    "id": 207,
+    "name": "Sony WI-C100 Inalámbrico Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 63.85,
+    "description": "Auriculares in-ear con cable de cuello (neckband) de Sony. Bluetooth 5.0 con hasta 25 horas de autonomía, resistencia al agua y sudor IPX4, y solo 12.5g de peso. Diseñados para el ",
+    "inStock": true
+  },
+  {
+    "id": 208,
+    "name": "Sony WH-CH720N ANC Inalámbrico Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 276,
+    "description": "Auriculares over-ear con cancelación activa de ruido (ANC) de Sony. Bluetooth 5.2 con Multipoint, hasta 35h con ANC (50h sin ANC), carga rápida USB-C y diseño plegable ultraligero ",
+    "inStock": true
+  },
+  {
+    "id": 209,
+    "name": "Sony WF-C710N TWS ANC Negro",
+    "brand": "Sony",
+    "category": "auriculares",
+    "price": 229.8,
+    "description": "Auriculares True Wireless de Sony con cancelación activa de ruido (ANC) y audio de alta resolución LDAC. Bluetooth 5.3, control táctil, resistencia IPX4 y hasta 22.5h totales (7.5h",
+    "inStock": true
+  },
+  {
+    "id": 210,
+    "name": "JBL T160 Intrauditivo Cable Azul",
+    "brand": "JBL",
+    "category": "auriculares",
+    "price": 27.75,
+    "description": "Auriculares intrauditivos con cable de JBL. Drivers JBL Pure Bass de 8.7mm para graves profundos y nítidos. Cable plano anti-enredos, micrófono integrado con botón multifunción uni",
+    "inStock": true
+  },
+  {
+    "id": 211,
+    "name": "JBL Tune 500 On-Ear Cable Blanco",
+    "brand": "JBL",
+    "category": "auriculares",
+    "price": 53.55,
+    "description": "Auriculares on-ear con cable de JBL y drivers Pure Bass de 32mm para un sonido potente y envolvente. Diseño plegable ultraligero de 145g con diadema ajustable y almohadillas acolch",
+    "inStock": true
+  },
+  {
+    "id": 212,
+    "name": "JBL Tune 510BT Inalámbrico Bluetooth Blanco",
+    "brand": "JBL",
+    "category": "auriculares",
+    "price": 85.15,
+    "description": "Auriculares on-ear inalámbricos de JBL con 40 horas de batería y carga rápida (5 minutos = 2 horas de uso). Bluetooth 5.0 con Multipoint para conectar 2 dispositivos simultáneament",
+    "inStock": true
+  },
+  {
+    "id": 213,
+    "name": "JBL Wave 200 TWS Negro",
+    "brand": "JBL",
+    "category": "auriculares",
+    "price": 94.25,
+    "description": "Auriculares True Wireless de JBL con JBL Deep Bass Sound y drivers de 8mm. Bluetooth 5.2 con hasta 25 horas de autonomía total (5h propios + 20h estuche), resistencia IPX2 y contro",
+    "inStock": true
+  },
+  {
+    "id": 214,
+    "name": "JBL Wave 300 TWS Negro",
+    "brand": "JBL",
+    "category": "auriculares",
+    "price": 106.35,
+    "description": "Auriculares True Wireless de JBL con JBL Deep Bass Sound y 32 horas de autonomía total (6h propios + 26h estuche). Bluetooth 5.2, 3 micrófonos para llamadas de alta calidad, resist",
+    "inStock": true
+  },
+  {
+    "id": 215,
+    "name": "ASUS TUF Gaming H1 Gen II Negro",
+    "brand": "ASUS",
+    "category": "auriculares",
+    "price": 129.45,
+    "description": "Auriculares gaming con cable de ASUS TUF, compatibles con Jack 3.5mm y USB-C. Drivers de 40mm ASUS-Tuned para audio gaming preciso, micrófono boom de 6mm con cancelación de ruido y",
+    "inStock": true
+  },
+  {
+    "id": 216,
+    "name": "ASUS TUF Gaming H3 Gun Metal",
+    "brand": "ASUS",
+    "category": "auriculares",
+    "price": 129.45,
+    "description": "Auriculares gaming USB de ASUS TUF con drivers de 50mm para graves profundos y explosivos. Micrófono bidireccional desmontable con cancelación de ruido, sonido envolvente virtual 7",
+    "inStock": true
+  },
+  {
+    "id": 217,
+    "name": "ASUS TUF Gaming H1 Wireless Negro",
+    "brand": "ASUS",
+    "category": "auriculares",
+    "price": 181.45,
+    "description": "Auriculares gaming inalámbricos de ASUS TUF con conexión dual: 2.4GHz sin latencia y cable 3.5mm para consolas. Drivers de 40mm ASUS-Tuned, hasta 15h de batería, micrófono boom des",
+    "inStock": true
+  },
+  {
+    "id": 218,
+    "name": "ASUS ROG Delta S Gaming Negro",
+    "brand": "ASUS",
+    "category": "auriculares",
+    "price": 393.35,
+    "description": "Auriculares gaming USB-C premium de ASUS ROG con DAC ESS 9281 Quad-Core de 32 bits para audio Hi-Res certificado. Drivers MagX de 50mm con imán de neodimio, sonido envolvente virtu",
+    "inStock": true
+  },
+  {
+    "id": 219,
+    "name": "ASUS ROG Cetra TWS SpeedNova Negro",
+    "brand": "ASUS",
+    "category": "auriculares",
+    "price": 376.7,
+    "description": "Auriculares True Wireless gaming de ASUS ROG con ANC híbrida y modo gaming de baja latencia. Bluetooth 5.3 con drivers ROG Triforce de 10mm, modo Transparencia, resistencia IPX4 y ",
+    "inStock": true
+  },
+  {
+    "id": 220,
+    "name": "Logitech Headset H110 Estéreo",
+    "brand": "Logitech",
+    "category": "auriculares",
+    "price": 26.9,
+    "description": "Auriculares con micrófono de Logitech con doble Jack 3.5mm (puerto PC gaming). Drivers de 20mm estéreo, micrófono boom flexible con cancelación de ruido, diseño plegable de 73g y c",
+    "inStock": true
+  },
+  {
+    "id": 221,
+    "name": "Logitech Headset H340 USB",
+    "brand": "Logitech",
+    "category": "auriculares",
+    "price": 50.35,
+    "description": "Auriculares USB de Logitech certificados para Microsoft Teams, Zoom y Google Meet. Procesamiento de audio digital sin driver, micrófono con cancelación de ruido y brazo ajustable, ",
+    "inStock": true
+  },
+  {
+    "id": 222,
+    "name": "Logitech Zone Wired USB",
+    "brand": "Logitech",
+    "category": "auriculares",
+    "price": 241,
+    "description": "Auriculares profesionales de Logitech con micrófono de cancelación activa de ruido (ANC) para voz nítida en reuniones. Incluye 3 conexiones: USB-A, USB-C y Jack 3.5mm. Certificado ",
+    "inStock": true
+  },
+  {
+    "id": 223,
+    "name": "Logitech G733 Gaming Wireless Negro",
+    "brand": "Logitech",
+    "category": "auriculares",
+    "price": 206.25,
+    "description": "Auriculares gaming inalámbricos de Logitech con tecnología LIGHTSPEED 2.4GHz y hasta 29 horas de batería. Micrófono boom giratorio con tecnología Blue VO!CE, RGB LIGHTSYNC personal",
+    "inStock": true
+  },
+  {
+    "id": 224,
+    "name": "Logitech PRO Gaming X Headset",
+    "brand": "Logitech",
+    "category": "auriculares",
+    "price": 183.2,
+    "description": "Auriculares gaming USB de Logitech con drivers Pro-G de 50mm y membrana de fibra híbrida para un sonido preciso y potente. Micrófono Pro-G Supercardioid desprendible con tecnología",
+    "inStock": true
+  },
+  {
+    "id": 26,
+    "name": "RELOJ SMARTWATCH GARMIN APPROACH, Reloj para Golf, Campos mundiales preinstalados, Bluetooth y Resistente al Agua, Blanco",
+    "brand": "Garmin",
+    "category": "relojes",
+    "price": 262.6,
+    "description": "GPS especializado para golf · +41.000 campos mundiales",
+    "inStock": true
+  },
+  {
+    "id": 27,
+    "name": "SMARTWATCH GARMIN FORERUNNER 165 43MM NEGRO GPS",
+    "brand": "Garmin",
+    "category": "relojes",
+    "price": 310.15,
+    "description": "Pantalla AMOLED 1.2\" táctil 390×390 · GPS multi-satélite",
+    "inStock": true
+  },
+  {
+    "id": 28,
+    "name": "SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP BLANCO Resistencia Agua 5ATM Pulsómetro Sueño",
+    "brand": "Garmin",
+    "category": "relojes",
+    "price": 289.1,
+    "description": "Pantalla MIP 1.04\" 208×208 · GPS integrado + GLONASS · 42mm",
+    "inStock": true
+  },
+  {
+    "id": 29,
+    "name": "SMARTWATCH GARMIN Forerunner 55 BT GPS 42mm MIP Negro Resistencia Agua 5ATM Pulsómetro Sueño",
+    "brand": "Garmin",
+    "category": "relojes",
+    "price": 289.1,
+    "description": "Pantalla MIP 1.04\" 208×208 · GPS integrado + GLONASS · 42mm",
+    "inStock": true
+  },
+  {
+    "id": 30,
+    "name": "Garmin Vívoactive 5, Smartwatch con GPS, Pantalla AMOLED, hasta 11 dias de autonomia",
+    "brand": "Garmin",
+    "category": "relojes",
+    "price": 330.75,
+    "description": "Pantalla AMOLED 1.2\" táctil · GPS + GLONASS + Galileo",
+    "inStock": true
+  },
+  {
+    "id": 231,
+    "name": "SMARTWATCH HAMMER WATCH 2 LITE BLACK",
+    "brand": "Hammer",
+    "category": "relojes",
+    "price": 120.8,
+    "description": "Pantalla IPS 1.6\" · resistencia militar IP68",
+    "inStock": true
+  },
+  {
+    "id": 232,
+    "name": "RELOJ SMARTWATCH MYPHONE CAREWATCH 4G LTE NEGRO",
+    "brand": "MyPhone",
+    "category": "relojes",
+    "price": 117.6,
+    "description": "Smartwatch para mayores con 4G LTE y GPS integrado",
+    "inStock": true
+  },
+  {
+    "id": 233,
+    "name": "RELOJ SMARTWATCH MYPHONE WATCH ADVENTURE BLACK",
+    "brand": "MyPhone",
+    "category": "relojes",
+    "price": 108.05,
+    "description": "Smartwatch outdoor con GPS integrado · IP68",
+    "inStock": true
+  },
+  {
+    "id": 234,
+    "name": "RELOJ SMARTWATCH MYPHONE PASTEL SILVER GREEN",
+    "brand": "MyPhone",
+    "category": "relojes",
+    "price": 68,
+    "description": "Pantalla 1.7\" TFT color · Bluetooth 5.0",
+    "inStock": true
+  },
+  {
+    "id": 235,
+    "name": "RELOJ SMARTWATCH MYPHONE TOOL BLACK GREEN",
+    "brand": "MyPhone",
+    "category": "relojes",
+    "price": 58,
+    "description": "Smartwatch robusto para trabajo y exteriores · IP68",
+    "inStock": true
+  },
+  {
+    "id": 36,
+    "name": "SMARTWATCH SPC SMARTEE 4G KIDZ TURQUESA",
+    "brand": "SPC",
+    "category": "relojes",
+    "price": 130.6,
+    "description": "Smartwatch infantil 4G con GPS antipérdida · nanoSIM",
+    "inStock": true
+  },
+  {
+    "id": 37,
+    "name": "SMARTWATCH INFANTIL TCL MOVETIME MT48 GRIS",
+    "brand": "TCL",
+    "category": "relojes",
+    "price": 230.6,
+    "description": "Smartwatch infantil 4G con GPS antipérdida · nanoSIM",
+    "inStock": true
+  },
+  {
+    "id": 38,
+    "name": "SMARTWATCH LEOTEC LESWKIDS06K KIDS ALLO PLUS NEGRO",
+    "brand": "Leotec",
+    "category": "relojes",
+    "price": 99.85,
+    "description": "GPS + LBS antipérdida · 4G LTE con ranura nanoSIM",
+    "inStock": true
+  },
+  {
+    "id": 39,
+    "name": "RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 NEGRO",
+    "brand": "Forever",
+    "category": "relojes",
+    "price": 56.45,
+    "description": "Pantalla AMOLED · Bluetooth 5.0 · diseño slim",
+    "inStock": true
+  },
+  {
+    "id": 40,
+    "name": "RELOJ SMARTWATCH FOREVER IGO WATCH 3 JW-500 ROJO",
+    "brand": "Forever",
+    "category": "relojes",
+    "price": 56.45,
+    "description": "Pantalla AMOLED · Bluetooth 5.0 · diseño slim",
+    "inStock": true
+  },
+  {
+    "id": 41,
+    "name": "Samsung Galaxy Fit3 1.6\" 40mm BT Gray",
+    "brand": "Samsung",
+    "category": "relojes",
+    "price": 64.35,
+    "description": "Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7",
+    "inStock": true
+  },
+  {
+    "id": 42,
+    "name": "Samsung Galaxy Fit3 1.6\" 40mm BT Pink",
+    "brand": "Samsung",
+    "category": "relojes",
+    "price": 64.35,
+    "description": "Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink",
+    "inStock": true
+  },
+  {
+    "id": 43,
+    "name": "Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green",
+    "brand": "Samsung",
+    "category": "relojes",
+    "price": 272.15,
+    "description": "Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM",
+    "inStock": true
+  },
+  {
+    "id": 44,
+    "name": "Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green",
+    "brand": "Samsung",
+    "category": "relojes",
+    "price": 426.3,
+    "description": "Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM",
+    "inStock": true
+  },
+  {
+    "id": 45,
+    "name": "Xiaomi Redmi Watch 5 Active Plata Mate",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 51.5,
+    "description": "Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM",
+    "inStock": true
+  },
+  {
+    "id": 46,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Glacier Silver",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 64.35,
+    "description": "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+",
+    "inStock": true
+  },
+  {
+    "id": 47,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Midnight Black",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 64.35,
+    "description": "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black",
+    "inStock": true
+  },
+  {
+    "id": 48,
+    "name": "XIAOMI Pulsera MI Smart Band 10 Mystic Rose",
+    "brand": "Xiaomi",
+    "category": "relojes",
+    "price": 64.35,
+    "description": "Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose",
+    "inStock": true
+  },
+  {
+    "id": 59,
+    "name": "TECLADO ASUS TUF GAMING K1 RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 127.1,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 60,
+    "name": "TECLADO ASUS TUF GAMING K3 GEN II RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 178.3,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 61,
+    "name": "TECLADO ASUS TUF GAMING K3 GEN II HATSUNE MIKU EDITION RGB",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 109.99,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 49,
+    "name": "TECLADO GAMING ASUS ROG STRIX SCOPE II X RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 292.15,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 50,
+    "name": "TECLADO GAMING ASUS ROG FALCHION ACE HFX ZywOo EDITION RGB INGLES",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 406.25,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 51,
+    "name": "TECLADO GAMING ASUS ROG FALCHION ACE 75 HE RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 424.4,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 52,
+    "name": "TECLADO ASUS ROG STRIX SCOPE II 96 RX INHALLAMBRICO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 219.99,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 53,
+    "name": "TECLADO GAMING ASUS ROG STRIX SCOPE II 96 INALAMBRICO RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 351.85,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 54,
+    "name": "TECLADO LOGITECH G213 GAMING CON ILUMINACION",
+    "brand": "LOGITECH",
+    "category": "teclados gaming",
+    "price": 115.65,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 55,
+    "name": "TECLADO GAMING LOGITECH G413 SE MECANICO USB NEGRO",
+    "brand": "LOGITECH",
+    "category": "teclados gaming",
+    "price": 171.7,
+    "description": "Switch: Mecánico",
+    "inStock": true
+  },
+  {
+    "id": 56,
+    "name": "TECLADO LOGITECH GAMING G512 USB",
+    "brand": "LOGITECH",
+    "category": "teclados gaming",
+    "price": 139.52,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 57,
+    "name": "TECLADO LOGITECH G513 GAMING USB NEGRO CARBON",
+    "brand": "LOGITECH",
+    "category": "teclados gaming",
+    "price": 133.25,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 78,
+    "name": "TECLADO LOGITECH G G915 X LIGHTSPEED INALAMBRICO",
+    "brand": "LOGITECH",
+    "category": "teclados gaming",
+    "price": 159.99,
+    "description": "Switch: GL Táctil (low-profile)",
+    "inStock": true
+  },
+  {
+    "id": 262,
+    "name": "TECLADO MARS GAMING MK320ES USB RGB MECANICO",
+    "brand": "MARS GAMING",
+    "category": "teclados gaming",
+    "price": 28,
+    "description": "Switch: Mecánico",
+    "inStock": true
+  },
+  {
+    "id": 263,
+    "name": "TECLADO MARS GAMING MK124",
+    "brand": "MARS GAMING",
+    "category": "teclados gaming",
+    "price": 31.35,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 264,
+    "name": "TECLADO MARS GAMING MK124 BLANCO",
+    "brand": "MARS GAMING",
+    "category": "teclados gaming",
+    "price": 33.35,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 265,
+    "name": "KIT TECLADO + RATON MARS GAMING MCPTKLES RGB",
+    "brand": "MARS GAMING",
+    "category": "teclados gaming",
+    "price": 42.15,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 266,
+    "name": "TECLADO MARS GAMING MK-SILENKEYSES",
+    "brand": "MARS GAMING",
+    "category": "teclados gaming",
+    "price": 19.9,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 67,
+    "name": "Teclado Gaming Royal PBT Mecanico Negro",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "teclados gaming",
+    "price": 102.75,
+    "description": "Switch: Mecánico",
+    "inStock": true
+  },
+  {
+    "id": 68,
+    "name": "Teclado Gaming Royal PBT Mecanico Blanco",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "teclados gaming",
+    "price": 102.75,
+    "description": "Switch: Mecánico",
+    "inStock": true
+  },
+  {
+    "id": 69,
+    "name": "TECLADO GAMING GENESIS RHOD 350 RGB USB",
+    "brand": "GENESIS",
+    "category": "teclados gaming",
+    "price": 11.99,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 70,
+    "name": "TECLADO GAMING GENESIS RHOD 500 RGB ESPAÑOL USB",
+    "brand": "GENESIS",
+    "category": "teclados gaming",
+    "price": 16.14,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 71,
+    "name": "TECLADO GAMING GENESIS RHOD 500 RGB PORTUGUES USB",
+    "brand": "GENESIS",
+    "category": "teclados gaming",
+    "price": 22.99,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 72,
+    "name": "TECLADO GAMING GENESIS THOR230 TKL RGB USB",
+    "brand": "GENESIS",
+    "category": "teclados gaming",
+    "price": 59.99,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 77,
+    "name": "TECLADO GAMING CORSAIR USB K55 CORE RGB",
+    "brand": "CORSAIR",
+    "category": "teclados gaming",
+    "price": 110.95,
+    "description": "Switch: Gaming",
+    "inStock": true
+  },
+  {
+    "id": 74,
+    "name": "TECLADO GAMING CORSAIR K55 CORE TKL RGB NEGRO",
+    "brand": "CORSAIR",
+    "category": "teclados gaming",
+    "price": 49.99,
+    "description": "Switch: Gaming",
+    "inStock": true
+  },
+  {
+    "id": 73,
+    "name": "TECLADO GAMING CORSAIR K55 RGB PRO",
+    "brand": "CORSAIR",
+    "category": "teclados gaming",
+    "price": 64.98,
+    "description": "Switch: Gaming",
+    "inStock": true
+  },
+  {
+    "id": 76,
+    "name": "TECLADO GAMING CORSAIR USB K70 CORE NEGRO",
+    "brand": "CORSAIR",
+    "category": "teclados gaming",
+    "price": 159.55,
+    "description": "Switch: Gaming",
+    "inStock": true
+  },
+  {
+    "id": 75,
+    "name": "TECLADO GAMING CORSAIR K70 CORE TKL INALAMBRICO",
+    "brand": "CORSAIR",
+    "category": "teclados gaming",
+    "price": 293.25,
+    "description": "Switch: Gaming",
+    "inStock": true
+  },
+  {
+    "id": 267,
+    "name": "TECLADO GAMING ASUS ROG STRIX SCOPE II RGB NEGRO",
+    "brand": "ASUS",
+    "category": "teclados gaming",
+    "price": 311.15,
+    "description": "Switch: Consultar ficha",
+    "inStock": true
+  },
+  {
+    "id": 268,
+    "name": "TECLADO GAMING CHERRY MX 6.0 MK6601 RGB NEGRO",
+    "brand": "CHERRY",
+    "category": "teclados gaming",
+    "price": 185.7,
+    "description": "Switch: Cherry MX Red (lineal)",
+    "inStock": true
+  },
+  {
+    "id": 269,
+    "name": "TECLADO GAMING DELL ALIENWARE AW410K RGB NEGRO",
+    "brand": "ALIENWARE",
+    "category": "teclados gaming",
+    "price": 235.85,
+    "description": "Switch: Cherry MX Red (lineal)",
+    "inStock": true
+  },
+  {
+    "id": 270,
+    "name": "TECLADO GAMING KROM KERID USB MECANICO RETROILUMINADO NEGRO",
+    "brand": "KROM",
+    "category": "teclados gaming",
+    "price": 89.7,
+    "description": "Switch: Mecánico (Brown táctil)",
+    "inStock": true
+  },
+  {
+    "id": 82,
+    "name": "ALTAVOZ PORTATIL FONESTAR BOX-35LED BLUETOOTH/ KARAOKE/ USB/ SD/ MICROFONO INALAMBRICO/ 35W RMS",
+    "brand": "FONESTAR",
+    "category": "altavoces",
+    "price": 114.6,
+    "description": "Tipo: Altavoz portátil",
+    "inStock": true
+  },
+  {
+    "id": 79,
+    "name": "ALTAVOZ PORTATIL CON MICROFONO FONESTAR MALIBU-315 / 50W RMS",
+    "brand": "FONESTAR",
+    "category": "altavoces",
+    "price": 393.85,
+    "description": "Tipo: Altavoz portátil",
+    "inStock": true
+  },
+  {
+    "id": 81,
+    "name": "ALTAVOZ PORTATIL FONESTAR CALIFORNIA 200W / JACK / AUXILIAR / FUNCION KARAOKE / BLUETOOTH / USB / MP3 / RADIO FM / MICROFONO",
+    "brand": "FONESTAR",
+    "category": "altavoces",
+    "price": 309.75,
+    "description": "Tipo: Altavoz portátil",
+    "inStock": true
+  },
+  {
+    "id": 88,
+    "name": "Altavoces PrivateSound Jack y USB",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "altavoces",
+    "price": 24.2,
+    "description": "Entrada: USB",
+    "inStock": true
+  },
+  {
+    "id": 87,
+    "name": "Altavoces Phoenix para Ordenador Portables 2.0 USB negros",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "altavoces",
+    "price": 27.75,
+    "description": "Sistema: 2.0 estéreo",
+    "inStock": true
+  },
+  {
+    "id": 84,
+    "name": "Altavoces PC Ordenador de Estudio Phoenix Serenade 60W RMS USB Bluetooth Optico Jack RCA",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "altavoces",
+    "price": 154.65,
+    "description": "Potencia: 60W RMS RMS",
+    "inStock": true
+  },
+  {
+    "id": 85,
+    "name": "Altavoces de Estudio Phoenix Sonika 50W con Bluetooth Jack USB para Ordenador",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "altavoces",
+    "price": 110.25,
+    "description": "Potencia: 50W RMS",
+    "inStock": true
+  },
+  {
+    "id": 86,
+    "name": "Altavoz RumbleBoss Phoenix 80W RMS Bateria 4000 mah Funcion Karaoke 2 Microfonos Inalambricos Incluidos",
+    "brand": "PHOENIX TECHNOLOGIES",
+    "category": "altavoces",
+    "price": 271.4,
+    "description": "Potencia: 80W RMS RMS",
+    "inStock": true
+  },
+  {
+    "id": 93,
+    "name": "ALTAVOCES LOGITECH Z150 2.0/ BLANCOS/ 6W",
+    "brand": "LOGITECH",
+    "category": "altavoces",
+    "price": 57.15,
+    "description": "Sistema: 2.0 estéreo",
+    "inStock": true
+  },
+  {
+    "id": 89,
+    "name": "ALTAVOCES LOGITECH Z207 BLUETOOTH BLANCO",
+    "brand": "LOGITECH",
+    "category": "altavoces",
+    "price": 108.4,
+    "description": "Conectividad: Bluetooth",
+    "inStock": true
+  },
+  {
+    "id": 91,
+    "name": "ALTAVOCES LOGITECH Z623 2.1 200 RMS /THX",
+    "brand": "LOGITECH",
+    "category": "altavoces",
+    "price": 271.4,
+    "description": "Sistema: 2.1 (satélites + subwoofer)",
+    "inStock": true
+  },
+  {
+    "id": 90,
+    "name": "ALTAVOCES LOGITECH Z906 5.1 THX / 500 W RMS SONIDO ENVOLVENTE",
+    "brand": "LOGITECH",
+    "category": "altavoces",
+    "price": 511.45,
+    "description": "Potencia: 500 W RMS RMS",
+    "inStock": true
+  },
+  {
+    "id": 94,
+    "name": "ALTAVOCES MARS GAMING MS1 2.0 NEGRO/ROJO",
+    "brand": "MARS GAMING",
+    "category": "altavoces",
+    "price": 29.9,
+    "description": "Sistema: 2.0 estéreo",
+    "inStock": true
+  },
+  {
+    "id": 95,
+    "name": "ALTAVOCES MARS GAMING MSCUBE PREMIUM 8W BLACK",
+    "brand": "MARS GAMING",
+    "category": "altavoces",
+    "price": 27.3,
+    "description": "Potencia: 8W RMS",
+    "inStock": true
+  },
+  {
+    "id": 96,
+    "name": "ALTAVOCES MARS GAMING MSCUBEW 8W BLANCO",
+    "brand": "MARS GAMING",
+    "category": "altavoces",
+    "price": 31.6,
+    "description": "Potencia: 8W RMS",
+    "inStock": true
+  },
+  {
+    "id": 98,
+    "name": "ALTAVOCES MARS GAMING MSCUBEP PREMIUM 8W ROSA",
+    "brand": "MARS GAMING",
+    "category": "altavoces",
+    "price": 27.3,
+    "description": "Potencia: 8W RMS",
+    "inStock": true
+  },
+  {
+    "id": 97,
+    "name": "ALTAVOCES MARS GAMING MS22W 2.2 35W USB + JACK 3.5MM BLANCO",
+    "brand": "MARS GAMING",
+    "category": "altavoces",
+    "price": 42.35,
+    "description": "Potencia: 22W RMS",
+    "inStock": true
+  },
+  {
+    "id": 102,
+    "name": "ALTAVOZ PARA PC NGS SB 350/ 12W/ USB/ JACK 3.5MM",
+    "brand": "NGS",
+    "category": "altavoces",
+    "price": 36.05,
+    "description": "Potencia: 12W RMS",
+    "inStock": true
+  },
+  {
+    "id": 99,
+    "name": "ALTAVOZ BLUETOOTH NGS ROLLER FURIA 1 NEGRO",
+    "brand": "NGS",
+    "category": "altavoces",
+    "price": 46.65,
+    "description": "Conectividad: Bluetooth",
+    "inStock": true
+  },
+  {
+    "id": 100,
+    "name": "ALTAVOCES NGS COMET 2.1 USB 20W RMS",
+    "brand": "NGS",
+    "category": "altavoces",
+    "price": 48.95,
+    "description": "Sistema: 2.1 (satélites + subwoofer)",
+    "inStock": true
+  },
+  {
+    "id": 101,
+    "name": "ALTAVOZ PORTATIL BLUETOOTH NGS WILD TEMPER 200W",
+    "brand": "NGS",
+    "category": "altavoces",
+    "price": 238.15,
+    "description": "Tipo: Altavoz portátil",
+    "inStock": true
+  },
+  {
+    "id": 106,
+    "name": "ALTAVOZ HAMA BALL SHAPE MONO ROSA",
+    "brand": "HAMA",
+    "category": "altavoces",
+    "price": 35.55,
+    "description": "Altavoz Bluetooth compacto con diseño esférico · conexión inalámbrica · color Rosa",
+    "inStock": true
+  },
+  {
+    "id": 103,
+    "name": "ALTAVOZ HAMA SHINE 2.0 BLANCO",
+    "brand": "HAMA",
+    "category": "altavoces",
+    "price": 147.1,
+    "description": "Sistema: 2.0 estéreo",
+    "inStock": true
+  },
+  {
+    "id": 105,
+    "name": "ALTAVOZ HAMA SHINE 2.0 NEGRO",
+    "brand": "HAMA",
+    "category": "altavoces",
+    "price": 147.1,
+    "description": "Sistema: 2.0 estéreo",
+    "inStock": true
+  },
+  {
+    "id": 104,
+    "name": "ALTAVOZ HAMA TWIN 3.0 BLANCO",
+    "brand": "HAMA",
+    "category": "altavoces",
+    "price": 128.8,
+    "description": "Sistema de altavoces 3.0 estéreo con subwoofer · 3 canales de audio · color Blanco",
+    "inStock": true
+  },
+  {
+    "id": 109,
+    "name": "ALTAVOZ QCHARX FLOW MINI NEGRO 10W",
+    "brand": "QCHARX",
+    "category": "altavoces",
+    "price": 36.35,
+    "description": "Potencia: 10W RMS",
+    "inStock": true
+  },
+  {
+    "id": 108,
+    "name": "ALTAVOZ QCHARX FLOW NEGRO",
+    "brand": "QCHARX",
+    "category": "altavoces",
+    "price": 43,
+    "description": "Altavoz portátil Bluetooth con sonido 360° · resistente y compacto · color Negro",
+    "inStock": true
+  },
+  {
+    "id": 107,
+    "name": "ALTAVOZ QCHARX FLOWMAX NEGRO",
+    "brand": "QCHARX",
+    "category": "altavoces",
+    "price": 55.85,
+    "description": "Altavoz portátil Bluetooth premium con mayor potencia · sonido potente y envolvente · color Negro",
+    "inStock": true
+  },
+  {
+    "id": 111,
+    "name": "AURICULARES SONY WI-C100 INALAMBRICO NEGRO",
+    "brand": "SONY",
+    "category": "auriculares",
+    "price": 63.85,
+    "description": "Auriculares in-ear inalámbricos Bluetooth · hasta 25h de batería · con micrófono integrado",
+    "inStock": true
+  },
+  {
+    "id": 110,
+    "name": "AURICULARES SONY WH-CH520 BLUETOOH BLANCO",
+    "brand": "SONY",
+    "category": "auriculares",
+    "price": 107.9,
+    "description": "ANC: Cancelación activa de ruido",
+    "inStock": true
+  },
+  {
+    "id": 114,
+    "name": "AURICULARES SONY WF-C510 INALAMBRICO AZUL",
+    "brand": "SONY",
+    "category": "auriculares",
+    "price": 120.6,
+    "description": "True wireless in-ear Bluetooth 5.3 · hasta 22h con estuche · color Azul",
+    "inStock": true
+  },
+  {
+    "id": 113,
+    "name": "AURICULARES SONY WF-C710N INALAMBRICO NEGRO",
+    "brand": "SONY",
+    "category": "auriculares",
+    "price": 229.8,
+    "description": "True wireless con cancelación activa de ruido (ANC) · sonido Sony 360° · hasta 15h + estuche",
+    "inStock": true
+  },
+  {
+    "id": 112,
+    "name": "AURICULARES SONY WH-CH720N INALAMBRICO NEGRO",
+    "brand": "SONY",
+    "category": "auriculares",
+    "price": 276,
+    "description": "Over-ear inalámbrico con cancelación activa de ruido (ANC) · Bluetooth 5.2 · hasta 35h de batería",
+    "inStock": true
+  },
+  {
+    "id": 118,
+    "name": "AURICULARES EPOS SENNHEISER PC 5 CHAT JACK 3.5MM MICROFONO NEGRO",
+    "brand": "EPOS SENNHEISER",
+    "category": "auriculares",
+    "price": 41.9,
+    "description": "Conexión: Jack 3.5mm",
+    "inStock": true
+  },
+  {
+    "id": 115,
+    "name": "AURICULARES EPOS SENNHEISER PC 8 USB MICROFONO NEGRO",
+    "brand": "EPOS SENNHEISER",
+    "category": "auriculares",
+    "price": 67.5,
+    "description": "Micrófono: Integrado",
+    "inStock": true
+  },
+  {
+    "id": 116,
+    "name": "AURICULARES EPOS SENNHEISER RS 120-W TV NEGRO",
+    "brand": "EPOS SENNHEISER",
+    "category": "auriculares",
+    "price": 222.6,
+    "description": "Auriculares inalámbricos para TV por radiofrecuencia (RF) · sonido estéreo · conexión a TV sin Bluetooth",
+    "inStock": true
+  },
+  {
+    "id": 117,
+    "name": "AURICULARES EPOS SENNHEISER RS 5200 RF",
+    "brand": "EPOS SENNHEISER",
+    "category": "auriculares",
+    "price": 400.5,
+    "description": "Auriculares inalámbricos RF premium para TV · calidad de sonido Sennheiser · diseño cerrado",
+    "inStock": true
+  },
+  {
+    "id": 119,
+    "name": "AURICULARES EPOS SENNHEISER RS 2000 TV INALAMBRICO NEGRO",
+    "brand": "EPOS SENNHEISER",
+    "category": "auriculares",
+    "price": 307.9,
+    "description": "Auriculares inalámbricos para TV con sonido Sennheiser de alta fidelidad · RF 900 MHz · hasta 20h batería",
+    "inStock": true
+  },
+  {
+    "id": 123,
+    "name": "AURICULAR JABRA EVOLVE 30 II HS NEGRO",
+    "brand": "JABRA",
+    "category": "auriculares",
+    "price": 117.05,
+    "description": "Auricular profesional con cable para oficina · micrófono con cancelación de ruido · certificado UC",
+    "inStock": true
+  },
+  {
+    "id": 124,
+    "name": "AURICULARES JABRA BIZ 2300 QD DUO",
+    "brand": "JABRA",
+    "category": "auriculares",
+    "price": 254.25,
+    "description": "Auricular binaural profesional para centro de llamadas · micrófono de alta calidad · conector QD",
+    "inStock": true
+  },
+  {
+    "id": 121,
+    "name": "AURICULARES JABRA ENGAGE 45 SE INALAMBRICO NEGRO",
+    "brand": "JABRA",
+    "category": "auriculares",
+    "price": 389.1,
+    "description": "Auricular inalámbrico DECT profesional para empresa · hasta 13h de batería · micrófono con cancelación de ruido",
+    "inStock": true
+  },
+  {
+    "id": 120,
+    "name": "AURICULARES JABRA EVOLVE2 65 MS",
+    "brand": "JABRA",
+    "category": "auriculares",
+    "price": 383.75,
+    "description": "Auricular inalámbrico premium certificado Microsoft Teams · ANC avanzado · hasta 37h de batería",
+    "inStock": true
+  },
+  {
+    "id": 122,
+    "name": "AURICULARES JABRA ENGAGE 65 SE INALAMBRICO NEGRO",
+    "brand": "JABRA",
+    "category": "auriculares",
+    "price": 635.3,
+    "description": "Auricular DECT inalámbrico profesional avanzado · rango hasta 150m · micrófono con cancelación de ruido",
+    "inStock": true
+  },
+  {
+    "id": 126,
+    "name": "AURICULARES MICRO ENERGY SISTEM OFFICE 2 ANTHRACITE SUPRAURAL/ 30MM/ CABLE 150CM/ JACK 3.5MM/ ANTIPOP/ 20HZ",
+    "brand": "ENERGY SISTEM",
+    "category": "auriculares",
+    "price": 33.25,
+    "description": "Conexión: Jack 3.5mm",
+    "inStock": true
+  },
+  {
+    "id": 329,
+    "name": "AURICULARES MICRO ENERGY SISTEM OFFICE 3 BLANCO SUPRAURAL/ 40MM/ JACK 3.5MM/ ANTIPOP/ 20HZ/ 32Ohms",
+    "brand": "ENERGY SISTEM",
+    "category": "auriculares",
+    "price": 38.15,
+    "description": "Conexión: Jack 3.5mm",
+    "inStock": true
+  },
+  {
+    "id": 327,
+    "name": "AURICULARES MICRO ENERGY SISTEM WIRELESS S2 COCO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C",
+    "brand": "ENERGY SISTEM",
+    "category": "auriculares",
+    "price": 35.2,
+    "description": "Conectividad: Bluetooth 5.0",
+    "inStock": true
+  },
+  {
+    "id": 328,
+    "name": "AURICULARES MICRO ENERGY SISTEM WIRELESS S2 GRAFITO BLUETOOTH 5.0/ HASTA 20H/ MIC. INTEGRADO/ USB TIPO C",
+    "brand": "ENERGY SISTEM",
+    "category": "auriculares",
+    "price": 65.85,
+    "description": "Conectividad: Bluetooth 5.0",
+    "inStock": true
+  },
+  {
+    "id": 125,
+    "name": "AURICULARES MICRO GAMING ENERGY SISTEM ESG4 7.1 RED SUPRAURAL/ 50MM/ USB/ MULTIPLATAFORMA",
+    "brand": "ENERGY SISTEM",
+    "category": "auriculares",
+    "price": 75.6,
+    "description": "Auriculares gaming supraaurales con sonido 7.1 virtual · drivers 50mm · conexión USB · multiplataforma",
+    "inStock": true
+  },
+  {
+    "id": 330,
+    "name": "AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS ATLANTA MULTIPUNTO PURE WHITE",
+    "brand": "URBANISTA",
+    "category": "auriculares",
+    "price": 207.7,
+    "description": "Tipo: True Wireless (TWS)",
+    "inStock": true
+  },
+  {
+    "id": 132,
+    "name": "AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON VANILLA CREAM / AMARILLO VAINILLA",
+    "brand": "URBANISTA",
+    "category": "auriculares",
+    "price": 106.05,
+    "description": "Tipo: True Wireless (TWS)",
+    "inStock": true
+  },
+  {
+    "id": 134,
+    "name": "AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS LISBON MIDNIGHT BLACK",
+    "brand": "URBANISTA",
+    "category": "auriculares",
+    "price": 106.05,
+    "description": "Tipo: True Wireless (TWS)",
+    "inStock": true
+  },
+  {
+    "id": 331,
+    "name": "AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS COPENHAGEN SAGE GREEN / VERDE",
+    "brand": "URBANISTA",
+    "category": "auriculares",
+    "price": 141.25,
+    "description": "Tipo: True Wireless (TWS)",
+    "inStock": true
+  },
+  {
+    "id": 133,
+    "name": "AURICULARES URBANISTA TRUE WIRELESS INALAMBRICOS PHOENIX DESERT ROSE CARGA SOLAR",
+    "brand": "URBANISTA",
+    "category": "auriculares",
+    "price": 292.25,
+    "description": "Tipo: True Wireless (TWS)",
+    "inStock": true
+  },
+  {
+    "id": 135,
+    "name": "SAMSUNG GALAXY A37 5G 8/256GB VERDE",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 773.4,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 136,
+    "name": "SAMSUNG GALAXY A37 5G 8/256GB GRIS",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 766.3,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 137,
+    "name": "SAMSUNG GALAXY A37 5G 8/256GB BLANCO",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 773.4,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 138,
+    "name": "SAMSUNG GALAXY A37 5G 8/256GB VIOLETA",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 766.3,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 139,
+    "name": "SAMSUNG GALAXY A57 5G 8/256GB AZUL",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 953.75,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 400,
+    "name": "SAMSUNG GALAXY A16 4/128GB NEGRO",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 282.1,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 401,
+    "name": "SAMSUNG GALAXY A26 5G 6/128GB NEGRO",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 417.4,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 402,
+    "name": "SAMSUNG GALAXY S25 12/256GB AZUL",
+    "brand": "SAMSUNG",
+    "category": "smartphones",
+    "price": 1324.1,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 141,
+    "name": "APPLE IPHONE 14 5G 128GB AZUL ACONDICIONADO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 299,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 142,
+    "name": "APPLE IPHONE 14 5G 128GB PURPURA ACONDICIONADO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 299,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 143,
+    "name": "APPLE IPHONE 14 5G 128GB AMARILLO ACONDICIONADO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 299,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 144,
+    "name": "APPLE IPHONE 14 PRO 5G 256GB NEGRO ACONDICIONADO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 499,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 140,
+    "name": "APPLE IPHONE 16E 128GB NEGRO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 1149.15,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 403,
+    "name": "APPLE IPHONE 16E 128GB BLANCO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 1149.15,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 404,
+    "name": "APPLE IPHONE 15 128GB NEGRO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 1358.9,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 405,
+    "name": "APPLE IPHONE 16 128GB NEGRO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 1653.1,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 406,
+    "name": "APPLE IPHONE 17 256GB NEGRO",
+    "brand": "APPLE",
+    "category": "smartphones",
+    "price": 1844.7,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 145,
+    "name": "XIAOMI REDMI A7 PRO 4/128GB AZUL",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 229.05,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 146,
+    "name": "XIAOMI REDMI A7 PRO 4/128GB VERDE",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 229.05,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 148,
+    "name": "XIAOMI REDMI NOTE 15 8GB 256GB 6.77\" NEGRO",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 392.15,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 149,
+    "name": "XIAOMI REDMI NOTE 15 8GB 256GB 6.77\" AZUL",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 410.45,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 147,
+    "name": "XIAOMI REDMI NOTE 14 5G 8/256GB LILA",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 219,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 407,
+    "name": "XIAOMI REDMI A7 PRO 4/128GB NEGRO",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 229.05,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 408,
+    "name": "XIAOMI REDMI 15C 4/256GB AZUL",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 269.95,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 409,
+    "name": "XIAOMI REDMI NOTE 15 PRO 8/256GB NEGRO",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 480.65,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 410,
+    "name": "XIAOMI REDMI NOTE 15 PRO+ 5G 8/256GB NEGRO",
+    "brand": "XIAOMI",
+    "category": "smartphones",
+    "price": 689.75,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 154,
+    "name": "REALME C100 5G 4/256GB VERDE",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 421,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 150,
+    "name": "REALME 14T 5G 8/256GB NEGRO",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 435.5,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 151,
+    "name": "REALME 14T 5G 8/256GB PURPURA",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 435.5,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 152,
+    "name": "REALME 16 5G 8/256GB BLANCO",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 615.3,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 153,
+    "name": "REALME 16 5G 8/256GB NEGRO",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 615.3,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 411,
+    "name": "REALME C100 5G 4/256GB PURPURA",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 421,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 412,
+    "name": "REALME C71 4/256GB FOREST OWL",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 268.45,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 413,
+    "name": "REALME NOTE 70T 4/256GB NEGRO",
+    "brand": "REALME",
+    "category": "smartphones",
+    "price": 234.95,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 155,
+    "name": "TCL 60 SE NXTPAPER 5G 8/256GB GRIS",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 310.6,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 156,
+    "name": "TCL 60 SE NXTPAPER 5G 8/256GB VERDE",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 310.6,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 157,
+    "name": "TCL NXTPAPER 70 PRO 5G 8/256GB AZUL",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 549.5,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 158,
+    "name": "TCL NXTPAPER 70 PRO 5G 8/256GB ORO",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 549.5,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 159,
+    "name": "TCL 60 ULTRA NXTPAPER 5G 12/512GB NEGRO",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 972.35,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 414,
+    "name": "TCL 60S 4/128GB NEGRO",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 197.15,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 415,
+    "name": "TCL K70 4/128GB NEGRO",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 272.75,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 416,
+    "name": "TCL K70 SE 4/64GB NEGRO",
+    "brand": "TCL",
+    "category": "smartphones",
+    "price": 216.1,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 160,
+    "name": "MOTOROLA MOTO G05 4/128GB VERDE",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 208.85,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 162,
+    "name": "MOTOROLA MOTO G15 8/128GB NARANJA",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 229.05,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 163,
+    "name": "MOTOROLA MOTO G15 8/128GB VERDE",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 229.05,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 161,
+    "name": "MOTOROLA MOTO G85 5G 12/256GB GRIS",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 269,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 164,
+    "name": "MOTOROLA THINKPHONE 25 5G 8/256GB CARBON BLACK",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 862.5,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 417,
+    "name": "MOTOROLA MOTO EDGE 60 PRO 5G 12/512GB AZUL",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 882.2,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 418,
+    "name": "MOTOROLA MOTO G35 5G 8/256GB GREYSTONE",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 334.05,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 419,
+    "name": "MOTOROLA MOTO EDGE 60 FUSION 5G 8/256GB AMAZONTE",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 502.55,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 420,
+    "name": "MOTOROLA MOTO G86 5G 8/256GB AZUL OSCURO",
+    "brand": "MOTOROLA",
+    "category": "smartphones",
+    "price": 449.2,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 165,
+    "name": "RUGERIZADO HAMMER IRON V 6+6/64GB NEGRO",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 361.85,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 166,
+    "name": "RUGERIZADO HAMMER IRON V 6+6/64GB NARANJA",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 358.45,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 168,
+    "name": "RUGERIZADO HAMMER BLADE VA 5G 8/128GB NEGRO",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 432.9,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 169,
+    "name": "HAMMER CONSTRUCTION 2 5G 6/128GB PLATA",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 589.65,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 167,
+    "name": "RUGERIZADO HAMMER BLADE V 5G 8/256GB NEGRO",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 299,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 421,
+    "name": "RUGERIZADO HAMMER IRON 6 6/128GB NEGRO",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 475.35,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  },
+  {
+    "id": 422,
+    "name": "RUGERIZADO HAMMER ENERGY X2 5G 6/128GB NARANJA",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 537.05,
+    "description": "Conectividad: 5G",
+    "inStock": true
+  },
+  {
+    "id": 423,
+    "name": "RUGERIZADO HAMMER RANGER 4G 6/128GB NEGRO VERDE",
+    "brand": "HAMMER",
+    "category": "smartphones",
+    "price": 484.5,
+    "description": "Conectividad: 4G LTE",
+    "inStock": true
+  }
+]
