@@ -2,6 +2,7 @@
 const { sendEmail }                                          = require('./_send-email');
 const { welcome, orderConfirm, orderShipped, contactAutoReply } = require('./_email-templates');
 const { rateLimit } = require('./_ratelimit');
+const logger        = require('./_logger');
 const contactRL     = rateLimit('contact');
 
 module.exports = async (req, res) => {
@@ -80,7 +81,7 @@ module.exports = async (req, res) => {
       await sendEmail({ to: 'zonetechonline2024@gmail.com', subject: `[Contacto] ${safeSubject} — ${safeName}`, html: teamHtml, replyTo: email });
       return res.status(200).json({ ok: true });
     } catch (err) {
-      console.error('[emails:contact]', err.message);
+      logger.error('emails:contact', err.message, logger.ctx(req));
       return res.status(500).json({ error: err.message });
     }
   }
