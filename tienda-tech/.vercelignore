@@ -118,6 +118,9 @@ docs/
 package.json
 package-lock.json
 
-# Fase H — IA (activar cuando haya slot libre en Vercel Hobby)
-api/ai-assistant.js
+# Fase H — IA: endpoint activo, necesita ANTHROPIC_API_KEY en Vercel env vars
+# api/ai-assistant.js  ← YA ACTIVO (quitado del ignore)
 generar-catalogo-ai.js
+
+# Liberado para dar slot a ai-assistant.js (productos se gestionan vía app.js)
+api/admin-import-products.js
