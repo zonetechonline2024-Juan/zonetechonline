@@ -1,6 +1,7 @@
 'use strict';
 const { db }         = require('./_db');
 const { rateLimit }  = require('./_ratelimit');
+const logger         = require('./_logger');
 const checkoutRL     = rateLimit('checkout');
 
 module.exports = async (req, res) => {
@@ -105,13 +106,13 @@ module.exports = async (req, res) => {
       });
     } catch (cartErr) {
       // No bloquear el pago si falla el guardado del carrito
-      console.warn('[checkout] cart_sessions save failed:', cartErr.message);
+      logger.warn('checkout', 'cart_sessions save failed: ' + cartErr.message, logger.ctx(req));
     }
 
     return res.status(200).json({ url: session.url });
 
   } catch (error) {
-    console.error('[ZTOnline] Checkout error:', error.message || error);
+    logger.error('checkout', error.message || String(error), logger.ctx(req));
     return res.status(500).json({
       error: error.message || 'Error procesando el pago. Inténtalo de nuevo.'
     });
