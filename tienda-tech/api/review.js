@@ -3,9 +3,16 @@ const FILE = 'tienda-tech/data/reviews.json';
 const SUBS_FILE = 'tienda-tech/data/subscribers.json';
 const GH_API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
 const GH_SUBS_API = `https://api.github.com/repos/${REPO}/contents/${SUBS_FILE}`;
+const { rateLimit } = require('./_ratelimit');
+const reviewRL      = rateLimit('review');
+const newsletterRL  = rateLimit('newsletter');
+
+function stripHtml(str) {
+  return String(str || '').replace(/<[^>]*>/g, '').trim();
+}
 
 module.exports = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.zonetechonline.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
@@ -21,6 +28,7 @@ module.exports = async (req, res) => {
 
   // ── Newsletter subscription ──────────────────────────────────────────────
   if ((req.body || {}).action === 'newsletter') {
+    if (!newsletterRL(req, res)) return;
     try {
       const email = String(req.body.email || '').trim().toLowerCase();
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -48,6 +56,7 @@ module.exports = async (req, res) => {
     }
   }
 
+  if (!reviewRL(req, res)) return;
   try {
     const { name, product, productBrand, rating, text } = req.body || {};
 
@@ -64,11 +73,11 @@ module.exports = async (req, res) => {
 
     const review = {
       id: Date.now().toString(),
-      name: String(name).trim().slice(0, 60),
-      product: String(product || '').trim().slice(0, 80) || null,
-      productBrand: String(productBrand || '').trim().slice(0, 60) || null,
+      name: stripHtml(name).slice(0, 60),
+      product: stripHtml(product).slice(0, 80) || null,
+      productBrand: stripHtml(productBrand).slice(0, 60) || null,
       rating: ratingNum,
-      text: String(text).trim().slice(0, 600),
+      text: stripHtml(text).slice(0, 600),
       date: new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
     };
 
