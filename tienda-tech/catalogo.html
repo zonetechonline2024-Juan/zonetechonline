@@ -87,6 +87,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="preload" href="js/config.js" as="script">
+  <link rel="preload" href="js/app.js" as="script">
   <link rel="prefetch" href="index.html">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -173,6 +175,9 @@
             <a href="/smartphones" class="mega-see">Ver catálogo →</a>
           </div>
         </div></div>
+      </div>
+      <div class="nav-item">
+        <a href="/blog" class="nav-link">Blog</a>
       </div>
 
     </div>
@@ -408,7 +413,7 @@
   </button>
 </div>
 
-<script src="js/config.js"></script>
+<script src="js/config.js" defer></script>
 <script src="js/app.js" defer></script>
 <script>
 (function() {
