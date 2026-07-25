@@ -9,6 +9,7 @@
 
 const { buildSystemPrompt, callAnthropic } = require('./_ai');
 const { rateLimit }                         = require('./_ratelimit');
+const logger                                = require('./_logger');
 const aiRL                                  = rateLimit('ai');
 
 let _catalog = null;
@@ -49,7 +50,7 @@ module.exports = async (req, res) => {
     return res.status(200).json({ reply: result.text });
 
   } catch (err) {
-    console.error('[ai-assistant]', err.message);
+    logger.error('ai-assistant', err.message, logger.ctx(req));
     if (err.message.includes('ANTHROPIC_API_KEY')) {
       return res.status(503).json({ error: 'Asistente IA no configurado aún.' });
     }
