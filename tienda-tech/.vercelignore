@@ -117,3 +117,7 @@ node_modules/
 docs/
 package.json
 package-lock.json
+
+# Fase H — IA (activar cuando haya slot libre en Vercel Hobby)
+api/ai-assistant.js
+generar-catalogo-ai.js
