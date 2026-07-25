@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0FVJFMXJWB');
+  </script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title id="page-title">Marca | ZoneTechOnline — Tecnología Premium</title>
+  <meta name="description" id="page-desc" content="Compra tecnología premium con garantía oficial 2 años. Envío gratuito 5-8 días hábiles a España y Europa.">
+  <link rel="canonical" id="page-canonical" href="https://www.zonetechonline.com/catalogo.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" id="og-url" content="https://www.zonetechonline.com/">
+  <meta property="og:title" id="og-title" content="ZoneTechOnline — Tecnología Premium">
+  <meta property="og:description" id="og-desc" content="Tecnología premium con garantía oficial 2 años.">
+  <meta property="og:image" content="https://www.zonetechonline.com/img/og-cover.svg">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ZoneTechOnline">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@zonetechonline">
+  <meta name="twitter:image" content="https://www.zonetechonline.com/img/og-cover.svg">
+  <script type="application/ld+json" id="page-schema">{"@context":"https://schema.org"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="catalog-page">
+
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-item"><a href="/relojes" class="nav-link">Relojes</a></div>
+      <div class="nav-item"><a href="/auriculares" class="nav-link">Auriculares</a></div>
+      <div class="nav-item"><a href="/altavoces" class="nav-link">Altavoces</a></div>
+      <div class="nav-item"><a href="/gaming" class="nav-link">Teclados Gaming</a></div>
+      <div class="nav-item"><a href="/smartphones" class="nav-link">Smartphones</a></div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" id="search-btn" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="btn-login" id="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Acceder</span>
+      </button>
+      <button class="nav-icon-btn cart-btn" id="cart-toggle" aria-label="Carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="nav-icon-btn hamburger" id="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+  <div class="mnd-header">
+    <span class="mnd-brand">ZONE<span>TECH</span>ONLINE</span>
+    <button class="mnd-close" id="mobile-nav-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav class="mnd-nav">
+    <a href="catalogo.html" class="mnd-link mnd-link-all"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Todos los productos</a>
+    <div class="mnd-divider"></div>
+    <a href="/relojes" class="mnd-link">⌚ Relojes Inteligentes</a>
+    <a href="/auriculares" class="mnd-link">🎧 Auriculares</a>
+    <a href="/altavoces" class="mnd-link">🔊 Altavoces</a>
+    <a href="/gaming" class="mnd-link">⌨️ Teclados Gaming</a>
+    <a href="/smartphones" class="mnd-link">📱 Smartphones</a>
+  </nav>
+</aside>
+
+<!-- SIDE CART -->
+<aside class="side-cart" id="side-cart">
+  <div class="side-cart-header">
+    <h3>Tu Carrito</h3>
+    <button class="close-btn" id="close-cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="side-cart-body" id="cart-items">
+    <div class="cart-empty" id="cart-empty">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <p>Tu carrito está vacío</p><span>Agrega productos para comenzar</span>
+    </div>
+  </div>
+  <div class="side-cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-total">€0</span></div>
+    <div class="cart-shipping"><span>Envío</span><span class="free-shipping">GRATIS</span></div>
+    <div class="cart-divider"></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-grand-total">€0</span></div>
+    <button class="btn-primary btn-block" id="checkout-btn">Proceder al Pago</button>
+    <button class="btn-ghost btn-block" id="continue-shopping">Seguir Comprando</button>
+  </div>
+</aside>
+
+<!-- SEARCH -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-wrap">
+    <div class="search-bar-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="search-input" placeholder="Busca producto, marca o categoría..." autocomplete="off">
+      <button class="search-close" id="search-close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <p class="search-hint">Pulsa <kbd>Esc</kbd> para cerrar</p>
+    <div class="search-cats" id="search-cats"></div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<!-- BRAND HERO -->
+<div class="cat-hero" id="cat-hero">
+  <div class="section-container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span class="bc-sep">›</span>
+      <a href="catalogo.html">Catálogo</a>
+      <span class="bc-sep">›</span>
+      <span id="bc-brand-name">Marca</span>
+    </nav>
+    <h1 class="cat-hero-title" id="brand-h1">Productos <span class="gradient-text" id="brand-h1-grad">Premium</span></h1>
+    <p class="cat-hero-sub" id="brand-sub">Garantía oficial 2 años · Envío 5 a 8 días hábiles</p>
+  </div>
+</div>
+
+<!-- BRAND SEO INTRO -->
+<div id="brand-intro" style="background:var(--bg-2,#111);padding:32px 0 8px;">
+  <div class="section-container">
+    <h2 id="brand-h2" style="font-size:clamp(18px,2.2vw,24px);font-weight:700;color:var(--text,#fff);margin:0 0 12px;"></h2>
+    <p id="brand-intro-text" style="font-size:15px;color:var(--text-2,#aaa);line-height:1.7;max-width:820px;margin:0;"></p>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<main>
+  <div class="catalog-wrap">
+    <aside class="cat-sidebar" id="cat-sidebar">
+      <div class="cat-sb-sect">
+        <p class="cat-sb-title">Categorías</p>
+        <a href="catalogo.html" class="cat-sb-link">Todos los productos</a>
+        <a href="/relojes" class="cat-sb-link">⌚ Relojes</a>
+        <a href="/auriculares" class="cat-sb-link">🎧 Auriculares</a>
+        <a href="/altavoces" class="cat-sb-link">🔊 Altavoces</a>
+        <a href="/gaming" class="cat-sb-link">⌨️ Teclados Gaming</a>
+        <a href="/smartphones" class="cat-sb-link">📱 Smartphones</a>
+      </div>
+    </aside>
+    <div class="cat-content">
+      <div class="cat-topbar">
+        <p class="cat-count"><strong id="result-count">0</strong> productos encontrados</p>
+        <a href="catalogo.html" style="font-size:13px;color:var(--text-3);display:flex;align-items:center;gap:5px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          Ver catálogo completo
+        </a>
+      </div>
+      <div class="cat-grid products-grid" id="catalog-grid"></div>
+    </div>
+  </div>
+</main>
+
+<!-- QUICK VIEW -->
+<div class="modal" id="quick-view-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel modal-panel--lg">
+    <button class="modal-close" id="close-quick-view"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="quick-view-content" id="quick-view-content"></div>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<!-- WHATSAPP -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-popup" id="waPopup">
+    <div class="wa-popup-header">
+      <div class="wa-avatar-wrap"><div class="wa-avatar-img">ZT</div><span class="wa-online-dot"></span></div>
+      <div class="wa-popup-meta"><span class="wa-popup-name">ZoneTechOnline</span><span class="wa-popup-sub">● En línea · responde en minutos</span></div>
+      <button class="wa-popup-x" onclick="waClose()"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="wa-popup-body">
+      <div class="wa-msg-wrap"><div class="wa-msg-avatar">ZT</div>
+        <div class="wa-bubble"><p>👋 ¡Hola! Bienvenido a <strong>ZoneTechOnline</strong>.</p><p>¿Tienes dudas sobre nuestros productos? Escríbenos.</p><span class="wa-bubble-time">Ahora · Soporte en español</span></div>
+      </div>
+    </div>
+    <a href="https://wa.me/34613640673?text=Hola%2C%20estoy%20interesado%20en%20vuestros%20productos%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="wa-cta" onclick="waClose()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Iniciar conversación en WhatsApp
+    </a>
+  </div>
+  <button class="wa-fab" id="waFab" onclick="waToggle()">
+    <span class="wa-badge" id="waBadge">1</span>
+    <svg class="wa-fab-icon wa-icon-chat" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <svg class="wa-fab-icon wa-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js" defer></script>
+<script>
+(function() {
+
+  // ── Datos de marca por URL ──────────────────────────────────────────────────
+  var BRANDS = {
+    '/garmin':        { brand:'Garmin',             slug:'garmin',        h1a:'Relojes Garmin',        h1b:'GPS y Salud',      h2:'La marca líder mundial en tecnología GPS y fitness',                                      meta:'Comprar relojes Garmin en España con garantía oficial 2 años. GPS multibanda, ECG, SpO₂, Body Battery. Venu 3, Forerunner. Envío gratis.',            intro:'Garmin es el referente mundial en relojes inteligentes con GPS de precisión. El Garmin Venu 3 con GPS multibanda, ECG y Body Battery es el smartwatch de salud más completo del mercado. Para runners, el Forerunner monitoriza cada entrenamiento con métricas avanzadas de rendimiento. Todos los relojes Garmin incluyen garantía oficial de 2 años y envío gratuito a España en 5 a 8 días hábiles.' },
+    '/apple':         { brand:'Apple',              slug:'apple',         h1a:'Apple Watch',           h1b:'Oficial España',   h2:'El smartwatch más avanzado para usuarios de iPhone',                                      meta:'Comprar Apple Watch en España con garantía oficial. Apple Watch SE 3 con GPS, ECG y detección de caídas. Envío gratuito 5-8 días.',                       intro:'El Apple Watch es el smartwatch más vendido del mundo. Con detección de caídas, ECG, monitorización de sueño y el ecosistema WatchOS, es el complemento perfecto para usuarios de iPhone. El Apple Watch SE 3 ofrece GPS, sensor de frecuencia cardíaca continua y hasta 18 horas de batería. Garantía oficial Apple de 2 años con envío gratuito a España.' },
+    '/samsung':       { brand:'Samsung',            slug:'samsung',       h1a:'Samsung Galaxy',        h1b:'España Oficial',   h2:'Galaxy Watch 7 con IA integrada y smartphones 5G',                                        meta:'Comprar Samsung Galaxy Watch 7 y smartphones en España con garantía oficial. IA integrada, ECG, Super AMOLED, 5G. Envío gratuito.',                        intro:'Samsung lidera el mercado de wearables Android y smartphones 5G. El Galaxy Watch 7 integra Galaxy AI para análisis de salud en tiempo real, BioActive Sensor con ECG y hasta 40 horas de batería. Los smartphones Galaxy combinan pantallas Super AMOLED, cámaras de 50MP y conectividad 5G. Toda la gama con garantía oficial de 2 años y envío gratuito.' },
+    '/sony':          { brand:'Sony',               slug:'sony',          h1a:'Auriculares Sony',      h1b:'con ANC España',   h2:'Líder mundial en cancelación de ruido activa y audio Hi-Res',                             meta:'Auriculares Sony con ANC en España. WH-1000XM5, WH-CH720N, LDAC Hi-Res. Garantía oficial 2 años. Envío gratuito.',                                      intro:'Sony es el referente absoluto en cancelación de ruido activa (ANC). El Sony WH-1000XM5 ofrece el mejor ANC del mercado junto con audio Hi-Res LDAC y 30 horas de batería. El WH-CH720N es la opción ultraligera con ANC a precio competitivo. Para deporte, el WF-SP800N es resistente al agua y al sudor. Garantía oficial Sony 2 años, envío gratuito a España.' },
+    '/jbl':           { brand:'JBL',                slug:'jbl',           h1a:'Altavoces JBL',         h1b:'España Oficial',   h2:'Potencia y durabilidad para casa, deporte y aventura',                                    meta:'Altavoces y auriculares JBL en España con garantía oficial. Flip 6, Charge 5, Tune 770NC. IP67, ANC. Envío gratuito.',                                   intro:'JBL es sinónimo de potencia y durabilidad en audio portátil. El JBL Flip 6 con IPX7 es el altavoz Bluetooth perfecto para exteriores, el Charge 5 carga tus dispositivos mientras suena y el Xtreme 3 llena cualquier espacio. En auriculares, el Tune 770NC y el Live Pro 2 ofrecen ANC y hasta 40 horas de reproducción. Garantía oficial JBL 2 años.' },
+    '/jabra':         { brand:'JABRA',              slug:'jabra',         h1a:'Auriculares Jabra',     h1b:'Profesionales',    h2:'La referencia en audio para home office y profesionales',                                 meta:'Auriculares Jabra profesionales en España. Evolve2 85 con ANC, certificado Teams y Google Meet. Garantía oficial 2 años. Envío gratis.',                   intro:'Jabra es la marca de referencia para profesionales que exigen la mejor calidad de audio en videollamadas. El Jabra Evolve2 85 con ANC avanzado está certificado para Microsoft Teams y Google Meet, convirtiendo cualquier lugar en una sala de reuniones. Para entretenimiento, el Jabra Elite 85t es un auricular in-ear premium. Garantía oficial 2 años.' },
+    '/logitech':      { brand:'LOGITECH',           slug:'logitech',      h1a:'Periféricos Logitech',  h1b:'Gaming España',    h2:'Precisión y rendimiento para gaming y productividad',                                     meta:'Teclados gaming Logitech G en España. G915 TKL, G Pro X. Mecánicos inalámbricos, RGB LIGHTSYNC. Garantía oficial 2 años. Envío gratis.',                  intro:'Logitech G es la marca preferida por gamers profesionales y streamers. El G915 TKL con switches mecánicos inalámbricos de baja latencia y el G Pro X con switches intercambiables son la élite del gaming competitivo. Para productividad, los teclados MX Keys ofrecen la mejor experiencia de escritura multi-dispositivo. Garantía oficial Logitech 2 años.' },
+    '/xiaomi':        { brand:'Xiaomi',             slug:'xiaomi',        h1a:'Smartwatches Xiaomi',   h1b:'Mejor Precio',     h2:'Tecnología wearable y smartphones al precio más competitivo',                            meta:'Comprar Xiaomi en España con garantía oficial. Smart Band 9, Redmi Watch 5, smartphones. AMOLED, GPS. Mejor precio garantizado. Envío gratis.',            intro:'Xiaomi ofrece la mejor relación calidad-precio en tecnología wearable. El Xiaomi Smart Band 9 con pantalla AMOLED, monitorización SpO₂ y hasta 14 días de batería es imbatible en su precio. El Redmi Watch 5 añade GPS integrado y pantalla de 2.05". En smartphones, el Xiaomi 14T Pro compite con la gama más alta. Garantía oficial Xiaomi 2 años.' },
+    '/asus':          { brand:'ASUS',               slug:'asus',          h1a:'Teclados ASUS ROG',     h1b:'Gaming España',    h2:'El equipamiento oficial de los campeones de esports',                                     meta:'Teclados gaming ASUS ROG en España. Strix Scope II, TUF Gaming. Switches mecánicos Cherry MX, RGB por tecla. Garantía oficial 2 años.',                   intro:'ASUS ROG (Republic of Gamers) es la marca de referencia en gaming competitivo a nivel mundial. El ROG Strix Scope II con switches mecánicos Cherry MX y RGB por tecla es el teclado preferido por streamers y jugadores profesionales de esports. El TUF Gaming ofrece la misma calidad con durabilidad de grado militar a precio más accesible. Garantía oficial 2 años.' },
+    '/corsair':       { brand:'CORSAIR',            slug:'corsair',       h1a:'Teclados Corsair',      h1b:'Gaming España',    h2:'El ecosistema gaming más completo con RGB iCUE',                                          meta:'Teclados gaming Corsair en España. Mecánicos Cherry MX, RGB iCUE. K70 RGB Pro, STRAFE MK.2. Garantía oficial 2 años. Envío gratuito.',                    intro:'Corsair es sinónimo de rendimiento extremo en gaming. Sus teclados mecánicos con switches Cherry MX y software iCUE para personalización RGB total son la elección de millones de gamers. El K70 RGB Pro es el favorito de los jugadores competitivos gracias a su precisión y durabilidad. Software iCUE sincroniza todo el ecosistema de iluminación. Garantía 2 años.' },
+    '/sennheiser':    { brand:'EPOS SENNHEISER',    slug:'sennheiser',    h1a:'Auriculares Sennheiser', h1b:'Alta Fidelidad',  h2:'Ingeniería de audio alemana con 80 años de excelencia',                                   meta:'Auriculares Sennheiser EPOS en España. Hi-Fi alemán, ANC avanzado, gaming y profesional. Garantía oficial 2 años.',                                        intro:'Sennheiser es la marca alemana de referencia en audio de alta fidelidad desde 1945. La línea EPOS combina la herencia audiófila de Sennheiser con tecnología moderna para gaming y trabajo profesional. Cancelación de ruido adaptativa, micrófono beamforming y calidad de construcción premium. Para los que no admiten compromisos en la calidad del sonido. Garantía 2 años.' },
+    '/motorola':      { brand:'MOTOROLA',           slug:'motorola',      h1a:'Smartphones Motorola',  h1b:'5G España',        h2:'Android puro y batería excepcional al mejor precio',                                      meta:'Smartphones Motorola 5G en España. Android puro sin capas, larga batería, precio competitivo. Garantía oficial 2 años. Envío gratuito.',                   intro:'Motorola ofrece smartphones Android puro con actualizaciones directas de Google, sin capas de personalización ni bloatware. Sus modelos Moto G y Edge destacan por su autonomía excepcional, conectividad 5G y diseño elegante a precio accesible. La opción preferida por quienes valoran la experiencia Android original. Garantía oficial Motorola 2 años.' },
+    '/realme':        { brand:'REALME',             slug:'realme',        h1a:'Smartphones Realme',    h1b:'5G Económico',     h2:'La marca de más rápido crecimiento con pantallas AMOLED',                                 meta:'Smartphones Realme 5G en España. Pantalla AMOLED, carga rápida 65W, mejor precio. Garantía oficial 2 años.',                                               intro:'Realme es la marca de smartphones de más rápido crecimiento en España y Europa. Sus terminales combinan pantallas AMOLED de alta tasa de refresco, chips de última generación Snapdragon y sistemas de carga ultra-rápida de 65W a precios muy competitivos. Conectividad 5G disponible en toda la gama media-alta. Garantía oficial Realme 2 años.' },
+    '/urbanista':     { brand:'URBANISTA',          slug:'urbanista',     h1a:'Auriculares Urbanista', h1b:'Carga Solar',      h2:'Los únicos auriculares del mundo con carga solar integrada',                              meta:'Auriculares Urbanista en España. Phoenix con carga solar activa, ANC, 80h batería. Diseño escandinavo. Garantía oficial 2 años.',                         intro:'Urbanista es la innovadora marca sueca que fusiona diseño escandinavo con tecnología vanguardista. Sus auriculares Phoenix son únicos en el mundo por incorporar carga solar mediante células fotovoltaicas, que complementan los 50 ciclos de batería hasta alcanzar 80 horas de reproducción. Con ANC activa y micrófono para llamadas. Garantía oficial 2 años.' },
+    '/alienware':     { brand:'ALIENWARE',          slug:'alienware',     h1a:'Periféricos Alienware', h1b:'Gaming Élite',     h2:'El gaming de élite de la familia Dell para competición',                                  meta:'Periféricos gaming Alienware en España. Dell gaming premium. Teclados, ratones de alta precisión. Garantía oficial 2 años.',                               intro:'Alienware, la marca premium de Dell para gaming de élite, ofrece teclados, ratones y periféricos diseñados para el máximo rendimiento competitivo. Construcción en aluminio anodizado, switches mecánicos de alta precisión y software Alienware Command Center para personalización total. Para gamers profesionales que exigen lo mejor. Garantía oficial 2 años.' },
+    '/cherry':        { brand:'CHERRY',             slug:'cherry',        h1a:'Teclados CHERRY',       h1b:'Mecánicos Origen', h2:'Los inventores del switch mecánico — Ingeniería alemana desde 1953',                     meta:'Teclados mecánicos CHERRY en España. Switches MX originales, 100M pulsaciones garantizadas. Ingeniería alemana. Garantía oficial 2 años.',                intro:'CHERRY es la empresa alemana que inventó los switches mecánicos MX en 1983, los mismos que equipan los mejores teclados del mundo. Sus teclados propios ofrecen la experiencia más pura de escritura mecánica con una garantía de 100 millones de pulsaciones por switch. La elección de los puristas del teclado y de los profesionales de la mecanografía. Garantía 2 años.' },
+    '/energy-sistem': { brand:'ENERGY SISTEM',     slug:'energy-sistem', h1a:'Audio Energy Sistem',   h1b:'Marca Española',   h2:'Electrónica de audio española con la mejor relación calidad-precio',                      meta:'Altavoces y auriculares Energy Sistem en España. Marca española valenciana. Bluetooth, TWS. Garantía oficial 2 años.',                                      intro:'Energy Sistem es una orgullosa marca española de electrónica de consumo fundada en Valencia. Ofrece altavoces Bluetooth, auriculares TWS y dispositivos de audio a precios muy accesibles sin sacrificar la calidad. Sus productos disfrutan de garantía oficial en España de 2 años con servicio técnico nacional, siendo la opción ideal para todos los presupuestos.' },
+    '/fonestar':      { brand:'FONESTAR',           slug:'fonestar',      h1a:'Audio Fonestar',        h1b:'España Oficial',   h2:'Soluciones de audio profesional y doméstico made in Spain',                               meta:'Altavoces y audio Fonestar en España. Marca española profesional y doméstica. Garantía oficial 2 años.',                                                   intro:'Fonestar es una marca española especializada en soluciones de audio profesional y doméstico. Con décadas de experiencia en el mercado hispano, ofrecen altavoces, amplificadores y sistemas de sonido para instalaciones y uso doméstico con la fiabilidad que caracteriza a sus productos. Servicio técnico nacional y garantía oficial de 2 años.' },
+    '/forever':       { brand:'Forever',            slug:'forever',       h1a:'Tecnología Forever',    h1b:'Precio Accesible', h2:'Accesorios y gadgets tecnológicos al mejor precio',                                       meta:'Accesorios y gadgets tecnológicos Forever en España. Smartwatches, auriculares TWS. Precio accesible. Garantía oficial 2 años.',                           intro:'Forever ofrece una amplia gama de accesorios tecnológicos y gadgets al precio más accesible del mercado. Smartwatches con funciones esenciales de seguimiento de actividad, auriculares TWS inalámbricos y accesorios para smartphone. La opción perfecta para quienes buscan funcionalidad sin comprometer el presupuesto. Garantía oficial de 2 años.' },
+    '/genesis':       { brand:'GENESIS',            slug:'genesis',       h1a:'Gaming Genesis',        h1b:'Periféricos',      h2:'Gaming accesible con rendimiento de competición',                                         meta:'Periféricos gaming Genesis en España. Teclados mecánicos, ratones, alfombrillas. Buena relación calidad-precio. Garantía 2 años.',                         intro:'Genesis ofrece periféricos gaming de calidad a precios accesibles, perfectos para gamers que buscan el máximo rendimiento sin gastar en exceso. Teclados mecánicos con retroiluminación RGB, ratones con sensores de alta precisión y alfombrillas de gran tamaño. La puerta de entrada perfecta al mundo del gaming competitivo. Garantía oficial 2 años.' },
+    '/hama':          { brand:'HAMA',               slug:'hama',          h1a:'Accesorios Hama',       h1b:'Tecnología',       h2:'Accesorios tecnológicos de calidad alemana para todos los dispositivos',                  meta:'Accesorios tecnológicos Hama en España. Auriculares, altavoces, cables. Calidad alemana. Garantía oficial 2 años.',                                        intro:'Hama es una empresa alemana especializada en accesorios tecnológicos de calidad para todo tipo de dispositivos electrónicos. Auriculares, altavoces Bluetooth, cables y periféricos diseñados con la precisión y fiabilidad que caracterizan a la ingeniería alemana. Con más de 9.000 referencias, tienen el accesorio que necesitas. Garantía oficial de 2 años.' },
+    '/hammer':        { brand:'HAMMER',             slug:'hammer',        h1a:'Tecnología HAMMER',     h1b:'Ultra Resistente', h2:'Smartphones y auriculares certificados para entornos extremos',                           meta:'Smartphones y auriculares HAMMER resistentes en España. IP68, MIL-STD-810G. Para trabajo duro. Garantía oficial 2 años.',                                  intro:'HAMMER se especializa en tecnología diseñada para resistir las condiciones más extremas. Sus smartphones y auriculares cuentan con certificaciones IP68 de resistencia al agua y polvo, y la norma militar MIL-STD-810G de resistencia a golpes y vibraciones. Ideales para trabajadores de campo, construcción, aventureros y deportes extremos. Garantía 2 años.' },
+    '/krom':          { brand:'KROM',               slug:'krom',          h1a:'Gaming KROM',           h1b:'Periféricos RGB',  h2:'Periféricos gaming con diseño agresivo y RGB total',                                      meta:'Periféricos gaming KROM en España. Teclados mecánicos, ratones, auriculares RGB. Marca gaming hispana. Garantía oficial 2 años.',                          intro:'KROM es una marca especializada en periféricos gaming con un diseño agresivo y personalización RGB total. Teclados mecánicos con switches de alta durabilidad, ratones con sensores ópticos de precisión y auriculares con sonido envolvente 7.1. Una propuesta completa para armar tu setup gaming con estilo. Garantía oficial KROM de 2 años.' },
+    '/leotec':        { brand:'Leotec',             slug:'leotec',        h1a:'Smartwatches Leotec',   h1b:'Salud y Deporte',  h2:'Wearables asequibles para el seguimiento de salud diaria',                               meta:'Smartwatches Leotec en España. Seguimiento salud, deporte, precio accesible. Garantía oficial 2 años.',                                                     intro:'Leotec ofrece smartwatches y pulseras de actividad diseñadas para hacer el seguimiento de la salud accesible para todos. Monitorización de frecuencia cardíaca, pasos, calorías y sueño en dispositivos ligeros y elegantes a precios muy competitivos. La opción perfecta para iniciarse en el mundo de los wearables sin grandes inversiones. Garantía oficial 2 años.' },
+    '/mars-gaming':   { brand:'MARS GAMING',       slug:'mars-gaming',   h1a:'MARS GAMING',           h1b:'Setup Completo',   h2:'La marca española gaming más completa del mercado hispano',                               meta:'Periféricos gaming MARS GAMING en España. Teclados mecánicos, ratones, alfombrillas, sillas. Marca española. Garantía oficial 2 años.',                    intro:'MARS GAMING es la marca española de referencia en equipamiento gaming accesible. Fundada para el público hispano, ofrece teclados mecánicos con retroiluminación RGB, ratones gaming de alta precisión, alfombrillas XXL y auriculares con sonido envolvente. Todo lo necesario para montar tu setup gaming completo a precio asequible. Garantía oficial 2 años.' },
+    '/myphone':       { brand:'MyPhone',            slug:'myphone',       h1a:'Smartphones MyPhone',   h1b:'Android España',   h2:'Smartphones Android económicos con garantía oficial',                                     meta:'Smartphones MyPhone en España. Android, precio económico. Garantía oficial 2 años.',                                                                        intro:'MyPhone ofrece smartphones Android a precios muy accesibles, perfectos para quienes buscan un móvil funcional sin grandes prestaciones pero con la fiabilidad de un sistema Android estándar. Pantallas amplias, buena duración de batería y conectividad completa a un precio difícil de superar. Garantía oficial de 2 años con servicio técnico en España.' },
+    '/ngs':           { brand:'NGS',                slug:'ngs',           h1a:'Audio y Periféricos NGS', h1b:'España',         h2:'Auriculares, altavoces y accesorios tecnológicos accesibles',                             meta:'Auriculares y altavoces NGS en España. TWS, Bluetooth, gaming. Precio accesible. Garantía oficial 2 años.',                                                intro:'NGS es una marca española de electrónica de consumo especializada en periféricos y audio accesible. Desde auriculares TWS completamente inalámbricos hasta altavoces Bluetooth portátiles, teclados y ratones. Una gama completa de productos tecnológicos para el día a día a precios muy competitivos. Servicio técnico nacional y garantía oficial de 2 años.' },
+    '/phoenix':       { brand:'PHOENIX TECHNOLOGIES', slug:'phoenix',    h1a:'Phoenix Technologies',  h1b:'Gaming España',    h2:'Periféricos gaming y accesorios tecnológicos nacionales',                                 meta:'Periféricos Phoenix Technologies en España. Gaming, teclados, ratones. Marca nacional. Garantía oficial 2 años.',                                           intro:'Phoenix Technologies es una marca española con larga trayectoria en el mercado de periféricos y componentes tecnológicos. Su línea gaming ofrece teclados, ratones y auriculares diseñados para gamers con presupuesto ajustado que no quieren renunciar a funcionalidades esenciales como retroiluminación RGB y conectividad fiable. Garantía oficial de 2 años.' },
+    '/qcharx':        { brand:'QCHARX',             slug:'qcharx',        h1a:'Audio QCHARX',          h1b:'TWS España',       h2:'Auriculares TWS y accesorios de audio a precio competitivo',                              meta:'Auriculares TWS QCHARX en España. Inalámbricos, precio competitivo. Garantía oficial 2 años.',                                                             intro:'QCHARX ofrece auriculares completamente inalámbricos (TWS) y accesorios de audio a precios muy accesibles. Sus modelos combinan diseño compacto, buena calidad de sonido para su precio y autonomía suficiente para el uso diario. La opción ideal para usuarios que buscan su primera experiencia con auriculares TWS sin grandes inversiones. Garantía 2 años.' },
+    '/spc':           { brand:'SPC',                slug:'spc',           h1a:'Periféricos SPC',       h1b:'Gaming España',    h2:'Periféricos gaming españoles con la mejor relación calidad-precio',                       meta:'Periféricos gaming SPC en España. Teclados, ratones, auriculares. Marca española. Garantía oficial 2 años.',                                               intro:'SPC (Su Precio Calidad) es una marca española especializada en periféricos gaming con una inmejorable relación calidad-precio. Teclados con retroiluminación RGB, ratones con DPI ajustable y auriculares con micrófono para gaming. Una opción muy popular entre estudiantes y gamers que buscan equiparse sin gastar en exceso. Garantía oficial de 2 años.' },
+    '/tcl':           { brand:'TCL',                slug:'tcl',           h1a:'Smartphones TCL',       h1b:'5G España',        h2:'Pantallas NXTVISION premium en smartphones asequibles',                                   meta:'Smartphones TCL en España. Pantalla NXTVISION, 5G, cámara IA. Precio competitivo. Garantía oficial 2 años.',                                               intro:'TCL es uno de los mayores fabricantes de pantallas del mundo, y esa experiencia se traslada directamente a sus smartphones con tecnología NXTVISION para una reproducción de color excepcional. Sus terminales ofrecen pantallas de alta calidad, conectividad 5G y cámaras con inteligencia artificial a precios muy competitivos. Garantía oficial TCL 2 años.' }
+  };
+
+  var path    = window.location.pathname.replace(/\/$/, '').toLowerCase();
+  var data    = BRANDS[path];
+
+  if (!data) {
+    // Marca no encontrada — redirigir al catálogo
+    window.location.replace('/catalogo.html');
+    return;
+  }
+
+  // ── SEO dinámico ───────────────────────────────────────────────────────────
+  var fullUrl = 'https://www.zonetechonline.com' + path;
+  var title   = data.brand + ' en España — Tienda Oficial | ZoneTechOnline';
+
+  document.getElementById('page-title').textContent     = title;
+  document.getElementById('page-desc').content          = data.meta;
+  document.getElementById('page-canonical').href        = fullUrl;
+  document.getElementById('og-url').content             = fullUrl;
+  document.getElementById('og-title').content           = title;
+  document.getElementById('og-desc').content            = data.meta;
+
+  // Schema.org BreadcrumbList + CollectionPage
+  document.getElementById('page-schema').textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id':   fullUrl + '#page',
+        'url':   fullUrl,
+        'name':  title,
+        'description': data.meta,
+        'isPartOf': { '@id': 'https://www.zonetechonline.com/#website' },
+        'inLanguage': 'es-ES',
+        'breadcrumb': {
+          '@type': 'BreadcrumbList',
+          'itemListElement': [
+            { '@type':'ListItem', 'position':1, 'name':'Inicio',   'item':'https://www.zonetechonline.com/' },
+            { '@type':'ListItem', 'position':2, 'name':'Catálogo', 'item':'https://www.zonetechonline.com/catalogo.html' },
+            { '@type':'ListItem', 'position':3, 'name':data.brand, 'item':fullUrl }
+          ]
+        }
+      }
+    ]
+  });
+
+  // ── Contenido de la página ─────────────────────────────────────────────────
+  document.getElementById('bc-brand-name').textContent = data.brand;
+  document.getElementById('brand-h1').innerHTML        = data.h1a + ' <span class="gradient-text">' + data.h1b + '</span>';
+  document.getElementById('brand-h2').textContent      = data.h2;
+  document.getElementById('brand-intro-text').textContent = data.intro;
+
+  // ── Renderizar productos ───────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    var count = renderCatalogGrid('catalog-grid', 'all', data.brand);
+    document.getElementById('result-count').textContent = count;
+
+    // Eventos carrito
+    var cartToggle  = document.getElementById('cart-toggle');
+    var closeCartEl = document.getElementById('close-cart');
+    var closeQV     = document.getElementById('close-quick-view');
+    var ov          = document.getElementById('overlay');
+    var contBtn     = document.getElementById('continue-shopping');
+    var checkoutBtn = document.getElementById('checkout-btn');
+
+    if (cartToggle)  cartToggle.addEventListener('click', openCart);
+    if (closeCartEl) closeCartEl.addEventListener('click', closeCart);
+    if (closeQV)     closeQV.addEventListener('click', closeQuickView);
+    if (ov)          ov.addEventListener('click', function() { closeCart(); closeQuickView(); });
+    if (contBtn)     contBtn.addEventListener('click', closeCart);
+    if (checkoutBtn) checkoutBtn.addEventListener('click', function() {
+      if (!cart || cart.length === 0) return;
+      closeCart();
+      window.location.href = 'checkout.html';
+    });
+
+    renderCartItems();
+    updateCartBadge();
+
+    // Override navegación del buscador
+    window.searchByCategory = function(cat) {
+      document.getElementById('search-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+      window.location.href = cat === 'all' ? 'catalogo.html' : '/' + { watches:'relojes', headphones:'auriculares', speakers:'altavoces', peripherals:'gaming', smartphones:'smartphones' }[cat];
+    };
+    window.goToProduct = function(id) {
+      document.getElementById('search-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+      var prod = PRODUCTS.find(function(p) { return p.id === parseInt(id); });
+      if (prod) window.location.href = 'catalogo.html?brand=' + encodeURIComponent(prod.brand);
+    };
+  });
+
+  // ── WhatsApp ───────────────────────────────────────────────────────────────
+  var waOpen = false;
+  window.waToggle = function() {
+    waOpen = !waOpen;
+    document.getElementById('waPopup').classList.toggle('wa-open', waOpen);
+    document.getElementById('waFab').classList.toggle('wa-open', waOpen);
+    document.getElementById('waBadge').classList.toggle('wa-hidden', waOpen);
+  };
+  window.waClose = function() {
+    waOpen = false;
+    document.getElementById('waPopup').classList.remove('wa-open');
+    document.getElementById('waFab').classList.remove('wa-open');
+    document.getElementById('waBadge').classList.remove('wa-hidden');
+  };
+
+})();
+</script>
+</body>
+</html>
+
