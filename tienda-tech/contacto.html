@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0FVJFMXJWB');
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -161,7 +169,7 @@
 
   <h2>Preguntas frecuentes</h2>
   <p><strong>¿Cuánto tarda en llegar mi pedido?</strong><br>Los envíos a España peninsular y Baleares se entregan en 5–8 días hábiles. Consulta nuestra <a href="politica-envios.html">Política de Envíos</a> para más detalles.</p>
-  <p><strong>¿Puedo devolver un producto?</strong><br>Sí, tienes 14 días naturales desde la recepción del pedido. Consulta nuestra <a href="politica-devoluciones.html">Política de Devoluciones</a>.</p>
+  <p><strong>¿Puedo devolver un producto?</strong><br>Sí, tienes 30 días hábiles desde la recepción del pedido. Consulta nuestra <a href="politica-devoluciones.html">Política de Devoluciones</a>.</p>
   <p><strong>¿Qué métodos de pago aceptáis?</strong><br>Aceptamos tarjeta de crédito/débito (Visa, Mastercard), Bizum y PayPal. Todos los pagos se procesan de forma segura a través de Stripe.</p>
   <p><strong>¿Cómo puedo rastrear mi pedido?</strong><br>Una vez enviado, recibirás un email con el número de seguimiento del transportista.</p>
 
@@ -202,7 +210,7 @@ async function sendContact() {
 
   try {
     const order = document.getElementById('cf-order').value.trim();
-    const res = await fetch('/api/email-contact', {
+    const res = await fetch('/api/emails?type=contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, subject: subj || 'Consulta general', message: msg, order })
