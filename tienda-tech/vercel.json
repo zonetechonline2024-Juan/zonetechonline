@@ -51,7 +51,9 @@
     { "source": "/smartwatch-mujer",            "destination": "/caso.html" },
     { "source": "/regalo-tecnologico",          "destination": "/caso.html" },
     { "source": "/blog",                         "destination": "/blog/index.html" },
-    { "source": "/blog/:slug",                   "destination": "/blog/:slug.html" }
+    { "source": "/blog/:slug",                   "destination": "/blog/:slug.html" },
+    { "source": "/nuestra-historia",             "destination": "/nuestra-historia.html" },
+    { "source": "/sobre-nosotros",               "destination": "/nuestra-historia.html" }
   ],
   "redirects": [
     {
