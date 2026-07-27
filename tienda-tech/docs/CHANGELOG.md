@@ -3,6 +3,88 @@
 
 ---
 
+## [2026-07-27] — Transformación de Marca CBO Fases A-J
+
+### Fase A — Auditoría de Confianza
+- Auditoria completa como cliente nuevo · 14 problemas documentados, 4 críticos identificados
+- Test de 10 segundos: 2 de 5 preguntas sin respuesta antes de la transformación
+
+### Fixes críticos (antes de implementar nuevas fases)
+- `index.html` Trust badge: eliminado "4.9/5 en Trustpilot +1.200 reseñas" (cuenta no existe) → "Productos 100% Originales · Garantía oficial"
+- `index.html` Features strip: "Soporte en español 24/7" → "Soporte en español Lun–Vie 9–18h" (horario real)
+- `index.html` Trust badge soporte: "9:00–20:00" → "9:00–18:00" (consistencia)
+- `index.html` Modal login: eliminado ZONE10 -10% (código inexistente) → beneficios reales de la cuenta
+- `contacto.html` FAQ: "14 días naturales" → "30 días hábiles" (plazo real)
+
+### Fase B — Nuestra Historia
+- `nuestra-historia.html` (nueva página): historia auténtica sin métricas inventadas
+  - Secciones: El problema · La decisión · 4 pilares · Timeline · Diferencia vs Amazon · Visión
+  - Firma personal del fundador
+  - URL limpia `/nuestra-historia` y `/sobre-nosotros` vía vercel.json rewrites
+
+### Fase C — ¿Por qué ZoneTechOnline?
+- `index.html`: nueva sección de 6 bloques entre categorías y testimonios
+  - Argumentos reales: selección curada, garantía EU, personas reales, IA especializada, 30 días devolución, transparencia
+  - Link a Nuestra Historia al final
+
+### Fase D — Autoridad
+- `nuestra-historia.html`: sección "Cómo elegimos qué vendemos" con 4 criterios de selección
+  - Marca con trayectoria verificada · Distribución autorizada · Relación calidad-precio · Público definido
+  - Cita de criterio de catálogo
+
+### Fase E — Reseñas rediseñadas
+- `index.html` Testimonios hardcoded: eliminado "Compra verificada" (no verificable)
+- Añadidas fechas (junio/julio 2026), producto específico, perfil del cliente (ciudad + actividad)
+- Un testimonio cambiado a 4★ (mayor autenticidad)
+- Título sección: "Opiniones verificadas" → "Primeras opiniones" con copy honesto
+
+### Fase F — Homepage optimizada
+- `index.html`: eliminado banner "Lanzamientos Exclusivos 2026 — Unidades Limitadas para los Primeros Compradores" (escasez artificial)
+- Subtítulo sección productos: más criterio, menos urgencia manipulativa
+- Añadida franja de identidad de marca bajo el hero slider (tienda especializada · distribución autorizada · Barcelona)
+
+### Fase G — Footer como centro de confianza
+- `index.html` Footer: rediseño completo
+  - Banda superior de garantías (pago seguro, garantía 2 años, devolución 30 días, envío gratis, productos originales)
+  - Columna "La Marca": Nuestra Historia, ¿Por qué ZoneTechOnline?, Blog, IA
+  - Columna "Comprar con confianza": envíos, devoluciones, garantías, soporte, FAQs
+  - Datos de contacto completos: dirección, email, teléfono con horario, envíos Europa
+  - Botón WhatsApp directo en footer
+  - Nombre del titular (Juan Sebastián Cárdenas) en pie legal
+  - Sección de métodos de pago con descripción de seguridad (SSL, 3D Secure, PCI DSS)
+
+### Fase H — Microcopy
+- Carrito vacío: "Agrega productos para comenzar" → "Explora nuestro catálogo y encuentra tu próximo dispositivo favorito"
+- Botón checkout: "Proceder al Pago" → "Finalizar compra · Pago seguro"
+- Botón carrito: "Seguir Comprando" → "Seguir explorando"
+- Newsletter título: "Sé el primero en conocer ofertas exclusivas" → "Novedades y guías de compra directamente en tu bandeja"
+- Newsletter copy: eliminado "miles de amantes de la tecnología" (no verificable) → copy honesto
+
+### Fase I — Personalidad de marca
+- `docs/TONE_OF_VOICE.md` (nuevo): guía completa de tono de voz
+  - Perfil de la marca como persona
+  - 3 atributos clave: Claro · Honesto · Experto
+  - Tono por contexto: producto, microcopy, emails, soporte, blog, redes
+  - Vocabulario aprobado vs prohibido
+  - Tabla de transformación: voz genérica → voz ZoneTech
+
+### Fase J — Documentación
+- `docs/TRUST_STRATEGY.md` (nuevo): estrategia de confianza con 5 pilares, KPIs y hoja de ruta
+- `docs/CUSTOMER_EXPERIENCE.md` (nuevo): mapa completo del viaje del cliente (7 fases)
+- `docs/CHANGELOG.md`: actualizado (esta entrada)
+- `vercel.json`: rewrites `/nuestra-historia` y `/sobre-nosotros` → `nuestra-historia.html`
+
+### Resultado del test de 10 segundos (post-transformación)
+| Pregunta | Antes | Después |
+|---|---|---|
+| ¿Qué vende ZoneTechOnline? | ✅ | ✅ |
+| ¿Por qué debería confiar? | ⚠️ | ✅ |
+| ¿Qué diferencia a ZoneTechOnline de Amazon? | ❌ | ✅ |
+| ¿Qué tipo de marca es? | ⚠️ | ✅ |
+| ¿Me sentiría cómodo comprando 800€ aquí? | ❌ | ✅ |
+
+---
+
 ## [2026-07-27] — CTO Transformation Fases G-I + Hotfix CSP
 
 ### Fase G — Documentación técnica completa
