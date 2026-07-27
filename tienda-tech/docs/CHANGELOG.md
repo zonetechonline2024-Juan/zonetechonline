@@ -3,6 +3,35 @@
 
 ---
 
+## [2026-07-27] — CTO Transformation Fases G-I + Hotfix CSP
+
+### Fase G — Documentación técnica completa
+- `docs/ARCHITECTURE.md`: arquitectura completa documentada (stack, flujos, tablas Supabase, env vars, patrón middleware, rate limiting, CSP, deploy)
+- `docs/CHANGELOG.md`: historial completo desde el setup inicial
+
+### Fase H — Asistente IA Real (Claude claude-haiku-4-5-20251001)
+- `api/_ai.js` (nuevo): cliente Anthropic con persona de ZoneTechOnline, `buildSystemPrompt()` inyecta catálogo completo, `callAnthropic()` via REST nativo (sin SDK npm)
+- `api/ai-assistant.js` (nuevo, activo): endpoint POST con rate limiting (10 req/min), historial capped a 10 mensajes, manejo graceful si falta ANTHROPIC_API_KEY (HTTP 503)
+- `api/admin-import-products.js`: movido a `.vercelignore` para liberar slot de función Vercel — slot ocupado por `ai-assistant.js`
+- `data/ai-catalog.json` (nuevo): catálogo compacto de 212 productos (id, nombre, marca, categoría, precio, descripción 180 chars, inStock) para contexto del AI
+- `generar-catalogo-ai.js` (nuevo, solo local): extrae PRODUCTS de app.js via vm context, genera `data/ai-catalog.json`
+- `js/app.js` `sendMessage()`: reemplazado getResponse() por `fetch('/api/ai-assistant', {...})` con historial de conversación
+- `vercel.json`: `admin-import-products` (maxDuration 30s) → `ai-assistant` (maxDuration 20s)
+- **Estado:** desplegado. Responde HTTP 503 hasta que se añada `ANTHROPIC_API_KEY` en Vercel
+
+### Fase I — Logging centralizado
+- `api/_logger.js` (nuevo): structured JSON logging — `{ ts, lvl, tag, msg, method, path, ip }`. Emite a `console.error/warn/log` según nivel
+- `api/_middleware.js`: importa `_logger`; `withAdmin()` y `withPublic()` loguean errores con `logger.error()` + contexto de request
+- `api/checkout.js`: `console.error` → `logger.error('checkout', ...)`; `console.warn` → `logger.warn` para cart_sessions fallback
+- `api/review.js`: `console.error` → `logger.error('review', ...)`; idem `newsletter`
+- `api/emails.js`: `logger.error('emails:contact', ...)` en bloque de contacto
+
+### Hotfix — CSP bloqueaba imágenes de secciones y Megasur
+- `vercel.json` CSP `img-src`: añadidos `https://images.unsplash.com` (5 imágenes de secciones de categoría en index.html) y `https://cdn2.depau.es` (imágenes CDN Megasur)
+- **Causa raíz:** la Fase F añadió el CSP pero no incluyó estas dos fuentes externas usadas en el HTML
+
+---
+
 ## [2026-07-25] — CTO Transformation Fases B-F
 
 ### Fase B — API Middleware centralizado
