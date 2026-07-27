@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0FVJFMXJWB');</script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Blog ZoneTechOnline — Guías, Comparativas y Análisis Tech</title>
+  <meta name="description" content="Guías de compra, comparativas y análisis de smartwatches, auriculares, altavoces, teclados gaming y smartphones. Actualizado 2026.">
+  <link rel="canonical" href="https://www.zonetechonline.com/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zonetechonline.com/blog">
+  <meta property="og:title" content="Blog ZoneTechOnline — Guías y Comparativas Tech 2026">
+  <meta property="og:description" content="Guías de compra, comparativas y análisis de las mejores marcas tech. Garmin, Sony, JBL, Logitech y más.">
+  <meta property="og:image" content="https://www.zonetechonline.com/img/og-cover.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ZoneTechOnline">
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "@id":"https://www.zonetechonline.com/blog#blog",
+    "url":"https://www.zonetechonline.com/blog",
+    "name":"Blog ZoneTechOnline",
+    "description":"Guías de compra, comparativas y análisis de tecnología premium",
+    "publisher":{"@type":"Organization","name":"ZoneTechOnline","url":"https://www.zonetechonline.com"},
+    "inLanguage":"es-ES"
+  }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .blog-hero{background:linear-gradient(135deg,var(--bg) 0%,var(--bg-2) 100%);padding:80px 0 48px;border-bottom:1px solid var(--border);}
+    .blog-hero h1{font-size:clamp(28px,4vw,48px);font-weight:800;margin:0 0 12px;}
+    .blog-hero p{color:var(--text-3);font-size:16px;max-width:520px;}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;padding:56px 0 80px;}
+    .blog-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;}
+    .blog-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:var(--shadow-hover);}
+    .blog-card-cat{display:inline-block;background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(168,85,247,.15));color:#a78bfa;font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin:20px 20px 0;}
+    .blog-card-body{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column;}
+    .blog-card-title{font-size:18px;font-weight:700;line-height:1.35;margin:0 0 10px;color:var(--text-1);}
+    .blog-card-title a{color:inherit;text-decoration:none;}
+    .blog-card-title a:hover{color:var(--accent);}
+    .blog-card-excerpt{font-size:14px;color:var(--text-3);line-height:1.65;flex:1;margin:0 0 16px;}
+    .blog-card-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--text-3);border-top:1px solid var(--border);padding-top:12px;}
+    .blog-card-read{color:var(--accent);font-weight:600;font-size:13px;text-decoration:none;display:flex;align-items:center;gap:4px;}
+    .blog-card-read:hover{color:#a78bfa;}
+    /* ── Filtro de categorías ── */
+    .blog-filters{display:flex;gap:8px;flex-wrap:wrap;padding:28px 0 0}
+    .blog-filter-btn{background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--text-2);font-size:12px;font-weight:600;letter-spacing:.04em;padding:7px 16px;border-radius:20px;cursor:pointer;transition:.18s}
+    .blog-filter-btn:hover,.blog-filter-btn.active{background:rgba(99,102,241,.15);border-color:var(--accent);color:var(--accent)}
+    /* ── CTA newsletter ── */
+    .blog-newsletter{background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.18);border-radius:20px;padding:44px 32px;text-align:center;margin:0 0 64px}
+    .blog-newsletter h2{font-size:clamp(18px,2.5vw,26px);font-weight:700;color:var(--text);margin:0 0 10px;letter-spacing:-.03em}
+    .blog-newsletter p{font-size:14px;color:var(--text-2);margin:0 0 24px;line-height:1.7;max-width:440px;margin-left:auto;margin-right:auto}
+    .blog-newsletter-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:420px;margin:0 auto}
+    .blog-newsletter-form input{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--text-1);outline:none}
+    .blog-newsletter-form input:focus{border-color:var(--accent)}
+    .blog-newsletter-form button{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.18s}
+    .blog-newsletter-form button:hover{opacity:.88}
+    @media(max-width:480px){.blog-newsletter{padding:28px 20px}}
+  </style>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="/index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-item"><a href="/relojes" class="nav-link">Relojes</a></div>
+      <div class="nav-item"><a href="/auriculares" class="nav-link">Auriculares</a></div>
+      <div class="nav-item"><a href="/altavoces" class="nav-link">Altavoces</a></div>
+      <div class="nav-item"><a href="/gaming" class="nav-link">Teclados Gaming</a></div>
+      <div class="nav-item"><a href="/smartphones" class="nav-link">Smartphones</a></div>
+      <div class="nav-item"><a href="/blog" class="nav-link active">Blog</a></div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" id="search-btn" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <button class="btn-login" id="login-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Acceder</span></button>
+      <button class="nav-icon-btn cart-btn" id="cart-toggle" aria-label="Carrito"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-badge" id="cart-count">0</span></button>
+      <button class="nav-icon-btn hamburger" id="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+  <div class="mnd-header"><span class="mnd-brand">ZONE<span>TECH</span>ONLINE</span><button class="mnd-close" id="mobile-nav-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <nav class="mnd-nav">
+    <a href="/catalogo.html" class="mnd-link mnd-link-all">Todos los productos</a>
+    <div class="mnd-divider"></div>
+    <a href="/relojes" class="mnd-link">⌚ Relojes</a>
+    <a href="/auriculares" class="mnd-link">🎧 Auriculares</a>
+    <a href="/altavoces" class="mnd-link">🔊 Altavoces</a>
+    <a href="/gaming" class="mnd-link">⌨️ Gaming</a>
+    <a href="/smartphones" class="mnd-link">📱 Smartphones</a>
+    <a href="/blog" class="mnd-link">📝 Blog</a>
+  </nav>
+</aside>
+
+<aside class="side-cart" id="side-cart">
+  <div class="side-cart-header"><h3>Tu Carrito</h3><button class="close-btn" id="close-cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="side-cart-body" id="cart-items"><div class="cart-empty" id="cart-empty"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><p>Tu carrito está vacío</p><span>Agrega productos para comenzar</span></div></div>
+  <div class="side-cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-total">€0</span></div>
+    <div class="cart-shipping"><span>Envío</span><span class="free-shipping">GRATIS</span></div>
+    <div class="cart-divider"></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-grand-total">€0</span></div>
+    <button class="btn-primary btn-block" id="checkout-btn">Finalizar compra · Pago seguro</button>
+    <button class="btn-ghost btn-block" id="continue-shopping">Seguir explorando</button>
+  </div>
+</aside>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-wrap">
+    <div class="search-bar-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" class="search-input" id="search-input" placeholder="Busca producto, marca o categoría..." autocomplete="off"><button class="search-close" id="search-close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <p class="search-hint">Pulsa <kbd>Esc</kbd> para cerrar</p>
+    <div class="search-cats" id="search-cats"></div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<div class="blog-hero">
+  <div class="section-container">
+    <nav class="breadcrumb"><a href="/index.html">Inicio</a><span class="bc-sep">›</span><span>Blog</span></nav>
+    <h1>Blog <span class="gradient-text">ZoneTechOnline</span></h1>
+    <p>Guías de compra, comparativas y análisis para que elijas la mejor tecnología con información real.</p>
+  </div>
+</div>
+
+<main>
+  <div class="section-container">
+    <div class="blog-filters">
+      <button class="blog-filter-btn active" data-cat="todos">Todos</button>
+      <button class="blog-filter-btn" data-cat="Comparativa">Comparativas</button>
+      <button class="blog-filter-btn" data-cat="Guía de Compra">Guías de Compra</button>
+      <button class="blog-filter-btn" data-cat="Ranking">Rankings</button>
+      <button class="blog-filter-btn" data-cat="Guía de Regalo">Regalos</button>
+    </div>
+    <div class="blog-grid" id="blog-grid">
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Comparativa</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/garmin-vs-apple-watch-2025">Garmin vs Apple Watch 2025: Cuál Elegir según tu Perfil</a></h2>
+          <p class="blog-card-excerpt">Dos filosofías opuestas: el GPS de precisión militar de Garmin frente al ecosistema integrado de Apple. Te ayudamos a elegir sin rodeos.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 7 min</span>
+            <a href="/blog/garmin-vs-apple-watch-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Compra</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/mejor-smartwatch-running-2025">Mejor Smartwatch para Running en España 2025</a></h2>
+          <p class="blog-card-excerpt">GPS multibanda, VO2 Max, frecuencia cardíaca y batería para ultramaratón. Los relojes que de verdad marcan la diferencia cuando corres.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 6 min</span>
+            <a href="/blog/mejor-smartwatch-running-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Compra</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/auriculares-cancelacion-ruido-2025">Mejores Auriculares con Cancelación de Ruido 2025</a></h2>
+          <p class="blog-card-excerpt">Sony, Jabra y Sennheiser se disputan el trono del ANC. Analizamos cuál bloquea mejor el ruido, suena mejor y dura más tiempo.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 6 min</span>
+            <a href="/blog/auriculares-cancelacion-ruido-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Compra</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/como-elegir-teclado-gaming">Cómo Elegir un Teclado Gaming Mecánico: Guía Completa</a></h2>
+          <p class="blog-card-excerpt">Switches Red, Brown o Blue, TKL o completo, cableado o inalámbrico. Todo lo que necesitas saber antes de comprar tu primer mecánico.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 7 min</span>
+            <a href="/blog/como-elegir-teclado-gaming" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Ranking</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/smartphones-5g-baratos-2025">Mejores Smartphones 5G Baratos en España 2025</a></h2>
+          <p class="blog-card-excerpt">El 5G ya no cuesta 800€. Samsung, Xiaomi, Motorola y Realme tienen modelos con conectividad 5G por menos de 300€. Los analizamos.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 5 min</span>
+            <a href="/blog/smartphones-5g-baratos-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Compra</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/mejores-smartwatches-mujer-2025">Mejores Smartwatches para Mujer en España 2025</a></h2>
+          <p class="blog-card-excerpt">Garmin Lily 2, Samsung Galaxy Watch 7 y Apple Watch SE3: diseño elegante con salud avanzada. Cuál se adapta mejor a tu estilo de vida.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 6 min</span>
+            <a href="/blog/mejores-smartwatches-mujer-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Ranking</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/altavoces-bluetooth-exterior-2025">Mejores Altavoces Bluetooth para Exterior 2025</a></h2>
+          <p class="blog-card-excerpt">JBL Xtreme 4, Charge 5 y Flip 7: cuál aguanta mejor la playa, la piscina y la lluvia con más horas de música sin parar.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 5 min</span>
+            <a href="/blog/altavoces-bluetooth-exterior-2025" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Comparativa</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/garmin-forerunner-vs-fenix">Garmin Forerunner vs Fenix 2025: Cuál Elegir y Por Qué</a></h2>
+          <p class="blog-card-excerpt">¿Runner o aventurero? La diferencia real entre las dos grandes familias de Garmin explicada sin tecnicismos ni exceso de especificaciones.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 7 min</span>
+            <a href="/blog/garmin-forerunner-vs-fenix" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Compra</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/auriculares-resistentes-agua-deporte">Mejores Auriculares para Correr y Deporte 2025</a></h2>
+          <p class="blog-card-excerpt">IP55, IP67, IP68: qué rating necesitas según tu deporte. Sony, JBL y Jabra analizados para running, gym y natación.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 6 min</span>
+            <a href="/blog/auriculares-resistentes-agua-deporte" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <span class="blog-card-cat">Guía de Regalo</span>
+        <div class="blog-card-body">
+          <h2 class="blog-card-title"><a href="/blog/guia-regalo-tecnologico-presupuesto">Guía de Regalos Tecnológicos 2025 por Presupuesto</a></h2>
+          <p class="blog-card-excerpt">Las mejores ideas de regalo tech desde 50€ hasta 400€. Smartwatches, auriculares, altavoces y teclados con garantía oficial en España.</p>
+          <div class="blog-card-meta">
+            <span>📅 Julio 2026 · 5 min</span>
+            <a href="/blog/guia-regalo-tecnologico-presupuesto" class="blog-card-read">Leer artículo →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="blog-newsletter">
+      <h2>Contenido útil, sin spam</h2>
+      <p>Análisis de productos, lanzamientos recomendados y guías de compra. Una vez por semana como máximo. Sin ofertas de relleno.</p>
+      <form class="blog-newsletter-form" id="blog-newsletter-form">
+        <input type="email" placeholder="tu@email.com" required id="blog-email-input">
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<div class="wa-widget" id="waWidget">
+  <div class="wa-popup" id="waPopup">
+    <div class="wa-popup-header"><div class="wa-avatar-wrap"><div class="wa-avatar-img">ZT</div><span class="wa-online-dot"></span></div><div class="wa-popup-meta"><span class="wa-popup-name">ZoneTechOnline</span><span class="wa-popup-sub">● En línea</span></div><button class="wa-popup-x" onclick="waClose()"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+    <div class="wa-popup-body"><div class="wa-msg-wrap"><div class="wa-msg-avatar">ZT</div><div class="wa-bubble"><p>👋 ¿Tienes dudas sobre algún producto?</p><span class="wa-bubble-time">Ahora</span></div></div></div>
+    <a href="https://wa.me/34613640673?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20un%20producto%20%F0%9F%91%8B" target="_blank" rel="noopener noreferrer" class="wa-cta" onclick="waClose()"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Iniciar conversación</a>
+  </div>
+  <button class="wa-fab" id="waFab" onclick="waToggle()"><span class="wa-badge" id="waBadge">1</span><svg class="wa-fab-icon wa-icon-chat" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg><svg class="wa-fab-icon wa-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></button>
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="modal" id="quick-view-modal" role="dialog" aria-modal="true"><div class="modal-panel modal-panel--lg"><button class="modal-close" id="close-quick-view"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="quick-view-content" id="quick-view-content"></div></div></div>
+
+<script src="/js/app.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var ct=document.getElementById('cart-toggle'),cc=document.getElementById('close-cart'),ov=document.getElementById('overlay'),cs=document.getElementById('continue-shopping'),chk=document.getElementById('checkout-btn');
+  if(ct)ct.addEventListener('click',openCart);
+  if(cc)cc.addEventListener('click',closeCart);
+  if(ov)ov.addEventListener('click',function(){closeCart();closeQuickView();});
+  if(cs)cs.addEventListener('click',closeCart);
+  if(chk)chk.addEventListener('click',function(){if(cart&&cart.length>0){closeCart();window.location.href='/checkout.html';}});
+  renderCartItems();updateCartBadge();
+});
+var waOpen=false;
+function waToggle(){waOpen=!waOpen;document.getElementById('waPopup').classList.toggle('wa-open',waOpen);document.getElementById('waFab').classList.toggle('wa-open',waOpen);document.getElementById('waBadge').classList.toggle('wa-hidden',waOpen);}
+function waClose(){waOpen=false;document.getElementById('waPopup').classList.remove('wa-open');document.getElementById('waFab').classList.remove('wa-open');document.getElementById('waBadge').classList.remove('wa-hidden');}
+
+// Filtro de categorías
+(function(){
+  var btns=document.querySelectorAll('.blog-filter-btn');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      btns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var cat=btn.dataset.cat;
+      document.querySelectorAll('#blog-grid .blog-card').forEach(function(card){
+        var cardCat=card.querySelector('.blog-card-cat');
+        if(cat==='todos'||!cardCat||(cardCat&&cardCat.textContent.trim()===cat)){
+          card.style.display='flex';
+        } else {
+          card.style.display='none';
+        }
+      });
+    });
+  });
+  // Newsletter submit
+  var nf=document.getElementById('blog-newsletter-form');
+  if(nf)nf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ei=document.getElementById('blog-email-input');
+    if(!ei||!ei.value)return;
+    var btn=nf.querySelector('button');
+    if(btn){btn.textContent='¡Suscrito!';btn.disabled=true;}
+    // Reutiliza el endpoint de newsletter del sitio
+    fetch('/api/emails',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'subscribe',email:ei.value})}).catch(function(){});
+  });
+})();
+</script>
+</body>
+</html>
