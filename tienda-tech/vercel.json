@@ -53,7 +53,9 @@
     { "source": "/blog",                         "destination": "/blog/index.html" },
     { "source": "/blog/:slug",                   "destination": "/blog/:slug.html" },
     { "source": "/nuestra-historia",             "destination": "/nuestra-historia.html" },
-    { "source": "/sobre-nosotros",               "destination": "/nuestra-historia.html" }
+    { "source": "/sobre-nosotros",               "destination": "/nuestra-historia.html" },
+    { "source": "/nuestra-filosofia",             "destination": "/nuestra-filosofia.html" },
+    { "source": "/criterios-seleccion",           "destination": "/nuestra-filosofia.html" }
   ],
   "redirects": [
     {
