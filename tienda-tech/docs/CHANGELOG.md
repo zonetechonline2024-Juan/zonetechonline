@@ -3,6 +3,52 @@
 
 ---
 
+## [2026-07-27] — CBO Segunda Iteración: Auditoría + Correcciones + Fases E, H, I, J, L
+
+### Auditoría Fase A — Correcciones pendientes (5 issues)
+- `index.html` línea 694: "3 años de garantía oficial" → "2 años de garantía oficial" (inconsistencia detectada en auditoría)
+- `index.html` línea 829 (configurador Samsung): "Garantía oficial 3 años · Devolución gratuita 30 días" → "Garantía oficial 2 años · Devolución 30 días hábiles"
+- `index.html` línea 676 (features strip): "Stock disponible hoy" → "Entrega en 5–8 días hábiles" (no verificable en dropshipping)
+- `index.html` línea 698 (CTA friction): "Devolución garantizada 30 días" → "Devolución garantizada 30 días hábiles"
+- `login.html` línea 134: "Soporte prioritario en español 24/7" → "Soporte en español Lun–Vie 9–18h"
+
+### Fase E — Nuestra Filosofía
+- `nuestra-filosofia.html` (nueva página): página de criterios de selección
+  - Secciones: Por qué el catálogo infinito no funciona · 4 criterios de selección · Proceso de evaluación (5 pasos) · Qué rechazamos (5 tipos) · Estándares por categoría (5 categorías) · Compromiso de actualización
+  - Citas propias del fundador, firma personal
+  - URL limpia `/nuestra-filosofia` y `/criterios-seleccion` vía vercel.json
+
+### Fase H — Blog structure improvements
+- `blog/index.html`: filtro de categorías interactivo (Comparativas, Guías, Rankings, Regalos)
+- `blog/index.html`: fechas actualizadas de "Julio 2025" a "Julio 2026"
+- `blog/index.html`: CTA de newsletter al final del índice (con formulario conectado a /api/emails)
+- `blog/index.html`: meta description y OG title actualizados a 2026
+- `blog/index.html`: microcopy carrito corregido (coherencia con index.html)
+
+### Fase I — Asistente IA: de respondedor a asesor
+- `api/_ai.js` PERSONA: rediseño completo del system prompt
+  - Añadidos 3 atributos de personalidad: Claro · Honesto · Experto
+  - Modo asesor: pregunta antes de recomendar, máx 2-3 productos con justificación
+  - Datos de tienda corregidos: "14 días" → "30 días hábiles", soporte Lun-Vie 9-18h
+  - Instrucciones de formato: máx 150 palabras salvo petición explícita
+  - Mención de nuestra-historia y nuestra-filosofia como recursos
+
+### Fase J — Arquitectura Comparador IA
+- `docs/COMPARADOR_IA.md` (nuevo): diseño completo de arquitectura
+  - Flujo de usuario (7 pasos)
+  - Frontend: componente `comparator.js`, barra flotante, panel de comparación
+  - Backend: endpoint `api/comparador.js` (con plan para límite Vercel Hobby)
+  - System prompt del comparador
+  - Estructura de specs por categoría (smartwatches, auriculares, altavoces)
+  - 3 fases de implementación con prerequisitos claros
+  - Estimación de coste: < $0.001 por comparativa con Claude Haiku
+
+### Fase L — Documentación de autoridad y diferenciación
+- `docs/BRAND_AUTHORITY.md` (nuevo): 4 pilares de autoridad, hoja de ruta por horizonte, KPIs trimestrales
+- `docs/DIFFERENTIATION.md` (nuevo): diferenciación vs Amazon, grandes superficies y tiendas online; lo que NO debe perderse; cómo comunicar por canal; señales pendientes
+
+---
+
 ## [2026-07-27] — Transformación de Marca CBO Fases A-J
 
 ### Fase A — Auditoría de Confianza
