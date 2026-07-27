@@ -1,5 +1,5 @@
 # ARCHITECTURE.md — ZoneTechOnline
-> Generado: 2026-07-25 | Actualizado: 2026-07-25 (Fases B-F CTO Transformation)
+> Generado: 2026-07-25 | Actualizado: 2026-07-27 (Fases B-J CTO Transformation)
 
 ---
 
@@ -64,13 +64,16 @@ tienda-tech/
 │   ├── admin-products.js       # Admin: productos (withAdmin)
 │   ├── admin-customers.js      # Admin: clientes (withAdmin)
 │   ├── admin-stats.js          # Admin: estadísticas (withAdmin)
-│   ├── admin-import-products.js# Admin: importar productos
+│   ├── ai-assistant.js         # Asistente IA Claude (Fase H) — activo, pendiente ANTHROPIC_API_KEY
 │   ├── _db.js                  # Helper Supabase (REST, sin npm)
 │   ├── _email-templates.js     # Templates HTML de emails
 │   ├── _middleware.js          # withAdmin() + withPublic() factory — CORS, auth, error (Fase B)
 │   ├── _ratelimit.js           # Rate limiter en memoria por IP (Fase F)
+│   ├── _logger.js              # Structured JSON logging (Fase I)
+│   ├── _ai.js                  # Cliente Anthropic + buildSystemPrompt() (Fase H)
 │   ├── _send-email.js          # Wrapper Resend
 │   └── _megasur.js             # Helper Megasur (placeMegasurOrder, syncMegasurFeed)
+│   # admin-import-products.js — en .vercelignore (liberó slot para ai-assistant.js)
 ├── img/
 │   └── productos/              # ~980 imágenes (mix JPEG/PNG, algunas >3MB)
 ├── docs/                       # Documentación técnica (esta carpeta)
@@ -145,6 +148,7 @@ tienda-tech/
 | MEGASUR_API_KEY | Pendiente — de Adrián Novoa |
 | MEGASUR_WS_URL | Pendiente — URL Web Service pedidos Megasur |
 | MEGASUR_FEED_URL | Pendiente — URL feed catálogo Megasur |
+| ANTHROPIC_API_KEY | Asistente IA Claude — pendiente fondos en console.anthropic.com |
 
 ---
 
@@ -184,6 +188,7 @@ module.exports = withPublic(async (req, res) => { ... });
 | review | 3 req/min |
 | newsletter | 3 req/min |
 | contact (emails) | 3 req/min |
+| ai-assistant | 10 req/min |
 
 **Nota:** Al ser in-memory y Vercel multi-instancia, el rate limiting es best-effort (eficaz contra bots simples, no contra ataques distribuidos). Para protección robusta se necesitaría Redis o Upstash.
 
@@ -203,7 +208,7 @@ Via `vercel.json` para todas las rutas:
   - `script-src`: self, GTM, Google Analytics, Stripe
   - `style-src`: self, Google Fonts
   - `font-src`: Google Fonts gstatic
-  - `img-src`: self, Pexels, YouTube thumbnails, GA tracking
+  - `img-src`: self, Pexels, Unsplash (secciones categoría), Depau CDN (Megasur), YouTube thumbnails, GA tracking
   - `frame-src`: YouTube, Stripe Checkout
   - `connect-src`: self, GA, Stripe API
   - `object-src 'none'` — bloquea Flash/plugins
@@ -213,6 +218,47 @@ Via `vercel.json` para todas las rutas:
 **CORS:** `Access-Control-Allow-Origin: https://www.zonetechonline.com` (restringido, no wildcard) en todos los endpoints públicos y admin.
 
 **Sanitización de inputs (Fase F):** `review.js` aplica `stripHtml()` en name, text y product antes de guardar.
+
+---
+
+## Asistente IA (Fase H)
+
+Chat widget en la homepage conectado a `POST /api/ai-assistant` mediante `fetch()` en `js/app.js`.
+
+```
+[Usuario escribe] → sendMessage() en app.js
+                      ↓
+              POST /api/ai-assistant
+              { messages: chatHistory (últimas 10 rondas) }
+                      ↓
+              api/_ai.js buildSystemPrompt(catalog)
+              + callAnthropic() → api.anthropic.com
+              (modelo: claude-haiku-4-5-20251001, max_tokens: 500)
+                      ↓
+              { reply: "..." } → appendMsg() en chat
+```
+
+- `data/ai-catalog.json`: 212 productos compactos (≈80KB) inyectados en el system prompt como tabla `id|marca nombre|categoría|precio€`
+- Si falta `ANTHROPIC_API_KEY` → HTTP 503 con mensaje amigable (nunca crashea)
+- Historial local en `chatHistory[]` (solo en memoria del navegador, se resetea al recargar)
+
+**Activación pendiente:** añadir `ANTHROPIC_API_KEY` en Vercel → `vercel env add ANTHROPIC_API_KEY production` → `vercel --prod --yes`
+
+---
+
+## Logging Centralizado (Fase I)
+
+`api/_logger.js` emite líneas JSON estructuradas a stdout/stderr de Vercel:
+
+```json
+{ "ts": "2026-07-27T10:00:00.000Z", "lvl": "error", "tag": "checkout", "msg": "...", "method": "POST", "path": "/api/checkout", "ip": "1.2.3.4" }
+```
+
+Niveles: `error` → `console.error`, `warn` → `console.warn`, `info` → `console.log`.
+
+Integrado en: `_middleware.js` (errores globales), `checkout.js`, `review.js`, `emails.js`.
+
+Los logs son visibles en Vercel Dashboard → Functions → Logs por función.
 
 ---
 
