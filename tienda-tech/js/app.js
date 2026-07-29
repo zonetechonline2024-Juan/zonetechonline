@@ -3623,12 +3623,12 @@ function renderProducts(filterKey, customFilter) {
     return '<article class="product-card' + (isOOS ? ' product-card--oos' : '') + '" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
-      '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
+      '<div class="product-img" onclick="window.location.href=\'/producto/' + product.id + '\'" style="cursor:pointer">' +
         productCardGalleryHTML(product) +
-        '<div class="product-qv-overlay"><span>Vista rápida</span></div>' +
+        '<div class="product-qv-overlay"><span>Ver producto →</span></div>' +
       '</div>' +
       '<div class="product-info">' +
-        '<h3 class="product-name">' + product.name + '</h3>' +
+        '<h3 class="product-name"><a href="/producto/' + product.id + '" style="text-decoration:none;color:inherit">' + product.name + '</a></h3>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row">' +
           '<span class="product-price">€' + product.price.toLocaleString() + '</span>' +
@@ -3705,12 +3705,12 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     return '<article class="product-card' + (isOOS2 ? ' product-card--oos' : '') + '" data-product-id="' + product.id + '">' +
       '<span class="product-brand">' + product.brand + '</span>' +
       badgeHTML +
-      '<div class="product-img" onclick="openQuickView(' + product.id + ')">' +
+      '<div class="product-img" onclick="window.location.href=\'/producto/' + product.id + '\'" style="cursor:pointer">' +
         productCardGalleryHTML(product, idx < 4) +
-        '<div class="product-qv-overlay"><span>Vista rápida</span></div>' +
+        '<div class="product-qv-overlay"><span>Ver producto →</span></div>' +
       '</div>' +
       '<div class="product-info">' +
-        '<h3 class="product-name">' + product.name + '</h3>' +
+        '<h3 class="product-name"><a href="/producto/' + product.id + '" style="text-decoration:none;color:inherit">' + product.name + '</a></h3>' +
         '<p class="product-desc">' + shortDesc + '</p>' +
         '<div class="product-price-row"><span class="product-price">€' + product.price.toLocaleString() + '</span>' + oldPriceHTML + discountHTML + '</div>' +
         '<div class="product-actions">' +
