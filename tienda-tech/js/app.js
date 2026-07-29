@@ -1,4 +1,4 @@
-﻿// ZoneTechOnline — Premium Tech Wearables
+// ZoneTechOnline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -3275,7 +3275,7 @@ function productCardGalleryHTML(product, eager) {
   var loadAttr = eager ? ' fetchpriority="high"' : ' loading="lazy"';
   var imgs = (product.images && product.images.length > 1) ? product.images : null;
   var mainImg = product.image
-    ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '"' + loadAttr + ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+    ? '<img class="product-real-img" src="' + product.image + '" alt="' + product.name + '" width="300" height="220"' + loadAttr + ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
     : '';
   var svgBack = '<div class="product-svg-back product-img-ph">' + getProductSVG(product.category, '#6366f1') + '</div>';
   if (!imgs) return mainImg + svgBack;
@@ -3450,7 +3450,7 @@ function renderCartItems() {
     return;
   }
 
-  container.innerHTML = cart.map(function(item) {
+  var cartItemsHTML = cart.map(function(item) {
     var prod = PRODUCTS.find(function(p) { return p.id === item.id; });
     var cartImg = prod && prod.image
       ? '<img class="cart-real-img" src="' + prod.image + '" alt="' + item.name + '" onerror="this.style.display=\'none\'">'
@@ -3472,6 +3472,41 @@ function renderCartItems() {
       '</div>' +
     '</div>';
   }).join('');
+
+  var cartCrossSellHTML = (function() {
+    var PAIRINGS = { 'relojes': ['auriculares'], 'auriculares': ['relojes', 'altavoces'], 'altavoces': ['auriculares'], 'teclados gaming': ['auriculares'], 'smartphones': ['auriculares', 'relojes'] };
+    var cartCats = cart.map(function(i) { return i.category; });
+    var suggCat = null;
+    for (var ci = 0; ci < cartCats.length; ci++) {
+      var pairs = PAIRINGS[cartCats[ci]] || [];
+      for (var pi = 0; pi < pairs.length; pi++) {
+        if (cartCats.indexOf(pairs[pi]) === -1) { suggCat = pairs[pi]; break; }
+      }
+      if (suggCat) break;
+    }
+    if (!suggCat) return '';
+    var cartIds = cart.map(function(i) { return i.id; });
+    var candidates = PRODUCTS.filter(function(p) {
+      return p.category === suggCat && p.inStock !== false && cartIds.indexOf(p.id) === -1 && p.price >= 30 && p.price <= 350;
+    }).sort(function(a, b) { return a.price - b.price; });
+    if (!candidates.length) return '';
+    var mid = Math.floor(candidates.length / 2);
+    var suggest = candidates[mid];
+    var catLabel = { 'relojes': 'Smartwatch', 'auriculares': 'Auriculares', 'altavoces': 'Altavoz', 'teclados gaming': 'Teclado gaming', 'smartphones': 'Smartphone' }[suggCat] || suggCat;
+    return '<div style="margin:14px 8px 4px;border-top:1px solid var(--border);padding-top:14px">' +
+      '<p style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin:0 0 10px">Completa tu pack · ' + catLabel + '</p>' +
+      '<div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;padding:10px">' +
+        (suggest.image ? '<img src="' + suggest.image + '" alt="' + suggest.name + '" style="width:44px;height:44px;object-fit:contain;border-radius:7px;background:rgba(255,255,255,.04);flex-shrink:0">' : '') +
+        '<div style="flex:1;min-width:0">' +
+          '<p style="margin:0 0 2px;font-size:12px;font-weight:600;color:var(--text-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + suggest.name + '</p>' +
+          '<p style="margin:0;font-size:12px;color:var(--accent);font-weight:700">€' + suggest.price.toLocaleString() + '</p>' +
+        '</div>' +
+        '<button onclick="addToCart(' + suggest.id + ')" style="flex-shrink:0;padding:7px 12px;background:var(--accent);border:none;border-radius:8px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">+ Añadir</button>' +
+      '</div>' +
+    '</div>';
+  })();
+
+  container.innerHTML = cartItemsHTML + cartCrossSellHTML;
 
   var total = getCartTotal();
   if (totalEl) totalEl.textContent = '€' + total.toLocaleString();
@@ -3796,6 +3831,21 @@ function openQuickView(productId) {
     : '';
   var qvGalleryBlock = '<div class="qv-gallery"><div class="qv-main-wrap">' + qvNavHTML + qvMainImgHTML + '</div>' + qvThumbsHTML + '</div>';
 
+  var qvUpsell = PRODUCTS.filter(function(p) {
+    return p.id !== product.id && p.category === product.category &&
+           p.price > product.price * 1.15 && p.price <= product.price * 2.8 && p.inStock !== false;
+  }).sort(function(a, b) { return a.price - b.price; })[0];
+  var qvUpsellHTML = qvUpsell
+    ? '<div style="margin-top:12px;background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:12px">' +
+        '<span style="font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)">El siguiente nivel · +' + Math.round(qvUpsell.price - product.price) + '€</span>' +
+        '<a href="/producto/' + qvUpsell.id + '" onclick="closeQuickView()" style="display:flex;align-items:center;gap:10px;margin-top:8px;text-decoration:none">' +
+          (qvUpsell.image ? '<img src="' + qvUpsell.image + '" style="width:40px;height:40px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,.05)" alt="">' : '') +
+          '<span style="flex:1;font-size:13px;color:var(--text-1);font-weight:500">' + qvUpsell.name + '</span>' +
+          '<span style="font-size:13px;font-weight:700;color:var(--accent);flex-shrink:0">€' + qvUpsell.price.toLocaleString() + '</span>' +
+        '</a>' +
+      '</div>'
+    : '';
+
   content.innerHTML =
     qvGalleryBlock +
     '<div class="qv-details">' +
@@ -3816,6 +3866,8 @@ function openQuickView(productId) {
       (product.inStock === false
         ? '<button class="btn-primary qv-add-btn" disabled style="opacity:.45;cursor:not-allowed;background:rgba(99,102,241,.2)">Sin stock temporalmente</button>'
         : '<button class="btn-primary qv-add-btn" onclick="addToCart(' + product.id + ');closeQuickView()">Añadir al carrito — €' + product.price.toLocaleString() + '</button>') +
+      '<a href="/producto/' + product.id + '" onclick="closeQuickView()" style="display:flex;align-items:center;justify-content:center;gap:5px;margin-top:10px;font-size:12.5px;color:var(--accent);text-decoration:none;opacity:.85">Ver ficha completa <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>' +
+      qvUpsellHTML +
     '</div>';
 
   modal.classList.add('open');
@@ -5752,8 +5804,6 @@ function initAIAssistant() {
            '<a class="ai-msg-link" href="catalogo.html" aria-label="Ver catálogo completo">Ver catálogo →</a>';
   }
 
-  var chatHistory = [];
-
   function sendMessage(text) {
     var clean = text.trim();
     if (!clean) return;
@@ -5769,24 +5819,12 @@ function initAIAssistant() {
 
     appendMsg(escHtml(clean), 'user');
     showTyping();
-    chatHistory.push({ role: 'user', content: clean });
 
-    fetch('/api/ai-assistant', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: chatHistory })
-    })
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
+    setTimeout(function() {
       removeTyping();
-      var reply = data.reply || (data.error ? '⚠️ ' + data.error : 'No he podido responder ahora. Inténtalo de nuevo.');
+      var reply = getResponse(clean);
       appendMsg(reply, 'bot');
-      chatHistory.push({ role: 'assistant', content: reply });
-    })
-    .catch(function() {
-      removeTyping();
-      appendMsg('Error de conexión con el asistente. Inténtalo de nuevo.', 'bot');
-    });
+    }, 600);
   }
 
   function openAI() {
@@ -6141,3 +6179,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+// ─── PRODUCT LIST SCHEMA (ItemList + Product + Offer) ────────────────────────
+function injectProductListSchema(filterKey, brandKey, pageTitle, pageUrl) {
+  var category = FILTER_MAP[filterKey] || (filterKey === 'all' ? 'todos' : null);
+  var filtered = (!category || category === 'todos')
+    ? PRODUCTS.slice()
+    : PRODUCTS.filter(function(p) { return p.category === category; });
+  if (brandKey) {
+    var bDecoded = decodeURIComponent(brandKey).toLowerCase();
+    filtered = filtered.filter(function(p) { return (p.brand || '').toLowerCase() === bDecoded; });
+  }
+  if (!filtered.length) return;
+
+  var base = 'https://www.zonetechonline.com';
+  var schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': pageTitle,
+    'url': pageUrl,
+    'numberOfItems': filtered.length,
+    'itemListElement': filtered.map(function(p, i) {
+      var desc = Array.isArray(p.description) ? p.description.join('. ') : (p.description || '');
+      return {
+        '@type': 'ListItem',
+        'position': i + 1,
+        'item': {
+          '@type': 'Product',
+          'name': p.name,
+          'description': desc,
+          'image': base + '/' + p.image,
+          'brand': { '@type': 'Brand', 'name': p.brand },
+          'offers': {
+            '@type': 'Offer',
+            'priceCurrency': 'EUR',
+            'price': p.price.toFixed(2),
+            'availability': p.inStock === false
+              ? 'https://schema.org/OutOfStock'
+              : 'https://schema.org/InStock',
+            'url': pageUrl,
+            'seller': { '@type': 'Organization', 'name': 'ZoneTechOnline' }
+          }
+        }
+      };
+    })
+  };
+
+  var s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(schema);
+  document.head.appendChild(s);
+}
