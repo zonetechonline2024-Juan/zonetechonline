@@ -168,7 +168,7 @@ select:-webkit-autofill:focus {
       <div class="form-row single">
         <div class="form-group">
           <label>Email <span class="req">*</span></label>
-          <input type="email" id="inp-email" placeholder="tu@email.com" autocomplete="email">
+          <input type="email" id="inp-email" placeholder="tu@email.com" autocomplete="email" onblur="captureCartSession(this.value)">
         </div>
       </div>
       <div class="form-row single">
@@ -455,6 +455,21 @@ select:-webkit-autofill:focus {
     }));
   }
 
+  // Captura de carrito abandonado — se llama al salir del campo email
+  var _cartCaptured = false;
+  window.captureCartSession = function(emailVal) {
+    if (_cartCaptured || !emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal.trim())) return;
+    if (!cart || !cart.length) return;
+    _cartCaptured = true;
+    var total = cart.reduce(function(a, b) { return a + b.price * b.qty; }, 0);
+    var name = (document.getElementById('inp-name') || {}).value || '';
+    fetch('/api/emails?type=cart-abandon', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: emailVal.trim(), name: name.trim(), cart: cart, cartTotal: total }),
+    }).catch(function() {});
+  };
+
   // Promo codes
   window.applyPromo = function() {
     var code = document.getElementById('promo-input').value.trim().toUpperCase();
@@ -575,6 +590,15 @@ select:-webkit-autofill:focus {
 
       if (result.data.url) {
         document.getElementById('pay-btn-text').textContent = 'Redirigiendo a pago seguro...';
+        // Marcar carrito como completado para no recibir emails de recuperación
+        var cEmail = document.getElementById('inp-email');
+        if (cEmail && cEmail.value) {
+          fetch('/api/emails?type=cart-abandon-complete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: cEmail.value.trim() }),
+          }).catch(function() {});
+        }
         window.location.href = result.data.url;
       } else {
         var errMsg = result.data.error
