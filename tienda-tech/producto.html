@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0FVJFMXJWB');</script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title id="pp-title">Producto | ZoneTechOnline</title>
+  <meta name="description" id="pp-desc" content="Tecnología premium con garantía oficial 2 años. Envío gratuito. Devolución 30 días hábiles.">
+  <link rel="canonical" id="pp-canonical" href="https://www.zonetechonline.com/producto/">
+  <meta property="og:type" content="product">
+  <meta property="og:url" id="pp-og-url" content="https://www.zonetechonline.com/producto/">
+  <meta property="og:title" id="pp-og-title" content="ZoneTechOnline">
+  <meta property="og:description" id="pp-og-desc" content="">
+  <meta property="og:image" id="pp-og-image" content="https://www.zonetechonline.com/img/og-cover.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ZoneTechOnline">
+  <script type="application/ld+json" id="pp-schema">{"@context":"https://schema.org"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* ── Product Page Layout ── */
+    .pp-wrap{max-width:1200px;margin:0 auto;padding:100px 24px 80px}
+    .pp-breadcrumb{font-size:12.5px;color:var(--text-3);margin-bottom:28px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .pp-breadcrumb a{color:var(--text-3);text-decoration:none;transition:.15s}
+    .pp-breadcrumb a:hover{color:var(--accent)}
+    .pp-breadcrumb span{opacity:.5}
+
+    /* ── Hero grid ── */
+    .pp-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:72px}
+    @media(max-width:768px){.pp-hero{grid-template-columns:1fr;gap:28px}}
+
+    /* ── Gallery ── */
+    .pp-gallery{position:sticky;top:90px}
+    .pp-main-img-wrap{position:relative;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+    .pp-main-img{width:100%;height:100%;object-fit:contain;padding:20px}
+    .pp-thumbs{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .pp-thumb{width:64px;height:64px;background:var(--bg-card);border:2px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.15s}
+    .pp-thumb:hover,.pp-thumb.active{border-color:var(--accent)}
+    .pp-thumb img{width:100%;height:100%;object-fit:contain;padding:4px}
+    .pp-gal-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);border:none;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;z-index:2;transition:.15s}
+    .pp-gal-nav:hover{background:var(--accent)}
+    .pp-gal-nav.prev{left:10px}
+    .pp-gal-nav.next{right:10px}
+
+    /* ── Info panel ── */
+    .pp-info{}
+    .pp-brand{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+    .pp-name{font-size:clamp(22px,3.5vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1.2;margin:0 0 16px;color:var(--text)}
+    .pp-price-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .pp-price{font-size:32px;font-weight:800;color:var(--text)}
+    .pp-old-price{font-size:18px;color:var(--text-3);text-decoration:line-through}
+    .pp-savings{background:rgba(52,211,153,.12);color:#34d399;font-size:13px;font-weight:700;padding:4px 12px;border-radius:100px}
+    .pp-trust-strip{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+    .pp-trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-2);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:8px;padding:7px 12px}
+    .pp-trust-item svg{color:var(--accent);flex-shrink:0}
+
+    /* ── CTA ── */
+    .pp-cta-main{width:100%;padding:16px 24px;background:var(--accent);border:none;border-radius:12px;color:#fff;font-size:16px;font-weight:700;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:.2s;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
+    .pp-cta-main:hover{background:#5254cc;transform:translateY(-1px);box-shadow:0 8px 28px rgba(99,102,241,.4)}
+    .pp-cta-main:disabled{opacity:.45;cursor:not-allowed;transform:none}
+    .pp-cta-sec{width:100%;padding:13px 24px;background:transparent;border:1px solid var(--border);border-radius:12px;color:var(--text-2);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:20px}
+    .pp-cta-sec:hover{border-color:var(--accent);color:var(--accent)}
+    .pp-pay-row{display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap}
+    .pp-pay-chip{font-size:11px;font-weight:700;color:var(--text-3);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:3px 9px;letter-spacing:.04em}
+
+    /* ── Para quién ── */
+    .pp-section{margin-bottom:56px}
+    .pp-section-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+    .pp-section h2{font-size:clamp(18px,2.8vw,26px);font-weight:700;letter-spacing:-.03em;margin:0 0 20px;color:var(--text)}
+    .pp-para-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:600px){.pp-para-grid{grid-template-columns:1fr}}
+    .pp-para-card{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:14px;padding:20px}
+    .pp-para-card h4{font-size:13px;font-weight:700;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .pp-para-card.yes h4{color:#34d399}
+    .pp-para-card.no h4{color:#f87171}
+    .pp-para-list{list-style:none;padding:0;margin:0}
+    .pp-para-list li{font-size:13px;color:var(--text-2);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+    .pp-para-list li:last-child{border-bottom:none}
+    .pp-para-list.yes li::before{content:'✓';color:#34d399;font-weight:700;flex-shrink:0;margin-top:1px}
+    .pp-para-list.no li::before{content:'✗';color:#f87171;font-weight:700;flex-shrink:0;margin-top:1px}
+
+    /* ── Specs ── */
+    .pp-specs-table{width:100%;border-collapse:collapse}
+    .pp-specs-table tr{border-bottom:1px solid var(--border)}
+    .pp-specs-table tr:last-child{border-bottom:none}
+    .pp-specs-table td{padding:11px 0;font-size:13.5px}
+    .pp-specs-table td:first-child{color:var(--text-3);width:44%;padding-right:16px}
+    .pp-specs-table td:last-child{color:var(--text-1);font-weight:500}
+
+    /* ── Upsell ── */
+    .pp-upsell{background:linear-gradient(135deg,rgba(99,102,241,.07),rgba(168,85,247,.05));border:1px solid rgba(99,102,241,.2);border-radius:20px;padding:28px;margin-bottom:56px}
+    .pp-upsell-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;display:block}
+    .pp-upsell h3{font-size:17px;font-weight:700;color:var(--text);margin:0 0 16px}
+    .pp-upsell-card{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:16px;cursor:pointer;transition:.2s;text-decoration:none}
+    .pp-upsell-card:hover{border-color:var(--accent);transform:translateX(4px)}
+    .pp-upsell-img{width:72px;height:72px;background:var(--bg-card);border-radius:10px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .pp-upsell-img img{width:100%;height:100%;object-fit:contain;padding:6px}
+    .pp-upsell-info{flex:1}
+    .pp-upsell-info small{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em}
+    .pp-upsell-info strong{display:block;font-size:14px;color:var(--text-1);margin:3px 0}
+    .pp-upsell-price{font-size:13px;color:var(--accent);font-weight:600}
+    .pp-upsell-diff{font-size:11px;color:var(--text-3)}
+    .pp-upsell-arrow{color:var(--accent);flex-shrink:0}
+
+    /* ── Related ── */
+    .pp-related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+
+    /* ── FAQ ── */
+    .pp-faq-list{list-style:none;padding:0;margin:0}
+    .pp-faq-item{border-bottom:1px solid var(--border)}
+    .pp-faq-item:last-child{border-bottom:none}
+    .pp-faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 0;cursor:pointer;font-size:14px;font-weight:600;color:var(--text-1);gap:12px;user-select:none}
+    .pp-faq-q svg{flex-shrink:0;transition:.2s;color:var(--accent)}
+    .pp-faq-item.open .pp-faq-q svg{transform:rotate(45deg)}
+    .pp-faq-a{display:none;font-size:13.5px;color:var(--text-2);line-height:1.75;padding-bottom:16px}
+    .pp-faq-item.open .pp-faq-a{display:block}
+
+    /* ── Trust footer ── */
+    .pp-trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+    .pp-trust-block{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:14px;padding:20px 18px;text-align:center}
+    .pp-trust-block svg{color:var(--accent);margin-bottom:10px}
+    .pp-trust-block strong{display:block;font-size:13px;font-weight:700;color:var(--text-1);margin-bottom:4px}
+    .pp-trust-block span{font-size:12px;color:var(--text-3);line-height:1.5}
+
+    /* ── Sticky mobile CTA ── */
+    .pp-sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg-card);border-top:1px solid var(--border);padding:12px 16px;z-index:200;backdrop-filter:blur(12px)}
+    @media(max-width:768px){.pp-sticky-cta{display:flex;align-items:center;gap:12px}}
+    .pp-sticky-price{font-size:18px;font-weight:800;color:var(--text);flex-shrink:0}
+    .pp-sticky-btn{flex:1;padding:13px;background:var(--accent);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:.2s}
+    .pp-sticky-btn:hover{background:#5254cc}
+    .pp-sticky-btn:disabled{opacity:.45;cursor:not-allowed}
+
+    /* ── Not found ── */
+    .pp-not-found{text-align:center;padding:120px 24px}
+    .pp-not-found h1{font-size:28px;font-weight:700;margin-bottom:12px}
+    .pp-not-found p{color:var(--text-2);margin-bottom:24px}
+    .pp-not-found a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    /* ── Loading skeleton ── */
+    .pp-loading{text-align:center;padding:120px 24px;color:var(--text-3)}
+    @keyframes pp-pulse{0%,100%{opacity:.4}50%{opacity:1}}
+    .pp-loading svg{animation:pp-pulse 1.5s ease infinite}
+  </style>
+</head>
+<body class="catalog-page">
+
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="/index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-item"><a href="/relojes" class="nav-link">Relojes</a></div>
+      <div class="nav-item"><a href="/auriculares" class="nav-link">Auriculares</a></div>
+      <div class="nav-item"><a href="/altavoces" class="nav-link">Altavoces</a></div>
+      <div class="nav-item"><a href="/gaming" class="nav-link">Gaming</a></div>
+      <div class="nav-item"><a href="/smartphones" class="nav-link">Smartphones</a></div>
+      <div class="nav-item"><a href="/blog" class="nav-link">Blog</a></div>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-login" id="login-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Acceder</span></button>
+      <button class="nav-icon-btn cart-btn" id="cart-toggle" aria-label="Carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- CART SIDEBAR (shared) -->
+<aside class="side-cart" id="side-cart">
+  <div class="side-cart-header"><h3>Tu Carrito</h3><button class="close-btn" id="close-cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="side-cart-body" id="cart-items"></div>
+  <div class="side-cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-total">€0</span></div>
+    <div class="cart-shipping"><span>Envío</span><span class="free-shipping">GRATIS</span></div>
+    <div class="cart-divider"></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-grand-total">€0</span></div>
+    <button class="btn-primary btn-block" id="checkout-btn">Finalizar compra · Pago seguro</button>
+    <button class="btn-ghost btn-block" id="continue-shopping">Seguir explorando</button>
+  </div>
+</aside>
+
+<!-- PRODUCT PAGE CONTENT -->
+<div class="pp-wrap" id="pp-content">
+  <div class="pp-loading">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    <p style="margin-top:16px;font-size:14px">Cargando producto...</p>
+  </div>
+</div>
+
+<!-- STICKY MOBILE CTA -->
+<div class="pp-sticky-cta" id="pp-sticky-cta" style="display:none">
+  <span class="pp-sticky-price" id="pp-sticky-price"></span>
+  <button class="pp-sticky-btn" id="pp-sticky-btn">Añadir al carrito</button>
+</div>
+
+<!-- MODALES (auth) -->
+<div class="modal" id="auth-modal" role="dialog" aria-modal="true">
+  <div class="modal-panel">
+    <button class="modal-close" id="close-auth"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div id="auth-content"></div>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<script src="/js/config.js" defer></script>
+<script src="/js/app.js" defer></script>
+<script>
+(function() {
+  // ── Category labels ──────────────────────────────────────────────────────
+  var CAT_LABELS = {
+    'relojes': 'Relojes y Smartwatches',
+    'auriculares': 'Auriculares',
+    'altavoces': 'Altavoces',
+    'teclados gaming': 'Teclados Gaming',
+    'smartphones': 'Smartphones'
+  };
+  var CAT_ROUTES = {
+    'relojes': '/relojes',
+    'auriculares': '/auriculares',
+    'altavoces': '/altavoces',
+    'teclados gaming': '/gaming',
+    'smartphones': '/smartphones'
+  };
+
+  // ── FAQs por categoría ───────────────────────────────────────────────────
+  var FAQS = {
+    'relojes': [
+      { q: '¿Es compatible con mi smartphone?', a: 'Sí, es compatible con iOS y Android. Descarga la app oficial de la marca para sincronizar datos, recibir notificaciones y personalizar el dispositivo.' },
+      { q: '¿Puedo nadar o ducharme con él?', a: 'Consulta la resistencia al agua en las especificaciones. 5 ATM: apto para natación superficial. 10 ATM: apto para inmersión y buceo. IP68: resistente al polvo y sumergible.' },
+      { q: '¿Cuánto dura realmente la batería?', a: 'La autonomía oficial se mide con uso normal. Si activas GPS continuo, frecuencia cardíaca permanente o notificaciones intensas, espera un 20–30% menos de autonomía.' },
+      { q: '¿Qué garantía tiene?', a: 'Garantía oficial europea de 2 años conforme al Real Decreto 7/2021. En caso de defecto de fabricación, gestionamos la reclamación contigo sin coste.' },
+      { q: '¿Cuándo lo recibiré?', a: 'Envío gratuito con MRW o SEUR. Entre 5 y 8 días hábiles desde la confirmación del pedido. Recibirás un email con el número de seguimiento cuando el paquete salga.' }
+    ],
+    'auriculares': [
+      { q: '¿Son compatibles con iPhone y Android?', a: 'Sí. Cualquier auricular Bluetooth es compatible con iOS y Android. La app de la marca añade EQ personalizada, ANC granular y otras funciones, pero no es obligatoria.' },
+      { q: '¿Qué diferencia hay entre ANC activo y pasivo?', a: 'ANC activo (electrónico): genera ondas sonoras opuestas para cancelar el ruido externo. ANC pasivo (aislamiento físico): los almohadillas bloquean el sonido mecánicamente. Los mejores modelos combinan ambos.' },
+      { q: '¿La batería se puede reemplazar?', a: 'En la mayoría de TWS y over-ear actuales no es reemplazable por el usuario, pero su vida útil supera los 3–5 años de uso cotidiano con ciclos de carga correctos.' },
+      { q: '¿Qué garantía tienen?', a: 'Garantía oficial europea de 2 años. Cubre defectos de fabricación, no daños por mal uso o pérdida.' },
+      { q: '¿Puedo devolverlos si no me convencen?', a: 'Sí. Tienes 30 días hábiles desde la recepción para devolver el producto sin dar explicaciones. Solo necesitas contactarnos por email o WhatsApp.' }
+    ],
+    'altavoces': [
+      { q: '¿Resiste la playa, la piscina o la lluvia?', a: 'Depende del modelo. IP67 = sumergible hasta 1m durante 30 minutos. IP56 = resistente a salpicaduras fuertes y polvo. Consulta siempre las especificaciones del modelo concreto.' },
+      { q: '¿Se pueden conectar dos altavoces en estéreo?', a: 'Muchos modelos JBL (PartyBoost) y Sony (Stereo Pair) soportan enlace entre dos unidades del mismo modelo para reproducción estéreo. Consulta las especificaciones.' },
+      { q: '¿La autonomía anunciada es real?', a: 'La batería oficial se mide a volumen medio (70%). A volumen máximo o con Bluetooth conectado de forma continua, la autonomía puede reducirse un 20–30%.' },
+      { q: '¿Qué garantía tiene?', a: 'Garantía oficial europea de 2 años. Gestionamos cualquier reclamación directamente con el fabricante.' },
+      { q: '¿Puedo devolverlo si no suena como esperaba?', a: 'Sí. 30 días hábiles de devolución sin preguntas desde la recepción del producto.' }
+    ],
+    'teclados gaming': [
+      { q: '¿Cuál es la diferencia entre switches Red, Brown y Blue?', a: 'Red: lineal, silencioso, respuesta rápida — ideal para gaming. Brown: pequeño bump táctil sin click sonoro — gaming + escritura. Blue: click audible y táctil — preferido para escritura, ruidoso en gaming competitivo.' },
+      { q: '¿Es compatible con Mac?', a: 'Funcionan por USB o Bluetooth en Mac, pero algunos atajos del teclado no corresponderán (AltGr, Windows key, etc.). El software de personalización puede no tener versión macOS.' },
+      { q: '¿Cuánto duran los switches mecánicos?', a: 'Los switches Cherry MX tienen una vida útil certificada de 100 millones de pulsaciones. Los clones de calidad (Kailh, Gateron) suelen garantizar 50–80 millones.' },
+      { q: '¿Qué garantía tiene?', a: 'Garantía oficial europea de 2 años conforme a normativa UE.' }
+    ],
+    'smartphones': [
+      { q: '¿Incluye cargador en la caja?', a: 'Muchos fabricantes (Apple, Samsung desde S21) ya no incluyen cargador por normativa medioambiental. Consulta las especificaciones del modelo. En ZoneTechOnline indicamos claramente qué viene incluido.' },
+      { q: '¿Cuántos años de actualizaciones tendrá?', a: 'Depende del fabricante y modelo. Google Pixel: 7 años. Samsung Galaxy S: 4 años de SO + 5 de seguridad. Xiaomi varía por modelo. Siempre indicamos los años de soporte en las especificaciones.' },
+      { q: '¿Es un terminal de distribución oficial europea?', a: 'Sí. Todos los smartphones en ZoneTechOnline son distribución oficial UE. Incluyen garantía de 2 años, instrucciones en español y servicio técnico autorizado.' },
+      { q: '¿Puedo devolverlo si no me convence?', a: '30 días hábiles de devolución sin preguntas. Si el terminal llegó precintado y lo has abierto, debe estar en condiciones de nueva venta (sin rayones, con todos los accesorios).' }
+    ]
+  };
+
+  // ── Genera "Para quién" dinámicamente ───────────────────────────────────
+  function getParaQuien(product) {
+    var para = [], noPara = [];
+    var cat = product.category;
+    var specs = product.specs || {};
+    var precio = product.price;
+
+    if (cat === 'relojes') {
+      if (specs['GPS'] && (specs['GPS'].toLowerCase().includes('integrado') || specs['GPS'].toLowerCase().includes('multibanda'))) {
+        para.push('Corres, vas en bici o haces senderismo y necesitas GPS preciso sin llevar el móvil');
+      }
+      if (specs['Resistencia'] && specs['Resistencia'].includes('ATM')) {
+        para.push('Quieres llevarlo en la piscina, ducha o playa sin preocuparte');
+      }
+      if (specs['SpO₂'] === 'Sí' || specs['Oxígeno en sangre'] === 'Sí') {
+        para.push('Te interesa monitorizar tu salud más allá de los pasos diarios');
+      }
+      if (precio < 80) {
+        para.push('Buscas tu primer smartwatch sin gastar más de lo necesario');
+        noPara.push('Necesitas GPS integrado, ECG o métricas avanzadas de deporte');
+        noPara.push('Quieres algo para entrenamiento serio de running o ciclismo');
+      } else if (precio >= 300) {
+        para.push('El deporte es parte de tu vida y quieres métricas que de verdad marquen la diferencia');
+        noPara.push('Solo quieres ver notificaciones y la hora — hay opciones más económicas');
+      } else {
+        para.push('Quieres un smartwatch completo sin pagar precio de gama alta');
+      }
+      if (!para.length) para.push('Quieres un dispositivo que haga de verdad lo que promete');
+    }
+
+    if (cat === 'auriculares') {
+      var hasANC = specs['ANC'] === 'Sí' || (product.description || '').toLowerCase().includes('anc') || (product.description || '').toLowerCase().includes('cancelaci');
+      if (hasANC) {
+        para.push('Trabajas en oficina abierta, usas transporte público o necesitas concentración');
+      }
+      if (precio >= 200) {
+        para.push('La calidad de sonido importa: escuchas música, podcast o haces videollamadas largas');
+        para.push('Buscas auriculares que aún funcionen bien en 3–5 años');
+        noPara.push('Necesitas algo barato para el gimnasio — hay opciones mejores a menos precio');
+      } else {
+        para.push('Quieres buena calidad de audio sin gastar en la gama más alta');
+      }
+      para.push('Valoras la comodidad en uso prolongado de más de 2 horas');
+    }
+
+    if (cat === 'altavoces') {
+      var isOutdoor = (product.description || '').toLowerCase().includes('exterior') || (product.description || '').toLowerCase().includes('outdoor') || (product.description || '').toLowerCase().includes('ip6');
+      if (isOutdoor) {
+        para.push('Quieres música en la playa, piscina, camping o espacios al aire libre');
+        para.push('Necesitas algo robusto que aguante golpes, agua y polvo');
+      } else {
+        para.push('Buscas un altavoz para el hogar con buena calidad de sonido');
+      }
+      para.push('Valoras la autonomía real: quieres escuchar sin enchufar durante horas');
+    }
+
+    if (cat === 'teclados gaming') {
+      para.push('Juegas regularmente y la respuesta del teclado importa en tu rendimiento');
+      para.push('También escribes mucho (trabajo, código, escritura) y quieres un teclado que aguante');
+      noPara.push('Solo necesitas un teclado de uso ocasional — los mecánicos son más caros sin necesidad');
+    }
+
+    if (cat === 'smartphones') {
+      if (precio >= 400) {
+        para.push('El smartphone es una herramienta de trabajo y lo usas intensamente todo el día');
+        para.push('Valoras la cámara, el rendimiento y los años de actualizaciones garantizadas');
+        noPara.push('Solo necesitas llamar, WhatsApp y redes sociales — hay opciones igual de válidas por menos');
+      } else {
+        para.push('Quieres un smartphone completo con 5G sin gastar en gama alta');
+        para.push('El rendimiento básico y la autonomía importan más que tener lo mejor del mercado');
+      }
+    }
+
+    // Ensure minimum content
+    if (!para.length) para.push('Quieres tecnología de calidad con garantía oficial y soporte real');
+    if (!noPara.length && precio >= 200) noPara.push('Buscas la opción más barata del mercado — este modelo prioriza calidad sobre precio');
+
+    return { para: para.slice(0, 3), noPara: noPara.slice(0, 2) };
+  }
+
+  // ── Renderiza la página de producto ─────────────────────────────────────
+  function renderProductPage() {
+    // Leer ID desde la ruta /producto/123
+    var pathParts = window.location.pathname.split('/').filter(Boolean);
+    var rawId = pathParts[pathParts.length - 1];
+    var productId = parseInt(rawId, 10);
+
+    var wrap = document.getElementById('pp-content');
+    if (!wrap) return;
+
+    // Esperar a que PRODUCTS esté disponible
+    if (typeof PRODUCTS === 'undefined') {
+      setTimeout(renderProductPage, 50);
+      return;
+    }
+
+    var product = PRODUCTS.find(function(p) { return p.id === productId; });
+
+    if (!product) {
+      wrap.innerHTML = '<div class="pp-not-found"><h1>Producto no encontrado</h1><p>Este producto no existe o ya no está disponible en el catálogo.</p><a href="/catalogo.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 5l-7 7 7 7"/></svg> Ver catálogo completo</a></div>';
+      return;
+    }
+
+    var isOOS = product.inStock === false;
+
+    // ── Meta tags dinámicos ──────────────────────────────────────────────
+    var metaTitle = product.name + ' — Garantía oficial 2 años | ZoneTechOnline';
+    var metaDesc = (product.description || '').slice(0, 155) + ' Garantía oficial 2 años. Envío gratuito 5-8 días. Devolución 30 días hábiles.';
+    var canonicalUrl = 'https://www.zonetechonline.com/producto/' + product.id;
+
+    document.getElementById('pp-title').textContent = metaTitle;
+    document.getElementById('pp-desc').setAttribute('content', metaDesc);
+    document.getElementById('pp-canonical').setAttribute('href', canonicalUrl);
+    document.getElementById('pp-og-url').setAttribute('content', canonicalUrl);
+    document.getElementById('pp-og-title').setAttribute('content', metaTitle);
+    document.getElementById('pp-og-desc').setAttribute('content', metaDesc);
+    if (product.image) document.getElementById('pp-og-image').setAttribute('content', 'https://www.zonetechonline.com/' + product.image);
+
+    // ── Schema.org Product ───────────────────────────────────────────────
+    var schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      brand: { '@type': 'Brand', name: product.brand },
+      description: product.description || '',
+      image: product.image ? 'https://www.zonetechonline.com/' + product.image : '',
+      offers: {
+        '@type': 'Offer',
+        price: product.price,
+        priceCurrency: 'EUR',
+        availability: isOOS ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+        url: canonicalUrl,
+        seller: { '@type': 'Organization', name: 'ZoneTechOnline' },
+        warranty: { '@type': 'WarrantyPromise', durationOfWarranty: { '@type': 'QuantitativeValue', value: 2, unitCode: 'ANN' } }
+      }
+    };
+    document.getElementById('pp-schema').textContent = JSON.stringify(schema);
+
+    // ── Galería ──────────────────────────────────────────────────────────
+    var imgs = (product.images && product.images.length) ? product.images : (product.image ? [product.image] : []);
+    var currentImgIdx = 0;
+
+    var thumbsHTML = imgs.length > 1 ? imgs.map(function(src, i) {
+      return '<div class="pp-thumb' + (i === 0 ? ' active' : '') + '" onclick="ppThumb(' + i + ')">' +
+        '<img src="' + src + '" alt="" onerror="this.parentElement.style.display=\'none\'">' +
+        '</div>';
+    }).join('') : '';
+
+    var navBtns = imgs.length > 1 ?
+      '<button class="pp-gal-nav prev" onclick="ppNav(-1)"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M7 1.5L3 5l4 3.5" stroke="currentColor" stroke-width="2"/></svg></button>' +
+      '<button class="pp-gal-nav next" onclick="ppNav(1)"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M3 1.5L7 5l-4 3.5" stroke="currentColor" stroke-width="2"/></svg></button>' : '';
+
+    // ── Precio y descuento ───────────────────────────────────────────────
+    var savings = product.oldPrice ? Math.round(product.oldPrice - product.price) : 0;
+    var discountPct = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
+    var priceHTML = '<span class="pp-price">€' + product.price.toLocaleString('es-ES', { minimumFractionDigits: 2 }) + '</span>';
+    if (product.oldPrice) priceHTML += '<span class="pp-old-price">€' + product.oldPrice.toLocaleString('es-ES') + '</span>';
+    if (savings > 0) priceHTML += '<span class="pp-savings">Ahorras ' + savings + '€</span>';
+
+    // ── Specs ────────────────────────────────────────────────────────────
+    var specsHTML = '';
+    if (product.specs) {
+      var filteredSpecs = Object.keys(product.specs).filter(function(k) {
+        return k !== 'SKU' && k !== 'P/N Depau';
+      });
+      specsHTML = filteredSpecs.map(function(k) {
+        return '<tr><td>' + k + '</td><td>' + product.specs[k] + '</td></tr>';
+      }).join('');
+    }
+
+    // ── Para quién ───────────────────────────────────────────────────────
+    var pq = getParaQuien(product);
+    var paraHTML = pq.para.map(function(t) { return '<li>' + t + '</li>'; }).join('');
+    var noParaHTML = pq.noPara.map(function(t) { return '<li>' + t + '</li>'; }).join('');
+
+    // ── Upsell ───────────────────────────────────────────────────────────
+    var upsellProd = null;
+    var upsellCandidates = PRODUCTS.filter(function(p) {
+      return p.id !== product.id && p.category === product.category &&
+             p.price > product.price * 1.15 && p.price <= product.price * 2.8 &&
+             p.inStock !== false;
+    }).sort(function(a, b) { return a.price - b.price; });
+    if (upsellCandidates.length) upsellProd = upsellCandidates[0];
+
+    var upsellHTML = '';
+    if (upsellProd) {
+      var diff = Math.round(upsellProd.price - product.price);
+      upsellHTML = '<div class="pp-upsell">' +
+        '<span class="pp-upsell-label">El siguiente nivel</span>' +
+        '<h3>¿Por ' + diff + '€ más, merece la pena?</h3>' +
+        '<a href="/producto/' + upsellProd.id + '" class="pp-upsell-card">' +
+          '<div class="pp-upsell-img">' + (upsellProd.image ? '<img src="' + upsellProd.image + '" alt="' + upsellProd.name + '">' : '') + '</div>' +
+          '<div class="pp-upsell-info">' +
+            '<small>' + upsellProd.brand + '</small>' +
+            '<strong>' + upsellProd.name + '</strong>' +
+            '<span class="pp-upsell-price">€' + upsellProd.price.toLocaleString('es-ES', { minimumFractionDigits: 2 }) + '</span>' +
+            '<span class="pp-upsell-diff">+' + diff + '€ respecto a este modelo</span>' +
+          '</div>' +
+          '<svg class="pp-upsell-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+        '</a>' +
+      '</div>';
+    }
+
+    // ── Relacionados ─────────────────────────────────────────────────────
+    var related = PRODUCTS.filter(function(p) {
+      return p.id !== product.id && p.category === product.category && p.inStock !== false;
+    }).slice(0, 4);
+    var relatedHTML = related.map(function(p) {
+      var pDisc = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+      return '<a href="/producto/' + p.id + '" style="text-decoration:none">' +
+        '<article class="product-card" style="margin:0">' +
+          '<span class="product-brand">' + p.brand + '</span>' +
+          (pDisc > 0 ? '<span class="product-badge badge-oferta">-' + pDisc + '%</span>' : '') +
+          '<div class="product-img">' +
+            (p.image ? '<img class="product-real-img" src="' + p.image + '" alt="' + p.name + '" loading="lazy" width="300" height="220">' : '') +
+          '</div>' +
+          '<div class="product-info">' +
+            '<h3 class="product-name">' + p.name + '</h3>' +
+            '<div class="product-price-row">' +
+              '<span class="product-price">€' + p.price.toLocaleString() + '</span>' +
+              (p.oldPrice ? '<span class="product-old-price">€' + p.oldPrice.toLocaleString() + '</span>' : '') +
+            '</div>' +
+            '<div class="product-actions"><button class="btn-cart" onclick="event.preventDefault();addToCart(' + p.id + ')">Añadir al carrito</button></div>' +
+          '</div>' +
+        '</article></a>';
+    }).join('');
+
+    // ── FAQs ─────────────────────────────────────────────────────────────
+    var faqs = FAQS[product.category] || FAQS['relojes'];
+    var faqHTML = faqs.map(function(f, i) {
+      return '<li class="pp-faq-item" id="faq-' + i + '">' +
+        '<div class="pp-faq-q" onclick="ppFaqToggle(' + i + ')">' +
+          f.q +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>' +
+        '</div>' +
+        '<div class="pp-faq-a">' + f.a + '</div>' +
+      '</li>';
+    }).join('');
+
+    // ── CTA button ───────────────────────────────────────────────────────
+    var ctaBtn = isOOS
+      ? '<button class="pp-cta-main" disabled>Sin stock temporalmente</button>'
+      : '<button class="pp-cta-main" id="pp-add-btn" onclick="addToCart(' + product.id + ');showToast(\'' + product.name.replace(/'/g, "\\'") + ' añadido al carrito\')">Añadir al carrito · €' + product.price.toLocaleString('es-ES', { minimumFractionDigits: 2 }) + '</button>';
+
+    var catLabel = CAT_LABELS[product.category] || product.category;
+    var catRoute = CAT_ROUTES[product.category] || '/catalogo.html';
+
+    // ── Full HTML ────────────────────────────────────────────────────────
+    wrap.innerHTML =
+      // Breadcrumb
+      '<nav class="pp-breadcrumb"><a href="/">Inicio</a><span>›</span><a href="' + catRoute + '">' + catLabel + '</a><span>›</span><span style="color:var(--text-1)">' + product.name + '</span></nav>' +
+
+      // Hero
+      '<div class="pp-hero">' +
+        // Gallery
+        '<div class="pp-gallery">' +
+          '<div class="pp-main-img-wrap" id="pp-gallery-wrap">' +
+            navBtns +
+            (imgs.length ? '<img id="pp-main-img" class="pp-main-img" src="' + imgs[0] + '" alt="' + product.name + '" fetchpriority="high">' : '<div style="padding:40px;opacity:.3">' + getProductSVG(product.category, '#6366f1') + '</div>') +
+          '</div>' +
+          (thumbsHTML ? '<div class="pp-thumbs">' + thumbsHTML + '</div>' : '') +
+        '</div>' +
+
+        // Info
+        '<div class="pp-info">' +
+          '<div class="pp-brand">' + product.brand + '</div>' +
+          '<h1 class="pp-name">' + product.name + '</h1>' +
+          '<div class="pp-price-row">' + priceHTML + '</div>' +
+          '<div class="pp-trust-strip">' +
+            '<span class="pp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantía oficial 2 años</span>' +
+            '<span class="pp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Pago 100% seguro</span>' +
+            '<span class="pp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Devolución 30 días</span>' +
+            '<span class="pp-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Envío gratis · 5–8 días</span>' +
+          '</div>' +
+          ctaBtn +
+          '<button class="pp-cta-sec" onclick="toggleWishlist(' + product.id + ', this)">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
+            'Guardar en mi lista de deseos' +
+          '</button>' +
+          '<div class="pp-pay-row">' +
+            '<span style="font-size:11px;color:var(--text-3);margin-right:4px">Paga con</span>' +
+            '<span class="pp-pay-chip">VISA</span>' +
+            '<span class="pp-pay-chip">MASTERCARD</span>' +
+            '<span class="pp-pay-chip">BIZUM</span>' +
+            '<span class="pp-pay-chip">PAYPAL</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+
+      // Descripción + Specs
+      (product.description ? '<div class="pp-section"><span class="pp-section-label">Sobre este producto</span><h2>Qué es y para qué sirve</h2><p style="font-size:15px;color:var(--text-2);line-height:1.85">' + product.description + '</p></div>' : '') +
+
+      (specsHTML ? '<div class="pp-section"><span class="pp-section-label">Especificaciones</span><h2>Ficha técnica completa</h2><table class="pp-specs-table">' + specsHTML + '</table></div>' : '') +
+
+      // Para quién
+      '<div class="pp-section"><span class="pp-section-label">Perfil de usuario</span><h2>¿Es este producto para ti?</h2>' +
+        '<div class="pp-para-grid">' +
+          '<div class="pp-para-card yes"><h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Es para ti si...</h4><ul class="pp-para-list yes">' + paraHTML + '</ul></div>' +
+          (noParaHTML ? '<div class="pp-para-card no"><h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Quizás no si...</h4><ul class="pp-para-list no">' + noParaHTML + '</ul></div>' : '') +
+        '</div>' +
+      '</div>' +
+
+      // Upsell
+      upsellHTML +
+
+      // Relacionados
+      (related.length ? '<div class="pp-section"><span class="pp-section-label">También puede interesarte</span><h2>Otros productos en ' + catLabel + '</h2><div class="pp-related-grid">' + relatedHTML + '</div></div>' : '') +
+
+      // FAQ
+      '<div class="pp-section"><span class="pp-section-label">Preguntas frecuentes</span><h2>Lo que más nos preguntan</h2><ul class="pp-faq-list">' + faqHTML + '</ul></div>' +
+
+      // Trust block
+      '<div class="pp-section"><span class="pp-section-label">Por qué comprar aquí</span><h2>Tu compra, protegida</h2>' +
+        '<div class="pp-trust-grid">' +
+          '<div class="pp-trust-block"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><strong>Garantía oficial 2 años</strong><span>Normativa europea. Gestionamos cualquier reclamación contigo.</span></div>' +
+          '<div class="pp-trust-block"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg><strong>Devolución 30 días</strong><span>Sin preguntas. Contacta por email o WhatsApp y lo gestionamos.</span></div>' +
+          '<div class="pp-trust-block"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><strong>Pago seguro</strong><span>Stripe con 3D Secure. Bizum y PayPal disponibles. SSL activo.</span></div>' +
+          '<div class="pp-trust-block"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg><strong>Envío gratis · 5–8 días</strong><span>MRW o SEUR. Recibirás tracking cuando salga tu pedido.</span></div>' +
+        '</div>' +
+      '</div>';
+
+    // ── Sticky CTA mobile ────────────────────────────────────────────────
+    var stickyCta = document.getElementById('pp-sticky-cta');
+    var stickyPrice = document.getElementById('pp-sticky-price');
+    var stickyBtn = document.getElementById('pp-sticky-btn');
+    if (stickyCta && stickyPrice) {
+      stickyPrice.textContent = '€' + product.price.toLocaleString('es-ES', { minimumFractionDigits: 2 });
+      if (isOOS && stickyBtn) { stickyBtn.disabled = true; stickyBtn.textContent = 'Sin stock'; }
+      else if (stickyBtn) stickyBtn.onclick = function() { addToCart(product.id); showToast(product.name + ' añadido'); };
+    }
+
+    // Mostrar sticky al hacer scroll (después del botón principal)
+    window.addEventListener('scroll', function() {
+      var addBtn = document.getElementById('pp-add-btn');
+      if (!addBtn || !stickyCta) return;
+      var rect = addBtn.getBoundingClientRect();
+      stickyCta.style.display = rect.bottom < 0 ? 'flex' : 'none';
+    }, { passive: true });
+
+    // ── Funciones de galería ─────────────────────────────────────────────
+    var ppImgs = imgs;
+    var ppIdx = 0;
+    window.ppNav = function(dir) {
+      ppIdx = (ppIdx + dir + ppImgs.length) % ppImgs.length;
+      var el = document.getElementById('pp-main-img');
+      if (el) el.src = ppImgs[ppIdx];
+      document.querySelectorAll('.pp-thumb').forEach(function(t, i) { t.classList.toggle('active', i === ppIdx); });
+    };
+    window.ppThumb = function(idx) {
+      ppIdx = idx;
+      var el = document.getElementById('pp-main-img');
+      if (el) el.src = ppImgs[ppIdx];
+      document.querySelectorAll('.pp-thumb').forEach(function(t, i) { t.classList.toggle('active', i === ppIdx); });
+    };
+
+    // ── FAQ toggle ───────────────────────────────────────────────────────
+    window.ppFaqToggle = function(idx) {
+      var item = document.getElementById('faq-' + idx);
+      if (item) item.classList.toggle('open');
+    };
+  }
+
+  // Esperar DOMContentLoaded y PRODUCTS
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(renderProductPage, 80);
+  });
+})();
+</script>
+</body>
+</html>
