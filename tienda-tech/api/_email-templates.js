@@ -377,7 +377,51 @@ function orderCancelled({ name, email, orderNo, reason, total }) {
   };
 }
 
-// ─── 6. AUTO-REPLY CONTACTO ──────────────────────────────────────────────────
+// ─── 6. BIENVENIDA NEWSLETTER ────────────────────────────────────────────────
+function newsletterWelcome({ email }) {
+  return {
+    subject: '¡Estás dentro! Novedades ZoneTechOnline en tu bandeja 📩',
+    html: base(`
+      <div style="text-align:center;margin-bottom:28px;">${badge('📩', 'SUSCRITO/A')}</div>
+      <h1 style="font-size:26px;font-weight:800;color:#1a1a2e;margin:0 0 14px;text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        ¡Ya eres parte de la comunidad!
+      </h1>
+      <p style="font-size:15px;color:#555;line-height:1.7;margin:0 0 24px;text-align:center;">
+        Desde ahora recibirás en <strong>${email}</strong> nuestras novedades, guías de compra y ofertas exclusivas.<br>Solo cuando merezca la pena abrirlo.
+      </p>
+      ${divider()}
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:24px;">
+        <tr>
+          <td width="30%" style="text-align:center;padding:16px 6px;background:#f9f9fc;border-radius:10px;">
+            <div style="font-size:24px;margin-bottom:6px;">🆕</div>
+            <div style="font-size:12px;font-weight:700;color:#1a1a2e;margin-bottom:3px;">Novedades</div>
+            <div style="font-size:11px;color:#888;">Primero en saberlo</div>
+          </td>
+          <td width="4%"></td>
+          <td width="30%" style="text-align:center;padding:16px 6px;background:#f9f9fc;border-radius:10px;">
+            <div style="font-size:24px;margin-bottom:6px;">💡</div>
+            <div style="font-size:12px;font-weight:700;color:#1a1a2e;margin-bottom:3px;">Guías de compra</div>
+            <div style="font-size:11px;color:#888;">Elige con criterio</div>
+          </td>
+          <td width="4%"></td>
+          <td width="30%" style="text-align:center;padding:16px 6px;background:#f9f9fc;border-radius:10px;">
+            <div style="font-size:24px;margin-bottom:6px;">🏷️</div>
+            <div style="font-size:12px;font-weight:700;color:#1a1a2e;margin-bottom:3px;">Ofertas exclusivas</div>
+            <div style="font-size:11px;color:#888;">Solo para suscriptores</div>
+          </td>
+        </tr>
+      </table>
+      ${btn('Ver el catálogo ahora', SITE_URL + '/catalogo.html')}
+      ${divider()}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin:0;line-height:1.7;">
+        Sin spam. Puedes cancelar en cualquier momento escribiendo a
+        <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};text-decoration:none;">${SUPPORT_EMAIL}</a>
+      </p>
+    `, '¡Gracias por suscribirte! Novedades y ofertas exclusivas en tu bandeja.')
+  };
+}
+
+// ─── 7. AUTO-REPLY CONTACTO ──────────────────────────────────────────────────
 function contactAutoReply({ name, email, subject, message }) {
   const firstName = (name || 'cliente').split(' ')[0];
   return {
@@ -407,4 +451,99 @@ function contactAutoReply({ name, email, subject, message }) {
   };
 }
 
-module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply };
+// ── CARRITO ABANDONADO ────────────────────────────────────────────────────────
+
+function cartItemsBlock(items) {
+  if (!items || !items.length) return '';
+  const rows = items.slice(0, 3).map(item => `
+    <tr>
+      <td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;color:#333;vertical-align:top;">
+        <strong>${item.name}</strong><br>
+        <span style="color:#888;font-size:12px;">${item.brand || ''}</span>
+      </td>
+      <td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;font-weight:700;color:#333;text-align:right;vertical-align:top;white-space:nowrap;">
+        €${(item.price * (item.qty || 1)).toLocaleString('es-ES', { minimumFractionDigits: 2 })}
+      </td>
+    </tr>`).join('');
+  return `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0;">${rows}</table>`;
+}
+
+function cartAbandon1({ name, email, items, cartTotal, cartUrl }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  const productName = items && items[0] ? items[0].name : 'tu selección';
+  return {
+    subject: `${firstName}, dejaste algo en tu carrito`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Tienes artículos esperándote</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Hola ${firstName}, dejaste <strong>${productName}</strong> en tu carrito.
+        Sigue disponible y con garantía oficial de 2 años.
+      </p>
+      ${cartItemsBlock(items)}
+      <p style="font-size:14px;color:#555;line-height:1.6;margin:16px 0 0;">
+        <strong>Total:</strong> €${(cartTotal || 0).toLocaleString('es-ES', { minimumFractionDigits: 2 })} · Envío gratuito incluido
+      </p>
+      ${btn('Completar mi pedido', cartUrl || SITE_URL + '/checkout.html')}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:20px;">
+        ¿Tienes alguna duda? Escríbenos a
+        <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">${SUPPORT_EMAIL}</a>
+      </p>
+    `, `Tu ${productName} sigue disponible. Completa tu pedido.`),
+  };
+}
+
+function cartAbandon2({ name, email, items, cartTotal, cartUrl }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  const productName = items && items[0] ? items[0].name : 'tu selección';
+  return {
+    subject: `${firstName}, recordatorio de tu carrito · Garantía oficial incluida`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Aún estás a tiempo</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Tu carrito con <strong>${productName}</strong> sigue aquí.
+        Todos nuestros productos incluyen garantía oficial europea de 2 años, devolución 30 días hábiles y envío gratuito.
+      </p>
+      ${cartItemsBlock(items)}
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0;background:#f9f9fc;border-radius:10px;padding:16px;">
+        <tr>
+          <td style="font-size:13px;color:#555;padding:4px 0;">
+            ✓ <strong>Garantía oficial 2 años</strong> conforme a normativa europea<br>
+            ✓ <strong>Devolución 30 días hábiles</strong> sin preguntas<br>
+            ✓ <strong>Envío gratuito</strong> con MRW/SEUR y seguimiento
+          </td>
+        </tr>
+      </table>
+      ${btn('Volver a mi carrito', cartUrl || SITE_URL + '/checkout.html')}
+    `, `Tu carrito sigue disponible. Garantía oficial 2 años incluida.`),
+  };
+}
+
+function cartAbandon3({ name, email, items, cartTotal, cartUrl, discountCode, discountPct }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  const hasDiscount = discountCode && cartTotal >= 100;
+  return {
+    subject: hasDiscount ? `${firstName}, un pequeño regalo para completar tu pedido` : `${firstName}, última oportunidad para tu carrito`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">
+        ${hasDiscount ? '🎁 Un detalle para ti' : 'Tu carrito sigue disponible'}
+      </p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Hola ${firstName},
+        ${hasDiscount
+          ? `tu carrito lleva varios días esperándote. Como detalle, aquí tienes un <strong>${discountPct || 5}% de descuento</strong> para tu pedido:`
+          : 'tu carrito sigue disponible. No queremos que pierdas tu selección.'
+        }
+      </p>
+      ${cartItemsBlock(items)}
+      ${hasDiscount ? `
+      <div style="background:linear-gradient(135deg,#6366f1,#a855f7);border-radius:12px;padding:20px;text-align:center;margin:20px 0;">
+        <p style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);">Tu código de descuento</p>
+        <p style="margin:0 0 8px;font-size:26px;font-weight:900;letter-spacing:.15em;color:#fff;">${discountCode}</p>
+        <p style="margin:0;font-size:12px;color:rgba(255,255,255,.7);">-${discountPct || 5}% · Válido 7 días · Pedidos desde €100</p>
+      </div>` : ''}
+      ${btn(hasDiscount ? `Usar mi descuento · €${((cartTotal || 0) * (1 - (discountPct || 5) / 100)).toLocaleString('es-ES', { minimumFractionDigits: 2 })}` : 'Completar mi pedido', cartUrl || SITE_URL + '/checkout.html')}
+    `, hasDiscount ? `Tu ${discountPct || 5}% de descuento está esperándote.` : 'Última oportunidad para completar tu pedido.'),
+  };
+}
+
+module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply, newsletterWelcome, cartAbandon1, cartAbandon2, cartAbandon3 };
