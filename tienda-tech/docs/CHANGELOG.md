@@ -3,6 +3,34 @@
 
 ---
 
+## [2026-07-29] — CRO Revenue Engine: Motor de ingresos P0 — Páginas de producto, upsell, cross-sell, checkout
+
+### P0 — Cambios críticos de conversión
+- `producto.html` (nueva página): Landing page completa por producto en `/producto/:id`
+  - Galería con navegación y miniaturas
+  - "Para quién es esto" generado dinámicamente por categoría y precio
+  - Specs completas, FAQs por categoría (5 preguntas por categoría)
+  - Upsell automático: calcula producto de misma categoría con precio 15–280% superior
+  - Relacionados: 4 productos de la misma categoría
+  - Schema.org Product (JSON-LD) inyectado vía JS para SEO
+  - Meta tags dinámicos (title, description, og) por producto
+  - CTA sticky en mobile (aparece al scrollar más allá del botón principal)
+  - Trust block: garantía, devolución, pago seguro, envío gratis
+- `vercel.json`: añadida rewrite `/producto/:id` → `/producto.html`
+- `js/app.js` — QuickView: añadido upsell inline + enlace "Ver ficha completa"
+- `js/app.js` — Carrito: cross-sell automático con lógica de complementariedad por categoría
+- `checkout.html`: campo de código de descuento colapsado por defecto (toggle link)
+
+### Documentación Phase P — Revenue Engine completa
+- `docs/CRO_REPORT.md`: auditoría completa del customer journey (Fases A–B)
+- `docs/REVENUE_ENGINE.md`: arquitectura del motor de ingresos, bundles, upsell por categoría
+- `docs/FUNNEL_ANALYSIS.md`: análisis por etapa, tasas estimadas, micro-conversiones, benchmark
+- `docs/AB_TESTING_PLAN.md`: 6 tests priorizados, arquitectura JS client-side, calendario
+- `docs/EMAIL_AUTOMATION.md`: 4 secuencias completas (carrito abandonado, bienvenida, post-compra, reactivación)
+- `docs/REVENUE_KPIS.md`: panel semanal/mensual, señales de alerta, proyecciones a 12 meses
+
+---
+
 ## [2026-07-27] — CBO Segunda Iteración: Auditoría + Correcciones + Fases E, H, I, J, L
 
 ### Auditoría Fase A — Correcciones pendientes (5 issues)
