@@ -546,6 +546,205 @@ function cartAbandon3({ name, email, items, cartTotal, cartUrl, discountCode, di
   };
 }
 
+// ── FASE 3: SECUENCIA BIENVENIDA (emails 2-5) ────────────────────────────────
+
+function welcomeSeq2({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `${firstName}, ¿sabes cómo elegimos cada producto?`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">No vendemos cualquier cosa</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
+        Hola ${firstName}, en ZoneTechOnline cada producto pasa por un filtro estricto antes de entrar al catálogo.
+        Si no tiene garantía oficial del fabricante en Europa — no entra. Si el soporte técnico es malo — no entra.
+      </p>
+      <div style="background:#f9f9fc;border-left:3px solid ${BRAND_COLOR};border-radius:4px;padding:16px 20px;margin-bottom:20px;">
+        <p style="margin:0;font-size:13.5px;color:#444;line-height:1.9;">
+          <strong>Nuestro criterio de selección:</strong><br>
+          ✓ Solo distribuidores oficiales europeos<br>
+          ✓ Garantía mínima 2 años conforme a normativa EU<br>
+          ✓ Soporte técnico real del fabricante<br>
+          ✓ Sin clones ni versiones paralelas grises
+        </p>
+      </div>
+      ${btn('Ver cómo seleccionamos nuestros productos', SITE_URL + '/nuestra-filosofia')}
+    `, `En ZoneTechOnline, cada producto pasa un filtro de calidad antes de entrar al catálogo.`),
+  };
+}
+
+function welcomeSeq3({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `Los wearables más valorados esta semana, ${firstName}`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Lo más destacado del catálogo</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">${firstName}, estos son los productos que más interesan a nuestros clientes ahora mismo:</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+        ${[
+          { name: 'Garmin Forerunner 55 Negro', cat: 'GPS Running', price: '289,10 €', url: SITE_URL + '/producto/29' },
+          { name: 'Sony WH-CH720N ANC', cat: 'Auriculares', price: '276,00 €', url: SITE_URL + '/producto/208' },
+          { name: 'Samsung Galaxy Watch 7 44mm', cat: 'Smartwatch', price: '279,99 €', url: SITE_URL + '/producto/16' },
+          { name: 'JBL Charge 6 Negro', cat: 'Altavoz Bluetooth', price: '170,60 €', url: SITE_URL + '/producto/131' },
+        ].map(p => `<tr><td style="padding:11px 0;border-bottom:1px solid #f0f0f5;vertical-align:top;"><a href="${p.url}" style="text-decoration:none;"><span style="font-size:13px;font-weight:700;color:#1a1a2e;">${p.name}</span><br><span style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.05em;">${p.cat}</span></a></td><td style="padding:11px 0;border-bottom:1px solid #f0f0f5;text-align:right;vertical-align:top;white-space:nowrap;"><span style="font-size:13px;font-weight:700;color:${BRAND_COLOR};">${p.price}</span></td></tr>`).join('')}
+      </table>
+      ${btn('Ver catálogo completo', SITE_URL + '/catalogo.html')}
+    `, `Los wearables más valorados esta semana en ZoneTechOnline.`),
+  };
+}
+
+function welcomeSeq4({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `Guía rápida: cómo elegir el wearable perfecto, ${firstName}`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">¿Cuál es tu caso de uso?</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        ${firstName}, antes de comprar cualquier wearable hazte esta pregunta: ¿cuál es el mejor <em>para lo que yo necesito</em>?
+      </p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+        <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;color:#333;"><strong>Si haces deporte / running</strong><br><span style="color:#888;">→ Garmin Forerunner 55 o Vívoactive 5. GPS real, batería de semanas.</span></td></tr>
+        <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;color:#333;"><strong>Si trabajas en casa o en oficina</strong><br><span style="color:#888;">→ Sony WH-CH720N ANC. Cancelación de ruido que cambia el trabajo remoto.</span></td></tr>
+        <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;color:#333;"><strong>Si quieres monitorizar tu salud</strong><br><span style="color:#888;">→ Samsung Galaxy Watch 7. ECG, tensión estimada y análisis de sueño avanzado.</span></td></tr>
+        <tr><td style="padding:10px 0;font-size:13px;color:#333;"><strong>Si buscas música sin cables en el gym</strong><br><span style="color:#888;">→ Sony WF-C510 o Nothing Ear. Ligereza, IPX4 y hasta 30h de batería.</span></td></tr>
+      </table>
+      ${btn('Usar el configurador para encontrar el tuyo', SITE_URL + '/#configurador')}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:16px;">¿Tienes dudas? <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">Escríbenos</a> — respondemos en menos de 24h.</p>
+    `, `Guía para elegir el wearable que mejor se adapta a tu estilo de vida.`),
+  };
+}
+
+function welcomeSeq5({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `${firstName}, ¿todavía buscando? Estamos aquí para ayudarte`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Lo que garantizamos en cada pedido</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
+        ${firstName}, si aún no has dado el paso puede ser por una razón válida. Queremos asegurarnos de que no sea por falta de información.
+      </p>
+      <div style="background:#f9f9fc;border-radius:12px;padding:20px;margin-bottom:20px;">
+        <p style="margin:0;font-size:13.5px;color:#444;line-height:1.9;">
+          ✓ <strong>Garantía oficial 2 años</strong> (Directiva EU 2019/771)<br>
+          ✓ <strong>Envío gratuito</strong> con seguimiento MRW/SEUR (5-8 días hábiles)<br>
+          ✓ <strong>Devolución 30 días hábiles</strong> sin preguntas<br>
+          ✓ <strong>Pago seguro</strong> con Stripe — tarjeta, Bizum, PayPal, Google Pay<br>
+          ✓ <strong>Soporte en español</strong> Lun–Vie 9–18h
+        </p>
+      </div>
+      ${btn('Explorar el catálogo', SITE_URL + '/catalogo.html')}
+      <p style="font-size:13px;color:#888;text-align:center;margin-top:16px;">¿Dudas antes de comprar? <a href="https://wa.me/34613640673" style="color:${BRAND_COLOR};">WhatsApp</a> · <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">${SUPPORT_EMAIL}</a></p>
+    `, `Todo lo que garantizamos en cada pedido de ZoneTechOnline.`),
+  };
+}
+
+// ── FASE 3: POST-COMPRA REVIEW ────────────────────────────────────────────────
+
+function postPurchaseReview({ name, email, orderNo, productName }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  const product = productName || 'tu nuevo producto';
+  return {
+    subject: `${firstName}, ¿qué tal tu ${product}? Cuéntanos`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">¿Ha llegado bien tu pedido?</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
+        Hola ${firstName}, han pasado unos días desde tu pedido ${orderNo ? `<strong>#${orderNo}</strong>` : ''} y nos gustaría saber cómo está funcionando <strong>${product}</strong>.
+      </p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Tu opinión ayuda a otros clientes a decidir mejor y nos ayuda a mejorar. Solo te tomará 2 minutos.
+      </p>
+      ${btn('Dejar mi valoración', SITE_URL + '/contacto.html')}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:20px;">
+        ¿Algo no está bien? <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">Escríbenos</a> — lo solucionamos.
+      </p>
+    `, `¿Qué tal tu experiencia con ${product}? Cuéntanos en 2 minutos.`),
+  };
+}
+
+// ── FASE 3: REACTIVACIÓN ─────────────────────────────────────────────────────
+
+function reactivation1({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `${firstName}, hace un mes que no sabemos de ti`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">¿Todo bien con tu compra?</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
+        Hola ${firstName}, hace un mes que compraste con nosotros. Esperamos que estés disfrutando de tu producto.
+      </p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Si tienes alguna duda técnica, quieres ampliar tu setup o simplemente explorar novedades — aquí seguimos con el mismo catálogo y los mismos compromisos.
+      </p>
+      ${btn('Ver novedades en el catálogo', SITE_URL + '/catalogo.html')}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:16px;">¿Duda con tu producto? <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">Escríbenos</a></p>
+    `, `Hace un mes que compraste con nosotros. ¿Qué tal todo?`),
+  };
+}
+
+function reactivation2({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `${firstName}, novedades que quizás te perdiste`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Dos meses — muchas novedades</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">${firstName}, desde tu última compra hemos incorporado nuevos modelos. Todo con los mismos compromisos de siempre.</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+        ${[
+          { name: 'Sony WF-C710N TWS ANC', cat: 'ANC + IP55 + 35h batería', price: '229,80 €', url: SITE_URL + '/producto/209' },
+          { name: 'Garmin Vívoactive 5', cat: 'GPS + ECG + 11 días batería', price: '330,75 €', url: SITE_URL + '/producto/30' },
+          { name: 'JBL Charge 6 Negro', cat: 'Altavoz IP67 + 20h', price: '170,60 €', url: SITE_URL + '/producto/131' },
+        ].map(p => `<tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;vertical-align:top;"><a href="${p.url}" style="text-decoration:none;"><span style="font-size:13px;font-weight:700;color:#1a1a2e;">${p.name}</span><br><span style="font-size:11px;color:#888;">${p.cat}</span></a></td><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;text-align:right;vertical-align:top;white-space:nowrap;"><span style="font-size:13px;font-weight:700;color:${BRAND_COLOR};">${p.price}</span></td></tr>`).join('')}
+      </table>
+      ${btn('Ver todo el catálogo', SITE_URL + '/catalogo.html')}
+    `, `Novedades en ZoneTechOnline que quizás te perdiste.`),
+  };
+}
+
+function reactivation3({ name, email }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  return {
+    subject: `${firstName}, un detalle por tu fidelidad`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Llevas 3 meses con nosotros 🙌</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
+        ${firstName}, hace ya 90 días de tu primera compra en ZoneTechOnline. Como agradecimiento, aquí tienes un descuento especial:
+      </p>
+      <div style="background:linear-gradient(135deg,#6366f1,#a855f7);border-radius:12px;padding:24px;text-align:center;margin:20px 0;">
+        <p style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);">Tu código exclusivo</p>
+        <p style="margin:0 0 8px;font-size:30px;font-weight:900;letter-spacing:.15em;color:#fff;">FIEL10</p>
+        <p style="margin:0;font-size:12px;color:rgba(255,255,255,.7);">-10% · Válido 15 días · Sin mínimo de compra</p>
+      </div>
+      ${btn('Usar mi descuento ahora', SITE_URL + '/catalogo.html')}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:16px;">Código válido 15 días desde la fecha de este email.</p>
+    `, `Un 10% de descuento como agradecimiento por tu fidelidad.`),
+  };
+}
+
+// ── FASE 3: NEWSLETTER MENSUAL ────────────────────────────────────────────────
+
+function newsletterMonthly({ subject: subj, month, products }) {
+  const featured = products || [
+    { name: 'Garmin Forerunner 55 Negro', cat: 'GPS Running · Garantía 2 años', price: '289,10 €', url: SITE_URL + '/producto/29' },
+    { name: 'Sony WH-CH720N ANC', cat: 'Auriculares · Cancelación de ruido', price: '276,00 €', url: SITE_URL + '/producto/208' },
+    { name: 'Samsung Galaxy Watch 7 44mm', cat: 'Smartwatch · ECG + Glucosa', price: '279,99 €', url: SITE_URL + '/producto/16' },
+    { name: 'Sony WF-C710N TWS ANC', cat: 'TWS · ANC + IP55 + 35h', price: '229,80 €', url: SITE_URL + '/producto/209' },
+  ];
+  return {
+    subject: subj || `ZoneTechOnline · Selección de ${month || 'este mes'}`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 8px;">Selección ${month || 'de este mes'}</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">Los productos que más nos han gustado este mes. Todos con garantía oficial 2 años y envío gratuito a España.</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">
+        ${featured.map(p => `<tr><td style="padding:12px 0;border-bottom:1px solid #f0f0f5;vertical-align:top;"><a href="${p.url}" style="text-decoration:none;"><span style="font-size:14px;font-weight:700;color:#1a1a2e;">${p.name}</span><br><span style="font-size:12px;color:#888;">${p.cat}</span></a></td><td style="padding:12px 0;border-bottom:1px solid #f0f0f5;text-align:right;vertical-align:top;white-space:nowrap;"><a href="${p.url}" style="text-decoration:none;font-size:14px;font-weight:700;color:${BRAND_COLOR};">${p.price}</a></td></tr>`).join('')}
+      </table>
+      ${btn('Ver catálogo completo', SITE_URL + '/catalogo.html')}
+      <p style="font-size:11px;color:#bbb;text-align:center;margin-top:20px;">
+        Recibes este email porque te suscribiste a las novedades de ZoneTechOnline.<br>
+        Para darte de baja, escríbenos a <a href="mailto:${SUPPORT_EMAIL}" style="color:#bbb;">${SUPPORT_EMAIL}</a>
+      </p>
+    `, `Selección de wearables premium de ${month || 'este mes'} — ZoneTechOnline`),
+  };
+}
+
 // ── WISHLIST REMINDER ─────────────────────────────────────────────────────────
 function wishlistReminder({ name, email, items, wishlistUrl }) {
   const firstName = (name || email || 'Hola').split(' ')[0];
@@ -588,4 +787,13 @@ function wishlistReminder({ name, email, items, wishlistUrl }) {
   };
 }
 
-module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply, newsletterWelcome, cartAbandon1, cartAbandon2, cartAbandon3, wishlistReminder };
+module.exports = {
+  welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled,
+  contactAutoReply, newsletterWelcome,
+  cartAbandon1, cartAbandon2, cartAbandon3,
+  wishlistReminder,
+  welcomeSeq2, welcomeSeq3, welcomeSeq4, welcomeSeq5,
+  postPurchaseReview,
+  reactivation1, reactivation2, reactivation3,
+  newsletterMonthly,
+};
