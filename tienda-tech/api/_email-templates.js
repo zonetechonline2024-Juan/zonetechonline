@@ -546,4 +546,46 @@ function cartAbandon3({ name, email, items, cartTotal, cartUrl, discountCode, di
   };
 }
 
-module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply, newsletterWelcome, cartAbandon1, cartAbandon2, cartAbandon3 };
+// ── WISHLIST REMINDER ─────────────────────────────────────────────────────────
+function wishlistReminder({ name, email, items, wishlistUrl }) {
+  const firstName = (name || email || 'Hola').split(' ')[0];
+  const count = (items || []).length;
+  const wishUrl = wishlistUrl || SITE_URL + '/lista-deseos.html';
+  const rows = (items || []).slice(0, 4).map(item => `
+    <tr>
+      <td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;color:#333;vertical-align:top;">
+        <strong>${item.name}</strong><br>
+        <span style="color:#888;font-size:12px;">${item.brand || ''}</span>
+      </td>
+      <td style="padding:10px 0;border-bottom:1px solid #f0f0f5;font-size:13px;font-weight:700;color:#333;text-align:right;vertical-align:top;white-space:nowrap;">
+        €${Number(item.price).toLocaleString('es-ES', { minimumFractionDigits: 2 })}
+      </td>
+    </tr>`).join('');
+  const itemsBlock = rows ? `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0;">${rows}</table>` : '';
+  return {
+    subject: `${firstName}, tienes ${count} producto${count !== 1 ? 's' : ''} esperando en tu lista de deseos`,
+    html: base(`
+      <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Tu lista de deseos te espera ❤️</p>
+      <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
+        Hola ${firstName}, tienes <strong>${count} producto${count !== 1 ? 's' : ''}</strong> guardado${count !== 1 ? 's' : ''} en tu lista de deseos en ZoneTechOnline. ¿Listo para añadirlo${count !== 1 ? 's' : ''} al carrito?
+      </p>
+      ${itemsBlock}
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0;background:#f9f9fc;border-radius:10px;padding:16px;">
+        <tr>
+          <td style="font-size:13px;color:#555;padding:4px 0;">
+            ✓ <strong>Garantía oficial 2 años</strong> conforme a normativa europea<br>
+            ✓ <strong>Devolución 30 días hábiles</strong> sin preguntas<br>
+            ✓ <strong>Envío gratuito</strong> con MRW/SEUR y seguimiento
+          </td>
+        </tr>
+      </table>
+      ${btn('Ver mi lista de deseos', wishUrl)}
+      <p style="font-size:12px;color:#aaa;text-align:center;margin-top:20px;">
+        Si no quieres recibir recordatorios, simplemente ignora este email.<br>
+        <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">${SUPPORT_EMAIL}</a>
+      </p>
+    `, `Tienes ${count} producto${count !== 1 ? 's' : ''} guardado${count !== 1 ? 's' : ''} en tu lista de deseos.`),
+  };
+}
+
+module.exports = { welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled, contactAutoReply, newsletterWelcome, cartAbandon1, cartAbandon2, cartAbandon3, wishlistReminder };
