@@ -1,6 +1,12 @@
 'use strict';
 const { sendEmail }                                          = require('./_send-email');
-const { welcome, orderConfirm, orderShipped, contactAutoReply, cartAbandon1, cartAbandon2, cartAbandon3, wishlistReminder } = require('./_email-templates');
+const {
+  welcome, orderConfirm, orderShipped, contactAutoReply,
+  cartAbandon1, cartAbandon2, cartAbandon3, wishlistReminder,
+  welcomeSeq2, welcomeSeq3, welcomeSeq4, welcomeSeq5,
+  postPurchaseReview, reactivation1, reactivation2, reactivation3,
+  newsletterMonthly,
+} = require('./_email-templates');
 const { rateLimit } = require('./_ratelimit');
 const { db }        = require('./_db');
 const logger        = require('./_logger');
@@ -273,12 +279,181 @@ module.exports = async (req, res) => {
         } catch (err) { logger.error('wishlist-reminder', err.message); }
       }
 
-      return res.status(200).json({ ok: true, sent, queues: { e1: (e1 || []).length, e2: (e2 || []).length, e3: (e3 || []).length, wl: (wl || []).length } });
+      // ── Secuencia bienvenida (emails 2-5) ──────────────────────────────────
+      const d3ago  = new Date(now - 3  * 86400000).toISOString();
+      const d7ago  = new Date(now - 7  * 86400000).toISOString();
+      const d4ago  = new Date(now - 4  * 86400000).toISOString();
+      const d3ago2 = new Date(now - 3  * 86400000).toISOString();
+
+      // Email 2: cliente creado hace 3-7 días, welcome_step=1
+      const ws2 = await db('customers', {
+        filters: ['welcome_step=eq.1', `created_at=lte.${d3ago}`, `created_at=gte.${d7ago}`],
+        limit: 30,
+      });
+      for (const c of (ws2 || [])) {
+        try {
+          const tpl = welcomeSeq2({ name: c.name, email: c.email });
+          await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
+          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 2, welcome_step_updated_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('welcome-seq-2', err.message); }
+      }
+
+      // Email 3: welcome_step=2, actualizado hace 4+ días
+      const ws3 = await db('customers', {
+        filters: ['welcome_step=eq.2', `welcome_step_updated_at=lte.${d4ago}`],
+        limit: 30,
+      });
+      for (const c of (ws3 || [])) {
+        try {
+          const tpl = welcomeSeq3({ name: c.name, email: c.email });
+          await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
+          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 3, welcome_step_updated_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('welcome-seq-3', err.message); }
+      }
+
+      // Email 4: welcome_step=3, actualizado hace 3+ días
+      const ws4 = await db('customers', {
+        filters: ['welcome_step=eq.3', `welcome_step_updated_at=lte.${d3ago2}`],
+        limit: 30,
+      });
+      for (const c of (ws4 || [])) {
+        try {
+          const tpl = welcomeSeq4({ name: c.name, email: c.email });
+          await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
+          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 4, welcome_step_updated_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('welcome-seq-4', err.message); }
+      }
+
+      // Email 5: welcome_step=4, actualizado hace 4+ días
+      const ws5 = await db('customers', {
+        filters: ['welcome_step=eq.4', `welcome_step_updated_at=lte.${d4ago}`],
+        limit: 30,
+      });
+      for (const c of (ws5 || [])) {
+        try {
+          const tpl = welcomeSeq5({ name: c.name, email: c.email });
+          await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
+          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 5, welcome_step_updated_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('welcome-seq-5', err.message); }
+      }
+
+      // ── Review post-compra (15 días) ────────────────────────────────────────
+      const d12ago = new Date(now - 12 * 86400000).toISOString();
+      const d18ago = new Date(now - 18 * 86400000).toISOString();
+      const reviewOrders = await db('orders', {
+        filters: [`created_at=lte.${d12ago}`, `created_at=gte.${d18ago}`, 'review_email_sent_at=is.null', 'status=neq.cancelled'],
+        select: 'id,customer_email,order_no',
+        limit: 30,
+      });
+      for (const ord of (reviewOrders || [])) {
+        if (!ord.customer_email) continue;
+        try {
+          const tpl = postPurchaseReview({ email: ord.customer_email, orderNo: ord.order_no });
+          await sendEmail({ to: ord.customer_email, subject: tpl.subject, html: tpl.html });
+          await db(`orders?id=eq.${ord.id}`, { method: 'PATCH', body: { review_email_sent_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('review-post-compra', err.message); }
+      }
+
+      // ── Reactivación ────────────────────────────────────────────────────────
+      // Busca pedidos en cada ventana → filtra por email sin reactivación previa
+      const reactWindows = [
+        { daysMin: 28, daysMax: 35, sentField: 'reactivation_1_sent_at', fn: reactivation1 },
+        { daysMin: 58, daysMax: 65, sentField: 'reactivation_2_sent_at', fn: reactivation2 },
+        { daysMin: 88, daysMax: 95, sentField: 'reactivation_3_sent_at', fn: reactivation3 },
+      ];
+      for (const win of reactWindows) {
+        const minAgo = new Date(now - win.daysMin * 86400000).toISOString();
+        const maxAgo = new Date(now - win.daysMax * 86400000).toISOString();
+        const orders = await db('orders', {
+          filters: [`created_at=lte.${minAgo}`, `created_at=gte.${maxAgo}`, 'status=neq.cancelled'],
+          select: 'customer_email',
+          limit: 50,
+        });
+        const seen = new Set();
+        for (const ord of (orders || [])) {
+          const email = ord.customer_email;
+          if (!email || seen.has(email)) continue;
+          seen.add(email);
+          try {
+            // Verificar que no tiene pedidos más recientes de daysMin días
+            const recent = await db('orders', {
+              filters: [`customer_email=eq.${encodeURIComponent(email)}`, `created_at=gte.${minAgo}`, 'status=neq.cancelled'],
+              select: 'id', limit: 1,
+            });
+            if (recent && recent.length) continue;
+            // Verificar que no se le ha enviado ya este email de reactivación
+            const cust = await db('customers', {
+              filters: [`email=eq.${encodeURIComponent(email)}`, `${win.sentField}=is.null`],
+              select: 'id,email,name', limit: 1,
+            });
+            if (!cust || !cust.length) continue;
+            const tpl = win.fn({ name: cust[0].name, email: cust[0].email });
+            await sendEmail({ to: cust[0].email, subject: tpl.subject, html: tpl.html });
+            await db(`customers?id=eq.${cust[0].id}`, { method: 'PATCH', body: { [win.sentField]: new Date().toISOString() } });
+            sent++;
+          } catch (err) { logger.error(`reactivation-${win.daysMin}`, err.message); }
+        }
+      }
+
+      return res.status(200).json({
+        ok: true, sent,
+        queues: {
+          e1: (e1 || []).length, e2: (e2 || []).length, e3: (e3 || []).length,
+          wl: (wl || []).length,
+          ws2: (ws2 || []).length, ws3: (ws3 || []).length, ws4: (ws4 || []).length, ws5: (ws5 || []).length,
+          reviews: (reviewOrders || []).length,
+        },
+      });
     } catch (err) {
       logger.error('emails:cart-recovery-run', err.message, logger.ctx(req));
       return res.status(500).json({ error: err.message });
     }
   }
 
-  return res.status(400).json({ error: 'type requerido: welcome | order-confirm | shipping | contact | cart-abandon | cart-recovery-run' });
+  // ── Newsletter mensual (envío manual) ──────────────────────────────────────
+  if (type === 'newsletter-send') {
+    const adminKey = process.env.ADMIN_API_KEY;
+    if (adminKey && req.headers['x-admin-key'] !== adminKey) {
+      return res.status(401).json({ error: 'No autorizado' });
+    }
+    try {
+      const ghPat  = process.env.GITHUB_PAT;
+      const ghRepo = 'zonetechonline2024-Juan/zonetechonline';
+      const ghPath = 'tienda-tech/data/subscribers.json';
+      const ghRes  = await fetch(
+        `https://api.github.com/repos/${ghRepo}/contents/${ghPath}`,
+        { headers: { Authorization: `token ${ghPat}`, 'User-Agent': 'ZoneTechOnline', Accept: 'application/vnd.github.v3+json' } }
+      );
+      if (!ghRes.ok) return res.status(500).json({ error: 'No se pudieron leer los suscriptores' });
+      const ghData      = await ghRes.json();
+      const subscribers = JSON.parse(Buffer.from(ghData.content, 'base64').toString('utf8'));
+
+      const { subject: subj, month, products } = req.body || {};
+      const tpl = newsletterMonthly({ subject: subj, month, products });
+
+      let sent = 0, errors = 0;
+      for (const sub of subscribers) {
+        if (!sub.email) continue;
+        try {
+          await sendEmail({ to: sub.email, subject: tpl.subject, html: tpl.html });
+          sent++;
+          await new Promise(r => setTimeout(r, 120));
+        } catch (err) {
+          logger.error('newsletter-send', err.message);
+          errors++;
+        }
+      }
+      return res.status(200).json({ ok: true, sent, errors, total: subscribers.length });
+    } catch (err) {
+      logger.error('emails:newsletter-send', err.message, logger.ctx(req));
+      return res.status(500).json({ error: err.message });
+    }
+  }
+
+  return res.status(400).json({ error: 'type requerido: welcome | order-confirm | shipping | contact | cart-abandon | cart-recovery-run | newsletter-send' });
 };
