@@ -5,6 +5,7 @@
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/producto/:id", "destination": "/producto.html" },
+    { "source": "/bundles",      "destination": "/bundles.html" },
     { "source": "/relojes",      "destination": "/catalogo.html" },
     { "source": "/auriculares",  "destination": "/catalogo.html" },
     { "source": "/altavoces",    "destination": "/catalogo.html" },
