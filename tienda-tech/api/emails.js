@@ -1,6 +1,6 @@
 'use strict';
 const { sendEmail }                                          = require('./_send-email');
-const { welcome, orderConfirm, orderShipped, contactAutoReply, cartAbandon1, cartAbandon2, cartAbandon3 } = require('./_email-templates');
+const { welcome, orderConfirm, orderShipped, contactAutoReply, cartAbandon1, cartAbandon2, cartAbandon3, wishlistReminder } = require('./_email-templates');
 const { rateLimit } = require('./_ratelimit');
 const { db }        = require('./_db');
 const logger        = require('./_logger');
@@ -83,6 +83,35 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true });
     } catch (err) {
       logger.error('emails:contact', err.message, logger.ctx(req));
+      return res.status(500).json({ error: err.message });
+    }
+  }
+
+  // ── Guardar wishlist para recordatorio ──
+  if (type === 'wishlist-save') {
+    const { email, name, items } = req.body || {};
+    if (!email || !items || !items.length) return res.status(400).json({ error: 'email e items requeridos' });
+    const safeEmail = String(email).toLowerCase().trim().slice(0, 200);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(safeEmail)) return res.status(400).json({ error: 'email inválido' });
+    try {
+      const existing = await db('wishlist_reminders', {
+        filters: [`email=eq.${safeEmail}`, 'reminder_sent_at=is.null'],
+        select: 'id', limit: 1,
+      });
+      if (existing && existing.length) {
+        await db(`wishlist_reminders?id=eq.${existing[0].id}`, {
+          method: 'PATCH',
+          body: { items, name: name ? String(name).slice(0, 100) : null, updated_at: new Date().toISOString() },
+        });
+      } else {
+        await db('wishlist_reminders', {
+          method: 'POST',
+          body: { email: safeEmail, name: name ? String(name).slice(0, 100) : null, items },
+        });
+      }
+      return res.status(200).json({ ok: true });
+    } catch (err) {
+      logger.error('emails:wishlist-save', err.message, logger.ctx(req));
       return res.status(500).json({ error: err.message });
     }
   }
@@ -224,7 +253,27 @@ module.exports = async (req, res) => {
         } catch (err) { logger.error('cart-recovery-3', err.message); }
       }
 
-      return res.status(200).json({ ok: true, sent, queues: { e1: (e1 || []).length, e2: (e2 || []).length, e3: (e3 || []).length } });
+      // ── Wishlist reminders: creadas hace 48-72h, no enviadas ──
+      const h48ago2 = new Date(now - 48 * 3600 * 1000).toISOString();
+      const h72ago2 = new Date(now - 72 * 3600 * 1000).toISOString();
+      const wl = await db('wishlist_reminders', {
+        filters: [
+          `created_at=lte.${h48ago2}`,
+          `created_at=gte.${h72ago2}`,
+          'reminder_sent_at=is.null',
+        ],
+        limit: 20,
+      });
+      for (const wr of (wl || [])) {
+        try {
+          const tpl = wishlistReminder({ name: wr.name, email: wr.email, items: wr.items, wishlistUrl: 'https://www.zonetechonline.com/lista-deseos.html' });
+          await sendEmail({ to: wr.email, subject: tpl.subject, html: tpl.html });
+          await db(`wishlist_reminders?id=eq.${wr.id}`, { method: 'PATCH', body: { reminder_sent_at: new Date().toISOString() } });
+          sent++;
+        } catch (err) { logger.error('wishlist-reminder', err.message); }
+      }
+
+      return res.status(200).json({ ok: true, sent, queues: { e1: (e1 || []).length, e2: (e2 || []).length, e3: (e3 || []).length, wl: (wl || []).length } });
     } catch (err) {
       logger.error('emails:cart-recovery-run', err.message, logger.ctx(req));
       return res.status(500).json({ error: err.message });
