@@ -3669,6 +3669,10 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
     var bDecoded = decodeURIComponent(brandKey).toLowerCase();
     filtered = filtered.filter(function(p) { return (p.brand || '').toLowerCase() === bDecoded; });
   }
+  if (typeof window.ztPriceMin !== 'undefined' && typeof window.ztPriceMax !== 'undefined' &&
+      (window.ztPriceMin > (window.ztPriceAbsMin || 0) || window.ztPriceMax < (window.ztPriceAbsMax || Infinity))) {
+    filtered = filtered.filter(function(p) { return p.price >= window.ztPriceMin && p.price <= window.ztPriceMax; });
+  }
   if (!filtered.length) {
     grid.innerHTML =
       '<div style="grid-column:1/-1;text-align:center;padding:96px 20px 80px;">' +
