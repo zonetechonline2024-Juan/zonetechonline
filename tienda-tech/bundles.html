@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0FVJFMXJWB');</script>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a18">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bundles Tecnología Premium — ZoneTechOnline | Ahorra hasta €67</title>
+  <meta name="description" content="Packs de tecnología con descuento exclusivo: Running Pack, Home Office Pro, Gaming Setup, Music & Sound y Smart Health. Ahorra hasta €67 combinando los mejores wearables premium.">
+  <link rel="canonical" href="https://www.zonetechonline.com/bundles">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zonetechonline.com/bundles">
+  <meta property="og:title" content="Bundles Tecnología Premium — ZoneTechOnline">
+  <meta property="og:description" content="Packs de tecnología con descuento exclusivo. Ahorra hasta €67 combinando los mejores wearables.">
+  <meta property="og:image" content="https://www.zonetechonline.com/img/og-cover.svg">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ZoneTechOnline">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Bundles Tecnología Premium — ZoneTechOnline",
+    "description": "Packs de tecnología premium con descuento exclusivo. Ahorra hasta €67 combinando los mejores wearables.",
+    "url": "https://www.zonetechonline.com/bundles",
+    "isPartOf": { "@id": "https://www.zonetechonline.com/#website" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .bundles-hero { background:linear-gradient(135deg,rgba(99,102,241,.12) 0%,rgba(168,85,247,.08) 100%); border-bottom:1px solid var(--border,#2a2a4a); padding:64px 0 48px; text-align:center; }
+    .bundles-hero h1 { font-size:clamp(2rem,5vw,3rem); font-weight:800; margin:0 0 12px; }
+    .bundles-hero p { font-size:clamp(15px,2vw,18px); color:var(--text-2,#9ca3af); max-width:560px; margin:0 auto 28px; line-height:1.65; }
+    .bundle-badge-hero { display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,.12); border:1px solid rgba(245,158,11,.35); color:#f59e0b; border-radius:20px; padding:6px 16px; font-size:13px; font-weight:600; margin-bottom:24px; }
+    .bundles-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:24px; padding:48px 0; }
+    .bundle-card { background:var(--bg-2,#111); border:1px solid var(--border,#2a2a4a); border-radius:18px; overflow:hidden; transition:transform .25s,border-color .25s,box-shadow .25s; position:relative; }
+    .bundle-card:hover { transform:translateY(-4px); border-color:var(--accent,#6366f1); box-shadow:0 12px 40px rgba(99,102,241,.2); }
+    .bundle-card-badge { position:absolute; top:14px; right:14px; background:linear-gradient(135deg,#f59e0b,#ef4444); color:#fff; font-size:11.5px; font-weight:700; padding:4px 10px; border-radius:20px; letter-spacing:.4px; }
+    .bundle-products { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border,#2a2a4a); }
+    .bundle-prod-img { background:var(--bg,#0a0a18); padding:20px; aspect-ratio:1; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s; }
+    .bundle-prod-img:hover { background:rgba(99,102,241,.08); }
+    .bundle-prod-img img { width:100%; height:100%; object-fit:contain; max-height:110px; }
+    .bundle-plus { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; background:var(--accent,#6366f1); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px; font-weight:700; box-shadow:0 0 0 3px var(--bg-2,#111); z-index:1; pointer-events:none; }
+    .bundle-info { padding:22px 22px 20px; }
+    .bundle-tag { font-size:11px; font-weight:700; color:var(--accent,#6366f1); letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
+    .bundle-name { font-size:1.15rem; font-weight:700; color:var(--text-1,#f1f5f9); margin:0 0 10px; }
+    .bundle-items-list { list-style:none; padding:0; margin:0 0 16px; }
+    .bundle-items-list li { font-size:13px; color:var(--text-2,#9ca3af); padding:4px 0; display:flex; align-items:flex-start; gap:7px; line-height:1.4; }
+    .bundle-items-list li::before { content:"✓"; color:var(--accent,#6366f1); font-weight:700; flex-shrink:0; margin-top:1px; }
+    .bundle-price-row { display:flex; align-items:center; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+    .bundle-price { font-size:1.55rem; font-weight:800; color:var(--text-1,#f1f5f9); }
+    .bundle-old-price { font-size:14px; color:var(--text-3,#666); text-decoration:line-through; }
+    .bundle-saving { background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.3); color:#4ade80; font-size:12px; font-weight:700; padding:3px 9px; border-radius:10px; }
+    .bundle-cta { width:100%; padding:13px 20px; background:var(--accent,#6366f1); color:#fff; border:none; border-radius:10px; font-size:15px; font-weight:700; cursor:pointer; transition:background .2s,transform .15s; display:flex; align-items:center; justify-content:center; gap:8px; }
+    .bundle-cta:hover { background:#4f46e5; transform:translateY(-1px); }
+    .bundle-cta:active { transform:translateY(0); }
+    .bundle-cta-added { background:#16a34a !important; }
+    .bundle-cta svg { flex-shrink:0; }
+    .bundle-sec-link { display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; font-size:12.5px; color:var(--text-3,#666); text-decoration:none; transition:color .18s; }
+    .bundle-sec-link:hover { color:var(--text-2,#9ca3af); }
+    .bundles-bottom { background:var(--bg-2,#111); border-top:1px solid var(--border,#2a2a4a); padding:40px 0; text-align:center; margin-top:24px; border-radius:16px; }
+    .bundles-bottom h3 { font-size:1.15rem; font-weight:700; margin:0 0 8px; }
+    .bundles-bottom p { font-size:14px; color:var(--text-2,#9ca3af); margin:0 0 20px; }
+    .bundles-trust { display:flex; justify-content:center; gap:32px; flex-wrap:wrap; }
+    .bundles-trust-item { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-2,#9ca3af); }
+    .bundles-trust-item svg { color:var(--accent,#6366f1); flex-shrink:0; }
+    @media (max-width:600px) {
+      .bundles-grid { grid-template-columns:1fr; gap:16px; }
+      .bundle-prod-img { padding:14px; }
+      .bundle-prod-img img { max-height:90px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ZONE<span>TECH</span>ONLINE</a>
+    <div class="nav-links" id="nav-links">
+      <div class="nav-item"><a href="/relojes" class="nav-link">Relojes</a></div>
+      <div class="nav-item"><a href="/auriculares" class="nav-link">Auriculares</a></div>
+      <div class="nav-item"><a href="/altavoces" class="nav-link">Altavoces</a></div>
+      <div class="nav-item"><a href="/gaming" class="nav-link">Teclados Gaming</a></div>
+      <div class="nav-item"><a href="/smartphones" class="nav-link">Smartphones</a></div>
+      <div class="nav-item"><a href="/bundles" class="nav-link" style="color:#f59e0b;">🎁 Bundles</a></div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" id="search-btn" aria-label="Buscar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="btn-login" id="login-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Acceder</span>
+      </button>
+      <button class="nav-icon-btn cart-btn" id="cart-toggle" aria-label="Carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="nav-icon-btn hamburger" id="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Menú de navegación">
+  <div class="mnd-header">
+    <span class="mnd-brand">ZONE<span>TECH</span>ONLINE</span>
+    <button class="mnd-close" id="mobile-nav-close" aria-label="Cerrar menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mnd-nav">
+    <a href="catalogo.html" class="mnd-link mnd-link-all">Todos los productos</a>
+    <div class="mnd-divider"></div>
+    <a href="/relojes" class="mnd-link">⌚ Relojes</a>
+    <a href="/auriculares" class="mnd-link">🎧 Auriculares</a>
+    <a href="/altavoces" class="mnd-link">🔊 Altavoces</a>
+    <a href="/gaming" class="mnd-link">⌨️ Gaming</a>
+    <a href="/smartphones" class="mnd-link">📱 Smartphones</a>
+    <div class="mnd-divider"></div>
+    <a href="/bundles" class="mnd-link" style="color:#f59e0b;">🎁 Bundles con descuento</a>
+  </nav>
+</aside>
+
+<!-- SIDE CART -->
+<aside class="side-cart" id="side-cart">
+  <div class="side-cart-header">
+    <h3>Tu Carrito</h3>
+    <button class="close-btn" id="close-cart" aria-label="Cerrar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="side-cart-body" id="cart-items">
+    <div class="cart-empty" id="cart-empty">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <p>Tu carrito está vacío</p>
+      <span>Agrega productos para comenzar</span>
+    </div>
+  </div>
+  <div class="side-cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-total">€0</span></div>
+    <div class="cart-shipping"><span>Envío</span><span class="free-shipping">GRATIS</span></div>
+    <div class="cart-divider"></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-grand-total">€0</span></div>
+    <button class="btn-primary btn-block" id="checkout-btn">Proceder al Pago</button>
+    <button class="btn-ghost btn-block" id="continue-shopping">Seguir Comprando</button>
+  </div>
+</aside>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-wrap">
+    <div class="search-bar-row">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="search-input" placeholder="Busca producto, marca o categoría..." autocomplete="off">
+      <button class="search-close" id="search-close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <p class="search-hint">Pulsa <kbd>Esc</kbd> para cerrar</p>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<!-- BUNDLES HERO -->
+<div class="bundles-hero">
+  <div class="section-container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span class="bc-sep">›</span>
+      <span>Bundles</span>
+    </nav>
+    <div class="bundle-badge-hero">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      Packs exclusivos · Descuento hasta 10%
+    </div>
+    <h1>Bundles <span class="gradient-text">Premium</span></h1>
+    <p>Combina los mejores wearables y ahorra. Packs seleccionados para cada estilo de vida, con garantía oficial 2 años y envío gratuito.</p>
+  </div>
+</div>
+
+<!-- BUNDLES GRID -->
+<main>
+  <div class="section-container">
+    <div class="bundles-grid" id="bundles-grid">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- Trust signals bottom -->
+    <div class="bundles-bottom">
+      <h3>Todos los bundles incluyen</h3>
+      <p>Los mismos beneficios que en cada producto individual, aplicados al pack completo</p>
+      <div class="bundles-trust">
+        <div class="bundles-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantía oficial 2 años
+        </div>
+        <div class="bundles-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Envío gratuito (5-8 días hábiles)
+        </div>
+        <div class="bundles-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Devolución 30 días sin preguntas
+        </div>
+        <div class="bundles-trust-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Pago seguro con Stripe
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<!-- WHATSAPP WIDGET -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-popup" id="waPopup">
+    <div class="wa-popup-header">
+      <div class="wa-avatar-wrap"><div class="wa-avatar-img">ZT</div><span class="wa-online-dot"></span></div>
+      <div class="wa-popup-meta"><span class="wa-popup-name">ZoneTechOnline</span><span class="wa-popup-sub">● En línea</span></div>
+      <button class="wa-popup-x" onclick="waClose()" aria-label="Cerrar"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="wa-popup-body">
+      <div class="wa-msg-wrap"><div class="wa-msg-avatar">ZT</div>
+        <div class="wa-bubble"><p>¿Dudas sobre qué bundle elegir? ¡Te ayudamos!</p><span class="wa-bubble-time">Ahora</span></div>
+      </div>
+    </div>
+    <a href="https://wa.me/34613640673?text=Hola%2C+me+interesan+los+bundles+premium" target="_blank" rel="noopener noreferrer" class="wa-cta" onclick="waClose()">Consultar por WhatsApp</a>
+  </div>
+  <button class="wa-fab" id="waFab" onclick="waToggle()" aria-label="WhatsApp">
+    <span class="wa-badge" id="waBadge">1</span>
+    <svg class="wa-fab-icon wa-icon-chat" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.14.564 4.147 1.549 5.878L0 24l6.322-1.528C8.028 23.47 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.892 0-3.655-.516-5.162-1.415l-.371-.22-3.75.908.944-3.643-.241-.378C2.498 15.76 2 13.944 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <svg class="wa-fab-icon wa-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<script src="js/config.js" defer></script>
+<script src="js/app.js" defer></script>
+<script>
+(function() {
+
+  var BUNDLES = [
+    {
+      id: 'running-pack',
+      tag: 'Deporte & Running',
+      name: 'Running Pack',
+      emoji: '🏃',
+      desc: 'El combo perfecto para corredores: GPS preciso en la muñeca y sonido sin cables que aguanta el sudor y la lluvia.',
+      productIds: [29, 205],
+      bundlePrice: 369,
+      individualTotal: 409.70,
+      saving: 40.70,
+    },
+    {
+      id: 'home-office-pro',
+      tag: 'Home Office',
+      name: 'Home Office Pro',
+      emoji: '💼',
+      desc: 'Auriculares con cancelación de ruido para las videollamadas + smartwatch para gestionar tu agenda sin tocar el móvil.',
+      productIds: [208, 16],
+      bundlePrice: 499,
+      individualTotal: 555.99,
+      saving: 56.99,
+    },
+    {
+      id: 'gaming-setup',
+      tag: 'Gaming',
+      name: 'Gaming Setup',
+      emoji: '🎮',
+      desc: 'Teclado mecánico ROG para reacciones rápidas y auriculares gaming ROG con sonido envolvente 7.1. La combinación definitiva.',
+      productIds: [49, 218],
+      bundlePrice: 619,
+      individualTotal: 685.50,
+      saving: 66.50,
+    },
+    {
+      id: 'music-sound',
+      tag: 'Música & Sonido',
+      name: 'Music & Sound',
+      emoji: '🎵',
+      desc: 'ANC en el metro con los Sony WF-C710N y boom de bajos en casa o la terraza con el JBL Charge 6. Sonido en todos lados.',
+      productIds: [209, 131],
+      bundlePrice: 359,
+      individualTotal: 400.40,
+      saving: 41.40,
+    },
+    {
+      id: 'smart-health',
+      tag: 'Salud & Bienestar',
+      name: 'Smart Health',
+      emoji: '❤️',
+      desc: 'El Samsung Watch 7 mide ECG, glucosa estimada y sueño avanzado. La Xiaomi Band 9 para el día a día sin cargar el watch.',
+      productIds: [16, 1],
+      bundlePrice: 289,
+      individualTotal: 319.94,
+      saving: 30.94,
+    }
+  ];
+
+  function renderBundles() {
+    if (typeof PRODUCTS === 'undefined') { setTimeout(renderBundles, 80); return; }
+    var grid = document.getElementById('bundles-grid');
+    if (!grid) return;
+
+    grid.innerHTML = BUNDLES.map(function(bundle) {
+      var p1 = PRODUCTS.find(function(p) { return p.id === bundle.productIds[0]; });
+      var p2 = PRODUCTS.find(function(p) { return p.id === bundle.productIds[1]; });
+      if (!p1 || !p2) return '';
+
+      function prodImg(prod) {
+        var imgs = prod.imgs && prod.imgs.length ? prod.imgs : (prod.img ? [prod.img] : []);
+        if (imgs.length) {
+          return '<img src="img/productos/' + imgs[0] + '" alt="' + prod.name + '" loading="lazy" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\'">' +
+                 '<div style="display:none;align-items:center;justify-content:center;width:100%;height:100%">' + getProductSVG(prod) + '</div>';
+        }
+        return getProductSVG(prod);
+      }
+
+      var savePct = Math.round(bundle.saving / bundle.individualTotal * 100);
+      var saveFmt = bundle.saving.toFixed(0);
+
+      return '<article class="bundle-card" id="bundle-' + bundle.id + '">' +
+        '<div class="bundle-card-badge">Ahorra €' + saveFmt + ' (' + savePct + '%)</div>' +
+        '<div class="bundle-products" style="position:relative">' +
+          '<div class="bundle-prod-img" onclick="openQuickView(' + p1.id + ')" title="Ver ' + p1.name + '">' + prodImg(p1) + '</div>' +
+          '<div class="bundle-plus">+</div>' +
+          '<div class="bundle-prod-img" onclick="openQuickView(' + p2.id + ')" title="Ver ' + p2.name + '">' + prodImg(p2) + '</div>' +
+        '</div>' +
+        '<div class="bundle-info">' +
+          '<div class="bundle-tag">' + bundle.emoji + ' ' + bundle.tag + '</div>' +
+          '<h2 class="bundle-name">' + bundle.name + '</h2>' +
+          '<ul class="bundle-items-list">' +
+            '<li>' + p1.brand + ' ' + p1.name.replace(p1.brand, '').trim() + ' <span style="color:var(--text-3,#666);font-size:12px;">€' + p1.price.toFixed(2) + '</span></li>' +
+            '<li>' + p2.brand + ' ' + p2.name.replace(p2.brand, '').trim() + ' <span style="color:var(--text-3,#666);font-size:12px;">€' + p2.price.toFixed(2) + '</span></li>' +
+          '</ul>' +
+          '<p style="font-size:13px;color:var(--text-2,#9ca3af);line-height:1.5;margin:0 0 16px;">' + bundle.desc + '</p>' +
+          '<div class="bundle-price-row">' +
+            '<span class="bundle-price">€' + bundle.bundlePrice + '</span>' +
+            '<span class="bundle-old-price">€' + bundle.individualTotal.toFixed(2) + '</span>' +
+            '<span class="bundle-saving">Ahorras €' + saveFmt + '</span>' +
+          '</div>' +
+          '<button class="bundle-cta" id="btn-' + bundle.id + '" onclick="addBundle(\'' + bundle.id + '\',' + bundle.productIds[0] + ',' + bundle.productIds[1] + ',' + bundle.bundlePrice + ')">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>' +
+            'Añadir pack al carrito' +
+          '</button>' +
+          '<a href="catalogo.html" class="bundle-sec-link">' +
+            '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>' +
+            'Ver productos individuales' +
+          '</a>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+  }
+
+  window.addBundle = function(bundleId, id1, id2, bundlePrice) {
+    if (typeof addToCart !== 'function') return;
+    addToCart(id1);
+    addToCart(id2);
+    var btn = document.getElementById('btn-' + bundleId);
+    if (btn) {
+      btn.classList.add('bundle-cta-added');
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pack añadido al carrito';
+      setTimeout(function() {
+        btn.classList.remove('bundle-cta-added');
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Añadir pack al carrito';
+      }, 3000);
+    }
+    setTimeout(function() { if (typeof openCart === 'function') openCart(); }, 300);
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderBundles();
+
+    var cartToggle = document.getElementById('cart-toggle');
+    if (cartToggle) cartToggle.addEventListener('click', openCart);
+    var closeCartBtn = document.getElementById('close-cart');
+    if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+    var closeQV = document.getElementById('close-quick-view');
+    if (closeQV) closeQV.addEventListener('click', closeQuickView);
+    var ov = document.getElementById('overlay');
+    if (ov) ov.addEventListener('click', function() { closeCart(); closeQuickView(); });
+    var contBtn = document.getElementById('continue-shopping');
+    if (contBtn) contBtn.addEventListener('click', closeCart);
+    var checkoutBtn = document.getElementById('checkout-btn');
+    if (checkoutBtn) checkoutBtn.addEventListener('click', function() {
+      if (!cart || !cart.length) return;
+      closeCart();
+      window.location.href = 'checkout.html';
+    });
+    if (typeof renderCartItems === 'function') renderCartItems();
+    if (typeof updateCartBadge === 'function') updateCartBadge();
+  });
+
+  var waOpen = false;
+  window.waToggle = function() {
+    waOpen = !waOpen;
+    document.getElementById('waPopup').classList.toggle('wa-open', waOpen);
+    document.getElementById('waFab').classList.toggle('wa-open', waOpen);
+    document.getElementById('waBadge').classList.toggle('wa-hidden', waOpen);
+  };
+  window.waClose = function() {
+    waOpen = false;
+    document.getElementById('waPopup').classList.remove('wa-open');
+    document.getElementById('waFab').classList.remove('wa-open');
+    document.getElementById('waBadge').classList.remove('wa-hidden');
+  };
+
+})();
+</script>
+</body>
+</html>
