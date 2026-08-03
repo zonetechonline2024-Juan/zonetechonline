@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
     const stripeMethodTypes =
       paymentMethod === 'bizum'  ? ['bizum']  :
       paymentMethod === 'paypal' ? ['paypal'] :
-      ['card'];
+      null; // null = automatic_payment_methods (activa Google Pay + Apple Pay automáticamente)
 
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
@@ -61,7 +61,10 @@ module.exports = async (req, res) => {
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
-      payment_method_types: stripeMethodTypes,
+      ...(stripeMethodTypes
+        ? { payment_method_types: stripeMethodTypes }
+        : { automatic_payment_methods: { enabled: true } }
+      ),
       line_items: lineItems,
       mode: 'payment',
       locale: 'es',
