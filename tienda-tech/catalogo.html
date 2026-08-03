@@ -91,6 +91,34 @@
   <link rel="preload" href="js/app.js" as="script">
   <link rel="prefetch" href="index.html">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Price Range Slider (Phase D) ── */
+    .price-range-display { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text-1,#e5e7eb); font-weight:600; margin-bottom:14px; }
+    .price-range-display .prv { background:var(--bg-2,#161624); padding:3px 10px; border-radius:20px; border:1px solid var(--border,#2a2a4a); min-width:52px; text-align:center; font-variant-numeric:tabular-nums; }
+    .price-range-display .prsep { opacity:.45; font-size:14px; }
+    .dual-range-wrap { position:relative; height:30px; margin:0 0 10px; }
+    .dual-range-track { position:absolute; top:50%; transform:translateY(-50%); left:10px; right:10px; height:4px; background:var(--border,#2a2a4a); border-radius:2px; }
+    .dual-range-fill { position:absolute; top:0; height:100%; background:var(--accent,#6366f1); border-radius:2px; left:0; width:100%; }
+    .dual-thumb { position:absolute; width:100%; top:50%; transform:translateY(-50%); -webkit-appearance:none; appearance:none; background:transparent; pointer-events:none; height:4px; left:0; margin:0; outline:none; }
+    .dual-thumb::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; border-radius:50%; background:var(--accent,#6366f1); border:2.5px solid var(--bg,#0a0a18); cursor:pointer; pointer-events:all; box-shadow:0 2px 8px rgba(99,102,241,.5); transition:transform .15s; }
+    .dual-thumb::-webkit-slider-thumb:hover { transform:scale(1.2); }
+    .dual-thumb::-moz-range-thumb { width:20px; height:20px; border-radius:50%; background:var(--accent,#6366f1); border:2.5px solid var(--bg,#0a0a18); cursor:pointer; pointer-events:all; box-shadow:0 2px 8px rgba(99,102,241,.5); }
+    .price-reset-btn { display:none; align-items:center; gap:5px; font-size:11.5px; color:var(--text-3,#666); background:transparent; border:none; cursor:pointer; padding:4px 0; transition:color .2s; }
+    .price-reset-btn:hover { color:var(--accent,#6366f1); }
+    /* ── Mobile filter bar (Phase O) ── */
+    .mobile-filter-bar { display:none; }
+    @media (max-width:899px) {
+      .mobile-filter-bar { display:flex; overflow-x:auto; gap:8px; padding:10px 14px; background:var(--bg-2,#111); border-bottom:1px solid var(--border,#2a2a4a); -webkit-overflow-scrolling:touch; scrollbar-width:none; position:sticky; top:60px; z-index:50; }
+      .mobile-filter-bar::-webkit-scrollbar { display:none; }
+      .mfb-chip { display:flex; align-items:center; padding:7px 14px; border-radius:20px; font-size:12.5px; font-weight:500; white-space:nowrap; background:var(--bg,#0a0a18); border:1.5px solid var(--border,#2a2a4a); color:var(--text-2,#9ca3af); text-decoration:none; transition:all .18s; min-height:36px; flex-shrink:0; }
+      .mfb-chip.active { background:var(--accent,#6366f1); border-color:var(--accent,#6366f1); color:#fff; }
+      .btn-cart { min-height:44px; }
+      .btn-wishlist, .btn-compare, .btn-qv { min-height:38px; min-width:38px; }
+      .catalog-wrap { gap:0; }
+      .cat-sidebar { display:none !important; }
+      .cat-topbar { padding:10px 16px 6px; }
+    }
+  </style>
 </head>
 <body class="catalog-page">
 
@@ -329,6 +357,17 @@
   <div class="section-container"></div>
 </div>
 
+<!-- MOBILE FILTER BAR (Phase O) -->
+<div class="mobile-filter-bar" id="mobile-filter-bar">
+  <a href="catalogo.html" class="mfb-chip" data-filter="all">Todos</a>
+  <a href="/relojes" class="mfb-chip" data-filter="watches">⌚ Relojes</a>
+  <a href="/auriculares" class="mfb-chip" data-filter="headphones">🎧 Auriculares</a>
+  <a href="/altavoces" class="mfb-chip" data-filter="speakers">🔊 Altavoces</a>
+  <a href="/gaming" class="mfb-chip" data-filter="peripherals">⌨️ Gaming</a>
+  <a href="/smartphones" class="mfb-chip" data-filter="smartphones">📱 Smartphones</a>
+  <a href="/bundles" class="mfb-chip" data-filter="bundles" style="color:#f59e0b;border-color:#f59e0b;">🎁 Bundles</a>
+</div>
+
 <!-- MAIN CATALOG LAYOUT -->
 <main>
   <div class="catalog-wrap">
@@ -347,6 +386,24 @@
       <div class="cat-sb-sect" id="brands-sect" style="display:none">
         <p class="cat-sb-title">Marcas</p>
         <div id="brand-list"></div>
+      </div>
+      <!-- PRICE RANGE FILTER (Phase D) -->
+      <div class="cat-sb-sect" id="price-filter-sect">
+        <p class="cat-sb-title">Precio</p>
+        <div class="price-range-display">
+          <span class="prv" id="price-min-lbl">€0</span>
+          <span class="prsep">—</span>
+          <span class="prv" id="price-max-lbl">€900</span>
+        </div>
+        <div class="dual-range-wrap">
+          <div class="dual-range-track"><div class="dual-range-fill" id="dual-range-fill"></div></div>
+          <input type="range" class="dual-thumb" id="thumb-min" min="0" max="900" value="0" step="5" aria-label="Precio mínimo">
+          <input type="range" class="dual-thumb" id="thumb-max" min="0" max="900" value="900" step="5" aria-label="Precio máximo">
+        </div>
+        <button class="price-reset-btn" id="price-reset-btn" onclick="window.resetPriceFilter()">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Quitar filtro de precio
+        </button>
       </div>
     </aside>
 
@@ -553,6 +610,65 @@
         }
       }, 500);
     }
+
+    // ── Mobile filter bar: marcar chip activo (Phase O) ──
+    document.querySelectorAll('.mfb-chip[data-filter]').forEach(function(chip) {
+      if (chip.getAttribute('data-filter') === filterK) chip.classList.add('active');
+    });
+
+    // ── Price range slider (Phase D) ──
+    (function() {
+      if (typeof PRODUCTS === 'undefined') return;
+      var prices = PRODUCTS.map(function(p) { return p.price; });
+      var absMin = Math.floor(Math.min.apply(null, prices) / 5) * 5;
+      var absMax = Math.ceil(Math.max.apply(null, prices) / 5) * 5;
+      var tmMin = document.getElementById('thumb-min');
+      var tmMax = document.getElementById('thumb-max');
+      var fill = document.getElementById('dual-range-fill');
+      var lblMin = document.getElementById('price-min-lbl');
+      var lblMax = document.getElementById('price-max-lbl');
+      var resetBtn = document.getElementById('price-reset-btn');
+      if (!tmMin || !tmMax) return;
+      tmMin.min = tmMax.min = absMin; tmMin.max = tmMax.max = absMax;
+      tmMin.value = absMin; tmMax.value = absMax;
+      window.ztPriceMin = absMin; window.ztPriceMax = absMax;
+      window.ztPriceAbsMin = absMin; window.ztPriceAbsMax = absMax;
+      function updateFill() {
+        var range = absMax - absMin;
+        var lPct = (window.ztPriceMin - absMin) / range * 100;
+        var rPct = (window.ztPriceMax - absMin) / range * 100;
+        if (fill) { fill.style.left = lPct + '%'; fill.style.width = (rPct - lPct) + '%'; }
+      }
+      function updateLabels() {
+        if (lblMin) lblMin.textContent = '€' + Math.round(window.ztPriceMin);
+        if (lblMax) lblMax.textContent = '€' + Math.round(window.ztPriceMax);
+      }
+      function reRender() {
+        var c = renderCatalogGrid('catalog-grid', filterK, brandK);
+        document.getElementById('result-count').textContent = c;
+      }
+      function setResetBtn() {
+        if (resetBtn) resetBtn.style.display = (window.ztPriceMin > absMin || window.ztPriceMax < absMax) ? 'flex' : 'none';
+      }
+      tmMin.addEventListener('input', function() {
+        var v = parseInt(tmMin.value);
+        if (v >= window.ztPriceMax - 10) { v = window.ztPriceMax - 10; tmMin.value = v; }
+        window.ztPriceMin = v; updateLabels(); updateFill(); setResetBtn(); reRender();
+      });
+      tmMax.addEventListener('input', function() {
+        var v = parseInt(tmMax.value);
+        if (v <= window.ztPriceMin + 10) { v = window.ztPriceMin + 10; tmMax.value = v; }
+        window.ztPriceMax = v; updateLabels(); updateFill(); setResetBtn(); reRender();
+      });
+      updateLabels(); updateFill();
+      window.resetPriceFilter = function() {
+        window.ztPriceMin = absMin; window.ztPriceMax = absMax;
+        tmMin.value = absMin; tmMax.value = absMax;
+        updateLabels(); updateFill();
+        if (resetBtn) resetBtn.style.display = 'none';
+        reRender();
+      };
+    })();
 
     // ── Marcas: filtradas por la categoría activa, link mantiene el filtro de categoría ──
     if (typeof PRODUCTS !== 'undefined') {
