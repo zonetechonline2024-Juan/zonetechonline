@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0FVJFMXJWB');
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,6 +70,33 @@
     .ql-label{font-size:14px;font-weight:600;}
     .ql-sub{font-size:11px;color:var(--text-3);margin-top:2px;}
 
+    /* Nivel de fidelidad */
+    .loyalty-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px;}
+    .loyalty-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+    .loyalty-badge{display:inline-flex;align-items:center;gap:7px;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.04em;}
+    .loyalty-badge.explorador{background:rgba(160,160,192,.1);border:1px solid rgba(160,160,192,.25);color:#a0a0c0;}
+    .loyalty-badge.plata{background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.3);color:#94a3b8;}
+    .loyalty-badge.oro{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.25);color:#fbbf24;}
+    .loyalty-badge.diamante{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#a78bfa;}
+    .loyalty-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+    .loyalty-stat{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:12px 14px;}
+    .loyalty-stat-val{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:2px;}
+    .loyalty-stat-lbl{font-size:11px;color:var(--text-3);}
+    .loyalty-progress-wrap{margin-bottom:12px;}
+    .loyalty-progress-label{display:flex;justify-content:space-between;font-size:11px;color:var(--text-3);margin-bottom:6px;}
+    .loyalty-progress-bar{height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;}
+    .loyalty-progress-fill{height:100%;border-radius:3px;transition:width .8s ease;}
+    .loyalty-benefits{font-size:12.5px;color:var(--text-3);line-height:1.9;}
+    .loyalty-benefits strong{color:var(--text-2);}
+
+    /* Referidos */
+    .referral-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px;}
+    .ref-link-wrap{display:flex;gap:8px;margin:12px 0;}
+    .ref-link-input{flex:1;background:var(--bg-card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--text-2);font-family:'Inter',sans-serif;outline:none;}
+    .btn-copy{display:inline-flex;align-items:center;gap:6px;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);color:#818cf8;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .2s;white-space:nowrap;}
+    .btn-copy:hover{background:rgba(99,102,241,.22);}
+    .ref-note{font-size:12px;color:var(--text-3);line-height:1.7;}
+
     /* Danger zone */
     .danger-zone{background:rgba(248,113,113,.04);border:1px solid rgba(248,113,113,.14);border-radius:16px;padding:20px;}
     .danger-title{font-size:13px;font-weight:600;color:var(--red);margin-bottom:12px;}
@@ -71,6 +106,7 @@
     @media(max-width:480px){
       .quick-links{grid-template-columns:1fr;}
       .profile-card{flex-direction:column;text-align:center;}
+      .loyalty-stats{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -145,6 +181,52 @@
     </a>
   </div>
 
+  <!-- Nivel de fidelidad -->
+  <div class="loyalty-card" id="loyalty-card" style="display:none;">
+    <div class="loyalty-header">
+      <div class="section-title" style="margin:0;">Tu nivel de cliente</div>
+      <div class="loyalty-badge" id="loyalty-badge">Explorador</div>
+    </div>
+    <div class="loyalty-stats">
+      <div class="loyalty-stat">
+        <div class="loyalty-stat-val" id="ly-orders">0</div>
+        <div class="loyalty-stat-lbl">Pedidos realizados</div>
+      </div>
+      <div class="loyalty-stat">
+        <div class="loyalty-stat-val" id="ly-spent">€0</div>
+        <div class="loyalty-stat-lbl">Total gastado</div>
+      </div>
+    </div>
+    <div class="loyalty-progress-wrap" id="ly-progress-wrap">
+      <div class="loyalty-progress-label">
+        <span id="ly-prog-label">Progreso al siguiente nivel</span>
+        <span id="ly-prog-pct">0%</span>
+      </div>
+      <div class="loyalty-progress-bar">
+        <div class="loyalty-progress-fill" id="ly-prog-fill" style="width:0%;background:linear-gradient(90deg,#6366f1,#a855f7);"></div>
+      </div>
+    </div>
+    <div class="loyalty-benefits" id="ly-benefits"></div>
+  </div>
+
+  <!-- Programa de referidos -->
+  <div class="referral-card">
+    <div class="section-title">Recomienda ZoneTechOnline</div>
+    <p style="font-size:13px;color:var(--text-3);line-height:1.7;margin-bottom:4px;">
+      Comparte tu enlace con amigos y familiares. Cuando compren, les llega directamente a nuestra tienda con tu recomendación.
+    </p>
+    <div class="ref-link-wrap">
+      <input type="text" class="ref-link-input" id="ref-link-input" readonly>
+      <button class="btn-copy" id="btn-copy-ref" onclick="copyRefLink()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar
+      </button>
+    </div>
+    <p class="ref-note">
+      Tu código único está vinculado a tu cuenta. Cada vez que alguien llega desde tu enlace, lo registramos.
+    </p>
+  </div>
+
   <!-- Danger zone -->
   <div class="danger-zone">
     <div class="danger-title">Sesión</div>
@@ -204,6 +286,75 @@
   window.logout = function() {
     localStorage.removeItem('zt_user');
     window.location.href = 'index.html';
+  };
+
+  // ── Niveles de fidelidad ──────────────────────────────────────────────────
+  var orders = [];
+  try { orders = JSON.parse(localStorage.getItem('zt_orders') || '[]'); } catch(e) {}
+  var totalOrders = orders.length;
+  var totalSpent  = orders.reduce(function(s, o) { return s + (o.total || 0); }, 0);
+
+  if (totalOrders > 0) {
+    var tiers = [
+      { key:'explorador', label:'🌱 Explorador', min:0,    max:150,  next:'Plata',    nextMin:150  },
+      { key:'plata',      label:'⚪ Plata',      min:150,  max:400,  next:'Oro',      nextMin:400  },
+      { key:'oro',        label:'🥇 Oro',        min:400,  max:900,  next:'Diamante', nextMin:900  },
+      { key:'diamante',   label:'💎 Diamante',   min:900,  max:null, next:null,       nextMin:null },
+    ];
+    var tier = tiers[0];
+    for (var i = tiers.length - 1; i >= 0; i--) {
+      if (totalSpent >= tiers[i].min) { tier = tiers[i]; break; }
+    }
+
+    var badge = document.getElementById('loyalty-badge');
+    badge.className = 'loyalty-badge ' + tier.key;
+    badge.textContent = tier.label;
+
+    document.getElementById('ly-orders').textContent = totalOrders;
+    document.getElementById('ly-spent').textContent  = totalSpent.toLocaleString('es-ES', { style:'currency', currency:'EUR', maximumFractionDigits:0 });
+
+    if (tier.next) {
+      var pct = Math.min(100, Math.round(((totalSpent - tier.min) / (tier.nextMin - tier.min)) * 100));
+      document.getElementById('ly-prog-label').textContent = 'Hacia nivel ' + tier.next + ' (desde ' + tier.nextMin + '€)';
+      document.getElementById('ly-prog-pct').textContent   = pct + '%';
+      document.getElementById('ly-prog-fill').style.width  = pct + '%';
+      var fillColors = { plata:'linear-gradient(90deg,#94a3b8,#cbd5e1)', oro:'linear-gradient(90deg,#f59e0b,#fbbf24)', diamante:'linear-gradient(90deg,#8b5cf6,#a855f7)' };
+      if (fillColors[tier.next.toLowerCase()]) document.getElementById('ly-prog-fill').style.background = fillColors[tier.next.toLowerCase()];
+    } else {
+      document.getElementById('ly-progress-wrap').style.display = 'none';
+    }
+
+    var benefitsMap = {
+      explorador: '<strong>Beneficios actuales:</strong> Soporte en español · Garantía oficial 2 años · Devolución 30 días<br><strong>Al llegar a Plata (150€):</strong> Atención prioritaria en soporte',
+      plata:      '<strong>Beneficios actuales:</strong> Atención prioritaria · Todo lo anterior<br><strong>Al llegar a Oro (400€):</strong> Acceso anticipado a nuevos productos',
+      oro:        '<strong>Beneficios actuales:</strong> Acceso anticipado a novedades · Asesoría personalizada · Todo lo anterior<br><strong>Al llegar a Diamante (900€):</strong> Gestión de pedidos dedicada',
+      diamante:   '<strong>Beneficios exclusivos:</strong> Gestión de pedidos dedicada · Asesoría one-to-one · Acceso anticipado a toda novedad · Máxima prioridad en soporte',
+    };
+    document.getElementById('ly-benefits').innerHTML = benefitsMap[tier.key] || '';
+    document.getElementById('loyalty-card').style.display = 'block';
+  }
+
+  // ── Programa de referidos ─────────────────────────────────────────────────
+  var refCode = '';
+  if (user.email) {
+    // Generar código determinístico a partir del email (sin librería externa)
+    var raw = user.email.toLowerCase().split('').reduce(function(h, c) { return ((h << 5) - h + c.charCodeAt(0)) | 0; }, 0);
+    refCode = Math.abs(raw).toString(36).toUpperCase().slice(0, 6).padStart(6, 'Z');
+  }
+  var refUrl = 'https://www.zonetechonline.com/?ref=' + refCode;
+  document.getElementById('ref-link-input').value = refUrl;
+
+  window.copyRefLink = function() {
+    navigator.clipboard.writeText(refUrl).then(function() {
+      var btn = document.getElementById('btn-copy-ref');
+      btn.textContent = '✓ Copiado';
+      setTimeout(function() {
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar';
+      }, 2000);
+    }).catch(function() {
+      document.getElementById('ref-link-input').select();
+      document.execCommand('copy');
+    });
   };
 })();
 </script>
