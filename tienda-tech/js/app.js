@@ -6141,6 +6141,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     var secF = document.getElementById('productos');
     if (secF) window.scrollTo({ top: secF.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
+    // SEO: actualizar canonical, título y descripción para páginas de categoría indexables
+    var CAT_SEO = {
+      'watches':     { title: 'Smartwatches y Relojes Inteligentes Premium · ZoneTechOnline', desc: 'Relojes inteligentes Garmin, Polar, Amazfit y más. GPS, fitness y monitorización continua. Garantía oficial 2 años. Envío gratis España y Europa.' },
+      'headphones':  { title: 'Auriculares Premium con Noise Cancelling · ZoneTechOnline', desc: 'Auriculares Sony, Sennheiser, JBL con cancelación de ruido activa. Inalámbricos y profesionales. Garantía oficial 2 años. Envío gratis España y Europa.' },
+      'speakers':    { title: 'Altavoces Bluetooth Portátiles Premium · ZoneTechOnline', desc: 'Altavoces JBL, Marshall, Sony resistentes al agua y con sonido premium. Garantía oficial 2 años. Envío gratis España y Europa.' },
+      'peripherals': { title: 'Periféricos Gaming y Teclados Mecánicos · ZoneTechOnline', desc: 'Teclados, ratones y periféricos gaming Alienware, Cherry, Krom y más. Garantía oficial 2 años. Envío gratis España y Europa.' },
+      'smartphones': { title: 'Smartphones 5G Desbloqueados Premium · ZoneTechOnline', desc: 'Smartphones 5G Motorola, Realme, Xiaomi desbloqueados con garantía oficial 2 años. Envío gratis España y Europa.' }
+    };
+    if (CAT_SEO[filterParam]) {
+      var seo = CAT_SEO[filterParam];
+      document.title = seo.title;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', seo.desc);
+      var canonEl = document.getElementById('page-canonical');
+      if (canonEl) canonEl.setAttribute('href', 'https://www.zonetechonline.com/catalogo.html?filter=' + filterParam);
+    }
   } else if (brandParam) {
     filterByBrand(brandParam);
     var secB = document.getElementById('productos');
