@@ -1,4 +1,4 @@
-// ZoneTechOnline — Premium Tech Wearables
+﻿// ZoneTechOnline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -1726,9 +1726,9 @@ PRODUCTS.push(
 
   { id:267, name:'TECLADO GAMING ASUS ROG STRIX SCOPE II RGB NEGRO', brand:'ASUS', category:'teclados gaming',
     price:311.15, oldPrice:367.15, badge: 'OFERTA',
-    image:'img/productos/MGS0000033628-0.jpg',
+    image:'img/productos/MGS0000033628-1.jpg',
     images: [
-      'img/productos/MGS0000033628-0.jpg',
+      'img/productos/MGS0000033628-1.jpg',
       'img/productos/MGS0000033628-2.jpg',
       'img/productos/MGS0000033628-3.jpg'
     ],
@@ -2478,9 +2478,9 @@ PRODUCTS.push(
   },
   { id:402, name:'SAMSUNG GALAXY S25 12/256GB AZUL', brand:'SAMSUNG', category:'smartphones',
     price:1324.10, oldPrice:1562.45, badge:'NUEVO',
-    image:'img/productos/MGS0000000709-0.jpg',
+    image:'img/productos/MGS0000000709-1.jpg',
     images:[
-      'img/productos/MGS0000000709-0.jpg',
+      'img/productos/MGS0000000709-1.jpg',
       'img/productos/1401-samsung-galaxy-s25-fe-8gb-256gb-67-azul-glacial-version-importada-eu.jpg',
       'img/productos/1254-samsung-galaxy-s25-fe-8gb-256gb-67-blanco-version-importada-eu.jpg',
       'img/productos/1987-samsung-galaxy-s25-fe-8gb-256gb-67-negro-intenso-version-importada-eu-mejor-precio.jpg',
@@ -2796,9 +2796,9 @@ PRODUCTS.push(
   },
   { id:412, name:'REALME C71 4/256GB FOREST OWL', brand:'REALME', category:'smartphones',
     price:268.45, oldPrice:316.75, badge:'OFERTA',
-    image:'img/productos/MGS0000034145-0.jpg',
+    image:'img/productos/MGS0000034145-1.jpg',
     images:[
-      'img/productos/MGS0000034145-0.jpg'
+      'img/productos/MGS0000034145-1.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000034145'}
@@ -2906,9 +2906,9 @@ PRODUCTS.push(
   },
   { id:416, name:'TCL K70 SE 4/64GB NEGRO', brand:'TCL', category:'smartphones',
     price:216.10, oldPrice:255.00, badge:'OFERTA',
-    image:'img/productos/MGS0000000888-0.jpg',
+    image:'img/productos/MGS0000000888-1.jpg',
     images:[
-      'img/productos/MGS0000000888-0.jpg'
+      'img/productos/MGS0000000888-1.jpg'
     ],
     description:'Conectividad: 4G LTE',
     specs:{'Conectividad':'4G LTE','Almacenamiento':'64GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000888'}
@@ -2995,9 +2995,9 @@ PRODUCTS.push(
   },
   { id:418, name:'MOTOROLA MOTO G35 5G 8/256GB GREYSTONE', brand:'MOTOROLA', category:'smartphones',
     price:334.05, oldPrice:394.20, badge:'OFERTA',
-    image:'img/productos/DSP0000000549-0.jpg',
+    image:'img/productos/DSP0000000549-1.jpg',
     images:[
-      'img/productos/DSP0000000549-0.jpg'
+      'img/productos/DSP0000000549-1.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'DSP0000000549'}
@@ -3102,9 +3102,9 @@ PRODUCTS.push(
   },
   { id:422, name:'RUGERIZADO HAMMER ENERGY X2 5G 6/128GB NARANJA', brand:'HAMMER', category:'smartphones',
     price:537.05, oldPrice:633.70, badge:'NUEVO',
-    image:'img/productos/MGS0000000022-0.jpg',
+    image:'img/productos/MGS0000000022-1.jpg',
     images:[
-      'img/productos/MGS0000000022-0.jpg'
+      'img/productos/MGS0000000022-1.jpg'
     ],
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'Android','SIM':'Dual SIM','SKU Megasur':'MGS0000000022'}
