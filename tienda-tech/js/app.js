@@ -3605,9 +3605,7 @@ function renderProducts(filterKey, customFilter) {
 
   grid.innerHTML = filtered.map(function(product) {
     var isOOS = product.inStock === false;
-    var badgeHTML = isOOS
-      ? '<span class="product-badge product-badge--oos">AGOTADO</span>'
-      : (product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '');
+    var badgeHTML = isOOS ? '<span class="product-badge product-badge--oos">AGOTADO</span>' : getBadge(product);
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
     var discountHTML = (!isOOS && discount > 0) ? '<span class="product-discount">-' + discount + '%</span>' : '';
@@ -3659,6 +3657,38 @@ function renderProducts(filterKey, customFilter) {
   });
 }
 
+// ─── BADGE STRATEGY ──────────────────────────────────────────────────────────
+function getBadge(p) {
+  if (!p || p.inStock === false) return '';
+  var discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+
+  // Premium brands a precio premium
+  var premiumBrands = ['Garmin', 'Jabra', 'Bose', 'Marshall', 'Sonos', 'Bang & Olufsen', 'Sennheiser'];
+  if (premiumBrands.indexOf(p.brand) !== -1 && p.price >= 100)
+    return '<span class="product-badge product-badge--premium">Premium Pick</span>';
+  if (p.brand === 'Sony' && p.price >= 195)
+    return '<span class="product-badge product-badge--premium">Premium Pick</span>';
+
+  // Entrada popular: precio < 65€ con descuento
+  if (p.price < 65 && p.oldPrice)
+    return '<span class="product-badge product-badge--bestseller">Más vendido</span>';
+
+  // Selección del equipo: marcas de calidad en gama media
+  var pickBrands = ['Samsung', 'Sony', 'JBL', 'Philips', 'Nothing', 'Logitech', 'ASUS', 'Asus', 'Razer'];
+  if (pickBrands.indexOf(p.brand) !== -1 && p.price >= 65 && p.price <= 380)
+    return '<span class="product-badge product-badge--pick">Selección</span>';
+
+  // Sin oldPrice → genuinamente nuevo
+  if (!p.oldPrice)
+    return '<span class="product-badge product-badge--new">Nuevo</span>';
+
+  // OFERTA solo si descuento real ≥ 15%
+  if (discount >= 15)
+    return '<span class="product-badge product-badge--sale">OFERTA</span>';
+
+  return '';
+}
+
 // ─── CATALOG PAGE RENDERER ───────────────────────────────────────────────────
 function renderCatalogGrid(containerId, filterKey, brandKey) {
   var grid = document.getElementById(containerId || 'catalog-grid');
@@ -3690,9 +3720,7 @@ function renderCatalogGrid(containerId, filterKey, brandKey) {
   }
   grid.innerHTML = filtered.map(function(product, idx) {
     var isOOS2 = product.inStock === false;
-    var badgeHTML = isOOS2
-      ? '<span class="product-badge product-badge--oos">AGOTADO</span>'
-      : (product.badge ? '<span class="product-badge">' + product.badge + '</span>' : '');
+    var badgeHTML = isOOS2 ? '<span class="product-badge product-badge--oos">AGOTADO</span>' : getBadge(product);
     var discount = product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
     var oldPriceHTML = product.oldPrice ? '<span class="product-old-price">€' + product.oldPrice + '</span>' : '';
     var discountHTML = (!isOOS2 && discount > 0) ? '<span class="product-discount">-' + discount + '%</span>' : '';
