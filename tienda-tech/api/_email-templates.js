@@ -787,6 +787,66 @@ function wishlistReminder({ name, email, items, wishlistUrl }) {
   };
 }
 
+// ── ALERTA INTERNA — NUEVO PEDIDO PARA GESTIÓN MANUAL ────────────────────────
+function ownerNewOrder({ orderNo, name, email, phone, address, items, total, paymentMethod, orderDate }) {
+  const fmt = v => Number(v).toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
+  const payLabel = paymentMethod === 'bizum' ? 'Bizum' : paymentMethod === 'paypal' ? 'PayPal' : 'Tarjeta';
+
+  const itemsHtml = (items || []).map((item, i) => `
+    <tr style="background:${i % 2 === 0 ? '#f9f9fc' : '#fff'}">
+      <td style="padding:10px 12px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #eee;">
+        <strong>${item.name}</strong><br>
+        ${item.ean ? `<span style="font-size:11px;color:#888;">EAN: ${item.ean}</span>` : ''}
+        ${item.megasurCode ? `<span style="font-size:11px;color:#6366f1;"> · Cód. Megasur: ${item.megasurCode}</span>` : ''}
+      </td>
+      <td style="padding:10px 12px;font-size:13px;color:#555;text-align:center;border-bottom:1px solid #eee;">${item.qty || 1}</td>
+      <td style="padding:10px 12px;font-size:13px;font-weight:700;color:#1a1a2e;text-align:right;border-bottom:1px solid #eee;">${fmt(item.price * (item.qty || 1))}</td>
+    </tr>`).join('');
+
+  return {
+    subject: `🛒 NUEVO PEDIDO ${orderNo} — ${fmt(total)} · Gestión manual requerida`,
+    html: base(`
+      <div style="background:#fef3c7;border:2px solid #f59e0b;border-radius:12px;padding:16px 20px;margin-bottom:24px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:6px;">🛒</div>
+        <div style="font-size:16px;font-weight:900;color:#92400e;margin-bottom:4px;">NUEVO PEDIDO — ACCIÓN REQUERIDA</div>
+        <div style="font-size:22px;font-weight:900;color:#1a1a2e;">${orderNo}</div>
+        <div style="font-size:13px;color:#78350f;margin-top:4px;">${orderDate || new Date().toLocaleDateString('es-ES', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
+      </div>
+
+      <h3 style="font-size:13px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;">Datos del cliente</h3>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:24px;background:#f9f9fc;border-radius:10px;">
+        <tr><td style="padding:10px 16px;font-size:13px;color:#555;border-bottom:1px solid #eee;width:35%;">Nombre</td><td style="padding:10px 16px;font-size:13px;font-weight:600;color:#1a1a2e;border-bottom:1px solid #eee;">${name || '—'}</td></tr>
+        <tr><td style="padding:10px 16px;font-size:13px;color:#555;border-bottom:1px solid #eee;">Email</td><td style="padding:10px 16px;font-size:13px;font-weight:600;color:#6366f1;border-bottom:1px solid #eee;"><a href="mailto:${email}" style="color:#6366f1;text-decoration:none;">${email || '—'}</a></td></tr>
+        <tr><td style="padding:10px 16px;font-size:13px;color:#555;border-bottom:1px solid #eee;">Teléfono</td><td style="padding:10px 16px;font-size:13px;font-weight:600;color:#1a1a2e;border-bottom:1px solid #eee;">${phone ? `<a href="tel:${phone}" style="color:#1a1a2e;text-decoration:none;">${phone}</a>` : '—'}</td></tr>
+        <tr><td style="padding:10px 16px;font-size:13px;color:#555;">Dirección de envío</td><td style="padding:10px 16px;font-size:13px;font-weight:600;color:#1a1a2e;">${address || 'Ver en Stripe'}</td></tr>
+      </table>
+
+      <h3 style="font-size:13px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;">Productos a comprar y enviar</h3>
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:8px;border:1px solid #eee;border-radius:10px;overflow:hidden;">
+        <tr style="background:#6366f1;">
+          <td style="padding:8px 12px;font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.06em;">Producto</td>
+          <td style="padding:8px 12px;font-size:11px;font-weight:700;color:#fff;text-align:center;">Cant.</td>
+          <td style="padding:8px 12px;font-size:11px;font-weight:700;color:#fff;text-align:right;">Total</td>
+        </tr>
+        ${itemsHtml}
+        <tr style="background:#f0f0ff;">
+          <td colspan="2" style="padding:12px 16px;font-size:14px;font-weight:700;color:#1a1a2e;">TOTAL COBRADO (${payLabel})</td>
+          <td style="padding:12px 16px;font-size:16px;font-weight:900;color:#6366f1;text-align:right;">${fmt(total)}</td>
+        </tr>
+      </table>
+
+      <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:14px 18px;margin-top:20px;">
+        <p style="margin:0;font-size:13px;color:#065f46;line-height:1.8;">
+          <strong>Pasos para gestionar este pedido:</strong><br>
+          1. Compra el/los productos en Megasur u otro proveedor<br>
+          2. Envíalos a la dirección del cliente indicada arriba<br>
+          3. Cuando tengas el número de seguimiento, envía el email de envío desde el panel de Supabase o escríbele directamente al cliente
+        </p>
+      </div>
+    `, `Nuevo pedido ${orderNo} · ${fmt(total)} · Gestión manual requerida`)
+  };
+}
+
 module.exports = {
   welcome, orderConfirm, orderShipped, orderDelivered, orderCancelled,
   contactAutoReply, newsletterWelcome,
@@ -796,4 +856,5 @@ module.exports = {
   postPurchaseReview,
   reactivation1, reactivation2, reactivation3,
   newsletterMonthly,
+  ownerNewOrder,
 };
