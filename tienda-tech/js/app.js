@@ -5256,7 +5256,7 @@ function initReviews() {
       Object.keys(FILTER_MAP).forEach(function(k) {
         if (FILTER_MAP[k] === p.category) fk = k;
       });
-      return 'catalogo.html?filter=' + fk + '&product=' + p.id;
+      return '/producto/' + p.id;
     }
 
     function renderDrop(query) {
@@ -5572,8 +5572,7 @@ function initAIAssistant() {
     function listItems(arr, n, asc) {
       if (!arr || !arr.length) return '<em>Sin stock disponible</em>';
       return topN(arr, n, asc).map(function(p) {
-        var fk = catToFilter[p.category] || 'all';
-        return '<a class="ai-msg-link ai-prod-link" href="catalogo.html?filter=' + fk + '&product=' + p.id + '">' + cleanName(p.name) + ' (' + fmt(p.price) + ')</a>';
+        return '<a class="ai-msg-link ai-prod-link" href="/producto/' + p.id + '">' + cleanName(p.name) + ' (' + fmt(p.price) + ')</a>';
       }).join(' · ');
     }
     // Genera botón CTA con URL correcta y aria-label accesible
@@ -6004,7 +6003,7 @@ function renderShowcase() {
 
   function buildCard(p, catLabel, catBdg) {
     var fk  = CAT_FILTER[p.category] || 'all';
-    var url = 'catalogo.html?filter=' + fk + '&product=' + p.id;
+    var url = '/producto/' + p.id;
 
     var desc = Array.isArray(p.description)
       ? p.description.slice(0, 2).join('. ')
@@ -6279,3 +6278,29 @@ function injectProductListSchema(filterKey, brandKey, pageTitle, pageUrl) {
   s.textContent = JSON.stringify(schema);
   document.head.appendChild(s);
 }
+
+// ─── COOKIE CONSENT (inyectado en todas las páginas via app.js) ───────────────
+(function() {
+  if (localStorage.getItem('cookie_consent')) return;
+  if (document.getElementById('cookie-banner')) return; // ya existe en index.html
+  var banner = document.createElement('div');
+  banner.id = 'cookie-banner-app';
+  banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0e0e1a;border-top:1px solid rgba(99,102,241,.3);padding:16px 24px;box-shadow:0 -8px 32px rgba(0,0,0,.5);font-family:Inter,sans-serif;';
+  banner.innerHTML = '<div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">' +
+    '<div style="flex:1;min-width:240px;">' +
+    '<p style="font-size:13.5px;color:#d0d0e8;margin:0 0 3px;font-weight:600;">Utilizamos cookies</p>' +
+    '<p style="font-size:12px;color:#8080a0;margin:0;line-height:1.5;">Usamos cookies propias y de terceros para mejorar tu experiencia. <a href="/politica-cookies.html" style="color:#6366f1;">Más información</a></p>' +
+    '</div>' +
+    '<div style="display:flex;gap:10px;flex-shrink:0;">' +
+    '<button id="zt-cookie-reject" style="padding:8px 16px;background:transparent;border:1px solid rgba(255,255,255,.15);border-radius:8px;color:#a0a0c0;font-size:13px;cursor:pointer;font-family:inherit;">Solo necesarias</button>' +
+    '<button id="zt-cookie-accept" style="padding:8px 20px;background:#6366f1;border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;">Aceptar todas</button>' +
+    '</div></div>';
+  document.body.appendChild(banner);
+  function setCookieConsent(val) {
+    localStorage.setItem('cookie_consent', val);
+    localStorage.setItem('cookie_consent_date', new Date().toISOString());
+    document.getElementById('cookie-banner-app').style.display = 'none';
+  }
+  document.getElementById('zt-cookie-accept').addEventListener('click', function() { setCookieConsent('accept'); });
+  document.getElementById('zt-cookie-reject').addEventListener('click', function() { setCookieConsent('reject'); });
+})();
