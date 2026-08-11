@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FVJFMXJWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0FVJFMXJWB');
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -240,8 +248,10 @@
     }
     var name = emailVal.split('@')[0];
     name = name.charAt(0).toUpperCase() + name.slice(1);
-    localStorage.setItem('zt_user', JSON.stringify({ name: name, email: emailVal, provider: currentProvider, joined: new Date().toISOString(), isNew: true }));
-    fetch('/api/email-welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, email: emailVal }) }).catch(function(){});
+    var refCode = '';
+    try { refCode = localStorage.getItem('zt_referral') || ''; } catch(e) {}
+    localStorage.setItem('zt_user', JSON.stringify({ name: name, email: emailVal, provider: currentProvider, joined: new Date().toISOString(), isNew: true, ref: refCode }));
+    fetch('/api/emails?type=welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: name, email: emailVal, ref: refCode }) }).catch(function(){});
     document.getElementById('social-waiting').classList.remove('open');
     document.getElementById('alert-ok').classList.add('show');
     setTimeout(function() { window.location.href = 'index.html?welcome=1'; }, 1200);
@@ -269,8 +279,10 @@
     if (!ok) return;
     var fullName = fn.value.trim() + ' ' + ln.value.trim();
     var emailReg = em.value.trim();
-    localStorage.setItem('zt_user', JSON.stringify({ name: fullName, email: emailReg, joined: new Date().toISOString(), isNew: true }));
-    fetch('/api/email-welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: fullName, email: emailReg }) }).catch(function(){});
+    var refCode2 = '';
+    try { refCode2 = localStorage.getItem('zt_referral') || ''; } catch(e) {}
+    localStorage.setItem('zt_user', JSON.stringify({ name: fullName, email: emailReg, joined: new Date().toISOString(), isNew: true, ref: refCode2 }));
+    fetch('/api/emails?type=welcome', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: fullName, email: emailReg, ref: refCode2 }) }).catch(function(){});
     document.getElementById('alert-ok').classList.add('show');
     setTimeout(function() { window.location.href = 'index.html?welcome=1'; }, 1500);
   });
