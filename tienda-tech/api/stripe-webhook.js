@@ -2,7 +2,7 @@
 const crypto = require('crypto');
 const { db }               = require('./_db');
 const { sendEmail }        = require('./_send-email');
-const { orderConfirm }     = require('./_email-templates');
+const { orderConfirm, ownerNewOrder } = require('./_email-templates');
 const { placeMegasurOrder } = require('./_megasur');
 
 function verifyStripeSignature(rawBody, sigHeader, secret) {
@@ -138,6 +138,32 @@ module.exports = async (req, res) => {
       });
       await sendEmail({ to: email, subject, html });
       await db('orders', { method: 'PATCH', params: `?id=eq.${order.id}`, body: { email_sent: true } });
+    }
+
+    // Notificación interna al propietario para gestión manual
+    try {
+      const phone = session.customer_details?.phone || '';
+      const sd = session.shipping_details || {};
+      const fullAddress = [
+        sd.address?.line1, sd.address?.line2,
+        sd.address?.city, sd.address?.postal_code,
+        sd.address?.country,
+      ].filter(Boolean).join(', ') || addr;
+
+      const { subject: ownerSubject, html: ownerHtml } = ownerNewOrder({
+        orderNo, name, email, phone,
+        address: fullAddress,
+        items: cartItems,
+        total,
+        paymentMethod: payMethod,
+        orderDate: new Date().toLocaleDateString('es-ES', {
+          weekday: 'long', day: '2-digit', month: 'long', year: 'numeric',
+          hour: '2-digit', minute: '2-digit',
+        }),
+      });
+      await sendEmail({ to: 'zonetechonline2024@gmail.com', subject: ownerSubject, html: ownerHtml });
+    } catch (ownerErr) {
+      console.warn('[stripe-webhook] owner notification failed:', ownerErr.message);
     }
 
     // Pedido automático a Megasur (dropshipping)
