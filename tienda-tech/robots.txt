@@ -4,17 +4,46 @@
 User-agent: *
 Allow: /
 
-# Páginas privadas y de proceso — sin indexar
+# Panel de administración — acceso privado
+Disallow: /admin/
+Disallow: /admin-pedidos.html
+
+# Páginas de proceso de compra — sin indexar
 Disallow: /checkout.html
 Disallow: /checkout-success.html
 Disallow: /checkout-cancel.html
 Disallow: /login.html
 Disallow: /register.html
+Disallow: /mi-cuenta.html
+Disallow: /mis-pedidos.html
+Disallow: /lista-deseos.html
 
-# Archivos de datos internos (no son páginas web)
-Disallow: /src/data/
-Disallow: /audit-catalog-images.js
+# Archivos de debug y herramientas internas
+Disallow: /debug-*.html
+Disallow: /og-gen.html
+Disallow: /exportar.html
+Disallow: /img/ads/exportar.html
+
+# Archivos HTML de scraping crudos (no son páginas de la tienda)
+Disallow: /depau_amazfit_raw.html
+Disallow: /depau_amazfit_brand.html
+Disallow: /amazfit_es_official.html
+Disallow: /huawei_wearables.html
+Disallow: /mediamarkt_huawei.html
+Disallow: /mm_huawei_all.html
+Disallow: /amazon_huawei.html
+Disallow: /huawei_band9.html
+Disallow: /depau_jbl_raw.html
+Disallow: /depau_jbl_charge.html
+Disallow: /depau_jbl_flip.html
+
+# Scripts y archivos de datos internos
 Disallow: /push-to-github.js
+Disallow: /audit-catalog-images.js
+Disallow: /upload-log.txt
+Disallow: /enrich-log.txt
+Disallow: /fix-log.txt
+Disallow: /puppeteer-log.txt
 
 # Sitemap
 Sitemap: https://www.zonetechonline.com/sitemap.xml
