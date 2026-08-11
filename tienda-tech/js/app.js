@@ -1317,72 +1317,72 @@ PRODUCTS.push(
 
   { id:41, name:'Samsung Galaxy Fit3 1.6" 40mm BT Gray', brand:'Samsung', category:'relojes',
     price:64.35, oldPrice:75.95, badge: 'OFERTA',
-    image:'/images/products/infortisa-41.webp',
+    image:'img/productos/infortisa-41.webp',
     images: [
-      '/images/products/infortisa-41.webp'
+      'img/productos/infortisa-41.webp'
     ],
     description:'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7',
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · monitor cardíaco 24/7','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-gray010626115503'}
   },
   { id:42, name:'Samsung Galaxy Fit3 1.6" 40mm BT Pink', brand:'Samsung', category:'relojes',
     price:64.35, oldPrice:75.95, badge: 'OFERTA',
-    image:'/images/products/infortisa-42.webp',
+    image:'img/productos/infortisa-42.webp',
     images: [
-      '/images/products/infortisa-42.webp'
+      'img/productos/infortisa-42.webp'
     ],
     description:'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink',
     specs:{'Info':'Samsung Galaxy Fit3 1,6” AMOLED · BT 5.3 · hasta 13 días · 5 ATM · color Pink','SKU Infortisa':'samsung-galaxy-fit3-1-6-40mm-bt-pink010626115503'}
   },
   { id:43, name:'Samsung Galaxy Watch7 40mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
     price:272.15, oldPrice:321.15, badge: 'OFERTA',
-    image:'/images/products/infortisa-43.webp',
+    image:'img/productos/infortisa-43.webp',
     images: [
-      '/images/products/infortisa-43.webp'
+      'img/productos/infortisa-43.webp'
     ],
     description:'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM',
     specs:{'Info':'Samsung Galaxy Watch7 40mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-40mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:44, name:'Samsung Galaxy Watch7 44mm Wi-Fi BT NFC Green', brand:'Samsung', category:'relojes',
     price:426.3, oldPrice:503.05, badge: 'OFERTA',
-    image:'/images/products/infortisa-44.webp',
+    image:'img/productos/infortisa-44.webp',
     images: [
-      '/images/products/infortisa-44.webp'
+      'img/productos/infortisa-44.webp'
     ],
     description:'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM',
     specs:{'Info':'Samsung Galaxy Watch7 44mm · Super AMOLED · Wi-Fi + BT + NFC + GPS · Galaxy AI · 5 ATM','SKU Infortisa':'samsung-galaxy-watch7-44mm-wi-fi-bt-nfc-green010626115502'}
   },
   { id:45, name:'Xiaomi Redmi Watch 5 Active Plata Mate', brand:'Xiaomi', category:'relojes',
     price:51.5, oldPrice:60.75, badge: 'OFERTA',
-    image:'/images/products/infortisa-45.webp',
+    image:'img/productos/infortisa-45.webp',
     images: [
-      '/images/products/infortisa-45.webp'
+      'img/productos/infortisa-45.webp'
     ],
     description:'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM',
     specs:{'Info':'Xiaomi Redmi Watch 5 Active 2” LCD · GPS integrado · BT 5.3 · hasta 20 días · 5 ATM','SKU Infortisa':'xiaomi-redmi-watch-5-active-plata-mate181024095502'}
   },
   { id:46, name:'XIAOMI Pulsera MI Smart Band 10 Glacier Silver', brand:'Xiaomi', category:'relojes',
     price:64.35, oldPrice:75.95, badge: 'OFERTA',
-    image:'/images/products/infortisa-46.webp',
+    image:'img/productos/infortisa-46.webp',
     images: [
-      '/images/products/infortisa-46.webp'
+      'img/productos/infortisa-46.webp'
     ],
     description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+',
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · iOS 14+ / Android 8+','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-glacier-silver020725095503'}
   },
   { id:47, name:'XIAOMI Pulsera MI Smart Band 10 Midnight Black', brand:'Xiaomi', category:'relojes',
     price:64.35, oldPrice:75.95, badge: 'OFERTA',
-    image:'/images/products/infortisa-47.webp',
+    image:'img/productos/infortisa-47.webp',
     images: [
-      '/images/products/infortisa-47.webp'
+      'img/productos/infortisa-47.webp'
     ],
     description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black',
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Midnight Black','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-midnight-black020725095502'}
   },
   { id:48, name:'XIAOMI Pulsera MI Smart Band 10 Mystic Rose', brand:'Xiaomi', category:'relojes',
     price:64.35, oldPrice:75.95, badge: 'OFERTA',
-    image:'/images/products/infortisa-48.webp',
+    image:'img/productos/infortisa-48.webp',
     images: [
-      '/images/products/infortisa-48.webp'
+      'img/productos/infortisa-48.webp'
     ],
     description:'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose',
     specs:{'Info':'Xiaomi MI Smart Band 10 AMOLED 1,47” · BT 5.4 · hasta 8 días · color Mystic Rose','SKU Infortisa':'xiaomi-pulsera-mi-smart-band-10-mystic-rose020725095502'}
@@ -2456,9 +2456,9 @@ PRODUCTS.push(
 
   { id:400, name:'SAMSUNG GALAXY A16 4/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
     price:282.10, oldPrice:332.90, badge:'OFERTA',
-    image:'img/productos/DSP0000000232-0.jpg',
+    image:'img/productos/DSP0000000232-1.jpg',
     images:[
-      'img/productos/DSP0000000232-0.jpg',
+      'img/productos/DSP0000000232-1.jpg',
       'img/productos/DSP0000000232-1.jpg',
       'img/productos/DSP0000000232-2.jpg'
     ],
@@ -2467,9 +2467,9 @@ PRODUCTS.push(
   },
   { id:401, name:'SAMSUNG GALAXY A26 5G 6/128GB NEGRO', brand:'SAMSUNG', category:'smartphones',
     price:417.40, oldPrice:492.55, badge:'OFERTA',
-    image:'img/productos/MGS0000000332-0.jpg',
+    image:'img/productos/MGS0000000332-1.jpg',
     images:[
-      'img/productos/MGS0000000332-0.jpg',
+      'img/productos/MGS0000000332-1.jpg',
       'img/productos/MGS0000000332-1.jpg',
       'img/productos/MGS0000000332-2.jpg'
     ],
@@ -2555,9 +2555,9 @@ PRODUCTS.push(
 
   { id:403, name:'APPLE IPHONE 16E 128GB BLANCO', brand:'APPLE', category:'smartphones',
     price:1149.15, oldPrice:1356.00, badge:'NUEVO',
-    image:'img/productos/DSP0000029638-0.jpg',
+    image:'img/productos/DSP0000029638-1.jpg',
     images:[
-      'img/productos/DSP0000029638-0.jpg',
+      'img/productos/DSP0000029638-1.jpg',
       'img/productos/DSP0000029638-1.jpg',
       'img/productos/DSP0000029638-2.jpg'
     ],
@@ -2566,9 +2566,9 @@ PRODUCTS.push(
   },
   { id:404, name:'APPLE IPHONE 15 128GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1358.90, oldPrice:1603.50, badge:'OFERTA',
-    image:'img/productos/DSP0000018612-0.jpg',
+    image:'img/productos/DSP0000018612-1.jpg',
     images:[
-      'img/productos/DSP0000018612-0.jpg',
+      'img/productos/DSP0000018612-1.jpg',
       'img/productos/DSP0000018612-1.jpg',
       'img/productos/DSP0000018612-2.jpg'
     ],
@@ -2577,9 +2577,9 @@ PRODUCTS.push(
   },
   { id:405, name:'APPLE IPHONE 16 128GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1653.10, oldPrice:1950.65, badge:'NUEVO',
-    image:'img/productos/DSP0000027150-0.jpg',
+    image:'img/productos/DSP0000027150-1.jpg',
     images:[
-      'img/productos/DSP0000027150-0.jpg',
+      'img/productos/DSP0000027150-1.jpg',
       'img/productos/DSP0000027150-1.jpg',
       'img/productos/DSP0000027150-2.jpg'
     ],
@@ -2588,9 +2588,9 @@ PRODUCTS.push(
   },
   { id:406, name:'APPLE IPHONE 17 256GB NEGRO', brand:'APPLE', category:'smartphones',
     price:1844.70, oldPrice:2176.75, badge:'NUEVO',
-    image:'img/productos/DSP0000025870-0.jpg',
+    image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
     images:[
-      'img/productos/DSP0000025870-0.jpg',
+      'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
       'img/productos/1892-apple-iphone-17-256gb-azul-neblina.jpg',
       'img/productos/1328-apple-iphone-17-256gb-blanco.jpg',
       'img/productos/1792-apple-iphone-17-256gb-lavanda.jpg',
@@ -2669,9 +2669,9 @@ PRODUCTS.push(
 
   { id:407, name:'XIAOMI REDMI A7 PRO 4/128GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:229.05, oldPrice:270.30, badge:'OFERTA',
-    image:'img/productos/MGS0000000306-0.jpg',
+    image:'img/productos/1627-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-negro.jpg',
     images:[
-      'img/productos/MGS0000000306-0.jpg',
+      'img/productos/1627-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-negro.jpg',
       'img/productos/1747-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-azul-niebla.jpg',
       'img/productos/1543-xiaomi-redmi-a7-pro-4g-4gb-128gb-69-verde-palmera.jpg',
       'img/productos/1489-xiaomi-redmi-a7-pro-4g-4gb-64gb-69-negro.jpg'
@@ -2681,9 +2681,9 @@ PRODUCTS.push(
   },
   { id:408, name:'XIAOMI REDMI 15C 4/256GB AZUL', brand:'XIAOMI', category:'smartphones',
     price:269.95, oldPrice:318.55, badge:'OFERTA',
-    image:'img/productos/MGS0000000242-0.jpg',
+    image:'img/productos/MGS0000000242-1.jpg',
     images:[
-      'img/productos/MGS0000000242-0.jpg',
+      'img/productos/MGS0000000242-1.jpg',
       'img/productos/MGS0000000242-1.jpg',
       'img/productos/MGS0000000242-2.jpg'
     ],
@@ -2692,9 +2692,9 @@ PRODUCTS.push(
   },
   { id:409, name:'XIAOMI REDMI NOTE 15 PRO 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:480.65, oldPrice:567.15, badge:'OFERTA',
-    image:'img/productos/MGS0000000186-0.jpg',
+    image:'img/productos/1609-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-negro-5907fe68-3314-4a02-9523-24bdfa094312.jpg',
     images:[
-      'img/productos/MGS0000000186-0.jpg',
+      'img/productos/1609-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-negro-5907fe68-3314-4a02-9523-24bdfa094312.jpg',
       'img/productos/1120-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-azul-glaciar.jpg',
       'img/productos/1760-xiaomi-redmi-note-15-pro-5g-8gb-256gb-683-titanio-cf9a9d70-144c-4e4e-9803-6046ff158133.jpg',
       'img/productos/1578-xiaomi-redmi-note-15-pro-4g-8gb-256gb-677-negro-8a9aea1a-d79a-43f0-bffa-c43bebfcbe05.jpg',
@@ -2705,9 +2705,9 @@ PRODUCTS.push(
   },
   { id:410, name:'XIAOMI REDMI NOTE 15 PRO+ 5G 8/256GB NEGRO', brand:'XIAOMI', category:'smartphones',
     price:689.75, oldPrice:813.90, badge:'NUEVO',
-    image:'img/productos/MGS0000000135-0.jpg',
+    image:'img/productos/1321-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-negro-bde5d6a1-05ca-4ede-9d0a-cc94b9d2c13e.jpg',
     images:[
-      'img/productos/MGS0000000135-0.jpg',
+      'img/productos/1321-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-negro-bde5d6a1-05ca-4ede-9d0a-cc94b9d2c13e.jpg',
       'img/productos/1236-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-azul-glaciar.jpg',
       'img/productos/1547-xiaomi-redmi-note-15-pro-plus-5g-8gb-256gb-683-cafe-moca.jpg',
       'img/productos/1578-xiaomi-redmi-note-15-pro-4g-8gb-256gb-677-negro-8a9aea1a-d79a-43f0-bffa-c43bebfcbe05.jpg',
@@ -2785,9 +2785,9 @@ PRODUCTS.push(
 
   { id:411, name:'REALME C100 5G 4/256GB PURPURA', brand:'REALME', category:'smartphones',
     price:421.00, oldPrice:496.80, badge:'OFERTA',
-    image:'img/productos/MGS0000034180-0.jpg',
+    image:'img/productos/MGS0000034180-1.jpg',
     images:[
-      'img/productos/MGS0000034180-0.jpg',
+      'img/productos/MGS0000034180-1.jpg',
       'img/productos/MGS0000034180-1.jpg',
       'img/productos/MGS0000034180-2.jpg'
     ],
@@ -2805,9 +2805,9 @@ PRODUCTS.push(
   },
   { id:413, name:'REALME NOTE 70T 4/256GB NEGRO', brand:'REALME', category:'smartphones',
     price:234.95, oldPrice:277.25, badge:'OFERTA',
-    image:'img/productos/DSP0000000020-0.jpg',
+    image:'img/productos/DSP0000000020-1.jpg',
     images:[
-      'img/productos/DSP0000000020-0.jpg',
+      'img/productos/DSP0000000020-1.jpg',
       'img/productos/DSP0000000020-1.jpg',
       'img/productos/1152-realme-note-70t-4g-4gb-256gb-674-dorado-f4b4d7e4-ecd5-4336-aa2c-9cb2053ac912.jpg'
     ],
@@ -2885,9 +2885,9 @@ PRODUCTS.push(
 
   { id:414, name:'TCL 60S 4/128GB NEGRO', brand:'TCL', category:'smartphones',
     price:197.15, oldPrice:232.65, badge:'OFERTA',
-    image:'img/productos/MGS0000027638-0.jpg',
+    image:'img/productos/MGS0000027638-1.jpg',
     images:[
-      'img/productos/MGS0000027638-0.jpg',
+      'img/productos/MGS0000027638-1.jpg',
       'img/productos/MGS0000027638-1.jpg',
       'img/productos/MGS0000027638-2.jpg'
     ],
@@ -2896,9 +2896,9 @@ PRODUCTS.push(
   },
   { id:415, name:'TCL K70 4/128GB NEGRO', brand:'TCL', category:'smartphones',
     price:272.75, oldPrice:321.85, badge:'OFERTA',
-    image:'img/productos/MGS0000003340-0.jpg',
+    image:'img/productos/MGS0000003340-1.jpg',
     images:[
-      'img/productos/MGS0000003340-0.jpg',
+      'img/productos/MGS0000003340-1.jpg',
       'img/productos/MGS0000003340-1.jpg'
     ],
     description:'Conectividad: 4G LTE',
@@ -2984,9 +2984,9 @@ PRODUCTS.push(
 
   { id:417, name:'MOTOROLA MOTO EDGE 60 PRO 5G 12/512GB AZUL', brand:'MOTOROLA', category:'smartphones',
     price:882.20, oldPrice:1041.00, badge:'NUEVO',
-    image:'img/productos/DSP0000000548-0.jpg',
+    image:'img/productos/DSP0000000548-1.jpg',
     images:[
-      'img/productos/DSP0000000548-0.jpg',
+      'img/productos/DSP0000000548-1.jpg',
       'img/productos/DSP0000000548-1.jpg',
       'img/productos/DSP0000000548-2.jpg'
     ],
@@ -3004,9 +3004,9 @@ PRODUCTS.push(
   },
   { id:419, name:'MOTOROLA MOTO EDGE 60 FUSION 5G 8/256GB AMAZONTE', brand:'MOTOROLA', category:'smartphones',
     price:502.55, oldPrice:593.00, badge:'NUEVO',
-    image:'img/productos/DSP0000000550-0.jpg',
+    image:'img/productos/1865-motorola-edge-60-fusion-5g-8gb-256gb-667-azul-review.jpg',
     images:[
-      'img/productos/DSP0000000550-0.jpg',
+      'img/productos/1865-motorola-edge-60-fusion-5g-8gb-256gb-667-azul-review.jpg',
       'img/productos/1865-motorola-edge-60-fusion-5g-8gb-256gb-667-azul-review.jpg'
     ],
     description:'Conectividad: 5G',
@@ -3014,9 +3014,9 @@ PRODUCTS.push(
   },
   { id:420, name:'MOTOROLA MOTO G86 5G 8/256GB AZUL OSCURO', brand:'MOTOROLA', category:'smartphones',
     price:449.20, oldPrice:530.05, badge:'OFERTA',
-    image:'img/productos/DSP0000000551-0.jpg',
+    image:'img/productos/DSP0000000551-1.jpg',
     images:[
-      'img/productos/DSP0000000551-0.jpg',
+      'img/productos/DSP0000000551-1.jpg',
       'img/productos/DSP0000000551-1.jpg',
       'img/productos/DSP0000000551-2.jpg'
     ],
@@ -3092,9 +3092,9 @@ PRODUCTS.push(
 
   { id:421, name:'RUGERIZADO HAMMER IRON 6 6/128GB NEGRO', brand:'HAMMER', category:'smartphones',
     price:475.35, oldPrice:560.90, badge:'NUEVO',
-    image:'img/productos/MGS0000000864-0.jpg',
+    image:'img/productos/MGS0000000864-1.jpg',
     images:[
-      'img/productos/MGS0000000864-0.jpg',
+      'img/productos/MGS0000000864-1.jpg',
       'img/productos/MGS0000000864-1.jpg'
     ],
     description:'Conectividad: 4G LTE',
@@ -3111,9 +3111,9 @@ PRODUCTS.push(
   },
   { id:423, name:'RUGERIZADO HAMMER RANGER 4G 6/128GB NEGRO VERDE', brand:'HAMMER', category:'smartphones',
     price:484.50, oldPrice:571.70, badge:'NUEVO',
-    image:'img/productos/MGS0000000028-0.jpg',
+    image:'img/productos/MGS0000000028-1.jpg',
     images:[
-      'img/productos/MGS0000000028-0.jpg',
+      'img/productos/MGS0000000028-1.jpg',
       'img/productos/MGS0000000028-1.jpg'
     ],
     description:'Conectividad: 4G LTE',
