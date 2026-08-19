@@ -495,40 +495,109 @@
     }
   }
 
+  // ── Title dinámico por categoría (SEO optimizado) ──
+  var CAT_TITLE = {
+    watches:     'Smartwatches y Relojes Inteligentes — garantía legal 2 años | ZoneTechOnline',
+    headphones:  'Auriculares Bluetooth con ANC al Mejor Precio — ZoneTechOnline',
+    speakers:    'Altavoces Bluetooth Portátiles y de Sobremesa — ZoneTechOnline',
+    peripherals: 'Teclados Gaming Mecánicos con RGB — Mejor Precio | ZoneTechOnline',
+    smartphones: 'Smartphones 5G Baratos con Garantía Legal en España — ZoneTechOnline'
+  };
+
   // ── Meta description dinámica por categoría ──
   var CAT_META = {
-    watches:     'Comprar relojes inteligentes en España con garantía legal 2 años. Garmin, Apple Watch, Samsung Galaxy Watch. Más de 20 modelos. Envío gratis 5-8 días.',
-    headphones:  'Auriculares inalámbricos premium con ANC. Sony, Jabra, Sennheiser, JBL, Nothing. garantía legal 2 años. Envío gratuito a España y Europa.',
-    speakers:    'Altavoces Bluetooth portátiles y de sobremesa: JBL, Marshall, Sonos, Audio Pro. garantía legal 2 años. Envío gratuito a España.',
-    peripherals: 'Teclados gaming mecánicos ASUS ROG, Logitech G, SteelSeries con RGB. garantía legal 2 años. Envío gratuito a España.',
-    smartphones: 'Smartphones Samsung, Xiaomi y más con garantía legal en España. Conectividad 5G, pantalla AMOLED. Envío gratis y 30 días de devolución.'
+    watches:     'Comprar smartwatches baratos en España 2026: Garmin, Apple Watch SE3, Samsung Galaxy Watch 7 y Xiaomi. Más de 20 modelos con GPS, ECG y SpO₂. garantía legal 2 años. Envío gratis 5–8 días.',
+    headphones:  'Auriculares inalámbricos con cancelación de ruido (ANC): Sony WH-1000XM5, Jabra Evolve2, Sennheiser, JBL y Nothing Ear. Hi-Res LDAC. garantía legal 2 años. Envío gratis a España.',
+    speakers:    'Altavoces Bluetooth portátiles y WiFi: JBL Flip 7, JBL Charge 6, Sony SRS-XB100 y más. IP67, hasta 24h batería. garantía legal 2 años. Envío gratuito a España y Europa.',
+    peripherals: 'Teclados gaming mecánicos con RGB: ASUS ROG Strix Scope II, Logitech G915, Corsair K70. Switches Cherry MX y ROG RX. garantía legal 2 años. Envío gratuito en España.',
+    smartphones: 'Smartphones 5G baratos 2026 con garantía legal: Samsung Galaxy S25, Xiaomi Redmi Note 15 Pro, Motorola Edge 60 y más. AMOLED, cámara 50MP. Envío gratis. Devolución 30 días.'
   };
+  if (filterK !== 'all' && CAT_TITLE[filterK]) {
+    var titleEl = document.getElementById('page-title');
+    if (titleEl) titleEl.textContent = CAT_TITLE[filterK];
+  }
   if (filterK !== 'all' && CAT_META[filterK]) {
     var metaD = document.querySelector('meta[name="description"]');
     if (metaD) metaD.content = CAT_META[filterK];
   }
 
+  // ── FAQ Schema por categoría (rich results Google) ──
+  var CAT_FAQ = {
+    watches: [
+      { q: '¿Cuál es el mejor smartwatch calidad precio en España 2026?', a: 'El Samsung Galaxy Watch 7 ofrece la mejor relación calidad-precio en 2026: GPS integrado, IA para el sueño, ECG y SpO₂ desde 279 €. Para running serio, el Garmin Forerunner 55 con GPS y 20 días de batería es imbatible.' },
+      { q: '¿Cuánto cuesta un smartwatch bueno en España?', a: 'Un smartwatch de calidad cuesta entre 40 € (Xiaomi Smart Band 9) y 300 € (Apple Watch SE3). Para actividad física básica, presupuesto de 50–100 €. Para GPS y salud avanzada, 150–300 €.' },
+      { q: '¿Los relojes inteligentes incluyen garantía en España?', a: 'Sí. Todos los relojes de ZoneTechOnline incluyen garantía legal europea de 2 años conforme al Real Decreto 7/2021. Gestionamos cualquier incidencia contigo sin coste adicional.' },
+      { q: '¿Qué smartwatch tiene mejor batería?', a: 'El Garmin Forerunner 55 aguanta hasta 20 días con uso normal. El Xiaomi Smart Band 9 llega a 21 días. El Apple Watch SE3 y Samsung Galaxy Watch 7 duran 18–24 horas con uso intensivo.' }
+    ],
+    headphones: [
+      { q: '¿Cuáles son los mejores auriculares con cancelación de ruido en 2026?', a: 'Los Sony WH-1000XM5 lideran en ANC con hasta 30 horas de batería y audio Hi-Res. El Jabra Evolve2 65 es perfecto para home office. El JBL Tune 770NC ofrece la mejor relación calidad-precio con ANC desde 79 €.' },
+      { q: '¿Qué diferencia hay entre auriculares in-ear y over-ear?', a: 'Los in-ear (TWS) son compactos e ideales para deporte. Los over-ear tienen mayor autonomía (hasta 50h), mejor ANC y calidad de sonido superior para uso prolongado de escritorio o viaje.' },
+      { q: '¿Los auriculares Bluetooth son compatibles con iPhone y Android?', a: 'Sí. Todos los auriculares Bluetooth funcionan con iOS y Android. La app de la marca añade EQ personalizada y ajustes ANC, pero no es obligatoria para el uso básico.' },
+      { q: '¿Qué auriculares son mejores para trabajar desde casa?', a: 'El Jabra Evolve2 65 y el Sennheiser ACCENTUM Plus son los más recomendados para home office: ANC efectivo, micrófono de calidad para llamadas y autonomía de 37–30 horas.' }
+    ],
+    speakers: [
+      { q: '¿Cuál es el mejor altavoz Bluetooth portátil en 2026?', a: 'El JBL Flip 7 es el más vendido: 20 vatios, IP67 resistente al agua, 12 horas de batería y sonido 360°. Para presupuesto bajo, el JBL Go 5 ofrece calidad fiable desde 40 €.' },
+      { q: '¿Qué significa IP67 en un altavoz Bluetooth?', a: 'IP67 significa que el altavoz es resistente al polvo (IP6) y puede sumergirse hasta 1 metro durante 30 minutos (IP7). Es apto para playa, piscina y lluvia intensa.' },
+      { q: '¿Puedo conectar dos altavoces JBL para sonido estéreo?', a: 'Sí. Los altavoces JBL con PartyBoost permiten enlazar dos unidades del mismo modelo para reproducción estéreo. También puedes conectar hasta 100 altavoces JBL para fiestas.' },
+      { q: '¿Los altavoces incluyen garantía en España?', a: 'Sí. Todos los altavoces de ZoneTechOnline incluyen garantía legal europea de 2 años. Envío gratuito con MRW o SEUR en 5 a 8 días hábiles.' }
+    ],
+    peripherals: [
+      { q: '¿Qué teclado gaming mecánico comprar en 2026?', a: 'El ASUS ROG Strix Scope II con switches ROG RX Red es el más recomendado para gaming: óptico lineal ultrarrápido y retroiluminación Aura Sync. Para escritura y gaming mixto, el Logitech G915 TKL GL Tactile inalámbrico es insuperable.' },
+      { q: '¿Cuál es la diferencia entre switches Red, Brown y Blue?', a: 'Red: lineal y silencioso, respuesta rápida — ideal para gaming competitivo. Brown: bump táctil sin click — perfecto para gaming + escritura. Blue: click audible y táctil — preferido para mecanografía, ruidoso en juego.' },
+      { q: '¿Los teclados gaming mecánicos son compatibles con Mac?', a: 'Funcionan en Mac vía USB o Bluetooth, pero algunos atajos (AltGr, tecla Windows) requieren remapeo. El software de personalización puede no tener versión macOS.' },
+      { q: '¿Cuánto duran los switches de un teclado mecánico?', a: 'Los switches Cherry MX tienen 100 millones de pulsaciones certificadas. Los ROG RX ópticos de ASUS alcanzan 100 millones también. Eso equivale a más de 10 años de uso intensivo.' }
+    ],
+    smartphones: [
+      { q: '¿Cuál es el mejor smartphone barato con 5G en España 2026?', a: 'El Xiaomi Redmi Note 15 Pro 5G ofrece la mejor relación calidad-precio en 2026: pantalla AMOLED 120Hz, cámara 200MP y batería 5000mAh desde 249 €. El Motorola Edge 60 Fusion también destaca por su cámara y diseño.' },
+      { q: '¿Los smartphones de ZoneTechOnline son originales con garantía?', a: 'Sí. Todos son distribución oficial UE con factura legal y garantía de 2 años. No son importaciones extracomunitarias ni versiones paralelas. Incluyen instrucciones en español y soporte en servicio técnico autorizado.' },
+      { q: '¿Cuánto tarda el envío de un smartphone a España?', a: 'Entre 5 y 8 días hábiles con MRW o SEUR. Recibirás un email con número de seguimiento cuando el pedido salga de nuestras instalaciones. El envío es siempre gratuito.' },
+      { q: '¿Puedo devolver el smartphone si no me convence?', a: '30 días hábiles de devolución desde la recepción. Si el terminal llegó precintado y lo has abierto, debe estar en condiciones de nueva venta. Contacta por email o WhatsApp.' }
+    ]
+  };
+  if (filterK !== 'all' && CAT_FAQ[filterK]) {
+    var faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': CAT_FAQ[filterK].map(function(f) {
+        return {
+          '@type': 'Question',
+          'name': f.q,
+          'acceptedAnswer': { '@type': 'Answer', 'text': f.a }
+        };
+      })
+    };
+    var faqEl = document.getElementById('cat-faq-schema');
+    if (faqEl) faqEl.textContent = JSON.stringify(faqSchema);
+    else {
+      var s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.id = 'cat-faq-schema';
+      s.textContent = JSON.stringify(faqSchema);
+      document.head.appendChild(s);
+    }
+  }
+
   // ── Intro SEO por categoría ──
   var CAT_INTRO = {
     watches: {
-      h2: 'Los mejores smartwatches con garantía legal en España',
-      p:  'Elige entre más de 20 relojes inteligentes premium: Garmin Venu 3 con GPS multibanda y ECG, Apple Watch SE 3, Samsung Galaxy Watch 7 con IA integrada y Xiaomi Smart Band 9. Todos incluyen garantía legal de 2 años, envío gratuito en 5 a 8 días hábiles y devolución en 30 días sin preguntas.'
+      h2: 'Comprar smartwatches baratos con garantía legal en España 2026',
+      p:  'Elige entre más de 20 relojes inteligentes: Garmin Forerunner 55 con GPS y 20 días de batería, Apple Watch SE3, Samsung Galaxy Watch 7 con IA integrada y Xiaomi Smart Band 9 desde 39 €. Todos con garantía legal europea de 2 años, envío gratuito en 5–8 días hábiles y devolución de 30 días.'
     },
     headphones: {
-      h2: 'Auriculares premium con cancelación de ruido activa (ANC)',
-      p:  'Descubre auriculares inalámbricos de las mejores marcas: Sony WH-1000XM5, Jabra Evolve2, Sennheiser ACCENTUM, JBL Tune y Nothing Ear. Cancelación de ruido líder del mercado, audio Hi-Res LDAC y hasta 50 horas de batería. garantía legal 2 años. Envío gratuito a España y Europa.'
+      h2: 'Auriculares con cancelación de ruido (ANC) al mejor precio',
+      p:  'Más de 50 auriculares inalámbricos con ANC activo: Sony WH-1000XM5 con LDAC y 30h de batería, Jabra Evolve2 65 para home office, JBL Tune 770NC desde 79 €, Sennheiser ACCENTUM Plus y Nothing Ear 2. Todos con garantía legal 2 años. Envío gratuito a España y Europa.'
     },
     speakers: {
-      h2: 'Altavoces Bluetooth portátiles y de alta fidelidad',
-      p:  'Más de 30 altavoces premium para todos los entornos: JBL Flip 6 y Charge 5 resistentes al agua, Marshall Emberton III con sonido analógico, Sonos Era 100 para el hogar y Audio Pro Addon C10 MkII. Envío gratuito en 5 a 8 días hábiles con garantía legal de 2 años.'
+      h2: 'Altavoces Bluetooth portátiles y WiFi — JBL, Sony, Marshall',
+      p:  'Más de 30 altavoces para todos los entornos: JBL Flip 7 (IP67, 12h), JBL Charge 6 (IP67, 24h), Sony SRS-XB100 ultracompacto, JBL Go 5 desde 40 € y Marshall Emberton III con sonido analógico. Envío gratuito con garantía legal de 2 años.'
     },
     peripherals: {
-      h2: 'Teclados gaming mecánicos y periféricos de alto rendimiento',
-      p:  'Equipa tu setup con teclados gaming ASUS ROG Strix Scope II, Logitech G915 TKL y SteelSeries Apex Pro. Switches mecánicos certificados, retroiluminación RGB por tecla, anti-ghosting completo y compatibilidad multiplataforma. garantía legal 2 años. Envío gratuito a España.'
+      h2: 'Teclados gaming mecánicos RGB — ASUS ROG, Logitech, Corsair',
+      p:  'Más de 20 teclados gaming mecánicos: ASUS ROG Strix Scope II con switches ópticos ultrarrápidos, Logitech G915 TKL inalámbrico, Corsair K70 RGB Pro, Cherry MX 60 compacto y Krom Kerid. Switches Red, Brown y Blue. Anti-ghosting completo. Garantía legal 2 años.'
     },
     smartphones: {
-      h2: 'Smartphones 5G con garantía legal al mejor precio en España',
-      p:  'Los mejores smartphones del mercado: Samsung Galaxy A37 5G con pantalla Super AMOLED, Xiaomi 14T Pro y modelos de última generación. Conectividad 5G, cámara de alta resolución y batería de larga duración. garantía legal 2 años, envío gratuito y devolución en 30 días.'
+      h2: 'Smartphones 5G baratos 2026 — Samsung, Xiaomi, Motorola con garantía',
+      p:  'Más de 35 smartphones con 5G y garantía legal: Xiaomi Redmi Note 15 Pro 5G (AMOLED, 200MP), Samsung Galaxy S25, Motorola Edge 60 Fusion, Realme Note 70T y Apple iPhone 17. Todos son distribución oficial UE. Envío gratuito en 5–8 días. Devolución 30 días.'
     }
   };
   if (pathFilter && filterK !== 'all' && CAT_INTRO[filterK]) {
