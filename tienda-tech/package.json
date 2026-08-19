@@ -1,7 +1,16 @@
 {
   "name": "zonetechonline",
   "version": "1.0.0",
+  "scripts": {
+    "minify": "npx terser js/app.js --compress --mangle --output js/app.min.js"
+  },
   "dependencies": {
     "stripe": "^16.0.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "puppeteer": "^25.1.0",
+    "puppeteer-core": "^25.1.0",
+    "terser": "^5.50.0"
   }
 }
