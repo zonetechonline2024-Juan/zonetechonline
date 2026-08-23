@@ -1,7 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OFVJFMXJWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-OFVJFMXJWB');
+    gtag('config', 'AW-16672492666');
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,6 +94,8 @@
 
 <script>
 (function() {
+  function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
   var user = null;
   try { user = JSON.parse(localStorage.getItem('zt_user') || 'null'); } catch(e) {}
   if (!user) { window.location.href = 'login.html'; return; }
@@ -122,12 +133,12 @@
     var method = methodLabels[order.paymentMethod] || '💳 Tarjeta';
     var itemsHtml = (order.items || []).slice(0, 3).map(function(item) {
       var imgHtml = item.image
-        ? '<img src="' + item.image + '" alt="" onerror="this.style.display=\'none\'">'
+        ? '<img src="' + esc(item.image) + '" alt="" onerror="this.style.display=\'none\'">'
         : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.3"><rect x="2" y="7" width="20" height="15" rx="2"/></svg>';
       return '<div class="oi">' +
         '<div class="oi-img">' + imgHtml + '</div>' +
-        '<div class="oi-name">' + item.name + '</div>' +
-        '<div class="oi-qty">×' + (item.qty || 1) + '</div>' +
+        '<div class="oi-name">' + esc(item.name) + '</div>' +
+        '<div class="oi-qty">×' + esc(item.qty || 1) + '</div>' +
         '<div class="oi-price">' + fmt(item.price * (item.qty || 1)) + '</div>' +
       '</div>';
     }).join('');
