@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Configuración — ZoneTechOnline Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a18;--sidebar:#0d0d22;--card:#13132b;--border:rgba(99,102,241,.15);
+  --text:#e8e8f8;--text2:#a0a0c0;--text3:#606080;
+  --accent:#6366f1;--accent2:#818cf8;--green:#34d399;--yellow:#fbbf24;--red:#f87171;
+  --sidebar-w:240px;
+}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;}
+.sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.sidebar-logo{padding:20px 20px 16px;border-bottom:1px solid var(--border);}
+.sidebar-logo a{font-size:16px;font-weight:900;letter-spacing:.1em;color:#fff;text-decoration:none;}
+.sidebar-logo a span{color:var(--accent);}
+.sidebar-logo .badge{display:block;font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+.sidebar-nav{flex:1;padding:16px 0;overflow-y:auto;}
+.nav-section{padding:0 12px 8px;font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:8px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:13.5px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:8px;margin:1px 8px;transition:all .15s;}
+.nav-item:hover{background:rgba(99,102,241,.1);color:var(--text);}
+.nav-item.active{background:rgba(99,102,241,.18);color:var(--accent);}
+.nav-item svg{flex-shrink:0;opacity:.7;}
+.nav-item.active svg{opacity:1;}
+.sidebar-footer{padding:16px;border-top:1px solid var(--border);}
+.user-row{display:flex;align-items:center;gap:10px;}
+.user-avatar{width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+.user-info{flex:1;}
+.user-name{font-size:12px;font-weight:600;}
+.user-role{font-size:11px;color:var(--text3);}
+.main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh;}
+.topbar{background:var(--sidebar);border-bottom:1px solid var(--border);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+.topbar-title{font-size:15px;font-weight:700;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:#5254cc;}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.content{padding:28px;flex:1;max-width:900px;}
+.section-title{font-size:18px;font-weight:800;margin-bottom:20px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border);}
+.section-title:first-child{margin-top:0;padding-top:0;border-top:none;}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.panel-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.panel-title{font-size:14px;font-weight:700;}
+.panel-body{padding:20px 24px;}
+.setting-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.setting-row:last-child{border-bottom:none;}
+.setting-info{flex:1;}
+.setting-label{font-size:14px;font-weight:600;margin-bottom:3px;}
+.setting-desc{font-size:12px;color:var(--text3);line-height:1.5;}
+.setting-control{flex-shrink:0;display:flex;align-items:center;gap:8px;}
+.form-input{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--text);outline:none;min-width:220px;}
+.form-input:focus{border-color:var(--accent);}
+.form-select{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--text);outline:none;min-width:180px;appearance:none;padding-right:28px;}
+.form-select:focus{border-color:var(--accent);}
+.toggle{position:relative;display:inline-block;width:44px;height:24px;cursor:pointer;}
+.toggle input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;inset:0;background:#333;border-radius:24px;transition:.3s;}
+.toggle-slider::before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+.toggle input:checked + .toggle-slider{background:var(--green);}
+.toggle input:checked + .toggle-slider::before{transform:translateX(20px);}
+.status-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;}
+.status-chip.ok{background:rgba(52,211,153,.12);color:var(--green);}
+.status-chip.warn{background:rgba(251,191,36,.12);color:var(--yellow);}
+.status-chip.err{background:rgba(248,113,113,.12);color:var(--red);}
+.status-dot-sm{width:7px;height:7px;border-radius:50%;background:currentColor;}
+.info-box{background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.2);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:16px;}
+code{background:rgba(99,102,241,.15);padding:2px 6px;border-radius:4px;font-size:12px;font-family:monospace;}
+#toast{position:fixed;bottom:24px;right:24px;background:#064e3b;color:#6ee7b7;border:1px solid #065f46;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;display:none;}
+#toast.err{background:#7f1d1d;color:var(--red);border-color:#991b1b;}
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;}
+.login-box{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:44px 40px;width:100%;max-width:400px;text-align:center;}
+.login-box h2{font-size:22px;font-weight:800;margin-bottom:6px;}
+.login-box p{font-size:13px;color:var(--text2);margin-bottom:28px;}
+.login-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--text);outline:none;margin-bottom:12px;}
+.login-input:focus{border-color:var(--accent);}
+.login-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;}
+.login-err{font-size:12px;color:var(--red);margin-top:8px;display:none;}
+@media(max-width:900px){.sidebar{display:none}.main{margin-left:0}.setting-row{flex-direction:column}.form-input,.form-select{min-width:100%;width:100%}}
+</style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size:40px;margin-bottom:12px;">🔐</div>
+    <h2>ZoneTechOnline</h2>
+    <p>Panel de administración</p>
+    <input type="password" id="key-input" class="login-input" placeholder="Clave de acceso" autocomplete="current-password">
+    <button class="login-btn" onclick="doLogin()">Entrar</button>
+    <div class="login-err" id="login-err">Clave incorrecta</div>
+  </div>
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html">ZONE<span>TECH</span>ONLINE</a>
+    <span class="badge">Panel Admin</span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">Principal</div>
+    <a class="nav-item" href="index.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a class="nav-item" href="pedidos.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Pedidos</a>
+    <a class="nav-item" href="productos.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos & Stock</a>
+    <a class="nav-item" href="clientes.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clientes</a>
+    <div class="nav-section" style="margin-top:16px;">Ventas</div>
+    <a class="nav-item" href="analiticas.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Analíticas</a>
+    <a class="nav-item" href="descuentos.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Descuentos</a>
+    <div class="nav-section" style="margin-top:16px;">Marketing</div>
+    <a class="nav-item" href="marketing.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Campañas Email</a>
+    <div class="nav-section" style="margin-top:16px;">Tienda</div>
+    <a class="nav-item active" href="configuracion.html"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Configuración</a>
+    <a class="nav-item" href="https://www.zonetechonline.com" target="_blank"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Ver tienda</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-row">
+      <div class="user-avatar">Z</div>
+      <div class="user-info">
+        <div class="user-name">ZoneTechOnline</div>
+        <div class="user-role">Administrador</div>
+      </div>
+      <button onclick="logout()" title="Salir" style="background:none;border:none;color:var(--text3);cursor:pointer;padding:4px;">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">Configuración</div>
+    <button class="btn btn-primary" onclick="saveAll()">Guardar cambios</button>
+  </div>
+
+  <div class="content">
+
+    <!-- Información de la tienda -->
+    <div class="section-title">Información de la tienda</div>
+    <div class="panel">
+      <div class="panel-header"><span class="panel-title">Datos generales</span></div>
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Nombre de la tienda</div>
+            <div class="setting-desc">Aparece en emails, facturas y el título del navegador</div>
+          </div>
+          <div class="setting-control"><input type="text" class="form-input" id="s-name" value="ZoneTechOnline"></div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Email de contacto</div>
+            <div class="setting-desc">Email visible para los clientes en la tienda</div>
+          </div>
+          <div class="setting-control"><input type="email" class="form-input" id="s-email" value="zonetechonline2024@gmail.com"></div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">URL de la tienda</div>
+            <div class="setting-desc">Dominio principal de tu tienda online</div>
+          </div>
+          <div class="setting-control"><input type="text" class="form-input" id="s-url" value="https://www.zonetechonline.com"></div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">País y divisa</div>
+            <div class="setting-desc">Región de operación para impuestos y pagos</div>
+          </div>
+          <div class="setting-control">
+            <select class="form-select" id="s-currency">
+              <option value="EUR" selected>🇪🇺 EUR — Euro</option>
+              <option value="GBP">🇬🇧 GBP — Libra</option>
+              <option value="USD">🇺🇸 USD — Dólar</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Envíos -->
+    <div class="section-title">Envíos</div>
+    <div class="panel">
+      <div class="panel-header"><span class="panel-title">Configuración de envíos</span></div>
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Envío gratuito desde</div>
+            <div class="setting-desc">Importe mínimo de pedido para envío gratuito</div>
+          </div>
+          <div class="setting-control">
+            <input type="number" class="form-input" id="s-free-shipping" value="49" style="min-width:120px;">
+            <span style="color:var(--text3);font-size:13px;">€</span>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Coste de envío estándar</div>
+            <div class="setting-desc">Para pedidos por debajo del mínimo de envío gratuito</div>
+          </div>
+          <div class="setting-control">
+            <input type="number" class="form-input" id="s-shipping-cost" value="4.99" style="min-width:120px;">
+            <span style="color:var(--text3);font-size:13px;">€</span>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Transportista principal</div>
+            <div class="setting-desc">Proveedor de envío por defecto para los pedidos</div>
+          </div>
+          <div class="setting-control">
+            <select class="form-select" id="s-carrier">
+              <option value="correos">Correos Express</option>
+              <option value="seur" selected>SEUR</option>
+              <option value="mrw">MRW</option>
+              <option value="nacex">Nacex</option>
+              <option value="gls">GLS</option>
+            </select>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Tiempo de entrega estimado</div>
+            <div class="setting-desc">Se muestra en la ficha de producto y checkout</div>
+          </div>
+          <div class="setting-control">
+            <input type="text" class="form-input" id="s-delivery-time" value="5–8 días hábiles">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Integraciones -->
+    <div class="section-title">Integraciones y servicios</div>
+    <div class="panel">
+      <div class="panel-header"><span class="panel-title">Estado de los servicios conectados</span></div>
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Stripe (pagos)</div>
+            <div class="setting-desc">Procesador de pagos. Acepta tarjetas, Bizum, PayPal y más</div>
+          </div>
+          <div class="setting-control">
+            <span class="status-chip ok"><span class="status-dot-sm"></span>Conectado</span>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Supabase (base de datos)</div>
+            <div class="setting-desc">Almacena pedidos, clientes y productos. Plan gratuito — pausado por inactividad</div>
+          </div>
+          <div class="setting-control">
+            <span class="status-chip" id="db-status"><span class="status-dot-sm"></span>Comprobando…</span>
+            <a href="https://supabase.com/dashboard" target="_blank" class="btn btn-ghost" style="font-size:11px;padding:5px 10px;margin-left:6px;">Abrir</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Resend (email)</div>
+            <div class="setting-desc">Servicio de envío de emails transaccionales y marketing</div>
+          </div>
+          <div class="setting-control">
+            <span class="status-chip ok"><span class="status-dot-sm"></span>Conectado</span>
+            <a href="https://resend.com/dashboard" target="_blank" class="btn btn-ghost" style="font-size:11px;padding:5px 10px;margin-left:6px;">Abrir</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Vercel (hosting)</div>
+            <div class="setting-desc">Plataforma de alojamiento. Plan Hobby (12 funciones serverless)</div>
+          </div>
+          <div class="setting-control">
+            <span class="status-chip ok"><span class="status-dot-sm"></span>Activo</span>
+            <a href="https://vercel.com/dashboard" target="_blank" class="btn btn-ghost" style="font-size:11px;padding:5px 10px;margin-left:6px;">Abrir</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Megasur (proveedor)</div>
+            <div class="setting-desc">API del proveedor mayorista para importar catálogo de productos</div>
+          </div>
+          <div class="setting-control">
+            <span class="status-chip ok"><span class="status-dot-sm"></span>Conectado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="section-title">SEO y visibilidad</div>
+    <div class="panel">
+      <div class="panel-header"><span class="panel-title">Configuración SEO</span></div>
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Google Search Console</div>
+            <div class="setting-desc">Gestión de indexación y posicionamiento en Google</div>
+          </div>
+          <div class="setting-control">
+            <a href="https://search.google.com/search-console" target="_blank" class="btn btn-ghost" style="font-size:12px;">Abrir GSC</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Google Merchant Center</div>
+            <div class="setting-desc">Feed de productos para Google Shopping</div>
+          </div>
+          <div class="setting-control">
+            <a href="https://merchants.google.com" target="_blank" class="btn btn-ghost" style="font-size:12px;">Abrir GMC</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Sitemap</div>
+            <div class="setting-desc">Mapa del sitio para robots de búsqueda. Incluye 284 URLs</div>
+          </div>
+          <div class="setting-control">
+            <a href="https://www.zonetechonline.com/sitemap.xml" target="_blank" class="btn btn-ghost" style="font-size:12px;">Ver sitemap</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Indexación manual</div>
+            <div class="setting-desc">Solicitar indexación urgente de URLs en Google Search Console (límite: 10/día)</div>
+          </div>
+          <div class="setting-control">
+            <a href="https://search.google.com/search-console/inspect" target="_blank" class="btn btn-ghost" style="font-size:12px;">Ir a GSC</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications -->
+    <div class="section-title">Notificaciones</div>
+    <div class="panel">
+      <div class="panel-header"><span class="panel-title">Alertas y notificaciones</span></div>
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Email al recibir pedido</div>
+            <div class="setting-desc">Recibe un email cuando llega un nuevo pedido</div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle"><input type="checkbox" id="n-orders" checked><span class="toggle-slider"></span></label>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Alerta de stock bajo</div>
+            <div class="setting-desc">Notificación cuando un producto baje del mínimo de stock</div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle"><input type="checkbox" id="n-stock" checked><span class="toggle-slider"></span></label>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Resumen semanal</div>
+            <div class="setting-desc">Email con resumen de ventas, pedidos y clientes cada lunes</div>
+          </div>
+          <div class="setting-control">
+            <label class="toggle"><input type="checkbox" id="n-weekly"><span class="toggle-slider"></span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Danger zone -->
+    <div class="section-title" style="color:var(--red);">Zona peligrosa</div>
+    <div class="panel" style="border-color:rgba(248,113,113,.2);">
+      <div class="panel-body">
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Cambiar clave de administrador</div>
+            <div class="setting-desc">Actualiza la clave de acceso al panel de administración. Configúrala en Vercel → Environment Variables → <code>ADMIN_API_KEY</code></div>
+          </div>
+          <div class="setting-control">
+            <a href="https://vercel.com/dashboard" target="_blank" class="btn btn-ghost" style="font-size:12px;border-color:rgba(248,113,113,.3);color:var(--red);">Abrir Vercel</a>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <div class="setting-label">Reanudar Supabase</div>
+            <div class="setting-desc">Si Supabase está pausado por inactividad, reanúdalo desde el dashboard</div>
+          </div>
+          <div class="setting-control">
+            <a href="https://supabase.com/dashboard" target="_blank" class="btn btn-ghost" style="font-size:12px;border-color:rgba(248,113,113,.3);color:var(--red);">Reanudar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:40px;"></div>
+  </div>
+</main>
+
+<div id="toast"></div>
+
+<script>
+var ADMIN_KEY = sessionStorage.getItem('zt_admin_key') || '';
+function toast(msg,err){var el=document.getElementById('toast');el.textContent=msg;el.className=err?'err':'';el.style.display='block';setTimeout(function(){el.style.display='none';},3200);}
+function doLogin(){var key=document.getElementById('key-input').value.trim();if(!key)return;fetch('/api/admin-stats',{headers:{'X-Admin-Key':key}}).then(function(r){if(r.status===401){document.getElementById('login-err').style.display='block';return;}ADMIN_KEY=key;sessionStorage.setItem('zt_admin_key',key);document.getElementById('login-screen').style.display='none';init();}).catch(function(){document.getElementById('login-err').style.display='block';});}
+document.getElementById('key-input').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+function logout(){sessionStorage.removeItem('zt_admin_key');ADMIN_KEY='';document.getElementById('login-screen').style.display='flex';}
+if(ADMIN_KEY){document.getElementById('login-screen').style.display='none';init();}
+
+function init(){
+  loadSettings();
+  checkDbStatus();
+}
+
+function loadSettings(){
+  var saved = {};
+  try{ saved = JSON.parse(localStorage.getItem('zt_config')||'{}'); }catch(e){}
+  var fields=['s-name','s-email','s-url','s-currency','s-free-shipping','s-shipping-cost','s-carrier','s-delivery-time'];
+  fields.forEach(function(id){if(saved[id]!=null)document.getElementById(id).value=saved[id];});
+  var toggles=['n-orders','n-stock','n-weekly'];
+  toggles.forEach(function(id){if(saved[id]!=null)document.getElementById(id).checked=saved[id];});
+}
+
+function saveAll(){
+  var data={};
+  var fields=['s-name','s-email','s-url','s-currency','s-free-shipping','s-shipping-cost','s-carrier','s-delivery-time'];
+  fields.forEach(function(id){data[id]=document.getElementById(id).value;});
+  var toggles=['n-orders','n-stock','n-weekly'];
+  toggles.forEach(function(id){data[id]=document.getElementById(id).checked;});
+  localStorage.setItem('zt_config',JSON.stringify(data));
+  toast('Configuración guardada');
+}
+
+function checkDbStatus(){
+  var el = document.getElementById('db-status');
+  fetch('/api/admin-stats',{headers:{'X-Admin-Key':ADMIN_KEY}})
+    .then(function(r){
+      if(r.status===200){
+        el.className='status-chip ok';
+        el.innerHTML='<span class="status-dot-sm"></span>Conectado';
+      } else if(r.status===500){
+        el.className='status-chip err';
+        el.innerHTML='<span class="status-dot-sm"></span>Pausado — reanudar';
+      } else {
+        el.className='status-chip warn';
+        el.innerHTML='<span class="status-dot-sm"></span>Error '+r.status;
+      }
+    })
+    .catch(function(){
+      el.className='status-chip err';
+      el.innerHTML='<span class="status-dot-sm"></span>Sin conexión';
+    });
+}
+</script>
+</body>
+</html>
