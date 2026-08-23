@@ -82,13 +82,20 @@ module.exports = async (req, res) => {
     }
 
     if (discountAmount && parseFloat(discountAmount) > 0) {
-      const coupon = await stripe.coupons.create({
-        amount_off: Math.round(parseFloat(discountAmount) * 100),
-        currency:   'eur',
-        duration:   'once',
-        name:       'Descuento aplicado',
-      });
-      sessionParams.discounts = [{ coupon: coupon.id }];
+      const totalCents    = lineItems.reduce((s, li) => s + li.price_data.unit_amount * li.quantity, 0);
+      const discountCents = Math.min(
+        Math.round(parseFloat(discountAmount) * 100),
+        totalCents - 50  // Stripe requiere al menos €0.50 cobrado
+      );
+      if (discountCents > 0) {
+        const coupon = await stripe.coupons.create({
+          amount_off: discountCents,
+          currency:   'eur',
+          duration:   'once',
+          name:       'Descuento aplicado',
+        });
+        sessionParams.discounts = [{ coupon: coupon.id }];
+      }
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
