@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Admin-Key');
   if (req.method === 'OPTIONS') return res.status(204).end();
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST' && !req.headers['x-vercel-cron']) return res.status(405).json({ error: 'Method not allowed' });
 
   const type = req.query.type || req.body?.type;
 
@@ -105,8 +105,9 @@ module.exports = async (req, res) => {
         select: 'id', limit: 1,
       });
       if (existing && existing.length) {
-        await db(`wishlist_reminders?id=eq.${existing[0].id}`, {
+        await db('wishlist_reminders', {
           method: 'PATCH',
+          params: `?id=eq.${existing[0].id}`,
           body: { items, name: name ? String(name).slice(0, 100) : null, updated_at: new Date().toISOString() },
         });
       } else {
@@ -139,8 +140,9 @@ module.exports = async (req, res) => {
       const cartUrl = 'https://www.zonetechonline.com/checkout.html';
       if (existing && existing.length) {
         // Actualizar sesión existente con el nuevo carrito
-        await db(`cart_sessions?id=eq.${existing[0].id}`, {
+        await db('cart_sessions', {
           method: 'PATCH',
+          params: `?id=eq.${existing[0].id}`,
           body: { cart_data: cart, cart_total: cartTotal || 0, updated_at: new Date().toISOString() },
         });
       } else {
@@ -168,8 +170,9 @@ module.exports = async (req, res) => {
     const { email } = req.body || {};
     if (!email) return res.status(400).json({ error: 'email requerido' });
     try {
-      await db(`cart_sessions?email=eq.${encodeURIComponent(email.toLowerCase().trim())}&completed_at=is.null`, {
+      await db('cart_sessions', {
         method: 'PATCH',
+        params: `?email=eq.${encodeURIComponent(email.toLowerCase().trim())}&completed_at=is.null`,
         body: { completed_at: new Date().toISOString() },
       });
       return res.status(200).json({ ok: true });
@@ -236,7 +239,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = cartAbandon1({ name: session.name, email: session.email, items: session.cart_data, cartTotal: session.cart_total, cartUrl: session.cart_url });
           await sendEmail({ to: session.email, subject: tpl.subject, html: tpl.html });
-          await db(`cart_sessions?id=eq.${session.id}`, { method: 'PATCH', body: { recovery_email_1_sent_at: new Date().toISOString() } });
+          await db('cart_sessions', { method: 'PATCH', params: `?id=eq.${session.id}`, body: { recovery_email_1_sent_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('cart-recovery-1', err.message); }
       }
@@ -245,7 +248,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = cartAbandon2({ name: session.name, email: session.email, items: session.cart_data, cartTotal: session.cart_total, cartUrl: session.cart_url });
           await sendEmail({ to: session.email, subject: tpl.subject, html: tpl.html });
-          await db(`cart_sessions?id=eq.${session.id}`, { method: 'PATCH', body: { recovery_email_2_sent_at: new Date().toISOString() } });
+          await db('cart_sessions', { method: 'PATCH', params: `?id=eq.${session.id}`, body: { recovery_email_2_sent_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('cart-recovery-2', err.message); }
       }
@@ -254,7 +257,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = cartAbandon3({ name: session.name, email: session.email, items: session.cart_data, cartTotal: session.cart_total, cartUrl: session.cart_url, discountCode: DISCOUNT_CODE, discountPct: 5 });
           await sendEmail({ to: session.email, subject: tpl.subject, html: tpl.html });
-          await db(`cart_sessions?id=eq.${session.id}`, { method: 'PATCH', body: { recovery_email_3_sent_at: new Date().toISOString() } });
+          await db('cart_sessions', { method: 'PATCH', params: `?id=eq.${session.id}`, body: { recovery_email_3_sent_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('cart-recovery-3', err.message); }
       }
@@ -274,7 +277,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = wishlistReminder({ name: wr.name, email: wr.email, items: wr.items, wishlistUrl: 'https://www.zonetechonline.com/lista-deseos.html' });
           await sendEmail({ to: wr.email, subject: tpl.subject, html: tpl.html });
-          await db(`wishlist_reminders?id=eq.${wr.id}`, { method: 'PATCH', body: { reminder_sent_at: new Date().toISOString() } });
+          await db('wishlist_reminders', { method: 'PATCH', params: `?id=eq.${wr.id}`, body: { reminder_sent_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('wishlist-reminder', err.message); }
       }
@@ -294,7 +297,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = welcomeSeq2({ name: c.name, email: c.email });
           await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
-          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 2, welcome_step_updated_at: new Date().toISOString() } });
+          await db('customers', { method: 'PATCH', params: `?id=eq.${c.id}`, body: { welcome_step: 2, welcome_step_updated_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('welcome-seq-2', err.message); }
       }
@@ -308,7 +311,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = welcomeSeq3({ name: c.name, email: c.email });
           await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
-          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 3, welcome_step_updated_at: new Date().toISOString() } });
+          await db('customers', { method: 'PATCH', params: `?id=eq.${c.id}`, body: { welcome_step: 3, welcome_step_updated_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('welcome-seq-3', err.message); }
       }
@@ -322,7 +325,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = welcomeSeq4({ name: c.name, email: c.email });
           await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
-          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 4, welcome_step_updated_at: new Date().toISOString() } });
+          await db('customers', { method: 'PATCH', params: `?id=eq.${c.id}`, body: { welcome_step: 4, welcome_step_updated_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('welcome-seq-4', err.message); }
       }
@@ -336,7 +339,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = welcomeSeq5({ name: c.name, email: c.email });
           await sendEmail({ to: c.email, subject: tpl.subject, html: tpl.html });
-          await db(`customers?id=eq.${c.id}`, { method: 'PATCH', body: { welcome_step: 5, welcome_step_updated_at: new Date().toISOString() } });
+          await db('customers', { method: 'PATCH', params: `?id=eq.${c.id}`, body: { welcome_step: 5, welcome_step_updated_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('welcome-seq-5', err.message); }
       }
@@ -354,7 +357,7 @@ module.exports = async (req, res) => {
         try {
           const tpl = postPurchaseReview({ email: ord.customer_email, orderNo: ord.order_no });
           await sendEmail({ to: ord.customer_email, subject: tpl.subject, html: tpl.html });
-          await db(`orders?id=eq.${ord.id}`, { method: 'PATCH', body: { review_email_sent_at: new Date().toISOString() } });
+          await db('orders', { method: 'PATCH', params: `?id=eq.${ord.id}`, body: { review_email_sent_at: new Date().toISOString() } });
           sent++;
         } catch (err) { logger.error('review-post-compra', err.message); }
       }
@@ -394,7 +397,7 @@ module.exports = async (req, res) => {
             if (!cust || !cust.length) continue;
             const tpl = win.fn({ name: cust[0].name, email: cust[0].email });
             await sendEmail({ to: cust[0].email, subject: tpl.subject, html: tpl.html });
-            await db(`customers?id=eq.${cust[0].id}`, { method: 'PATCH', body: { [win.sentField]: new Date().toISOString() } });
+            await db('customers', { method: 'PATCH', params: `?id=eq.${cust[0].id}`, body: { [win.sentField]: new Date().toISOString() } });
             sent++;
           } catch (err) { logger.error(`reactivation-${win.daysMin}`, err.message); }
         }
