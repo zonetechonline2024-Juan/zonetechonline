@@ -14,7 +14,7 @@ module.exports = withAdmin(async (req, res) => {
   });
 
   if (customers && customers.length) {
-    const emails  = customers.map(c => `'${c.email}'`).join(',');
+    const emails  = customers.map(c => c.email.replace(/[(),]/g, '')).join(',');
     const orders  = await db('orders', {
       select:  'id,order_no,total,status,created_at,customer_email',
       filters: [`customer_email=in.(${emails})`, 'status=neq.cancelled'],
