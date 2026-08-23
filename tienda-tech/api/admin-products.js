@@ -3,7 +3,31 @@ const { db }        = require('./_db');
 const { withAdmin } = require('./_middleware');
 
 module.exports = withAdmin(async (req, res) => {
-  const { id } = req.query || {};
+  const { id, resource } = req.query || {};
+
+  // ── Discount codes CRUD ──
+  if (resource === 'discounts') {
+    if (req.method === 'GET') {
+      const codes = await db('discount_codes', { select: '*', order: 'created_at.desc', limit: 100 });
+      return res.status(200).json({ ok: true, codes: codes || [] });
+    }
+    if (req.method === 'POST') {
+      const body = req.body || {};
+      const [code] = await db('discount_codes', { method: 'POST', body });
+      return res.status(201).json({ ok: true, code });
+    }
+    if (req.method === 'PATCH') {
+      if (!id) return res.status(400).json({ error: 'id requerido' });
+      const [code] = await db('discount_codes', { method: 'PATCH', params: `?id=eq.${id}`, body: req.body || {} });
+      return res.status(200).json({ ok: true, code });
+    }
+    if (req.method === 'DELETE') {
+      if (!id) return res.status(400).json({ error: 'id requerido' });
+      await db('discount_codes', { method: 'DELETE', params: `?id=eq.${id}` });
+      return res.status(200).json({ ok: true });
+    }
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   if (req.method === 'GET') {
     const search   = req.query?.search;
@@ -42,4 +66,4 @@ module.exports = withAdmin(async (req, res) => {
   }
 
   res.status(405).json({ error: 'Method not allowed' });
-}, 'GET, POST, PATCH, OPTIONS');
+}, 'GET, POST, PATCH, DELETE, OPTIONS');
