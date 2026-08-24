@@ -67,7 +67,7 @@ function esc(str) {
 
 function productItem(p) {
   const filter    = FILTER[p.category] || 'all';
-  const link      = `${STORE}/catalogo.html?product=${p.id}`;
+  const link      = `${STORE}/producto/${p.id}`;
   const imageLink = p.image ? `${STORE}/${p.image.replace(/^\//, '')}` : '';
   const price     = `${(parseFloat(p.price) || 0).toFixed(2)} EUR`;
   const gcat      = GCAT[p.category] || '888';
@@ -90,12 +90,13 @@ function productItem(p) {
       <g:link>${esc(link)}</g:link>
       <g:image_link>${esc(imageLink)}</g:image_link>
       <g:price>${price}</g:price>
-      <g:availability>in stock</g:availability>
+      <g:availability>${p.inStock === false ? 'out of stock' : 'in stock'}</g:availability>
       <g:condition>new</g:condition>
       <g:brand>${brand}</g:brand>
       <g:mpn>${esc(sku)}</g:mpn>
       <g:google_product_category>${gcat}</g:google_product_category>
       <g:product_type>${esc(p.category)}</g:product_type>
+      <g:identifier_exists>false</g:identifier_exists>
       <g:shipping>
         <g:country>ES</g:country>
         <g:service>Estándar MRW/SEUR</g:service>
