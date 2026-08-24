@@ -4,7 +4,7 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/producto/:id", "destination": "/producto.html" },
+    { "source": "/producto/:id", "destination": "/api/producto?id=:id" },
     { "source": "/bundles",      "destination": "/bundles.html" },
     { "source": "/relojes",      "destination": "/catalogo.html" },
     { "source": "/auriculares",  "destination": "/catalogo.html" },
@@ -57,7 +57,8 @@
     { "source": "/nuestra-historia",             "destination": "/nuestra-historia.html" },
     { "source": "/sobre-nosotros",               "destination": "/nuestra-historia.html" },
     { "source": "/nuestra-filosofia",             "destination": "/nuestra-filosofia.html" },
-    { "source": "/criterios-seleccion",           "destination": "/nuestra-filosofia.html" }
+    { "source": "/criterios-seleccion",           "destination": "/nuestra-filosofia.html" },
+    { "source": "/contacto",                       "destination": "/contacto.html" }
   ],
   "redirects": [
     {
@@ -82,7 +83,8 @@
     "api/admin-customers.js":     { "maxDuration": 15 },
     "api/ai-assistant.js":          { "maxDuration": 20 },
     "api/megasur.js":             { "maxDuration": 30 },
-    "api/feed.js":                { "maxDuration": 15 }
+    "api/feed.js":                { "maxDuration": 15 },
+    "api/producto.js":            { "maxDuration": 10 }
   },
   "headers": [
     {
@@ -118,7 +120,7 @@
         { "key": "X-XSS-Protection",          "value": "1; mode=block" },
         { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy",        "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy",   "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://js.stripe.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://images.pexels.com https://images.unsplash.com https://cdn2.depau.es https://i.ytimg.com https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://js.stripe.com https://checkout.stripe.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://api.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; upgrade-insecure-requests;" }
+        { "key": "Content-Security-Policy",   "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://js.stripe.com https://www.googleadservices.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://images.pexels.com https://images.unsplash.com https://cdn2.depau.es https://i.ytimg.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://js.stripe.com https://checkout.stripe.com https://bid.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.stripe.com https://googleads.g.doubleclick.net https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; upgrade-insecure-requests;" }
       ]
     },
     {
