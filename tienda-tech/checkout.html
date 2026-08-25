@@ -24,8 +24,12 @@
 <title>Finalizar Compra | ZoneTechOnline</title>
 <style>
 *{box-sizing:border-box;}
-.checkout-wrap{max-width:1100px;margin:0 auto;padding:100px 24px 80px;display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:start;}
-@media(max-width:768px){.checkout-wrap{grid-template-columns:1fr;padding:80px 16px 60px;}.order-col{order:-1;}}
+.checkout-wrap{max-width:1100px;margin:0 auto;padding:100px 24px 80px;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:40px;align-items:start;}
+@media(max-width:768px){.checkout-wrap{grid-template-columns:minmax(0,1fr);padding:80px 16px 60px;}.order-col{order:-1;position:static;}}
+/* Evita que las columnas del grid se expandan más allá de 1fr por min-content */
+.form-col,.order-col{min-width:0;}
+/* En móvil (<480px) los pares de campos pasan a una sola columna */
+@media(max-width:480px){.form-row{grid-template-columns:1fr;}}
 .checkout-title{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;margin-bottom:28px;}
 .checkout-step{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;margin-bottom:20px;}
 .checkout-step h3{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
@@ -56,7 +60,7 @@
 .order-summary{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;}
 .order-summary h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border);}
 .order-items{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;}
-.order-item{display:flex;gap:14px;align-items:center;}
+.order-item{display:flex;gap:14px;align-items:center;min-width:0;}
 .order-item-img{width:54px;height:54px;border-radius:10px;background:var(--bg-2);border:1px solid var(--border);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .order-item-img img{width:100%;height:100%;object-fit:cover;}
 .order-item-details{flex:1;min-width:0;}
@@ -221,7 +225,7 @@ select:-webkit-autofill:focus {
             <strong>Envío estándar · 5 a 8 días hábiles</strong>
             <span>MRW / SEUR con seguimiento</span>
           </div>
-          <span id="shipping-price-std" style="font-size:14px;font-weight:700;color:var(--accent);">Gratis</span>
+          <span id="shipping-price-std" style="font-size:14px;font-weight:700;color:var(--accent);flex-shrink:0;white-space:nowrap;">Gratis</span>
         </label>
       </div>
     </div>
@@ -294,7 +298,7 @@ select:-webkit-autofill:focus {
       <div style="margin-top:16px;">
         <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--text-2);">
           <input type="checkbox" id="accept-terms" style="margin-top:2px;accent-color:var(--accent);flex-shrink:0;">
-          He leído y acepto los <a href="terminos-condiciones.html" target="_blank" style="color:var(--accent);margin:0 3px;">Términos y Condiciones</a> y la <a href="politica-privacidad.html" target="_blank" style="color:var(--accent);margin:0 3px;">Política de Privacidad</a>.
+          <span>He leído y acepto los <a href="terminos-condiciones.html" target="_blank" style="color:var(--accent);margin:0 3px;">Términos y Condiciones</a> y la <a href="politica-privacidad.html" target="_blank" style="color:var(--accent);margin:0 3px;">Política de Privacidad</a>.</span>
         </label>
         <span id="terms-err" class="field-err"></span>
       </div>
