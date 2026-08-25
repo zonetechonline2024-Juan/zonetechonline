@@ -3393,6 +3393,15 @@ function addToCart(productId) {
   renderCartItems();
   openCart();
   showToast(product.name + ' añadido al carrito');
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'add_to_cart', {
+        currency: 'EUR',
+        value: parseFloat((product.price || 0).toFixed(2)),
+        items: [{ item_id: String(product.id), item_name: product.name, item_brand: product.brand || '', item_category: product.category || '', price: parseFloat((product.price || 0).toFixed(2)), quantity: 1 }]
+      });
+    }
+  } catch(e) {}
 }
 
 function removeFromCart(productId) {
@@ -3891,7 +3900,7 @@ function openQuickView(productId) {
         (qvDiscount > 0 ? '<span style="background:rgba(52,211,153,.15);color:var(--green);font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px">-' + qvDiscount + '%</span>' : '') +
       '</div>' +
       '<div class="qv-trust-row">' +
-        '<span class="qv-trust-item">✓ Garantía oficial 2 años</span>' +
+        '<span class="qv-trust-item">✓ Garantía legal 2 años</span>' +
         '<span class="qv-trust-item">✓ Envío gratis · 5 a 8 días hábiles</span>' +
         '<span class="qv-trust-item">✓ Devolución 30 días</span>' +
       '</div>' +
@@ -6142,10 +6151,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (secF) window.scrollTo({ top: secF.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
     // SEO: actualizar canonical, título y descripción para páginas de categoría indexables
     var CAT_SEO = {
-      'watches':     { title: 'Smartwatches y Relojes Inteligentes Premium · ZoneTechOnline', desc: 'Relojes inteligentes Garmin, Polar, Amazfit y más. GPS, fitness y monitorización continua. Garantía oficial 2 años. Envío gratis España y Europa.' },
-      'headphones':  { title: 'Auriculares Premium con Noise Cancelling · ZoneTechOnline', desc: 'Auriculares Sony, Sennheiser, JBL con cancelación de ruido activa. Inalámbricos y profesionales. Garantía oficial 2 años. Envío gratis España y Europa.' },
-      'speakers':    { title: 'Altavoces Bluetooth Portátiles Premium · ZoneTechOnline', desc: 'Altavoces JBL, Marshall, Sony resistentes al agua y con sonido premium. Garantía oficial 2 años. Envío gratis España y Europa.' },
-      'peripherals': { title: 'Periféricos Gaming y Teclados Mecánicos · ZoneTechOnline', desc: 'Teclados, ratones y periféricos gaming Alienware, Cherry, Krom y más. Garantía oficial 2 años. Envío gratis España y Europa.' },
+      'watches':     { title: 'Smartwatches y Relojes Inteligentes Premium · ZoneTechOnline', desc: 'Relojes inteligentes Garmin, Polar, Amazfit y más. GPS, fitness y monitorización continua. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'headphones':  { title: 'Auriculares Premium con Noise Cancelling · ZoneTechOnline', desc: 'Auriculares Sony, Sennheiser, JBL con cancelación de ruido activa. Inalámbricos y profesionales. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'speakers':    { title: 'Altavoces Bluetooth Portátiles Premium · ZoneTechOnline', desc: 'Altavoces JBL, Marshall, Sony resistentes al agua y con sonido premium. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'peripherals': { title: 'Periféricos Gaming y Teclados Mecánicos · ZoneTechOnline', desc: 'Teclados, ratones y periféricos gaming Alienware, Cherry, Krom y más. Garantía legal 2 años. Envío gratis España y Europa.' },
       'smartphones': { title: 'Smartphones 5G Desbloqueados Premium · ZoneTechOnline', desc: 'Smartphones 5G Motorola, Realme, Xiaomi desbloqueados con garantía oficial 2 años. Envío gratis España y Europa.' }
     };
     if (CAT_SEO[filterParam]) {
@@ -6197,6 +6206,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', function() {
       if (!cart || cart.length === 0) return;
+      try {
+        if (typeof gtag === 'function' && cart.length > 0) {
+          var total = cart.reduce(function(s, i) { return s + (i.price * i.qty); }, 0);
+          gtag('event', 'begin_checkout', {
+            currency: 'EUR',
+            value: parseFloat(total.toFixed(2)),
+            items: cart.map(function(i) { return { item_id: String(i.id), item_name: i.name, item_brand: i.brand || '', item_category: i.category || '', price: parseFloat((i.price || 0).toFixed(2)), quantity: i.qty }; })
+          });
+        }
+      } catch(e) {}
       closeCart();
       window.location.href = 'checkout.html';
     });
