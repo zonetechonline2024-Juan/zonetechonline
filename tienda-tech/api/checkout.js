@@ -29,10 +29,10 @@ module.exports = async (req, res) => {
 
     const { items, email, discountAmount, paymentMethod } = body;
 
-    const stripeMethodTypes =
-      paymentMethod === 'bizum'  ? ['bizum']  :
-      paymentMethod === 'paypal' ? ['paypal'] :
-      null; // null = automatic_payment_methods (activa Google Pay + Apple Pay automáticamente)
+    const extraMethodType =
+      paymentMethod === 'bizum'  ? 'bizum'  :
+      paymentMethod === 'paypal' ? 'paypal' :
+      null;
 
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
@@ -61,21 +61,21 @@ module.exports = async (req, res) => {
     const base  = `${proto}://${host}`;
 
     const sessionParams = {
-      ...(stripeMethodTypes
-        ? { payment_method_types: stripeMethodTypes }
-        : { automatic_payment_methods: { enabled: true } }
-      ),
       line_items: lineItems,
       mode: 'payment',
       locale: 'es',
       success_url: `${base}/checkout-success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${base}/checkout-cancel.html`,
-      // Recogemos dirección de envío para dropshipping con Megasur
       shipping_address_collection: {
         allowed_countries: ['ES', 'PT', 'FR', 'DE', 'IT', 'GB', 'NL', 'BE', 'AT', 'CH', 'IE', 'PL'],
       },
       billing_address_collection: 'auto',
     };
+
+    // Añadir método específico solo si se solicitó; si no, Stripe usa los del dashboard automáticamente
+    if (extraMethodType) {
+      sessionParams.payment_method_types = ['card', extraMethodType];
+    }
 
     if (email && typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       sessionParams.customer_email = email;
@@ -98,7 +98,19 @@ module.exports = async (req, res) => {
       }
     }
 
-    const session = await stripe.checkout.sessions.create(sessionParams);
+    let session;
+    try {
+      session = await stripe.checkout.sessions.create(sessionParams);
+    } catch (methodErr) {
+      // Si el método específico (bizum/paypal) no está activado en Stripe, reintenta solo con tarjeta
+      if (extraMethodType && sessionParams.payment_method_types) {
+        logger.warn('checkout', `${extraMethodType} no disponible, usando tarjeta: ${methodErr.message}`, logger.ctx(req));
+        delete sessionParams.payment_method_types;
+        session = await stripe.checkout.sessions.create(sessionParams);
+      } else {
+        throw methodErr;
+      }
+    }
 
     // Guardar carrito en Supabase vinculado al session ID (para dropshipping Megasur)
     try {
