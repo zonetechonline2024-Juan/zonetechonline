@@ -2575,6 +2575,57 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000001770'}
   },
 
+  // ── APPLE iPhone Air / 16 Plus / 17 Pro (Megasur 2026-08) ──
+  { id:426, name:'APPLE IPHONE AIR 256GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1484, oldPrice:1690, badge:'OFERTA',
+    image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
+    images:['img/productos/1186-apple-iphone-17-512gb-negro.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Air'}
+  },
+  { id:427, name:'APPLE IPHONE AIR 256GB BLANCO', brand:'APPLE', category:'smartphones',
+    price:1484, oldPrice:1690, badge:'OFERTA',
+    image:'img/productos/DSP0000029638-1.jpg',
+    images:['img/productos/DSP0000029638-1.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Air'}
+  },
+  { id:428, name:'APPLE IPHONE AIR 1TB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1780, oldPrice:1990, badge:'OFERTA',
+    image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
+    images:['img/productos/1186-apple-iphone-17-512gb-negro.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'1TB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Air'}
+  },
+  { id:429, name:'APPLE IPHONE 16 PLUS 256GB NEGRO', brand:'APPLE', category:'smartphones',
+    price:1708, oldPrice:1950, badge:'OFERTA',
+    image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
+    images:['img/productos/1186-apple-iphone-17-512gb-negro.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus'}
+  },
+  { id:430, name:'APPLE IPHONE 17 PRO 512GB SILVER', brand:'APPLE', category:'smartphones',
+    price:2299, oldPrice:2590, badge:'OFERTA',
+    image:'img/productos/DSP0000029638-1.jpg',
+    images:['img/productos/DSP0000029638-1.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'512GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus'}
+  },
+  { id:431, name:'APPLE IPHONE 17 PRO MAX 512GB SILVER', brand:'APPLE', category:'smartphones',
+    price:2534, oldPrice:2850, badge:'OFERTA',
+    image:'img/productos/DSP0000029638-1.jpg',
+    images:['img/productos/DSP0000029638-1.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'512GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus'}
+  },
+  { id:432, name:'APPLE IPHONE 17 PRO MAX 1TB COSMIC ORANGE', brand:'APPLE', category:'smartphones',
+    price:2927, oldPrice:3290, badge:'OFERTA',
+    image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
+    images:['img/productos/1186-apple-iphone-17-512gb-negro.jpg'],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'1TB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus'}
+  },
+
   // ── XIAOMI ─────────────────────────────────────────────────
 
   { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
