@@ -317,7 +317,7 @@ function confirmShip() {
     items:             currentShipOrder.items || [],
   };
 
-  fetch(API_BASE + '/email-shipping', {
+  fetch(API_BASE + '/emails?type=shipping', {
     method:  'POST',
     headers: { 'Content-Type': 'application/json', 'X-Admin-Key': ADMIN_KEY },
     body:    JSON.stringify(payload),
