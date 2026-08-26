@@ -117,6 +117,10 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:va
       Clientes
     </a>
     <div class="nav-section" style="margin-top:16px;">Ventas</div>
+    <a class="nav-item" href="finanzas.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Finanzas
+    </a>
     <a class="nav-item" href="analiticas.html">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       Analíticas
@@ -284,12 +288,49 @@ function openModal(encodedOrder){
   document.getElementById('m-carrier').value=currentOrder.carrier||'';
   document.getElementById('m-tracking-url').value=currentOrder.tracking_url||'';
   document.getElementById('m-notes').value=currentOrder.notes||'';
+
   var items=currentOrder.items||[];
+  var payLabels={card:'💳 Tarjeta',bizum:'📱 Bizum',paypal:'🅿️ PayPal'};
+
+  // Items table
+  var itemsHtml='';
+  if(items.length){
+    var itemsTotal=0;
+    var rows=items.map(function(i){
+      var price=Number(i.price||i.unit_price||i.price_eur||0);
+      var qty=Number(i.qty||1);
+      var sub=price*qty;
+      itemsTotal+=sub;
+      return '<tr style="border-top:1px solid rgba(255,255,255,.05)">'+
+        '<td style="padding:8px 0;font-weight:600;font-size:13px;">'+i.product_name+'</td>'+
+        '<td style="text-align:center;padding:8px 6px;font-size:13px;">'+qty+'</td>'+
+        '<td style="text-align:right;padding:8px 6px;font-size:13px;">'+fmt(price)+'</td>'+
+        '<td style="text-align:right;padding:8px 0;font-size:13px;font-weight:700;">'+fmt(sub)+'</td>'+
+      '</tr>';
+    }).join('');
+    itemsHtml='<div style="margin:12px 0 4px;font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;">Productos</div>'+
+      '<table style="width:100%;border-collapse:collapse;">'+
+        '<thead><tr style="font-size:11px;color:var(--text3);">'+
+          '<th style="text-align:left;padding:4px 0;">Artículo</th>'+
+          '<th style="text-align:center;padding:4px 6px;">Cant.</th>'+
+          '<th style="text-align:right;padding:4px 6px;">Precio</th>'+
+          '<th style="text-align:right;padding:4px 0;">Subtotal</th>'+
+        '</th></thead>'+
+        '<tbody>'+rows+'</tbody>'+
+      '</table>';
+  }
+
   document.getElementById('modal-detail').innerHTML=
-    '<div class="detail-row"><span class="lbl">Fecha</span><span class="val">'+fmtDate(currentOrder.created_at)+'</span></div>'+
-    '<div class="detail-row"><span class="lbl">Dirección</span><span class="val">'+(currentOrder.customer_address||'—')+'</span></div>'+
-    '<div class="detail-row"><span class="lbl">Total</span><span class="val" style="color:var(--accent);">'+fmt(currentOrder.total)+'</span></div>'+
-    (items.length?'<div style="margin-top:10px;font-size:12px;color:var(--text3);">Productos: '+items.map(function(i){return i.product_name+' x'+i.qty;}).join(', ')+'</div>':'');
+    '<div class="detail-row"><span class="lbl">Fecha pedido</span><span class="val">'+fmtDate(currentOrder.created_at)+'</span></div>'+
+    '<div class="detail-row"><span class="lbl">Método de pago</span><span class="val">'+(payLabels[currentOrder.payment_method]||currentOrder.payment_method||'—')+'</span></div>'+
+    '<div class="detail-row"><span class="lbl">Dirección de envío</span><span class="val" style="max-width:220px;text-align:right;font-size:12px;line-height:1.4;">'+(currentOrder.customer_address||'—')+'</span></div>'+
+    (currentOrder.tracking_number?'<div class="detail-row"><span class="lbl">Seguimiento</span><span class="val" style="font-family:monospace;font-size:12px;">'+currentOrder.tracking_number+(currentOrder.carrier?' · '+currentOrder.carrier:'')+'</span></div>':'')+
+    itemsHtml+
+    '<div class="detail-row" style="margin-top:10px;border-top:1.5px solid rgba(255,255,255,.1);padding-top:10px;">'+
+      '<span class="lbl" style="font-size:14px;font-weight:700;color:var(--text);">TOTAL</span>'+
+      '<span class="val" style="color:var(--accent);font-size:18px;font-weight:900;">'+fmt(currentOrder.total)+'</span>'+
+    '</div>';
+
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){document.getElementById('modal').classList.remove('open');currentOrder=null;}

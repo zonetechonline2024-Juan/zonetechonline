@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Finanzas — ZoneTechOnline Admin</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a18;--sidebar:#0d0d22;--card:#13132b;--border:rgba(99,102,241,.15);
+  --text:#e8e8f8;--text2:#a0a0c0;--text3:#606080;
+  --accent:#6366f1;--accent2:#818cf8;--green:#34d399;--yellow:#fbbf24;--red:#f87171;
+  --sidebar-w:240px;
+}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;}
+.sidebar{width:var(--sidebar-w);background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.sidebar-logo{padding:20px 20px 16px;border-bottom:1px solid var(--border);}
+.sidebar-logo a{font-size:16px;font-weight:900;letter-spacing:.1em;color:#fff;text-decoration:none;}
+.sidebar-logo a span{color:var(--accent);}
+.sidebar-logo .bdg{display:block;font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+.sidebar-nav{flex:1;padding:16px 0;overflow-y:auto;}
+.nav-section{padding:0 12px 8px;font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:8px;}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:13.5px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:8px;margin:1px 8px;transition:all .15s;}
+.nav-item:hover{background:rgba(99,102,241,.1);color:var(--text);}
+.nav-item.active{background:rgba(99,102,241,.18);color:var(--accent);}
+.nav-item svg{flex-shrink:0;opacity:.7;}
+.nav-item.active svg{opacity:1;}
+.nav-badge{margin-left:auto;background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;}
+.sidebar-footer{padding:16px;border-top:1px solid var(--border);}
+.user-row{display:flex;align-items:center;gap:10px;}
+.user-avatar{width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+.user-info{flex:1;min-width:0;}
+.user-name{font-size:12px;font-weight:600;}
+.user-role{font-size:11px;color:var(--text3);}
+.main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh;}
+.topbar{background:var(--sidebar);border-bottom:1px solid var(--border);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+.topbar-title{font-size:15px;font-weight:700;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;text-decoration:none;}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.content{padding:28px;flex:1;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.kpi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;position:relative;overflow:hidden;}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent-color,var(--accent));}
+.kpi-label{font-size:12px;color:var(--text2);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+.kpi-value{font-size:26px;font-weight:900;color:var(--text);margin-bottom:6px;line-height:1;}
+.kpi-sub{font-size:12px;color:var(--text3);}
+.kpi-icon{position:absolute;top:18px;right:18px;font-size:22px;opacity:.22;}
+.grid-2{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-bottom:24px;}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.panel-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.panel-title{font-size:14px;font-weight:700;}
+.panel-body{padding:20px;}
+.chart-wrap{position:relative;height:220px;}
+.data-table{width:100%;border-collapse:collapse;}
+.data-table th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--text3);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);font-weight:600;}
+.data-table td{padding:12px 14px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:hover td{background:rgba(99,102,241,.04);}
+.method-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.method-row:last-child{border-bottom:none;}
+.method-bar-wrap{flex:1;margin:0 14px;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;}
+.method-bar{height:100%;border-radius:3px;}
+.loading{text-align:center;padding:32px;color:var(--text3);font-size:13px;}
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;}
+.login-box{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:44px 40px;width:100%;max-width:400px;text-align:center;}
+.login-box h2{font-size:22px;font-weight:800;margin-bottom:6px;}
+.login-box p{font-size:13px;color:var(--text2);margin-bottom:28px;}
+.login-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--text);outline:none;margin-bottom:12px;}
+.login-input:focus{border-color:var(--accent);}
+.login-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;}
+.login-err{font-size:12px;color:var(--red);margin-top:8px;display:none;}
+@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(2,1fr);}.grid-2{grid-template-columns:1fr;}.sidebar{transform:translateX(-100%);}.main{margin-left:0;}}
+</style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-box">
+    <div style="font-size:40px;margin-bottom:12px;">🔐</div>
+    <h2>ZoneTechOnline</h2>
+    <p>Panel de administración</p>
+    <input type="password" id="key-input" class="login-input" placeholder="Clave de acceso" autocomplete="current-password">
+    <button class="login-btn" onclick="doLogin()">Entrar</button>
+    <div class="login-err" id="login-err">Clave incorrecta</div>
+  </div>
+</div>
+
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html">ZONE<span>TECH</span>ONLINE</a>
+    <span class="bdg">Panel Admin</span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">Principal</div>
+    <a class="nav-item" href="index.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="pedidos.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Pedidos
+      <span class="nav-badge" id="pending-badge" style="display:none">0</span>
+    </a>
+    <a class="nav-item" href="productos.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      Productos & Stock
+    </a>
+    <a class="nav-item" href="clientes.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      Clientes
+    </a>
+    <div class="nav-section" style="margin-top:16px;">Ventas</div>
+    <a class="nav-item active" href="finanzas.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Finanzas
+    </a>
+    <a class="nav-item" href="analiticas.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Analíticas
+    </a>
+    <a class="nav-item" href="descuentos.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      Descuentos
+    </a>
+    <div class="nav-section" style="margin-top:16px;">Marketing</div>
+    <a class="nav-item" href="marketing.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Campañas Email
+    </a>
+    <div class="nav-section" style="margin-top:16px;">Tienda</div>
+    <a class="nav-item" href="configuracion.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Configuración
+    </a>
+    <a class="nav-item" href="https://www.zonetechonline.com" target="_blank">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Ver tienda
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="user-row">
+      <div class="user-avatar">Z</div>
+      <div class="user-info">
+        <div class="user-name">ZoneTechOnline</div>
+        <div class="user-role">Administrador</div>
+      </div>
+      <button onclick="logout()" title="Salir" style="background:none;border:none;color:var(--text3);cursor:pointer;padding:4px;">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">Finanzas</div>
+    <button class="btn btn-ghost" onclick="load()">⟳ Actualizar</button>
+  </div>
+  <div class="content">
+
+    <!-- KPI cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card" style="--accent-color:#6366f1">
+        <div class="kpi-label">Ingresos totales</div>
+        <div class="kpi-value" id="k-total">—</div>
+        <div class="kpi-sub" id="k-total-sub">todos los pedidos</div>
+        <div class="kpi-icon">💰</div>
+      </div>
+      <div class="kpi-card" style="--accent-color:#34d399">
+        <div class="kpi-label">Este mes</div>
+        <div class="kpi-value" id="k-month">—</div>
+        <div class="kpi-sub" id="k-month-sub">mes actual</div>
+        <div class="kpi-icon">📅</div>
+      </div>
+      <div class="kpi-card" style="--accent-color:#fbbf24">
+        <div class="kpi-label">Ticket medio</div>
+        <div class="kpi-value" id="k-avg">—</div>
+        <div class="kpi-sub" id="k-avg-sub">por pedido</div>
+        <div class="kpi-icon">🎯</div>
+      </div>
+      <div class="kpi-card" style="--accent-color:#f87171">
+        <div class="kpi-label">Pedidos totales</div>
+        <div class="kpi-value" id="k-orders">—</div>
+        <div class="kpi-sub" id="k-orders-sub">completados + pendientes</div>
+        <div class="kpi-icon">📦</div>
+      </div>
+    </div>
+
+    <!-- Charts row -->
+    <div class="grid-2" style="margin-bottom:24px;">
+      <!-- Monthly revenue bar chart -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Ingresos por mes</span>
+          <span style="font-size:12px;color:var(--text3);" id="months-label">últimos 6 meses</span>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="monthly-chart"></canvas></div>
+        </div>
+      </div>
+
+      <!-- Payment method breakdown -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Método de pago</span>
+        </div>
+        <div class="panel-body" id="payment-breakdown">
+          <div class="loading">Cargando...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top products + Daily revenue -->
+    <div class="grid-2">
+      <!-- Top products by revenue -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Top productos por ingresos</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th style="text-align:center;">Uds. vendidas</th>
+                <th style="text-align:right;">Ingresos</th>
+              </tr>
+            </thead>
+            <tbody id="top-products">
+              <tr><td colspan="4" class="loading">Cargando...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Pedidos por estado -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Estado de pedidos</span>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap" style="height:200px;"><canvas id="status-chart"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+var ADMIN_KEY = sessionStorage.getItem('zt_admin_key') || '';
+var charts = {};
+
+function fmt(n){return Number(n||0).toLocaleString('es-ES',{style:'currency',currency:'EUR'});}
+function doLogin(){var key=document.getElementById('key-input').value.trim();if(!key)return;fetch('/api/admin-stats',{headers:{'X-Admin-Key':key}}).then(function(r){if(r.status===401){document.getElementById('login-err').style.display='block';return;}ADMIN_KEY=key;sessionStorage.setItem('zt_admin_key',key);document.getElementById('login-screen').style.display='none';load();}).catch(function(){document.getElementById('login-err').style.display='block';});}
+document.getElementById('key-input').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+function logout(){sessionStorage.removeItem('zt_admin_key');ADMIN_KEY='';document.getElementById('login-screen').style.display='flex';}
+if(ADMIN_KEY){document.getElementById('login-screen').style.display='none';load();}
+
+function makeChart(id, type, labels, datasets, opts){
+  if(charts[id])charts[id].destroy();
+  var ctx=document.getElementById(id).getContext('2d');
+  charts[id]=new Chart(ctx,{type:type,data:{labels:labels,datasets:datasets},options:Object.assign({responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}},opts||{})});
+}
+
+function load(){
+  Promise.all([
+    fetch('/api/admin-orders?limit=200',{headers:{'X-Admin-Key':ADMIN_KEY}}).then(function(r){return r.json();}),
+    fetch('/api/admin-stats',{headers:{'X-Admin-Key':ADMIN_KEY}}).then(function(r){return r.json();})
+  ]).then(function(results){
+    var ordersData = results[0];
+    var statsData  = results[1];
+    if(!ordersData.ok) return;
+    var orders = ordersData.orders || [];
+    var stats  = statsData.ok ? statsData.stats : {};
+
+    // KPI cards
+    var totalRev = orders.reduce(function(s,o){return s+Number(o.total||0);},0);
+    var now = new Date();
+    var thisMonth = now.getFullYear()+'-'+(now.getMonth()+1);
+    var monthRev = orders.filter(function(o){
+      var d=new Date(o.created_at);
+      return d.getFullYear()+'-'+(d.getMonth()+1)===thisMonth;
+    }).reduce(function(s,o){return s+Number(o.total||0);},0);
+    var avg = orders.length ? totalRev/orders.length : 0;
+
+    document.getElementById('k-total').textContent    = fmt(totalRev);
+    document.getElementById('k-total-sub').textContent= orders.length+' pedidos en total';
+    document.getElementById('k-month').textContent    = fmt(monthRev);
+    document.getElementById('k-avg').textContent      = fmt(avg);
+    document.getElementById('k-orders').textContent   = orders.length;
+
+    // Pending badge
+    var pending = orders.filter(function(o){return o.status==='pending';}).length;
+    if(pending>0){var pb=document.getElementById('pending-badge');pb.textContent=pending;pb.style.display='inline';}
+
+    // Monthly chart (last 6 months)
+    var monthMap={};
+    var monthLabels=[];
+    for(var i=5;i>=0;i--){
+      var d=new Date(now.getFullYear(),now.getMonth()-i,1);
+      var key=d.getFullYear()+'-'+(d.getMonth()+1);
+      var label=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'][d.getMonth()]+' '+String(d.getFullYear()).slice(2);
+      monthMap[key]=0;
+      monthLabels.push(label);
+    }
+    var monthKeys=Object.keys(monthMap);
+    orders.forEach(function(o){
+      var d=new Date(o.created_at);
+      var key=d.getFullYear()+'-'+(d.getMonth()+1);
+      if(monthMap.hasOwnProperty(key)) monthMap[key]+=Number(o.total||0);
+    });
+    var monthRevData=monthKeys.map(function(k){return monthMap[k];});
+    makeChart('monthly-chart','bar',monthLabels,[{
+      label:'Ingresos',
+      data:monthRevData,
+      backgroundColor:'rgba(99,102,241,.55)',
+      borderColor:'#6366f1',
+      borderWidth:2,
+      borderRadius:6,
+    }],{
+      scales:{
+        x:{grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#606080',font:{size:11}}},
+        y:{grid:{color:'rgba(255,255,255,.05)'},ticks:{color:'#606080',font:{size:11},callback:function(v){return '€'+v;}}}
+      }
+    });
+
+    // Payment method breakdown
+    var payTotals={card:0,bizum:0,paypal:0,other:0};
+    var payCount={card:0,bizum:0,paypal:0,other:0};
+    orders.forEach(function(o){
+      var m=o.payment_method;
+      if(m==='card'||m==='bizum'||m==='paypal'){
+        payTotals[m]+=Number(o.total||0);
+        payCount[m]++;
+      } else {
+        payTotals.other+=Number(o.total||0);
+        payCount.other++;
+      }
+    });
+    var payLabels={'card':'💳 Tarjeta','bizum':'📱 Bizum','paypal':'🅿️ PayPal','other':'Otro'};
+    var payColors={'card':'#6366f1','bizum':'#34d399','paypal':'#fbbf24','other':'#a0a0c0'};
+    var payKeys=Object.keys(payTotals).filter(function(k){return payTotals[k]>0;});
+    var breakdown=document.getElementById('payment-breakdown');
+    if(!payKeys.length){breakdown.innerHTML='<div class="loading">Sin datos</div>';return;}
+    var maxPay=Math.max.apply(null,payKeys.map(function(k){return payTotals[k];}));
+    breakdown.innerHTML=payKeys.map(function(k){
+      var pct=maxPay?Math.round(payTotals[k]/maxPay*100):0;
+      var revPct=totalRev?Math.round(payTotals[k]/totalRev*100):0;
+      return '<div class="method-row">'+
+        '<div style="font-size:13px;font-weight:600;min-width:90px;">'+payLabels[k]+'</div>'+
+        '<div class="method-bar-wrap"><div class="method-bar" style="width:'+pct+'%;background:'+payColors[k]+';"></div></div>'+
+        '<div style="text-align:right;min-width:80px;">'+
+          '<div style="font-size:13px;font-weight:700;">'+fmt(payTotals[k])+'</div>'+
+          '<div style="font-size:11px;color:var(--text3);">'+payCount[k]+' ped · '+revPct+'%</div>'+
+        '</div>'+
+      '</div>';
+    }).join('');
+
+    // Top products from items
+    var productMap={};
+    orders.forEach(function(o){
+      (o.items||[]).forEach(function(item){
+        var name=item.product_name||'Sin nombre';
+        if(!productMap[name])productMap[name]={name:name,qty:0,revenue:0};
+        productMap[name].qty+=Number(item.qty||1);
+        var price=Number(item.price||item.unit_price||item.price_eur||0);
+        productMap[name].revenue+=price*Number(item.qty||1);
+      });
+    });
+    var products=Object.values(productMap).sort(function(a,b){return b.revenue-a.revenue;}).slice(0,10);
+    var tbody=document.getElementById('top-products');
+    if(!products.length){
+      tbody.innerHTML='<tr><td colspan="4" class="loading">Sin datos de productos</td></tr>';
+    } else {
+      tbody.innerHTML=products.map(function(p,i){
+        return '<tr>'+
+          '<td style="color:var(--text3);font-size:12px;">'+(i+1)+'</td>'+
+          '<td style="font-weight:600;font-size:13px;">'+p.name+'</td>'+
+          '<td style="text-align:center;font-size:13px;">'+p.qty+'</td>'+
+          '<td style="text-align:right;font-weight:700;color:var(--accent);">'+fmt(p.revenue)+'</td>'+
+        '</tr>';
+      }).join('');
+    }
+
+    // Status donut chart
+    var statusMap={pending:0,processing:0,shipped:0,delivered:0,cancelled:0};
+    orders.forEach(function(o){if(statusMap.hasOwnProperty(o.status))statusMap[o.status]++;});
+    var statusLabels=['Pendiente','En proceso','Enviado','Entregado','Cancelado'];
+    var statusColors=['#fbbf24','#818cf8','#34d399','#6ee7b7','#f87171'];
+    var statusVals=[statusMap.pending,statusMap.processing,statusMap.shipped,statusMap.delivered,statusMap.cancelled];
+    makeChart('status-chart','doughnut',statusLabels,[{
+      data:statusVals,
+      backgroundColor:statusColors,
+      borderColor:'#13132b',
+      borderWidth:3,
+    }],{
+      cutout:'65%',
+      plugins:{legend:{display:true,position:'bottom',labels:{color:'#a0a0c0',font:{size:11},padding:10,boxWidth:10}}}
+    });
+
+  }).catch(function(e){console.error(e);});
+}
+</script>
+</body>
+</html>
