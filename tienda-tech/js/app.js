@@ -2491,55 +2491,8 @@ PRODUCTS.push(
   },
   // ── APPLE ──────────────────────────────────────────────────
 
-  { id:141, name:'APPLE IPHONE 14 5G 128GB AZUL ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge: 'OFERTA',
-    image:'img/productos/MGS0000033831-0.jpg',
-    images: [
-      'img/productos/MGS0000033831-0.jpg',
-      'img/productos/MGS0000033831-1.jpg',
-      'img/productos/MGS0000033831-2.jpg'
-    ],
-    description:'Conectividad: 5G',
-    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033831'}
-  },
-  { id:142, name:'APPLE IPHONE 14 5G 128GB PURPURA ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge: 'OFERTA',
-    image:'img/productos/MGS0000033834-0.jpg',
-    images: [
-      'img/productos/MGS0000033834-0.jpg',
-      'img/productos/MGS0000033834-1.jpg',
-      'img/productos/MGS0000033834-2.jpg'
-    ],
-    description:'Conectividad: 5G',
-    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033834'}
-  },
-  { id:143, name:'APPLE IPHONE 14 5G 128GB AMARILLO ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:299, oldPrice:352.82, badge: 'OFERTA',
-    image:'img/productos/MGS0000033838-0.jpg',
-    images: [
-      'img/productos/MGS0000033838-0.jpg',
-      'img/productos/MGS0000033838-1.jpg',
-      'img/productos/MGS0000033838-2.jpg',
-      'img/productos/MGS0000033838-3.jpg'
-    ],
-    description:'Conectividad: 5G',
-    specs:{'Conectividad':'5G', 'Almacenamiento':'128GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM','SKU Megasur':'MGS0000033838'}
-  },
-  { id:144, name:'APPLE IPHONE 14 PRO 5G 256GB NEGRO ACONDICIONADO', brand:'APPLE', category:'smartphones',
-    price:499, oldPrice:588.82, badge: 'OFERTA',
-    image:'img/productos/MGS0000033840-0.jpg',
-    images: [
-      'img/productos/MGS0000033840-0.jpg',
-      'img/productos/MGS0000033840-1.jpg',
-      'img/productos/MGS0000033840-2.jpg',
-      'img/productos/MGS0000033840-3.jpg',
-      'img/productos/MGS0000033840-4.jpg'
-    ],
-    description:'Conectividad: 5G',
-    specs:{'Conectividad':'5G', 'Almacenamiento':'256GB', 'SO':'iOS 18', 'SIM':'Nano SIM + eSIM', 'Gama':'Pro / Plus','SKU Megasur':'MGS0000033840'}
-  },
   { id:140, name:'APPLE IPHONE 16E 128GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:1149.15, oldPrice:1356, badge: 'OFERTA',
+    price:940, oldPrice:1149, badge: 'OFERTA',
     image:'img/productos/DSP0000029938-0.jpg',
     images: [
       'img/productos/DSP0000029938-0.jpg',
@@ -2554,7 +2507,7 @@ PRODUCTS.push(
   // ── APPLE NUEVOS (Megasur 2026-07) ─────────────────────────
 
   { id:403, name:'APPLE IPHONE 16E 128GB BLANCO', brand:'APPLE', category:'smartphones',
-    price:1149.15, oldPrice:1356.00, badge:'NUEVO',
+    price:940, oldPrice:1149, badge:'OFERTA',
     image:'img/productos/DSP0000029638-1.jpg',
     images:[
       'img/productos/DSP0000029638-1.jpg',
@@ -2565,7 +2518,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000029638'}
   },
   { id:404, name:'APPLE IPHONE 15 128GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:1358.90, oldPrice:1603.50, badge:'OFERTA',
+    price:799, oldPrice:1358, badge:'OFERTA',
     image:'img/productos/DSP0000018612-1.jpg',
     images:[
       'img/productos/DSP0000018612-1.jpg',
@@ -2576,7 +2529,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000018612'}
   },
   { id:405, name:'APPLE IPHONE 16 128GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:1653.10, oldPrice:1950.65, badge:'NUEVO',
+    price:1248, oldPrice:1653, badge:'OFERTA',
     image:'img/productos/DSP0000027150-1.jpg',
     images:[
       'img/productos/DSP0000027150-1.jpg',
@@ -2587,7 +2540,7 @@ PRODUCTS.push(
     specs:{'Conectividad':'5G','Almacenamiento':'128GB','SO':'iOS','SIM':'Nano SIM + eSIM','SKU Megasur':'DSP0000027150'}
   },
   { id:406, name:'APPLE IPHONE 17 256GB NEGRO', brand:'APPLE', category:'smartphones',
-    price:1844.70, oldPrice:2176.75, badge:'NUEVO',
+    price:1504, oldPrice:1844, badge:'OFERTA',
     image:'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
     images:[
       'img/productos/1186-apple-iphone-17-512gb-negro.jpg',
@@ -2599,6 +2552,29 @@ PRODUCTS.push(
     description:'Conectividad: 5G',
     specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'iPhone 17','SKU Megasur':'DSP0000025870'}
   },
+  // ── APPLE iPhone 14 (Megasur 2026-08) ──────────────────────
+
+  { id:424, name:'APPLE IPHONE 14 PLUS 256GB MEDIANOCHE', brand:'APPLE', category:'smartphones',
+    price:1730, oldPrice:1960, badge:'OFERTA',
+    image:'img/productos/DSP0000001346-1.jpg',
+    images:[
+      'img/productos/DSP0000001346-1.jpg',
+      'img/productos/DSP0000001346-2.jpg'
+    ],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000001346'}
+  },
+  { id:425, name:'APPLE IPHONE 14 PRO MAX 256GB PLATA', brand:'APPLE', category:'smartphones',
+    price:2525, oldPrice:2850, badge:'OFERTA',
+    image:'img/productos/DSP0000001770-1.jpg',
+    images:[
+      'img/productos/DSP0000001770-1.jpg',
+      'img/productos/DSP0000001770-2.jpg'
+    ],
+    description:'Conectividad: 5G',
+    specs:{'Conectividad':'5G','Almacenamiento':'256GB','SO':'iOS','SIM':'Nano SIM + eSIM','Gama':'Pro / Plus','SKU Megasur':'DSP0000001770'}
+  },
+
   // ── XIAOMI ─────────────────────────────────────────────────
 
   { id:145, name:'XIAOMI REDMI A7 PRO 4/128GB AZUL', brand:'XIAOMI', category:'smartphones',
