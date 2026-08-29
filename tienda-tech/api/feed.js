@@ -83,7 +83,7 @@ function productItem(p) {
       <g:mpn>${esc(sku)}</g:mpn>
       <g:google_product_category>${gcat}</g:google_product_category>
       <g:product_type>${esc(p.category)}</g:product_type>
-      <g:identifier_exists>false</g:identifier_exists>
+      <g:identifier_exists>true</g:identifier_exists>
       <g:shipping>
         <g:country>ES</g:country>
         <g:service>Estándar MRW/SEUR</g:service>
