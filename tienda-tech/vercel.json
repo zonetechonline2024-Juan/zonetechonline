@@ -89,6 +89,14 @@
   },
   "headers": [
     {
+      "source": "/debug-(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    },
+    {
+      "source": "/(depau_.*|amazfit_.*|huawei_.*|amazon_.*|mm_.*|mediamarkt_.*|image-audit-report.json|amazfit_products.json|upload-log.txt|enrich-log.txt|fix-log.txt|puppeteer-log.txt|url-mapping.json)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
       "source": "/img/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
