@@ -68,7 +68,18 @@
       "has": [{ "type": "host", "value": "zonetechonline.com" }],
       "destination": "https://www.zonetechonline.com/$1",
       "permanent": true
-    }
+    },
+    { "source": "/debug-(.*)", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/depau_(.*)", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/amazfit_(.*)", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/huawei_(.*)", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/amazon_huawei.html", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/mediamarkt_huawei.html", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/mm_huawei_all.html", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/image-audit-report.json", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/upload-log.txt", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/enrich-log.txt", "destination": "/404.html", "statusCode": 404 },
+    { "source": "/url-mapping.json", "destination": "/404.html", "statusCode": 404 }
   ],
   "crons": [
     { "path": "/api/emails?type=cart-recovery-run", "schedule": "0 8 * * *" }
