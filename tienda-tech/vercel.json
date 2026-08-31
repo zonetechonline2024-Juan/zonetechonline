@@ -2,6 +2,7 @@
   "version": 2,
   "framework": null,
   "buildCommand": null,
+  "installCommand": "npm install",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/producto/:id", "destination": "/api/feed?page=producto&id=:id" },
