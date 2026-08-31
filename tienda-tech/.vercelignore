@@ -124,3 +124,58 @@ generar-catalogo-ai.js
 
 # Liberado para dar slot a ai-assistant.js (productos se gestionan vía app.js)
 api/admin-import-products.js
+
+# Archivos HTML de debug/scraping — NO desplegar a producción
+debug-pcc-result.html
+debug-prod-s25fe.html
+debug-search-xiaomi.html
+depau_amazfit_raw.html
+depau_amazfit_brand.html
+amazfit_es_official.html
+mediamarkt_huawei.html
+huawei_wearables.html
+amazon_huawei.html
+huawei_band9.html
+depau_jbl_raw.html
+depau_jbl_charge.html
+depau_jbl_flip.html
+mm_huawei_all.html
+og-gen.html
+admin.html
+admin-pedidos.html
+
+# Datos y logs internos — NO desplegar a producción
+image-audit-report.json
+amazfit_products.json
+url-mapping.json
+upload-log.txt
+enrich-log.txt
+fix-log.txt
+fix-images-audit.js
+puppeteer-log.txt
+svg_section_recovered.txt
+
+# Scripts de utilidad no listados anteriormente
+push-checkout-fix.js
+push-feed-fix.js
+push-merchant-fix.js
+render-videos.js
+og-server.js
+buscar-imagenes-pcc.js
+debug-pcc.js
+debug-pcc2.js
+debug-pcc3.js
+debug-pcc4.js
+debug-pcc5.js
+diag-infortisa.js
+diag-infortisa2.js
+diag-infortisa-deep.js
+diag-infortisa-full.js
+diag-infortisa-products.js
+
+# Carpetas de trabajo interno
+screenshots/
+data/
+design-agent/
+src/
+images/
