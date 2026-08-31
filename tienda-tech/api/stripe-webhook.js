@@ -38,15 +38,20 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Body vacío' });
   }
 
-  // Verificar firma si hay secret configurado
-  if (secret && sig) {
-    try {
-      if (!verifyStripeSignature(rawBody, sig, secret)) {
-        return res.status(400).json({ error: 'Firma inválida' });
-      }
-    } catch (e) {
-      return res.status(400).json({ error: 'Error verificando firma' });
+  // Verificar firma — OBLIGATORIO. Sin secret o sin header, rechazar siempre.
+  if (!secret) {
+    console.error('[stripe-webhook] STRIPE_WEBHOOK_SECRET no configurado');
+    return res.status(500).json({ error: 'Webhook no configurado' });
+  }
+  if (!sig) {
+    return res.status(400).json({ error: 'stripe-signature requerida' });
+  }
+  try {
+    if (!verifyStripeSignature(rawBody, sig, secret)) {
+      return res.status(400).json({ error: 'Firma inválida' });
     }
+  } catch (e) {
+    return res.status(400).json({ error: 'Error verificando firma' });
   }
 
   let event;
