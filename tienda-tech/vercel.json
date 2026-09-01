@@ -69,17 +69,17 @@
       "destination": "https://www.zonetechonline.com/$1",
       "permanent": true
     },
-    { "source": "/debug-(.*)", "destination": "/api/blocked", "permanent": false },
-    { "source": "/depau_(.*)", "destination": "/api/blocked", "permanent": false },
-    { "source": "/amazfit_(.*)\\.html", "destination": "/api/blocked", "permanent": false },
-    { "source": "/huawei_(.*)\\.html", "destination": "/api/blocked", "permanent": false },
-    { "source": "/amazon_huawei.html", "destination": "/api/blocked", "permanent": false },
-    { "source": "/mediamarkt_huawei.html", "destination": "/api/blocked", "permanent": false },
-    { "source": "/mm_huawei_all.html", "destination": "/api/blocked", "permanent": false },
-    { "source": "/image-audit-report.json", "destination": "/api/blocked", "permanent": false },
-    { "source": "/upload-log.txt", "destination": "/api/blocked", "permanent": false },
-    { "source": "/enrich-log.txt", "destination": "/api/blocked", "permanent": false },
-    { "source": "/url-mapping.json", "destination": "/api/blocked", "permanent": false }
+    { "source": "/debug-(.*)", "destination": "/", "permanent": false },
+    { "source": "/depau_(.*)", "destination": "/", "permanent": false },
+    { "source": "/amazfit_(.*)\\.html", "destination": "/", "permanent": false },
+    { "source": "/huawei_(.*)\\.html", "destination": "/", "permanent": false },
+    { "source": "/amazon_huawei.html", "destination": "/", "permanent": false },
+    { "source": "/mediamarkt_huawei.html", "destination": "/", "permanent": false },
+    { "source": "/mm_huawei_all.html", "destination": "/", "permanent": false },
+    { "source": "/image-audit-report.json", "destination": "/", "permanent": false },
+    { "source": "/upload-log.txt", "destination": "/", "permanent": false },
+    { "source": "/enrich-log.txt", "destination": "/", "permanent": false },
+    { "source": "/url-mapping.json", "destination": "/", "permanent": false }
   ],
   "crons": [
     { "path": "/api/emails?type=cart-recovery-run", "schedule": "0 8 * * *" }
@@ -96,8 +96,7 @@
     "api/admin-customers.js":     { "maxDuration": 15 },
     "api/ai-assistant.js":          { "maxDuration": 20 },
     "api/megasur.js":             { "maxDuration": 30 },
-    "api/feed.js":                { "maxDuration": 15 },
-    "api/blocked.js":             { "maxDuration": 5 }
+    "api/feed.js":                { "maxDuration": 15 }
   },
   "headers": [
     {
