@@ -1,6 +1,6 @@
 /**
  * scrape-depau-marshall-edifier.js
- * ZoneTechOnline — Crawler de altavoces Marshall y Edifier
+ * Zonetechonline — Crawler de altavoces Marshall y Edifier
  * Ejecutado: junio 2026
  *
  * DIAGNÓSTICO DEPAU:

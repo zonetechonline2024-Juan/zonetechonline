@@ -1,4 +1,4 @@
-# ZoneTechOnline — robots.txt
+# Zonetechonline — robots.txt
 # https://www.zonetechonline.com
 
 User-agent: *

@@ -1,6 +1,6 @@
 /**
  * scrape-depau-audiopro-logitech.js
- * ZoneTechOnline — Crawler de altavoces Audio Pro y Logitech
+ * Zonetechonline — Crawler de altavoces Audio Pro y Logitech
  * Ejecutado: junio 2026
  *
  * DIAGNÓSTICO DEPAU:

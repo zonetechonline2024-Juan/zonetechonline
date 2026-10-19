@@ -1,6 +1,6 @@
 /**
  * validate-and-clean-catalog.js
- * ZoneTechOnline — Validación de catálogo contra Depau.es
+ * Zonetechonline — Validación de catálogo contra Depau.es
  * Fecha: junio 2026
  *
  * LÓGICA DE AUDITORÍA:

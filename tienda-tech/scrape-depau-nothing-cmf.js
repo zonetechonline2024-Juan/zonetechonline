@@ -1,6 +1,6 @@
 /**
  * scrape-depau-nothing-cmf.js
- * ZoneTechOnline — Extracción de auriculares Nothing + CMF by Nothing
+ * Zonetechonline — Extracción de auriculares Nothing + CMF by Nothing
  * Fecha: junio 2026
  *
  * RESULTADO DE BÚSQUEDA EN DEPAU.ES:
@@ -191,7 +191,7 @@ const CMF_PRODUCTS = [
 const ALL_AUDIO = [...NOTHING_PRODUCTS, ...CMF_PRODUCTS]
   .sort((a, b) => a.price - b.price);
 
-console.log('=== ZoneTechOnline — Audio Nothing + CMF by Nothing ===');
+console.log('=== Zonetechonline — Audio Nothing + CMF by Nothing ===');
 console.log(`Total: ${ALL_AUDIO.length} productos`);
 ALL_AUDIO.forEach(p => console.log(`ID ${p.id} [${p.brand}] ${p.name} — €${p.price}`));
 
