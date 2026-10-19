@@ -1,4 +1,4 @@
-# COMPARADOR_IA.md — ZoneTechOnline
+# COMPARADOR_IA.md — Zonetechonline
 > Arquitectura del Comparador de Productos con IA | Versión 1.0 · Julio 2026
 
 ---
@@ -65,7 +65,7 @@ Límite de funciones Vercel Hobby: 12 actuales + 1 nueva = 13 → **supera el l�
 
 **System prompt del comparador:**
 ```
-Eres el comparador de productos de ZoneTechOnline. 
+Eres el comparador de productos de Zonetechonline. 
 Recibirás 2-3 productos con sus especificaciones y el perfil del usuario.
 Tu análisis debe:
 1. Tabla de specs clave (3-5 filas, las más relevantes para ese perfil)
@@ -183,4 +183,4 @@ Con Claude Haiku 4.5:
 
 ---
 
-*Diseñado durante la Transformación de Marca ZoneTechOnline · Julio 2026*
+*Diseñado durante la Transformación de Marca Zonetechonline · Julio 2026*

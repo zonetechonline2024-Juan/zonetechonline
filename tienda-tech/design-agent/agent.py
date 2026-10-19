@@ -1,5 +1,5 @@
 """
-ZoneTechOnline Design & Content Agent
+Zonetechonline Design & Content Agent
 Agente IA experto en diseño, multimedia y contenido para la tienda de wearables premium.
 
 Uso: python agent.py
@@ -11,7 +11,7 @@ import json
 
 client = anthropic.Anthropic()
 
-SYSTEM_PROMPT = """Eres el agente experto en diseño, multimedia y contenido de ZoneTechOnline,
+SYSTEM_PROMPT = """Eres el agente experto en diseño, multimedia y contenido de Zonetechonline,
 una tienda premium de wearables tecnológicos europea (Garmin, Oura, Jabra, Sennheiser,
 Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody, etc.).
 
@@ -153,7 +153,7 @@ def chat(messages):
 
 def main():
     print("\n" + "="*60)
-    print("  ZoneTechOnline — Agente de Diseño y Contenido")
+    print("  Zonetechonline — Agente de Diseño y Contenido")
     print("  Experto en wearables premium · España/Europa")
     print("="*60)
     print("\nPuedes preguntarme sobre:")

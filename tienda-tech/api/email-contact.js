@@ -4,7 +4,7 @@ const { contactAutoReply }    = require('./_email-templates');
 
 // Endpoint del formulario de contacto:
 // 1. Envía auto-reply al cliente
-// 2. Reenvía el mensaje al equipo de ZoneTechOnline con reply-to del cliente
+// 2. Reenvía el mensaje al equipo de Zonetechonline con reply-to del cliente
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://www.zonetechonline.com');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
   const { name, email, subject, message } = req.body || {};
   if (!email || !message) return res.status(400).json({ error: 'email y message requeridos' });
 
-  const safeSubject = subject ? String(subject).slice(0, 200) : 'Consulta desde ZoneTechOnline';
+  const safeSubject = subject ? String(subject).slice(0, 200) : 'Consulta desde Zonetechonline';
   const safeName    = String(name || email).slice(0, 100);
 
   try {

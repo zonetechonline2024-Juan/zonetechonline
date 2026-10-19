@@ -1,4 +1,4 @@
-# CRO_REPORT.md — ZoneTechOnline
+# CRO_REPORT.md — Zonetechonline
 > Auditoría completa de conversión y customer journey | Versión 1.0 · Julio 2026
 
 ---
@@ -22,7 +22,7 @@
 | Hero slider | ✅ Activo | Ninguno crítico | — |
 | Banda de identidad | ✅ Publicada | — | — |
 | Features strip | ✅ 5 elementos | — | — |
-| Sección "¿Por qué ZoneTechOnline?" | ✅ 6 bloques | — | — |
+| Sección "¿Por qué Zonetechonline?" | ✅ 6 bloques | — | — |
 | Testimonios | ⚠️ 3 hardcoded | Sin reviews reales, sin contador | Alto |
 | Badges en productos | 🔴 TODOS "OFERTA" | Si todo es oferta, nada lo es | Alto |
 | Productos destacados | ⚠️ Grid genérico | Sin jerarquía ni criterio visible | Medio |
@@ -242,4 +242,4 @@ El ciclo Trigger → Acción → Recompensa Variable → Inversión no está imp
 
 ---
 
-*Auditoría completada: Julio 2026 — ZoneTechOnline CRO Initiative*
+*Auditoría completada: Julio 2026 — Zonetechonline CRO Initiative*

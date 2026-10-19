@@ -1,4 +1,4 @@
-﻿// ZoneTechOnline — Premium Tech Wearables
+﻿// Zonetechonline — Premium Tech Wearables
 // European brand products only: Garmin, Oura, Jabra, Sennheiser, Ray-Ban Meta, Sonos, Marshall, B&O, Bose, CurrentBody...
 
 // ─── FILTER MAP (HTML data-filter → product category) ────────────────────────
@@ -3929,7 +3929,7 @@ function openQuickView(productId) {
       '<div class="qv-trust-row">' +
         '<span class="qv-trust-item">✓ Garantía legal 2 años</span>' +
         '<span class="qv-trust-item">✓ Envío gratis · 5 a 8 días hábiles</span>' +
-        '<span class="qv-trust-item">✓ Devolución 30 días</span>' +
+        '<span class="qv-trust-item">✓ Devolución 30 días hábiles</span>' +
       '</div>' +
       (product.inStock === false
         ? '<button class="btn-primary qv-add-btn" disabled style="opacity:.45;cursor:not-allowed;background:rgba(99,102,241,.2)">Sin stock temporalmente</button>'
@@ -4763,7 +4763,7 @@ function initUserSession() {
 
       var joinedText = user.joined
         ? 'Miembro desde ' + new Date(user.joined).toLocaleDateString('es-ES', { year: 'numeric', month: 'long' })
-        : 'ZoneTechOnline';
+        : 'Zonetechonline';
 
       var couponRow = user.discount
         ? '<button class="ud-item" id="ud-coupon">' +
@@ -5862,7 +5862,7 @@ function initAIAssistant() {
     }
 
     // ── fallback dinámico ─────────────────────────────────────────────────
-    return 'En ZoneTechOnline tenemos <strong>' + PRODUCTS.length + ' productos</strong>: ' +
+    return 'En Zonetechonline tenemos <strong>' + PRODUCTS.length + ' productos</strong>: ' +
            '<strong>Relojes</strong> (' + relojes.length + ') · ' +
            '<strong>Auriculares</strong> (' + auriculares.length + ') · ' +
            '<strong>Altavoces</strong> (' + altavoces.length + ') · ' +
@@ -5910,7 +5910,7 @@ function initAIAssistant() {
       var nPho  = PRODUCTS.filter(function(p) { return p.category === 'smartphones';     }).length;
       setTimeout(function() {
         appendMsg(
-          '¡Hola! Soy el asistente de ZoneTechOnline. Tenemos <strong>' + PRODUCTS.length + ' productos</strong> en catálogo: ' +
+          '¡Hola! Soy el asistente de Zonetechonline. Tenemos <strong>' + PRODUCTS.length + ' productos</strong> en catálogo: ' +
           '<strong>' + nRel + ' relojes</strong> · ' +
           '<strong>' + nAur + ' auriculares</strong> · ' +
           '<strong>' + nAlt + ' altavoces</strong> · ' +
@@ -6178,11 +6178,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (secF) window.scrollTo({ top: secF.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'instant' });
     // SEO: actualizar canonical, título y descripción para páginas de categoría indexables
     var CAT_SEO = {
-      'watches':     { title: 'Smartwatches y Relojes Inteligentes Premium · ZoneTechOnline', desc: 'Relojes inteligentes Garmin, Polar, Amazfit y más. GPS, fitness y monitorización continua. Garantía legal 2 años. Envío gratis España y Europa.' },
-      'headphones':  { title: 'Auriculares Premium con Noise Cancelling · ZoneTechOnline', desc: 'Auriculares Sony, Sennheiser, JBL con cancelación de ruido activa. Inalámbricos y profesionales. Garantía legal 2 años. Envío gratis España y Europa.' },
-      'speakers':    { title: 'Altavoces Bluetooth Portátiles Premium · ZoneTechOnline', desc: 'Altavoces JBL, Marshall, Sony resistentes al agua y con sonido premium. Garantía legal 2 años. Envío gratis España y Europa.' },
-      'peripherals': { title: 'Periféricos Gaming y Teclados Mecánicos · ZoneTechOnline', desc: 'Teclados, ratones y periféricos gaming Alienware, Cherry, Krom y más. Garantía legal 2 años. Envío gratis España y Europa.' },
-      'smartphones': { title: 'Smartphones 5G Desbloqueados Premium · ZoneTechOnline', desc: 'Smartphones 5G Motorola, Realme, Xiaomi desbloqueados con garantía oficial 2 años. Envío gratis España y Europa.' }
+      'watches':     { title: 'Smartwatches y Relojes Inteligentes Premium · Zonetechonline', desc: 'Relojes inteligentes Garmin, Polar, Amazfit y más. GPS, fitness y monitorización continua. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'headphones':  { title: 'Auriculares Premium con Noise Cancelling · Zonetechonline', desc: 'Auriculares Sony, Sennheiser, JBL con cancelación de ruido activa. Inalámbricos y profesionales. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'speakers':    { title: 'Altavoces Bluetooth Portátiles Premium · Zonetechonline', desc: 'Altavoces JBL, Marshall, Sony resistentes al agua y con sonido premium. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'peripherals': { title: 'Periféricos Gaming y Teclados Mecánicos · Zonetechonline', desc: 'Teclados, ratones y periféricos gaming Alienware, Cherry, Krom y más. Garantía legal 2 años. Envío gratis España y Europa.' },
+      'smartphones': { title: 'Smartphones 5G Desbloqueados Premium · Zonetechonline', desc: 'Smartphones 5G Motorola, Realme, Xiaomi desbloqueados con garantía oficial 2 años. Envío gratis España y Europa.' }
     };
     if (CAT_SEO[filterParam]) {
       var seo = CAT_SEO[filterParam];
@@ -6312,7 +6312,7 @@ function injectProductListSchema(filterKey, brandKey, pageTitle, pageUrl) {
               ? 'https://schema.org/OutOfStock'
               : 'https://schema.org/InStock',
             'url': pageUrl,
-            'seller': { '@type': 'Organization', 'name': 'ZoneTechOnline' }
+            'seller': { '@type': 'Organization', 'name': 'Zonetechonline' }
           }
         }
       };

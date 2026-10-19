@@ -3,7 +3,7 @@
 
 **Fecha de análisis:** 30 de mayo de 2026  
 **Autor:** Análisis automatizado — Arquitectura de Datos B2B  
-**Objetivo:** Identificar los 3 mejores mayoristas tecnológicos en España con almacenes físicos, catálogo compatible con las categorías de ZoneTechOnline y viabilidad técnica para extracción de datos con Puppeteer/Cheerio.
+**Objetivo:** Identificar los 3 mejores mayoristas tecnológicos en España con almacenes físicos, catálogo compatible con las categorías de Zonetechonline y viabilidad técnica para extracción de datos con Puppeteer/Cheerio.
 
 ---
 
@@ -200,7 +200,7 @@ async function scrapeMegasur() {
 | Gadgets tech | Apple | Confirmado |
 | Salud / Wellness | Polar, Withings | No confirmados individualmente |
 
-**Conclusión de categorías:** Globomatik es el mayorista con **mejor alineación de marcas** con el catálogo de ZoneTechOnline. El acuerdo oficial con Garmin (GPS, smartwatches) y la distribución verificada de Sennheiser y Sonos lo hacen el candidato más sólido para las categorías de wearables premium y audio.
+**Conclusión de categorías:** Globomatik es el mayorista con **mejor alineación de marcas** con el catálogo de Zonetechonline. El acuerdo oficial con Garmin (GPS, smartwatches) y la distribución verificada de Sennheiser y Sonos lo hacen el candidato más sólido para las categorías de wearables premium y audio.
 
 ### 3. Análisis Técnico para Scraping
 
@@ -369,7 +369,7 @@ async function fetchDepauFeed(feedUrl, sessionCookie) {
   const res = await axios.get(feedUrl, {
     headers: {
       Cookie: sessionCookie,      // Cookie de sesión autenticada
-      'User-Agent': 'Mozilla/5.0 (compatible; ZoneTechBot/1.0)'
+      'User-Agent': 'Mozilla/5.0 (compatible; ZonetechonlineBot/1.0)'
     },
     responseType: 'arraybuffer'   // El CSV puede estar en ISO-8859-1
   });
@@ -474,7 +474,7 @@ async function getDepauSession() {
 ### Arquitectura de scraping por proveedor
 
 ```
-ZoneTechOnline Data Pipeline
+Zonetechonline Data Pipeline
 │
 ├── GLOBOMATIK  ──── Puppeteer Stealth + Cheerio (Magento SSR)
 │   └── Foco: Garmin, Sennheiser, Sonos, Samsung (marcas premium objetivo)
@@ -514,7 +514,7 @@ ZoneTechOnline Data Pipeline
 El scraping de sitios web debe realizarse conforme a sus Términos de Servicio. Al registrarse como distribuidor B2B, la relación comercial legitima el acceso programático a los datos del catálogo para uso interno de gestión de tienda. Se recomienda:
 - Usar el feed oficial siempre que esté disponible (Megasur, Depau)
 - Limitar la frecuencia de requests: máximo 1 request/2s en scraping HTML
-- Identificar el bot con User-Agent propio: `ZoneTechBot/1.0 (+https://zonetechonline.com)`
+- Identificar el bot con User-Agent propio: `ZonetechonlineBot/1.0 (+https://zonetechonline.com)`
 - No extraer imágenes masivamente sin caché: alojar imágenes en el propio CDN
 
 ---
@@ -537,5 +537,5 @@ Las siguientes marcas objetivo **no están confirmadas** en Megasur, Globomatik 
 
 ---
 
-*Informe generado para uso interno de ZoneTechOnline — Arquitectura de Datos B2B*  
+*Informe generado para uso interno de Zonetechonline — Arquitectura de Datos B2B*  
 *Fecha: 30 de mayo de 2026 | Versión: 1.0*

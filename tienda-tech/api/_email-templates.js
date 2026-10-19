@@ -11,7 +11,7 @@ function base(content, preheader) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>ZoneTechOnline</title>
+<title>Zonetechonline</title>
 <!--[if mso]><style>td,th,div,p,a,h1,h2,h3,h4,h5,h6{font-family:Arial,Helvetica,sans-serif!important;}</style><![endif]-->
 </head>
 <body style="margin:0;padding:0;background:#f4f4f8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
@@ -37,14 +37,14 @@ function base(content, preheader) {
   <!-- FOOTER -->
   <tr><td style="background:#f9f9fc;border:1px solid #e8e8f0;border-top:none;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;">
     <p style="margin:0 0 8px;font-size:12px;color:#888;line-height:1.6;">
-      ZoneTechOnline · Tienda oficial de wearables premium europeos<br>
-      <a href="${SITE_URL}/politica-devoluciones.html" style="color:${BRAND_COLOR};text-decoration:none;">Devoluciones 30 días</a>
+      Zonetechonline · Tienda oficial de wearables premium europeos<br>
+      <a href="${SITE_URL}/politica-devoluciones.html" style="color:${BRAND_COLOR};text-decoration:none;">Devoluciones 30 días hábiles</a>
       &nbsp;·&nbsp;
       <a href="${SITE_URL}/politica-privacidad.html" style="color:${BRAND_COLOR};text-decoration:none;">Privacidad</a>
       &nbsp;·&nbsp;
       <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};text-decoration:none;">${SUPPORT_EMAIL}</a>
     </p>
-    <p style="margin:0;font-size:11px;color:#aaa;">Este email fue enviado a tu dirección registrada en ZoneTechOnline.</p>
+    <p style="margin:0;font-size:11px;color:#aaa;">Este email fue enviado a tu dirección registrada en Zonetechonline.</p>
   </td></tr>
 
 </table>
@@ -80,14 +80,14 @@ function infoRow(label, value) {
 function welcome({ name, email }) {
   const firstName = (name || email || 'cliente').split(' ')[0];
   return {
-    subject: `¡Bienvenido/a a ZoneTechOnline, ${firstName}! 🎉`,
+    subject: `¡Bienvenido/a a Zonetechonline, ${firstName}! 🎉`,
     html: base(`
       <div style="text-align:center;margin-bottom:28px;">${badge('✨', 'CUENTA CREADA')}</div>
       <h1 style="font-size:26px;font-weight:800;color:#1a1a2e;margin:0 0 12px;text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
         ¡Hola, ${firstName}! Bienvenido/a 🙌
       </h1>
       <p style="font-size:15px;color:#555;line-height:1.7;margin:0 0 24px;text-align:center;">
-        Tu cuenta en ZoneTechOnline ya está activa. Ahora tienes acceso a toda nuestra colección de <strong>wearables premium europeos</strong> con garantía oficial y envío en 5–8 días hábiles.
+        Tu cuenta en Zonetechonline ya está activa. Ahora tienes acceso a toda nuestra colección de <strong>wearables premium europeos</strong> con garantía oficial y envío en 5–8 días hábiles.
       </p>
       ${divider()}
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:24px;">
@@ -107,7 +107,7 @@ function welcome({ name, email }) {
           <td width="33%" style="text-align:center;padding:16px 8px;background:#f9f9fc;border-radius:10px;">
             <div style="font-size:24px;margin-bottom:6px;">↩️</div>
             <div style="font-size:12px;font-weight:700;color:#1a1a2e;margin-bottom:3px;">Devoluciones</div>
-            <div style="font-size:11px;color:#888;">30 días sin preguntas</div>
+            <div style="font-size:11px;color:#888;">30 días hábiles sin preguntas</div>
           </td>
         </tr>
       </table>
@@ -117,7 +117,7 @@ function welcome({ name, email }) {
         Si tienes cualquier pregunta, escríbenos a
         <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};text-decoration:none;">${SUPPORT_EMAIL}</a>
       </p>
-    `, `¡Hola ${firstName}! Tu cuenta en ZoneTechOnline está lista.`)
+    `, `¡Hola ${firstName}! Tu cuenta en Zonetechonline está lista.`)
   };
 }
 
@@ -139,7 +139,7 @@ function orderConfirm({ name, email, orderNo, items, total, address, paymentMeth
     </tr>`).join('');
 
   return {
-    subject: `✅ Pedido confirmado ${orderNo} — ZoneTechOnline`,
+    subject: `✅ Pedido confirmado ${orderNo} — Zonetechonline`,
     html: base(`
       <div style="text-align:center;margin-bottom:20px;">
         <div style="width:64px;height:64px;background:#ecfdf5;border:2px solid #a7f3d0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:12px;">✅</div>
@@ -220,7 +220,7 @@ function orderShipped({ name, email, orderNo, trackingNumber, carrier, trackingU
   const delivery = estimatedDelivery || '5–8 días hábiles';
 
   return {
-    subject: `🚚 Tu pedido ${orderNo} está en camino — ZoneTechOnline`,
+    subject: `🚚 Tu pedido ${orderNo} está en camino — Zonetechonline`,
     html: base(`
       <div style="text-align:center;margin-bottom:20px;">
         <div style="font-size:48px;margin-bottom:8px;">🚚</div>
@@ -311,7 +311,7 @@ function orderDelivered({ name, email, orderNo, items }) {
           <td width="48%" style="background:#f9f9fc;border-radius:10px;padding:16px;text-align:center;">
             <div style="font-size:20px;margin-bottom:6px;">↩️</div>
             <div style="font-size:12.5px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">¿Algo no va bien?</div>
-            <div style="font-size:12px;color:#888;line-height:1.5;">Devoluciones gratuitas en 30 días</div>
+            <div style="font-size:12px;color:#888;line-height:1.5;">Devoluciones gratuitas en 30 días hábiles</div>
             <a href="${SITE_URL}/politica-devoluciones.html" style="display:inline-block;margin-top:8px;font-size:12px;color:${BRAND_COLOR};text-decoration:none;font-weight:600;">Iniciar devolución →</a>
           </td>
           <td width="4%"></td>
@@ -332,7 +332,7 @@ function orderCancelled({ name, email, orderNo, reason, total }) {
   const firstName = (name || email || 'cliente').split(' ')[0];
   const fmt = v => Number(v).toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
   return {
-    subject: `❌ Pedido ${orderNo} cancelado — ZoneTechOnline`,
+    subject: `❌ Pedido ${orderNo} cancelado — Zonetechonline`,
     html: base(`
       <div style="text-align:center;margin-bottom:20px;">
         <div style="width:64px;height:64px;background:#fef2f2;border:2px solid #fca5a5;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:12px;">❌</div>
@@ -380,7 +380,7 @@ function orderCancelled({ name, email, orderNo, reason, total }) {
 // ─── 6. BIENVENIDA NEWSLETTER ────────────────────────────────────────────────
 function newsletterWelcome({ email }) {
   return {
-    subject: '¡Estás dentro! Novedades ZoneTechOnline en tu bandeja 📩',
+    subject: '¡Estás dentro! Novedades Zonetechonline en tu bandeja 📩',
     html: base(`
       <div style="text-align:center;margin-bottom:28px;">${badge('📩', 'SUSCRITO/A')}</div>
       <h1 style="font-size:26px;font-weight:800;color:#1a1a2e;margin:0 0 14px;text-align:center;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
@@ -425,7 +425,7 @@ function newsletterWelcome({ email }) {
 function contactAutoReply({ name, email, subject, message }) {
   const firstName = (name || 'cliente').split(' ')[0];
   return {
-    subject: `Hemos recibido tu mensaje — ZoneTechOnline`,
+    subject: `Hemos recibido tu mensaje — Zonetechonline`,
     html: base(`
       <div style="text-align:center;margin-bottom:20px;">
         <div style="font-size:40px;margin-bottom:8px;">📨</div>
@@ -555,7 +555,7 @@ function welcomeSeq2({ name, email }) {
     html: base(`
       <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">No vendemos cualquier cosa</p>
       <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
-        Hola ${firstName}, en ZoneTechOnline cada producto pasa por un filtro estricto antes de entrar al catálogo.
+        Hola ${firstName}, en Zonetechonline cada producto pasa por un filtro estricto antes de entrar al catálogo.
         Si no tiene garantía oficial del fabricante en Europa — no entra. Si el soporte técnico es malo — no entra.
       </p>
       <div style="background:#f9f9fc;border-left:3px solid ${BRAND_COLOR};border-radius:4px;padding:16px 20px;margin-bottom:20px;">
@@ -568,7 +568,7 @@ function welcomeSeq2({ name, email }) {
         </p>
       </div>
       ${btn('Ver cómo seleccionamos nuestros productos', SITE_URL + '/nuestra-filosofia')}
-    `, `En ZoneTechOnline, cada producto pasa un filtro de calidad antes de entrar al catálogo.`),
+    `, `En Zonetechonline, cada producto pasa un filtro de calidad antes de entrar al catálogo.`),
   };
 }
 
@@ -588,7 +588,7 @@ function welcomeSeq3({ name, email }) {
         ].map(p => `<tr><td style="padding:11px 0;border-bottom:1px solid #f0f0f5;vertical-align:top;"><a href="${p.url}" style="text-decoration:none;"><span style="font-size:13px;font-weight:700;color:#1a1a2e;">${p.name}</span><br><span style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.05em;">${p.cat}</span></a></td><td style="padding:11px 0;border-bottom:1px solid #f0f0f5;text-align:right;vertical-align:top;white-space:nowrap;"><span style="font-size:13px;font-weight:700;color:${BRAND_COLOR};">${p.price}</span></td></tr>`).join('')}
       </table>
       ${btn('Ver catálogo completo', SITE_URL + '/catalogo.html')}
-    `, `Los wearables más valorados esta semana en ZoneTechOnline.`),
+    `, `Los wearables más valorados esta semana en Zonetechonline.`),
   };
 }
 
@@ -633,7 +633,7 @@ function welcomeSeq5({ name, email }) {
       </div>
       ${btn('Explorar el catálogo', SITE_URL + '/catalogo.html')}
       <p style="font-size:13px;color:#888;text-align:center;margin-top:16px;">¿Dudas antes de comprar? <a href="https://wa.me/34613640673" style="color:${BRAND_COLOR};">WhatsApp</a> · <a href="mailto:${SUPPORT_EMAIL}" style="color:${BRAND_COLOR};">${SUPPORT_EMAIL}</a></p>
-    `, `Todo lo que garantizamos en cada pedido de ZoneTechOnline.`),
+    `, `Todo lo que garantizamos en cada pedido de Zonetechonline.`),
   };
 }
 
@@ -695,7 +695,7 @@ function reactivation2({ name, email }) {
         ].map(p => `<tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;vertical-align:top;"><a href="${p.url}" style="text-decoration:none;"><span style="font-size:13px;font-weight:700;color:#1a1a2e;">${p.name}</span><br><span style="font-size:11px;color:#888;">${p.cat}</span></a></td><td style="padding:10px 0;border-bottom:1px solid #f0f0f5;text-align:right;vertical-align:top;white-space:nowrap;"><span style="font-size:13px;font-weight:700;color:${BRAND_COLOR};">${p.price}</span></td></tr>`).join('')}
       </table>
       ${btn('Ver todo el catálogo', SITE_URL + '/catalogo.html')}
-    `, `Novedades en ZoneTechOnline que quizás te perdiste.`),
+    `, `Novedades en Zonetechonline que quizás te perdiste.`),
   };
 }
 
@@ -706,7 +706,7 @@ function reactivation3({ name, email }) {
     html: base(`
       <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Llevas 3 meses con nosotros 🙌</p>
       <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 16px;">
-        ${firstName}, hace ya 90 días de tu primera compra en ZoneTechOnline. Como agradecimiento, aquí tienes un descuento especial:
+        ${firstName}, hace ya 90 días de tu primera compra en Zonetechonline. Como agradecimiento, aquí tienes un descuento especial:
       </p>
       <div style="background:linear-gradient(135deg,#6366f1,#a855f7);border-radius:12px;padding:24px;text-align:center;margin:20px 0;">
         <p style="margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);">Tu código exclusivo</p>
@@ -729,7 +729,7 @@ function newsletterMonthly({ subject: subj, month, products }) {
     { name: 'Sony WF-C710N TWS ANC', cat: 'TWS · ANC + IP55 + 35h', price: '229,80 €', url: SITE_URL + '/producto/209' },
   ];
   return {
-    subject: subj || `ZoneTechOnline · Selección de ${month || 'este mes'}`,
+    subject: subj || `Zonetechonline · Selección de ${month || 'este mes'}`,
     html: base(`
       <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 8px;">Selección ${month || 'de este mes'}</p>
       <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">Los productos que más nos han gustado este mes. Todos con garantía oficial 2 años y envío gratuito a España.</p>
@@ -738,10 +738,10 @@ function newsletterMonthly({ subject: subj, month, products }) {
       </table>
       ${btn('Ver catálogo completo', SITE_URL + '/catalogo.html')}
       <p style="font-size:11px;color:#bbb;text-align:center;margin-top:20px;">
-        Recibes este email porque te suscribiste a las novedades de ZoneTechOnline.<br>
+        Recibes este email porque te suscribiste a las novedades de Zonetechonline.<br>
         Para darte de baja, escríbenos a <a href="mailto:${SUPPORT_EMAIL}" style="color:#bbb;">${SUPPORT_EMAIL}</a>
       </p>
-    `, `Selección de wearables premium de ${month || 'este mes'} — ZoneTechOnline`),
+    `, `Selección de wearables premium de ${month || 'este mes'} — Zonetechonline`),
   };
 }
 
@@ -766,7 +766,7 @@ function wishlistReminder({ name, email, items, wishlistUrl }) {
     html: base(`
       <p style="font-size:17px;font-weight:700;color:#1a1a2e;margin:0 0 12px;">Tu lista de deseos te espera ❤️</p>
       <p style="font-size:14px;color:#555;line-height:1.7;margin:0 0 20px;">
-        Hola ${firstName}, tienes <strong>${count} producto${count !== 1 ? 's' : ''}</strong> guardado${count !== 1 ? 's' : ''} en tu lista de deseos en ZoneTechOnline. ¿Listo para añadirlo${count !== 1 ? 's' : ''} al carrito?
+        Hola ${firstName}, tienes <strong>${count} producto${count !== 1 ? 's' : ''}</strong> guardado${count !== 1 ? 's' : ''} en tu lista de deseos en Zonetechonline. ¿Listo para añadirlo${count !== 1 ? 's' : ''} al carrito?
       </p>
       ${itemsBlock}
       <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:20px 0;background:#f9f9fc;border-radius:10px;padding:16px;">

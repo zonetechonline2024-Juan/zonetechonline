@@ -1,4 +1,4 @@
-# FUNNEL_ANALYSIS.md — ZoneTechOnline
+# FUNNEL_ANALYSIS.md — Zonetechonline
 > Análisis del embudo de conversión por etapa | Versión 1.0 · Julio 2026
 
 ---
@@ -99,7 +99,7 @@ CONVERSIÓN ESTIMADA: ~1.5–2%
 **Acciones pendientes:**
 - Apple Pay / Google Pay (Stripe Elements ya lo soporta — solo activar en Stripe Dashboard)
 - Progress indicator en checkout ("Datos → Pago → Confirmación")
-- Trust bar más prominente en checkout: "SSL · Stripe · Devolución 30 días"
+- Trust bar más prominente en checkout: "SSL · Stripe · Devolución 30 días hábiles"
 - Ofrecer Bizum como primera opción en mobile (detección por user-agent)
 
 **KPI a medir:** Tasa checkout → purchase. Evento GA4: `purchase`
@@ -137,7 +137,7 @@ CONVERSIÓN ESTIMADA: ~1.5–2%
 
 ## BENCHMARK ECOMMERCE TECH ESPAÑA
 
-| Métrica | Benchmark sector | Objetivo ZoneTech 6M | Objetivo ZoneTech 12M |
+| Métrica | Benchmark sector | Objetivo Zonetechonline 6M | Objetivo Zonetechonline 12M |
 |---|---|---|---|
 | Tasa de conversión | 1.5–2.5% | 3% | 4.5% |
 | AOV | 120–180€ | 210€ | 250€ |
@@ -147,4 +147,4 @@ CONVERSIÓN ESTIMADA: ~1.5–2%
 
 ---
 
-*Creado: Julio 2026 | ZoneTechOnline CRO Initiative*
+*Creado: Julio 2026 | Zonetechonline CRO Initiative*

@@ -1,4 +1,4 @@
-# REVENUE_KPIS.md — ZoneTechOnline
+# REVENUE_KPIS.md — Zonetechonline
 > Panel de KPIs del motor de ingresos | Versión 1.0 · Julio 2026
 
 ---
@@ -134,4 +134,4 @@ Si se implementan todas las fases del Revenue Engine:
 
 ---
 
-*Creado: Julio 2026 | ZoneTechOnline CRO Initiative*
+*Creado: Julio 2026 | Zonetechonline CRO Initiative*

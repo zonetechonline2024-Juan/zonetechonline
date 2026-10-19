@@ -467,7 +467,7 @@ var chartDays = null;
 /* ── Helpers ── */
 function fmt(n){return Number(n||0).toLocaleString('es-ES',{style:'currency',currency:'EUR'});}
 function fmtDate(v){if(!v)return'—';var d=new Date(v);return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short',year:'numeric'})+' '+d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});}
-function toast(msg,err){var el=document.getElementById('toast');el.textContent=msg;el.className=(err?'err ':')+'show';clearTimeout(el._t);el._t=setTimeout(function(){el.className='';},3500);}
+function toast(msg,err){var el=document.getElementById('toast');el.textContent=msg;el.className=(err?'err ':'')+'show';clearTimeout(el._t);el._t=setTimeout(function(){el.className='';},3500);}
 function api(path,opts){var h={'X-Admin-Key':KEY};if(opts&&opts.body)h['Content-Type']='application/json';return fetch('/api/'+path,Object.assign({headers:h},opts||{})).then(function(r){return r.json();});}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 function openModal(id){document.getElementById(id).classList.add('open');}

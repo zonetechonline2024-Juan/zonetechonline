@@ -1,4 +1,4 @@
-# EMAIL_AUTOMATION.md — ZoneTechOnline
+# EMAIL_AUTOMATION.md — Zonetechonline
 > Secuencias de email marketing automatizado | Versión 1.0 · Julio 2026
 
 ---
@@ -55,11 +55,11 @@ EMAIL 3: +72h — Último aviso (con pequeño incentivo si ticket >150€)
 
 ### SECUENCIA 2 — BIENVENIDA (nuevo registro)
 
-**Trigger:** Usuario crea cuenta en ZoneTechOnline
+**Trigger:** Usuario crea cuenta en Zonetechonline
 **Status:** Email 1 ya existe. Emails 2–5 pendientes.
 
 **Email 1 — Inmediato — Bienvenida** ✅ (ya existe)
-- Asunto: "Bienvenido a ZoneTechOnline"
+- Asunto: "Bienvenido a Zonetechonline"
 - Cuerpo: Presentación de la tienda, promesa de valor
 
 **Email 2 — Día 3 — Nuestra filosofía de selección**
@@ -179,4 +179,4 @@ CREATE TABLE cart_sessions (
 
 ---
 
-*Creado: Julio 2026 | ZoneTechOnline CRO Initiative*
+*Creado: Julio 2026 | Zonetechonline CRO Initiative*

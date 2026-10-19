@@ -1,4 +1,4 @@
-# SUPABASE_MIGRATIONS.md — ZoneTechOnline
+# SUPABASE_MIGRATIONS.md — Zonetechonline
 > SQL a ejecutar en Supabase Dashboard → SQL Editor
 
 ---
@@ -32,7 +32,7 @@ CREATE INDEX IF NOT EXISTS cart_sessions_completed_idx  ON cart_sessions (comple
 ```
 
 **Dónde ejecutar:**
-1. Ir a [supabase.com](https://supabase.com) → tu proyecto ZoneTechOnline
+1. Ir a [supabase.com](https://supabase.com) → tu proyecto Zonetechonline
 2. En el menú izquierdo: **SQL Editor** → **New query**
 3. Pegar el SQL de arriba y hacer click en **Run**
 

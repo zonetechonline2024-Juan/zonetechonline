@@ -1,6 +1,6 @@
 'use strict';
 /**
- * ZoneTechOnline — E2E Test Suite
+ * Zonetechonline — E2E Test Suite
  * Ejecutar: node tests/e2e.js
  * Requiere Node.js 18+
  */
@@ -246,7 +246,7 @@ async function testSensitiveFiles() {
 // ── MAIN ─────────────────────────────────────────────────
 async function main() {
   console.log('╔══════════════════════════════════════════╗');
-  console.log('║  ZoneTechOnline — E2E Test Suite         ║');
+  console.log('║  Zonetechonline — E2E Test Suite         ║');
   console.log(`║  ${new Date().toISOString()}      ║`);
   console.log('╚══════════════════════════════════════════╝');
 

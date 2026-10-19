@@ -1,11 +1,11 @@
-# ARCHITECTURE.md — ZoneTechOnline
+# ARCHITECTURE.md — Zonetechonline
 > Generado: 2026-07-25 | Actualizado: 2026-07-27 (Fases B-J CTO Transformation)
 
 ---
 
 ## Visión General
 
-ZoneTechOnline es un eCommerce estático de tecnología premium (wearables, auriculares, altavoces, gaming, smartphones) orientado al mercado español y europeo. Arquitectura JAMstack sin framework frontend: HTML/CSS/JS puro + Serverless Functions en Vercel.
+Zonetechonline es un eCommerce estático de tecnología premium (wearables, auriculares, altavoces, gaming, smartphones) orientado al mercado español y europeo. Arquitectura JAMstack sin framework frontend: HTML/CSS/JS puro + Serverless Functions en Vercel.
 
 ---
 

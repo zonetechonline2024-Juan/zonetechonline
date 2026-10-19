@@ -61,7 +61,7 @@ function productItem(p) {
   const imageLink = p.image ? `${STORE}/${p.image.replace(/^\//, '')}` : '';
   const price     = `${(parseFloat(p.price) || 0).toFixed(2)} EUR`;
   const gcat      = GCAT[p.category] || '888';
-  const brand     = esc(p.brand || 'ZoneTechOnline');
+  const brand     = esc(p.brand || 'Zonetechonline');
   const sku       = p.specs?.SKU || p.specs?.['P/N Depau'] || `ZT-${p.id}`;
   const catPrefix = {
     'relojes': 'Smartwatch', 'auriculares': 'Auriculares',
@@ -96,7 +96,7 @@ function serveProductPage(p, res) {
   const url    = `${STORE}/producto/${p.id}`;
   const imgUrl = p.image ? `${STORE}/${String(p.image).replace(/^\//, '')}` : `${STORE}/img/og-cover.jpg`;
   const price  = (parseFloat(p.price) || 0).toFixed(2);
-  const title  = esc(`${p.name} | ZoneTechOnline`);
+  const title  = esc(`${p.name} | Zonetechonline`);
   const desc   = esc((p.description || p.name).slice(0, 160));
   const avail  = p.inStock === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock';
 
@@ -106,7 +106,7 @@ function serveProductPage(p, res) {
     name: p.name,
     description: p.description || p.name,
     image: imgUrl,
-    brand: { '@type': 'Brand', name: p.brand || 'ZoneTechOnline' },
+    brand: { '@type': 'Brand', name: p.brand || 'Zonetechonline' },
     offers: {
       '@type': 'Offer',
       url,
@@ -133,12 +133,12 @@ function serveProductPage(p, res) {
         },
         shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'ES' }
       },
-      seller: { '@type': 'Organization', name: 'ZoneTechOnline', url: STORE }
+      seller: { '@type': 'Organization', name: 'Zonetechonline', url: STORE }
     }
   });
 
   const html = HTML_TEMPLATE
-    .replace('<title id="pp-title">Producto | ZoneTechOnline</title>',
+    .replace('<title id="pp-title">Producto | Zonetechonline</title>',
              `<title id="pp-title">${title}</title>`)
     .replace('content="Tecnología premium con garantía legal 2 años. Envío gratuito. Devolución 30 días hábiles."',
              `content="${desc}"`)
@@ -146,7 +146,7 @@ function serveProductPage(p, res) {
              `href="${url}"`)
     .replace('id="pp-og-url" content="https://www.zonetechonline.com/producto/"',
              `id="pp-og-url" content="${esc(url)}"`)
-    .replace('id="pp-og-title" content="ZoneTechOnline"',
+    .replace('id="pp-og-title" content="Zonetechonline"',
              `id="pp-og-title" content="${title}"`)
     .replace('id="pp-og-desc" content=""',
              `id="pp-og-desc" content="${desc}"`)
@@ -182,7 +182,7 @@ module.exports = (req, res) => {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>ZoneTechOnline — Tecnología Premium</title>
+    <title>Zonetechonline — Tecnología Premium</title>
     <link>${STORE}</link>
     <description>Wearables y tecnología premium: relojes inteligentes, auriculares, altavoces, smartphones y periféricos de las mejores marcas europeas.</description>
     ${products.map(productItem).join('')}

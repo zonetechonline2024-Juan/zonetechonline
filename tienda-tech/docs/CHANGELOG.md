@@ -1,4 +1,4 @@
-# CHANGELOG — ZoneTechOnline
+# CHANGELOG — Zonetechonline
 > Registro de cambios en producción | Formato: [Fecha] Descripción
 
 ---
@@ -96,7 +96,7 @@
   - Firma personal del fundador
   - URL limpia `/nuestra-historia` y `/sobre-nosotros` vía vercel.json rewrites
 
-### Fase C — ¿Por qué ZoneTechOnline?
+### Fase C — ¿Por qué Zonetechonline?
 - `index.html`: nueva sección de 6 bloques entre categorías y testimonios
   - Argumentos reales: selección curada, garantía EU, personas reales, IA especializada, 30 días devolución, transparencia
   - Link a Nuestra Historia al final
@@ -120,7 +120,7 @@
 ### Fase G — Footer como centro de confianza
 - `index.html` Footer: rediseño completo
   - Banda superior de garantías (pago seguro, garantía 2 años, devolución 30 días, envío gratis, productos originales)
-  - Columna "La Marca": Nuestra Historia, ¿Por qué ZoneTechOnline?, Blog, IA
+  - Columna "La Marca": Nuestra Historia, ¿Por qué Zonetechonline?, Blog, IA
   - Columna "Comprar con confianza": envíos, devoluciones, garantías, soporte, FAQs
   - Datos de contacto completos: dirección, email, teléfono con horario, envíos Europa
   - Botón WhatsApp directo en footer
@@ -140,7 +140,7 @@
   - 3 atributos clave: Claro · Honesto · Experto
   - Tono por contexto: producto, microcopy, emails, soporte, blog, redes
   - Vocabulario aprobado vs prohibido
-  - Tabla de transformación: voz genérica → voz ZoneTech
+  - Tabla de transformación: voz genérica → voz Zonetechonline
 
 ### Fase J — Documentación
 - `docs/TRUST_STRATEGY.md` (nuevo): estrategia de confianza con 5 pilares, KPIs y hoja de ruta
@@ -151,9 +151,9 @@
 ### Resultado del test de 10 segundos (post-transformación)
 | Pregunta | Antes | Después |
 |---|---|---|
-| ¿Qué vende ZoneTechOnline? | ✅ | ✅ |
+| ¿Qué vende Zonetechonline? | ✅ | ✅ |
 | ¿Por qué debería confiar? | ⚠️ | ✅ |
-| ¿Qué diferencia a ZoneTechOnline de Amazon? | ❌ | ✅ |
+| ¿Qué diferencia a Zonetechonline de Amazon? | ❌ | ✅ |
 | ¿Qué tipo de marca es? | ⚠️ | ✅ |
 | ¿Me sentiría cómodo comprando 800€ aquí? | ❌ | ✅ |
 
@@ -166,7 +166,7 @@
 - `docs/CHANGELOG.md`: historial completo desde el setup inicial
 
 ### Fase H — Asistente IA Real (Claude claude-haiku-4-5-20251001)
-- `api/_ai.js` (nuevo): cliente Anthropic con persona de ZoneTechOnline, `buildSystemPrompt()` inyecta catálogo completo, `callAnthropic()` via REST nativo (sin SDK npm)
+- `api/_ai.js` (nuevo): cliente Anthropic con persona de Zonetechonline, `buildSystemPrompt()` inyecta catálogo completo, `callAnthropic()` via REST nativo (sin SDK npm)
 - `api/ai-assistant.js` (nuevo, activo): endpoint POST con rate limiting (10 req/min), historial capped a 10 mensajes, manejo graceful si falta ANTHROPIC_API_KEY (HTTP 503)
 - `api/admin-import-products.js`: movido a `.vercelignore` para liberar slot de función Vercel — slot ocupado por `ai-assistant.js`
 - `data/ai-catalog.json` (nuevo): catálogo compacto de 212 productos (id, nombre, marca, categoría, precio, descripción 180 chars, inStock) para contexto del AI

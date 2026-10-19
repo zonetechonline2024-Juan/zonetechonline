@@ -1,4 +1,4 @@
-# DIFFERENTIATION.md — ZoneTechOnline
+# DIFFERENTIATION.md — Zonetechonline
 > Diferenciación competitiva | Versión 1.0 · Julio 2026
 
 ---
@@ -14,11 +14,11 @@ La diferenciación real ocurre cuando:
 
 ---
 
-## Por qué ZoneTechOnline es diferente (de verdad)
+## Por qué Zonetechonline es diferente (de verdad)
 
 ### Frente a Amazon
 
-| Dimensión | Amazon | ZoneTechOnline |
+| Dimensión | Amazon | Zonetechonline |
 |---|---|---|
 | Catálogo | Millones de referencias, sin filtro | < 300 productos, cada uno evaluado |
 | Garantía | Depende del vendedor (puede ser gris/reacondicionado) | Siempre oficial EU, distribución autorizada |
@@ -31,7 +31,7 @@ La diferenciación real ocurre cuando:
 
 ### Frente a MediaMarkt / El Corte Inglés / FNAC
 
-| Dimensión | Gran superficie | ZoneTechOnline |
+| Dimensión | Gran superficie | Zonetechonline |
 |---|---|---|
 | Especialización | Generalistas (venden todo) | Solo wearables y tech premium seleccionada |
 | Experiencia online | Tienda pensada para offline, adaptada digital | Nativa digital, optimizada para online |
@@ -49,7 +49,7 @@ La mayoría de tiendas online de electrónica pequeñas o medianas fallan en uno
 - No tienen contenido ni asesoramiento
 - Su web no genera confianza suficiente para pedidos de 400€+
 
-**Argumento clave:** ZoneTechOnline resuelve exactamente estos tres problemas: garantía verificable, catálogo curado, y contenido que demuestra que sabemos de lo que hablamos.
+**Argumento clave:** Zonetechonline resuelve exactamente estos tres problemas: garantía verificable, catálogo curado, y contenido que demuestra que sabemos de lo que hablamos.
 
 ---
 
@@ -61,7 +61,7 @@ Estas son las decisiones de diseño y negocio que hacen la diferencia real. Si s
 
 2. **La identidad humana:** Juan, Barcelona. Si eliminamos al fundador de la comunicación, perdemos la razón por la que confiar en alguien sin historial masivo de reseñas.
 
-3. **El contenido con opinión propia:** El blog de ZoneTechOnline no es neutral. Decimos cuándo un producto no vale su precio, cuándo hay una alternativa mejor, cuándo una categoría no es para todos. Eso construye autoridad.
+3. **El contenido con opinión propia:** El blog de Zonetechonline no es neutral. Decimos cuándo un producto no vale su precio, cuándo hay una alternativa mejor, cuándo una categoría no es para todos. Eso construye autoridad.
 
 4. **El asesoramiento real:** El asistente IA no es un chatbot de FAQ — es un asesor que pregunta antes de recomendar. Cuando esté activado (con ANTHROPIC_API_KEY), será la diferencia más difícil de copiar por competidores.
 
@@ -71,7 +71,7 @@ Estas son las decisiones de diseño y negocio que hacen la diferencia real. Si s
 
 ## El mensaje de diferenciación en una frase
 
-Cuando alguien pregunta qué hace diferente a ZoneTechOnline, la respuesta debería ser:
+Cuando alguien pregunta qué hace diferente a Zonetechonline, la respuesta debería ser:
 
 > "Es una tienda pequeña y especializada donde alguien con criterio ha elegido cada producto por ti, con garantía oficial y sin el caos de Amazon."
 
@@ -84,7 +84,7 @@ Esta frase debe poder decirla tanto Juan en una conversación como el propio asi
 | Canal | Cómo comunicar la diferencia |
 |---|---|
 | Homepage (hero) | Banda de identidad: "Tienda especializada · Distribución autorizada · Garantía oficial 2 años · Barcelona" |
-| Sección "¿Por qué ZoneTechOnline?" | 6 bloques con criterio concreto, no claims vacíos |
+| Sección "¿Por qué Zonetechonline?" | 6 bloques con criterio concreto, no claims vacíos |
 | Blog | Artículos con opinión propia. Decimos cuándo algo NO vale la pena |
 | Nuestra Historia | El porqué humano: quién soy, qué problema resolvía yo, por qué existe esto |
 | Nuestra Filosofía | El cómo: criterios de selección, qué rechazamos, proceso de evaluación |
@@ -108,4 +108,4 @@ Estas son diferenciaciones válidas que aún no están implementadas o verificad
 
 ---
 
-*Creado durante la Transformación de Marca ZoneTechOnline · Julio 2026*
+*Creado durante la Transformación de Marca Zonetechonline · Julio 2026*

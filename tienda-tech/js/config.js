@@ -1,5 +1,5 @@
 ﻿/**
- * ZoneTechOnline — Configuración centralizada del frontend
+ * Zonetechonline — Configuración centralizada del frontend
  * Un solo lugar para cambiar URLs, constantes y feature flags.
  */
 'use strict';

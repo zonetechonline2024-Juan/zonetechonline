@@ -10,7 +10,7 @@ async function sendEmail({ to, subject, html, replyTo }) {
   if (!apiKey) throw new Error('RESEND_API_KEY no configurada en Vercel');
 
   const payload = {
-    from:    'ZoneTechOnline <noreply@zonetechonline.com>',
+    from:    'Zonetechonline <noreply@zonetechonline.com>',
     to:      [to],
     subject,
     html,

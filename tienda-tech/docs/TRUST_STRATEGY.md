@@ -1,17 +1,17 @@
-# TRUST_STRATEGY.md — ZoneTechOnline
+# TRUST_STRATEGY.md — Zonetechonline
 > Estrategia de confianza de marca | Versión 1.0 · Julio 2026
 
 ---
 
 ## Por qué la confianza es nuestra variable más crítica
 
-ZoneTechOnline vende tecnología de gama alta con tickets medios de 200–800€. A ese nivel de precio, el usuario no compra si no confía. La confianza no es un "nice to have" — es la condición de la venta.
+Zonetechonline vende tecnología de gama alta con tickets medios de 200–800€. A ese nivel de precio, el usuario no compra si no confía. La confianza no es un "nice to have" — es la condición de la venta.
 
 Un usuario que no confía simplemente cierra la pestaña y va a Amazon o a MediaMarkt. Por eso cada decisión de diseño, contenido y proceso debe pasar por el filtro: **¿esto genera más confianza o menos?**
 
 ---
 
-## Los 5 pilares de confianza de ZoneTechOnline
+## Los 5 pilares de confianza de Zonetechonline
 
 ### 1. Autenticidad de productos
 **Qué comunicamos:** Distribución autorizada, garantía oficial europea 2 años mínimo, sin importaciones paralelas.
@@ -19,7 +19,7 @@ Un usuario que no confía simplemente cierra la pestaña y va a Amazon o a Media
 **Señal de credibilidad:** Mencionar distribuidores autorizados en específico cuando sea posible.
 
 ### 2. Transparencia operativa
-**Qué comunicamos:** Plazos de entrega reales (5–8 días hábiles), política de devolución clara (30 días), precio con IVA incluido siempre, titular legal visible.
+**Qué comunicamos:** Plazos de entrega reales (5–8 días hábiles), política de devolución clara (30 días hábiles), precio con IVA incluido siempre, titular legal visible.
 **Dónde:** Footer, página de contacto, política de devoluciones, checkout.
 **Señal de credibilidad:** No prometer lo que no podemos cumplir. Nunca "24/7" si no es verdad.
 
@@ -30,7 +30,7 @@ Un usuario que no confía simplemente cierra la pestaña y va a Amazon o a Media
 
 ### 4. Especialización demostrada
 **Qué comunicamos:** No vendemos de todo. Elegimos con criterio. Conocemos cada producto.
-**Dónde:** Sección "¿Por qué ZoneTechOnline?", criterio de selección en nuestra historia, descripción de productos, blog.
+**Dónde:** Sección "¿Por qué Zonetechonline?", criterio de selección en nuestra historia, descripción de productos, blog.
 **Señal de credibilidad:** Blog técnico con contenido útil (ya publicados 10 artículos).
 
 ### 5. Soporte accesible y real
@@ -85,4 +85,4 @@ Un usuario que no confía simplemente cierra la pestaña y va a Amazon o a Media
 
 ---
 
-*Creado durante la Transformación de Marca ZoneTechOnline · Julio 2026*
+*Creado durante la Transformación de Marca Zonetechonline · Julio 2026*

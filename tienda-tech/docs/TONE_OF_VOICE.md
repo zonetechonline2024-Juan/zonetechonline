@@ -1,9 +1,9 @@
-# TONE OF VOICE — ZoneTechOnline
+# TONE OF VOICE — Zonetechonline
 > Guía de personalidad y tono de comunicación | Versión 1.0 · Julio 2026
 
 ---
 
-## Si ZoneTechOnline fuera una persona
+## Si Zonetechonline fuera una persona
 
 **Sería un experto en tecnología de 35 años que trabaja como ingeniero o diseñador de producto.**
 
@@ -67,7 +67,7 @@
 
 ---
 
-## Palabras que ZoneTechOnline USA
+## Palabras que Zonetechonline USA
 
 - Selección, criterio, curado, elegido
 - Auténtico, original, verificado
@@ -80,7 +80,7 @@
 
 ---
 
-## Palabras que ZoneTechOnline NO USA
+## Palabras que Zonetechonline NO USA
 
 | Evitar | Por qué |
 |---|---|
@@ -103,21 +103,21 @@
 - **Listas cuando hay más de 3 ítems.** No párrafos largos con comas.
 - **Cursiva para énfasis suave.** Negrita para lo más importante. Nunca mayúsculas para gritar.
 - **Tú, no usted.** Tratamos de tú a los clientes. Excepto documentos legales.
-- **Primera persona del plural (nosotros) para la marca.** No "la empresa" ni "ZoneTechOnline" en tercera persona dentro del mismo texto.
+- **Primera persona del plural (nosotros) para la marca.** No "la empresa" ni "Zonetechonline" en tercera persona dentro del mismo texto.
 - **Preguntas retóricas para involucrar.** "¿Buscas algo que dure? Aquí está."
 
 ---
 
 ## Ejemplos de transformación
 
-| Antes (voz genérica) | Después (voz ZoneTech) |
+| Antes (voz genérica) | Después (voz Zonetechonline) |
 |---|---|
 | "Soporte 24/7 disponible" | "Soporte en español de lunes a viernes, 9 a 18h. Una persona real, no un bot." |
 | "Calidad garantizada" | "Todos los productos incluyen garantía oficial de 2 años conforme a la normativa europea." |
 | "Los mejores productos del mercado" | "Cada producto del catálogo ha superado nuestro proceso de selección." |
 | "¡Compra ahora y ahorra!" | "Consulta precio y disponibilidad actual en el catálogo." |
-| "Millones de clientes satisfechos" | "Primeros clientes que ya confían en ZoneTechOnline." |
+| "Millones de clientes satisfechos" | "Primeros clientes que ya confían en Zonetechonline." |
 
 ---
 
-*Este documento se actualiza con cada nueva fase de comunicación. Versión 1.0 · CBO ZoneTechOnline · Julio 2026*
+*Este documento se actualiza con cada nueva fase de comunicación. Versión 1.0 · CBO Zonetechonline · Julio 2026*

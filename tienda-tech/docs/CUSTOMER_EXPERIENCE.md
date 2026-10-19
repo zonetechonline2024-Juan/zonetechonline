@@ -1,4 +1,4 @@
-# CUSTOMER_EXPERIENCE.md — ZoneTechOnline
+# CUSTOMER_EXPERIENCE.md — Zonetechonline
 > Mapa de experiencia del cliente | Versión 1.0 · Julio 2026
 
 ---
@@ -15,7 +15,7 @@ Si la respuesta es "menos" o "neutro", hay que mejorarlo.
 ## Mapa del viaje del cliente (Customer Journey)
 
 ### FASE 1 — Descubrimiento
-*El usuario no conoce ZoneTechOnline. Llega desde Google, redes sociales o recomendación.*
+*El usuario no conoce Zonetechonline. Llega desde Google, redes sociales o recomendación.*
 
 | Punto de contacto | Estado actual | Objetivo |
 |---|---|---|
@@ -25,7 +25,7 @@ Si la respuesta es "menos" o "neutro", hay que mejorarlo.
 | Google Business Profile | Pendiente | Aparecer en maps y búsquedas locales |
 
 **Pregunta que debe poder responder en 10 segundos:**  
-*"¿Qué vende ZoneTechOnline y por qué debería quedarme?"*
+*"¿Qué vende Zonetechonline y por qué debería quedarme?"*
 
 ---
 
@@ -53,10 +53,10 @@ Si la respuesta es "menos" o "neutro", hay que mejorarlo.
 | Punto de contacto | Estado actual | Objetivo |
 |---|---|---|
 | Página "Nuestra Historia" | Publicada ✅ | Resolver "¿quién está detrás?" |
-| Sección "¿Por qué ZoneTechOnline?" | En homepage ✅ | Argumentar vs Amazon y grandes superficies |
+| Sección "¿Por qué Zonetechonline?" | En homepage ✅ | Argumentar vs Amazon y grandes superficies |
 | Trust badges | Corregidos ✅ (sin Trustpilot falso) | Señales de seguridad verificables |
 | Reseñas | Sistema activo + 3 testimonios seed | Crecer hacia reseñas reales de clientes |
-| Garantía y devolución | 30 días · políticas publicadas | Reducir fricción de decisión |
+| Garantía y devolución | 30 días hábiles · políticas publicadas | Reducir fricción de decisión |
 
 **Pregunta que debe poder responder:**  
 *"¿Me fío para gastar 400–800€ aquí?"*
@@ -98,7 +98,7 @@ Si la respuesta es "menos" o "neutro", hay que mejorarlo.
 | Embalaje | Depende del distribuidor (dropshipping) | Garantizar que el packaging sea digno |
 | Garantía de producto | Factura incluida, garantía oficial | No hay que hacer nada extra |
 | Solicitud de reseña | Formulario en homepage | Invite por email después de la entrega |
-| Devolución si procede | 30 días, gestión por email | Proceso sin fricción, sin penalización |
+| Devolución si procede | 30 días hábiles, gestión por email | Proceso sin fricción, sin penalización |
 
 **Oportunidad:**  
 Enviar email de seguimiento 7 días después de la entrega estimada solicitando reseña. Aún no implementado.
@@ -129,4 +129,4 @@ Enviar email de seguimiento 7 días después de la entrega estimada solicitando 
 
 ---
 
-*Creado durante la Transformación de Marca ZoneTechOnline · Julio 2026*
+*Creado durante la Transformación de Marca Zonetechonline · Julio 2026*

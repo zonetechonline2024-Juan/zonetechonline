@@ -1,11 +1,11 @@
-# BRAND_AUTHORITY.md — ZoneTechOnline
+# BRAND_AUTHORITY.md — Zonetechonline
 > Estrategia de autoridad de marca | Versión 1.0 · Julio 2026
 
 ---
 
 ## Qué es la autoridad de marca (y por qué importa)
 
-La autoridad de marca es la percepción que tiene el mercado de que ZoneTechOnline sabe más de wearables premium que cualquier otro vendedor online. No es reputación general — es reconocimiento específico en un dominio concreto.
+La autoridad de marca es la percepción que tiene el mercado de que Zonetechonline sabe más de wearables premium que cualquier otro vendedor online. No es reputación general — es reconocimiento específico en un dominio concreto.
 
 Un usuario que nos percibe como autoridad:
 - Nos busca directamente cuando necesita tecnología wearable, sin comparar con Amazon primero
@@ -15,7 +15,7 @@ Un usuario que nos percibe como autoridad:
 
 ---
 
-## Los cuatro pilares de autoridad de ZoneTechOnline
+## Los cuatro pilares de autoridad de Zonetechonline
 
 ### 1. Contenido que demuestra conocimiento
 **Qué es:** Artículos técnicos, comparativas honestas y guías que prueban que sabemos de lo que hablamos.
@@ -36,9 +36,9 @@ Un usuario que nos percibe como autoridad:
 **Estado actual:**
 - Página `nuestra-filosofia.html` publicada: explica los 4 criterios de selección, el proceso de evaluación, qué rechazamos y por qué
 - Página `nuestra-historia.html` publicada: contexto del fundador y origen de la tienda
-- Sección "¿Por qué ZoneTechOnline?" en homepage
+- Sección "¿Por qué Zonetechonline?" en homepage
 
-**Objetivo:** Que cuando alguien compare ZoneTechOnline con una tienda genérica, la diferencia de criterio sea visible sin tener que preguntar.
+**Objetivo:** Que cuando alguien compare Zonetechonline con una tienda genérica, la diferencia de criterio sea visible sin tener que preguntar.
 
 ### 3. Especialización demostrada (no declarada)
 **Qué es:** La diferencia entre decir "somos especialistas" (fácil de ignorar) y demostrarlo con contenido concreto.
@@ -87,7 +87,7 @@ Un usuario que nos percibe como autoridad:
 - [ ] Casos de uso con clientes reales (testimonios con producto + foto si hay permiso)
 - [ ] Reseñas con sistema externo verificable (Trustpilot u otro, cuando haya base)
 - [ ] Presencia activa en redes sociales con contenido técnico
-- [ ] Reconocimiento de marca: búsquedas directas "ZoneTechOnline" como indicador
+- [ ] Reconocimiento de marca: búsquedas directas "Zonetechonline" como indicador
 
 ---
 
@@ -116,4 +116,4 @@ Un usuario que nos percibe como autoridad:
 
 ---
 
-*Creado durante la Transformación de Marca ZoneTechOnline · Julio 2026*
+*Creado durante la Transformación de Marca Zonetechonline · Julio 2026*

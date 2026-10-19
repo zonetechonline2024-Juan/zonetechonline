@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
       const form = new URLSearchParams({
         url: 'https://www.zonetechonline.com/api/stripe-webhook',
         'enabled_events[]': 'checkout.session.completed',
-        description: 'ZoneTechOnline pedidos',
+        description: 'Zonetechonline pedidos',
       }).toString();
       const sr = await fetch('https://api.stripe.com/v1/webhook_endpoints', {
         method: 'POST',

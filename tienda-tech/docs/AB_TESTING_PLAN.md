@@ -1,4 +1,4 @@
-# AB_TESTING_PLAN.md — ZoneTechOnline
+# AB_TESTING_PLAN.md — Zonetechonline
 > Plan de experimentación para optimización de conversión | Versión 1.0 · Julio 2026
 
 ---
@@ -62,7 +62,7 @@ Con el volumen actual de tráfico, Opción A es suficiente y sin coste.
 
 | | Variante A (Control) | Variante B |
 |---|---|---|
-| Headline | "Tecnología Premium Selecta" | "Garantía oficial 2 años · Envío gratis · Devolución 30 días" |
+| Headline | "Tecnología Premium Selecta" | "Garantía oficial 2 años · Envío gratis · Devolución 30 días hábiles" |
 | Subheadline | [actual] | "Cada producto elegido con criterio. Sin catálogo de relleno." |
 
 **Métrica primaria:** CTR al catálogo / add_to_cart rate desde homepage
@@ -158,4 +158,4 @@ Con el volumen actual de tráfico, Opción A es suficiente y sin coste.
 
 ---
 
-*Creado: Julio 2026 | ZoneTechOnline CRO Initiative*
+*Creado: Julio 2026 | Zonetechonline CRO Initiative*

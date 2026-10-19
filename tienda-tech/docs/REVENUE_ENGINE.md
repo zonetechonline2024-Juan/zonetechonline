@@ -1,4 +1,4 @@
-# REVENUE_ENGINE.md — ZoneTechOnline
+# REVENUE_ENGINE.md — Zonetechonline
 > Motor de ingresos: estrategia completa de conversión, AOV, LTV | Versión 1.0 · Julio 2026
 
 ---
@@ -150,4 +150,4 @@ Ver `docs/REVENUE_KPIS.md` para panel completo.
 
 ---
 
-*Creado: Julio 2026 | ZoneTechOnline Revenue Initiative*
+*Creado: Julio 2026 | Zonetechonline Revenue Initiative*

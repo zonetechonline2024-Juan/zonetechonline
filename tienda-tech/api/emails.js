@@ -68,7 +68,7 @@ module.exports = async (req, res) => {
     if (!contactRL(req, res)) return;
     const { name, email, subject, message } = req.body || {};
     if (!email || !message) return res.status(400).json({ error: 'email y message requeridos' });
-    const safeSubject = subject ? String(subject).slice(0, 200) : 'Consulta desde ZoneTechOnline';
+    const safeSubject = subject ? String(subject).slice(0, 200) : 'Consulta desde Zonetechonline';
     const safeName    = String(name || email).slice(0, 100);
     try {
       const reply = contactAutoReply({ name: safeName, email, subject: safeSubject, message });
@@ -430,7 +430,7 @@ module.exports = async (req, res) => {
       const ghPath = 'tienda-tech/data/subscribers.json';
       const ghRes  = await fetch(
         `https://api.github.com/repos/${ghRepo}/contents/${ghPath}`,
-        { headers: { Authorization: `token ${ghPat}`, 'User-Agent': 'ZoneTechOnline', Accept: 'application/vnd.github.v3+json' } }
+        { headers: { Authorization: `token ${ghPat}`, 'User-Agent': 'Zonetechonline', Accept: 'application/vnd.github.v3+json' } }
       );
       if (!ghRes.ok) return res.status(500).json({ error: 'No se pudieron leer los suscriptores' });
       const ghData      = await ghRes.json();
